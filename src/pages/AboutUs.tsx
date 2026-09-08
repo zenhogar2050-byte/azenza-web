@@ -12,7 +12,7 @@ export default function AboutUs() {
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
         title="Quiénes Somos"
-        description="Conoce la historia de ZENHOGAR, nuestra misión y compromiso con la salud natural en Colombia."
+        description="Conoce la historia de AZENZA, nuestra misión y compromiso con la salud natural en Colombia."
         canonicalUrl="/quienes-somos"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +32,7 @@ export default function AboutUs() {
             <h2 className="text-3xl font-display font-bold text-stone-900 mb-6">Nuestra Historia</h2>
             <div className="space-y-4 text-stone-600 leading-relaxed text-lg mb-12">
               <p>
-                ZENHOGAR nació de la convicción de que la naturaleza ofrece las mejores soluciones para nuestra salud. Lo que comenzó como un pequeño proyecto familiar se ha convertido en una marca de confianza para miles de colombianos que buscan una alternativa natural y efectiva.
+                AZENZA nació de la convicción de que la naturaleza ofrece las mejores soluciones para nuestra salud. Lo que comenzó como un pequeño proyecto familiar se ha convertido en una marca de confianza para miles de colombianos que buscan una alternativa natural y efectiva.
               </p>
               <p>
                 Nos especializamos en la selección y distribución de suplementos naturales de la más alta calidad, asegurándonos de que cada producto que llega a tu hogar cumpla con los estándares más exigentes y cuente con los registros sanitarios INVIMA necesarios.
@@ -52,7 +52,7 @@ export default function AboutUs() {
                 </div>
                 <div>
                   <p className="font-bold text-stone-900 mb-1">Canales Oficiales:</p>
-                  <p>WhatsApp: +57 302 410 2568<br />Email: ventas@zenhogar.live</p>
+                  <p>WhatsApp: +57 302 410 2568<br />Email: ventas@azenza.com.co</p>
                 </div>
                 <div>
                   <p className="font-bold text-stone-900 mb-1">Método de Pago:</p>

@@ -1,7 +1,13 @@
 # Enforce Canonical Domain (Non-WWW and HTTPS)
-https://www.zenhogar.live/* https://zenhogar.live/:splat 301
-http://www.zenhogar.live/* https://zenhogar.live/:splat 301
-http://zenhogar.live/* https://zenhogar.live/:splat 301
+https://www.azenza.com.co/* https://azenza.com.co/:splat 301
+http://www.azenza.com.co/* https://azenza.com.co/:splat 301
+http://azenza.com.co/* https://azenza.com.co/:splat 301
+
+# Legacy Domain Redirects (zenhogar.live -> azenza.com.co)
+https://zenhogar.live/* https://azenza.com.co/:splat 301
+http://zenhogar.live/* https://azenza.com.co/:splat 301
+https://www.zenhogar.live/* https://azenza.com.co/:splat 301
+http://www.zenhogar.live/* https://azenza.com.co/:splat 301
 
 # SPA Routing for Cloudflare Pages
 /* /index.html 200

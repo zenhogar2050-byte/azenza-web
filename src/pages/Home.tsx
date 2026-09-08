@@ -42,14 +42,14 @@ export default function Home() {
     'titan-coffee',
     'instant-virgin'
   ] : [
+    'titan-coffee',
     'ashwagandha',
     'resveratrol-nad',
     'vinagre-manzana',
     'citrato-potasio-magnesio',
     'oregano',
     'bisglicinato-magnesio',
-    'guanda-mix',
-    'booster-lion'
+    'shampoo-intensivo'
   ];
 
   const launchProducts = launchProductIds
@@ -433,7 +433,7 @@ export default function Home() {
                 Tu Bienestar es Nuestra <span className="text-emerald-800 italic">Prioridad Número Uno</span>
               </h2>
               <p className="text-lg text-stone-600 mb-12 leading-relaxed">
-                En Zenhogar nos dedicamos a seleccionar los mejores productos naturales, garantizando que cada artículo que recibas sea 100% original y efectivo.
+                En AZENZA nos dedicamos a seleccionar los mejores productos naturales, garantizando que cada artículo que recibas sea 100% original y efectivo.
               </p>
               
               <div className="grid sm:grid-cols-3 gap-6 text-left">

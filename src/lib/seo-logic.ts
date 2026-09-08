@@ -1,4 +1,4 @@
-const BASE_URL = "https://zenhogar.live";
+const BASE_URL = "https://azenza.com.co";
 
 export const generateSchemaGraph = (params: {
     type: string, 
@@ -21,7 +21,7 @@ export const generateSchemaGraph = (params: {
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": BASE_URL,
-        "name": "Zenhogar",
+        "name": "Azenza",
         "publisher": { "@id": `${BASE_URL}/#organization` },
         "inLanguage": "es-CO"
     });
@@ -30,7 +30,7 @@ export const generateSchemaGraph = (params: {
     graph.push({
         "@type": "Organization",
         "@id": `${BASE_URL}/#organization`,
-        "name": "Zenhogar",
+        "name": "Azenza",
         "url": BASE_URL,
         "logo": {
             "@type": "ImageObject",
@@ -40,7 +40,7 @@ export const generateSchemaGraph = (params: {
             "contentUrl": `${BASE_URL}/assets/logo/logo-icon.webp`,
             "width": 512,
             "height": 512,
-            "caption": "Zenhogar"
+            "caption": "Azenza"
         },
         "image": { "@id": `${BASE_URL}/#logo` }
     });
@@ -106,7 +106,7 @@ export const generateSchemaGraph = (params: {
             breadcrumbs.push({
                 "@type": "ListItem",
                 "position": pos,
-                "name": title.replace(' | Zenhogar', '').trim(),
+                "name": title.replace(' | Azenza', '').replace(' | Zenhogar', '').trim(),
                 "item": fullUrl
             });
         }
@@ -151,6 +151,18 @@ export const generateSchemaGraph = (params: {
             return "https://schema.org/NewCondition";
         };
 
+        const primaryImgUrl = ogImage?.startsWith('http') ? ogImage : `${BASE_URL}${ogImage || ''}`;
+        const schemaImages: string[] = [primaryImgUrl].filter(Boolean);
+        if (productData.supportImages && Array.isArray(productData.supportImages)) {
+            productData.supportImages.forEach((img: string) => {
+                if (!img) return;
+                const fullImgUrl = img.startsWith('http') ? img : `${BASE_URL}${img.startsWith('/') ? img : `/${img}`}`;
+                if (!schemaImages.includes(fullImgUrl)) {
+                    schemaImages.push(fullImgUrl);
+                }
+            });
+        }
+
         const productEntity: any = {
             "@type": "Product",
             "@id": `${fullUrl}#product`,
@@ -160,12 +172,10 @@ export const generateSchemaGraph = (params: {
             "sku": String(productData.masterId || productData.id).toUpperCase(),
             "mpn": String(productData.masterId || productData.id).toUpperCase(),
             "category": productData.googleCategory || productData.category,
-            "image": [
-                ogImage?.startsWith('http') ? ogImage : `${BASE_URL}${ogImage || ''}`
-            ],
+            "image": schemaImages,
             "brand": { 
                 "@type": "Brand", 
-                "name": "Zenhogar" 
+                "name": "Azenza" 
             },
             "offers": {
                 "@type": "Offer",

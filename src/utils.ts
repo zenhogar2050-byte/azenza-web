@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatCurrency(value: number, country?: string) {
-  const activeCountry = country || (typeof window !== 'undefined' ? localStorage.getItem('zenhogar_country') : null) || 'CO';
+  const activeCountry = country || (typeof window !== 'undefined' ? (localStorage.getItem('azenza_country') || localStorage.getItem('zenhogar_country')) : null) || 'CO';
   
   if (activeCountry === 'EC' || activeCountry === 'USD') {
     return new Intl.NumberFormat('en-US', {

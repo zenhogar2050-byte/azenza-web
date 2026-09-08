@@ -41,7 +41,7 @@ export default function DeliveryConditions() {
           <section>
             <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Cobertura Nacional y Valor del Envío</h2>
             <p>
-              ZENHOGAR ofrece cobertura en el 98% del territorio nacional colombiano. Lo mejor de todo es que <strong>el envío es 100% gratuito</strong> para todos nuestros clientes, sin importar el monto de la compra o el destino (sujeto a cobertura de transportadora). Trabajamos con las mejores empresas de logística del país: Coordinadora, Servientrega, Envía e Interrapidísimo.
+              AZENZA ofrece cobertura en el 98% del territorio nacional colombiano. Lo mejor de todo es que <strong>el envío es 100% gratuito</strong> para todos nuestros clientes, sin importar el monto de la compra o el destino (sujeto a cobertura de transportadora). Trabajamos con las mejores empresas de logística del país: Coordinadora, Servientrega, Envía e Interrapidísimo.
             </p>
           </section>
 

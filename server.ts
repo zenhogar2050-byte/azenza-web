@@ -402,7 +402,7 @@ async function startServer() {
   
   // SEO: Sitemap.xml
   app.get("/sitemap.xml", (req, res) => {
-    const baseUrl = "https://zenhogar.live";
+    const baseUrl = "https://azenza.com.co";
     const productsUrls = PRODUCTS.map(p => `${baseUrl}/producto/${p.id}`);
     const categoriesUrls = CATEGORIES.map(c => `${baseUrl}/categoria/${c.id}`);
     const ALL_PROMOTIONS = [COMBO_OF_THE_MONTH, ...PROMOTIONS];
@@ -439,34 +439,40 @@ async function startServer() {
   app.get("/robots.txt", (req, res) => {
     const robots = `User-agent: *
 Allow: /
-Sitemap: https://zenhogar.live/sitemap.xml
+Sitemap: https://azenza.com.co/sitemap.xml
 `;
     res.header("Content-Type", "text/plain");
     res.send(robots);
   });
 
-  // SEO: Google Merchant Feed
+    // SEO: Google Merchant Feed
   app.get("/google-feed.xml", (req, res) => {
-    const baseUrl = "https://zenhogar.live";
+    const baseUrl = "https://azenza.com.co";
     const ALL_PROMOTIONS = [COMBO_OF_THE_MONTH, ...PROMOTIONS];
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
 <channel>
-  <title><![CDATA[Zenhogar - Salud y Bienestar]]></title>
+  <title><![CDATA[Azenza - Salud y Bienestar]]></title>
   <link>${baseUrl}</link>
   <description><![CDATA[Tu aliado en salud natural, suplementos y bienestar integral en Colombia.]]></description>
-  ${PRODUCTS.map(p => `
+  ${PRODUCTS.map(p => {
+    const mainImg = p.image.startsWith('http') ? p.image : `${baseUrl}${p.image.startsWith('/') ? p.image : `/${p.image}`}`;
+    const additionalImgs = Array.from(new Set((p.supportImages || []).filter(img => img && img !== p.image)))
+      .slice(0, 10)
+      .map(img => `    <g:additional_image_link>${encodeURI(img.startsWith('http') ? img : `${baseUrl}${img.startsWith('/') ? img : `/${img}`}`)}</g:additional_image_link>`)
+      .join('\n');
+    return `
   <item>
     <g:id><![CDATA[${p.masterId}]]></g:id>
     <g:title><![CDATA[${p.name}]]></g:title>
     <g:description><![CDATA[${(p.description || p.shortDescription).replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
     <g:link>${encodeURI(`${baseUrl}/producto/${p.id}`)}</g:link>
-    <g:image_link>${encodeURI(`${baseUrl}${p.image}`)}</g:image_link>
-    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
+    <g:image_link>${encodeURI(mainImg)}</g:image_link>
+${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
     <g:availability><![CDATA[in stock]]></g:availability>
     <g:price><![CDATA[${p.basePrice} COP]]></g:price>
     <g:google_product_category><![CDATA[${p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition'}]]></g:google_product_category>
-    <g:brand><![CDATA[Zenhogar]]></g:brand>
+    <g:brand><![CDATA[Azenza]]></g:brand>
     <g:mpn><![CDATA[${p.masterId}]]></g:mpn>
     <g:identifier_exists><![CDATA[no]]></g:identifier_exists>
     <g:shipping>
@@ -474,26 +480,49 @@ Sitemap: https://zenhogar.live/sitemap.xml
       <g:service><![CDATA[Envío Gratis]]></g:service>
       <g:price><![CDATA[0 COP]]></g:price>
     </g:shipping>
-  </item>`).join('')}
-  ${ALL_PROMOTIONS.map(p => `
+  </item>`;
+  }).join('')}
+  ${ALL_PROMOTIONS.map(p => {
+    const mainImg = p.image.startsWith('http') ? p.image : `${baseUrl}${p.image.startsWith('/') ? p.image : `/${p.image}`}`;
+    const promoImages: string[] = [];
+    if (p.supportImages && Array.isArray(p.supportImages)) {
+      promoImages.push(...p.supportImages);
+    }
+    if (p.products && Array.isArray(p.products)) {
+      p.products.forEach((prodNameOrId: string) => {
+        const matched = PRODUCTS.find(pr => pr.id === prodNameOrId || pr.name.toLowerCase() === prodNameOrId.toLowerCase());
+        if (matched && matched.image) {
+          promoImages.push(matched.image);
+        }
+        if (matched && matched.supportImages) {
+          promoImages.push(...matched.supportImages);
+        }
+      });
+    }
+    const additionalImgs = Array.from(new Set(promoImages.filter(img => img && img !== p.image)))
+      .slice(0, 10)
+      .map(img => `    <g:additional_image_link>${encodeURI(img.startsWith('http') ? img : `${baseUrl}${img.startsWith('/') ? img : `/${img}`}`)}</g:additional_image_link>`)
+      .join('\n');
+    return `
   <item>
     <g:id><![CDATA[${p.id}]]></g:id>
     <g:title><![CDATA[${p.name}]]></g:title>
     <g:description><![CDATA[${p.description.replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
     <g:link>${encodeURI(`${baseUrl}/combo/${p.id}`)}</g:link>
-    <g:image_link>${encodeURI(`${baseUrl}${p.image}`)}</g:image_link>
-    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
+    <g:image_link>${encodeURI(mainImg)}</g:image_link>
+${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
     <g:availability><![CDATA[in stock]]></g:availability>
     <g:price><![CDATA[${p.price} COP]]></g:price>
     <g:google_product_category><![CDATA[${p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition'}]]></g:google_product_category>
-    <g:brand><![CDATA[Zenhogar]]></g:brand>
+    <g:brand><![CDATA[Azenza]]></g:brand>
     <g:identifier_exists><![CDATA[no]]></g:identifier_exists>
     <g:shipping>
       <g:country><![CDATA[CO]]></g:country>
       <g:service><![CDATA[Envío Gratis]]></g:service>
       <g:price><![CDATA[0 COP]]></g:price>
     </g:shipping>
-  </item>`).join('')}
+  </item>`;
+  }).join('')}
 </channel>
 </rss>`;
 
@@ -556,7 +585,7 @@ Sitemap: https://zenhogar.live/sitemap.xml
   }
 
   app.listen(Number(PORT), "0.0.0.0", () => {
-    console.log(`🚀 ZENHOGAR Server running on port ${PORT}`);
+    console.log(`🚀 AZENZA Server running on port ${PORT}`);
   });
 }
 

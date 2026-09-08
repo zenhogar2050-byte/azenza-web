@@ -57,13 +57,13 @@ export default function WhatsAppFloat() {
 
   const whatsappNumber = '573024102568'; 
   
-  let message = 'Hola! Me gustaría recibir más información sobre los productos de Zenhogar.';
+  let message = 'Hola! Me gustaría recibir más información sobre los productos de Azenza.';
   if (productContext) {
-    message = `Hola *ZENHOGAR*! 👋\n\nEstoy interesado en: *${productContext}*\n\nMe gustaría recibir más información. ¿Podrían ayudarme?`;
+    message = `Hola *AZENZA*! 👋\n\nEstoy interesado en: *${productContext}*\n\nMe gustaría recibir más información. ¿Podrían ayudarme?`;
   } else if (categoryContext) {
-    message = `Hola *ZENHOGAR*! 👋\n\nEstoy buscando productos de la categoría: *${categoryContext}*\n\n¿Me podrían asesorar para elegir el mejor para mí?`;
+    message = `Hola *AZENZA*! 👋\n\nEstoy buscando productos de la categoría: *${categoryContext}*\n\n¿Me podrían asesorar para elegir el mejor para mí?`;
   } else if (location.pathname === '/') {
-    message = `Hola *ZENHOGAR*! 👋\n\nEstoy visitando su tienda y me gustaría recibir información sobre sus productos y promociones. ✨`;
+    message = `Hola *AZENZA*! 👋\n\nEstoy visitando su tienda y me gustaría recibir información sobre sus productos y promociones. ✨`;
   }
     
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;

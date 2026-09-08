@@ -74,7 +74,7 @@ export default function Checkout() {
             gclid: savedGclid,
             customer: {
               fullName: formData.fullName || "Pte. Nombre",
-              email: formData.email || "contacto@zenhogar.live",
+              email: formData.email || "contacto@azenza.com.co",
               phone: formData.phone || "3000000000",
               identification: formData.identification || "123456789",
               address: formData.address || "Pte. Dirección",
@@ -160,7 +160,7 @@ export default function Checkout() {
           gclid: savedGclid,
           customer: {
             fullName: formData.fullName || "Cliente",
-            email: formData.email || "contacto@zenhogar.live",
+            email: formData.email || "contacto@azenza.com.co",
             phone: formData.phone || "3000000000",
             identification: formData.identification || "123456789",
             address: formData.address || "Dirección pendiente",
@@ -296,7 +296,7 @@ export default function Checkout() {
         await deleteOrderFromFirebase(abandonedId);
       }
 
-      const message = `*🛍️ PEDIDO #${currentTicket} - ZENHOGAR*\n\n` +
+      const message = `*🛍️ PEDIDO #${currentTicket} - AZENZA*\n\n` +
         `*PRODUCTOS:*\n${orderDetails}\n\n` +
         `*TOTAL A PAGAR:* ${formatCurrency(total)}\n\n` +
         `*DATOS DEL CLIENTE:*\n` +
@@ -317,7 +317,7 @@ export default function Checkout() {
         total: total, 
         ticketNumber: currentTicket,
         whatsappUrl: finalWhatsappUrl,
-        email: formData.email || "contacto@zenhogar.live",
+        email: formData.email || "contacto@azenza.com.co",
         items: items.map(i => ({
           id: i.productId, 
           name: i.productName, 
@@ -329,7 +329,7 @@ export default function Checkout() {
       clearCart();
       navigate('/gracias', { 
         state: { 
-          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@zenhogar.live" },
+          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@azenza.com.co" },
           whatsappUrl: finalWhatsappUrl,
           ticketNumber: currentTicket
         } 
@@ -340,7 +340,7 @@ export default function Checkout() {
       console.error('Error:', error);
       navigate('/gracias', { 
         state: { 
-          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@zenhogar.live" },
+          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@azenza.com.co" },
           whatsappUrl: `https://api.whatsapp.com/send?phone=573024102568&text=${encodeURIComponent('Error al procesar pedido, por favor contactar soporte.')}`,
           ticketNumber: 'ERROR'
         } 

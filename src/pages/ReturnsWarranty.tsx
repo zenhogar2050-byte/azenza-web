@@ -29,7 +29,7 @@ export default function ReturnsWarranty() {
             <ShieldCheck className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-stone-900 mb-2">Compromiso ZENHOGAR</h3>
+            <h3 className="text-xl font-bold text-stone-900 mb-2">Compromiso AZENZA</h3>
             <p className="text-stone-600">
               Su satisfacción es nuestra prioridad. Todos nuestros productos cuentan con garantía de originalidad y calidad.
             </p>
@@ -40,7 +40,7 @@ export default function ReturnsWarranty() {
           <section>
             <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Garantía de Calidad</h2>
             <p>
-              ZENHOGAR garantiza que todos los productos son originales, cuentan con registro INVIMA vigente y han sido almacenados bajo condiciones óptimas. La garantía cubre defectos de fabricación o daños ocurridos durante el transporte.
+              AZENZA garantiza que todos los productos son originales, cuentan con registro INVIMA vigente y han sido almacenados bajo condiciones óptimas. La garantía cubre defectos de fabricación o daños ocurridos durante el transporte.
             </p>
           </section>
 

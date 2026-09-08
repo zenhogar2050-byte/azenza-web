@@ -112,7 +112,7 @@ export default function Navbar() {
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex-shrink-0">
                   <img 
                     src="/assets/logo/logo-icon.webp" 
-                    alt="Zen Hogar Icon" 
+                    alt="Azenza Icon" 
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
                     loading="eager"
@@ -123,7 +123,7 @@ export default function Navbar() {
                   />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-base sm:text-lg md:text-xl font-black text-stone-900 tracking-tighter uppercase whitespace-nowrap">Zen Hogar</span>
+                <span className="text-base sm:text-lg md:text-xl font-black text-stone-900 tracking-tighter uppercase whitespace-nowrap">Azenza</span>
                 <span className="text-[8px] sm:text-[9px] md:text-[11px] font-bold text-emerald-600 tracking-[0.2em] uppercase whitespace-nowrap">Salud Vital</span>
               </div>
             </Link>

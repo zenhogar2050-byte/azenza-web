@@ -45,6 +45,8 @@ export interface Product {
   videoUrlMp4?: string;
   videoPoster?: string;
   googleCategory?: string;
+  googleTitle?: string;
+  googleDescription?: string;
   condition?: 'new';
 }
 
@@ -66,7 +68,7 @@ export const CATEGORIES = [
     image: '/assets/categories/belleza-integral.webp',
     color: 'rose',
     description: 'Potencia tu belleza desde el interior con productos diseñados para nutrir tu piel, fortalecer tu cabello y revitalizar tu apariencia.',
-    seoTitle: 'Belleza Integral: Nutrición para Piel, Cabello y Uñas | Zenhogar',
+    seoTitle: 'Belleza Integral: Nutrición para Piel, Cabello y Uñas | Azenza',
     seoDescription: 'Potencia tu belleza desde el interior. Colágenos, vitaminas y cuidados naturales para una apariencia radiante. Calidad certificada.'
   },
   { 
@@ -86,8 +88,8 @@ export const CATEGORIES = [
     image: '/assets/categories/Combos.webp',
     color: 'emerald',
     description: 'Nuestra selección exclusiva de combos especialmente diseñados para multiplicar tu salud integral, belleza y vitalidad al mejor precio y con ahorro garantizado.',
-    seoTitle: 'Combos y Ofertas Especiales de Salud y Bienestar | Zenhogar',
-    seoDescription: 'Accede a los mejores combos de salud, desintoxicación, belleza y bienestar formulados por ZENHOGAR con registro INVIMA y envío sin costo.'
+    seoTitle: 'Combos y Ofertas Especiales de Salud y Bienestar | Azenza',
+    seoDescription: 'Accede a los mejores combos de salud, desintoxicación, belleza y bienestar formulados por AZENZA con registro INVIMA y envío sin costo.'
   }
 ];
 
@@ -107,7 +109,7 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
 ✔️ Depuración Total: Ayuda a la limpieza interna del hígado y los riñones de impurezas y grasas.
 ✔️ Adiós a la Inflamación: Reduce la pesadez estomacal y la sensación de hinchazón tras las comidas.
 ✔️ Alianza Herbal: El poder del apio y el perejil para una función renal óptima y defensas activas.`,
-    seoTitle: 'Rtafull: Apoyo para la desintoxicación del organismo naturalmente | Zenhogar',
+    seoTitle: 'Rtafull: Apoyo para la desintoxicación del organismo naturalmente | Azenza',
     seoDescription: 'Apoya tu salud hepática y favorece la reducción de la pesadez con Rtafull. Concentrado natural con Alcachofa y Berenjena para una digestión más ligera. ¡Registro INVIMA!',
     benefits: [
       'Ayuda en la depuración natural de hígado y riñones de toxinas acumuladas',
@@ -130,7 +132,7 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
       '/assets/products/rtafull-apoyo-3.webp',
       '/assets/products/rtafull-apoyo-4.webp'
     ],
-    keywords: 'limpieza hígado, digestión ligera, pesadez abdominal, depurar el organismo, alcachofa, Rtafull, Zenhogar, bienestar hepático',
+    keywords: 'limpieza hígado, digestión ligera, pesadez abdominal, depurar el organismo, alcachofa, Rtafull, Azenza, bienestar hepático',
     components: 'Alcachofa, Flor de Jamaica, Berenjena, Apio y Perejil',
     componentBenefits: [
     {
@@ -171,7 +173,7 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
     ],
     whyChoose: {
       title: 'Energía y Ligereza Natural',
-      description: 'En ZENHOGAR impulsamos tu bienestar con extractos que el cuerpo absorbe al instante. Rtafull es la solución definitiva para quienes buscan una depuración efectiva sin recurrir a químicos pesados, respaldado por certificaciones de salud oficiales.'
+      description: 'En AZENZA impulsamos tu bienestar con extractos que el cuerpo absorbe al instante. Rtafull es la solución definitiva para quienes buscan una depuración efectiva sin recurrir a químicos pesados, respaldado por certificaciones de salud oficiales.'
     }
   },
   {
@@ -187,7 +189,7 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
 ✔️ Regularidad Garantizada: Mezcla de chía y pitaya que asegura un movimiento intestinal fluido y natural.
 ✔️ Colon Saludable: Limpieza profunda de residuos acumulados sin causar irritación ni cólicos.
 ✔️ Rendimiento Superior: Fórmula concentrada de 450g que rinde el doble que las fibras convencionales.`,
-    seoTitle: 'Coliplus: Cómo regular el tránsito intestinal y depurar el colon | Zenhogar',
+    seoTitle: 'Coliplus: Cómo regular el tránsito intestinal y depurar el colon | Azenza',
     seoDescription: 'Recupera tu regularidad con Coliplus. Fibra natural con Pitaya y Espirulina para depurar el colon y reconfortar el vientre. ¡Rinde 2 meses y tiene Registro INVIMA!',
     benefits: [
       'Regula el tránsito intestinal combatiendo el estreñimiento de raíz',
@@ -210,7 +212,7 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
       '/assets/products/coliplus-apoyo-3.webp',
       '/assets/products/coliplus-apoyo-4.webp'
     ],
-    keywords: 'limpieza intestinal, estreñimiento, fibras naturales, pitaya, espirulina, digestión fácil, salud digestiva, Coliplus, Zenhogar',
+    keywords: 'limpieza intestinal, estreñimiento, fibras naturales, pitaya, espirulina, digestión fácil, salud digestiva, Coliplus, Azenza',
     components: 'Linaza, Pitaya, Flor de Jamaica, Alcachofa, Chía y Espirulina',
     componentBenefits: [
     {
@@ -256,7 +258,7 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
     ],
     whyChoose: {
       title: 'Ligereza y regularidad garantizada',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu paz intestinal. Coliplus combina Pitaya y Espirulina para una limpieza suave que rinde 2 meses. Recupera tu bienestar digestivo con una fórmula certificada y segura.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu paz intestinal. Coliplus combina Pitaya y Espirulina para una limpieza suave que rinde 2 meses. Recupera tu bienestar digestivo con una fórmula certificada y segura.'
     }
   },
   {
@@ -272,7 +274,7 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
 ✔️ Movilidad y Fuerza: Nutre profundamente el sistema óseo y mejora la flexibilidad de las articulaciones.
 ✔️ Belleza desde el Interior: Hidrata la piel en sus capas más profundas, fortaleciendo también cabello y uñas.
 ✔️ Pureza Familiar: Sabor neutro y disolución rápida, apto para todas las edades y estilos de vida activos.`,
-    seoTitle: 'Colágeno + Citrato de Magnesio: Regeneración Articular y Piel Firme | Zenhogar',
+    seoTitle: 'Colágeno + Citrato de Magnesio: Regeneración Articular y Piel Firme | Azenza',
     seoDescription: 'Fortalece tus articulaciones y mejora la firmeza de tu piel con Colágeno + Citrato de Magnesio. Fórmula pura para vitalidad ósea y descanso reparador. ¡Calidad INVIMA!',
     benefits: [
       'Fortalece la estructura ósea y protege las articulaciones del desgaste',
@@ -294,7 +296,7 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
       '/assets/products/colageno-apoyo-3.webp',
       '/assets/products/colageno-apoyo-4.webp'
     ],
-    keywords: 'colágeno natural, sabor neutro, hidratación piel, colágeno familiar, piel suave, Zenhogar, colágeno puro',
+    keywords: 'colágeno natural, sabor neutro, hidratación piel, colágeno familiar, piel suave, Azenza, colágeno puro',
     components: 'Colágeno Hidrolizado y Citrato de Magnesio',
     componentBenefits: [
     {
@@ -332,7 +334,7 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
     ],
     whyChoose: {
       title: 'Hidratación para toda la familia',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alta pureza. Nuestro Colágeno + Citrato de Magnesio es la mezcla ideal para fortalecer articulaciones, huesos y mejorar la función muscular. Calidad certificada para tu bienestar diario.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alta pureza. Nuestro Colágeno + Citrato de Magnesio es la mezcla ideal para fortalecer articulaciones, huesos y mejorar la función muscular. Calidad certificada para tu bienestar diario.'
     }
   },
   {
@@ -348,7 +350,7 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
 ✔️ Fortalecimiento Inmune: Calostro y Shiitake que actúan como un blindaje natural contra agentes externos.
 ✔️ Recuperación y Vitalidad: Aminoácidos esenciales (L-Arginina, L-Glutamina) para una regeneración muscular óptima.
 ✔️ Nutrición Completa: Omega 3-6-9 y vitaminas esenciales para el equilibrio metabólico de toda la familia.`,
-    seoTitle: 'Resvisfactor Calostro Bovino: Refuerzo Total de Defensas | Zenhogar',
+    seoTitle: 'Resvisfactor Calostro Bovino: Refuerzo Total de Defensas | Azenza',
     seoDescription: 'Fortalece tu sistema inmunológico con Resvisfactor. Fórmula con Calostro Bovino y Shiitake para un escudo natural y vitalidad inmediata. ¡Calidad INVIMA garantizada!',
     benefits: [
       'Eleva significativamente las defensas naturales y la respuesta inmune',
@@ -370,7 +372,7 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
       '/assets/products/resvis-apoyo-3.webp',
       '/assets/products/resvis-apoyo-4.webp'
     ],
-    keywords: 'antioxidante, sistema inmune, resveratrol, energía vital, defensas, vitalidad diaria, Resvis Factor, Zenhogar',
+    keywords: 'antioxidante, sistema inmune, resveratrol, energía vital, defensas, vitalidad diaria, Resvis Factor, Azenza',
     components: 'Calostro Bovino, Shiitake, Quinua, Malta y Vitaminas',
     componentBenefits: [
     {
@@ -412,7 +414,7 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
     ],
     whyChoose: {
       title: 'Tu Escudo de Vida Diario',
-      description: 'En ZENHOGAR impulsamos tu vitalidad con fórmulas que actúan desde el interior. Resvisfactor es la opción ideal para quienes buscan una protección natural superior, combinando calostro y hongos funcionales para mantener tus defensas siempre activas.'
+      description: 'En AZENZA impulsamos tu vitalidad con fórmulas que actúan desde el interior. Resvisfactor es la opción ideal para quienes buscan una protección natural superior, combinando calostro y hongos funcionales para mantener tus defensas siempre activas.'
     }
   },
   {
@@ -428,7 +430,7 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
 ✔️ Salud Cognitiva: Favorece la memoria, concentración y activa tu agilidad mental ante jornadas de alta exigencia.
 ✔️ Inmunidad y Vigor: Premezcla de sales minerales y vitaminas esenciales que robustecen las defensas naturales y protegen contra el cansancio cerebral.
 ✔️ Formulación Limpia: 100% libre de azúcares añadidos y libre de impurezas para asegurar máxima asimilación y pureza cerebral.`,
-    seoTitle: 'Booster Lion Melena de León | Enfoque y Salud Mental | Zenhogar',
+    seoTitle: 'Booster Lion Melena de León | Enfoque y Salud Mental | Azenza',
     seoDescription: 'Potencia tu concentración y claridad mental con Booster Lion. Alimento con hongo funcional Melena de León, vitaminas y sabor vainilla. ¡Registro INVIMA IRSA-0021928-2022!',
     benefits: [
       'Contiene Melena de León para optimizar la memoria, concentración y salud cognitiva',
@@ -451,7 +453,7 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
       '/assets/products/booster-lion-apoyo-3.webp',
       '/assets/products/booster-lion-apoyo-4.webp'
     ],
-    keywords: 'booster lion, boster lion, melena de leon, hongo funcional, enfoque mental, memoria, salud cerebral, zenhogar, suplemento concentracion',
+    keywords: 'booster lion, boster lion, melena de leon, hongo funcional, enfoque mental, memoria, salud cerebral, azenza, suplemento concentracion',
     components: 'Crema de coco, Proteína de suero lácteo, Betaglucanos de Hericium erinaceus (Melena de león), Sabor artificial a vainilla, Vitaminas y Minerales',
     componentBenefits: [
       {
@@ -495,7 +497,7 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
     ],
     whyChoose: {
       title: 'Enfoque Superior Sin Límites',
-      description: 'En ZENHOGAR impulsamos tu rendimiento diario. Booster Lion integra las bondades del hongo funcional Melena de León con un perfil vitamínico avanzado para blindar tu mente y vitalidad con el respaldo de un registro INVIMA certificado.'
+      description: 'En AZENZA impulsamos tu rendimiento diario. Booster Lion integra las bondades del hongo funcional Melena de León con un perfil vitamínico avanzado para blindar tu mente y vitalidad con el respaldo de un registro INVIMA certificado.'
     }
   },
   {
@@ -506,13 +508,13 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
     shortDescription: 'Alivio Muscular Termoactivo y Recuperación Profunda.',
     description: `Experimenta un alivio inmediato y reconfortante con nuestra Loción Termoactiva, el cuidado intensivo diseñado para liberar la tensión acumulada en tus músculos y articulaciones. Su potente fórmula botánica combina los beneficios ancestrales de la uña de gato, la árnica y el castaño de indias para penetrar profundamente en las capas de la piel, proporcionando un calor reconfortante que relaja las fibras musculares y mejora la sensación de bienestar local al instante.
 
-Ideal para deportistas que buscan acelerar su recuperación o para quienes sufren de fatiga muscular tras largas jornadas de trabajo o actividad, esta loción no grasosa se absorbe en segundos sin manchar la ropa. Ya sea una molestia en el cuello, pesadez en las piernas o un dolor articular inoportuno, la Loción Termoactiva de ZENHOGAR actúa como un aliado natural que devuelve la movilidad y el confort a tu cuerpo.
+Ideal para deportistas que buscan acelerar su recuperación o para quienes sufren de fatiga muscular tras largas jornadas de trabajo o actividad, esta loción no grasosa se absorbe en segundos sin manchar la ropa. Ya sea una molestia en el cuello, pesadez en las piernas o un dolor articular inoportuno, la Loción Termoactiva de AZENZA actúa como un aliado natural que devuelve la movilidad y el confort a tu cuerpo.
 
 ✔️ Calor Reparador: Estimula la superficie cutánea para reconfortar y aliviar la zona rápidamente.
 ✔️ Alianza Botánica: Árnica y Chuchuguaza que trabajan en sinergia para reconfortar tras golpes y torceduras.
 ✔️ Bienestar Inmediato: Textura ligera de rápida acción que relaja tensiones y mejora la flexibilidad.`,
-    seoTitle: 'Loción Termoactiva: Alivio para Dolores Musculares y Articulares | Zenhogar',
-    seoDescription: 'Alivia el dolor y la tensión con la Loción Termoactiva de ZENHOGAR. Efecto calor profundo con Árnica y Uña de Gato para recuperación muscular total. ¡Registro INVIMA!',
+    seoTitle: 'Loción Termoactiva: Alivio para Dolores Musculares y Articulares | Azenza',
+    seoDescription: 'Alivia el dolor y la tensión con la Loción Termoactiva de AZENZA. Efecto calor profundo con Árnica y Uña de Gato para recuperación muscular total. ¡Registro INVIMA!',
     benefits: [
       'Alivio casi instantáneo de dolores musculares, golpes y calambres',
       'Efecto calor profundo que relaja tensiones y desinflama tejidos',
@@ -533,7 +535,7 @@ Ideal para deportistas que buscan acelerar su recuperación o para quienes sufre
       '/assets/products/locion-apoyo-3.webp',
       '/assets/products/locion-apoyo-4.webp'
     ],
-    keywords: 'dolor muscular, tensión cuello, cansancio en piernas, fatiga muscular, masajes, alivio rápido, loción termoactiva, Zenhogar',
+    keywords: 'dolor muscular, tensión cuello, cansancio en piernas, fatiga muscular, masajes, alivio rápido, loción termoactiva, Azenza',
     components: 'Árnica, Castaño de Indias, Caléndula, Uña de Gato y Chuchuguaza',
     componentBenefits: [
     {
@@ -579,7 +581,7 @@ Ideal para deportistas que buscan acelerar su recuperación o para quienes sufre
     ],
     whyChoose: {
       title: 'Alivio que reconforta tu cuerpo',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA e ingredientes botánicos seguros. Nuestra loción termoactiva es ideal para todos los que tienen tensión muscular generados por cansancio, agotamiento o que padecen de desgaste ocasional, respaldado por estándares de calidad.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA e ingredientes botánicos seguros. Nuestra loción termoactiva es ideal para todos los que tienen tensión muscular generados por cansancio, agotamiento o que padecen de desgaste ocasional, respaldado por estándares de calidad.'
     }
   },
   // New products for Salud y Bienestar
@@ -596,7 +598,7 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
 ✔️ Poder Oceánico: Colágeno marino de alta biodisponibilidad para una reconstrucción articular real.
 ✔️ Huesos Macizos: Minerales esenciales que previenen la desmineralización y fortalecen la densidad ósea.
 ✔️ Movilidad sin Límites: Nutre profundamente ligamentos y tendones para un caminar fluido y sin dolor.`,
-    seoTitle: 'C-Lagen Colágeno Marino: Salud de Rodillas y Articulaciones | Zenhogar',
+    seoTitle: 'C-Lagen Colágeno Marino: Salud de Rodillas y Articulaciones | Azenza',
     seoDescription: 'Fortalece tus rodillas y recupera tu movilidad con C-Lagen. Colágeno Marino puro con Magnesio para una regeneración articular superior. ¡Registro INVIMA certificado!',
     benefits: [
       'Máxima biodisponibilidad gracias a su origen marino de alta pureza',
@@ -618,7 +620,7 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
       '/assets/products/c-lagen-apoyo-3.webp',
       '/assets/products/c-lagen-apoyo-4.webp'
     ],
-    keywords: 'colágeno marino, molestias articulares, salud articular, huesos fuertes, magnesio, movilidad, C-Lagen, Zenhogar',
+    keywords: 'colágeno marino, molestias articulares, salud articular, huesos fuertes, magnesio, movilidad, C-Lagen, Azenza',
     components: 'Colágeno Marino, Citrato de Magnesio, Vitaminas y Minerales',
     componentBenefits: [
     {
@@ -660,7 +662,7 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
     ],
     whyChoose: {
       title: 'Nutrición celular de alta pureza',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. C-Lagen nutre tu piel profundamente con una fórmula balanceada enriquecida con ácido hialurónico para resultados seguros y efectivos.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. C-Lagen nutre tu piel profundamente con una fórmula balanceada enriquecida con ácido hialurónico para resultados seguros y efectivos.'
     }
   },
   {
@@ -676,7 +678,7 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
 ✔️ Triple Acción de Magnesio: Optimiza la relajación muscular y combate el estrés crónico de raíz.
 ✔️ Adiós a los Calambres: Previene espasmos y rigidez, mejorando la flexibilidad de todo el cuerpo.
 ✔️ Bienestar Digestivo: La inulina incorporada promueve una digestión ligera y un vientre desinflamado.`,
-    seoTitle: 'Citramix Magnesio Durazno: Relax Muscular y Paz Mental | Zenhogar',
+    seoTitle: 'Citramix Magnesio Durazno: Relax Muscular y Paz Mental | Azenza',
     seoDescription: 'Dile adiós al estrés y los calambres con Citramix. Triple aporte de Magnesio para un descanso profundo y músculos relajados. ¡Delicioso sabor a durazno!',
     benefits: [
       'Relaja profundamente los músculos evitando calambres y rigidez',
@@ -697,7 +699,7 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
       '/assets/products/citramix-apoyo-3.webp',
       '/assets/products/citramix-apoyo-4.webp'
     ],
-    keywords: 'magnesio, calambres, estrés, digestión ligera, relajación muscular, paz mental, Citramix, Zenhogar',
+    keywords: 'magnesio, calambres, estrés, digestión ligera, relajación muscular, paz mental, Citramix, Azenza',
     components: 'Citrato de Magnesio, Bisglicinato de Magnesio y Vitaminas',
     componentBenefits: [
     {
@@ -735,7 +737,7 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
     ],
     whyChoose: {
       title: 'Vitalidad cítrica garantizada',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de origen natural. Citramix es un polvo multivitamínico diseñado para una absorción superior de vitamina C y el bienestar integral de toda tu familia.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de origen natural. Citramix es un polvo multivitamínico diseñado para una absorción superior de vitamina C y el bienestar integral de toda tu familia.'
     }
   },
   {
@@ -751,7 +753,7 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
 ✔️ Belleza Estructural: Bio-péptidos de colágeno que restauran la firmeza de la piel y fuerza capilar.
 ✔️ Energía con Propósito: Café funcional con crema de coco que activa tu mente sin irritar el estómago.
 ✔️ Blindaje Vitamínico: Carga completa de vitaminas A, C, D, E y complejo B para defensas invencibles.`,
-    seoTitle: 'Coffee + Colágeno con Crema de Coco: Belleza y Energía | Zenhogar',
+    seoTitle: 'Coffee + Colágeno con Crema de Coco: Belleza y Energía | Azenza',
     seoDescription: 'Fortalece tu cabello y uñas mientras disfrutas tu café. Coffee + Colágeno con base de Coco y 12 vitaminas para una belleza integral. ¡Calidad INVIMA!',
     benefits: [
       'Fortalece la fibra capilar y las uñas desde las capas internas',
@@ -772,7 +774,7 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
       '/assets/products/cafe-colageno-apoyo-3.webp',
       '/assets/products/cafe-colageno-apoyo-4.webp'
     ],
-    keywords: 'café con colágeno, crema de coco, belleza integral, fortalecer cabello, uñas fuertes, vitaminas, Coffee Colágeno, Zenhogar',
+    keywords: 'café con colágeno, crema de coco, belleza integral, fortalecer cabello, uñas fuertes, vitaminas, Coffee Colágeno, Azenza',
     components: 'Crema de Coco, Colágeno Hidrolizado y Café Soluble',
     componentBenefits: [
     {
@@ -813,7 +815,7 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
     ],
     whyChoose: {
       title: 'Belleza natural en cada taza',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de grado premium. Coffee + Colágeno fusiona el mejor café colombiano con colágeno hidrolizado para tu vitalidad diaria con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de grado premium. Coffee + Colágeno fusiona el mejor café colombiano con colágeno hidrolizado para tu vitalidad diaria con calidad certificada.'
     }
   },
   {
@@ -829,8 +831,8 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
 ✔️ Fuerza Real: Potencia la contracción muscular y el volumen celular para una estructura física sólida.
 ✔️ Enfoque Cerebral: Nutre las neuronas y reduce la fatiga mental, mejorando la concentración sostenida.
 ✔️ Grado Farmacéutico: Pureza total bajo estándares USP, asegurando un suplemento limpio y ultra-seguro.`,
-    seoTitle: 'Creatina 100% Pura Monohidratada: Fuerza y Enfoque | Zenhogar',
-    seoDescription: 'Potencia tus músculos y cerebro con Creatina 100% pura de ZENHOGAR. Grado farmacéutico USP para fuerza real, recuperación rápida y claridad mental. ¡Compra calidad!',
+    seoTitle: 'Creatina 100% Pura Monohidratada: Fuerza y Enfoque | Azenza',
+    seoDescription: 'Potencia tus músculos y cerebro con Creatina 100% pura de AZENZA. Grado farmacéutico USP para fuerza real, recuperación rápida y claridad mental. ¡Compra calidad!',
     benefits: [
       'Aumenta la fuerza explosiva y el rendimiento físico de alta intensidad',
       'Mejora significativamente la memoria, el enfoque y la agudeza mental',
@@ -850,7 +852,7 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
       '/assets/products/creatina-apoyo-3.webp',
       '/assets/products/creatina-apoyo-4.webp'
     ],
-    keywords: 'creatina pura, fuerza muscular, rendimiento cerebral, vitalidad, Zenhogar, creatina USP',
+    keywords: 'creatina pura, fuerza muscular, rendimiento cerebral, vitalidad, Azenza, creatina USP',
     components: 'Creatina monohidratada 100% pura',
     componentBenefits: [
     {
@@ -884,7 +886,7 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
     ],
     whyChoose: {
       title: 'Potencia muscular segura',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alta pureza. Nuestra Creatina 100% monohidratada asegura un suplemento libre de sustancias prohibidas y optimizado para tu rendimiento físico.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alta pureza. Nuestra Creatina 100% monohidratada asegura un suplemento libre de sustancias prohibidas y optimizado para tu rendimiento físico.'
     }
   },
   {
@@ -900,7 +902,7 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
 ✔️ Bienestar Pélvico: Ayuda a desinflamar y proteger la salud de la próstata de forma preventiva.
 ✔️ Vigor Natural: Extractos frutales que aportan antioxidantes clave para la vitalidad masculina.
 ✔️ Protección Celular: Rico en vitamina E y polifenoles que combaten el daño oxidativo sistémico.`,
-    seoTitle: 'Iprossmen: Salud de la Próstata y Bienestar del Hombre | Zenhogar',
+    seoTitle: 'Iprossmen: Salud de la Próstata y Bienestar del Hombre | Azenza',
     seoDescription: 'Cuida tu salud masculina con Iprossmen. Fórmula natural con Licopeno de Tomate y Arándanos para proteger la próstata y darte vigor diario. ¡Registro INVIMA certificado!',
     benefits: [
       'Protege y reconforta la salud de la próstata de manera preventiva',
@@ -921,7 +923,7 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
       '/assets/products/iprossmen-apoyo-3.webp',
       '/assets/products/iprossmen-apoyo-4.webp'
     ],
-    keywords: 'salud masculina, próstata, vitalidad, tomate de árbol, prevención, bienestar hombre, Iprossmen, Zenhogar',
+    keywords: 'salud masculina, próstata, vitalidad, tomate de árbol, prevención, bienestar hombre, Iprossmen, Azenza',
     components: 'Té Verde, Tomate de Árbol, Arándanos, Mandarina, Jengibre, Ciruela y Vitamina E',
     componentBenefits: [
     {
@@ -963,7 +965,7 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
     ],
     whyChoose: {
       title: 'Equilibrio hormonal para el hombre',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alta precisión. Iprossmen es una fórmula balanceada enfocada en el bienestar integral de la zona pélvica mediante ingredientes de origen natural.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alta precisión. Iprossmen es una fórmula balanceada enfocada en el bienestar integral de la zona pélvica mediante ingredientes de origen natural.'
     }
   },
   {
@@ -979,7 +981,7 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
 ✔️ Inmunidad Total: Fortalece las defensas naturales contra virus y bacterias del entorno escolar y laboral.
 ✔️ Crecimiento y Vigor: Aporta los ladrillos nutricionales necesarios para el desarrollo físico y mental.
 ✔️ Absorción Superior: Base de coco que facilita el transporte de micronutrientes a las células de forma eficiente.`,
-    seoTitle: 'KDS 10 Multivitamínico Familiar: Defensas y Vitalidad | Zenhogar',
+    seoTitle: 'KDS 10 Multivitamínico Familiar: Defensas y Vitalidad | Azenza',
     seoDescription: 'Fortalece a toda tu familia con KDS 10. Complejo completo de vitaminas y minerales para defensas altas y energía sin límites. ¡Nutrición inteligente certificada!',
     benefits: [
       'Proporciona el 100% de las vitaminas y minerales esenciales diarios',
@@ -1000,7 +1002,7 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
       '/assets/products/kds-10-apoyo-3.webp',
       '/assets/products/kds-10-apoyo-4.webp'
     ],
-    keywords: 'multivitamínico, vitalidad diaria, vitaminas y minerales, KDS 10, Zenhogar',
+    keywords: 'multivitamínico, vitalidad diaria, vitaminas y minerales, KDS 10, Azenza',
     components: 'Crema de coco, Proteína de suero, Magnesio, Hierro, Zinc y Complejo Vitamínico',
     componentBenefits: [
     {
@@ -1046,7 +1048,7 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
     ],
     whyChoose: {
       title: 'Nutrición familiar con confianza',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu familia. KDS 10 es un multivitamínico ideal para complementar la dieta diaria con la seguridad de una fórmula balanceada y certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu familia. KDS 10 es un multivitamínico ideal para complementar la dieta diaria con la seguridad de una fórmula balanceada y certificada.'
     }
   },
   {
@@ -1055,14 +1057,14 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
     name: 'Liofhim',
     category: 'salud-bienestar',
     shortDescription: 'Ritual de Descanso Nocturno y Sueño Reparador.',
-    description: `Recupera el placer de dormir profundamente y despierta con una energía renovada gracias a Liofhim, el complemento de relajación botánica de ZENHOGAR. Su fórmula ayuda a calmar la mente, combina extractos concentrados de manzanilla, albahaca y hierbabuena, actuando como un bálsamo para promover la serenidad. Liofhim facilita el descanso nocturno y promueve un sueño de alta calidad, ayudando a mantener la continuidad del reposo y evitando la agitación nocturna.
+    description: `Recupera el placer de dormir profundamente y despierta con una energía renovada gracias a Liofhim, el complemento de relajación botánica de AZENZA. Su fórmula ayuda a calmar la mente, combina extractos concentrados de manzanilla, albahaca y hierbabuena, actuando como un bálsamo para promover la serenidad. Liofhim facilita el descanso nocturno y promueve un sueño de alta calidad, ayudando a mantener la continuidad del reposo y evitando la agitación nocturna.
 
 A diferencia de los somníferos químicos, Liofhim promueve un descanso fisiológico natural sin causar dependencia ni somnolencia al día siguiente. Es el aliado perfecto para calmar la ansiedad nocturna, relajar los músculos y permitir que tu mente se regenere por completo. Despídete del insomnio y redescubre lo que significa tener una mente clara y un cuerpo revitalizado cada mañana.
 
 ✔️ Apagado Mental: Calma el flujo de pensamientos intrusivos para una relajación profunda e inmediata.
 ✔️ Sueño Continuo: Ayuda a mantener un estado de descanso estable y sin interrupciones durante la noche.
 ✔️ Amanecer Vital: Fórmula herbal que asegura despertar sin pesadez, con máxima claridad y vigor.`,
-    seoTitle: 'Liofhim Descanso Profundo: Sueño Reparador y Calma Natural | Zenhogar',
+    seoTitle: 'Liofhim Descanso Profundo: Sueño Reparador y Calma Natural | Azenza',
     seoDescription: 'Duerme profundamente con Liofhim. Mezcla botánica de Manzanilla y Albahaca para apagar la mente y despertar renovado cada mañana. ¡Sin somnolencia diurna!',
     benefits: [
       'Facilita el inicio del sueño profundo de forma rápida y natural',
@@ -1084,7 +1086,7 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
       '/assets/products/liofhim-apoyo-3.webp',
       '/assets/products/liofhim-apoyo-4.webp'
     ],
-    keywords: 'dormir profundo, insomnio, descanso real, manzanilla, albahaca, sueño reparador, Liofhim, Zenhogar',
+    keywords: 'dormir profundo, insomnio, descanso real, manzanilla, albahaca, sueño reparador, Liofhim, Azenza',
     components: 'Manzanilla, Albahaca, Anís, Hierbabuena y Vitaminas C y E',
     componentBenefits: [
     {
@@ -1125,7 +1127,7 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
     ],
     whyChoose: {
       title: 'Descanso profundo y natural',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu descanso real. Liofhim apaga la mente y relaja tu cuerpo gracias a la Manzanilla y la Albahaca. Logra un sueño reparador con la tranquilidad de una fórmula certificada y segura.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu descanso real. Liofhim apaga la mente y relaja tu cuerpo gracias a la Manzanilla y la Albahaca. Logra un sueño reparador con la tranquilidad de una fórmula certificada y segura.'
     }
   },
   {
@@ -1141,8 +1143,8 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
 ✔️ Alivio Estomacal: Calma la acidez y la pesadez abdominal con la frescura natural del limón y la menta.
 ✔️ Digestión Ágil: El jengibre y la albahaca estimulan el tránsito digestivo para evitar la hinchazón.
 ✔️ Pureza Saludable: Sin azúcar añadida y bajo en calorías, ideal para mantener tu equilibrio metabólico diaria.`,
-    seoTitle: 'Liteplex Alivio Digestivo: Digestión Ligera y Bienestar Natural | Zenhogar',
-    seoDescription: 'Dile adiós a la pesadez y la acidez con Liteplex de ZENHOGAR. Concentrado de Jengibre y Limón para una digestión ágil y un vientre desinflamado. ¡Calidad INVIMA!',
+    seoTitle: 'Liteplex Alivio Digestivo: Digestión Ligera y Bienestar Natural | Azenza',
+    seoDescription: 'Dile adiós a la pesadez y la acidez con Liteplex de AZENZA. Concentrado de Jengibre y Limón para una digestión ágil y un vientre desinflamado. ¡Calidad INVIMA!',
     benefits: [
       'Alivio casi inmediato contra la pesadez estomacal y la acidez',
       'Promueve una digestión ágil y previene la hinchazón abdominal',
@@ -1162,7 +1164,7 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
       '/assets/products/liteplex-apoyo-3.webp',
       '/assets/products/liteplex-apoyo-4.webp'
     ],
-    keywords: 'digestión ligera, alivio estomacal, acidez, pesadez, Liteplex, Zenhogar, jengibre, limón',
+    keywords: 'digestión ligera, alivio estomacal, acidez, pesadez, Liteplex, Azenza, jengibre, limón',
     components: 'Té Verde, Jengibre, Limón, Albahaca y Menta',
     componentBenefits: [
     {
@@ -1203,7 +1205,7 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
     ],
     whyChoose: {
       title: 'Alivio digestivo natural',
-      description: 'En ZENHOGAR cuidamos tu digestión con el poder de la naturaleza. Liteplex combina jengibre y limón para brindarte un alivio rápido contra la pesadez y la acidez, permitiéndote disfrutar de tus comidas con tranquilidad.'
+      description: 'En AZENZA cuidamos tu digestión con el poder de la naturaleza. Liteplex combina jengibre y limón para brindarte un alivio rápido contra la pesadez y la acidez, permitiéndote disfrutar de tus comidas con tranquilidad.'
     }
   },
   {
@@ -1219,7 +1221,7 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
 ✔️ Cuidado Articular Superior: Colágeno y quinua que restauran la movilidad y protegen contra el desgaste.
 ✔️ Piel y Cabello Radiante: Biotina y vitaminas que fortalecen la queratina natural y reducen la flacidez.
 ✔️ Energía Multivitamínica: Carga completa de micronutrientes para una vitalidad inagotable y defensas fuertes.`,
-    seoTitle: 'Maxlite Colágeno y Quinua: Nutrición Celular y Salud Articular | Zenhogar',
+    seoTitle: 'Maxlite Colágeno y Quinua: Nutrición Celular y Salud Articular | Azenza',
     seoDescription: 'Fortalece tus huesos y rejuvenece tu piel con Maxlite. Fórmula con Quinua, Colágeno y Resveratrol para una vitalidad integral y movilidad sin límites. ¡Calidad INVIMA!',
     benefits: [
       'Fortalece la estructura ósea y protege las articulaciones del desgaste diario',
@@ -1241,7 +1243,7 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
       '/assets/products/maxlite-apoyo-3.webp',
       '/assets/products/maxlite-apoyo-4.webp'
     ],
-    keywords: 'colágeno ligera, quinua, articulaciones, piel firme, Maxlite, Zenhogar',
+    keywords: 'colágeno ligera, quinua, articulaciones, piel firme, Maxlite, Azenza',
     components: 'Péptidos de Colágeno, Resveratrol, Quinua, Omega 3-6-9 y Vitaminas',
     componentBenefits: [
     {
@@ -1283,7 +1285,7 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
     ],
     whyChoose: {
       title: 'Nutrición integral avanzada',
-      description: 'En ZENHOGAR combinamos el colágeno con la fuerza de la quinua para ofrecerte una nutrición superior. Maxlite no solo cuida tus articulaciones, sino que te brinda la energía de los cereales naturales para que nada te detenga.'
+      description: 'En AZENZA combinamos el colágeno con la fuerza de la quinua para ofrecerte una nutrición superior. Maxlite no solo cuida tus articulaciones, sino que te brinda la energía de los cereales naturales para que nada te detenga.'
     }
   },
   {
@@ -1299,7 +1301,7 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
 ✔️ Energía Explosiva: Maca y Borojó que actúan como motores naturales de vitalidad física y mental.
 ✔️ Recuperación Máxima: Proteína de suero y aminoácidos que reconstruyen el vigor tras el esfuerzo.
 ✔️ Enfoque y Resistencia: Minerales clave que combaten la fatiga y mantienen el sistema nervioso equilibrado.`,
-    seoTitle: 'Megamac Borojó y Maca: Energía Extrema y Vigor Natural | Zenhogar',
+    seoTitle: 'Megamac Borojó y Maca: Energía Extrema y Vigor Natural | Azenza',
     seoDescription: 'Combate el cansancio y potencia tu energía con Megamac. Fórmula ancestral con Borojó y Chontaduro para una vitalidad inagotable y rendimiento superior. ¡Registro INVIMA!',
     benefits: [
       'Efecto revitalizante inmediato contra el cansancio físico y mental crónico',
@@ -1321,7 +1323,7 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
       '/assets/products/megamac-apoyo-3.webp',
       '/assets/products/megamac-apoyo-4.webp'
     ],
-    keywords: 'energía extrema, vitalidad, rendimiento, Megamac, Zenhogar',
+    keywords: 'energía extrema, vitalidad, rendimiento, Megamac, Azenza',
     components: 'Maca, Borojó, Proteína de Suero, Vitaminas y Minerales',
     componentBenefits: [
     {
@@ -1367,7 +1369,7 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
     ],
     whyChoose: {
       title: 'Vitalidad extrema sin límites',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alto rendimiento. Megamac combate el agotamiento físico y mental gracias al Borojó, Chontaduro y Maca. Energía pura y segura con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alto rendimiento. Megamac combate el agotamiento físico y mental gracias al Borojó, Chontaduro y Maca. Energía pura y segura con calidad certificada.'
     }
   },
   {
@@ -1378,13 +1380,13 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
     shortDescription: 'Protección Celular y Ritual de Juventud Longevital.',
     description: `Detén el paso del tiempo y protege tu salud celular con Resveratrol, el suplemento para longevidad definitivo que combina la ciencia antienvejecimiento más avanzada con la pureza de la naturaleza. Nuestra fórmula en polvo de alta pureza entrega una dosis masiva de resveratrol, potenciada con 10,000 mg de colágeno hidrolizado de fácil absorción. Este sistema antioxidante bicapa actúa neutralizando los radicales libres desde el interior, promoviendo una regeneración profunda que se refleja en una piel más firme, un cabello radiante y una vitalidad renovada.
 
-Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de ZENHOGAR es un excelente coadyudante para tu sistema cardiovascular y cerebral. Es el ritual diario indispensable para quienes buscan una juventud prolongada y un bienestar integral, asegurando que cada célula de tu cuerpo funcione en su nivel óptimo para una vida larga, activa y saludable.
+Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de AZENZA es un excelente coadyudante para tu sistema cardiovascular y cerebral. Es el ritual diario indispensable para quienes buscan una juventud prolongada y un bienestar integral, asegurando que cada célula de tu cuerpo funcione en su nivel óptimo para una vida larga, activa y saludable.
 
 ✔️ Blindaje Antioxidante: Protege el ADN celular contra el daño oxidativo y el envejecimiento prematuro.
 ✔️ Regeneración de Tejidos: 10,000 mg de colágeno que restauran la turgencia de la piel y salud articular.
 ✔️ Bienestar Cardiovascular: Los polifenoles de la uva favorecen una circulación saludable y bienestar estable.`,
-    seoTitle: 'Resveratrol Antioxidante con 10,000mg de Colágeno | Zenhogar',
-    seoDescription: 'Protege tus células y rejuvenece tu piel con el Resveratrol de ZENHOGAR. Potente antioxidante líquido con Colágeno para una vitalidad celular superior. ¡Alta absorción!',
+    seoTitle: 'Resveratrol Antioxidante con 10,000mg de Colágeno | Azenza',
+    seoDescription: 'Protege tus células y rejuvenece tu piel con el Resveratrol de AZENZA. Potente antioxidante líquido con Colágeno para una vitalidad celular superior. ¡Alta absorción!',
     benefits: [
       'Potente acción antioxidante que combate el envejecimiento celular prematuro',
       'Restituye la firmeza y elasticidad de la piel con 10,000 mg de colágeno',
@@ -1405,7 +1407,7 @@ Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de ZEN
       '/assets/products/resveratrol-apoyo-3.webp',
       '/assets/products/resveratrol-apoyo-4.webp'
     ],
-    keywords: 'resveratrol, antioxidante, antiedad, cuidado celular, Zenhogar',
+    keywords: 'resveratrol, antioxidante, antiedad, cuidado celular, Azenza',
     components: 'Resveratrol, Colágeno Hidrolizado (10.000mg), Arándano y Uva liofilizada',
     componentBenefits: [
     {
@@ -1447,7 +1449,7 @@ Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de ZEN
     ],
     whyChoose: {
       title: 'Protección celular avanzada',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para un bienestar integral. El Resveratrol protege tus células del envejecimiento prematuro y mejora la salud cardiovascular. Calidad certificada y antioxidante de alta pureza.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para un bienestar integral. El Resveratrol protege tus células del envejecimiento prematuro y mejora la salud cardiovascular. Calidad certificada y antioxidante de alta pureza.'
     }
   },
   {
@@ -1463,7 +1465,7 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
 ✔️ Tono Uniforme: Reduce progresivamente la intensidad de las manchas y equilibra el color de la piel.
 ✔️ Hidratación y Relleno: Ácido hialurónico de alto peso molecular que suaviza arrugas y mejora la turgencia.
 ✔️ Luminosidad Radiante: Recupera el brillo natural y la lozanía de un rostro descansado y saludable.`,
-    seoTitle: 'Eventone: Cómo unificar el tono de la piel y reducir manchas | Zenhogar',
+    seoTitle: 'Eventone: Cómo unificar el tono de la piel y reducir manchas | Azenza',
     seoDescription: 'Atenúa la apariencia de manchas y recupera la luminosidad con Eventone. Suero con Bio-Retinol y Ácido Hialurónico para un tono uniforme y firmeza real. ¡Registro INVIMA!',
     benefits: [
       'Unifica el tono de la piel y reduce manchas oscuras visibles',
@@ -1485,7 +1487,7 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
       '/assets/products/eventone-apoyo-3.webp',
       '/assets/products/eventone-apoyo-4.webp'
     ],
-    keywords: 'unificar tono piel, atenuar irregularidades de tono, piel radiante, brillo natural, manchas oscuras, Eventone, Zenhogar, bio retinol',
+    keywords: 'unificar tono piel, atenuar irregularidades de tono, piel radiante, brillo natural, manchas oscuras, Eventone, Azenza, bio retinol',
     components: 'Bio Retinol, Ácido Hialurónico, Colágeno, B5, Manzanilla y Aloe Vera',
     componentBenefits: [
     {
@@ -1528,7 +1530,7 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
     ],
     whyChoose: {
       title: 'Ritual de Belleza y Salud',
-      description: 'En ZENHOGAR transformamos lo cotidiano en extraordinario. Eventone combina hidratación profunda con el poder calmante de la manzanilla para que tu piel recupere su elasticidad y luzca radiante, brindándote un aspecto descansado y joven cada día.'
+      description: 'En AZENZA transformamos lo cotidiano en extraordinario. Eventone combina hidratación profunda con el poder calmante de la manzanilla para que tu piel recupere su elasticidad y luzca radiante, brindándote un aspecto descansado y joven cada día.'
     }
   },
   {
@@ -1539,12 +1541,12 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
     shortDescription: 'Destello Dorado y Bronceado de Lujo sin Sol.',
     description: `Envuelve tu cuerpo en un resplandor eterno con Golden Passion, el aceite autobronceador de alta gama diseñado para quienes exigen un tono canela perfecto sin los riesgos de la radiación solar. Su fórmula sofisticada, enriquecida con vitamina E y aceites preciosos, se funde instantáneamente con tu piel para revelar un color dorado, uniforme y radiante en cuestión de horas. Golden Passion no solo embellece; hidrata profundamente, dejando un acabado satinado y una suavidad sedosa que resalta cada curva de tu cuerpo.
 
-A diferencia de los autobronceadores convencionales, nuestra fórmula de secado rápido garantiza una aplicación libre de manchas y un aroma delicado que transforma tu rutina de cuidado en un ritual de lujo. Disfruta de una piel luminosa, nutrida y con ese aspecto de "recién llegada de vacaciones" durante todo el año, manteniendo la salud y la vitalidad de tu dermis con la excelencia de ZENHOGAR.
+A diferencia de los autobronceadores convencionales, nuestra fórmula de secado rápido garantiza una aplicación libre de manchas y un aroma delicado que transforma tu rutina de cuidado en un ritual de lujo. Disfruta de una piel luminosa, nutrida y con ese aspecto de "recién llegada de vacaciones" durante todo el año, manteniendo la salud y la vitalidad de tu dermis con la excelencia de AZENZA.
 
 ✔️ Tono Canela: Logra un bronceado natural, intenso y uniforme sin necesidad de exposición al sol.
 ✔️ Hidratación Luminosa: Nutre profundamente con vitamina E, evitando la resequedad y aportando un brillo saludable.
 ✔️ Acabado Terciopelo: Textura no grasa que se absorbe velozmente, permitiéndote vestirte de inmediato con total confianza.`,
-    seoTitle: 'Golden Passion: Autobronceador de Lujo y Brillo Dorado | Zenhogar',
+    seoTitle: 'Golden Passion: Autobronceador de Lujo y Brillo Dorado | Azenza',
     seoDescription: 'Presume un bronceado perfecto todo el año con Golden Passion. Aceite autobronceador enriquecido con Vitamina E para un tono canela natural y piel radiante. ¡Sin manchas!',
     benefits: [
       'Proporciona un bronceado canela natural y uniforme en pocas horas',
@@ -1566,7 +1568,7 @@ A diferencia de los autobronceadores convencionales, nuestra fórmula de secado 
       '/assets/products/golden-passion-apoyo-3.webp',
       '/assets/products/golden-passion-apoyo-4.webp'
     ],
-    keywords: 'autobronceador, brillo piel, nutrición profunda, Golden Passion, Zenhogar',
+    keywords: 'autobronceador, brillo piel, nutrición profunda, Golden Passion, Azenza',
     components: 'DHA, Vitamina E, Ácido Oleico y Ácido Palmitoleico',
     componentBenefits: [
     {
@@ -1608,7 +1610,7 @@ A diferencia de los autobronceadores convencionales, nuestra fórmula de secado 
     ],
     whyChoose: {
       title: 'Nutrición dorada para tu piel',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de cuidado premium. Golden Passion nutre profundamente la piel seca y aporta un brillo saludable con Aceite de Argán y Vitamina E. Calidad certificada para tu brillo natural.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de cuidado premium. Golden Passion nutre profundamente la piel seca y aporta un brillo saludable con Aceite de Argán y Vitamina E. Calidad certificada para tu brillo natural.'
     }
   },
   {
@@ -1624,7 +1626,7 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
 ✔️ Elasticidad Blindada: Prepara y fortalece los tejidos para prevenir rupturas y marcas por estiramiento.
 ✔️ Regeneración Botánica: Aceites de grado superior que aceleran la renovación celular y suavizan cicatrices.
 ✔️ Confort Sensorial: Ideal para masajes relajantes, dejando la piel nutrida sin sensación pegajosa.`,
-    seoTitle: 'Hydrastrik: Aceite Anti-Estrías y Elasticidad Cutánea | Zenhogar',
+    seoTitle: 'Hydrastrik: Aceite Anti-Estrías y Elasticidad Cutánea | Azenza',
     seoDescription: 'Protege tu piel y previene estrías con Hydrastrik. Mezcla de aceites puros de Almendras y Aguacate para una elasticidad máxima y suavidad extrema. ¡Calidad INVIMA!',
     benefits: [
       'Previene eficazmente la formación de estrías al mejorar la elasticidad',
@@ -1646,7 +1648,7 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
       '/assets/products/hydrastrik-apoyo-3.webp',
       '/assets/products/hydrastrik-apoyo-4.webp'
     ],
-    keywords: 'hidratación intensiva, piel seca, fresapoya, Hydrastrik, Zenhogar',
+    keywords: 'hidratación intensiva, piel seca, fresapoya, Hydrastrik, Azenza',
     components: 'Almendras, Semillas de Uva, Jojoba, Coco, Mango y Aguacate',
     componentBenefits: [
     {
@@ -1688,7 +1690,7 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
     ],
     whyChoose: {
       title: 'Hidratación profunda 24h',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para hidratación intensiva. Hydrastrik restaura la elasticidad en pieles deshidratadas con Ácido Hialurónico y Aloe Vera. Fresapoya inmediata con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para hidratación intensiva. Hydrastrik restaura la elasticidad en pieles deshidratadas con Ácido Hialurónico y Aloe Vera. Fresapoya inmediata con calidad certificada.'
     }
   },
   {
@@ -1704,8 +1706,8 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
 ✔️ Tono Sublime: Reduce progresivamente la apariencia de manchas sutiles y zonas sombreadas.
 ✔️ Calma Absoluta: La caléndula y la avena alivian instantáneamente la rojez y la sensibilidad cutánea.
 ✔️ Nutrición Sedosa: Crea una barrera de suavidad que mantiene la humedad esencial durante horas.`,
-    seoTitle: 'Miskinne: Crema Unificadora de Tono y Cuidado Gentil | Zenhogar',
-    seoDescription: 'Unifica tu tono y calma tu piel con Miskinne de ZENHOGAR. Hidratación profunda con Avena y Caléndula para un rostro luminoso y libre de manchas. ¡Suavidad total!',
+    seoTitle: 'Miskinne: Crema Unificadora de Tono y Cuidado Gentil | Azenza',
+    seoDescription: 'Unifica tu tono y calma tu piel con Miskinne de AZENZA. Hidratación profunda con Avena y Caléndula para un rostro luminoso y libre de manchas. ¡Suavidad total!',
     benefits: [
       'Atenúa visiblemente manchas superficiales y empareja el tono de la piel',
       'Proporciona un alivio inmediato a pieles sensibles, secas o irritadas',
@@ -1726,7 +1728,7 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
       '/assets/products/miskinne-apoyo-3.webp',
       '/assets/products/miskinne-apoyo-4.webp'
     ],
-    keywords: 'cuidado piel, suavidad, protección diaria, Miskinne, Zenhogar',
+    keywords: 'cuidado piel, suavidad, protección diaria, Miskinne, Azenza',
     components: 'Avena, Caléndula, Manteca de Karité, Vitamina E',
     componentBenefits: [
     {
@@ -1768,7 +1770,7 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
     ],
     whyChoose: {
       title: 'Suavidad para pieles sensibles',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de fórmula gentil. Miskinne alivia la irritación y resequedad extrema con Avena y Caléndula. Protección diaria y segura con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de fórmula gentil. Miskinne alivia la irritación y resequedad extrema con Avena y Caléndula. Protección diaria y segura con calidad certificada.'
     }
   },
   {
@@ -1777,15 +1779,15 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
     name: 'Tónico Capilar',
     category: 'belleza-integral',
     shortDescription: 'Densificadora Capilar y Ritual de Crecimiento Avanzado.',
-    description: `Recupera la abundancia y la fuerza de tu cabello con el Tónico Capilar, la joya de la ciencia capilar de ZENHOGAR. Este nutriente de alto impacto está formulado con una concentración revolucionaria de Trichogen al 8% y un complejo de 16 extractos botánicos puros que trabajan en sinergia para revitalizar los folículos. Diseñado para combatir la caída, este tónico no solo frena el debilitamiento, sino que favorece el nacimiento de hebras más gruesas, densas y resistentes.
+    description: `Recupera la abundancia y la fuerza de tu cabello con el Tónico Capilar, la joya de la ciencia capilar de AZENZA. Este nutriente de alto impacto está formulado con una concentración revolucionaria de Trichogen al 8% y un complejo de 16 extractos botánicos puros que trabajan en sinergia para revitalizar los folículos. Diseñado para combatir la caída, este tónico no solo frena el debilitamiento, sino que favorece el nacimiento de hebras más gruesas, densas y resistentes.
 
 Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisión cejas y barba, su aplicación en spray garantiza que los nutrientes premium como la cebolla y el ginkgo biloba penetren profundamente. Es el sistema definitivo para transformar un cabello frágil en una melena (o barba) llena de vigor, brillo y vitalidad, con resultados respaldados por la biotecnología capilar más avanzada.
 
 ✔️ Arquitectura Capilar: Fortalece el anclaje del cabello reduciendo la caída y el quiebre de forma visible.
 ✔️ Densidad y Crecimiento: El Trichogen al 8% estimula la zona de crecimiento para un mayor volumen folicular.
 ✔️ Vitalidad Herbal: 16 extractos que nutren, purifican y devuelven el brillo natural a la fibra capilar.`,
-    seoTitle: 'Tónico Capilar con Trichogen al 8%: Crecimiento y Densidad | Zenhogar',
-    seoDescription: 'Detén la caída y estimula el crecimiento con el Tónico capilar de ZENHOGAR. 16 extractos naturales y Trichogen 8% para un cabello, barba y cejas fuertes y densos.',
+    seoTitle: 'Tónico Capilar con Trichogen al 8%: Crecimiento y Densidad | Azenza',
+    seoDescription: 'Detén la caída y estimula el crecimiento con el Tónico capilar de AZENZA. 16 extractos naturales y Trichogen 8% para un cabello, barba y cejas fuertes y densos.',
     benefits: [
       'Detiene la caída excesiva y fortalece el cabello desde el folículo piloso',
       'Estimula el crecimiento rápido de nuevas hebras más gruesas y resistentes',
@@ -1806,7 +1808,7 @@ Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisi�
       '/assets/products/tonico-apoyo-3.webp',
       '/assets/products/tonico-apoyo-4.webp'
     ],
-    keywords: 'caída cabello, crecimiento capilar, fortalecer raíz, tónico capilar, Zenhogar',
+    keywords: 'caída cabello, crecimiento capilar, fortalecer raíz, tónico capilar, Azenza',
     components: 'Trichogen al 8%, Cebolla, Ginkgo Biloba y 16 extractos herbales',
     componentBenefits: [
     {
@@ -1847,7 +1849,7 @@ Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisi�
     ],
     whyChoose: {
       title: 'Fortalece tu cabello desde la raíz',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para el cuidado capilar. Nuestro Tónico ayuda a fortalecer la fibra capilar y estimula el crecimiento saludable con Romero, Quina y Biotina. Calidad certificada para tu volumen capilar.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para el cuidado capilar. Nuestro Tónico ayuda a fortalecer la fibra capilar y estimula el crecimiento saludable con Romero, Quina y Biotina. Calidad certificada para tu volumen capilar.'
     }
   },
   {
@@ -1885,7 +1887,7 @@ Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura in
       '/assets/products/tufoff-apoyo-3.webp',
       '/assets/products/tufoff-apoyo-4.webp'
     ],
-    keywords: 'mal aliento, frescura bucal, menta canela, Tufoff, Zenhogar, higiene oral rápida',
+    keywords: 'mal aliento, frescura bucal, menta canela, Tufoff, Azenza, higiene oral rápida',
     components: 'Eritritol, Inulina, Aceite de Menta, Canela y Bicarbonato de Sodio',
     componentBenefits: [
     {
@@ -1928,7 +1930,7 @@ Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura in
     ],
     whyChoose: {
       title: 'Limpieza y frescura superior',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de higiene superior. Tufoff ayuda a reducir el mal de olor y brinda frescura duradera con Mentol y Eucalipto. Calidad certificada para tu seguridad y confianza diaria.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de higiene superior. Tufoff ayuda a reducir el mal de olor y brinda frescura duradera con Mentol y Eucalipto. Calidad certificada para tu seguridad y confianza diaria.'
     }
   },
   // Salud Sexual
@@ -1945,7 +1947,7 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
 ✔️ Efecto Tensor Natural: Ayuda a mejorar la firmeza y el tono de la piel de forma progresiva.
 ✔️ Nutrición Profunda: Enriquecida con Zinc y L-Arginina para promover la renovación celular y vitalidad.
 ✔️ Absorción Superior: Textura ligera que no mancha la ropa y deja la piel suave y renovada al instante.`,
-    seoTitle: 'Crema voluminizante y reafirmante natural Akha | Zenhogar',
+    seoTitle: 'Crema voluminizante y reafirmante natural Akha | Azenza',
     seoDescription: 'Recupera la firmeza y elasticidad de tu piel con Akha. Crema con Acmella Oleracea y Maca para un efecto tensor natural y vitalidad cutánea. ¡Registro INVIMA!',
     benefits: [
       'Piel visiblemente más saludable, firme y tonificada',
@@ -1966,7 +1968,7 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
       '/assets/products/akha-apoyo-3.webp',
       '/assets/products/akha-apoyo-4.webp'
     ],
-    keywords: 'botox natural, voluminizante, firmeza, Akha, Zenhogar',
+    keywords: 'botox natural, voluminizante, firmeza, Akha, Azenza',
     components: 'Extracto de Acmella Oleracea, Maca, Ginseng, Zinc, L-Arginina',
     componentBenefits: [
     {
@@ -2012,7 +2014,7 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
     ],
     whyChoose: {
       title: 'Potencia tu vitalidad natural',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alto desempeño. Akha ayuda a recuperar el rendimiento y la energía masculina mediante Maca, Ginseng y Zinc. Confianza y vitalidad con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alto desempeño. Akha ayuda a recuperar el rendimiento y la energía masculina mediante Maca, Ginseng y Zinc. Confianza y vitalidad con calidad certificada.'
     }
   },
   {
@@ -2050,7 +2052,7 @@ Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los
       '/assets/products/derman-apoyo-3.webp',
       '/assets/products/derman-apoyo-4.webp'
     ],
-    keywords: 'bienestar íntimo, arginina, ácido salicílico, salud íntima, Derman, Zenhogar',
+    keywords: 'bienestar íntimo, arginina, ácido salicílico, salud íntima, Derman, Azenza',
     components: 'Ácido Salicílico, Arginina, Ácido Undecilénico y Lanolina',
     componentBenefits: [
     {
@@ -2096,14 +2098,14 @@ Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los
     ],
     whyChoose: {
       title: 'Cuidado íntimo suave y seguro',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de extrema suavidad. Derman protege y refresca tu zona íntima con Caléndula, Aloe Vera y Manzanilla. Bienestar integral con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de extrema suavidad. Derman protege y refresca tu zona íntima con Caléndula, Aloe Vera y Manzanilla. Bienestar integral con calidad certificada.'
     }
   },
   {
     id: 'haydar',
     masterId: '166801',
     name: 'Haydar (Bebida Energizante)',
-    category: 'salud-sexual',
+    category: 'salud-bienestar',
     shortDescription: 'Energía Explosiva y Vitalidad en un Solo Sorbo.',
     description: `Haydar es una bebida energizante concentrada que extrae el máximo potencial revitalizante del Borojó y la Maca para brindarte un impulso inmediato de energía cuando más lo necesitas. Su fórmula está diseñada para deportistas y personas con alta exigencia diaria que buscan un vigor excepcional, mayor resistencia física y una claridad mental superior sin los efectos negativos de las bebidas comerciales cargadas de azúcar.
 
@@ -2112,7 +2114,7 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
 ✔️ Impulso Natural: Borojó y Maca seleccionados para elevar el ánimo y la fuerza física al instante.
 ✔️ Mente Despierta: Vitaminas B que optimizan la concentración mental y el procesamiento de energía.
 ✔️ Sabor y Practicidad: Delicioso sabor a mora azul en un formato listo para tomar y llevar a cualquier parte.`,
-    seoTitle: 'Haydar Bebida Energizante Natural | Borojó y Maca | Zenhogar',
+    seoTitle: 'Haydar Bebida Energizante Natural | Borojó y Maca | Azenza',
     seoDescription: 'Potencia tu energía y enfoque con Haydar. Bebida energizante natural con Borojó, Maca y Vitaminas B para un rendimiento superior diario. ¡Registro INVIMA!',
     benefits: [
       'Impulso de ánimo y fuerza física con ingredientes botánicos',
@@ -2133,7 +2135,7 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
       '/assets/products/haydar-apoyo-3.webp',
       '/assets/products/haydar-apoyo-4.webp'
     ],
-    keywords: 'vitalidad extra, ánimo, rendimiento, Haydar, Zenhogar',
+    keywords: 'vitalidad extra, ánimo, rendimiento, Haydar, Azenza',
     components: 'Borojó, Maca, Taurina, Cafeína, Guaraná y Vitaminas del Complejo B',
     componentBenefits: [
     {
@@ -2179,7 +2181,7 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
     ],
     whyChoose: {
       title: 'Rendimiento superior diario',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para vitalidad masculina. Haydar potencia tu energía física y mental gracias al Guaraná, Chontaduro y Borojó. Calidad certificada para tu desempeño diario.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para vitalidad masculina. Haydar potencia tu energía física y mental gracias al Guaraná, Chontaduro y Borojó. Calidad certificada para tu desempeño diario.'
     }
   },
   {
@@ -2195,7 +2197,7 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
 ✔️ Tonificación Inmediata: Efecto de contracción natural que mejora la percepción y sensibilidad íntima.
 ✔️ Cuidado y Confort: Hidratación superior con Aloe Vera para una piel suave y protegida de irritaciones.
 ✔️ Armonía Biológica: Su pH equilibrado asegura una compatibilidad total con tu cuerpo y la salud de tu flora.`,
-    seoTitle: 'Gel de Renovación y Firmeza Íntima Instant Virgin | Zenhogar',
+    seoTitle: 'Gel de Renovación y Firmeza Íntima Instant Virgin | Azenza',
     seoDescription: 'Recupera el tono y la confianza íntima con Instant Virgin. Gel con Aloe Vera y efecto de contracción natural para una plenitud femenina real. ¡Registro INVIMA!',
     benefits: [
       'Brinda una sensación inmediata de mayor firmeza y tono genital',
@@ -2209,13 +2211,15 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
     size: '30ml',
     presentation: 'Gel / Crema',
     invima: '2021DM-0024065',
-    googleCategory: 'Health & Beauty > Personal Care > Cosmetics',
+    googleCategory: 'Health & Beauty > Personal Care > Intimate Care',
+    googleTitle: 'Gel Hidratante y Tonificante Íntimo Femenino 30ml - Azenza',
+    googleDescription: 'Gel botánico de cuidado íntimo formulado con Aloe Vera, D-Pantenol y minerales naturales. Proporciona hidratación profunda, frescura y tonificación con pH balanceado. Cuenta con Registro INVIMA.',
     condition: 'new',
     supportImages: [
       '/assets/products/instant-virgin-apoyo-1.webp',
       '/assets/products/instant-virgin-apoyo-2.webp'
     ],
-    keywords: 'confianza femenina, bienestar íntimo, salud sexual mujer, Instant Virgin, Zenhogar, firmeza vaginal natural',
+    keywords: 'confianza femenina, bienestar íntimo, salud sexual mujer, Instant Virgin, Azenza, firmeza vaginal natural',
     components: 'Aloe Vera, D-Pantenol y Sulfato de Aluminio',
     componentBenefits: [
     {
@@ -2254,7 +2258,7 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
     ],
     whyChoose: {
       title: 'Confianza y Plenitud Femenina',
-      description: 'En ZENHOGAR apoyamos el bienestar integral de la mujer en todas sus etapas. Instant Virgin ofrece una solución discreta y efectiva para quienes buscan revitalizar su zona íntima con total seguridad, permitiéndote disfrutar de cada momento con máxima confianza.'
+      description: 'En AZENZA apoyamos el bienestar integral de la mujer en todas sus etapas. Instant Virgin ofrece una solución discreta y efectiva para quienes buscan revitalizar su zona íntima con total seguridad, permitiéndote disfrutar de cada momento con máxima confianza.'
     }
   },
   {
@@ -2270,7 +2274,7 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
 ✔️ Efecto Volumen y Firmeza: Mejora la textura y el tono de la piel en zonas críticas con uso constante.
 ✔️ Hidratación Extrema: Nutre las capas profundas de la piel, manteniéndola elástica y flexible.
 ✔️ Rápida Absorción: Fórmula de grado profesional que actúa desde la primera aplicación con suavidad.`,
-    seoTitle: 'Mammoth Crema reafirmante y voluminizante natural | Zenhogar',
+    seoTitle: 'Mammoth Crema reafirmante y voluminizante natural | Azenza',
     seoDescription: 'Mejora la textura y firmeza de tu piel con Mammoth. Crema con Acmella Oleracea y Vitamina E para una hidratación profunda y efecto volumen. ¡Registro INVIMA!',
     benefits: [
       'Textura cutánea renovada, más suave y uniforme al tacto',
@@ -2291,7 +2295,7 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
       '/assets/products/mammoth-apoyo-3.webp',
       '/assets/products/mammoth-apoyo-4.webp'
     ],
-    keywords: 'fuerza masculina, rendimiento, vitalidad, Mamooth, Zenhogar',
+    keywords: 'fuerza masculina, rendimiento, vitalidad, Mamooth, Azenza',
     components: 'Acmella Oleracea, Aceite de Parafina USP y Vitamina E',
     componentBenefits: [
     {
@@ -2333,7 +2337,7 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
     ],
     whyChoose: {
       title: 'Cuidado corporal avanzado',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alto desempeño. Mammoth ayuda a mejorar la apariencia de la piel mediante extractos botánicos seleccionados. Calidad certificada para tu cuidado diario.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alto desempeño. Mammoth ayuda a mejorar la apariencia de la piel mediante extractos botánicos seleccionados. Calidad certificada para tu cuidado diario.'
     }
   },
   {
@@ -2370,7 +2374,7 @@ Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esen
       '/assets/products/tyrussfull-apoyo-3.webp',
       '/assets/products/tyrussfull-apoyo-4.webp'
     ],
-    keywords: 'equilibrio hormonal femenino, salud metabólica, tiroides, menopausia, sofocos, energía estable, Tyruss Full, Zenhogar',
+    keywords: 'equilibrio hormonal femenino, salud metabólica, tiroides, menopausia, sofocos, energía estable, Tyruss Full, Azenza',
     components: 'Clorofila, Espirulina, Chlorella, Proteína de Arveja, Almendras y Omega 3',
     componentBenefits: [
     {
@@ -2416,14 +2420,14 @@ Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esen
     ],
     whyChoose: {
       title: 'Limpieza y Bienestar Natural',
-      description: 'En ZENHOGAR impulsamos un estilo de vida saludable basado en la pureza. Tyruss Full es el aliado perfecto para desintoxicar tu organismo de forma suave, ayudando a que tu sistema digestivo funcione sin interrupciones y protegiendo tu salud cardiovascular.'
+      description: 'En AZENZA impulsamos un estilo de vida saludable basado en la pureza. Tyruss Full es el aliado perfecto para desintoxicar tu organismo de forma suave, ayudando a que tu sistema digestivo funcione sin interrupciones y protegiendo tu salud cardiovascular.'
     }
   },
   {
     id: 'zafir',
     masterId: '166802',
     name: 'Zafir Bebida Energizante',
-    category: 'salud-sexual',
+    category: 'salud-bienestar',
     shortDescription: 'Energía Natural Inmediata y Enfoque Mental Superior.',
     description: `Zafir es una bebida energizante de última generación, formulada con extractos puros de Maca, Borojó y Guaraná para ofrecerte un impulso de vitalidad real sin los picos de ansiedad de las bebidas tradicionales. Su deliciosa mezcla de frutos rojos no solo deleita tu paladar, sino que activa tu metabolismo con Vitaminas del Complejo B (B3, B6, B12) y Zinc, minerales clave para el rendimiento físico y la claridad cognitiva.
 
@@ -2453,7 +2457,7 @@ Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el 
       '/assets/products/zafir-apoyo-3.webp',
       '/assets/products/zafir-apoyo-4.webp'
     ],
-    keywords: 'energía inmediata, impulso natural, enfoque mental, vitalidad, Zafir, Zenhogar, bebida energizante',
+    keywords: 'energía inmediata, impulso natural, enfoque mental, vitalidad, Zafir, Azenza, bebida energizante',
     components: 'Borojó, Maca, Taurina, Cafeína y Vitaminas B3, B6, B12 y Biotina',
     componentBenefits: [
     {
@@ -2499,7 +2503,7 @@ Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el 
     ],
     whyChoose: {
       title: 'Impulso natural inmediato',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu vitalidad. Zafir Energizante te brinda energía inmediata y enfoque total sin químicos agresivos. Tu aliado para rendir al máximo con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA para tu vitalidad. Zafir Energizante te brinda energía inmediata y enfoque total sin químicos agresivos. Tu aliado para rendir al máximo con calidad certificada.'
     }
   },
   {
@@ -2515,7 +2519,7 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
 ✔️ Digestión Saludable: Combinación botánica que apoya el correcto tránsito y brinda una reconfortante sensación de alivio y frescura.
 ✔️ Dinamismo Libre de Fatiga: La maca y la flor de jamaica aportan nutrientes clave para optimizar tu energía sin causar ansiedad ni nerviosismo.
 ✔️ Máxima Pureza: Alimento sin azúcares añadidos, libre de partículas extrañas, garantizando una bebida ligera y de un sabor excepcional.`,
-    seoTitle: 'Guanda Mix Hierbas Aromáticas y Flor de Jamaica | Zenhogar',
+    seoTitle: 'Guanda Mix Hierbas Aromáticas y Flor de Jamaica | Azenza',
     seoDescription: 'Estrena bienestar digestivo y vitalidad con Guanda Mix. Bebida en polvo con té verde, maca, magnesio y delicioso sabor cereza. ¡Registro INVIMA IRSA-0245-2025!',
     benefits: [
       'Aporta vitaminas y minerales esenciales que completan y fortalecen la nutrición diaria',
@@ -2537,7 +2541,7 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
       '/assets/products/guanda-mix-apoyo-2.webp',
       '/assets/products/guanda-mix-apoyo-3.webp'
     ],
-    keywords: 'guanda mix, hierbas aromaticas, flor de jamaica, digestion ligera, energia natural, cereza, maca, dolor estomacal, bienestar digestivo, zenhogar',
+    keywords: 'guanda mix, hierbas aromaticas, flor de jamaica, digestion ligera, energia natural, cereza, maca, dolor estomacal, bienestar digestivo, azenza',
     components: 'Hierbas aromáticas en polvo, Té verde, Flor de jamaica, Citrato de magnesio, Bisglicinato de magnesio, Carbonato de calcio, Fumarato ferroso, Vitaminas y Minerales',
     componentBenefits: [
       {
@@ -2581,7 +2585,7 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
     ],
     whyChoose: {
       title: 'Frescura y Alivio Digestivo Natural',
-      description: 'En ZENHOGAR creamos bienestar natural para tu día a día. Guanda Mix une los secretos digestivos de la Flor de Jamaica, el té verde y el magnesio de máxima asimilación para brindarte un vientre plano y una energía brillante con registro INVIMA garantizado.'
+      description: 'En AZENZA creamos bienestar natural para tu día a día. Guanda Mix une los secretos digestivos de la Flor de Jamaica, el té verde y el magnesio de máxima asimilación para brindarte un vientre plano y una energía brillante con registro INVIMA garantizado.'
     }
   },
   {
@@ -2618,7 +2622,7 @@ Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita 
       '/assets/products/nad-1-apoyo-3.webp',
       '/assets/products/nad-1-apoyo-4.webp'
     ],
-    keywords: 'energía natural, antiedad, vitalidad celular, piel firme, cansancio, +NAD, Zenhogar',
+    keywords: 'energía natural, antiedad, vitalidad celular, piel firme, cansancio, +NAD, Azenza',
     components: 'Colágeno (10g), Crema de Coco, NAD, Vitaminas A, C, D, E y complejo B',
     componentBenefits: [
     {
@@ -2664,14 +2668,14 @@ Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita 
     ],
     whyChoose: {
       title: 'Longevidad y energía celular',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA con ciencia avanzada. +NAD apoya tu bienestar celular con Resveratrol y Quercetina. Fórmula balanceada para una vida saludable con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA con ciencia avanzada. +NAD apoya tu bienestar celular con Resveratrol y Quercetina. Fórmula balanceada para una vida saludable con calidad certificada.'
     }
   },
   {
     id: 'titan-coffee',
     masterId: '23013',
     name: 'Titan Coffee',
-    category: 'salud-sexual',
+    category: 'salud-bienestar',
     shortDescription: 'Café de Alto Rendimiento para una Energía Inagotable.',
     description: `Titan Coffee no es solo un café; es un combustible de alto desempeño diseñado para transformar tu mañana en un arranque de potencia total. Fusionando granos de café premium con los extractos más energizantes de la naturaleza (Borojó, Maca y Chontaduro), este café funcional proporciona una liberación sostenida de energía que evita los bajones repentinos y mejora el enfoque mental durante todo el día.
 
@@ -2694,7 +2698,7 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
     size: '400g',
     presentation: 'Polvo',
     invima: 'PSA-000982-2018',
-    googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
+    googleCategory: 'Food, Beverages & Tobacco > Beverages > Coffee',
     condition: 'new',
     supportImages: [
       '/assets/products/titancoffee-apoyo-1.webp',
@@ -2702,7 +2706,7 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
       '/assets/products/titancoffee-apoyo-3.webp',
       '/assets/products/titancoffee-apoyo-4.webp'
     ],
-    keywords: 'café energizante, potencia masculina, vitalidad, Titan Coffee, Zenhogar, vigor natural',
+    keywords: 'café energizante, potencia masculina, vitalidad, Titan Coffee, Azenza, vigor natural',
     components: 'Maca, Chontaduro, Borojó, Café soluble y Crema de Coco',
     componentBenefits: [
     {
@@ -2744,7 +2748,7 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
     ],
     whyChoose: {
       title: 'Energía que Despierta tus Sentidos',
-      description: 'En ZENHOGAR transformamos tu ritual matutino en una fuente de vitalidad. Titan Coffee fusiona el sabor más selecto con ingredientes que impulsan tu rendimiento físico y mental, garantizando que empieces cada jornada con la fuerza y el enfoque que necesitas.'
+      description: 'En AZENZA transformamos tu ritual matutino en una fuente de vitalidad. Titan Coffee fusiona el sabor más selecto con ingredientes que impulsan tu rendimiento físico y mental, garantizando que empieces cada jornada con la fuerza y el enfoque que necesitas.'
     }
   },
   {
@@ -2760,7 +2764,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Alivio Antiinflamatorio: Calma instantáneamente el dolor, el ardor y la picazón en zonas sensibles.
 ✔️ Regeneración Celular: La caléndula y el aloe vera aceleran la recuperación natural de los tejidos afectados.
 ✔️ Facilidad y Confort: Mejora la suavidad de la zona para permitir una evacuación sin traumas ni dolor excesivo.`,
-    seoTitle: 'Alivio natural para hemorroides y ardor con Cuidado Botánico Avanzado | Zenhogar',
+    seoTitle: 'Alivio natural para hemorroides y ardor con Cuidado Botánico Avanzado | Azenza',
     seoDescription: 'Reduce la inflamación y calma el dolor anal con nuestro cuidado botánico. Combinación de 11 extractos naturales para un alivio suave y efectivo. ¡Calidad INVIMA!',
     benefits: [
       'Calma de forma inmediata el ardor y la sensación de pesadez local',
@@ -2782,7 +2786,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/hemocream-apoyo-3.webp',
       '/assets/products/hemocream-apoyo-4.png'
     ],
-    keywords: 'hemorroides, ardor anal, picazón, caléndula, aloe vera, plantas medicinales, alivio natural, cuidado botánico, Zenhogar, fisura anal',
+    keywords: 'hemorroides, ardor anal, picazón, caléndula, aloe vera, plantas medicinales, alivio natural, cuidado botánico, Azenza, fisura anal',
     components: 'Caléndula, Castaño de Indias, Aloe Vera, Avena, Manzanilla y Centella Asiática',
     componentBenefits: [
     {
@@ -2825,7 +2829,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     ],
     whyChoose: {
       title: 'Alivio y confort inmediato',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alivio suave. Este cuidado botánico ayuda a calmar el ardor y la pesadez gracias a la Caléndula y el Aloe Vera. Recupera tu confort con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de alivio suave. Este cuidado botánico ayuda a calmar el ardor y la pesadez gracias a la Caléndula y el Aloe Vera. Recupera tu confort con calidad certificada.'
     }
   },
   {
@@ -2834,14 +2838,14 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     name: 'Ashwagandha',
     category: 'salud-bienestar',
     shortDescription: 'Equilibrio Emocional, Alivio del Estrés y Descanso Reparador.',
-    description: `Encuentra la paz mental y la serenidad física con Ashwagandha de ZENHOGAR, el poderoso suplemento adaptógeno ancestral diseñado para equilibrar tu sistema nervioso frente a las demandas cotidianas y rejuvenecer tu mente desde el interior. Esta fórmula premium aprovecha las propiedades milenarias de la Withania somnifera en un formato de cápsulas blandas de fácil absorción, creando un sistema de soporte completo para tu mente, tu estado de ánimo y tu descanso. Enriquecido con sus compuestos activos de alta pureza, este extracto combate el desgaste celular provocado por el estrés crónico, promoviendo una resistencia superior en todo tu organismo.
+    description: `Encuentra la paz mental y la serenidad física con Ashwagandha de AZENZA, el poderoso suplemento adaptógeno ancestral diseñado para equilibrar tu sistema nervioso frente a las demandas cotidianas y rejuvenecer tu mente desde el interior. Esta fórmula premium aprovecha las propiedades milenarias de la Withania somnifera en un formato de cápsulas blandas de fácil absorción, creando un sistema de soporte completo para tu mente, tu estado de ánimo y tu descanso. Enriquecido con sus compuestos activos de alta pureza, este extracto combate el desgaste celular provocado por el estrés crónico, promoviendo una resistencia superior en todo tu organismo.
   Complementado con una excelente biodisponibilidad gracias a su presentación en gel suave (softgel), este suplemento es el aliado perfecto para personas activas que sufren de insomnio o fatiga mental y no desean que el ritmo diario limite su bienestar. Su acción reguladora actúa profundamente en el cuerpo, ayudándote a modular la respuesta ante las tensiones del día a día, devolviéndole la luminosidad a tu energía vital y la firmeza a tu equilibrio emocional de manera segura.
 
 ✔️ Control del Estrés: Regula el cortisol, reduce la ansiedad y promueve la calma.
 ✔️ Sueño Reparador: Combate el insomnio y relaja el sistema nervioso sin causar somnolencia diurna.
 ✔️ Resiliencia Natural: Optimiza el rendimiento mental y aporta un estado de ánimo positivo.`,
-    seoTitle: 'Ashwagandha Suplemento Adaptógeno Natural para Estrés y Sueño | Zenhogar',
-    seoDescription: 'Reduce el estrés y mejora tu calidad de sueño de forma natural con Ashwagandha de ZENHOGAR. Suplemento adaptógeno premium con Registro INVIMA.',
+    seoTitle: 'Ashwagandha Suplemento Adaptógeno Natural para Estrés y Sueño | Azenza',
+    seoDescription: 'Reduce el estrés y mejora tu calidad de sueño de forma natural con Ashwagandha de AZENZA. Suplemento adaptógeno premium con Registro INVIMA.',
     benefits: [
       'Ayuda a regular los niveles de ansiedad y aliviar el estrés',
       'Promueve un descanso profundo, reparador y combate el insomnio',
@@ -2850,7 +2854,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       'Fórmula adaptógena natural de alta pureza y asimilación'
     ],
     image: '/assets/products/ashwagandha.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '60 Unidades',
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
@@ -2880,10 +2884,10 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       { q: '¿Produce somnolencia durante el día?', a: 'No, como adaptógeno ayuda a equilibrar tu cuerpo, dándote energía por el día y promoviendo el descanso reparador en la noche.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Camila V.', text: 'Sufría de mucho insomnio por el trabajo y la ashwagandha me ha devuelto el sueño profundo. Me despierto renovada.', rating: 5 },
@@ -2891,7 +2895,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     ],
     whyChoose: {
       title: 'Serenidad y Resiliencia Natural',
-      description: 'En ZENHOGAR impulsamos tu bienestar con extractos adaptógenos de alta pureza. Nuestra Ashwagandha ayuda a regular el cortisol para brindarte paz mental y un descanso profundo con registro sanitario oficial.'
+      description: 'En AZENZA impulsamos tu bienestar con extractos adaptógenos de alta pureza. Nuestra Ashwagandha ayuda a regular el cortisol para brindarte paz mental y un descanso profundo con registro sanitario oficial.'
     }
   },
   {
@@ -2908,7 +2912,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Energía Mitocondrial: La vitamina B3 y el NAD+ optimizan la energía celular, reduciendo eficazmente el cansancio.
 ✔️ Firmeza y Elasticidad: Combate los radicales libres para restaurar la turgencia natural de la piel y los tejidos.`,
 
-    seoTitle: 'Resveratrol y Vitamina B3 (NAD): Rejuvenecimiento Celular | Zenhogar',
+    seoTitle: 'Resveratrol y Vitamina B3 (NAD): Rejuvenecimiento Celular | Azenza',
     seoDescription: 'Potencia tu vitalidad y rejuvenece desde adentro con Resveratrol y Vitamina B3 (NAD). Fórmula de longevidad celular con Registro INVIMA y alta absorción.',
     benefits: [
       'Apoya la producción de energía celular y combate la fatiga',
@@ -2918,7 +2922,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       'Fórmula enriquecida con precursores de NAD+ de máxima absorción'
     ],
     image: '/assets/products/resveratrol-nad.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '60 Unidades',
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
@@ -2929,7 +2933,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/resveratrol-nad-apoyo-2.webp',
       '/assets/products/resveratrol-nad-apoyo-3.webp'
     ],
-    keywords: 'resveratrol nad, vitamina b3, antiedad celular, longevidad, colágeno, arrugas, piel firme, ZENHOGAR',
+    keywords: 'resveratrol nad, vitamina b3, antiedad celular, longevidad, colágeno, arrugas, piel firme, AZENZA',
     components: 'Resveratrol, Vitamina B3 (Nicotinamida), precursores de NAD+, Glicerina, Sorbato de Potasio, Aceite Vegetal',
     componentBenefits: [
       { name: 'Resveratrol y Vitamina B3', benefit: 'Estimulan la función del NAD+ celular y defienden la piel y órganos contra radicales libres.' },
@@ -2948,10 +2952,10 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       { q: '¿Es apto para adultos mayores?', a: 'Absolutamente, es ideal para personas que buscan mantener la agilidad mental, la firmeza cutánea y la energía celular.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Diana R.', text: 'He sentido un cambio enorme en mi piel y mi nivel de energía. Se siente la diferencia en la vitalidad diaria.', rating: 5 },
@@ -2959,7 +2963,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     ],
     whyChoose: {
       title: 'Ciencia Celular y Rejuvenecimiento',
-      description: 'En ZENHOGAR comprometidos con tu longevidad. Resveratrol y Vitamina B3 (NAD) une ciencia mitocondrial con pureza antioxidante para reactivar tus niveles de energía y elasticidad celular de forma certificada.'
+      description: 'En AZENZA comprometidos con tu longevidad. Resveratrol y Vitamina B3 (NAD) une ciencia mitocondrial con pureza antioxidante para reactivar tus niveles de energía y elasticidad celular de forma certificada.'
     }
   },
   {
@@ -2975,8 +2979,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Activación de Energía: Transforma los alimentos en combustible celular para apoyar un rendimiento físico y mental superior.
 ✔️ Metabolismo y Control: Acelera el metabolismo de forma natural y ayuda a evitar que el cuerpo acumule grasa.
 ✔️ Salud Digestiva: Disminuye la inflamación abdominal, controla los antojos de dulce y promueve una digestión ligera. `,
-    seoTitle: 'Vinagre de Manzana para Metabolismo y Digestión | Zenhogar',
-    seoDescription: 'Regula tu digestión y controla los antojos con el Vinagre de Manzana de ZENHOGAR. Suplemento natural para un vientre plano y metabolismo activo. ¡Registro INVIMA!',
+    seoTitle: 'Vinagre de Manzana para Metabolismo y Digestión | Azenza',
+    seoDescription: 'Regula tu digestión y controla los antojos con el Vinagre de Manzana de AZENZA. Suplemento natural para un vientre plano y metabolismo activo. ¡Registro INVIMA!',
     benefits: [
       'Apoya el control de peso y disminuye la ansiedad por comer dulce',
       'Mejora la digestión y ayuda a reducir el reflujo y la pesadez',
@@ -2985,7 +2989,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       'Fórmula balanceada de alta asimilación con agradable consistencia'
     ],
     image: '/assets/products/vinagre-manzana.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '60 Unidades',
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
@@ -2997,7 +3001,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/vinagre-manzana-apoyo-3.webp',
       '/assets/products/vinagre-manzana-apoyo-4.webp'
     ],
-    keywords: 'vinagre de sidra de manzana, detox, metabolismo, vientre plano, digestión ligera, glucosa, ZENHOGAR',
+    keywords: 'vinagre de sidra de manzana, detox, metabolismo, vientre plano, digestión ligera, glucosa, AZENZA',
     components: 'Vinagre de Sidra de Manzana, Aceite Vegetal y Lecitina de Soya',
     componentBenefits: [
       { name: 'Vinagre de Sidra de Manzana', benefit: 'Favorece la reducción del pH gástrico optimizando la asimilación de alimentos y controlando la glucemia.' },
@@ -3015,10 +3019,10 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       { q: '¿Es apto para personas con gastritis?', a: 'Sí, su fórmula amortiguada y balanceada ayuda a regular la acidez de forma natural sin agredir las mucosas.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Isabela M.', text: 'Me ha ayudado muchísimo a desinflamarme el estómago y a controlar la ansiedad por las tardes. Súper recomendado.', rating: 5 },
@@ -3026,7 +3030,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     ],
     whyChoose: {
       title: 'Ligereza y Equilibrio Metabólico',
-      description: 'En ZENHOGAR te ofrecemos soluciones de salud digestiva seguras. Nuestro Vinagre de Manzana estimula la buena digestión y el balance metabólico con una fórmula gentil y registro INVIMA garantizado.'
+      description: 'En AZENZA te ofrecemos soluciones de salud digestiva seguras. Nuestro Vinagre de Manzana estimula la buena digestión y el balance metabólico con una fórmula gentil y registro INVIMA garantizado.'
     }
   },
   {
@@ -3042,8 +3046,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Bienestar Muscular: Alivia la tensión, previene calambres y espasmos, y acelera la recuperación física.
 ✔️ Sistema Nervioso y Sueño: Promueve una relajación profunda, ayuda a controlar el estrés y mejora la calidad del descanso.
 ✔️ Balance y Energía: Optimiza el equilibrio de líquidos en el cuerpo, regula la presión y combate el cansancio crónico.`,
-    seoTitle: 'Citrato de Potasio y Magnesio Suplemento Mineral | Zenhogar',
-    seoDescription: 'Evita los calambres y mejora tu salud cardiovascular con Citrato de Potasio y Magnesio de ZENHOGAR. Citratos de alta disponibilidad con Registro INVIMA.',
+    seoTitle: 'Citrato de Potasio y Magnesio Suplemento Mineral | Azenza',
+    seoDescription: 'Evita los calambres y mejora tu salud cardiovascular con Citrato de Potasio y Magnesio de AZENZA. Citratos de alta disponibilidad con Registro INVIMA.',
     benefits: [
       'Combate eficazmente los calambres y la rigidez muscular de forma estable',
       'Ayuda a unificar el ritmo muscular cardíaco y apoya el sistema cardiovascular',
@@ -3053,7 +3057,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       'Ayuda a regular la presión arterial y reduce los efectos del sodio en el cuerpo'
     ],
     image: '/assets/products/citrato-potasio-magnesio.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '60 Unidades',
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
@@ -3064,7 +3068,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/citrato-potasio-magnesio-apoyo-2.webp',
       '/assets/products/citrato-potasio-magnesio-apoyo-3.webp'
     ],
-    keywords: 'citrato de potasio, citrato de magnesio, calambres, presión arterial, retención líquidos, ZENHOGAR',
+    keywords: 'citrato de potasio, citrato de magnesio, calambres, presión arterial, retención líquidos, AZENZA',
     components: 'Citrato de Potasio, Citrato de Magnesio',
     componentBenefits: [
       { name: 'Citrato de Potasio', benefit: 'Ayuda a la correcta función celular y muscular, combatiendo el sodio y la retención de liquidos, ayuda a prevenir la formacion de nuevos calculos renales.' },
@@ -3084,10 +3088,10 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       { q: '¿Tiene alguna contraindicación?', a: 'Personas con insuficiencia renal severa o afecciones cardíacas graves deben consultar a su médico antes de consumir.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Sonia P.', text: 'Sufría de calambres todas las noches y desde la primera semana que tomé el citrato de potasio y magnesio desaparecieron. Increíble.', rating: 5 },
@@ -3095,7 +3099,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     ],
     whyChoose: {
       title: 'Balance Mineral y Alivio Neuromuscular',
-      description: 'En ZENHOGAR garantizamos tu bienestar con formulaciones de alta biodisponibilidad. Nuestro Citrato de Potasio y Magnesio relaja el sistema muscular y protege tus articulaciones y corazón con calidad certificada.'
+      description: 'En AZENZA garantizamos tu bienestar con formulaciones de alta biodisponibilidad. Nuestro Citrato de Potasio y Magnesio relaja el sistema muscular y protege tus articulaciones y corazón con calidad certificada.'
     }
   },
   {
@@ -3111,8 +3115,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 ✔️ Escudo e Inmunidad: Potente protector natural que fortalece las defensas y combate amenazas externas gracias a su acción antioxidante.
 ✔️ Bienestar Digestivo: Alivia los gases, reduce la inflamación estomacal y apoya el funcionamiento correcto y ligero de todo el sistema digestivo.
 ✔️ Limpieza Profunda: Ayuda a regular la microbiota intestinal, mitiga la candidiasis y depura el organismo de manera segura.`,
-    seoTitle: 'Orégano Concentrado Suplemento Natural Antimicrobiano | Zenhogar',
-    seoDescription: 'Fortalece tus defensas y limpia tu sistema digestivo con el Orégano de ZENHOGAR. Suplemento natural rico en carvacrol con Registro INVIMA.',
+    seoTitle: 'Orégano Concentrado Suplemento Natural Antimicrobiano | Azenza',
+    seoDescription: 'Fortalece tus defensas y limpia tu sistema digestivo con el Orégano de AZENZA. Suplemento natural rico en carvacrol con Registro INVIMA.',
     benefits: [
       'Potente antiparasitario y antibacteriano natural',
       'Ayuda a combatir el envejecimiento prematuro',
@@ -3122,7 +3126,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       'Ayuda a aliviar dolores musculares y articulares'
     ],
     image: '/assets/products/oregano.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '60 Unidades',
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
@@ -3134,7 +3138,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/oregano-apoyo-3.webp',
       '/assets/products/oregano-apoyo-4.webp'
     ],
-    keywords: 'oregano, carvacrol, antiparasitario natural, candida, digestión ligera, defensas, ZENHOGAR',
+    keywords: 'oregano, carvacrol, antiparasitario natural, candida, digestión ligera, defensas, AZENZA',
     components: 'Orégano, Glicerina, Sorbato de Potasio, aceite Vegetal, Lecitina de Soya, Dioxido de Silicio',
     componentBenefits: [
       { name: 'Extracto de Orégano', benefit: 'Aporta una alta concentración de carvacrol para combatir agentes infecciosos e hinchazón.' },
@@ -3153,10 +3157,10 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       { q: '¿Es seguro para uso continuo?', a: 'Se recomienda consumirlo en ciclos de detox (15 a 30 días) para realizar una depuración digestiva profunda y segura.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Lorena B.', text: 'Un suplemento increíble para el sistema digestivo. Me ayudó a limpiar mi colon y la inflamación desapareció.', rating: 5 },
@@ -3164,7 +3168,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     ],
     whyChoose: {
       title: 'Purificación e Inmunidad Botánica',
-      description: 'En ZENHOGAR creemos en el poder curativo de la fitoterapia. Nuestro suplemento de Orégano ofrece una concentración óptima de carvacrol para restaurar tu armonía digestiva de manera certificada.'
+      description: 'En AZENZA creemos en el poder curativo de la fitoterapia. Nuestro suplemento de Orégano ofrece una concentración óptima de carvacrol para restaurar tu armonía digestiva de manera certificada.'
     }
   },
   {
@@ -3180,8 +3184,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
  ✔️ Alivio del Estrés y Ansiedad: Equilibra el sistema nervioso, reduce los niveles de cortisol y ayuda a mantener la calma en días exigentes.
  ✔️ Calma Mental y Enfoque: Disminuye la fatiga mental, promueve la claridad cognitiva y mejora la concentración diaria.
  ✔️ Descanso y Alivio Muscular: Promueve una relajación profunda, previene espasmos y optimiza la calidad del sueño reparador.`,
-    seoTitle: 'Bisglicinato de Magnesio Quelado para Sueño y Relax | Zenhogar',
-    seoDescription: 'Concilia un sueño profundo y relaja tus músculos con Bisglicinato de Magnesio de ZENHOGAR. Magnesio quelado de máxima absorción con Registro INVIMA.',
+    seoTitle: 'Bisglicinato de Magnesio Quelado para Sueño y Relax | Azenza',
+    seoDescription: 'Concilia un sueño profundo y relaja tus músculos con Bisglicinato de Magnesio de AZENZA. Magnesio quelado de máxima absorción con Registro INVIMA.',
     benefits: [
       'Promueve un sueño profundo, reparador y combate el insomnio crónico',
       'Alivia la tensión muscular acumulada, calambres y espasmos',
@@ -3190,7 +3194,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       'Fórmula balanceada de altísima biodisponibilidad certificada'
     ],
     image: '/assets/products/bisglicinato-magnesio.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '60 Unidades',
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
@@ -3201,7 +3205,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/bisglicinato-magnesio-apoyo-2.webp',
       '/assets/products/bisglicinato-magnesio-apoyo-3.webp'
     ],
-    keywords: 'bisglicinato de magnesio, magnesio quelado, insomnio, relajante muscular, estrés, dormir bien, ZENHOGAR',
+    keywords: 'bisglicinato de magnesio, magnesio quelado, insomnio, relajante muscular, estrés, dormir bien, AZENZA',
     components: 'Bisglicinato de Magnesio, Glicina, Vitaminas del grupo B',
     componentBenefits: [
       { name: 'Bisglicinato de Magnesio', benefit: 'Magnesio unido a glicina que favorece la relajación del sistema nervioso sin alterar el tránsito gástrico.' },
@@ -3220,10 +3224,10 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       { q: '¿En qué momento del día es mejor tomarlo?', a: 'Se recomienda consumirlo de 30 a 45 minutos antes de acostarse para preparar el cuerpo y la mente para un sueño profundo.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Marta L.', text: 'El mejor descubrimiento para mis noches. Concilio el sueño súper rápido y amanezco con una energía maravillosa.', rating: 5 },
@@ -3231,7 +3235,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     ],
     whyChoose: {
       title: 'Descanso y Confort Neuromuscular Superior',
-      description: 'En ZENHOGAR estamos comprometidos con tu descanso. Nuestro Bisglicinato de Magnesio de grado farmacológico ofrece la máxima asimilación relajante para restaurar tu ritmo biológico de forma segura.'
+      description: 'En AZENZA estamos comprometidos con tu descanso. Nuestro Bisglicinato de Magnesio de grado farmacológico ofrece la máxima asimilación relajante para restaurar tu ritmo biológico de forma segura.'
     }
   },
   {
@@ -3247,8 +3251,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 ✔️ Estructura y Reparación: Los aminoácidos fortalecen la fibra capilar, reparan el cabello existente y previenen la rotura.
 ✔️ Crecimiento y Grosor: La biotina estimula la aparición de nuevas hebras, mejora la oxigenación y engrosa el cabello de raíz a puntas.
 ✔️ Circulación y Control: La niacinamida mejora el flujo sanguíneo en el cuero cabelludo, calma la irritación y controla el exceso de grasa.`,
-    seoTitle: 'Tónico Capilar Folivance para Caída, Crecimiento y mejora de apariencia | Zenhogar',
-    seoDescription: 'Frena la caída y duplica el crecimiento capilar con Folivance de ZENHOGAR. Tónico folicular de alto impacto Biotina, Aminoácidos y Niacinamida.',
+    seoTitle: 'Tónico Capilar Folivance para Caída, Crecimiento y mejora de apariencia | Azenza',
+    seoDescription: 'Frena la caída y duplica el crecimiento capilar con Folivance de AZENZA. Tónico folicular de alto impacto Biotina, Aminoácidos y Niacinamida.',
     benefits: [
       'Frena la caída del cabello de forma visible desde la segunda semana',
       'Estimula la fase de crecimiento activo (anágena) para nuevas hebras',
@@ -3266,7 +3270,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/folivance-apoyo-1.webp',
       '/assets/products/folivance-apoyo-2.webp'
     ],
-    keywords: 'Folivance, tonico capilar, caida cabello, crecimiento pelo, aminoácidos, niacinamida, biotina, romero, Zenhogar',
+    keywords: 'Folivance, tonico capilar, caida cabello, crecimiento pelo, aminoácidos, niacinamida, biotina, romero, Azenza',
     components: 'Biotina, Aminoácidos, niacinamida',
     componentBenefits: [
       { name: 'Aminoácidos', benefit: 'fortalece, da estructura y repara el cabello existente.' },
@@ -3298,7 +3302,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     ],
     whyChoose: {
       title: 'Densidad y Fuerza Capilar Certificada',
-      description: 'En ZENHOGAR redefinimos el cuidado capilar con soluciones científicas de alto impacto. FOLIvance une el poder del Trichogen y extractos herbales para devolver la vitalidad y el volumen a tu cabello de manera segura.'
+      description: 'En AZENZA redefinimos el cuidado capilar con soluciones científicas de alto impacto. FOLIvance une el poder del Trichogen y extractos herbales para devolver la vitalidad y el volumen a tu cabello de manera segura.'
     }
   },
   {
@@ -3314,8 +3318,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 ✔️ Estructura y Brillo: Los aminoácidos fortalecen la fibra capilar, reparan el cabello existente, previenen la rotura y restauran un brillo saludable desde el primer uso.
 ✔️ Crecimiento y Grosor: La biotina estimula la aparición de nuevo cabello, mejora la oxigenación folicular y lo engrosa de raíz a puntas.
 ✔️ Circulación y Control: La niacinamida mejora el flujo sanguíneo en el cuero cabelludo, calma la irritación y controla el exceso de grasa de forma duradera.`,
-    seoTitle: 'Shampoo Intensivo Anticaída y Brillo Sin Sal | Zenhogar',
-    seoDescription: 'Limpia con suavidad y fortalece tu cabello con el Shampoo Intensivo de ZENHOGAR. Fórmula profesional con Romero y Biotina libre de sal. ¡INVIMA!',
+    seoTitle: 'Shampoo Intensivo Anticaída y Brillo Sin Sal | Azenza',
+    seoDescription: 'Limpia con suavidad y fortalece tu cabello con el Shampoo Intensivo de AZENZA. Fórmula profesional con Romero y Biotina libre de sal. ¡INVIMA!',
     benefits: [
       'Limpia de manera profunda y regula el exceso de grasa en la raíz',
       'Previene la caída del cabello fortaleciendo la fibra capilar',
@@ -3335,7 +3339,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/shampoo-intensivo-apoyo-3.webp',
       '/assets/products/shampoo-intensivo-apoyo-4.webp'
     ],
-    keywords: 'shampoo intensivo, sin sal, anticaida, biotina, Aminoácidos, niacinamida, cabello fuerte, Zenhogar',
+    keywords: 'shampoo intensivo, sin sal, anticaida, biotina, Aminoácidos, niacinamida, cabello fuerte, Azenza',
     components: 'Biotina, aminoácidos y niacinamida',
     componentBenefits: [
       { name: 'Aminoácidos', benefit: 'fortalece, da estructura y repara el cabello existente.' },
@@ -3366,7 +3370,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     ],
     whyChoose: {
       title: 'Fortaleza y Brillo de Salón',
-      description: 'En ZENHOGAR comprometidos con tu salud capilar. Nuestro Shampoo Intensivo repara la fibra capilar y nutre tu cabello desde la raíz con una fórmula profesional libre de químicos agresivos y registro INVIMA garantizado.'
+      description: 'En AZENZA comprometidos con tu salud capilar. Nuestro Shampoo Intensivo repara la fibra capilar y nutre tu cabello desde la raíz con una fórmula profesional libre de químicos agresivos y registro INVIMA garantizado.'
     }
   },
   {
@@ -3382,8 +3386,8 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
 ✔️ Circulación y Alivio: El castaño de indias ayuda a tonificar la piel, disminuye la pesadez y reduce notablemente la tensión en las piernas cansadas mediante el masaje.
 ✔️ Elasticidad y Firmeza: La centella asiática favorece la firmeza de la piel estimulando de forma natural los tejidos, mejora su aspecto y atenúa la apariencia de las várices y líneas superficiales.
 ✔️ Acción Protectora y Nutrición: Su base aceitosa humecta profundamente la piel, mientras que sus antioxidantes naturales protegen las células contra el desgaste y la resequedad diaria.`,
-    seoTitle: 'Aceite Relajante para Masajes y Tensión Muscular | Zenhogar',
-    seoDescription: 'Relaja tus músculos y mitiga el estrés con el Aceite Relajante de ZENHOGAR. Combinación de Castaño de Indias y Centella Asiática. ¡INVIMA!',
+    seoTitle: 'Aceite Relajante para Masajes y Tensión Muscular | Azenza',
+    seoDescription: 'Relaja tus músculos y mitiga el estrés con el Aceite Relajante de AZENZA. Combinación de Castaño de Indias y Centella Asiática. ¡INVIMA!',
     benefits: [
       'Disuelve el estrés y libera la rigidez de tus músculos',
       'Desliza suavemente sobre la piel facilitando masajes profundos',
@@ -3402,7 +3406,7 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
       '/assets/products/aceite-relajante-apoyo-2.webp',
       '/assets/products/aceite-relajante-apoyo-3.webp'
     ],
-    keywords: 'aceite relajante, masajes, tension muscular, descontracturante, estres, Zenhogar',
+    keywords: 'aceite relajante, masajes, tension muscular, descontracturante, estres, Azenza',
     components: 'Aceite de Castaño de Indias, Centella Asiática, Extracto de Uva',
     componentBenefits: [
       { name: 'Castaño de Indias', benefit: 'Desinflama las venas, alivia la pesadez en las piernas y combate la retención de líquidos (ideal para várices).' },
@@ -3434,7 +3438,7 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
     ],
     whyChoose: {
       title: 'Alivio Terapéutico y Paz Sensorial',
-      description: 'En ZENHOGAR fusionamos naturaleza y bienestar. Nuestro Aceite Relajante combina aceites florales y botánicos que desinflaman tus músculos y calman tu mente con calidad certificada oficial.'
+      description: 'En AZENZA fusionamos naturaleza y bienestar. Nuestro Aceite Relajante combina aceites florales y botánicos que desinflaman tus músculos y calman tu mente con calidad certificada oficial.'
     }
   },
   {
@@ -3450,8 +3454,8 @@ Diseñado con una textura ligera de rápida absorción y efecto no graso, este p
 ✔️ Efecto Frío: El mentol aporta una sensación de frescura calmante inmediata que disminuye la pesadez, alivia el dolor local y descansa las piernas de forma instantánea.
 ✔️ Tonificación y Circulación Ampliada: El castaño de indias activa el flujo sanguíneo de forma localizada, estimula la circulación en la zona aplicada y en toda la pierna, y previene eficazmente la hinchazón diaria.
 ✔️ Firmeza y Reparación: La centella asiática mejora la consistencia de los tejidos cutáneos de las piernas, disminuye la flacidez y ayuda a desvanecer visualmente las várices.`,
-    seoTitle: 'Gel Frío Criogénico para Piernas Cansadas y Alivio | Zenhogar',
-    seoDescription: 'Alivia la fatiga muscular y la pesadez de tus piernas con el Gel Frío Relajante de ZENHOGAR. Efecto criogénico con Castaño de Indias. ¡INVIMA!',
+    seoTitle: 'Gel Frío Criogénico para Piernas Cansadas y Alivio | Azenza',
+    seoDescription: 'Alivia la fatiga muscular y la pesadez de tus piernas con el Gel Frío Relajante de AZENZA. Efecto criogénico con Castaño de Indias. ¡INVIMA!',
     benefits: [
       'Efecto frío criogénico inmediato que reduce la inflamación local',
       'Alivia de forma efectiva la pesadez y cansancio en piernas y pies',
@@ -3469,7 +3473,7 @@ Diseñado con una textura ligera de rápida absorción y efecto no graso, este p
       '/assets/products/gel-frio-apoyo-1.webp',
       '/assets/products/gel-frio-apoyo-2.webp'
     ],
-    keywords: 'gel frio, criogenico, piernas cansadas, varices, mentol, castaño de indias, Zenhogar, fatiga muscular',
+    keywords: 'gel frio, criogenico, piernas cansadas, varices, mentol, castaño de indias, Azenza, fatiga muscular',
     components: 'Mentol, Castaño de Indias, Centella Asiática',
     componentBenefits: [
       { name: 'Mentol', benefit: 'Proporcionan un efecto frío inmediato que insensibiliza la molestia y desinflama.' },
@@ -3500,7 +3504,7 @@ Diseñado con una textura ligera de rápida absorción y efecto no graso, este p
     ],
     whyChoose: {
       title: 'Efecto Criogénico y Alivio de Circulación',
-      description: 'En ZENHOGAR estamos comprometidos con tu movilidad activa. Nuestro Gel Frío combina mentol y extractos circulatorios para deshinchar y aliviar tu cansancio de forma rápida y certificada.'
+      description: 'En AZENZA estamos comprometidos con tu movilidad activa. Nuestro Gel Frío combina mentol y extractos circulatorios para deshinchar y aliviar tu cansancio de forma rápida y certificada.'
     }
   }
 ];
@@ -3551,6 +3555,7 @@ export interface Promotion {
   peso_adicional?: number;
   googleCategory?: string;
   condition?: 'new' | 'used' | 'refurbished';
+  supportImages?: string[];
 }
 
 export const COMBO_OF_THE_MONTH: Promotion = {
@@ -3564,7 +3569,7 @@ export const COMBO_OF_THE_MONTH: Promotion = {
   googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
   condition: 'new',
   products: ['locion', 'rtafull', 'hemocream', 'titan-coffee', 'mamooth'],
-  seoTitle: 'Combo 7 para el Alto Rendimiento y Vigor Masculino | ZENHOGAR',
+  seoTitle: 'Combo 7 para el Alto Rendimiento y Vigor Masculino | AZENZA',
   seoDescription: 'Potencia tu vigor y acelera tu recuperación con el Combo 7. Energía pura, desintoxicación y alivio físico en un solo pack diario. ¡Ahorra $81.800 con envío gratis!',
   whyChoose: {
     title: 'Rendimiento y Vigor Masculino Absoluto',
@@ -3577,7 +3582,7 @@ export const COMBO_OF_THE_MONTH: Promotion = {
     'Depuración interna y hepática con Rtafull',
     'Firmeza y cuidado con Mammoth y Hemocream'
   ],
-  keywords: 'vigor masculino, rendimiento de élite, energía, recuperación muscular, desintoxicación hepática, Titan Coffee, Rtafull, Termoactiva, Hemocream, Mammoth, Zenhogar, combo 7',
+  keywords: 'vigor masculino, rendimiento de élite, energía, recuperación muscular, desintoxicación hepática, Titan Coffee, Rtafull, Termoactiva, Hemocream, Mammoth, Azenza, combo 7',
   components: 'Titan Coffee, RtaFull, Loción Termoactiva, Hemocream y Crema Mammoth',
     componentBenefits: [
     {
@@ -3631,10 +3636,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Luce una piel radiante con nuestro Combo Piel Radiante. Fórmula balanceada para bienestar integral, nutrición celular y calidad certificada. ¡Ahorra hoy!',
     whyChoose: {
       title: 'Tu ritual de belleza integral',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. El Combo Piel Radiante une nutrición celular y cuidado cutáneo extremo con Resveratrol y Miskinne (Avena y Caléndula). Calidad certificada para una piel luminosa desde el interior.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. El Combo Piel Radiante une nutrición celular y cuidado cutáneo extremo con Resveratrol y Miskinne (Avena y Caléndula). Calidad certificada para una piel luminosa desde el interior.'
     },
     badge: 'COMBO N°1',
-    keywords: 'Resveratrol, Miskinne, antioxidante, cuidado de la piel, rejuvenecimiento, bienestar, Zenhogar, combo belleza',
+    keywords: 'Resveratrol, Miskinne, antioxidante, cuidado de la piel, rejuvenecimiento, bienestar, Azenza, combo belleza',
     components: 'Arbutina (5%), Resveratrol, Colágeno Hidrolizado (10.000mg), Crema de Coco, Arándano y Uva liofilizada',
     componentBenefits: [
     {
@@ -3692,10 +3697,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Unifica tu tono de piel y protege tus células con el Combo Belleza Eterna. Fórmula balanceada para bienestar integral y calidad certificada. ¡Compra ya!',
     whyChoose: {
       title: 'Belleza que trasciende el tiempo',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Belleza Eterna combate las manchas y el tono desigual combinando el poder aclarante de Eventone con la regeneración del Resveratrol. Calidad certificada para un rostro renovado.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Belleza Eterna combate las manchas y el tono desigual combinando el poder aclarante de Eventone con la regeneración del Resveratrol. Calidad certificada para un rostro renovado.'
     },
     badge: 'COMBO N°2',
-    keywords: 'Resveratrol, Eventone, belleza interior, antioxidante, tono de piel, nutrición celular, Zenhogar, combo belleza',
+    keywords: 'Resveratrol, Eventone, belleza interior, antioxidante, tono de piel, nutrición celular, Azenza, combo belleza',
     components: 'Bio Retinol, Ácido Hialurónico, Resveratrol, Colágeno Hidrolizado, Vitamina B5 y extractos de Uva y Arándano',
     componentBenefits: [
     {
@@ -3753,10 +3758,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Limpia tu organismo y regula tu digestión con el Combo Detox Digestivo. Fórmula balanceada para bienestar integral y calidad certificada. ¡Siéntete ligero!',
     whyChoose: {
       title: 'Renovación total desde el interior',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este Combo Detox une Rtafull y Coliplus para limpiar el hígado y colon de forma profunda pero gentil. Despídete de la pesadez y el estreñimiento con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este Combo Detox une Rtafull y Coliplus para limpiar el hígado y colon de forma profunda pero gentil. Despídete de la pesadez y el estreñimiento con calidad certificada.'
     },
     badge: 'COMBO N°3',
-    keywords: 'Coliplus, Rtafull, desintoxicación, colon, hígado, digestión, limpieza natural, Zenhogar, combo salud',
+    keywords: 'Coliplus, Rtafull, desintoxicación, colon, hígado, digestión, limpieza natural, Azenza, combo salud',
     components: 'Linaza, Pitaya, Flor de Jamaica, Alcachofa, Semillas de Chía, Espirulina, Té Verde y Perejil',
     componentBenefits: [
     {
@@ -3814,10 +3819,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Apoya tu proceso de bienestar metabólico con el Combo Control & Detox. Fórmula balanceada para bienestar integral, energía y calidad certificada. ¡Ahorra hoy!',
     whyChoose: {
       title: 'Tu aliado en el control consciente',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Control & Detox integra Liteplex y Rtafull para acelerar tu metabolismo y liberar toxinas acumuladas. Fórmula balanceada y certificada para tu proceso de bienestar.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Control & Detox integra Liteplex y Rtafull para acelerar tu metabolismo y liberar toxinas acumuladas. Fórmula balanceada y certificada para tu proceso de bienestar.'
     },
     badge: 'COMBO N°4',
-    keywords: 'Liteplex, Rtafull, control de peso, controlar medidas, desintoxicación, metabolism, Zenhogar, combo salud',
+    keywords: 'Liteplex, Rtafull, control de peso, controlar medidas, desintoxicación, metabolism, Azenza, combo salud',
     components: 'Té Verde, Jengibre, Alcachofa, Flor de Jamaica, Perejil, Berenjena, Apio y Albahaca',
     componentBenefits: [
     {
@@ -3875,10 +3880,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Protección y limpieza profunda para tu organismo con el Combo Protección Total. Fórmula balanceada para bienestar integral y calidad certificada. ¡Compra ahora!',
     whyChoose: {
       title: 'Protección que nace del equilibrio',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Protección Total une la higiene profunda de Tufoff con la depuración hepática de Rtafull. Una barrera segura contra toxinas y mal olor con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Protección Total une la higiene profunda de Tufoff con la depuración hepática de Rtafull. Una barrera segura contra toxinas y mal olor con calidad certificada.'
     },
     badge: 'COMBO N°5',
-    keywords: 'Tufoff, Rtafull, protección, limpieza profunda, defensas, bienestar, Zenhogar, combo salud',
+    keywords: 'Tufoff, Rtafull, protección, limpieza profunda, defensas, bienestar, Azenza, combo salud',
     components: 'Flor de Jamaica, Alcachofa, Perejil, Berenjena, Eritritol, Inulina, Aceite de Menta y Bicarbonato de Sodio',
     componentBenefits: [
     {
@@ -3936,10 +3941,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Apoya tu movilidad con el Combo Alivio Muscular. Fórmula balanceada para bienestar integral y calidad certificada. ¡Pídelo hoy!',
     whyChoose: {
       title: 'Bienestar en movimiento',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este combo apoya tus articulaciones con Colágeno y favorece el bienestar muscular con la Loción Termoactiva (Salicilato de Metilo). Calidad certificada para tu movilidad.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este combo apoya tus articulaciones con Colágeno y favorece el bienestar muscular con la Loción Termoactiva (Salicilato de Metilo). Calidad certificada para tu movilidad.'
     },
     badge: 'COMBO N°6',
-    keywords: 'Loción Termoactiva, Colágeno, dolor muscular, articulaciones, recuperación, alivio, Zenhogar, combo bienestar',
+    keywords: 'Loción Termoactiva, Colágeno, dolor muscular, articulaciones, recuperación, alivio, Azenza, combo bienestar',
     components: 'Extractos naturales relajantes, Colágeno Hidrolizado y Citrato de Magnesio',
     componentBenefits: [
     {
@@ -3993,10 +3998,10 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Siéntete imparable con el Combo Vitalidad & Limpieza. Fórmula balanceada para depuración natural, bienestar integral y calidad certificada. ¡Pídelo hoy!',
     whyChoose: {
       title: 'Vitalidad renovada cada mañana',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Vitalidad & Limpieza une a Tyruss Full y Rtafull para una limpieza orgánica profunda y energía total sin complicaciones. Calidad y seguridad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Vitalidad & Limpieza une a Tyruss Full y Rtafull para una limpieza orgánica profunda y energía total sin complicaciones. Calidad y seguridad certificada.'
     },
     badge: 'COMBO N°8',
-    keywords: 'Tyruss-Full, Rtafull, vitalidad, limpieza, energía, bienestar, Zenhogar, combo salud',
+    keywords: 'Tyruss-Full, Rtafull, vitalidad, limpieza, energía, bienestar, Azenza, combo salud',
     components: 'Clorofila, Espirulina, Chlorella, Alcachofa, Flor de Jamaica, Omega 3, Espinaca, Aguacate y Té Verde',
     componentBenefits: [
     {
@@ -4052,7 +4057,7 @@ export const PROMOTIONS: Promotion[] = [
     seoDescription: 'Reconforta tu vientre y fortalece tu sistema inmune con el combo Inmunidad Dual. Fórmula balanceada para bienestar integral y calidad certificada. ¡Ahorra $35.900!',
     whyChoose: {
       title: 'El dúo dinámico de tu bienestar',
-      description: 'En ZENHOGAR estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este combo une la acción reconfortante de Coliplus con el escudo antioxidante de Resvisfactor. Solución certificada para confortar tu vientre y fortalecer tus defensas con calidad garantizada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este combo une la acción reconfortante de Coliplus con el escudo antioxidante de Resvisfactor. Solución certificada para confortar tu vientre y fortalecer tus defensas con calidad garantizada.'
     },
     badge: 'COMBO N°9',
     benefits: [
@@ -4061,7 +4066,7 @@ export const PROMOTIONS: Promotion[] = [
       'Vientre plano y sin pesadez',
       'Protección antioxidante total'
     ],
-    keywords: 'bienestar total, desintoxicación, limpieza hepática, colon irritable, digestión, Rtafull, Coliplus, Zenhogar, combo salud',
+    keywords: 'bienestar total, desintoxicación, limpieza hepática, colon irritable, digestión, Rtafull, Coliplus, Azenza, combo salud',
     components: 'Calostro Bovino, Hongo Shiitake, Resveratrol, Linaza, Pitaya, Flor de Jamaica, Alcachofa, Betaglucanos y Vitaminas',
     componentBenefits: [
       {

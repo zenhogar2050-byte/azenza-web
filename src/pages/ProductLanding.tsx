@@ -213,6 +213,8 @@ export default function ProductLanding() {
           faqs: product.seoFaqs,
           reviews: product.testimonials,
           invima: product.invima,
+          image: product.image,
+          supportImages: product.supportImages,
           keywords: product.keywords,
           longTailKeywords: product.longTailKeywords
         }}
@@ -675,7 +677,7 @@ export default function ProductLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-black text-stone-900 mb-2 uppercase tracking-tight">Lo que dicen nuestros clientes</h2>
-            <p className="text-stone-500 font-medium">Experiencias reales de clientes que ya disfrutan ZENHOGAR</p>
+            <p className="text-stone-500 font-medium">Experiencias reales de clientes que ya disfrutan AZENZA</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {product.testimonials.map((testimonial, i) => {

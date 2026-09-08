@@ -14,7 +14,7 @@ export default function LegalFooter() {
             <div className="w-10 h-10 flex-shrink-0">
               <img 
                 src="/assets/logo/logo-icon.webp" 
-                alt="Zen Hogar Icon" 
+                alt="Azenza Icon" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -23,7 +23,7 @@ export default function LegalFooter() {
               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-xl font-black text-stone-900 tracking-tighter uppercase">Zen Hogar</span>
+              <span className="text-xl font-black text-stone-900 tracking-tighter uppercase">Azenza</span>
               <span className="text-[8px] font-bold text-emerald-600 tracking-[0.2em] uppercase">Salud Vital</span>
             </div>
           </Link>
@@ -73,9 +73,9 @@ export default function LegalFooter() {
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold">Correos</p>
-                <a href="mailto:ventas@zenhogar.live" className="text-stone-900 font-bold block hover:text-emerald-600 transition-colors">ventas@zenhogar.live</a>
-                <a href="mailto:info@zenhogar.live" className="text-stone-900 font-bold block hover:text-emerald-600 transition-colors">info@zenhogar.live</a>
-                <a href="mailto:soporte@zenhogar.live" className="text-stone-900 font-bold block hover:text-emerald-600 transition-colors">soporte@zenhogar.live</a>
+                <a href="mailto:ventas@azenza.com.co" className="text-stone-900 font-bold block hover:text-emerald-600 transition-colors">ventas@azenza.com.co</a>
+                <a href="mailto:info@azenza.com.co" className="text-stone-900 font-bold block hover:text-emerald-600 transition-colors">info@azenza.com.co</a>
+                <a href="mailto:soporte@azenza.com.co" className="text-stone-900 font-bold block hover:text-emerald-600 transition-colors">soporte@azenza.com.co</a>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function LegalFooter() {
       {/* YMYL Medical Disclaimer */}
       <div className="mt-12 pt-8 border-t border-stone-200">
         <p className="text-[10px] text-stone-500 leading-relaxed text-center max-w-4xl mx-auto italic">
-          Aviso Legal: Los productos ofrecidos por ZENHOGAR son suplementos dietarios y no pretenden diagnosticar, tratar, curar o prevenir ninguna enfermedad. La información proporcionada en este sitio web tiene fines informativos y no sustituye el consejo médico profesional. Siempre consulte con su médico antes de comenzar cualquier régimen de suplementación. Los resultados pueden variar de persona a persona. Todos nuestros productos cuentan con registro INVIMA vigente.
+          Aviso Legal: Los productos ofrecidos por AZENZA son suplementos dietarios y no pretenden diagnosticar, tratar, curar o prevenir ninguna enfermedad. La información proporcionada en este sitio web tiene fines informativos y no sustituye el consejo médico profesional. Siempre consulte con su médico antes de comenzar cualquier régimen de suplementación. Los resultados pueden variar de persona a persona. Todos nuestros productos cuentan con registro INVIMA vigente.
         </p>
       </div>
     </div>

@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
         title="Política de Privacidad"
-        description="Política de tratamiento de datos personales de ZENHOGAR. Tu privacidad es nuestra prioridad."
+        description="Política de tratamiento de datos personales de AZENZA. Tu privacidad es nuestra prioridad."
         canonicalUrl="/politica-privacidad"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Recolección de Información</h2>
             <p>
-              En ZENHOGAR, recolectamos información personal necesaria para la prestación de nuestros servicios de comercio electrónico. Los datos recolectados incluyen, pero no se limitan a: nombre completo, número de teléfono (WhatsApp), dirección de envío, ciudad, departamento y correo electrónico (opcional). Esta información es recolectada directamente de usted cuando realiza un pedido en nuestro sitio web.
+              En AZENZA, recolectamos información personal necesaria para la prestación de nuestros servicios de comercio electrónico. Los datos recolectados incluyen, pero no se limitan a: nombre completo, número de teléfono (WhatsApp), dirección de envío, ciudad, departamento y correo electrónico (opcional). Esta información es recolectada directamente de usted cuando realiza un pedido en nuestro sitio web.
             </p>
           </section>
 
@@ -50,14 +50,14 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold text-stone-900 mb-4">3. Derechos de los Usuarios</h2>
             <p>
-              Bajo la Ley 1581 de 2012 y el Decreto 1377 de 2013, usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales de nuestras bases de datos en cualquier momento. Para ejercer estos derechos, puede escribirnos a ventas@zenhogar.live indicando su requerimiento.
+              Bajo la Ley 1581 de 2012 y el Decreto 1377 de 2013, usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales de nuestras bases de datos en cualquier momento. Para ejercer estos derechos, puede escribirnos a ventas@azenza.com.co indicando su requerimiento.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-stone-900 mb-4">4. Almacenamiento y Seguridad</h2>
             <p>
-              Sus datos se almacenan en servidores seguros con protocolos de encriptación. ZENHOGAR no vende ni alquila su información personal a terceros. Solo compartimos datos con proveedores de servicios necesarios para cumplir con su pedido (logística y hosting).
+              Sus datos se almacenan en servidores seguros con protocolos de encriptación. AZENZA no vende ni alquila su información personal a terceros. Solo compartimos datos con proveedores de servicios necesarios para cumplir con su pedido (logística y hosting).
             </p>
           </section>
 

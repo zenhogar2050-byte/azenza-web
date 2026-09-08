@@ -194,7 +194,7 @@ export default function AdminDashboard() {
   const [systemCounter, setSystemCounter] = useState<number>(1000);
 
   const handleCopyRouteLink = (path: string, routeId: string) => {
-    const fullUrl = `https://zenhogar.live${path}`;
+    const fullUrl = `https://azenza.com.co${path}`;
     navigator.clipboard.writeText(fullUrl).then(() => {
       setCopiedRouteId(routeId);
       setTimeout(() => setCopiedRouteId(null), 2000);
@@ -357,7 +357,7 @@ export default function AdminDashboard() {
         type: 'order',
         customer: {
           fullName: customerFullName || "Cliente",
-          email: (customer.email || '').trim() || "contacto@zenhogar.live",
+          email: (customer.email || '').trim() || "contacto@azenza.com.co",
           phone: telefonoVal,
           identification: (customer.identification || '').trim() || "123456789",
           address: direccionVal,
@@ -588,7 +588,7 @@ export default function AdminDashboard() {
     const totalVal = order.total || order.cart?.total || 0;
     const totalStr = totalVal > 0 ? `\n💰 *Valor Total:* ${formatCurrency(totalVal, getOrderCountry(order))}` : '';
     
-    return `¡Hola ${order.customer.nombre || order.customer.fullName || ''}! Te saludamos de *Zenhogar*. 🌿
+    return `¡Hola ${order.customer.nombre || order.customer.fullName || ''}! Te saludamos de *Azenza*. 🌿
 
 Confirmamos que tu pedido ${ticketStr} ha sido procesado correctamente.${itemsDetails}${totalStr}${guideStr}
 
@@ -1020,7 +1020,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
     const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Backup_Auditoria");
-    XLSX.writeFile(wb, `Respaldo-Zenhogar-${dateFormatted}.xlsx`);
+    XLSX.writeFile(wb, `Respaldo-Azenza-${dateFormatted}.xlsx`);
   };
 
   const handleClearAllOrders = async () => {
@@ -1592,7 +1592,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
             <Home className="w-5 h-5" />
           </button>
           <img src="/favicon.png" className="w-6 h-6 object-contain" alt="Logo" />
-          <span className="font-bold text-sm tracking-tight">ZENHOGAR Admin</span>
+          <span className="font-bold text-sm tracking-tight">AZENZA Admin</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="flex items-center bg-stone-800 p-0.5 rounded-lg border border-white/10">
@@ -1754,7 +1754,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
               {activeTab === 'orders' ? 'Pedidos' : activeTab === 'analytics' ? 'Analítica' : activeTab === 'inventory' ? 'Inventario Mastershop' : activeTab === 'routes' ? 'Rutas de Campaña' : 'Configuración'}
             </h1>
             <div className="h-4 w-px bg-stone-200 hidden sm:block" />
-            <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest hidden sm:block">Zenhogar v2.1.2</p>
+            <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest hidden sm:block">Azenza v2.1.2</p>
           </div>
           <div className="flex items-center gap-3">
             <div className="flex items-center bg-stone-100 p-1 rounded-xl border border-stone-200">
@@ -2691,7 +2691,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                     <div>
                       <p className="text-xs font-bold text-blue-900">¿Por qué es importante esta sección?</p>
                       <p className="text-[11px] text-blue-700 mt-1 leading-relaxed">
-                        Aquí puedes visualizar, copiar y probar de manera directa la ruta exacta de cualquier producto o combo de ZENHOGAR al rellenar tus campañas. 
+                        Aquí puedes visualizar, copiar y probar de manera directa la ruta exacta de cualquier producto o combo de AZENZA al rellenar tus campañas. 
                         <strong> Nota de Robustez:</strong> El sistema ha sido blindado para que las rutas sean completamente insensibles a mayúsculas/minúsculas (ej: <code className="bg-white px-1 py-0.5 rounded text-blue-800 font-mono">/producto/RtaFull</code>, <code className="bg-white px-1 py-0.5 rounded text-blue-800 font-mono">/producto/rtafull</code> o <code className="bg-white px-1 py-0.5 rounded text-blue-800 font-mono">/producto/RTAFULL</code> funcionarán de manera idéntica sin páginas caídas ni errores).
                       </p>
                     </div>
@@ -2726,7 +2726,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                 <input 
                                   type="text" 
                                   readOnly 
-                                  value={`https://zenhogar.live${path}`} 
+                                  value={`https://azenza.com.co${path}`} 
                                   className="flex-grow bg-white border border-stone-200 rounded-lg px-2.5 py-2 text-[11px] font-mono text-stone-600 select-all outline-none"
                                 />
                                 <button
@@ -2742,7 +2742,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                   {isCopied ? 'Copiado' : 'Copiar'}
                                 </button>
                                 <a 
-                                  href={`https://zenhogar.live${path}`} 
+                                  href={`https://azenza.com.co${path}`} 
                                   target="_blank" 
                                   rel="noopener noreferrer" 
                                   className="p-2 bg-white hover:bg-stone-50 border border-stone-200 rounded-lg text-stone-500 transition-colors shrink-0"
@@ -2794,7 +2794,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                   <input 
                                     type="text" 
                                     readOnly 
-                                    value={`https://zenhogar.live${path}`} 
+                                    value={`https://azenza.com.co${path}`} 
                                     className="flex-grow bg-white border border-stone-200 rounded-lg px-2.5 py-2 text-[11px] font-mono text-stone-600 select-all outline-none"
                                   />
                                   <button
@@ -2810,7 +2810,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                     {isCopied ? 'Copiado' : 'Copiar'}
                                   </button>
                                   <a 
-                                    href={`https://zenhogar.live${path}`} 
+                                    href={`https://azenza.com.co${path}`} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="p-2 bg-white hover:bg-stone-50 border border-stone-200 rounded-lg text-stone-500 transition-colors shrink-0"
@@ -2844,7 +2844,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                   <input 
                                     type="text" 
                                     readOnly 
-                                    value={`https://zenhogar.live${path}`} 
+                                    value={`https://azenza.com.co${path}`} 
                                     className="flex-grow bg-white border border-stone-200 rounded-lg px-2.5 py-2 text-[11px] font-mono text-stone-600 select-all outline-none"
                                   />
                                   <button
@@ -2860,7 +2860,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                     {isCopied ? 'Copiado' : 'Copiar'}
                                   </button>
                                   <a 
-                                    href={`https://zenhogar.live${path}`} 
+                                    href={`https://azenza.com.co${path}`} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="p-2 bg-white hover:bg-stone-50 border border-stone-200 rounded-lg text-stone-500 transition-colors shrink-0"
@@ -2900,7 +2900,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                   <input 
                                     type="text" 
                                     readOnly 
-                                    value={`https://zenhogar.live${path}`} 
+                                    value={`https://azenza.com.co${path}`} 
                                     className="flex-grow bg-white border border-stone-200 rounded-lg px-2 py-1 text-[10px] font-mono text-stone-500 outline-none"
                                   />
                                   <button
@@ -2936,7 +2936,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                   <input 
                                     type="text" 
                                     readOnly 
-                                    value={`https://zenhogar.live${page.path}`} 
+                                    value={`https://azenza.com.co${page.path}`} 
                                     className="flex-grow bg-white border border-stone-200 rounded-lg px-2 py-1 text-[10px] font-mono text-stone-500 outline-none"
                                   />
                                   <button

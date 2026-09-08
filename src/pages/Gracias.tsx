@@ -25,7 +25,7 @@ export default function Gracias() {
         orderData: {
           value: location.state.orderData?.value || 0,
           currency: location.state.orderData?.currency || 'COP',
-          email: location.state.orderData?.email || "contacto@zenhogar.live"
+          email: location.state.orderData?.email || "contacto@azenza.com.co"
         },
         whatsappUrl: location.state.whatsappUrl,
         ticketNumber: location.state.ticketNumber
@@ -39,7 +39,7 @@ export default function Gracias() {
           orderData: { 
             value: saved.total, 
             currency: 'COP', 
-            email: saved.email || "contacto@zenhogar.live" 
+            email: saved.email || "contacto@azenza.com.co" 
           },
           whatsappUrl: saved.whatsappUrl || 'https://wa.me/573024102568',
           ticketNumber: saved.ticketNumber || 'N/A'
@@ -50,7 +50,7 @@ export default function Gracias() {
     }
     
     return {
-      orderData: { value: 0, currency: 'COP', email: "contacto@zenhogar.live" },
+      orderData: { value: 0, currency: 'COP', email: "contacto@azenza.com.co" },
       whatsappUrl: 'https://wa.me/573024102568',
       ticketNumber: 'PENDIENTE'
     };
@@ -60,8 +60,8 @@ export default function Gracias() {
 
   // Integración de Google Customer Reviews Opt-In
   useEffect(() => {
-    const emailToUse = orderData.email || 'contacto@zenhogar.live';
-    const orderIdToUse = ticketNumber || `ZH-${Date.now()}`;
+    const emailToUse = orderData.email || 'contacto@azenza.com.co';
+    const orderIdToUse = ticketNumber || `AZ-${Date.now()}`;
     const countryToUse = 'CO'; // Colombia (CO)
 
     // Calcular fecha estimada de entrega: Hoy + 3 días en formato YYYY-MM-DD
@@ -200,7 +200,7 @@ export default function Gracias() {
       </motion.div>
       
       <p className="mt-8 text-stone-400 text-[10px] font-medium">
-        © 2026 ZenHogar - Compra 100% Protegida
+        © 2026 Azenza - Compra 100% Protegida
       </p>
     </div>
   );

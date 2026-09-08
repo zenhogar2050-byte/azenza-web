@@ -12,7 +12,7 @@ const RefundPolicy = () => {
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
         title="Política de Reembolso"
-        description="Conoce nuestra política de reembolsos y derecho de retracto de ZENHOGAR en Colombia."
+        description="Conoce nuestra política de reembolsos y derecho de retracto de AZENZA en Colombia."
         canonicalUrl="/politica-reembolso"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ const RefundPolicy = () => {
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Productos Dañados o Defectuosos</h2>
               <p>
-                Si recibes un producto en mal estado, con abolladuras, goteos o cualquier anomalía física, debes reportarlo dentro de las primeras <strong>24 horas</strong> tras la entrega. ZENHOGAR realizará el reemplazo del producto sin costo adicional para ti.
+                Si recibes un producto en mal estado, con abolladuras, goteos o cualquier anomalía física, debes reportarlo dentro de las primeras <strong>24 horas</strong> tras la entrega. AZENZA realizará el reemplazo del producto sin costo adicional para ti.
               </p>
             </section>
 

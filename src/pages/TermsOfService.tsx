@@ -12,7 +12,7 @@ const TermsOfService = () => {
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
         title="Términos del Servicio"
-        description="Conoce los Términos y Condiciones de Uso de la plataforma ZENHOGAR en Colombia."
+        description="Conoce los Términos y Condiciones de Uso de la plataforma AZENZA en Colombia."
         canonicalUrl="/terminos-servicio"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,14 +40,14 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Aceptación de los Términos</h2>
               <p>
-                Al acceder y utilizar el sitio web de ZENHOGAR, usted declara que es mayor de edad y que acepta estar sujeto a estos Términos y Condiciones, así como a todas las leyes aplicables en el territorio colombiano. Si no está de acuerdo con alguna parte de estos términos, le recomendamos abstenerse de utilizar nuestro servicio.
+                Al acceder y utilizar el sitio web de AZENZA, usted declara que es mayor de edad y que acepta estar sujeto a estos Términos y Condiciones, así como a todas las leyes aplicables en el territorio colombiano. Si no está de acuerdo con alguna parte de estos términos, le recomendamos abstenerse de utilizar nuestro servicio.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">2. Descripción del Servicio</h2>
               <p>
-                ZENHOGAR es una plataforma de comercio electrónico dedicada a la venta de productos naturales, suplementos dietarios y artículos de bienestar personal. Nos esforzamos por proporcionar descripciones precisas; sin embargo, no garantizamos que toda la información visual o textual esté libre de errores tipográficos.
+                AZENZA es una plataforma de comercio electrónico dedicada a la venta de productos naturales, suplementos dietarios y artículos de bienestar personal. Nos esforzamos por proporcionar descripciones precisas; sin embargo, no garantizamos que toda la información visual o textual esté libre de errores tipográficos.
               </p>
             </section>
 
@@ -61,21 +61,21 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">4. Pago Contraentrega</h2>
               <p>
-                Para garantizar la seguridad y transparencia en la transacción, ZENHOGAR utiliza exclusivamente el modelo de <strong>Pago Contraentrega</strong>. Esto implica que el cliente debe entregar el valor exacto del pedido en efectivo al personal de la transportadora al momento de recibir el paquete. El no pago al momento de la entrega resultará en la devolución del producto a nuestras instalaciones.
+                Para garantizar la seguridad y transparencia en la transacción, AZENZA utiliza exclusivamente el modelo de <strong>Pago Contraentrega</strong>. Esto implica que el cliente debe entregar el valor exacto del pedido en efectivo al personal de la transportadora al momento de recibir el paquete. El no pago al momento de la entrega resultará en la devolución del producto a nuestras instalaciones.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">5. Veracidad de la Información</h2>
               <p>
-                El usuario se compromete a proporcionar información de contacto y dirección de envío veraz y completa. ZENHOGAR no se hace responsable por retrasos o imposibilidad de entrega derivados de direcciones incorrectas o números de teléfono inactivos.
+                El usuario se compromete a proporcionar información de contacto y dirección de envío veraz y completa. AZENZA no se hace responsable por retrasos o imposibilidad de entrega derivados de direcciones incorrectas o números de teléfono inactivos.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">6. Limitación de Responsabilidad</h2>
               <p>
-                ZENHOGAR no será responsable por daños indirectos, incidentales o consecuentes que resulten del uso o la imposibilidad de uso del sitio web o de los productos adquiridos, más allá del valor pagado por el cliente por dicho producto.
+                AZENZA no será responsable por daños indirectos, incidentales o consecuentes que resulten del uso o la imposibilidad de uso del sitio web o de los productos adquiridos, más allá del valor pagado por el cliente por dicho producto.
               </p>
             </section>
           </div>

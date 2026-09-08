@@ -43,20 +43,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const setCountry = (newCountry: CountryCode) => {
     setCountryState(newCountry);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('zenhogar_country', newCountry);
+      localStorage.setItem('azenza_country', newCountry);
     }
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem('zenhogar_cart');
+    const saved = localStorage.getItem('azenza_cart') || localStorage.getItem('zenhogar_cart');
     if (saved) {
       setItems(JSON.parse(saved));
     }
   }, []);
 
   useEffect(() => {
-    if (items.length > 0 || localStorage.getItem('zenhogar_cart')) {
-      localStorage.setItem('zenhogar_cart', JSON.stringify(items));
+    if (items.length > 0 || localStorage.getItem('azenza_cart')) {
+      localStorage.setItem('azenza_cart', JSON.stringify(items));
     }
   }, [items]);
 

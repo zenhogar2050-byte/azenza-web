@@ -1,5 +1,8 @@
 {
-  "name": "ZENHOGAR",
-  "description": "Ecosistema comercial automatizado para productos naturales. Incluye gestión inteligente de pedidos (Admin Panel), recuperación de carritos, optimización SEO de alta autoridad y flujos de automatización de ventas.",
-  "requestFramePermissions": []
+  "name": "AZENZA",
+  "description": "Ecosistema comercial automatizado para productos naturales y bienestar integral en Colombia. Incluye gestión inteligente de pedidos, recuperación de carritos, optimización SEO y flujos de automatización de ventas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

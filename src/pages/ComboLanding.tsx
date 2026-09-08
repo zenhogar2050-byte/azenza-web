@@ -146,7 +146,9 @@ export default function ComboLanding() {
              const isPending = !productInfo.invima || productInfo.invima.toLowerCase().includes('trámite') || productInfo.invima === 'En proceso' || productInfo.invima.includes('ALERTA');
              const invDisplay = isPending ? 'Registro en proceso de verificación' : productInfo.invima;
              return `${productInfo.name}: ${invDisplay}`;
-          }).filter(Boolean).join(' · ')
+          }).filter(Boolean).join(' · '),
+          image: combo.image,
+          supportImages: combo.products.map(p => PRODUCTS.find(pr => pr.id === p)?.image).filter(Boolean) as string[]
         }}
       />
 

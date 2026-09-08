@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
                 <img 
                   src="/assets/logo/logo-icon.webp" 
-                  alt="Zen Hogar Icon" 
+                  alt="Azenza Icon" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                   loading="lazy"
@@ -24,7 +24,7 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-2xl font-black text-white tracking-tighter uppercase">Zen Hogar</span>
+                <span className="text-2xl font-black text-white tracking-tighter uppercase">Azenza</span>
                 <span className="text-[10px] font-bold text-emerald-400 tracking-[0.2em] uppercase">Salud Vital</span>
               </div>
             </Link>
@@ -97,9 +97,9 @@ export default function Footer() {
                 </div>
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold text-stone-300 uppercase tracking-widest mb-1">Correos</p>
-                  <a href="mailto:ventas@zenhogar.live" className="text-white hover:text-emerald-400 transition-colors block font-medium">ventas@zenhogar.live</a>
-                  <a href="mailto:info@zenhogar.live" className="text-white hover:text-emerald-400 transition-colors block font-medium">info@zenhogar.live</a>
-                  <a href="mailto:soporte@zenhogar.live" className="text-white hover:text-emerald-400 transition-colors block font-medium">soporte@zenhogar.live</a>
+                  <a href="mailto:ventas@azenza.com.co" className="text-white hover:text-emerald-400 transition-colors block font-medium">ventas@azenza.com.co</a>
+                  <a href="mailto:info@azenza.com.co" className="text-white hover:text-emerald-400 transition-colors block font-medium">info@azenza.com.co</a>
+                  <a href="mailto:soporte@azenza.com.co" className="text-white hover:text-emerald-400 transition-colors block font-medium">soporte@azenza.com.co</a>
                 </div>
               </li>
             </ul>
@@ -125,7 +125,7 @@ export default function Footer() {
         {/* Copyright section */}
         <div className="pt-12 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6 text-stone-100 text-sm">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <p>© 2026 zenhogar. Todos los derechos reservados.</p>
+            <p>© 2026 Azenza. Todos los derechos reservados.</p>
             <div className="flex items-center gap-4 text-[10px] font-bold text-stone-500 uppercase tracking-widest mt-2">
               <span>Métodos de Pago:</span>
               <div className="flex items-center gap-2 bg-stone-800 px-3 py-1 rounded-full border border-stone-700">
@@ -151,7 +151,7 @@ export default function Footer() {
         {/* YMYL Medical Disclaimer */}
         <div className="mt-8 pt-8 border-t border-stone-800/50">
           <p className="text-[10px] text-stone-300 leading-relaxed text-center max-w-5xl mx-auto italic">
-            Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por ZENHOGAR cuentan con Registro Sanitario INVIMA y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
+            Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con Registro Sanitario INVIMA y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
           </p>
         </div>
 

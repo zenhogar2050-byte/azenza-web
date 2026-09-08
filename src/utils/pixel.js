@@ -8,7 +8,7 @@ export const initPixel = () => {
   if (!PIXEL_ID || window.fbq) return;
 
   // Solo inicializar en el dominio principal o local para evitar ruido
-  const isProd = window.location.hostname === 'zenhogar.live';
+  const isProd = window.location.hostname === 'azenza.com.co' || window.location.hostname === 'zenhogar.live';
   const isDev = window.location.hostname === 'localhost' || window.location.hostname.includes('run.app');
   
   if (!isProd && !isDev) return;
