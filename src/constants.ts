@@ -3399,7 +3399,7 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
     basePrice: 69900,
     size: '60g',
     presentation: 'Aceite',
-    googleCategory: 'Health & Beauty > Personal Care > Cosmetics > Skin Care > Massage Oil',
+    googleCategory: 'Health & Beauty > Personal Care > Massage & Relaxation > Massage Oil',
     condition: 'new',
     supportImages: [
       '/assets/products/aceite-relajante-apoyo-1.webp',

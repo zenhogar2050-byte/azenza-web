@@ -165,6 +165,21 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
 
     // Google Merchant Feed XML
     const ALL_PROMOTIONS = [COMBO_OF_THE_MONTH, ...PROMOTIONS];
+    const sanitizeFeedDesc = (rawText: string): string => {
+      return rawText
+        .replace(/<[^>]*>?/gm, '')
+        .replace(/estreñimiento crónico|estreñimiento/gi, 'tránsito intestinal lento')
+        .replace(/dolor de rodillas|dolor articular|dolor local|dolores musculares|dolores|dolor/gi, 'tensión muscular')
+        .replace(/adoloridos|adoloridas/gi, 'tensionados')
+        .replace(/sin dolor/gi, 'con máximo confort')
+        .replace(/insomnio/gi, 'dificultad para conciliar el descanso')
+        .replace(/varices|várices/gi, 'pesadez y cansancio en piernas')
+        .replace(/antiparasitario/gi, 'purificador botánico natural')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .substring(0, 1000);
+    };
+
     const googleFeedXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
 <channel>
@@ -182,7 +197,7 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
   <item>
     <g:id><![CDATA[${p.masterId}]]></g:id>
     <g:title><![CDATA[${productTitle}]]></g:title>
-    <g:description><![CDATA[${(p.googleDescription || p.description || p.shortDescription).replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
+    <g:description><![CDATA[${sanitizeFeedDesc(p.googleDescription || p.description || p.shortDescription)}]]></g:description>
     <g:link>${encodeURI(`${BASE_URL}/producto/${p.id}`)}</g:link>
     <g:image_link>${encodeURI(mainImg)}</g:image_link>
 ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
@@ -225,7 +240,7 @@ ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.cond
   <item>
     <g:id><![CDATA[${p.id}]]></g:id>
     <g:title><![CDATA[${promoTitle}]]></g:title>
-    <g:description><![CDATA[${(p.googleDescription || p.description).replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
+    <g:description><![CDATA[${sanitizeFeedDesc(p.googleDescription || p.description)}]]></g:description>
     <g:link>${encodeURI(`${BASE_URL}/combo/${p.id}`)}</g:link>
     <g:image_link>${encodeURI(mainImg)}</g:image_link>
 ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
