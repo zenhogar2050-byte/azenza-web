@@ -3554,6 +3554,8 @@ export interface Promotion {
   }[];
   peso_adicional?: number;
   googleCategory?: string;
+  googleTitle?: string;
+  googleDescription?: string;
   condition?: 'new' | 'used' | 'refurbished';
   supportImages?: string[];
 }

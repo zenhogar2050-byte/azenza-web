@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { PRODUCTS, PROMOTIONS, CATEGORIES, COMBO_OF_THE_MONTH } from '../src/constants';
+import { GOOGLE_TITLES_BY_PRODUCT_ID, GOOGLE_TITLES_BY_PROMO_ID } from '../src/googleFeedTitles';
 
 async function generate() {
     const serverDir = path.resolve(process.cwd(), 'dist/server');
@@ -176,10 +177,11 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
       .slice(0, 10)
       .map(img => `    <g:additional_image_link>${encodeURI(img.startsWith('http') ? img : `${BASE_URL}${img.startsWith('/') ? img : `/${img}`}`)}</g:additional_image_link>`)
       .join('\n');
+    const productTitle = GOOGLE_TITLES_BY_PRODUCT_ID[p.id] || p.googleTitle || p.name;
     return `
   <item>
     <g:id><![CDATA[${p.masterId}]]></g:id>
-    <g:title><![CDATA[${p.googleTitle || p.name}]]></g:title>
+    <g:title><![CDATA[${productTitle}]]></g:title>
     <g:description><![CDATA[${(p.googleDescription || p.description || p.shortDescription).replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
     <g:link>${encodeURI(`${BASE_URL}/producto/${p.id}`)}</g:link>
     <g:image_link>${encodeURI(mainImg)}</g:image_link>
@@ -218,11 +220,12 @@ ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.cond
       .slice(0, 10)
       .map(img => `    <g:additional_image_link>${encodeURI(img.startsWith('http') ? img : `${BASE_URL}${img.startsWith('/') ? img : `/${img}`}`)}</g:additional_image_link>`)
       .join('\n');
+    const promoTitle = GOOGLE_TITLES_BY_PROMO_ID[p.id] || p.googleTitle || p.name;
     return `
   <item>
     <g:id><![CDATA[${p.id}]]></g:id>
-    <g:title><![CDATA[${p.name}]]></g:title>
-    <g:description><![CDATA[${p.description.replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
+    <g:title><![CDATA[${promoTitle}]]></g:title>
+    <g:description><![CDATA[${(p.googleDescription || p.description).replace(/<[^>]*>?/gm, '').trim().substring(0, 1000)}]]></g:description>
     <g:link>${encodeURI(`${BASE_URL}/combo/${p.id}`)}</g:link>
     <g:image_link>${encodeURI(mainImg)}</g:image_link>
 ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
