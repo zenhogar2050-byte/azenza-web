@@ -189,9 +189,23 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
         .replace(/regular los procesos inflamatorios de la próstata/gi, 'mantener el confort y la función de la zona pélvica')
         .replace(/salud de la próstata|la próstata/gi, 'la zona pélvica masculina')
         
+        // Inflamación residual y deshinchar
+        .replace(/disminuye la inflamación y devuelve|disminuye la inflamación|reduce la inflamación/gi, 'aporta ligereza, frescura y confort duradero')
+        .replace(/inflamación abdominal|inflamación estomacal|la inflamación/gi, 'pesadez y sobrecarga estomacal')
+        .replace(/deshinchar los tobillos/gi, 'reconfortar pies y tobillos cansados')
+        
+        // Transición biológica, fatiga, glucosa, órganos
+        .replace(/etapas de transición y cambio biologico|etapas de transición y cambio biológico/gi, 'etapas de renovación y vitalidad integral')
+        .replace(/combatir la fatiga y promover/gi, 'promover una energía activa y')
+        .replace(/regular la glucosa/gi, 'apoyar el equilibrio metabólico diario')
+        .replace(/evita la acumulación de grasa corporal|evita que el cuerpo acumule grasa/gi, 'apoya la asimilación eficiente de los alimentos y el metabolismo activo')
+        .replace(/limpieza interna del hígado y los riñones de impurezas y grasas/gi, 'eliminación natural de toxinas y residuos corporales')
+        .replace(/para una función renal óptima y defensas activas/gi, 'para una digestión ligera y defensas activas')
+
         // Manejo del dolor y sistema muscular / articular
         .replace(/alivio del dolor|aliviar el dolor|calmar el dolor|reducir el dolor|quitar el dolor|dolores musculares|dolor muscular|dolor articular|dolor de rodillas|dolores locales|dolor local|dolores|dolor/gi, 'alivio de tensión y sobrecarga muscular')
-        .replace(/músculos atensión muscularidos/gi, 'músculos fatigados')
+        .replace(/aalivio de tensión y sobrecarga muscularidos|músculos atensión muscularidos/gi, 'músculos fatigados')
+        .replace(/fatiga muscular tras una intensa sesión de ejercicio y largas jornadas de pie/gi, 'cansancio acumulado en piernas tras largas jornadas de pie')
         .replace(/adoloridos|adoloridas/gi, 'fatigados y sobrecargados')
         .replace(/sin dolor/gi, 'con máximo confort')
         .replace(/regeneración de articulaciones|regenerar articulaciones|articular(es)?/gi, 'flexibilidad de rodillas y cartílagos')
@@ -209,7 +223,7 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
         // Infecciones y microbios
         .replace(/alivia la candidiasis y mitiga los gases/gi, 'favorece el equilibrio de la flora y mitiga los gases')
         .replace(/candidiasis/gi, 'desequilibrio de la microbiota')
-        .replace(/combatiendo bacterias y parásitos perjudiciales/gi, 'favoreciendo la depuración de microorganismos perjudiciales')
+        .replace(/combatiendo bacterias y parásitos perjudiciales|favoreciendo la depuración de microorganismos perjudiciales/gi, 'favoreciendo la depuración natural y el equilibrio digestivo')
         .replace(/parásitos|parásito/gi, 'impurezas internas');
 
       return text;
@@ -228,6 +242,10 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
       .map(img => `    <g:additional_image_link>${encodeURI(img.startsWith('http') ? img : `${BASE_URL}${img.startsWith('/') ? img : `/${img}`}`)}</g:additional_image_link>`)
       .join('\n');
     const productTitle = GOOGLE_TITLES_BY_PRODUCT_ID[p.id] || p.googleTitle || p.name;
+    const isAdultProduct = p.id === 'instant-virgin';
+    const googleCategory = p.id === 'instant-virgin'
+      ? 'Health & Beauty > Personal Care > Cosmetics > Skin Care'
+      : (p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition');
     return `
   <item>
     <g:id><![CDATA[${p.masterId}]]></g:id>
@@ -238,10 +256,11 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
 ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.condition || 'new'}]]></g:condition>
     <g:availability><![CDATA[in stock]]></g:availability>
     <g:price><![CDATA[${p.basePrice} COP]]></g:price>
-    <g:google_product_category><![CDATA[${p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition'}]]></g:google_product_category>
+    <g:google_product_category><![CDATA[${googleCategory}]]></g:google_product_category>
     <g:brand><![CDATA[Azenza]]></g:brand>
     <g:mpn><![CDATA[${p.masterId}]]></g:mpn>
     <g:identifier_exists><![CDATA[no]]></g:identifier_exists>
+    <g:adult><![CDATA[${isAdultProduct ? 'yes' : 'no'}]]></g:adult>
     <g:shipping>
       <g:country><![CDATA[CO]]></g:country>
       <g:service><![CDATA[Envío Gratis]]></g:service>

@@ -68,13 +68,13 @@ export const GOOGLE_TITLES_BY_PRODUCT_ID: Record<string, string> = {
 };
 
 export const GOOGLE_TITLES_BY_PROMO_ID: Record<string, string> = {
-  'combo-7': 'Combo 7 Rendimiento Físico Vigor Masculino Máximo y Energía Deportiva Titan Coffee Termoactiva Rtafull Mammoth Pack',
+  'combo-7': 'Rendimiento Físico Vigor Masculino Máximo y Energía Deportiva Titan Coffee Termoactiva Rtafull Mammoth Pack',
   'promo-1': 'Combo Piel Radiante Regeneración Celular Tono Luminoso y Firmeza Crema Miskinne 60g y Resveratrol 350g',
   'promo-2': 'Combo Belleza Eterna Cuidado Facial Antiedad y Regeneración Celular Suero Eventone 30ml y Resveratrol 350g',
   'promo-3': 'Combo Detox Digestivo Limpieza de Colon y Depuración de Hígado Coliplus 450g y RtaFull 500ml',
-  'promo-4': 'Combo Control & Detox Vientre Ligero y Plano Metabolismo y Digestión RtaFull 500ml y Vinagre de Manzana 60 Cápsulas',
-  'promo-5': 'Combo Protección Total Higiene Íntima Confort y Frescura Botánica Derman Mascarilla 30ml y Tufoff Caramelos 75g',
-  'promo-6': 'Combo Alivio Muscular Terapia Frío y Calor para Espalda Cuello y Piernas Loción Termoactiva y Gel Frío',
+  'promo-4': 'Combo Control & Detox Vientre Ligero y Plano Metabolismo y Digestión RtaFull 500ml y Liteplex 500ml',
+  'promo-5': 'Combo Protección Total Desintoxicación Orgánica Confort y Frescura Rtafull 500ml y Tufoff Caramelos 75g',
+  'promo-6': 'Combo Alivio Muscular Terapia Frío y Calor para Espalda Cuello y Piernas Loción Termoactiva y Colágeno con Citrato de Magnesio',
   'promo-8': 'Combo Vitalidad y Limpieza Desintoxicación Orgánica y Energía Natural Tyruss Full 500g y RtaFull 500ml',
   'promo-9': 'Combo Inmunidad Dual Defensas Fuertes y Vientre Ligero Resvisfactor 700g y Coliplus 450g Envío Gratis'
 };
