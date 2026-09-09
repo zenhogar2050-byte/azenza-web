@@ -3331,7 +3331,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     basePrice: 69900,
     size: '450ml',
     presentation: 'Líquido',
-    googleCategory: 'Health & Beauty > Personal Care > Hair Care > Shampoo',
+    googleCategory: 'Health & Beauty > Personal Care > Hair Care > Shampoo & Conditioner > Shampoo',
     condition: 'new',
     supportImages: [
       '/assets/products/shampoo-intensivo-apoyo-1.webp',

@@ -45,7 +45,7 @@ export const GOOGLE_TITLES_BY_PRODUCT_ID: Record<string, string> = {
 
   // --- Alivio Muscular y Corporal Tópico ---
   'locion': 'Loción Termoactiva Masaje Corporal Efecto Calor Alivio de Tensión en Espalda Cuello y Músculos 120ml',
-  'gel-frio-relajante': 'Gel Frío Efecto Criogénico Alivio de Piernas Cansadas Pesadez y Fatiga Muscular Mentol 60g',
+  'gel-frio-relajante': 'Gel Frío Efecto Criogénico Confort de Piernas Cansadas Frescura y Descanso Muscular Mentol 60g',
   'aceite-relajante': 'Aceite Relajante Masaje Corporal Descontracturante Alivio de Tensión en Espalda y Cuello 60g',
   'hemocream': 'Hemocream Alivio Inmediato Confort Calmante en Zonas Sensibles Cuidado Botánico Reparador Crema 30ml',
 
@@ -60,7 +60,6 @@ export const GOOGLE_TITLES_BY_PRODUCT_ID: Record<string, string> = {
   'tufoff': 'Tufoff Caramelos Aliento Fresco Instantáneo Neutralizador de Olores Bucales y Confianza Natural 75g',
 
   // --- Cuidado Íntimo y Voluminizantes (Políticas Google Estrictas) ---
-  'instant-virgin': 'Instant Virgin Gel Hidratante Íntimo Femenino Elasticidad Firmeza y Tonificación Natural 30ml',
   'derman': 'Derman Mascarilla Calmante Íntima Hidratación Protección Dérmica Suavidad y Confort Natural Crema 30ml',
   'akha': 'Akha Crema Reafirmante Corporal Tonicidad y Elasticidad Dérmica con Colágeno Hidrolizado Tarro 30ml',
   'mamooth': 'Mammoth Crema Corporal Reafirmante Efecto Densificador Elasticidad y Vigor para la Piel 30ml',

@@ -235,17 +235,14 @@ Sitemap: ${BASE_URL}/sitemap.xml`;
   <title><![CDATA[Azenza - Salud y Bienestar]]></title>
   <link>${BASE_URL}</link>
   <description><![CDATA[Tu aliado en salud natural, suplementos y bienestar integral en Colombia.]]></description>
-  ${PRODUCTS.map(p => {
+  ${PRODUCTS.filter(p => p.id !== 'instant-virgin').map(p => {
     const mainImg = p.image.startsWith('http') ? p.image : `${BASE_URL}${p.image.startsWith('/') ? p.image : `/${p.image}`}`;
     const additionalImgs = Array.from(new Set((p.supportImages || []).filter(img => img && img !== p.image)))
       .slice(0, 10)
       .map(img => `    <g:additional_image_link>${encodeURI(img.startsWith('http') ? img : `${BASE_URL}${img.startsWith('/') ? img : `/${img}`}`)}</g:additional_image_link>`)
       .join('\n');
     const productTitle = GOOGLE_TITLES_BY_PRODUCT_ID[p.id] || p.googleTitle || p.name;
-    const isAdultProduct = p.id === 'instant-virgin';
-    const googleCategory = p.id === 'instant-virgin'
-      ? 'Health & Beauty > Personal Care > Cosmetics > Skin Care'
-      : (p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition');
+    const googleCategory = p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
     return `
   <item>
     <g:id><![CDATA[${p.masterId}]]></g:id>
@@ -260,7 +257,6 @@ ${additionalImgs ? `${additionalImgs}\n` : ''}    <g:condition><![CDATA[${p.cond
     <g:brand><![CDATA[Azenza]]></g:brand>
     <g:mpn><![CDATA[${p.masterId}]]></g:mpn>
     <g:identifier_exists><![CDATA[no]]></g:identifier_exists>
-    <g:adult><![CDATA[${isAdultProduct ? 'yes' : 'no'}]]></g:adult>
     <g:shipping>
       <g:country><![CDATA[CO]]></g:country>
       <g:service><![CDATA[Envío Gratis]]></g:service>
