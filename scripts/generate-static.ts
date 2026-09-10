@@ -106,16 +106,84 @@ async function generate() {
             console.warn(`  - ADVERTENCIA: No se encontró el div root en index.html`);
         }
 
+        // Obtener metadatos específicos de la ruta para asegurar meta description, title y canonical en SSG
+        let pageTitle = helmet?.title?.toString() || '';
+        let pageDesc = '';
+        let pageOgImage = '';
+        let pageCanonical = `${BASE_URL}${route.path === '/' ? '/' : route.path}`;
+
+        if (route.path === '/') {
+            pageTitle = pageTitle || '<title>Combos y Ofertas en Productos Naturales Originales | Azenza</title>';
+            pageDesc = 'Aprovecha nuestras ofertas y combos exclusivos en productos naturales originales. Soluciones naturales para colon irritable, hígado graso, dolor articular y control de peso. Envío gratis y pago contra entrega en Colombia.';
+        } else if (route.path.startsWith('/producto/')) {
+            const prodId = route.path.replace('/producto/', '');
+            const prod = PRODUCTS.find(p => p.id === prodId);
+            if (prod) {
+                pageTitle = pageTitle || `<title>${prod.seoTitle || prod.name} | Azenza</title>`;
+                pageDesc = prod.seoDescription || (prod.description ? prod.description.split('.')[0] + '.' : '');
+                pageOgImage = prod.image;
+            }
+        } else if (route.path.startsWith('/combo/')) {
+            const promoId = route.path.replace('/combo/', '');
+            const promo = [COMBO_OF_THE_MONTH, ...PROMOTIONS].find(p => p.id === promoId);
+            if (promo) {
+                pageTitle = pageTitle || `<title>${promo.seoTitle || promo.name} | Azenza</title>`;
+                pageDesc = promo.seoDescription || (promo.description ? promo.description.split('.')[0] + '.' : '');
+                pageOgImage = promo.image;
+            }
+        } else if (route.path.startsWith('/categoria/')) {
+            const catId = route.path.replace('/categoria/', '');
+            const cat = CATEGORIES.find(c => c.id === catId);
+            if (cat) {
+                pageTitle = pageTitle || `<title>${cat.seoTitle || cat.name} | Azenza</title>`;
+                pageDesc = cat.seoDescription || `${cat.description} Encuentra soluciones naturales para tu bienestar con productos originales.`;
+            }
+        } else if (route.path === '/quienes-somos') {
+            pageTitle = pageTitle || '<title>Quiénes Somos | Azenza</title>';
+            pageDesc = 'Conoce la historia de AZENZA, nuestra misión y compromiso con la salud natural en Colombia.';
+        } else if (route.path === '/politica-privacidad') {
+            pageTitle = pageTitle || '<title>Política de Privacidad | Azenza</title>';
+            pageDesc = 'Política de tratamiento de datos personales de AZENZA. Tu privacidad es nuestra prioridad.';
+        } else if (route.path === '/politica-reembolso') {
+            pageTitle = pageTitle || '<title>Política de Reembolso | Azenza</title>';
+            pageDesc = 'Conoce nuestra política de reembolsos y derecho de retracto de AZENZA en Colombia.';
+        } else if (route.path === '/terminos-servicio') {
+            pageTitle = pageTitle || '<title>Términos del Servicio | Azenza</title>';
+            pageDesc = 'Conoce los Términos y Condiciones de Uso de la plataforma AZENZA en Colombia.';
+        } else if (route.path === '/condiciones-entrega') {
+            pageTitle = pageTitle || '<title>Condiciones de Entrega | Azenza</title>';
+            pageDesc = 'Información sobre tiempos de entrega, cobertura y método de pago contra entrega en Colombia.';
+        } else if (route.path === '/devoluciones-garantia') {
+            pageTitle = pageTitle || '<title>Devoluciones y Garantía | Azenza</title>';
+            pageDesc = 'Conoce nuestras políticas de garantía para productos dañados o insatisfacción.';
+        } else if (route.path === '/404') {
+            pageTitle = pageTitle || '<title>Página no encontrada | Azenza</title>';
+            pageDesc = 'La página solicitada no está disponible en Azenza.';
+        }
+
+        if (!pageTitle.startsWith('<title>')) {
+            pageTitle = `<title>${pageTitle || 'Azenza | Bienestar Natural Premium'}</title>`;
+        }
+
         // Limpieza de meta tags estáticos base de index.html para evitar duplicaciones en SSG
         html = html.replace(/<meta\s+[^>]*name=["']description["'][^>]*>/gi, '');
         html = html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>/gi, '');
         html = html.replace(/<meta\s+[^>]*property=["']og:[^"']+["'][^>]*>/gi, '');
 
         if (titleRegex.test(html)) {
-            html = html.replace(titleRegex, helmet?.title?.toString() || '<title>Azenza</title>');
+            html = html.replace(titleRegex, pageTitle);
         }
         
+        const fallbackMeta = `
+                <meta name="description" content="${pageDesc.replace(/"/g, '&quot;')}" />
+                <link rel="canonical" href="${pageCanonical}" />
+                <meta property="og:title" content="${pageTitle.replace(/<[^>]+>/g, '').replace(/"/g, '&quot;')}" />
+                <meta property="og:description" content="${pageDesc.replace(/"/g, '&quot;')}" />
+                <meta property="og:url" content="${pageCanonical}" />
+                ${pageOgImage ? `<meta property="og:image" content="${pageOgImage.startsWith('http') ? pageOgImage : `${BASE_URL}${pageOgImage}`}" />` : ''}`;
+
         html = html.replace(headRegex, `
+                ${fallbackMeta}
                 ${helmet?.meta?.toString() || ''}
                 ${helmet?.link?.toString() || ''}
                 ${helmet?.script?.toString() || ''}
