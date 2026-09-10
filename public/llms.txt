@@ -1,0 +1,596 @@
+# Azenza - Tienda Oficial Colombia
+> Suplementos naturales, fitoterapia y cuidado personal con certificación INVIMA oficial en Colombia.
+> Sitio Web: https://azenza.com.co
+> Cobertura: Envíos a todo el territorio nacional de Colombia con opción de pago contraentrega y envío gratis.
+> Soporte Oficial / WhatsApp: +57 302 410 2568
+
+## Sobre Azenza
+Azenza es una marca colombiana especializada en soluciones de bienestar orgánicas y suplementos nutricionales de grado premium, formulados con ingredientes botánicos y respaldados por registros sanitarios INVIMA para garantizar seguridad, pureza y eficacia.
+
+---
+
+## Categorías de Productos
+### Salud y Bienestar
+- **URL:** https://azenza.com.co/categoria/salud-bienestar
+- **Descripción:** Encuentra el equilibrio perfecto para tu cuerpo con nuestra selección de suplementos naturales y vitaminas de alta calidad.
+
+### Belleza Integral
+- **URL:** https://azenza.com.co/categoria/belleza-integral
+- **Descripción:** Potencia tu belleza desde el interior con productos diseñados para nutrir tu piel, fortalecer tu cabello y revitalizar tu apariencia.
+
+### Salud Sexual
+- **URL:** https://azenza.com.co/categoria/salud-sexual
+- **Descripción:** Mejora tu vitalidad y rendimiento con soluciones naturales diseñadas para tu bienestar íntimo y energía diaria.
+
+### Combos
+- **URL:** https://azenza.com.co/categoria/combos
+- **Descripción:** Nuestra selección exclusiva de combos especialmente diseñados para multiplicar tu salud integral, belleza y vitalidad al mejor precio y con ahorro garantizado.
+
+## Catálogo de Productos Individuales
+
+### RtaFull
+- **URL:** https://azenza.com.co/producto/rtafull
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** PSA-000932-2017
+- **Presentación:** Líquido
+- **Descripción:** Apoyo Hepático y Desintoxicación Digestiva Natural.
+- **Beneficios Clave:**
+  * Ayuda en la depuración natural de hígado y riñones de toxinas acumuladas
+  * Favorece la reducción de la pesadez y el malestar tras comer
+  * Estimula el bienestar digestivo para un abdomen más ligero
+  * Fórmula líquida concentrada de absorción ultra-rápida y segura
+
+### Coliplus
+- **URL:** https://azenza.com.co/producto/coliplus
+- **Precio:** $75.900 COP
+- **Registro Sanitario INVIMA:** NSA-0012423-2022
+- **Presentación:** Polvo
+- **Descripción:** Renovación Intestinal y Equilibrio Digestivo Natural.
+- **Beneficios Clave:**
+  * Regula el tránsito intestinal combatiendo el estreñimiento de raíz
+  * Favorece el confort del colon y reduce la pesadez abdominal de forma estable
+  * Fórmula apta para diabéticos, libre de azúcares y calorías extras
+  * Nutre la flora intestinal con superalimentos como la espirulina
+
+### Colágeno
+- **URL:** https://azenza.com.co/producto/colageno
+- **Precio:** $85.000 COP
+- **Registro Sanitario INVIMA:** RSA-0026265-2023
+- **Presentación:** Polvo
+- **Descripción:** Regeneración Estructural y Vitalidad Osteomuscular.
+- **Beneficios Clave:**
+  * Fortalece la estructura ósea y protege las articulaciones del desgaste
+  * Mejora notablemente la elasticidad de la piel y reduce la flacidez
+  * Promueve una relajación muscular profunda y un sueño reparador
+  * Sabor totalmente neutro, ideal para mezclar con café, jugos o agua
+
+### Resvisfactor
+- **URL:** https://azenza.com.co/producto/resvis
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** RSAD05i27915
+- **Presentación:** Polvo
+- **Descripción:** Favorece Tu Sistema Inmunológico y Vitalidad Celular Avanzada.
+- **Beneficios Clave:**
+  * Eleva significativamente las defensas naturales y la respuesta inmune
+  * Aporta una sensación de vigor y vitalidad constante durante el día
+  * Ideal para la protección familiar contra virus, gripes y bacterias
+  * Acelera la recuperación física y protege las células del estrés oxidativo
+
+### Booster Lion
+- **URL:** https://azenza.com.co/producto/booster-lion
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** IRSA-0021928-2022
+- **Presentación:** Polvo
+- **Descripción:** Soporte Cognitivo, Memoria y Enfoque Natural con Melena de León.
+- **Beneficios Clave:**
+  * Contiene Melena de León para optimizar la memoria, concentración y salud cognitiva
+  * Aporta vitaminas y minerales esenciales que fortalecen activamente tu sistema inmune
+  * Fuente de proteína de suero lácteo que favorece la energía limpia y mantenimiento muscular
+  * Contribuye al bienestar digestivo y regenerador gracias a los betaglucanos premium
+
+### Termoactiva
+- **URL:** https://azenza.com.co/producto/locion
+- **Precio:** $59.900 COP
+- **Registro Sanitario INVIMA:** NSOC74321-16CO
+- **Presentación:** Crema / Gel
+- **Descripción:** Alivio Muscular Termoactivo y Recuperación Profunda.
+- **Beneficios Clave:**
+  * Alivio casi instantáneo de dolores musculares, golpes y calambres
+  * Efecto calor profundo que relaja tensiones y desinflama tejidos
+  * Fórmula botánica con extractos de alta pureza y absorción rápida
+  * Ideal para masajes de recuperación deportiva y relajación diaria
+
+### C-Lagen
+- **URL:** https://azenza.com.co/producto/c-lagen
+- **Precio:** $93.500 COP
+- **Registro Sanitario INVIMA:** RSA-0032379-2024
+- **Presentación:** Polvo
+- **Descripción:** Regeneración Articular con Vitalidad Marina.
+- **Beneficios Clave:**
+  * Máxima biodisponibilidad gracias a su origen marino de alta pureza
+  * Protege y regenera cartílagos desgastados en rodillas y caderas
+  * Fortalece la densidad ósea con su aporte de magnesio y minerales
+  * Mejora notablemente la flexibilidad de tendones y ligamentos
+
+### Citramix
+- **URL:** https://azenza.com.co/producto/citramix
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** SD2023-0004812
+- **Descripción:** Equilibrio Neuro-Muscular y Relax Profundo.
+- **Beneficios Clave:**
+  * Relaja profundamente los músculos evitando calambres y rigidez
+  * Combate el agotamiento nervioso y mejora la calidad del descanso
+  * Promueve una digestión equilibrada y libre de pesadez abdominal diaria
+  * Aporta un complejo vitamínico completo para la vitalidad celular
+
+### Coffee + Colágeno
+- **URL:** https://azenza.com.co/producto/coffee-colageno
+- **Precio:** $75.900 COP
+- **Registro Sanitario INVIMA:** RSA-0010130-2020
+- **Descripción:** Ritual de Belleza y Vitalidad Diaria Especializada.
+- **Beneficios Clave:**
+  * Fortalece la fibra capilar y las uñas desde las capas internas
+  * Promueve una piel luminosa y elástica gracias al colágeno puro
+  * Aporta energía limpia y sostenida con los beneficios del coco
+  * Contiene el 50% del requerimiento diario de vitaminas clave
+
+### Creatina 100%
+- **URL:** https://azenza.com.co/producto/creatina
+- **Precio:** $105.000 COP
+- **Registro Sanitario INVIMA:** SD2014-0003204
+- **Descripción:** Poder Muscular y Agudeza Mental Superior.
+- **Beneficios Clave:**
+  * Aumenta la fuerza explosiva y el rendimiento físico de alta intensidad
+  * Mejora significativamente la memoria, el enfoque y la agudeza mental
+  * Acelera la recuperación muscular post-entrenamiento evitando el catabolismo
+  * Fórmula 100% pura monohidratada, sin rellenos ni azúcares añadidos
+
+### Iprossmen
+- **URL:** https://azenza.com.co/producto/iprossmen
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** SD2015-0003504
+- **Descripción:** Salud Masculina Integral y Apoyo al Bienestar Urinario.
+- **Beneficios Clave:**
+  * Protege y reconforta la salud de la próstata de manera preventiva
+  * Mejora notablemente la función urinaria y reduce la inflamación pélvica
+  * Aporta una potente carga de antioxidantes específicos para el hombre
+  * Favorece el equilibrio hormonal y mantiene los niveles de vigor elevados
+
+### KDS 10
+- **URL:** https://azenza.com.co/producto/kds-10
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** RSA-0025607-2023
+- **Descripción:** Suplemento Vitamínico y Energía Vital Familiar.
+- **Beneficios Clave:**
+  * Proporciona el 100% de las vitaminas y minerales esenciales diarios
+  * Fortalece drásticamente el sistema inmunológico de niños y adultos
+  * Ayuda a reducir el cansancio físico recurrente y mejora el enfoque mental
+  * Delicioso sabor y base de coco que asegura una digestión ligera
+
+### Liofhim
+- **URL:** https://azenza.com.co/producto/liofhim
+- **Precio:** $75.900 COP
+- **Registro Sanitario INVIMA:** RSA-0020527-2022
+- **Presentación:** Líquido
+- **Descripción:** Ritual de Descanso Nocturno y Sueño Reparador.
+- **Beneficios Clave:**
+  * Facilita el inicio del sueño profundo de forma rápida y natural
+  * Disminuye los despertares nocturnos logrando un descanso ininterrumpido
+  * Reduce significativamente el estrés y la tensión acumulada del día
+  * Despierta con la mente lúcida y energía renovada sin efectos secundarios
+
+### Liteplex
+- **URL:** https://azenza.com.co/producto/liteplex
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** PSA-000932-2017
+- **Presentación:** Líquido
+- **Descripción:** Bienestar Digestivo y Ligereza Metabólica.
+- **Beneficios Clave:**
+  * Alivio casi inmediato contra la pesadez estomacal y la acidez
+  * Promueve una digestión ágil y previene la hinchazón abdominal
+  * Fórmula líquida concentrada de origen botánico y rápida absorción
+  * Endulzado con estevia, apto para quienes cuidan su figura y salud
+
+### Maxlite
+- **URL:** https://azenza.com.co/producto/maxlite-colageno
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** SD2017-0004051
+- **Presentación:** Polvo
+- **Descripción:** Nutrición Estructural y Vitalidad Osteoarticular.
+- **Beneficios Clave:**
+  * Fortalece la estructura ósea y protege las articulaciones del desgaste diario
+  * Mejora visiblemente la firmeza de la piel y la salud de cabello y uñas
+  * Aporta una carga de energía natural gracias a los superalimentos como la quinua
+  * Potente acción antioxidante preventiva con Resveratrol y Omega 3-6-9
+
+### Megamac
+- **URL:** https://azenza.com.co/producto/megamac
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** RSA-001291-2016
+- **Presentación:** Polvo
+- **Descripción:** Potencia Ancestral y Energía Vital Extrema.
+- **Beneficios Clave:**
+  * Efecto revitalizante inmediato contra el cansancio físico y mental crónico
+  * Aumenta significativamente el rendimiento en actividades de alta exigencia
+  * Fortalece las defensas naturales y aporta minerales críticos para la salud
+  * Ideal para recuperar el vigor tras largas jornadas de trabajo o entrenamiento
+
+### Resveratrol
+- **URL:** https://azenza.com.co/producto/resveratrol
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** SD2014-0003215
+- **Presentación:** Polvo
+- **Descripción:** Protección Celular y Ritual de Juventud Longevital.
+- **Beneficios Clave:**
+  * Potente acción antioxidante que combate el envejecimiento celular prematuro
+  * Restituye la firmeza y elasticidad de la piel con 10,000 mg de colágeno
+  * Protege el sistema cardiovascular y cerebral del estrés oxidativo diario
+  * Fórmula líquida concentrada para una absorción inmediata y efectiva
+
+### Haydar (Bebida Energizante)
+- **URL:** https://azenza.com.co/producto/haydar
+- **Precio:** $73.500 COP
+- **Registro Sanitario INVIMA:** RSA-3599-2025
+- **Presentación:** Bebida
+- **Descripción:** Energía Explosiva y Vitalidad en un Solo Sorbo.
+- **Beneficios Clave:**
+  * Impulso de ánimo y fuerza física con ingredientes botánicos
+  * Maximiza el enfoque mental y la concentración durante horas
+  * Delicioso y refrescante sabor a mora azul sin exceso de gas
+  * Formato práctico de 240ml ideal para antes de la actividad física
+
+### Tyruss Full
+- **URL:** https://azenza.com.co/producto/tyruss-full
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** RSA-0021928-2022
+- **Presentación:** Polvo
+- **Descripción:** Nutrición Verde Avanzada y Apoyo al Equilibrio Femenino.
+- **Beneficios Clave:**
+  * Depura y desintoxica el organismo de forma suave y efectiva
+  * Promueve un vientre plano al mejorar el tránsito intestinal
+  * Aporte significativo de proteínas vegetales y Omega 3 esencial
+  * Oxigena las células y combate el cansancio crónico naturalmente
+
+### Zafir Bebida Energizante
+- **URL:** https://azenza.com.co/producto/zafir
+- **Precio:** $73.500 COP
+- **Registro Sanitario INVIMA:** RSA-3599-2025
+- **Presentación:** Líquido
+- **Descripción:** Energía Natural Inmediata y Enfoque Mental Superior.
+- **Beneficios Clave:**
+  * Rendimiento físico optimizado para actividades de alta exigencia
+  * Mantiene la alerta mental constante sin generar nerviosismo o taquicardia
+  * Aporte de vitaminas hidrosolubles y Zinc para el sistema inmune
+  * Delicioso sabor frutal sin necesidad de aditivos químicos agresivos
+
+### Guanda Mix
+- **URL:** https://azenza.com.co/producto/guanda-mix
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** IRSA-0245-2025
+- **Presentación:** Polvo
+- **Descripción:** Apoyo Digestivo, Energía Diaria y Sensación de Frescura.
+- **Beneficios Clave:**
+  * Aporta vitaminas y minerales esenciales que completan y fortalecen la nutrición diaria
+  * Contiene maca, reconocida por su gran capacidad para favorecer la energía física y mental
+  * Rico en hierbas aromáticas seleccionadas que alivian la pesadez y optimizan la digestión
+  * Incluye flor de jamaica y magnesio (citrato y bisglicinato) para un balance celular completo
+
+### +NAD
+- **URL:** https://azenza.com.co/producto/nad-1
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** 2018DM-0018869
+- **Presentación:** Polvo
+- **Descripción:** Soporte Avanzado para la Vitalidad y el Bienestar Celular.
+- **Beneficios Clave:**
+  * Apoyo en la protección celular avanzada contra agentes oxidantes
+  * Aumento significativo en la producción de energía y claridad mental
+  * Digestión óptima y absorción rápida gracias a su base de coco
+  * Fortalece la respuesta inmunológica ante desafíos del entorno
+
+### Titan Coffee
+- **URL:** https://azenza.com.co/producto/titan-coffee
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** PSA-000982-2018
+- **Presentación:** Polvo
+- **Descripción:** Café de Alto Rendimiento para una Energía Inagotable.
+- **Beneficios Clave:**
+  * Desayuno de alto rendimiento para días de extrema exigencia física
+  * Combate el agotamiento laboral y mejora la agudeza mental diaria
+  * Totalmente libre de lácteos con una base nutritiva de crema de coco
+  * Energía prolongada sin generar picos de ansiedad o nerviosismo
+
+### Hemocream
+- **URL:** https://azenza.com.co/producto/hemocream
+- **Precio:** $59.900 COP
+- **Registro Sanitario INVIMA:** NSOC15678-23CO
+- **Presentación:** Crema
+- **Descripción:** Cuidado Botánico Avanzado en Zonas Sensibles.
+- **Beneficios Clave:**
+  * Calma de forma inmediata el ardor y la sensación de pesadez local
+  * Favorece la microcirculación gracias al extracto de Castaño de Indias
+  * Facilita el tránsito intestinal y reduce la fricción durante la evacuación
+  * Favorece el bienestar y reconforta los tejidos sensibles
+
+### Ashwagandha
+- **URL:** https://azenza.com.co/producto/ashwagandha
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** NSA-2948-2026
+- **Presentación:** Capsulas Blandas
+- **Descripción:** Equilibrio Emocional, Alivio del Estrés y Descanso Reparador.
+- **Beneficios Clave:**
+  * Ayuda a regular los niveles de ansiedad y aliviar el estrés
+  * Promueve un descanso profundo, reparador y combate el insomnio
+  * Favorece el enfoque mental, la concentración y la claridad cognitiva
+  * Apoya el sistema inmunológico y la vitalidad física general
+
+### Resveratrol y Vitamina B3 (NAD)
+- **URL:** https://azenza.com.co/producto/resveratrol-nad
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** NSA-2948-2026
+- **Presentación:** Capsulas Blandas
+- **Descripción:** Energía y vitalidad Celular, Protección Antienvejecimiento.
+- **Beneficios Clave:**
+  * Apoya la producción de energía celular y combate la fatiga
+  * Potente acción antioxidante contra el envejecimiento de las células
+  * Ayuda a unificar el tono de la piel y devolverle su firmeza natural
+  * Favorece el bienestar cardiovascular y la microcirculación cerebral
+
+### Vinagre de Manzana
+- **URL:** https://azenza.com.co/producto/vinagre-manzana
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** NSA-2948-2026
+- **Presentación:** Capsulas Blandas
+- **Descripción:** Equilibrio Digestivo, Control de Ansiedad y Metabolismo Activo.
+- **Beneficios Clave:**
+  * Apoya el control de peso y disminuye la ansiedad por comer dulce
+  * Mejora la digestión y ayuda a reducir el reflujo y la pesadez
+  * Favorece la desintoxicación natural del colon y el abdomen plano
+  * Ayuda a mantener estables los niveles de azúcar en la sangre
+
+### Citrato de Potasio y Magnesio
+- **URL:** https://azenza.com.co/producto/citrato-potasio-magnesio
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** NSA-2948-2026
+- **Presentación:** Capsulas Blandas
+- **Descripción:** Equilibrio Electrolítico, Bienestar Muscular, Sistema Nervioso y Salud Cardiovascular.
+- **Beneficios Clave:**
+  * Combate eficazmente los calambres y la rigidez muscular de forma estable
+  * Ayuda a unificar el ritmo muscular cardíaco y apoya el sistema cardiovascular
+  * Favorece el pH del organismo, reduciendo la retención de líquidos
+  * Optimiza la función del sistema nervioso y promueve la relajación
+
+### Orégano
+- **URL:** https://azenza.com.co/producto/oregano
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** NSA-2948-2026
+- **Presentación:** Capsulas Blandas
+- **Descripción:** Inmunidad Avanzada, Antiparasitario y Balance Digestivo.
+- **Beneficios Clave:**
+  * Potente antiparasitario y antibacteriano natural
+  * Ayuda a combatir el envejecimiento prematuro
+  * Ayuda a combatir la cándida y apoya la salud de la microbiota
+  * Alivia la inflamación abdominal, los gases y pesadez digestiva
+
+### Bisglicinato de Magnesio
+- **URL:** https://azenza.com.co/producto/bisglicinato-magnesio
+- **Precio:** $69.900 COP
+- **Registro Sanitario INVIMA:** NSA-2948-2026
+- **Presentación:** Capsulas Blandas
+- **Descripción:** Relajación Profunda, Descanso Reparador y Alivio del Estrés.
+- **Beneficios Clave:**
+  * Promueve un sueño profundo, reparador y combate el insomnio crónico
+  * Alivia la tensión muscular acumulada, calambres y espasmos
+  * Disminuye el estrés, la ansiedad diaria y calma la mente activa
+  * Forma mineral quelada extremadamente gentil con el estómago (sin efecto laxante)
+
+### Eventone
+- **URL:** https://azenza.com.co/producto/eventone
+- **Precio:** $85.000 COP
+- **Registro Sanitario INVIMA:** NSOC90432-19CO
+- **Presentación:** Crema
+- **Descripción:** Brillo, Vitalidad y Tono Uniforme para tu Rostro.
+- **Beneficios Clave:**
+  * Unifica el tono de la piel y reduce manchas oscuras visibles
+  * Efecto relleno inmediato gracias al ácido hialurónico puro
+  * Regeneración profunda celular con Bio-Retinol sin irritación
+  * Diferencia notable en la luminosidad y textura del rostro
+
+### Golden Passion
+- **URL:** https://azenza.com.co/producto/golden-passion
+- **Precio:** $79.900 COP
+- **Registro Sanitario INVIMA:** NSOC35087-24CO
+- **Presentación:** Crema / Líquido
+- **Descripción:** Destello Dorado y Bronceado de Lujo sin Sol.
+- **Beneficios Clave:**
+  * Proporciona un bronceado canela natural y uniforme en pocas horas
+  * Protege y nutre la piel con una potente dosis de Vitamina E pura
+  * Evita los daños acumulativos causados por la radiación UV del sol
+  * Fórmula satinada que aporta una luminosidad sofisticada y no grasa
+
+### Hydrastrik
+- **URL:** https://azenza.com.co/producto/hydrastrik
+- **Precio:** $82.500 COP
+- **Registro Sanitario INVIMA:** NSOC20441-23CO
+- **Presentación:** Aceite
+- **Descripción:** Elásticidad y Nutrición Profunda Para Tu Piel.
+- **Beneficios Clave:**
+  * Previene eficazmente la formación de estrías al mejorar la elasticidad
+  * Nutrición profunda con óleos naturales de Almendra, Coco y Aguacate
+  * Mejora visiblemente la textura y firmeza en zonas críticas del cuerpo
+  * Fórmula de absorción inteligente ideal para masajes y rituales de cuidado
+
+### Miskinne
+- **URL:** https://azenza.com.co/producto/miskinne
+- **Precio:** $59.900 COP
+- **Registro Sanitario INVIMA:** NSOC85321-18CO
+- **Presentación:** Crema
+- **Descripción:** Perfeccionador Cutáneo y Escudo de Suavidad Calmante.
+- **Beneficios Clave:**
+  * Atenúa visiblemente manchas superficiales y empareja el tono de la piel
+  * Proporciona un alivio inmediato a pieles sensibles, secas o irritadas
+  * Enriquecida con Avena y Caléndula para una nutrición natural y suave
+  * Protege la dermis contra futuras alteraciones de tono y agresiones externas
+
+### Tónico Capilar
+- **URL:** https://azenza.com.co/producto/tonico-capilar
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** NSOC02559-20CO
+- **Presentación:** Líquido (Spray)
+- **Descripción:** Densificadora Capilar y Ritual de Crecimiento Avanzado.
+- **Beneficios Clave:**
+  * Detiene la caída excesiva y fortalece el cabello desde el folículo piloso
+  * Estimula el crecimiento rápido de nuevas hebras más gruesas y resistentes
+  * Puebla con eficacia zonas de baja densidad en el cuero cabelludo, barba y cejas
+  * Nutre profundamente la raíz con 16 extractos botánicos y Trichogen al 8%
+
+### Tufoff
+- **URL:** https://azenza.com.co/producto/tufoff
+- **Precio:** $85.000 COP
+- **Registro Sanitario INVIMA:** NSA-0009109-2020
+- **Presentación:** Dulce / Caramelo
+- **Descripción:** Refresca el aliento al instante con Ciencia Natural.
+- **Beneficios Clave:**
+  * Neutraliza el aliento a tabaco, alcohol y condimentos al contacto
+  * Protege la microbiota bucal gracias a su aporte de prebióticos (Inulina)
+  * Equilibra el pH de la boca reduciendo la acidez con bicarbonato
+  * Seguro para los dientes: Fórmula con eritritol, totalmente libre de azúcar
+
+### Tónico Capilar Folivance
+- **URL:** https://azenza.com.co/producto/tonico-capilar-folivance
+- **Precio:** $69.900 COP
+- **Presentación:** Líquido (Spray)
+- **Descripción:** Densificador Capilar y Ritual de Crecimiento Acelerado.
+- **Beneficios Clave:**
+  * Frena la caída del cabello de forma visible desde la segunda semana
+  * Estimula la fase de crecimiento activo (anágena) para nuevas hebras
+  * Engrosa y fortalece la fibra capilar reduciendo el quiebre y puntas abiertas
+  * Fórmula ligera en spray de rápida absorción que no deja el cabello grasoso
+
+### Shampoo Intensivo
+- **URL:** https://azenza.com.co/producto/shampoo-intensivo
+- **Precio:** $69.900 COP
+- **Presentación:** Líquido
+- **Descripción:** Limpieza Profunda, Control Grasa y Fortalecimiento Folicular.
+- **Beneficios Clave:**
+  * Limpia de manera profunda y regula el exceso de grasa en la raíz
+  * Previene la caída del cabello fortaleciendo la fibra capilar
+  * Fórmula profesional libre de sal y parabenos que protege el color
+  * Devuelve el brillo natural y aporta una sedosidad extraordinaria
+
+### Aceite Relajante
+- **URL:** https://azenza.com.co/producto/aceite-relajante
+- **Precio:** $69.900 COP
+- **Presentación:** Aceite
+- **Descripción:** Alivio de Tensiones, Masaje Terapéutico, Descanso Corporal, Fortalecimiento de la Piel.
+- **Beneficios Clave:**
+  * Disuelve el estrés y libera la rigidez de tus músculos
+  * Desliza suavemente sobre la piel facilitando masajes profundos
+  * Calma la pesadez muscular y promueve una óptima circulación
+  * Mejora la apariencia de la piel aportando nutrición y suavidad
+
+### Gel Frío Relajante
+- **URL:** https://azenza.com.co/producto/gel-frio-relajante
+- **Precio:** $59.900 COP
+- **Presentación:** Gel
+- **Descripción:** Efecto Criogénico, Alivio Muscular y Piernas Cansadas.
+- **Beneficios Clave:**
+  * Efecto frío criogénico inmediato que reduce la inflamación local
+  * Alivia de forma efectiva la pesadez y cansancio en piernas y pies
+  * Favorece la circulación sanguínea ideal para el cuidado de varices
+  * Relaja la tensión muscular tras el deporte o trabajo pesado
+
+### Akha (Crema Voluminizante)
+- **URL:** https://azenza.com.co/producto/akha
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** NSOC19282-23CO
+- **Presentación:** Crema
+- **Descripción:** Firmeza, Elasticidad y Vigor para tu Piel.
+- **Beneficios Clave:**
+  * Piel visiblemente más saludable, firme y tonificada
+  * Protección antioxidante avanzada contra el envejecimiento
+  * Absorción ultra-veloz sin dejar residuos grasos en la ropa
+  * Mejora la elasticidad y suavidad en las zonas aplicadas
+
+### Derman (Mascarilla Íntima)
+- **URL:** https://azenza.com.co/producto/derman
+- **Precio:** $89.900 COP
+- **Registro Sanitario INVIMA:** NSOC36162-24CO
+- **Presentación:** Crema
+- **Descripción:** Protección, Frescura y Equilibrio para tu Zona Íntima.
+- **Beneficios Clave:**
+  * Calma y regenera la piel post-depilación o afeitado
+  * Mantiene el equilibrio natural en zonas íntimas externas
+  * Previene de forma efectiva brotes, vellos encarnados e irritaciones
+  * Promueve el confort y la frescura diaria con aroma sutil
+
+### Instant Virgin (Gel Íntimo)
+- **URL:** https://azenza.com.co/producto/instant-virgin
+- **Precio:** $79.000 COP
+- **Registro Sanitario INVIMA:** 2021DM-0024065
+- **Presentación:** Gel / Crema
+- **Descripción:** Renovación, Firmeza y Plenitud Femenina.
+- **Beneficios Clave:**
+  * Brinda una sensación inmediata de mayor firmeza y tono genital
+  * Aumenta la sensibilidad y plenitud en los momentos de intimidad
+  * Hidratación profunda que previene la resequedad post-parto o hormonal
+  * Compatible con preservativos y todo tipo de métodos de barrera
+
+### Mammoth (Crema Voluminizante)
+- **URL:** https://azenza.com.co/producto/mamooth
+- **Precio:** $59.900 COP
+- **Registro Sanitario INVIMA:** NSOC19282-23CO
+- **Presentación:** Crema
+- **Descripción:** Firmeza, Elasticidad y Apariencia Saludable para tu Piel.
+- **Beneficios Clave:**
+  * Textura cutánea renovada, más suave y uniforme al tacto
+  * Elasticidad y nutrición profunda que previene la flacidez
+  * Fórmula profesional no grasa de rápida penetración dérmica
+  * Ideal para masajes en zonas que requieren mayor tono y vigor
+
+## Combos y Promociones Especiales
+
+### Combo Piel Radiante
+- **URL:** https://azenza.com.co/combo/promo-1
+- **Precio Oferta:** $104.850 COP
+- **Descripción:** El Combo Piel Radiante es un cuidado integral de doble acción diseñado para renovar la luminosidad, uniformidad y salud de tu piel desde el nivel celular hacia el exterior. Esta potente combinación une la eficacia de la crema Miskinne, que actúa directamente sobre la suavidad e hidratación externa con Caléndula y Avena, con el poder del Resveratrol líquido, que aporta una carga masiva de antioxidantes para proteger las células del daño oxidativo. Es el ritual perfecto para quienes buscan una piel visiblemente más joven, elástica y radiante, favoreciendo la vitalidad desde adentro.
+
+### Combo Belleza Eterna
+- **URL:** https://azenza.com.co/combo/promo-2
+- **Precio Oferta:** $123.675 COP
+- **Descripción:** Belleza Eterna es el sistema antiedad definitivo, formulado para combatir los signos del paso del tiempo y devolver la lozanía a tu rostro de manera integral. Este kit combina la acción avanzada del suero Eventone, enriquecido con Bio Retinol y Ácido Hialurónico para rellenar arrugas y unificar el tono cutáneo, con la regeneración celular profunda que proporciona el Resveratrol. Al nutrir tus células con colágeno hidrolizado y antioxidantes premium, este combo no solo mejora la apariencia externa, sino que fortalece la estructura de la dermis, uñas y cabello para una belleza que trasciende.
+
+### Combo Detox Digestivo
+- **URL:** https://azenza.com.co/combo/promo-3
+- **Precio Oferta:** $116.850 COP
+- **Descripción:** El Combo Detox Digestivo es un sistema integral de limpieza diseñado para restaurar el equilibrio de tu organismo y depurar tu cuerpo de toxinas acumuladas. Esta sinergia une la potencia de la fibra Coliplus, que regula el tránsito intestinal y reconforta el colon de manera natural, con la acción depurativa del concentrado Rtafull, que estimula la función desintoxicante del hígado y los riñones. Ideal para ayudar a reducir la pesadez, favorecer el tránsito y mejorar la digestión de las grasas, permitiéndote sentirte ligero, activo y renovado desde la primera semana.
+
+### Combo Control & Detox
+- **URL:** https://azenza.com.co/combo/promo-4
+- **Precio Oferta:** $119.850 COP
+- **Descripción:** Control & Detox es el sistema avanzado para quienes buscan recuperar su equilibrio metabólico y combatir la inflamación digestiva de forma natural. Este combo fusiona la acción reconfortante de Liteplex, ideal para equilibrar la flora y reducir la pesadez estomacal, con la potencia depurativa de Rtafull, que actúa directamente en la limpieza hepática para optimizar el procesamiento de nutrientes. Es la solución perfecta para deshinchar el cuerpo, mejorar la absorción de alimentos y potenciar tu bienestar digestivo con una fórmula balanceada y segura.
+
+### Combo Protección Total
+- **URL:** https://azenza.com.co/combo/promo-5
+- **Precio Oferta:** $123.675 COP
+- **Descripción:** Protección Total es el dúo esencial para quienes priorizan la higiene profunda y la pureza de su organismo. Este combo combina la innovación de Tufoff, dulces naturales sin azúcar que neutralizan olores y refrescan el aliento instantáneamente, con la capacidad purificadora de Rtafull, que desintoxica los órganos internos encargados de filtrar impurezas. Juntos, crean una barrera de protección que se refleja en una sensación de frescura total, depurando toxinas y promoviendo un aliento puro desde el interior del cuerpo.
+
+### Combo Alivio Muscular
+- **URL:** https://azenza.com.co/combo/promo-6
+- **Precio Oferta:** $123.675 COP
+- **Descripción:** Alivio Muscular es el sistema integral definitivo para el cuidado de tu cuerpo activo, combinando alivio externo reconfortante con nutrición interna de alta calidad. Este combo une la acción de la Loción Termoactiva, que proporciona calor localizado para relajar tensiones y calmar molestias musculares, con el Colágeno con Citrato de Magnesio, que regenera los tejidos conectivos y mejora la salud de articulaciones y huesos. Es el aliado perfecto para recuperar la movilidad, prevenir el desgaste y disfrutar de cada movimiento con total libertad.
+
+### Combo Vitalidad & Limpieza
+- **URL:** https://azenza.com.co/combo/promo-8
+- **Precio Oferta:** $127.350 COP
+- **Descripción:** Vitalidad & Limpieza es el sistema integral de renovación diseñado para purificar tu cuerpo mientras recuperas tu fuerza vital de forma armoniosa. Este combo une el poder de Tyruss Full, un superalimento verde que oxigena tu organismo y nutre tu sangre con clorofila y algas, con la eficacia depurativa de Rtafull, que facilita la eliminación de impurezas hepáticas y renales. Es la combinación balanceada ideal para desinflamar el abdomen, mejorar la energía diaria y permitir que tu cuerpo funcione con la ligereza y pureza que merece.
+
+### Inmunidad Dual
+- **URL:** https://azenza.com.co/combo/promo-9
+- **Precio Oferta:** $129.900 COP
+- **Descripción:** Inmunidad Dual es el sistema de protección definitiva, diseñado científicamente para fortalecer las defensas naturales y optimizar la salud intestinal de manera simultánea. Este combo une la nutrición de alto impacto de Resvisfactor, que aprovecha el calostro bovino y el hongo shiitake para blindar el sistema inmune, con la acción depurativa de Coliplus, que garantiza un colon limpio y un tránsito intestinal regular. Al trabajar en conjunto, ayudan a reducir la pesadez abdominal y permiten que el organismo absorba con eficiencia los nutrientes esenciales para una vida vital.
+
+## Políticas Comerciales y Logística
+- **Envío:** Envío gratuito a nivel nacional en Colombia (1 a 3 días hábiles).
+- **Formas de Pago:** Pago contraentrega (paga al recibir en efectivo) y transferencias verificadas.
+- **Garantía y Devoluciones:** 3 días de satisfacción y garantía de integridad de producto.
+- **Contacto y Atención al Cliente:** WhatsApp oficial https://wa.me/573024102568 (+57 302 410 2568).

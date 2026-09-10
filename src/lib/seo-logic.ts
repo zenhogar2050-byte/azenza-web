@@ -16,17 +16,25 @@ export const generateSchemaGraph = (params: {
 
     const graph: any[] = [];
 
-    // 1. Entidad WebSite (Global)
+    // 1. Entidad WebSite (Global con SearchAction para Sitelinks de Google)
     graph.push({
         "@type": "WebSite",
         "@id": `${BASE_URL}/#website`,
         "url": BASE_URL,
         "name": "Azenza",
         "publisher": { "@id": `${BASE_URL}/#organization` },
-        "inLanguage": "es-CO"
+        "inLanguage": "es-CO",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${BASE_URL}/?q={search_term_string}`
+            },
+            "query-input": "required name=search_term_string"
+        }
     });
 
-    // 2. Entidad Organization (Global)
+    // 2. Entidad Organization (Global con canal de soporte oficial)
     graph.push({
         "@type": "Organization",
         "@id": `${BASE_URL}/#organization`,
@@ -42,7 +50,15 @@ export const generateSchemaGraph = (params: {
             "height": 512,
             "caption": "Azenza"
         },
-        "image": { "@id": `${BASE_URL}/#logo` }
+        "image": { "@id": `${BASE_URL}/#logo` },
+        "contactPoint": [{
+            "@type": "ContactPoint",
+            "telephone": "+57-302-410-2568",
+            "contactType": "customer service",
+            "contactOption": "TollFree",
+            "areaServed": "CO",
+            "availableLanguage": ["es"]
+        }]
     });
 
     // 3. Entidad WebPage (Específica de la URL)
@@ -244,13 +260,8 @@ export const generateSchemaGraph = (params: {
                 return {
                     "@type": "ListItem",
                     "position": idx + 1,
-                    "item": {
-                        "@type": "Product",
-                        "url": prodUrl,
-                        "name": prod.name,
-                        "image": prod.image?.startsWith('http') ? prod.image : `${BASE_URL}${prod.image || ''}`,
-                        "description": prod.shortDescription || prod.description
-                    }
+                    "name": prod.name,
+                    "url": prodUrl
                 };
             })
         };
