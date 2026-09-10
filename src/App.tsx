@@ -21,6 +21,7 @@ function SEOCleaner() {
 function PageTracker() {
   const { pathname } = useLocation();
   useEffect(() => {
+    if (pathname.startsWith('/admin')) return;
     track('PageView');
   }, [pathname]);
   return null;
