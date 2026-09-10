@@ -198,6 +198,7 @@ export const generateSchemaGraph = (params: {
                 "priceCurrency": "COP",
                 "itemCondition": getSchemaCondition(productData.condition),
                 "availability": "https://schema.org/InStock",
+                "validFrom": `${currentYear}-01-01`,
                 "priceValidUntil": dynamicPriceValidUntil,
                 "url": fullUrl,
                 "price": lowPriceClean,
