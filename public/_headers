@@ -1,0 +1,36 @@
+# Cloudflare Pages Custom Headers for Cache & Performance Optimization
+
+# 1. Static Assets with Hash (Vite bundle output) - 1 Year Inmutable Cache
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# 2. Images, Icons, Favicons, WebP - 1 Month Cache
+/assets/products/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/assets/combos/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/assets/logo/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/assets/categories/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/assets/partners/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# 3. HTML Documents - Cache at Edge (Cloudflare CDN) with revalidation
+/*.html
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=3600
+  X-Content-Type-Options: nosniff
+/
+  Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=3600
+  X-Content-Type-Options: nosniff
+
+# 4. Sitemaps, Robots and Feeds
+/sitemap.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400
+/robots.txt
+  Cache-Control: public, max-age=86400
+/merchant-feed.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400
+/llms.txt
+  Cache-Control: public, max-age=86400
