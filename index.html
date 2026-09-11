@@ -34,7 +34,7 @@
 
     <!-- Preload Critical Assets (LCP Candidates) -->
     <link rel="preload" href="/assets/logo/logo-icon.webp" as="image" type="image/webp">
-    <link rel="preload" href="/assets/combos/combo-futbolero.webp" as="image" type="image/webp">
+    <link rel="preload" href="/assets/products/Titancoffee.webp" as="image" type="image/webp">
     
     <!-- Google Fonts with display=swap for better FCP -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -42,37 +42,24 @@
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     </noscript>
 
-    <!-- Google Tag Manager & Analytics Exclusion for Admin -->
-    <script>
-      (function() {
-        var isAdmin = window.location.pathname.indexOf('/admin') === 0;
-        if (isAdmin) {
-          // Desactivar tracking en panel administrativo
-          window['ga-disable-G-ZX2FWC4PV6'] = true;
-          return;
-        }
+    <script type="text/javascript">
+      // Ultra-Optimized Delayed Loading of Third-Party Tracking & Widgets (Improves Mobile FCP/LCP/TBT)
+      function loadThirdParty() {
+        // Excluir panel de administración de rastreadores y analíticas
+        if (window.location.pathname.indexOf('/admin') === 0) return;
 
-        // Google Tag Manager
+        // Only load if not already loaded
+        if (window.scriptsLoaded) return;
+        window.scriptsLoaded = true;
+
+        // 1. Google Tag Manager
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-KFBZV838');
-      })();
-    </script>
-    <!-- End Google Tag Manager -->
 
-    <script type="text/javascript">
-      // Delayed Loading of Heavy Scripts to prioritize LCP/FCP
-      function loadThirdParty() {
-        // Excluir panel de administración de rastreadores y analíticas
-        if (window.location.pathname.indexOf('/admin') === 0) return;
-
-        // Only load if not already loaded and after user interaction or timeout
-        if (window.scriptsLoaded) return;
-        window.scriptsLoaded = true;
-
-        // Google Analytics 4 (gtag.js)
+        // 2. Google Analytics 4 (gtag.js)
         var ga = document.createElement('script');
         ga.async = true;
         ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZX2FWC4PV6';
@@ -83,7 +70,7 @@
         gtag('js', new Date());
         gtag('config', 'G-ZX2FWC4PV6');
 
-        // Facebook Pixel
+        // 3. Facebook Pixel
         if (!window.fbq) {
           !(function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -94,29 +81,44 @@
           fbq('track', 'PageView');
         }
 
-        // Google Merchant Badge Widget
-        var mw = document.createElement('script');
-        mw.id = 'merchantWidgetScript';
-        mw.src = 'https://www.gstatic.com/shopping/merchant/merchantwidget.js';
-        mw.defer = true;
-        mw.addEventListener('load', function () {
-          if (window.merchantwidget) {
-            window.merchantwidget.start({
-              merchant_id: 5781084661,
-              position: 'BOTTOM_LEFT',
-              region: 'CO'
-            });
-          }
-        });
-        document.head.appendChild(mw);
+        // 4. Google Merchant Badge Widget (Deferred with idle callback)
+        var loadMerchant = function() {
+          var mw = document.createElement('script');
+          mw.id = 'merchantWidgetScript';
+          mw.src = 'https://www.gstatic.com/shopping/merchant/merchantwidget.js';
+          mw.defer = true;
+          mw.addEventListener('load', function () {
+            if (window.merchantwidget) {
+              window.merchantwidget.start({
+                merchant_id: 5781084661,
+                position: 'BOTTOM_LEFT',
+                region: 'CO'
+              });
+            }
+          });
+          document.head.appendChild(mw);
+        };
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadMerchant, { timeout: 4000 });
+        } else {
+          setTimeout(loadMerchant, 2000);
+        }
       }
 
-      window.addEventListener('load', function() {
-        setTimeout(loadThirdParty, 3500); // Priority to visual elements
-      });
+      // Defer third-party scripts until user interacts or idle time
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(function() {
+          setTimeout(loadThirdParty, 4000);
+        }, { timeout: 6000 });
+      } else {
+        window.addEventListener('load', function() {
+          setTimeout(loadThirdParty, 4500);
+        });
+      }
 
-      // Also load on first interaction if faster
-      ['mousedown', 'touchstart', 'scroll', 'keydown'].forEach(function(e) {
+      // Instant activation on user interaction
+      ['mousedown', 'touchstart', 'scroll', 'keydown', 'wheel'].forEach(function(e) {
         window.addEventListener(e, loadThirdParty, { once: true, passive: true });
       });
 

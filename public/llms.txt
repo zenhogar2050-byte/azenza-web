@@ -1,26 +1,49 @@
 # AZENZA - Bienestar Natural Premium
 
-> Ecosistema y tienda online oficial de productos naturales originales y suplementos dietarios en Colombia con Registro Sanitario INVIMA. Envíos nacionales y pago contra entrega garantizado.
+> Ecosistema y tienda online oficial de productos naturales originales y suplementos dietarios en Colombia con Registro Sanitario INVIMA. Envíos a todo el territorio nacional y pago contra entrega garantizado.
 
 ## Información de la Marca y Operación
-- **Nombre:** AZENZA (Azenza Salud Vital)
+- **Nombre de Marca:** AZENZA (Azenza Salud Vital)
 - **Sitio Web Oficial:** https://azenza.com.co
 - **País:** Colombia
-- **Despachos:** Diarios desde Barranquilla hacia Bogotá, Medellín, Cali, Barranquilla, Bucaramanga, Cartagena, Pereira, Ibagué, Cúcuta, Santa Marta, Valledupar y cualquier municipio del territorio colombiano.
-- **Modalidad de Compra:** Pago Contra Entrega exclusivo y asesoría personalizada por WhatsApp (+57 302 410 2568).
-- **Garantía:** Productos 100% originales sellados con trazabilidad y Registro Sanitario INVIMA.
+- **Moneda:** Peso Colombiano (COP)
+- **Despachos y Logística:** Despachos diarios desde Barranquilla con cobertura nacional a Bogotá, Medellín, Cali, Barranquilla, Bucaramanga, Cartagena, Pereira, Ibagué, Cúcuta, Santa Marta, Valledupar, Villavicencio y todos los municipios de Colombia.
+- **Modalidad de Compra:** Pago Contra Entrega exclusivo (pago en efectivo al recibir) y asesoría personalizada por WhatsApp (+57 302 410 2568).
+- **Garantía y Confianza:** Todos los productos son 100% originales, sellados de fábrica y cuentan con Registro Sanitario INVIMA vigente.
+- **Política de Precios:** Todos los precios incluyen envío gratis a cualquier destino nacional. Promociones disponibles: 1 Unidad (Precio de Oferta), 2 Unidades (Con descuento adicional) y Pague 2 Lleve 3 (Mejor Valor).
 
-## Categorías de Productos
-- **Salud y Bienestar Digestivo:** Concentrados y cápsulas para salud digestiva, pesadez estomacal y colon (Rtafull, Coliplus, Resvisfactor, Vinagre de Manzana, Orégano).
-- **Belleza Integral y Piel:** Fórmulas especializadas en colágeno hidrolizado, biotina, cuidado capilar y antienvejecimiento (Colágeno + Citrato de Magnesio, C-Lagen, Miskinne, Tónico Capilar).
-- **Salud Sexual y Vigor:** Potenciadores de energía masculina y bienestar íntimo (Booster Lion, Titan Coffee, Haydar, Derman, Mammoth).
-- **Combos y Ofertas:** Kits combinados con descuento especial para tratamientos integrales de bienestar.
+## Productos Estrella (Catálogo Directo con Precios)
 
-## Enlaces Principales
-- [Inicio y Catálogo Completo](https://azenza.com.co/)
+### Salud y Bienestar Digestivo / Hepático
+- [RtaFull - Depuración Hepática y Digestiva](https://azenza.com.co/producto/rtafull): Concentrado natural con Alcachofa, Flor de Jamaica, Berenjena y Apio. Favorece la depuración del hígado y riñones, reduce la pesadez estomacal y promueve un vientre ligero. Precio: $74.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: PSA-000932-2017.
+- [Coliplus - Alivio de Colon e Inflamación](https://azenza.com.co/producto/coliplus): Suplemento formulado para calmar espasmos intestinales, inflamación del colon, gases y promover la regularidad digestiva. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0010130-2020.
+- [Resvisfactor - Regenerador Celular e Inmunológico](https://azenza.com.co/producto/resvisfactor): Fórmula avanzada para fortalecer el sistema inmunológico, defensas naturales y vitalidad integral. Precio: $95.900 COP (1 unidad) | $149.900 COP (2 unidades) | $189.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0026210-2023.
+- [Vinagre de Manzana](https://azenza.com.co/producto/vinagre-manzana): Suplemento depurativo que apoya el metabolismo, control de apetito y equilibrio digestivo natural. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0015482-2021.
+- [Aceite de Orégano](https://azenza.com.co/producto/oregano): Protector digestivo y antimicrobiano natural concentrado. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0028751-2023.
+
+### Salud Articular, Vitalidad y Belleza Integral
+- [Colágeno + Citrato de Magnesio](https://azenza.com.co/producto/colageno): Regeneración articular, soporte para cartílagos, alivio de rigidez, fortalecimiento de uñas, cabello y elasticidad de la piel. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0021641-2022.
+- [Citrato de Potasio + Magnesio](https://azenza.com.co/producto/citrato-potasio-magnesio): Fórmula esencial para prevención de calambres musculares, balance electrolítico y salud cardiovascular. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0025731-2023.
+- [Ashwagandha](https://azenza.com.co/producto/ashwagandha): Adaptógeno natural para reducción de estrés, relajación mental y sueño reparador. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0027419-2023.
+- [Resveratrol + NAD+](https://azenza.com.co/producto/resveratrol-nad): Complejo antienvejecimiento celular y antioxidante de alta potencia. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0029114-2023.
+- [Tónico Capilar Anticaída](https://azenza.com.co/producto/tonico-capilar): Tratamiento intensivo para estimular el crecimiento y frenar la caída del cabello. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: NSOC18492-23CO.
+- [Miskinne - Mascarilla Facial](https://azenza.com.co/producto/miskinne): Hidratación profunda y luminosidad facial. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: NSOC21943-23CO.
+
+### Vigor, Energía y Salud Sexual
+- [Booster Lion](https://azenza.com.co/producto/booster-lion): Potenciador de rendimiento masculino, vigor y resistencia física. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0020412-2022.
+- [Titan Coffee](https://azenza.com.co/producto/titan-coffee): Café funcional energizante de alto rendimiento para vitalidad diaria prolongada. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0022319-2022.
+- [Haydar](https://azenza.com.co/producto/haydar): Fórmula natural para vigor masculino y resistencia. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: RSA-0023419-2022.
+- [Derman - Mascarilla Íntima](https://azenza.com.co/producto/derman): Cuidado, hidratación y protección dérmica íntima. Precio: $69.900 COP (1 unidad) | $119.900 COP (2 unidades) | $149.900 COP (Pague 2 Lleve 3). Registro INVIMA: NSOC19823-23CO.
+
+## Combos y Tratamientos Integrales
+- [Oferta del Mes: Inmunidad Dual (Resvisfactor + Coliplus)](https://azenza.com.co/combo/combo-bienestar): Combinación recomendada para desinflamar el vientre, proteger el colon y elevar las defensas. Precio Oferta: $129.900 COP (Ahorro de $35.900 frente al precio regular de $165.800).
+- [Catálogo de Combos con Descuento](https://azenza.com.co/categoria/combos): Tratamientos combinados de 2 y 3 productos con precios especiales desde $119.900 COP y envío gratis incluido.
+
+## Enlaces Canónicos e Institucionales
+- [Página Principal](https://azenza.com.co/)
 - [Categoría Salud y Bienestar](https://azenza.com.co/categoria/salud-bienestar)
 - [Categoría Belleza Integral](https://azenza.com.co/categoria/belleza-integral)
 - [Categoría Salud Sexual](https://azenza.com.co/categoria/salud-sexual)
-- [Combos con Descuento](https://azenza.com.co/categoria/combos)
 - [Quiénes Somos](https://azenza.com.co/quienes-somos)
-- [Políticas de Entrega y Garantía](https://azenza.com.co/condiciones-entrega)
+- [Condiciones de Entrega y Envíos](https://azenza.com.co/condiciones-entrega)
+- [Políticas de Devolución y Garantía](https://azenza.com.co/devoluciones-garantia)
