@@ -149,9 +149,27 @@ export default function Checkout() {
     submittingRef.current = true;
     setIsSubmitting(true);
 
-    const orderDetails = items.map(item => 
-      `- ${item.productName} (${item.promoLabel}) x${item.quantity}: ${formatCurrency(item.price * item.quantity)}`
-    ).join('\n');
+    const orderDetails = items.map(item => {
+      // Si el ítem es un combo, buscar los nombres de sus productos individuales
+      let comboProductsText = '';
+      if (item.promoId === 'combo' || item.productId.startsWith('promo-') || item.productId.startsWith('combo-')) {
+        const promo = (item.productId === COMBO_OF_THE_MONTH.id || item.productName.toLowerCase().includes(COMBO_OF_THE_MONTH.name.toLowerCase()))
+          ? COMBO_OF_THE_MONTH
+          : PROMOTIONS.find(p => p.id === item.productId || item.productName.toLowerCase().includes(p.name.toLowerCase()));
+
+        if (promo && (promo as any).products) {
+          const productNames = (promo as any).products.map((pId: string) => {
+            const prod = PRODUCTS.find(p => p.id === pId);
+            return prod ? prod.name : pId;
+          }).join(' + ');
+          if (productNames) {
+            comboProductsText = `\n  📦 *Incluye:* ${productNames}`;
+          }
+        }
+      }
+
+      return `- ${item.productName} (${item.promoLabel}) x${item.quantity}: ${formatCurrency(item.price * item.quantity)}${comboProductsText}`;
+    }).join('\n');
 
     try {
         const savedGclid = localStorage.getItem('gclid') || '';

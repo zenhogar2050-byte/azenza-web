@@ -47,6 +47,7 @@ import {
   X,
   ClipboardCheck,
   Clipboard,
+  Copy,
   FileText,
   MapPin,
   Calendar,
@@ -3641,42 +3642,135 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                         </div>
                       ) : (
                         <>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center justify-between gap-2">
                             <div className="font-bold text-stone-900 leading-tight">
                               {selectedOrder.customer.nombre || selectedOrder.customer.fullName ? (
                                 `${selectedOrder.customer.nombre || ''} ${selectedOrder.customer.apellido || ''} ${selectedOrder.customer.fullName || ''}`.trim()
                               ) : 'Cliente sin nombre'}
                             </div>
+                            {(selectedOrder.customer.nombre || selectedOrder.customer.fullName) && (
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(`${selectedOrder.customer.nombre || ''} ${selectedOrder.customer.apellido || ''} ${selectedOrder.customer.fullName || ''}`.trim())}
+                                title="Copiar nombre completo"
+                                className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                              >
+                                <Copy className="w-3.5 h-3.5" />
+                              </button>
+                            )}
                           </div>
-                          <div className="flex items-center gap-2 text-stone-600 text-sm">
-                            <Mail className="w-4 h-4 text-stone-400" /> {selectedOrder.customer.email || 'No proporcionado'}
+                          <div className="flex items-center justify-between gap-2 text-stone-600 text-sm">
+                            <div className="flex items-center gap-2 truncate">
+                              <Mail className="w-4 h-4 text-stone-400 shrink-0" /> 
+                              <span className="truncate">{selectedOrder.customer.email || 'No proporcionado'}</span>
+                            </div>
+                            {selectedOrder.customer.email && (
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(selectedOrder.customer.email || '')}
+                                title="Copiar correo electrónico"
+                                className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                              >
+                                <Copy className="w-3.5 h-3.5" />
+                              </button>
+                            )}
                           </div>
-                          <div className="flex items-center gap-2 text-stone-600 text-sm">
-                            <span className="text-[10px] font-black text-stone-400">CC:</span> {selectedOrder.customer.identification || 'No proporcionada'}
+                          <div className="flex items-center justify-between gap-2 text-stone-600 text-sm">
+                            <div className="flex items-center gap-2">
+                              <span className="text-[10px] font-black text-stone-400">CC:</span> 
+                              <span>{selectedOrder.customer.identification || 'No proporcionada'}</span>
+                            </div>
+                            {selectedOrder.customer.identification && (
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(selectedOrder.customer.identification || '')}
+                                title="Copiar cédula"
+                                className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                              >
+                                <Copy className="w-3.5 h-3.5" />
+                              </button>
+                            )}
                           </div>
-                          <div className="flex items-center gap-2 text-stone-600 text-sm">
-                            <Phone className="w-4 h-4 text-stone-400" /> {selectedOrder.customer.telefono || selectedOrder.customer.phone || 'No proporcionado'}
+                          <div className="flex items-center justify-between gap-2 text-stone-600 text-sm">
+                            <div className="flex items-center gap-2">
+                              <Phone className="w-4 h-4 text-stone-400 shrink-0" /> 
+                              <span>{selectedOrder.customer.telefono || selectedOrder.customer.phone || 'No proporcionado'}</span>
+                            </div>
+                            {(selectedOrder.customer.telefono || selectedOrder.customer.phone) && (
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(selectedOrder.customer.telefono || selectedOrder.customer.phone || '')}
+                                title="Copiar teléfono"
+                                className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                              >
+                                <Copy className="w-3.5 h-3.5" />
+                              </button>
+                            )}
                           </div>
-                          <div className="flex items-start gap-2 text-stone-600 text-sm">
-                            <MapPin className="w-4 h-4 text-stone-400 mt-0.5" /> 
-                            <div className="space-y-1">
-                              <p className="font-medium">{selectedOrder.customer.direccion || selectedOrder.customer.address || 'Sin dirección registrada'}</p>
-                              <div className="flex flex-wrap gap-2">
-                                <span className="px-2 py-0.5 bg-stone-100 rounded text-[10px] font-bold uppercase text-stone-500">
-                                  🏠 {selectedOrder.customer.ciudad || selectedOrder.customer.city || 'Ciudad N/A'}
-                                </span>
-                                <span className="px-2 py-0.5 bg-emerald-50 rounded text-[10px] font-bold uppercase text-emerald-600">
-                                  📍 {selectedOrder.customer.department || selectedOrder.customer.departamento || 'Departamento N/A'}
-                                </span>
+                          <div className="flex items-start justify-between gap-2 text-stone-600 text-sm">
+                            <div className="flex items-start gap-2 flex-1">
+                              <MapPin className="w-4 h-4 text-stone-400 mt-0.5 shrink-0" /> 
+                              <div className="space-y-1 flex-1">
+                                <div className="flex items-center justify-between gap-2">
+                                  <p className="font-medium">{selectedOrder.customer.direccion || selectedOrder.customer.address || 'Sin dirección registrada'}</p>
+                                  {(selectedOrder.customer.direccion || selectedOrder.customer.address) && (
+                                    <button
+                                      type="button"
+                                      onClick={() => copyToClipboard(selectedOrder.customer.direccion || selectedOrder.customer.address || '')}
+                                      title="Copiar dirección"
+                                      className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                                    >
+                                      <Copy className="w-3.5 h-3.5" />
+                                    </button>
+                                  )}
+                                </div>
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-stone-100 rounded text-[10px] font-bold uppercase text-stone-600">
+                                    🏠 {selectedOrder.customer.ciudad || selectedOrder.customer.city || 'Ciudad N/A'}
+                                    {(selectedOrder.customer.ciudad || selectedOrder.customer.city) && (
+                                      <button
+                                        type="button"
+                                        onClick={() => copyToClipboard(selectedOrder.customer.ciudad || selectedOrder.customer.city || '')}
+                                        title="Copiar ciudad"
+                                        className="p-0.5 text-stone-400 hover:text-stone-700 rounded transition-colors ml-0.5"
+                                      >
+                                        <Copy className="w-2.5 h-2.5" />
+                                      </button>
+                                    )}
+                                  </span>
+                                  <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-50 rounded text-[10px] font-bold uppercase text-emerald-700">
+                                    📍 {selectedOrder.customer.department || selectedOrder.customer.departamento || 'Departamento N/A'}
+                                    {(selectedOrder.customer.department || selectedOrder.customer.departamento) && (
+                                      <button
+                                        type="button"
+                                        onClick={() => copyToClipboard(selectedOrder.customer.department || selectedOrder.customer.departamento || '')}
+                                        title="Copiar departamento"
+                                        className="p-0.5 text-emerald-500 hover:text-emerald-900 rounded transition-colors ml-0.5"
+                                      >
+                                        <Copy className="w-2.5 h-2.5" />
+                                      </button>
+                                    )}
+                                  </span>
+                                </div>
                               </div>
                             </div>
                           </div>
                           {(selectedOrder.gclid || selectedOrder.customer.gclid) && (
-                            <div className="flex items-center gap-2 pt-2 border-t border-stone-100 text-stone-600 text-sm">
-                              <span className="text-[10px] font-black text-stone-400">GCLID:</span>
-                              <span className="font-mono text-[10px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded border border-emerald-100 flex items-center select-all break-all">
-                                {selectedOrder.gclid || selectedOrder.customer.gclid}
-                              </span>
+                            <div className="flex items-center justify-between gap-2 pt-2 border-t border-stone-100 text-stone-600 text-sm">
+                              <div className="flex items-center gap-2 overflow-hidden">
+                                <span className="text-[10px] font-black text-stone-400 shrink-0">GCLID:</span>
+                                <span className="font-mono text-[10px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded border border-emerald-100 flex items-center select-all break-all truncate">
+                                  {selectedOrder.gclid || selectedOrder.customer.gclid}
+                                </span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(selectedOrder.gclid || selectedOrder.customer.gclid || '')}
+                                title="Copiar GCLID"
+                                className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                              >
+                                <Copy className="w-3.5 h-3.5" />
+                              </button>
                             </div>
                           )}
                         </>
@@ -3749,22 +3843,55 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                   </section>
 
                   <section>
-                    <h4 className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                       <Package className="w-3 h-3" /> Productos y Monto
-                    </h4>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-[10px] font-black text-stone-400 uppercase tracking-widest flex items-center gap-2">
+                         <Package className="w-3 h-3" /> Productos y Monto
+                      </h4>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          let textToCopy = '';
+                          if (selectedOrder.cart?.items?.length) {
+                            textToCopy = selectedOrder.cart.items.map((item: any) => {
+                              const q = item.quantity || item.qty || 1;
+                              const label = item.promoLabel || item.label || '';
+                              return `${q}x ${item.name || item.productName}${label ? ` (${label})` : ''}`;
+                            }).join(', ');
+                          } else {
+                            textToCopy = selectedOrder.order_details || '';
+                          }
+                          copyToClipboard(textToCopy);
+                        }}
+                        title="Copiar lista de productos"
+                        className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors"
+                      >
+                        <Copy className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
                     <div className="bg-stone-50 p-6 rounded-3xl border border-stone-100 italic text-sm text-stone-600">
                       {selectedOrder.cart?.items?.length ? (
                         <ul className="space-y-2">
                           {selectedOrder.cart.items.map((item: any, idx: number) => {
                              const q = item.quantity || item.qty || 1;
                              const label = item.promoLabel || item.label || '';
+                             const itemLine = `${q}x ${item.name || item.productName}${label ? ` (${label})` : ''}`;
                              return (
-                               <li key={idx} className="flex justify-between border-b border-stone-200/50 pb-2 last:border-0 last:pb-0">
-                                 <div className="flex flex-col">
-                                   <span className="font-bold text-stone-800">{q}x {item.name || item.productName}</span>
-                                   {label && <span className="text-[10px] text-stone-500 font-medium uppercase tracking-wider">{label}</span>}
+                               <li key={idx} className="flex justify-between items-center border-b border-stone-200/50 pb-2 last:border-0 last:pb-0 gap-2">
+                                 <div className="flex flex-col flex-1">
+                                   <div className="flex items-center gap-1.5">
+                                     <span className="font-bold text-stone-800 not-italic">{q}x {item.name || item.productName}</span>
+                                     <button
+                                       type="button"
+                                       onClick={() => copyToClipboard(itemLine)}
+                                       title="Copiar este producto"
+                                       className="p-0.5 text-stone-400 hover:text-stone-700 rounded transition-colors"
+                                     >
+                                       <Copy className="w-2.5 h-2.5" />
+                                     </button>
+                                   </div>
+                                   {label && <span className="text-[10px] text-stone-500 font-medium uppercase tracking-wider not-italic">{label}</span>}
                                  </div>
-                                 <span className="font-black text-emerald-600">{formatCurrency(item.price ? (item.price * q) : 0, getOrderCountry(selectedOrder))}</span>
+                                 <span className="font-black text-emerald-600 not-italic shrink-0">{formatCurrency(item.price ? (item.price * q) : 0, getOrderCountry(selectedOrder))}</span>
                                </li>
                              );
                           })}
@@ -3772,9 +3899,19 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                       ) : (
                         <div className="whitespace-pre-wrap">{selectedOrder.order_details || 'Sin detalles registrados'}</div>
                       )}
-                      <div className="mt-4 pt-4 border-t-2 border-dashed border-stone-200 flex justify-between items-center font-black text-lg text-stone-900">
+                      <div className="mt-4 pt-4 border-t-2 border-dashed border-stone-200 flex justify-between items-center font-black text-lg text-stone-900 not-italic">
                         <span>TOTAL</span>
-                        <span className="text-emerald-600">{formatCurrency(selectedOrder.total || selectedOrder.cart?.total || 0, getOrderCountry(selectedOrder))}</span>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-emerald-600">{formatCurrency(selectedOrder.total || selectedOrder.cart?.total || 0, getOrderCountry(selectedOrder))}</span>
+                          <button
+                            type="button"
+                            onClick={() => copyToClipboard(String(selectedOrder.total || selectedOrder.cart?.total || 0))}
+                            title="Copiar monto total"
+                            className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors"
+                          >
+                            <Copy className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </section>
