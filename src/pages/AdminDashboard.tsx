@@ -214,17 +214,119 @@ export default function AdminDashboard() {
   const [manualOrderItems, setManualOrderItems] = useState<any[]>([]);
   const [manualProductSearchTerm, setManualProductSearchTerm] = useState('');
 
+  // Helper para obtener el precio y promo correspondiente a una cantidad de unidades
+  const getProductPromoInfo = (prod: any, quantity: number) => {
+    const q = Math.max(1, quantity);
+    const catalogProduct = PRODUCTS.find(p => 
+      p.id === prod.internalId || 
+      p.masterId === String(prod.idProduct) || 
+      p.name.toLowerCase() === prod.name?.toLowerCase()
+    );
+
+    if (catalogProduct && catalogProduct.promos && catalogProduct.promos.length > 0) {
+      // Intentar coincidencia exacta de unidades
+      let matchedPromo = catalogProduct.promos.find(pr => pr.units === q);
+
+      // Si es combo o promoción especial por ID
+      if (!matchedPromo) {
+        if (q === 3) {
+          matchedPromo = catalogProduct.promos.find(pr => pr.id === '2x3' || /lleve\s*3/i.test(pr.label));
+        } else if (q === 5) {
+          matchedPromo = catalogProduct.promos.find(pr => pr.id === '3x5' || /lleve\s*5/i.test(pr.label));
+        } else if (q === 2) {
+          matchedPromo = catalogProduct.promos.find(pr => pr.id === '2u' || /2\s*unidades/i.test(pr.label));
+        }
+      }
+
+      if (matchedPromo) {
+        return {
+          totalPrice: matchedPromo.price,
+          unitPrice: Math.round(matchedPromo.price / q),
+          promoLabel: matchedPromo.label,
+          units: q
+        };
+      }
+
+      // Si la cantidad es mayor que las promos definidas (ej: 4, 6 o más), calcular con la mejor tarifa disponible
+      const unitPromo = catalogProduct.promos.find(pr => pr.units === 1 || pr.id === '1u');
+      const baseUnitPrice = unitPromo?.price || catalogProduct.basePrice || prod.basePrice || 0;
+      
+      return {
+        totalPrice: baseUnitPrice * q,
+        unitPrice: baseUnitPrice,
+        promoLabel: `${q} Unidades`,
+        units: q
+      };
+    }
+
+    // Promociones o combos del catálogo general
+    const promo = PROMOTIONS.find(p => p.id === prod.internalId || p.name.toLowerCase() === prod.name?.toLowerCase());
+    if (promo && (promo as any).price) {
+      const pPrice = (promo as any).price;
+      return {
+        totalPrice: pPrice * q,
+        unitPrice: pPrice,
+        promoLabel: (promo as any).badge || `${q}x Combo`,
+        units: ((promo as any).products?.length || 1) * q
+      };
+    }
+
+    const fallbackPrice = prod.basePrice || 0;
+    return {
+      totalPrice: fallbackPrice * q,
+      unitPrice: fallbackPrice,
+      promoLabel: `${q} Unidades`,
+      units: q
+    };
+  };
+
+  // Helper para obtener el precio de venta al público de 1 unidad
+  const getProductRetailPrice = (prod: any) => {
+    return getProductPromoInfo(prod, 1).totalPrice;
+  };
+
+  // Helper para obtener el total de unidades físicas de un ítem
+  const getItemPhysicalUnits = (item: any): number => {
+    // Si ya tiene definido units (que representa el total de unidades de la promo o selección)
+    if (item.units && Number(item.units) > 0) {
+      return Number(item.units);
+    }
+    const q = Number(item.quantity) || Number(item.qty) || 1;
+    const label = String(item.promoLabel || item.label || '').toLowerCase();
+    const name = String(item.name || item.productName || '').toLowerCase();
+    
+    // Si la promo o nombre indica cantidades múltiples
+    if (label.includes('lleve 5') || label.includes('pague 3') || name.includes('3x5')) return 5;
+    if (label.includes('lleve 3') || label.includes('pague 2') || name.includes('2x3')) return 3;
+    if (label.includes('2 unidades') || label.includes('2u') || label.includes('par')) return 2;
+    
+    // Verificar si es un combo registrado con varios productos
+    const promo = PROMOTIONS.find(p => p.id === item.productId || p.id === item.id || name.includes(p.name.toLowerCase()));
+    if (promo && (promo as any).products && (promo as any).products.length > 0) {
+      return (promo as any).products.length * q;
+    }
+    
+    return q;
+  };
+
   const updateManualOrderProducts = (newItems: any[], currentOrder: any) => {
     setManualOrderItems(newItems);
     if (!currentOrder) return;
 
-    // Calculate details text
+    // Calculate details text con la etiqueta de promo correcta
     const detailsText = newItems
-      .map(item => `${item.quantity}x ${item.name} (${formatCurrency(item.price, selectedCountry)})`)
+      .map(item => {
+        const promoStr = item.promoLabel ? ` (${item.promoLabel})` : '';
+        const itemTotal = (item.totalPrice !== undefined ? item.totalPrice : (item.price * item.quantity));
+        return `${item.name}${promoStr} - Total: ${formatCurrency(itemTotal, selectedCountry)}`;
+      })
       .join(', ');
 
-    // Calculate total price
-    const totalSum = newItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    // Calculate total price sumando los totales por ítem
+    const totalSum = newItems.reduce((acc, item) => {
+      const itemTotal = (item.totalPrice !== undefined ? item.totalPrice : (item.price * item.quantity));
+      return acc + itemTotal;
+    }, 0);
 
     setSelectedOrder({
       ...currentOrder,
@@ -240,22 +342,49 @@ export default function AdminDashboard() {
       const filtered = manualOrderItems.filter(item => item.internalId !== prod.internalId);
       updateManualOrderProducts(filtered, selectedOrder);
     } else {
+      const promoInfo = getProductPromoInfo(prod, 1);
       const newItem = {
         internalId: prod.internalId,
         idProduct: prod.idProduct || null,
         name: prod.name,
-        price: prod.basePrice || 0,
+        price: promoInfo.unitPrice,
+        totalPrice: promoInfo.totalPrice,
+        promoLabel: promoInfo.promoLabel,
+        units: promoInfo.units,
         quantity: 1
       };
       updateManualOrderProducts([...manualOrderItems, newItem], selectedOrder);
     }
   };
 
-  const handleUpdateManualProductQuantity = (internalId: string, q: number) => {
+  const handleUpdateManualProductQuantity = (internalId: string, delta: number) => {
     if (!selectedOrder) return;
+    const allowedSteps = [1, 2, 3, 5];
     const updated = manualOrderItems.map(item => {
       if (item.internalId === internalId) {
-        return { ...item, quantity: Math.max(1, q) };
+        const currentQ = item.quantity || 1;
+        let newQuantity = currentQ;
+        
+        if (delta > 0) {
+          // Subir al siguiente escalón permitido
+          const nextStep = allowedSteps.find(s => s > currentQ);
+          newQuantity = nextStep !== undefined ? nextStep : currentQ;
+        } else if (delta < 0) {
+          // Bajar al escalón anterior permitido
+          const prevSteps = allowedSteps.filter(s => s < currentQ);
+          newQuantity = prevSteps.length > 0 ? prevSteps[prevSteps.length - 1] : 1;
+        }
+
+        const prod = inventory.find(p => p.internalId === internalId) || item;
+        const promoInfo = getProductPromoInfo(prod, newQuantity);
+        return { 
+          ...item, 
+          quantity: newQuantity,
+          price: promoInfo.unitPrice,
+          totalPrice: promoInfo.totalPrice,
+          promoLabel: promoInfo.promoLabel,
+          units: promoInfo.units
+        };
       }
       return item;
     });
@@ -266,7 +395,12 @@ export default function AdminDashboard() {
     if (!selectedOrder) return;
     const updated = manualOrderItems.map(item => {
       if (item.internalId === internalId) {
-        return { ...item, price: Math.max(0, p) };
+        const customTotal = Math.max(0, p);
+        return { 
+          ...item, 
+          totalPrice: customTotal,
+          price: item.quantity > 0 ? Math.round(customTotal / item.quantity) : customTotal
+        };
       }
       return item;
     });
@@ -486,16 +620,22 @@ export default function AdminDashboard() {
         cart: {
           items: manualOrderItems.length > 0 ? manualOrderItems.map(item => ({
             id: item.internalId,
+            productId: item.internalId,
             productName: item.name,
             name: item.name,
             price: Number(item.price) || 0,
+            totalPrice: Number(item.totalPrice !== undefined ? item.totalPrice : (item.price * item.quantity)) || 0,
+            promoLabel: item.promoLabel || '',
+            units: Number(item.units) || Number(item.quantity) || 1,
             quantity: Number(item.quantity) || 1
           })) : [
             {
               id: 'manual',
+              productId: 'manual',
               productName: detailsVal,
               name: detailsVal,
               price: Number(total) || 0,
+              totalPrice: Number(total) || 0,
               quantity: 1
             }
           ],
@@ -576,11 +716,41 @@ export default function AdminDashboard() {
     if (itemsToProcess.length > 0) {
       itemsDetails = '\n\n🛍️ *Detalle del pedido:* \n' + itemsToProcess.map((item: any) => {
         const name = item.productName || item.name || 'Producto';
-        const promoLabelStr = item.promoLabel || item.label ? ` (${item.promoLabel || item.label})` : '';
+        const promoLabel = item.promoLabel || item.label || '';
+        const promoId = item.promoId || '';
+        const promoLabelStr = promoLabel ? ` (${promoLabel})` : '';
         const qty = item.quantity || item.qty || 1;
-        const units = typeof item.units === 'number' && !isNaN(item.units) && item.units > 0 ? item.units : 1;
-        const totalUnits = units * qty;
-        return `- ${name}${promoLabelStr} - Cantidad: ${qty} (Total unidades: ${totalUnits})`;
+        
+        // Resolver unidades reales por ítem
+        let units = 1;
+        if (typeof item.units === 'number' && !isNaN(item.units) && item.units > 0) {
+          units = item.units;
+        } else if (promoId === '2x3' || /paga(ue)?\s*2\s*lleva(e)?\s*3/i.test(promoLabel) || /lleve\s*3/i.test(promoLabel)) {
+          units = 3;
+        } else if (promoId === '3x5' || /paga(ue)?\s*3\s*lleva(e)?\s*5/i.test(promoLabel) || /lleve\s*5/i.test(promoLabel)) {
+          units = 5;
+        } else if (promoId === '2u' || /2\s*unidades/i.test(promoLabel)) {
+          units = 2;
+        } else if (promoId === 'combo' || item.productId?.startsWith('promo-') || item.productId?.startsWith('combo-')) {
+          const promo = (item.productId === COMBO_OF_THE_MONTH.id || name.toLowerCase().includes(COMBO_OF_THE_MONTH.name.toLowerCase()))
+            ? COMBO_OF_THE_MONTH
+            : PROMOTIONS.find(p => p.id === item.productId || name.toLowerCase().includes(p.name.toLowerCase()));
+          if (promo && (promo as any).products) {
+            units = (promo as any).products.length;
+          }
+        } else if (item.productId) {
+          const product = PRODUCTS.find(p => p.id === item.productId || p.name.toLowerCase() === name.toLowerCase());
+          if (product && product.promos) {
+            const matchedPromo = product.promos.find(p => p.id === promoId || p.label === promoLabel);
+            if (matchedPromo && matchedPromo.units) {
+              units = matchedPromo.units;
+            }
+          }
+        }
+
+        // Si units ya representa la cantidad final de la promoción (ej. 5 o 3 o 2)
+        const totalUnits = units >= qty ? units : (units * qty);
+        return `- ${name}${promoLabelStr} - Cantidad: ${totalUnits} unidades`;
       }).join('\n');
     } else if (order.order_details) {
       itemsDetails = `\n\n🛍️ *Detalle del pedido:* \n- ${order.order_details}`;
@@ -3050,7 +3220,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
           <motion.div 
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col"
+            className="bg-white w-full max-w-5xl max-h-[90vh] rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col"
           >
             {/* Modal Header */}
             <div className="p-6 border-b border-stone-100 flex justify-between items-center bg-stone-50">
@@ -3278,44 +3448,66 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                   />
                                   <label htmlFor={`check-${prod.internalId}`} className="flex-grow text-xs leading-tight font-medium text-stone-800 cursor-pointer">
                                     <span className="font-semibold">{prod.name}</span>
-                                    <span className="text-[10px] text-stone-400 block font-mono">ID: {prod.idProduct || prod.internalId} — Precio Base: {formatCurrency(prod.basePrice, selectedCountry)}</span>
+                                    <span className="text-[10px] text-stone-400 block font-mono">ID: {prod.idProduct || prod.internalId} — Precio Venta: {formatCurrency(getProductRetailPrice(prod), selectedCountry)}</span>
                                   </label>
                                 </div>
 
                                 {isChecked && (
-                                  <div className="flex items-center justify-between gap-4 pl-6 pt-1 border-t border-emerald-100/50 mt-1">
-                                    {/* Quantity controller */}
-                                    <div className="flex items-center gap-1.5 bg-white border border-stone-200 rounded-lg p-0.5 shadow-sm">
-                                      <button
-                                        type="button"
-                                        onClick={() => handleUpdateManualProductQuantity(prod.internalId, (selectedItem.quantity || 1) - 1)}
-                                        className="w-5 h-5 flex items-center justify-center text-xs font-bold text-stone-500 hover:text-stone-800 hover:bg-stone-100 rounded"
-                                      >
-                                        -
-                                      </button>
-                                      <span className="text-xs font-mono font-bold w-6 text-center text-stone-800">
-                                        {selectedItem.quantity}
-                                      </span>
-                                      <button
-                                        type="button"
-                                        onClick={() => handleUpdateManualProductQuantity(prod.internalId, (selectedItem.quantity || 1) + 1)}
-                                        className="w-5 h-5 flex items-center justify-center text-xs font-bold text-stone-500 hover:text-stone-800 hover:bg-stone-100 rounded"
-                                      >
-                                        +
-                                      </button>
+                                  <div className="flex flex-wrap items-center justify-between gap-2 pl-6 pt-2 border-t border-emerald-100/60 mt-1">
+                                    {/* Left: Quantity controller & Promo Badge */}
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                      <div className="flex items-center gap-1 bg-white border border-stone-200 rounded-lg p-0.5 shadow-sm">
+                                        <button
+                                          type="button"
+                                          onClick={() => handleUpdateManualProductQuantity(prod.internalId, -1)}
+                                          className="w-5 h-5 flex items-center justify-center text-xs font-bold text-stone-500 hover:text-stone-800 hover:bg-stone-100 rounded transition-colors"
+                                        >
+                                          -
+                                        </button>
+                                        <span className="text-xs font-mono font-bold w-6 text-center text-stone-800">
+                                          {selectedItem.quantity}
+                                        </span>
+                                        <button
+                                          type="button"
+                                          onClick={() => handleUpdateManualProductQuantity(prod.internalId, 1)}
+                                          className="w-5 h-5 flex items-center justify-center text-xs font-bold text-stone-500 hover:text-stone-800 hover:bg-stone-100 rounded transition-colors"
+                                        >
+                                          +
+                                        </button>
+                                      </div>
+
+                                      {selectedItem.promoLabel && (
+                                        <span className="text-[10px] font-bold text-emerald-800 bg-emerald-100/90 border border-emerald-200/60 px-2 py-0.5 rounded-md uppercase tracking-wide whitespace-nowrap">
+                                          {selectedItem.promoLabel}
+                                        </span>
+                                      )}
+
+                                      {(() => {
+                                        const curTotal = selectedItem.totalPrice !== undefined ? selectedItem.totalPrice : (selectedItem.price * selectedItem.quantity);
+                                        const physicalUnits = getItemPhysicalUnits(selectedItem);
+                                        if (physicalUnits > 1 && curTotal > 0) {
+                                          const avgUnit = Math.round(curTotal / physicalUnits);
+                                          return (
+                                            <span className="text-[10px] font-semibold text-stone-500 bg-stone-100 border border-stone-200/60 px-1.5 py-0.5 rounded whitespace-nowrap">
+                                              Promedio: {formatCurrency(avgUnit, selectedCountry)} c/u
+                                            </span>
+                                          );
+                                        }
+                                        return null;
+                                      })()}
                                     </div>
 
-                                    {/* Sale Price input */}
-                                    <div className="flex items-center gap-1.5">
-                                      <span className="text-[9px] font-black text-stone-400 uppercase tracking-wider">Precio COP</span>
-                                      <div className="relative max-w-[100px]">
-                                        <span className="absolute left-2 top-1.5 text-stone-400 text-[10px] font-bold font-mono">$</span>
+                                    {/* Right: Sale Price / Total input */}
+                                    <div className="flex items-center gap-1.5 ml-auto">
+                                      <span className="text-[10px] font-black text-stone-400 uppercase tracking-wider">Total</span>
+                                      <div className="relative w-28">
+                                        <span className="absolute left-2.5 top-1.5 text-stone-400 text-[11px] font-bold font-mono">$</span>
                                         <input
                                           type="number"
                                           min={0}
-                                          value={selectedItem.price}
+                                          value={selectedItem.totalPrice !== undefined ? selectedItem.totalPrice : (selectedItem.price * selectedItem.quantity)}
                                           onChange={(e) => handleUpdateManualProductPrice(prod.internalId, parseFloat(e.target.value) || 0)}
-                                          className="w-full pl-4 pr-1.5 py-1 bg-white border border-stone-200 rounded-lg text-xs font-mono font-bold text-stone-800 outline-none focus:ring-1 focus:ring-emerald-500"
+                                          className="w-full pl-6 pr-2 py-1 bg-white border border-stone-200 rounded-lg text-xs font-mono font-bold text-stone-800 outline-none focus:ring-1 focus:ring-emerald-500"
                                         />
                                       </div>
                                     </div>
@@ -3870,13 +4062,17 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                     </div>
                     <div className="bg-stone-50 p-6 rounded-3xl border border-stone-100 italic text-sm text-stone-600">
                       {selectedOrder.cart?.items?.length ? (
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                           {selectedOrder.cart.items.map((item: any, idx: number) => {
                              const q = item.quantity || item.qty || 1;
                              const label = item.promoLabel || item.label || '';
                              const itemLine = `${q}x ${item.name || item.productName}${label ? ` (${label})` : ''}`;
+                             const itemTotalPrice = item.totalPrice !== undefined ? item.totalPrice : (item.price ? (item.price * q) : 0);
+                             const physicalUnits = getItemPhysicalUnits(item);
+                             const avgUnitPrice = physicalUnits > 0 ? Math.round(itemTotalPrice / physicalUnits) : itemTotalPrice;
+
                              return (
-                               <li key={idx} className="flex justify-between items-center border-b border-stone-200/50 pb-2 last:border-0 last:pb-0 gap-2">
+                               <li key={idx} className="flex justify-between items-center border-b border-stone-200/50 pb-2.5 last:border-0 last:pb-0 gap-2">
                                  <div className="flex flex-col flex-1">
                                    <div className="flex items-center gap-1.5">
                                      <span className="font-bold text-stone-800 not-italic">{q}x {item.name || item.productName}</span>
@@ -3889,15 +4085,63 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                                        <Copy className="w-2.5 h-2.5" />
                                      </button>
                                    </div>
-                                   {label && <span className="text-[10px] text-stone-500 font-medium uppercase tracking-wider not-italic">{label}</span>}
+                                   <div className="flex items-center gap-2 flex-wrap mt-0.5">
+                                     {label && <span className="text-[10px] text-stone-500 font-medium uppercase tracking-wider not-italic">{label}</span>}
+                                     {physicalUnits > 1 && (
+                                       <div className="inline-flex items-center gap-1.5 bg-stone-200/70 px-2 py-0.5 rounded not-italic">
+                                         <span className="text-[10px] font-semibold text-stone-600">
+                                           Promedio: {formatCurrency(avgUnitPrice, getOrderCountry(selectedOrder))} c/u ({physicalUnits} unid.)
+                                         </span>
+                                         <button
+                                           type="button"
+                                           onClick={() => copyToClipboard(String(avgUnitPrice))}
+                                           title="Copiar valor promedio unitario para MasterShop"
+                                           className="p-0.5 text-stone-400 hover:text-stone-800 transition-colors"
+                                         >
+                                           <Copy className="w-2.5 h-2.5" />
+                                         </button>
+                                       </div>
+                                     )}
+                                   </div>
                                  </div>
-                                 <span className="font-black text-emerald-600 not-italic shrink-0">{formatCurrency(item.price ? (item.price * q) : 0, getOrderCountry(selectedOrder))}</span>
-                               </li>
+                                 <div className="flex flex-col items-end shrink-0">
+                                   <span className="font-black text-emerald-600 not-italic">{formatCurrency(itemTotalPrice, getOrderCountry(selectedOrder))}</span>
+                                 </div>
+                                </li>
                              );
                           })}
                         </ul>
                       ) : (
-                        <div className="whitespace-pre-wrap">{selectedOrder.order_details || 'Sin detalles registrados'}</div>
+                        <div>
+                          <div className="whitespace-pre-wrap not-italic font-medium text-stone-800">{selectedOrder.order_details || 'Sin detalles registrados'}</div>
+                          {(() => {
+                            const detailsStr = String(selectedOrder.order_details || '');
+                            const match = detailsStr.match(/^(\d+)x\s+/i);
+                            const parsedUnits = match ? parseInt(match[1], 10) : 1;
+                            const totalVal = Number(selectedOrder.total || selectedOrder.cart?.total || 0);
+                            if (parsedUnits > 1 && totalVal > 0) {
+                              const avg = Math.round(totalVal / parsedUnits);
+                              return (
+                                <div className="mt-2 flex items-center">
+                                  <div className="inline-flex items-center gap-1.5 bg-stone-200/70 px-2 py-0.5 rounded not-italic">
+                                    <span className="text-[10px] font-semibold text-stone-600">
+                                      Promedio: {formatCurrency(avg, getOrderCountry(selectedOrder))} c/u ({parsedUnits} unid.)
+                                    </span>
+                                    <button
+                                      type="button"
+                                      onClick={() => copyToClipboard(String(avg))}
+                                      title="Copiar valor promedio unitario para MasterShop"
+                                      className="p-0.5 text-stone-400 hover:text-stone-800 transition-colors"
+                                    >
+                                      <Copy className="w-2.5 h-2.5" />
+                                    </button>
+                                  </div>
+                                </div>
+                              );
+                            }
+                            return null;
+                          })()}
+                        </div>
                       )}
                       <div className="mt-4 pt-4 border-t-2 border-dashed border-stone-200 flex justify-between items-center font-black text-lg text-stone-900 not-italic">
                         <span>TOTAL</span>

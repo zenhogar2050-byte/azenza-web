@@ -9,6 +9,7 @@ import { track, trackGoogleBeginCheckout } from '../utils/pixel';
 import OrderBump from '../components/OrderBump';
 import { BUMP_OPPORTUNITIES } from '../lib/bump-logic';
 import { saveOrderToFirebase, getNextOrderTicket } from '../lib/firebase';
+import Image from '../components/Image';
 
 export default function Checkout() {
   const navigate = useNavigate();
@@ -563,19 +564,19 @@ export default function Checkout() {
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-10 transition-all duration-500 py-10">
                       <div className="flex flex-col items-center">
-                        <img src="/assets/partners/coordinadora.webp" alt="Coordinadora Logística" className="h-16 lg:h-20 transition-all object-contain" referrerPolicy="no-referrer" />
+                        <Image src="/assets/partners/coordinadora.webp" alt="Coordinadora Logística" preset="badge" className="h-16 lg:h-20 transition-all object-contain" />
                       </div>
                       <div className="flex flex-col items-center">
-                        <img src="/assets/partners/servientrega.webp" alt="Servientrega" className="h-16 lg:h-20 transition-all object-contain" referrerPolicy="no-referrer" />
+                        <Image src="/assets/partners/servientrega.webp" alt="Servientrega" preset="badge" className="h-16 lg:h-20 transition-all object-contain" />
                       </div>
                       <div className="flex flex-col items-center">
-                        <img src="/assets/partners/interrapidisimo.webp" alt="Interrapidisimo" className="h-16 lg:h-20 transition-all object-contain" referrerPolicy="no-referrer" />
+                        <Image src="/assets/partners/interrapidisimo.webp" alt="Interrapidisimo" preset="badge" className="h-16 lg:h-20 transition-all object-contain" />
                       </div>
                       <div className="flex flex-col items-center">
-                        <img src="/assets/partners/envia.webp" alt="Envía" className="h-16 lg:h-20 transition-all object-contain" referrerPolicy="no-referrer" loading="lazy" />
+                        <Image src="/assets/partners/envia.webp" alt="Envía" preset="badge" className="h-16 lg:h-20 transition-all object-contain" />
                       </div>
                       <div className="flex flex-col items-center">
-                        <img src="/assets/partners/swayp.webp" alt="Swayp Pagos" className="h-16 lg:h-20 transition-all object-contain" referrerPolicy="no-referrer" loading="lazy" />
+                        <Image src="/assets/partners/swayp.webp" alt="Swayp Pagos" preset="badge" className="h-16 lg:h-20 transition-all object-contain" />
                       </div>
                     </div>
                   </div>

@@ -17,6 +17,7 @@ import { BUMP_OPPORTUNITIES } from '../lib/bump-logic';
 
 import StickyCTA from '../components/StickyCTA';
 import ProductVideo from '../components/ProductVideo';
+import Image from '../components/Image';
 import NotFound from './NotFound';
 
 export default function ProductLanding() {
@@ -263,15 +264,12 @@ export default function ProductLanding() {
                       className="rounded-none" 
                     />
                   ) : (
-                    <img
+                    <Image
                       src={activeItem?.url || product.image}
                       alt={product.name}
-                      width={800}
-                      height={800}
-                      loading="eager"
-                      fetchPriority="high"
+                      preset="hero"
+                      priority={true}
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
                     />
                   )}
                 </div>
@@ -294,7 +292,7 @@ export default function ProductLanding() {
                         {item.type === 'video' ? (
                           <div className="relative w-full h-full bg-stone-100 flex items-center justify-center overflow-hidden rounded-xl">
                             {item.poster ? (
-                              <img src={item.poster} className="w-full h-full object-cover opacity-60" alt="Video thumbnail" />
+                              <Image src={item.poster} preset="thumb" className="w-full h-full object-cover opacity-60" alt="Video thumbnail" />
                             ) : (
                               <Play className="w-8 h-8 text-emerald-600 fill-current" />
                             )}
@@ -303,15 +301,11 @@ export default function ProductLanding() {
                             </div>
                           </div>
                         ) : (
-                    <img 
+                    <Image 
                       src={item.url} 
                       alt={`${product.name} miniatura ${index + 1}`} 
                       className="w-full h-full object-contain group-hover/thumb:scale-110 transition-transform" 
-                      referrerPolicy="no-referrer"
-                      width="80"
-                      height="80"
-                      loading="lazy"
-                      decoding="async"
+                      preset="thumb"
                     />
                         )}
                       </button>
@@ -322,9 +316,9 @@ export default function ProductLanding() {
                 <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 mt-10">
                   {product.invima && (
                     <div className="flex items-center gap-3 px-4 sm:px-6 py-3 bg-stone-50 rounded-2xl border border-stone-200">
-                      <img src="/assets/logo/invima1.webp" alt="Sello INVIMA" className="h-16 sm:h-20 object-contain drop-shadow-sm opacity-90" width="80" height="80" />
+                      <Image src="/assets/logo/invima1.webp" alt="Sello INVIMA" preset="badge" className="h-16 sm:h-20 object-contain drop-shadow-sm opacity-90" width={80} height={80} />
                       <div className="flex flex-col">
-                        <span className="text-[11px] font-black text-stone-400 uppercase tracking-widest leading-none">Registro INVIMA</span>
+                        <span className="text-[11px] font-black text-stone-600 uppercase tracking-widest leading-none">Registro INVIMA</span>
                         <span className="text-[14px] sm:text-base font-bold text-stone-700">
                           {product.invima}
                         </span>
@@ -332,7 +326,7 @@ export default function ProductLanding() {
                     </div>
                   )}
                   <div className="flex flex-col items-center gap-1">
-                    <img src="/assets/logo/sello de calidad.webp" alt="Sello 100% Quality" className="h-18 sm:h-24 object-contain drop-shadow-sm opacity-90" width="96" height="96" />
+                    <Image src="/assets/logo/sello de calidad.webp" alt="Sello 100% Quality" preset="badge" className="h-18 sm:h-24 object-contain drop-shadow-sm opacity-90" width={96} height={96} />
                     <span className="text-[9px] font-black text-emerald-800 uppercase tracking-tight">Garantía de Satisfacción</span>
                   </div>
                 </div>
@@ -691,14 +685,11 @@ export default function ProductLanding() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-stone-100 border-2 border-emerald-100 flex-shrink-0">
-                        <img 
+                        <Image 
                           src={avatarUrl} 
                           alt={`Avatar de ${testimonial.name}`} 
+                          preset="avatar"
                           className="w-full h-full object-cover" 
-                          width="48" 
-                          height="48" 
-                          loading="lazy" 
-                          decoding="async"
                         />
                       </div>
                       <div>
@@ -706,7 +697,7 @@ export default function ProductLanding() {
                         <div className="flex flex-wrap items-center gap-1.5 mt-1">
                           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                           <span className="text-[10px] sm:text-xs font-bold text-emerald-700 uppercase tracking-wide">Usuario Verificado</span>
-                          <span className="text-[10px] sm:text-xs text-stone-400">&middot; Hace {fakeDaysAgo} días</span>
+                          <span className="text-[10px] sm:text-xs text-stone-500">&middot; Hace {fakeDaysAgo} días</span>
                         </div>
                       </div>
                     </div>

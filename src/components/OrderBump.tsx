@@ -42,7 +42,7 @@ const OrderBump: React.FC<OrderBumpProps> = ({
             <TrendingDown className="w-4 h-4" />
             💰 Ahorras {formatCurrency(savings)} comparado con el precio individual.
           </div>
-          <p className="text-[10px] text-emerald-600/70 font-medium mt-1">
+          <p className="text-[10px] text-emerald-800 font-semibold mt-1">
             ⏳ Oferta válida hasta agotar inventario.
           </p>
         </div>

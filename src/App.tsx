@@ -40,8 +40,10 @@ import RefundPolicy from './pages/RefundPolicy';
 import TermsOfService from './pages/TermsOfService';
 import DeliveryConditions from './pages/DeliveryConditions';
 import ReturnsWarranty from './pages/ReturnsWarranty';
-import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
+
+// Lazy load heavy admin dashboard to drastically reduce mobile bundle size
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();

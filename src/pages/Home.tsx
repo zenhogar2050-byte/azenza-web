@@ -11,6 +11,7 @@ import { useCart } from '../CartContext';
 import { useEffect, useState, useRef } from 'react';
 import StickyCTA from '../components/StickyCTA';
 import ProductVideo from '../components/ProductVideo';
+import Image from '../components/Image';
 
 const SYMPTOMS = [
   { id: 'digestiva', label: 'Digestión', icon: Activity, color: 'text-emerald-800', bg: 'bg-emerald-50', border: 'border-emerald-100', link: '/categoria/salud-bienestar' },
@@ -178,16 +179,15 @@ export default function Home() {
                     
                     <div className="shrink-0 relative z-10 w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-white/30 bg-white/10 flex items-center justify-center p-0.5">
                       {category.image ? (
-                        <img 
+                        <Image 
                           src={category.image} 
                           alt={category.name}
                           className="w-full h-full object-cover rounded-full"
-                          referrerPolicy="no-referrer"
-                          width="64"
-                          height="64"
+                          preset="avatar"
+                          width={64}
+                          height={64}
                           loading={currentCategories.indexOf(category) === 0 ? "eager" : "lazy"}
                           fetchPriority={currentCategories.indexOf(category) === 0 ? "high" : "low"}
-                          decoding="async"
                         />
                       ) : (
                         <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-md" />
@@ -282,14 +282,11 @@ export default function Home() {
                 >
                   <Link to={`/producto/${product.id}`} className="flex flex-col h-full" aria-label={`Ver detalles de ${product.name}`}>
                     <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100 mb-6 flex items-center justify-center p-2 shrink-0">
-                      <img
+                      <Image
                         src={product.image}
                         alt={product.name}
-                        width={400}
-                        height={400}
-                        loading="lazy"
+                        preset="card"
                         className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
                       />
                     </div>
                     <div className="px-2 flex flex-col flex-grow text-left">
@@ -360,15 +357,11 @@ export default function Home() {
               >
                 <Link to={`/producto/${product.id}`} className="flex flex-col h-full" aria-label={`Ver detalles de ${product.name}`}>
                   <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100 mb-6 flex items-center justify-center p-2 relative shrink-0">
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.name}
-                      width={300}
-                      height={300}
-                      loading="lazy"
-                      decoding="async"
+                      preset="card"
                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="px-2 flex flex-col flex-grow">

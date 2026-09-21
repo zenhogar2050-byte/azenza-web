@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { cleanPromoName, cn } from '../utils';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../CartContext';
+import Image from './Image';
 
 export default function PromoBanner() {
   const { getProducts, formatPrice, isEC } = useCart();
@@ -226,15 +227,13 @@ export default function PromoBanner() {
             >
               <div className="relative">
                 <div className="rounded-[3rem] sm:rounded-[4rem] mb-4 sm:mb-6 flex items-center justify-center p-1 sm:p-2 overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] group-hover:scale-105 transition-all duration-500 bg-white w-48 h-48 sm:w-64 sm:h-64 border-4 border-white/20 ring-1 ring-white/10 group-hover:ring-white/30 truncate">
-                  <img 
+                  <Image 
                     src={currentPromo.image} 
                     alt={currentPromo.name} 
-                    draggable="false"
+                    draggable={false}
+                    preset="card"
+                    priority={true}
                     className="max-w-full max-h-[90%] object-contain mix-blend-multiply transition-all duration-300 scale-110 group-hover:scale-115"
-                    referrerPolicy="no-referrer"
-                    width="400"
-                    height="400"
-                    loading="eager"
                   />
                 </div>
               </div>

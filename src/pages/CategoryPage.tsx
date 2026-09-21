@@ -7,6 +7,7 @@ import SEOManager from '../components/SEOManager';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { formatCurrency, cn } from '../utils';
 import { useCart } from '../CartContext';
+import Image from '../components/Image';
 
 export default function CategoryPage() {
   const navigate = useNavigate();
@@ -173,9 +174,10 @@ export default function CategoryPage() {
             <div className="shrink-0">
               {category.image ? (
                 <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl overflow-hidden bg-white shadow-md border-2 border-white">
-                  <img 
+                  <Image 
                     src={category.image} 
                     alt={category.name}
+                    preset="avatar"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -219,14 +221,11 @@ export default function CategoryPage() {
                 >
                   <Link to={isCombosCategory ? `/combo/${product.id}` : `/producto/${product.id}`} className="flex flex-col h-full">
                     <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100 mb-6 flex items-center justify-center p-2 shrink-0">
-                      <img
+                      <Image
                         src={product.image}
                         alt={product.name}
-                        width={400}
-                        height={400}
-                        loading="lazy"
+                        preset="card"
                         className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
                       />
                     </div>
                     <div className="px-2 flex flex-col flex-grow">

@@ -14,6 +14,7 @@ import { track, trackGoogleBeginCheckout } from '../utils/pixel';
 import { useEffect, useState, useRef } from 'react';
 import StickyCTA from '../components/StickyCTA';
 import ProductVideo from '../components/ProductVideo';
+import Image from '../components/Image';
 import NotFound from './NotFound';
 
 export default function ComboLanding() {
@@ -186,15 +187,12 @@ export default function ComboLanding() {
                       className="rounded-none"
                     />
                   ) : (
-                    <img
+                    <Image
                       src={combo.image}
                       alt={combo.name}
-                      width={800}
-                      height={800}
-                      loading="eager"
-                      fetchPriority="high"
+                      preset="hero"
+                      priority={true}
                       className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
                     />
                   )}
                 </div>
@@ -211,7 +209,7 @@ export default function ComboLanding() {
                     >
                       <div className="relative w-full h-full bg-stone-50 rounded-xl flex items-center justify-center overflow-hidden">
                         {combo.videoPoster ? (
-                          <img src={combo.videoPoster} className="w-full h-full object-cover opacity-60" alt={`Miniatura video ${combo.name}`} />
+                          <Image src={combo.videoPoster} preset="thumb" className="w-full h-full object-cover opacity-60" alt={`Miniatura video ${combo.name}`} />
                         ) : (
                           <Play className="w-6 h-6 text-emerald-600 fill-current" />
                         )}
@@ -225,7 +223,7 @@ export default function ComboLanding() {
                         !showVideo ? "border-emerald-600 ring-2 ring-emerald-100" : "border-stone-200"
                       )}
                     >
-                      <img src={combo.image} className="w-full h-full object-contain" alt={`Imagen ${combo.name}`} />
+                      <Image src={combo.image} preset="thumb" className="w-full h-full object-contain" alt={`Imagen ${combo.name}`} />
                     </button>
                   </div>
                 )}
@@ -255,14 +253,14 @@ export default function ComboLanding() {
 
                 <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 mt-10">
                   <div className="flex items-center gap-3 px-4 sm:px-6 py-3 bg-stone-50 rounded-2xl border border-stone-200">
-                    <img src="/assets/logo/invima1.webp" alt="Sello INVIMA" className="h-16 sm:h-20 object-contain drop-shadow-sm opacity-90" />
+                    <Image src="/assets/logo/invima1.webp" alt="Sello INVIMA" preset="badge" className="h-16 sm:h-20 object-contain drop-shadow-sm opacity-90" width={80} height={80} />
                     <div className="flex flex-col">
-                      <span className="text-[11px] font-black text-stone-400 uppercase tracking-widest leading-none">Registro INVIMA</span>
+                      <span className="text-[11px] font-black text-stone-600 uppercase tracking-widest leading-none">Registro INVIMA</span>
                       <span className="text-[14px] sm:text-base font-bold text-stone-700">Original Certificado</span>
                     </div>
                   </div>
                   <div className="flex flex-col items-center gap-1">
-                    <img src="/assets/logo/sello de calidad.webp" alt="Sello 100% Quality" className="h-18 sm:h-24 object-contain drop-shadow-sm opacity-90" />
+                    <Image src="/assets/logo/sello de calidad.webp" alt="Sello 100% Quality" preset="badge" className="h-18 sm:h-24 object-contain drop-shadow-sm opacity-90" width={96} height={96} />
                     <span className="text-[9px] font-black text-emerald-800 uppercase tracking-tight">Garantía de Satisfacción</span>
                   </div>
                 </div>
@@ -550,7 +548,7 @@ export default function ComboLanding() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-stone-100 border-2 border-emerald-100 flex-shrink-0">
-                         <img src={avatarUrl} alt={`Avatar de ${testimonial.name}`} className="w-full h-full object-cover" />
+                         <Image src={avatarUrl} alt={`Avatar de ${testimonial.name}`} preset="avatar" className="w-full h-full object-cover" />
                       </div>
                       <div>
                         <div className="font-bold text-stone-900 text-sm sm:text-base leading-tight">{testimonial.name}</div>

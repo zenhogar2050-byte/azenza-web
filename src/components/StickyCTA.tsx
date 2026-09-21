@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingCart, ChevronDown, Zap } from 'lucide-react';
 import { formatCurrency, cn } from '../utils';
+import Image from './Image';
 
 interface StickyCTAProps {
   name: string;
@@ -76,7 +77,7 @@ export default function StickyCTA({
               /* Product Page Layout: Compact, no name, 2-line selector */
               <div className="flex items-center gap-3 sm:gap-4 lg:gap-6">
                 <div className="w-[72px] h-[72px] sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white border border-stone-100 rounded-xl overflow-hidden flex-shrink-0 p-1.5 shadow-sm">
-                  <img src={image} alt={name} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                  <Image src={image} alt={name} preset="thumb" className="w-full h-full object-contain" />
                 </div>
 
                 <div className="flex-1 flex flex-col gap-1.5 min-w-0">
@@ -120,7 +121,7 @@ export default function StickyCTA({
               <div className="flex items-center justify-between gap-3 sm:gap-4 lg:gap-6">
                 <div className="flex items-center gap-3 sm:gap-4 lg:gap-5 flex-1 min-w-0">
                   <div className="w-[64px] h-[64px] sm:w-[72px] sm:h-[72px] lg:w-20 lg:h-20 bg-stone-50 rounded-2xl overflow-hidden flex-shrink-0 p-1 shadow-sm border border-stone-100/50">
-                    <img src={image} alt={name} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                    <Image src={image} alt={name} preset="thumb" className="w-full h-full object-contain" />
                   </div>
                   
                   <div className="flex flex-col gap-0.5 min-w-0">

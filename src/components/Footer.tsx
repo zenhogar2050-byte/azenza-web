@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 lg:gap-16 mb-16 items-start">
           {/* Brand Section */}
           <div className="space-y-4">
-            <p className="text-2xl font-black text-[#1c1917] tracking-tighter uppercase">
+            <p className="text-2xl font-black text-stone-200 tracking-tighter uppercase">
               Dios Bendice este Negocio
             </p>
             <Link to="/" className="flex items-center gap-3 group">
@@ -126,11 +126,11 @@ export default function Footer() {
         <div className="pt-12 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6 text-stone-100 text-sm">
           <div className="flex flex-col items-center md:items-start gap-2">
             <p>© 2026 Azenza. Todos los derechos reservados.</p>
-            <div className="flex items-center gap-4 text-[10px] font-bold text-stone-500 uppercase tracking-widest mt-2">
+            <div className="flex items-center gap-4 text-[10px] font-bold text-stone-300 uppercase tracking-widest mt-2">
               <span>Métodos de Pago:</span>
               <div className="flex items-center gap-2 bg-stone-800 px-3 py-1 rounded-full border border-stone-700">
                 <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                <span>Pago Contraentrega (Exclusivo)</span>
+                <span className="text-stone-200">Pago Contraentrega (Exclusivo)</span>
               </div>
             </div>
           </div>

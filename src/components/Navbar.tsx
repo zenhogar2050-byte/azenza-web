@@ -5,6 +5,7 @@ import { useCart } from '../CartContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { CATEGORIES, PROMOTIONS, COMBO_OF_THE_MONTH } from '../constants';
 import { cn } from '../utils';
+import Image from './Image';
 
 const SYMPTOMS = [
   { id: 'digestiva', label: 'Digestión', icon: Activity, color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-100', link: '/categoria/salud-bienestar' },
@@ -79,7 +80,7 @@ export default function Navbar() {
     if (category?.image) {
       return (
         <div className="w-6 h-6 md:w-8 md:h-8 rounded-full overflow-hidden border border-stone-200 bg-white shrink-0 shadow-sm group-hover:scale-110 transition-transform">
-          <img src={category.image} alt="" className="w-full h-full object-cover" />
+          <Image src={category.image} alt="" preset="avatar" width={32} height={32} className="w-full h-full object-cover" />
         </div>
       );
     }
@@ -110,16 +111,14 @@ export default function Navbar() {
 
             <Link to="/" className="flex items-center gap-1.5 sm:gap-2 group shrink-0 -ml-1">
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex-shrink-0">
-                  <img 
+                  <Image 
                     src="/assets/logo/logo-icon.webp" 
                     alt="Azenza Icon" 
                     className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="async"
-                    width="64"
-                    height="64"
+                    preset="badge"
+                    priority={true}
+                    width={64}
+                    height={64}
                   />
               </div>
               <div className="flex flex-col leading-none">
@@ -220,11 +219,11 @@ export default function Navbar() {
                               className="flex items-center gap-3 p-2 hover:bg-stone-50 rounded-xl transition-colors group"
                             >
                               <div className="w-10 h-10 rounded-lg bg-stone-100 flex-shrink-0 overflow-hidden relative">
-                                <img 
-                                  src={item.image || null} 
+                                <Image 
+                                  src={item.image || ''} 
                                   alt={item.name} 
+                                  preset="thumb"
                                   className="w-full h-full object-contain"
-                                  referrerPolicy="no-referrer"
                                 />
                                 {item.searchType === 'combo' && (
                                   <div className="absolute inset-0 bg-emerald-600/10 flex items-center justify-center">
@@ -376,11 +375,11 @@ export default function Navbar() {
                     className="flex items-center gap-4 p-3 hover:bg-stone-50 rounded-xl transition-colors"
                   >
                     <div className="w-12 h-12 rounded-lg bg-stone-100 flex-shrink-0 overflow-hidden relative">
-                      <img 
-                        src={item.image || null} 
+                      <Image 
+                        src={item.image || ''} 
                         alt={item.name} 
+                        preset="thumb"
                         className="w-full h-full object-contain"
-                        referrerPolicy="no-referrer"
                       />
                       {item.searchType === 'combo' && (
                         <div className="absolute inset-0 bg-emerald-600/10 flex items-center justify-center">

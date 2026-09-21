@@ -94,6 +94,14 @@
                 position: 'BOTTOM_LEFT',
                 region: 'CO'
               });
+              
+              // Ensure accessibility title on injected iframe
+              setTimeout(function() {
+                var iframe = document.getElementById('merchantwidgetiframe');
+                if (iframe && !iframe.getAttribute('title')) {
+                  iframe.setAttribute('title', 'Google Merchant Badge');
+                }
+              }, 1500);
             }
           });
           document.head.appendChild(mw);
