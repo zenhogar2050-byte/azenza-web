@@ -1,91 +1,92 @@
-# Cloudflare Pages Redirects & HTTP 410 Gone Rules
+# Cloudflare Pages Redirects (HTTP 301 Permanent Redirects)
 # Syntax: <source> <destination> [status]
+# Note: Cloudflare Pages accepts: 200, 301, 302, 303, 307, 308.
 
 # ====================================================
-# 1. SECCIONES COMPLETAS RETIRADAS (HTTP 410 Gone)
+# 1. PRODUCTOS ESPECÍFICOS REDIRIGIDOS A SU URL ACTUAL
 # ====================================================
-/suplementos/* /404.html 410
-/fajas/* /404.html 410
+/colageno-hidrolizado /producto/colageno 301
+/colageno-hidrolizado/ /producto/colageno 301
+/suplementos/colageno /producto/colageno 301
+/suplementos/colageno/ /producto/colageno 301
+/suplementos/colagenohidrolizado /producto/colageno 301
+/suplementos/colagenohidrolizado/ /producto/colageno 301
+/suplementos/tufoff /producto/tufoff 301
+/suplementos/tufoff/ /producto/tufoff 301
+/suplementos/coli /producto/coliplus 301
+/suplementos/coli/ /producto/coliplus 301
+/suplementos/citramix /producto/citramix 301
+/suplementos/citramix/ /producto/citramix 301
+/suplementos/resveratrolsoftgels /producto/resveratrol 301
+/suplementos/resveratrolsoftgels/ /producto/resveratrol 301
+/suplementos/ashwagandha /producto/ashwagandha 301
+/suplementos/ashwagandha/ /producto/ashwagandha 301
+/suplementos/rtafull /producto/rtafull 301
+/suplementos/rtafull/ /producto/rtafull 301
+/suplementos/coffee-colageno /producto/coffee-colageno 301
+/suplementos/coffee-colageno/ /producto/coffee-colageno 301
+/suplementos/booster-lion /producto/booster-lion 301
+/suplementos/booster-lion/ /producto/booster-lion 301
+/suplementos/kds-10 /producto/kds-10 301
+/suplementos/kds-10/ /producto/kds-10 301
+/suplementos/creatina /producto/creatina 301
+/suplementos/creatina/ /producto/creatina 301
+/suplementos/liteplex /producto/liteplex 301
+/suplementos/liteplex/ /producto/liteplex 301
+/suplementos/bisglicinato-magnesio-gomitas /producto/bisglicinato-magnesio 301
+/suplementos/bisglicinato-magnesio-gomitas/ /producto/bisglicinato-magnesio 301
+/suplementos/haydar /producto/haydar 301
+/suplementos/haydar/ /producto/haydar 301
+/suplementos/Termoactiva* /producto/locion 301
 
 # ====================================================
-# 2. PRODUCTOS Y RUTAS ESPECÍFICAS RETIRADAS (HTTP 410 Gone)
+# 2. PRODUCTOS OBSOLETOS REDIRIGIDOS A CATEGORÍA
 # ====================================================
-/colageno-hidrolizado /404.html 410
-/colageno-hidrolizado/ /404.html 410
-/lemme-burn /404.html 410
-/lemme-burn/ /404.html 410
-/silymarin /404.html 410
-/silymarin/ /404.html 410
-/producto/shilajit /404.html 410
-/producto/shilajit/ /404.html 410
+/lemme-burn /categoria/salud-bienestar 301
+/lemme-burn/ /categoria/salud-bienestar 301
+/silymarin /categoria/salud-bienestar 301
+/silymarin/ /categoria/salud-bienestar 301
+/producto/shilajit /categoria/salud-bienestar 301
+/producto/shilajit/ /categoria/salud-bienestar 301
+/suplementos/omega369 /categoria/salud-bienestar 301
+/suplementos/omega369/ /categoria/salud-bienestar 301
+/suplementos/siemprebell /categoria/salud-bienestar 301
+/suplementos/siemprebell/ /categoria/salud-bienestar 301
+/suplementos/melenadeleon /categoria/salud-bienestar 301
+/suplementos/melenadeleon/ /categoria/salud-bienestar 301
+/suplementos/isoflavona /categoria/salud-bienestar 301
+/suplementos/isoflavona/ /categoria/salud-bienestar 301
+/suplementos/omega3 /categoria/salud-bienestar 301
+/suplementos/omega3/ /categoria/salud-bienestar 301
+/suplementos/calostrobovino /categoria/salud-bienestar 301
+/suplementos/calostrobovino/ /categoria/salud-bienestar 301
 
 # ====================================================
-# 3. VARIACIONES DE SUPLEMENTOS (HTTP 410 Gone)
+# 3. SECCIÓN /suplementos/* (Fallback a Categoría)
 # ====================================================
-/suplementos/tufoff /404.html 410
-/suplementos/tufoff/ /404.html 410
-/suplementos/coli /404.html 410
-/suplementos/coli/ /404.html 410
-/suplementos/citramix /404.html 410
-/suplementos/citramix/ /404.html 410
-/suplementos/resveratrolsoftgels /404.html 410
-/suplementos/resveratrolsoftgels/ /404.html 410
-/suplementos/ashwagandha /404.html 410
-/suplementos/ashwagandha/ /404.html 410
-/suplementos/rtafull /404.html 410
-/suplementos/rtafull/ /404.html 410
-/suplementos/colageno /404.html 410
-/suplementos/colageno/ /404.html 410
-/suplementos/colagenohidrolizado /404.html 410
-/suplementos/colagenohidrolizado/ /404.html 410
-/suplementos/omega369 /404.html 410
-/suplementos/omega369/ /404.html 410
-/suplementos/siemprebell /404.html 410
-/suplementos/siemprebell/ /404.html 410
-/suplementos/coffee-colageno /404.html 410
-/suplementos/coffee-colageno/ /404.html 410
-/suplementos/melenadeleon /404.html 410
-/suplementos/melenadeleon/ /404.html 410
-/suplementos/booster-lion /404.html 410
-/suplementos/booster-lion/ /404.html 410
-/suplementos/kds-10 /404.html 410
-/suplementos/kds-10/ /404.html 410
-/suplementos/creatina /404.html 410
-/suplementos/creatina/ /404.html 410
-/suplementos/liteplex /404.html 410
-/suplementos/liteplex/ /404.html 410
-/suplementos/bisglicinato-magnesio-gomitas /404.html 410
-/suplementos/bisglicinato-magnesio-gomitas/ /404.html 410
-/suplementos/isoflavona /404.html 410
-/suplementos/isoflavona/ /404.html 410
-/suplementos/omega3 /404.html 410
-/suplementos/omega3/ /404.html 410
-/suplementos/calostrobovino /404.html 410
-/suplementos/calostrobovino/ /404.html 410
-/suplementos/haydar /404.html 410
-/suplementos/haydar/ /404.html 410
-/suplementos/Termoactiva* /404.html 410
+/suplementos/* /categoria/salud-bienestar 301
 
 # ====================================================
-# 4. VARIACIONES DE FAJAS (HTTP 410 Gone)
+# 4. SECCIÓN /fajas/* Y FAJAS ESPECÍFICAS (Redirección a Inicio)
 # ====================================================
-/fajas/2611 /404.html 410
-/fajas/2611/ /404.html 410
-/fajas/2680 /404.html 410
-/fajas/2680/ /404.html 410
-/fajas/2668 /404.html 410
-/fajas/2668/ /404.html 410
-/fajas/2612 /404.html 410
-/fajas/2612/ /404.html 410
-/fajas/2644 /404.html 410
-/fajas/2644/ /404.html 410
-/fajas/2605 /404.html 410
-/fajas/2605/ /404.html 410
-/fajas/faja-body-reductor-completo-colombiano /404.html 410
-/fajas/faja-body-reductor-completo-colombiano/ /404.html 410
-/fajas/body-cachetero /404.html 410
-/fajas/body-cachetero/ /404.html 410
-/fajas/enterizo-deportivo-espalda-cubierta /404.html 410
-/fajas/enterizo-deportivo-espalda-cubierta/ /404.html 410
-/fajas/short-cachetero-con-varillas /404.html 410
-/fajas/short-cachetero-con-varillas/ /404.html 410
+/fajas/2611 / 301
+/fajas/2611/ / 301
+/fajas/2680 / 301
+/fajas/2680/ / 301
+/fajas/2668 / 301
+/fajas/2668/ / 301
+/fajas/2612 / 301
+/fajas/2612/ / 301
+/fajas/2644 / 301
+/fajas/2644/ / 301
+/fajas/2605 / 301
+/fajas/2605/ / 301
+/fajas/faja-body-reductor-completo-colombiano / 301
+/fajas/faja-body-reductor-completo-colombiano/ / 301
+/fajas/body-cachetero / 301
+/fajas/body-cachetero/ / 301
+/fajas/enterizo-deportivo-espalda-cubierta / 301
+/fajas/enterizo-deportivo-espalda-cubierta/ / 301
+/fajas/short-cachetero-con-varillas / 301
+/fajas/short-cachetero-con-varillas/ / 301
+/fajas/* / 301
