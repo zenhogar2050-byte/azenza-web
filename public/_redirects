@@ -1,6 +1,6 @@
 # Cloudflare Pages Redirects (HTTP 301 Permanent Redirects)
 # Syntax: <source> <destination> [status]
-# Note: Cloudflare Pages accepts: 200, 301, 302, 303, 307, 308.
+# Note: Specific rules are placed first; wildcard (splat) fallbacks are placed at the bottom.
 
 # ====================================================
 # 1. PRODUCTOS ESPECÍFICOS REDIRIGIDOS A SU URL ACTUAL
@@ -37,7 +37,10 @@
 /suplementos/bisglicinato-magnesio-gomitas/ /producto/bisglicinato-magnesio 301
 /suplementos/haydar /producto/haydar 301
 /suplementos/haydar/ /producto/haydar 301
-/suplementos/Termoactiva* /producto/locion 301
+/suplementos/termoactiva /producto/locion 301
+/suplementos/termoactiva/ /producto/locion 301
+/suplementos/Termoactiva /producto/locion 301
+/suplementos/Termoactiva/ /producto/locion 301
 
 # ====================================================
 # 2. PRODUCTOS OBSOLETOS REDIRIGIDOS A CATEGORÍA
@@ -62,12 +65,7 @@
 /suplementos/calostrobovino/ /categoria/salud-bienestar 301
 
 # ====================================================
-# 3. SECCIÓN /suplementos/* (Fallback a Categoría)
-# ====================================================
-/suplementos/* /categoria/salud-bienestar 301
-
-# ====================================================
-# 4. SECCIÓN /fajas/* Y FAJAS ESPECÍFICAS (Redirección a Inicio)
+# 3. FAJAS ESPECÍFICAS (Redirección a Inicio)
 # ====================================================
 /fajas/2611 / 301
 /fajas/2611/ / 301
@@ -89,4 +87,9 @@
 /fajas/enterizo-deportivo-espalda-cubierta/ / 301
 /fajas/short-cachetero-con-varillas / 301
 /fajas/short-cachetero-con-varillas/ / 301
+
+# ====================================================
+# 4. WILDCARDS / FALLBACKS (Al final del archivo)
+# ====================================================
+/suplementos/* /categoria/salud-bienestar 301
 /fajas/* / 301
