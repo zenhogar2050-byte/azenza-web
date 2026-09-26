@@ -57,68 +57,131 @@ export const trackPurchaseIfFromFacebook = (data) => {
   if (mins < 30) track('Purchase', data);
 };
 
-// Google Analytics (GA4) Helper Functions
-export const trackGooglePurchase = (orderData, ticketNumber) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    try {
-      window.gtag('event', 'purchase', {
-        transaction_id: ticketNumber || 'N/A',
-        value: Math.round(Number(orderData.value || 0)),
-        currency: 'COP',
-        items: [
-          {
-            item_id: ticketNumber || 'N/A',
-            item_name: orderData.content_name || 'Compra Zen Hogar',
-            price: Math.round(Number(orderData.value || 0)),
-            quantity: 1
-          }
-        ]
-      });
-      console.log('📊 [GA4] Purchase event tracked successfully:', ticketNumber, orderData.value);
-    } catch (e) {
-      console.error('❌ [GA4] Error tracking purchase:', e);
-    }
+// Google Analytics (GA4) & GTM Helper Functions
+export const trackGooglePurchase = (orderData = {}, ticketNumber) => {
+  if (typeof window === 'undefined') return;
+
+  // Force loading third party scripts immediately if available
+  if (typeof window.loadThirdParty === 'function') {
+    window.loadThirdParty();
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  if (!window.gtag) {
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+  }
+
+  const numericValue = Math.round(Number(orderData.value || 0));
+  const transactionId = String(ticketNumber || orderData.transaction_id || `PO-${Date.now()}`);
+
+  // Format items according to standard GA4 & Google Ads schema
+  let formattedItems = [];
+  if (Array.isArray(orderData.items) && orderData.items.length > 0) {
+    formattedItems = orderData.items.map((item, index) => ({
+      item_id: String(item.id || item.productId || item.item_id || ticketNumber || `item_${index + 1}`),
+      item_name: String(item.name || item.productName || item.item_name || orderData.content_name || 'Producto Azenza'),
+      price: Math.round(Number(item.price || numericValue)),
+      quantity: Number(item.quantity || item.qty || 1)
+    }));
   } else {
-    console.warn('⚠️ [GA4] gtag is not defined on window object');
+    formattedItems = [
+      {
+        item_id: transactionId,
+        item_name: orderData.content_name || 'Compra Azenza',
+        price: numericValue,
+        quantity: 1
+      }
+    ];
+  }
+
+  const purchasePayload = {
+    transaction_id: transactionId,
+    value: numericValue,
+    currency: 'COP',
+    items: formattedItems
+  };
+
+  try {
+    // 1. GA4 gtag dispatch
+    window.gtag('event', 'purchase', purchasePayload);
+
+    // 2. GTM dataLayer push with standard GA4 ecommerce structure
+    window.dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object as per GTM standard
+    window.dataLayer.push({
+      event: 'purchase',
+      ecommerce: purchasePayload
+    });
+
+    console.log('📊 [GA4/GTM] Purchase event tracked successfully:', transactionId, numericValue, purchasePayload);
+  } catch (e) {
+    console.error('❌ [GA4/GTM] Error tracking purchase:', e);
   }
 };
 
 export const trackGoogleWhatsAppClick = (orderData) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    try {
-      window.gtag('event', 'whatsapp_confirmation', {
-        value: Math.round(Number(orderData?.value || 0)),
-        currency: 'COP',
-        event_category: 'Engagement',
-        event_label: 'Confirmar Pedido WhatsApp'
-      });
-      console.log('📊 [GA4] WhatsApp Confirmation clicked and tracked successfully');
-    } catch (e) {
-      console.error('❌ [GA4] Error tracking WhatsApp click:', e);
-    }
-  } else {
-    console.warn('⚠️ [GA4] gtag is not defined on window object');
+  if (typeof window === 'undefined') return;
+  if (typeof window.loadThirdParty === 'function') {
+    window.loadThirdParty();
+  }
+  window.dataLayer = window.dataLayer || [];
+  if (!window.gtag) {
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+  }
+  try {
+    const payload = {
+      value: Math.round(Number(orderData?.value || 0)),
+      currency: 'COP',
+      event_category: 'Engagement',
+      event_label: 'Confirmar Pedido WhatsApp'
+    };
+    window.gtag('event', 'whatsapp_confirmation', payload);
+    window.dataLayer.push({
+      event: 'whatsapp_confirmation',
+      ...payload
+    });
+    console.log('📊 [GA4/GTM] WhatsApp Confirmation clicked and tracked successfully');
+  } catch (e) {
+    console.error('❌ [GA4/GTM] Error tracking WhatsApp click:', e);
   }
 };
 
 export const trackGoogleBeginCheckout = (value) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    try {
-      window.gtag('event', 'begin_checkout', {
-        value: Math.round(Number(value || 0)),
-        currency: 'COP',
-        items: [
-          {
-            item_name: 'Checkout Zen Hogar',
-            price: Math.round(Number(value || 0)),
-            quantity: 1
-          }
-        ]
-      });
-      console.log('📊 [GA4] Begin Checkout event tracked successfully:', value);
-    } catch (e) {
-      console.error('❌ [GA4] Error tracking begin_checkout:', e);
-    }
+  if (typeof window === 'undefined') return;
+  if (typeof window.loadThirdParty === 'function') {
+    window.loadThirdParty();
+  }
+  window.dataLayer = window.dataLayer || [];
+  if (!window.gtag) {
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+  }
+  try {
+    const numericVal = Math.round(Number(value || 0));
+    const payload = {
+      value: numericVal,
+      currency: 'COP',
+      items: [
+        {
+          item_id: 'checkout_azenza',
+          item_name: 'Checkout Azenza',
+          price: numericVal,
+          quantity: 1
+        }
+      ]
+    };
+    window.gtag('event', 'begin_checkout', payload);
+    window.dataLayer.push({ ecommerce: null });
+    window.dataLayer.push({
+      event: 'begin_checkout',
+      ecommerce: payload
+    });
+    console.log('📊 [GA4/GTM] Begin Checkout event tracked successfully:', numericVal);
+  } catch (e) {
+    console.error('❌ [GA4/GTM] Error tracking begin_checkout:', e);
   }
 };
-

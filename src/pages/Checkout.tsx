@@ -332,23 +332,30 @@ export default function Checkout() {
       const encodedMessage = encodeURIComponent(message);
       const finalWhatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappTarget}&text=${encodedMessage}`;
       
+      const serializedItems = items.map(i => ({
+        id: i.productId, 
+        name: i.productName, 
+        price: i.price, 
+        qty: i.quantity
+      }));
+
       localStorage.setItem('lastOrder', JSON.stringify({ 
         total: total, 
         ticketNumber: currentTicket,
         whatsappUrl: finalWhatsappUrl,
         email: formData.email || "contacto@azenza.com.co",
-        items: items.map(i => ({
-          id: i.productId, 
-          name: i.productName, 
-          price: i.price, 
-          qty: i.quantity
-        })) 
+        items: serializedItems 
       }));
 
       clearCart();
       navigate('/gracias', { 
         state: { 
-          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@azenza.com.co" },
+          orderData: { 
+            value: total, 
+            currency: 'COP', 
+            email: formData.email || "contacto@azenza.com.co",
+            items: serializedItems
+          },
           whatsappUrl: finalWhatsappUrl,
           ticketNumber: currentTicket
         } 
@@ -359,7 +366,17 @@ export default function Checkout() {
       console.error('Error:', error);
       navigate('/gracias', { 
         state: { 
-          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@azenza.com.co" },
+          orderData: { 
+            value: total, 
+            currency: 'COP', 
+            email: formData.email || "contacto@azenza.com.co",
+            items: items.map(i => ({
+              id: i.productId, 
+              name: i.productName, 
+              price: i.price, 
+              qty: i.quantity
+            }))
+          },
           whatsappUrl: `https://api.whatsapp.com/send?phone=573024102568&text=${encodeURIComponent('Error al procesar pedido, por favor contactar soporte.')}`,
           ticketNumber: 'ERROR'
         } 

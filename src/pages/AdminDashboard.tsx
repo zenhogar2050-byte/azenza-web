@@ -3834,23 +3834,29 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                         </div>
                       ) : (
                         <>
-                          <div className="flex items-center justify-between gap-2">
-                            <div className="font-bold text-stone-900 leading-tight">
-                              {selectedOrder.customer.nombre || selectedOrder.customer.fullName ? (
-                                `${selectedOrder.customer.nombre || ''} ${selectedOrder.customer.apellido || ''} ${selectedOrder.customer.fullName || ''}`.trim()
-                              ) : 'Cliente sin nombre'}
-                            </div>
-                            {(selectedOrder.customer.nombre || selectedOrder.customer.fullName) && (
-                              <button
-                                type="button"
-                                onClick={() => copyToClipboard(`${selectedOrder.customer.nombre || ''} ${selectedOrder.customer.apellido || ''} ${selectedOrder.customer.fullName || ''}`.trim())}
-                                title="Copiar nombre completo"
-                                className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
-                              >
-                                <Copy className="w-3.5 h-3.5" />
-                              </button>
-                            )}
-                          </div>
+                          {(() => {
+                            const cust = selectedOrder.customer || {};
+                            const clientFullName = (cust.nombre 
+                              ? `${cust.nombre} ${cust.apellido || ''}`.trim() 
+                              : (cust.fullName || 'Cliente sin nombre')).trim();
+                            return (
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="font-bold text-stone-900 leading-tight">
+                                  {clientFullName}
+                                </div>
+                                {(cust.nombre || cust.fullName) && (
+                                  <button
+                                    type="button"
+                                    onClick={() => copyToClipboard(clientFullName)}
+                                    title="Copiar nombre completo"
+                                    className="p-1 text-stone-400 hover:text-stone-700 hover:bg-stone-100 rounded transition-colors shrink-0"
+                                  >
+                                    <Copy className="w-3.5 h-3.5" />
+                                  </button>
+                                )}
+                              </div>
+                            );
+                          })()}
                           <div className="flex items-center justify-between gap-2 text-stone-600 text-sm">
                             <div className="flex items-center gap-2 truncate">
                               <Mail className="w-4 h-4 text-stone-400 shrink-0" /> 
