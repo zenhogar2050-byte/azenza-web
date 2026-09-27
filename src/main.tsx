@@ -1,28 +1,14 @@
-import { hydrateRoot } from 'react-dom/client';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App.tsx';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 import './index.css';
 
-const container = document.getElementById('root')!;
+const rootElement = document.getElementById('root');
 
-if (container.hasChildNodes()) {
-  hydrateRoot(
-    container,
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   );
-} else {
-  import('react-dom/client').then(({ createRoot }) => {
-    createRoot(container).render(
-      <HelmetProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </HelmetProvider>
-    );
-  });
 }

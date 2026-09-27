@@ -11,7 +11,7 @@ interface StickyCTAProps {
   originalPrice?: number;
   onBuy: () => void;
   showAlwaysOnMobile?: boolean;
-  desktopTriggerRef?: React.RefObject<HTMLElement>;
+  desktopTriggerRef?: React.RefObject<HTMLElement | null>;
   promos?: { id: string; label: string; price: number }[];
   selectedPromoId?: string;
   onPromoChange?: (id: string) => void;

@@ -139,7 +139,7 @@ export default function CategoryPage() {
         description={`${category.description} Encuentra soluciones naturales para tu bienestar con productos naturales originales.`}
         canonicalUrl={`/categoria/${category.id}`}
         type="category"
-        productData={{ categoryProducts }}
+        categoryProducts={categoryProducts}
       />
       
       {/* Floating Category Navigation */}
@@ -207,83 +207,82 @@ export default function CategoryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {categoryProducts.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {categoryProducts.map((product, index) => (
+              {(categoryProducts as any[]).map((product: any, index: number) => (
                 <motion.div
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={cn(
-                    "group bg-white rounded-3xl p-4 border border-stone-200 transition-all flex flex-col h-full",
-                    theme.hover
-                  )}
+                  transition={{ delay: index * 0.05 }}
+                  className="group bg-white rounded-[2rem] p-5 border-2 border-emerald-300 hover:border-emerald-400 hover:shadow-xl transition-all flex flex-col h-full shadow-sm"
                 >
                   <Link to={isCombosCategory ? `/combo/${product.id}` : `/producto/${product.id}`} className="flex flex-col h-full">
-                    <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100 mb-6 flex items-center justify-center p-2 shrink-0">
+                    <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100/70 mb-5 flex items-center justify-center p-3 shrink-0">
                       <Image
                         src={product.image}
                         alt={product.name}
                         preset="card"
-                        className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="px-2 flex flex-col flex-grow">
-                      <div className="flex flex-col gap-2 mb-3">
-                        <h3 className="text-xl font-bold text-stone-900 font-display leading-tight">{product.name}</h3>
-                        <div className="flex flex-wrap items-center gap-1.5 min-h-[32px]">
-                          {(product.size || product.presentation) && (
-                            <div className="inline-block px-2.5 py-1.5 rounded-lg bg-white text-stone-900 text-[10px] font-normal border border-stone-200 shadow-sm whitespace-nowrap">
-                              <div className="flex items-center gap-1.5">
-                                {product.size && <span>{product.size}</span>}
-                                {product.size && product.presentation && <span className="w-1 h-1 rounded-full bg-stone-300" />}
-                                {product.presentation && <span>{product.presentation}</span>}
-                              </div>
+                    <div className="flex flex-col flex-grow text-left">
+                      <h3 className="text-2xl font-black text-stone-900 font-display leading-tight mb-2">{product.name}</h3>
+                      
+                      <div className="flex flex-wrap items-center gap-2 mb-4">
+                        {(product.size || product.presentation) && (
+                          <div className="inline-flex items-center px-3 py-1 rounded-lg bg-white text-stone-600 text-xs font-medium border border-stone-200 shadow-sm">
+                            <div className="flex items-center gap-1.5">
+                              {product.size && <span>{product.size}</span>}
+                              {product.size && product.presentation && <span className="w-1 h-1 rounded-full bg-stone-300" />}
+                              {product.presentation && <span>{product.presentation}</span>}
                             </div>
-                          )}
-                          {isCombosCategory ? (
-                            <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 text-[10px] font-bold border border-emerald-100 shadow-sm">
-                              <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-                              <span className="whitespace-nowrap">
-                                {product.badge && !product.badge.toUpperCase().includes('COMBO N°') 
-                                  ? product.badge 
-                                  : 'COMBOS'}
-                              </span>
+                          </div>
+                        )}
+                        {isCombosCategory ? (
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-100 shadow-sm">
+                            <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+                            <span className="whitespace-nowrap">
+                              {product.badge && !product.badge.toUpperCase().includes('COMBO N°') 
+                                ? product.badge 
+                                : 'COMBOS'}
+                            </span>
+                          </div>
+                        ) : (
+                          product.invima && (
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-stone-700 text-xs font-semibold border border-stone-200 shadow-sm">
+                              <ShieldCheck className="w-3.5 h-3.5 text-[#009b63]" />
+                              <span>INVIMA: {product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}</span>
                             </div>
-                          ) : (
-                            product.invima && (
-                              <div className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white text-stone-900 text-[10px] font-normal border border-stone-200 shadow-sm">
-                                <ShieldCheck className="w-3.5 h-3.5 text-stone-400 group-hover:text-emerald-500 transition-colors" />
-                                <span className="whitespace-nowrap">INVIMA: {product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}</span>
-                              </div>
-                            )
-                          )}
-                        </div>
+                          )
+                        )}
                       </div>
-                      <div className="flex flex-col gap-1 mb-4">
-                        <span className={cn("text-[20px] font-black uppercase tracking-wider", theme.text)}>Es útil para:</span>
-                        <p className="text-stone-500 text-sm line-clamp-2">{product.shortDescription}</p>
+
+                      <div className="mb-3">
+                        <h4 className="text-base font-black text-[#009b63] uppercase tracking-wide mb-1 font-display">
+                          {isCombosCategory ? 'EL COMBO CONTIENE:' : 'ES ÚTIL PARA:'}
+                        </h4>
+                        <p className="text-stone-600 text-sm leading-relaxed">
+                          {isCombosCategory ? product.components : product.shortDescription}
+                        </p>
                       </div>
 
                       {/* Benefits with checkmarks */}
                       <div className="space-y-2 mb-6">
-                        {product.benefits.slice(0, 3).map((benefit, i) => (
+                        {(product.benefits || []).slice(0, 3).map((benefit: string, i: number) => (
                           <div key={i} className="flex items-start gap-2">
-                            <CheckCircle2 className={cn("w-4 h-4 flex-shrink-0 mt-0.5", theme.text === 'text-stone-600' ? 'text-emerald-800' : theme.text)} />
-                            <span className="text-xs text-stone-700 font-medium">
+                            <CheckCircle2 className="w-4 h-4 text-[#009b63] shrink-0 mt-0.5" />
+                            <span className="text-xs text-stone-700 font-normal leading-snug">
                               {benefit}
                             </span>
                           </div>
                         ))}
                       </div>
+
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-stone-100">
-                        <span className={cn("text-2xl font-bold", theme.text)}>Desde {formatCurrency(product.basePrice)}</span>
-                        <div className={cn(
-                          "w-10 h-10 rounded-full text-white flex items-center justify-center transition-colors bg-stone-900 shrink-0",
-                          category.color === 'emerald' && "group-hover:bg-emerald-600",
-                          category.color === 'rose' && "group-hover:bg-rose-600",
-                          category.color === 'purple' && "group-hover:bg-purple-600"
-                        )}>
+                        <span className="text-2xl font-black text-[#009b63] font-display">
+                          {isCombosCategory ? `$ ${(product.price || product.basePrice).toLocaleString('es-CO')}` : `Desde $ ${product.basePrice.toLocaleString('es-CO')}`}
+                        </span>
+                        <div className="w-11 h-11 rounded-full bg-[#009b63] text-white flex items-center justify-center hover:bg-emerald-700 transition-colors shadow-sm shrink-0">
                           <ArrowRight className="w-5 h-5" />
                         </div>
                       </div>

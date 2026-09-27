@@ -5,7 +5,7 @@ import { COLOMBIA_DATA, ECUADOR_DATA, PRODUCTS, COMBO_OF_THE_MONTH, PROMOTIONS, 
 import { formatCurrency, formatPriceForAPI } from '../utils';
 import { Trash2, Plus, Minus, ShoppingBag, Send, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
-import { track, trackGoogleBeginCheckout } from '../utils/pixel';
+import { track, trackGoogleBeginCheckout, trackGooglePurchase } from '../utils/pixel';
 import OrderBump from '../components/OrderBump';
 import { BUMP_OPPORTUNITIES } from '../lib/bump-logic';
 import { saveOrderToFirebase, getNextOrderTicket } from '../lib/firebase';
@@ -151,9 +151,10 @@ export default function Checkout() {
     setIsSubmitting(true);
 
     const orderDetails = items.map(item => {
-      // Si el ítem es un combo, buscar los nombres de sus productos individuales
-      let comboProductsText = '';
-      if (item.promoId === 'combo' || item.productId.startsWith('promo-') || item.productId.startsWith('combo-')) {
+      // 1. Si el ítem es un combo, detallar los productos que incluye
+      const isCombo = item.promoId === 'combo' || item.productId.startsWith('promo-') || item.productId.startsWith('combo-');
+      if (isCombo) {
+        let comboProductsText = '';
         const promo = (item.productId === COMBO_OF_THE_MONTH.id || item.productName.toLowerCase().includes(COMBO_OF_THE_MONTH.name.toLowerCase()))
           ? COMBO_OF_THE_MONTH
           : PROMOTIONS.find(p => p.id === item.productId || item.productName.toLowerCase().includes(p.name.toLowerCase()));
@@ -167,9 +168,20 @@ export default function Checkout() {
             comboProductsText = `\n  📦 *Incluye:* ${productNames}`;
           }
         }
+        const comboQty = item.quantity > 1 ? ` (x${item.quantity} Combos)` : '';
+        return `• *${item.productName}*${comboQty}: ${formatCurrency(item.price * item.quantity)}${comboProductsText}`;
       }
 
-      return `- ${item.productName} (${item.promoLabel}) x${item.quantity}: ${formatCurrency(item.price * item.quantity)}${comboProductsText}`;
+      // 2. Si es una promoción multianidad (Pague 2 Lleve 3, Pague 3 Lleve 5, 2 Unidades, etc.)
+      const totalUnits = (item.units && item.units > 1) ? (item.units * item.quantity) : item.quantity;
+      if (item.units && item.units > 1) {
+        const packInfo = item.quantity > 1 ? ` (x${item.quantity} Packs - Total: ${totalUnits} Unidades)` : ` (Recibe ${totalUnits} Unidades en total)`;
+        return `• *${item.productName}* [${item.promoLabel}]${packInfo}: ${formatCurrency(item.price * item.quantity)}`;
+      }
+
+      // 3. Unidad estándar individual
+      const unitStr = item.quantity > 1 ? ` (x${item.quantity} Unidades)` : ` (1 Unidad)`;
+      return `• *${item.productName}*${unitStr}: ${formatCurrency(item.price * item.quantity)}`;
     }).join('\n');
 
     try {
@@ -332,23 +344,40 @@ export default function Checkout() {
       const encodedMessage = encodeURIComponent(message);
       const finalWhatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappTarget}&text=${encodedMessage}`;
       
+      const serializedItems = items.map(i => ({
+        id: i.productId, 
+        name: i.productName, 
+        price: i.price, 
+        qty: i.quantity,
+        quantity: i.quantity
+      }));
+
+      // Inmediata ejecución de purchase event con beacon transport
+      trackGooglePurchase({
+        value: total,
+        currency: 'COP',
+        items: serializedItems
+      }, currentTicket, formData);
+
       localStorage.setItem('lastOrder', JSON.stringify({ 
         total: total, 
         ticketNumber: currentTicket,
         whatsappUrl: finalWhatsappUrl,
         email: formData.email || "contacto@azenza.com.co",
-        items: items.map(i => ({
-          id: i.productId, 
-          name: i.productName, 
-          price: i.price, 
-          qty: i.quantity
-        })) 
+        customer: formData,
+        items: serializedItems 
       }));
 
       clearCart();
       navigate('/gracias', { 
         state: { 
-          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@azenza.com.co" },
+          orderData: { 
+            value: total, 
+            currency: 'COP', 
+            email: formData.email || "contacto@azenza.com.co",
+            customer: formData,
+            items: serializedItems
+          },
           whatsappUrl: finalWhatsappUrl,
           ticketNumber: currentTicket
         } 
@@ -359,7 +388,17 @@ export default function Checkout() {
       console.error('Error:', error);
       navigate('/gracias', { 
         state: { 
-          orderData: { value: total, currency: 'COP', email: formData.email || "contacto@azenza.com.co" },
+          orderData: { 
+            value: total, 
+            currency: 'COP', 
+            email: formData.email || "contacto@azenza.com.co",
+            items: items.map(i => ({
+              id: i.productId, 
+              name: i.productName, 
+              price: i.price, 
+              qty: i.quantity
+            }))
+          },
           whatsappUrl: `https://api.whatsapp.com/send?phone=573024102568&text=${encodeURIComponent('Error al procesar pedido, por favor contactar soporte.')}`,
           ticketNumber: 'ERROR'
         } 

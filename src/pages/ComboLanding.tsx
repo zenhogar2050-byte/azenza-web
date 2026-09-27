@@ -167,9 +167,9 @@ export default function ComboLanding() {
             <span className="text-base sm:text-lg">Volver</span>
           </button>
 
-          <div className="lg:hidden text-3xl sm:text-4xl font-bold text-[var(--color-brand-primary)] mb-6 leading-tight font-display">
+          <h1 className="lg:hidden text-3xl sm:text-4xl font-bold text-[var(--color-brand-primary)] mb-6 leading-tight font-display">
             {cleanPromoName(combo.name)}
-          </div>
+          </h1>
 
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-16 items-start">
             <div className="flex flex-col gap-4 lg:gap-12">

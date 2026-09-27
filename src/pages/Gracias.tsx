@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { CheckCircle2, Send, ShoppingBag } from 'lucide-react';
-import { trackPurchaseIfFromFacebook, track, trackGooglePurchase } from '../utils/pixel';
+import { trackPurchaseIfFromFacebook, track, trackGooglePurchase, trackGoogleWhatsAppClick } from '../utils/pixel';
 
 export default function Gracias() {
   const location = useLocation();
@@ -25,32 +25,36 @@ export default function Gracias() {
         orderData: {
           value: location.state.orderData?.value || 0,
           currency: location.state.orderData?.currency || 'COP',
-          email: location.state.orderData?.email || "contacto@azenza.com.co"
+          email: location.state.orderData?.email || "contacto@azenza.com.co",
+          items: location.state.orderData?.items || []
         },
         whatsappUrl: location.state.whatsappUrl,
         ticketNumber: location.state.ticketNumber
       };
     }
     
-    try {
-      const saved = JSON.parse(localStorage.getItem('lastOrder') || '{}');
-      if (saved.total) {
-        return {
-          orderData: { 
-            value: saved.total, 
-            currency: 'COP', 
-            email: saved.email || "contacto@azenza.com.co" 
-          },
-          whatsappUrl: saved.whatsappUrl || 'https://wa.me/573024102568',
-          ticketNumber: saved.ticketNumber || 'N/A'
-        };
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = JSON.parse(localStorage.getItem('lastOrder') || '{}');
+        if (saved.total) {
+          return {
+            orderData: { 
+              value: saved.total, 
+              currency: 'COP', 
+              email: saved.email || "contacto@azenza.com.co",
+              items: saved.items || []
+            },
+            whatsappUrl: saved.whatsappUrl || 'https://wa.me/573024102568',
+            ticketNumber: saved.ticketNumber || 'N/A'
+          };
+        }
+      } catch (e) {
+        console.error("Error loading saved order:", e);
       }
-    } catch (e) {
-      console.error('Error loading saved order:', e);
     }
     
     return {
-      orderData: { value: 0, currency: 'COP', email: "contacto@azenza.com.co" },
+      orderData: { value: 0, currency: 'COP', email: "contacto@azenza.com.co", items: [] },
       whatsappUrl: 'https://wa.me/573024102568',
       ticketNumber: 'PENDIENTE'
     };
@@ -61,7 +65,7 @@ export default function Gracias() {
   // Integración de Google Customer Reviews Opt-In
   useEffect(() => {
     const emailToUse = orderData.email || 'contacto@azenza.com.co';
-    const orderIdToUse = ticketNumber || `AZ-${Date.now()}`;
+    const orderIdToUse = ticketNumber || `PO-${Date.now()}`;
     const countryToUse = 'CO'; // Colombia (CO)
 
     // Calcular fecha estimada de entrega: Hoy + 3 días en formato YYYY-MM-DD
@@ -129,7 +133,7 @@ export default function Gracias() {
     };
   }, [ticketNumber, orderData.email]);
 
-  // Registro automático de la compra en el Píxel al cargar la página
+  // Registro automático de la compra en el Píxel y Google Analytics al cargar la página
   useEffect(() => {
     if (orderData.value > 0) {
       trackPurchaseIfFromFacebook({ 
@@ -138,11 +142,12 @@ export default function Gracias() {
         content_name: 'Compra Finalizada',
         content_ids: [ticketNumber]
       });
-      // Registrar la compra estructurada en Google Analytics (GA4)
+      // Registrar la compra estructurada en Google Analytics (GA4) y GTM
       trackGooglePurchase({
         value: orderData.value,
-        content_name: 'Compra Finalizada'
-      }, ticketNumber);
+        content_name: 'Compra Finalizada',
+        items: orderData.items && orderData.items.length > 0 ? orderData.items : undefined
+      }, ticketNumber, (orderData as any).customer);
     }
   }, [orderData.value, ticketNumber]);
 
@@ -183,12 +188,11 @@ export default function Gracias() {
             href={whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
+            onClick={() => trackGoogleWhatsAppClick(orderData)}
             className="w-full inline-flex items-center justify-center gap-3 px-8 py-6 bg-emerald-600 text-white rounded-2xl font-black text-xl hover:bg-emerald-700 transition-all shadow-xl shadow-emerald-600/30 active:scale-95"
           >
             <Send className="w-6 h-6 fill-current" /> CONFIRMAR PEDIDO
           </a>
-          
-
         </div>
 
         <Link 

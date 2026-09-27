@@ -48,15 +48,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem('azenza_cart') || localStorage.getItem('zenhogar_cart');
-    if (saved) {
-      setItems(JSON.parse(saved));
+    try {
+      const saved = localStorage.getItem('azenza_cart') || localStorage.getItem('zenhogar_cart');
+      if (saved) {
+        setItems(JSON.parse(saved));
+      }
+    } catch (e) {
+      console.error('Error reading cart from localStorage', e);
     }
   }, []);
 
   useEffect(() => {
-    if (items.length > 0 || localStorage.getItem('azenza_cart')) {
-      localStorage.setItem('azenza_cart', JSON.stringify(items));
+    try {
+      if (items.length > 0 || localStorage.getItem('azenza_cart')) {
+        localStorage.setItem('azenza_cart', JSON.stringify(items));
+      }
+    } catch (e) {
+      console.error('Error saving cart to localStorage', e);
     }
   }, [items]);
 

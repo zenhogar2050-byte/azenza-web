@@ -17,12 +17,9 @@ export function formatCurrency(value: number, country?: string) {
     }).format(value);
   }
 
-  return new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(Math.round(value));
+  const rounded = Math.round(Number(value) || 0);
+  const formattedNumber = rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return `$${formattedNumber}`;
 }
 
 export function formatPriceForAPI(value: number) {

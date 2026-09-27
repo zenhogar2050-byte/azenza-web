@@ -1,8 +1,21 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { formatCurrency } from '../utils';
 import { generateSchemaGraph } from '../lib/seo-logic';
 
-const SEOManager = ({ 
+export interface SEOManagerProps {
+    title: string;
+    description: string;
+    canonicalUrl: string;
+    ogImage?: string;
+    type?: string;
+    productData?: any;
+    categoryProducts?: any[];
+    faqs?: Array<{ q: string; a: string }>;
+    keywords?: string[];
+}
+
+const SEOManager: React.FC<SEOManagerProps> = ({ 
     title, 
     description, 
     canonicalUrl, 

@@ -36,99 +36,71 @@
     <link rel="preload" href="/assets/logo/logo-icon.webp" as="image" type="image/webp">
     <link rel="preload" href="/assets/products/Titancoffee.webp" as="image" type="image/webp">
     
-    <!-- Google Fonts with display=swap for better FCP -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    </noscript>
+    <!-- Google Fonts Outfit and Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap">
 
+    <!-- 1. Google Tag Manager (GTM) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFBZV838');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- 2. Global site tag (gtag.js) - Google Analytics 4 (GA4) & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX2FWC4PV6"></script>
     <script type="text/javascript">
-      // Ultra-Optimized Delayed Loading of Third-Party Tracking & Widgets (Improves Mobile FCP/LCP/TBT)
-      function loadThirdParty() {
-        // Excluir panel de administración de rastreadores y analíticas
-        if (window.location.pathname.indexOf('/admin') === 0) return;
-
-        // Only load if not already loaded
-        if (window.scriptsLoaded) return;
-        window.scriptsLoaded = true;
-
-        // 1. Google Tag Manager
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KFBZV838');
-
-        // 2. Google Analytics 4 (gtag.js)
-        var ga = document.createElement('script');
-        ga.async = true;
-        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZX2FWC4PV6';
-        document.head.appendChild(ga);
-        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-ZX2FWC4PV6');
-
-        // 3. Facebook Pixel
-        if (!window.fbq) {
-          !(function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
-          }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'));
-          fbq('init', '26749410671349006');
-          fbq('track', 'PageView');
-        }
-
-        // 4. Google Merchant Badge Widget (Deferred with idle callback)
-        var loadMerchant = function() {
-          var mw = document.createElement('script');
-          mw.id = 'merchantWidgetScript';
-          mw.src = 'https://www.gstatic.com/shopping/merchant/merchantwidget.js';
-          mw.defer = true;
-          mw.addEventListener('load', function () {
-            if (window.merchantwidget) {
-              window.merchantwidget.start({
-                merchant_id: 5781084661,
-                position: 'BOTTOM_LEFT',
-                region: 'CO'
-              });
-              
-              // Ensure accessibility title on injected iframe
-              setTimeout(function() {
-                var iframe = document.getElementById('merchantwidgetiframe');
-                if (iframe && !iframe.getAttribute('title')) {
-                  iframe.setAttribute('title', 'Google Merchant Badge');
-                }
-              }, 1500);
-            }
-          });
-          document.head.appendChild(mw);
-        };
-
-        if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(loadMerchant, { timeout: 4000 });
-        } else {
-          setTimeout(loadMerchant, 2000);
-        }
-      }
-
-      // Defer third-party scripts until user interacts or idle time
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(function() {
-          setTimeout(loadThirdParty, 4000);
-        }, { timeout: 6000 });
-      } else {
-        window.addEventListener('load', function() {
-          setTimeout(loadThirdParty, 4500);
-        });
-      }
-
-      // Instant activation on user interaction
-      ['mousedown', 'touchstart', 'scroll', 'keydown', 'wheel'].forEach(function(e) {
-        window.addEventListener(e, loadThirdParty, { once: true, passive: true });
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-ZX2FWC4PV6', {
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure'
       });
+    </script>
+
+    <!-- 3. Meta Pixel Code -->
+    <script type="text/javascript">
+      !(function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+      }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'));
+      fbq('init', '26749410671349006');
+      fbq('track', 'PageView');
+    </script>
+
+    <!-- 4. Google Merchant Badge Widget (Deferred) -->
+    <script type="text/javascript">
+      function loadMerchantWidget() {
+        var mw = document.createElement('script');
+        mw.id = 'merchantWidgetScript';
+        mw.src = 'https://www.gstatic.com/shopping/merchant/merchantwidget.js';
+        mw.defer = true;
+        mw.addEventListener('load', function () {
+          if (window.merchantwidget) {
+            window.merchantwidget.start({
+              merchant_id: 5781084661,
+              position: 'BOTTOM_LEFT',
+              region: 'CO'
+            });
+            setTimeout(function() {
+              var iframe = document.getElementById('merchantwidgetiframe');
+              if (iframe && !iframe.getAttribute('title')) {
+                iframe.setAttribute('title', 'Google Merchant Badge');
+              }
+            }, 1500);
+          }
+        });
+        document.head.appendChild(mw);
+      }
+
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadMerchantWidget, { timeout: 3000 });
+      } else {
+        setTimeout(loadMerchantWidget, 1500);
+      }
 
       // SPA Path handling
       (function(l) {

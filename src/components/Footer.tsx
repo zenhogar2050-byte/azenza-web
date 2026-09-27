@@ -1,42 +1,49 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function Footer() {
+export const Footer: React.FC = () => {
   return (
-    <footer className="bg-stone-900 text-white py-16 lg:py-24">
+    <footer className="bg-[#141414] text-stone-300 pt-16 pb-12 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-12 lg:gap-16 mb-16 items-start">
-          {/* Brand Section */}
+        
+        {/* Main Grid: 4 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start pb-12 border-b border-stone-800/80">
+          
+          {/* Col 1: DIOS BENDICE ESTE NEGOCIO */}
           <div className="space-y-4">
-            <p className="text-2xl font-black text-stone-200 tracking-tighter uppercase">
-              Dios Bendice este Negocio
-            </p>
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
+            <h3 className="text-xl font-black text-white tracking-tight uppercase font-display">
+              DIOS BENDICE ESTE NEGOCIO
+            </h3>
+            
+            <Link to="/" className="flex items-center gap-3 pt-1 group inline-flex">
+              <div className="w-10 h-10 flex-shrink-0">
                 <img 
                   src="/assets/logo/logo-icon.webp" 
-                  alt="Azenza Icon" 
+                  alt="Azenza Logo" 
                   className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
                   loading="lazy"
-                  width="64"
-                  height="64"
+                  width="40"
+                  height="40"
                 />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-2xl font-black text-white tracking-tighter uppercase">Azenza</span>
-                <span className="text-[10px] font-bold text-emerald-400 tracking-[0.2em] uppercase">Salud Vital</span>
+                <span className="text-xl font-black text-white tracking-tight uppercase">AZENZA</span>
+                <span className="text-[9px] font-bold text-emerald-400 tracking-[0.2em] uppercase mt-0.5">SALUD VITAL</span>
               </div>
             </Link>
-            <p className="text-stone-300 max-w-sm leading-relaxed text-lg">
+
+            <p className="text-sm text-stone-300 leading-relaxed max-w-xs">
               Dedicados a llevar el bienestar natural a cada hogar colombiano. Calidad, confianza y salud en cada producto.
             </p>
           </div>
 
-          {/* Quick Links Section */}
+          {/* Col 2: NOSOTROS */}
           <div>
-            <h2 className="text-xl font-bold mb-8 text-white uppercase tracking-wider text-sm">Nosotros</h2>
-            <ul className="space-y-4 text-stone-200">
+            <h3 className="text-lg font-bold uppercase tracking-wider text-white mb-5 font-display">
+              NOSOTROS
+            </h3>
+            <ul className="space-y-3 text-sm text-stone-300">
               <li>
                 <Link to="/quienes-somos" className="hover:text-emerald-400 transition-colors">Quiénes Somos</Link>
               </li>
@@ -47,7 +54,7 @@ export default function Footer() {
                 <Link to="/politica-reembolso" className="hover:text-emerald-400 transition-colors">Política de Reembolso</Link>
               </li>
               <li>
-                <Link to="/terminos-servicio" className="hover:text-emerald-400 transition-colors">Términos del Servicio</Link>
+                <Link to="/terminos-servicio" className="text-emerald-400 font-medium hover:underline transition-colors">Términos del Servicio</Link>
               </li>
               <li>
                 <Link to="/condiciones-entrega" className="hover:text-emerald-400 transition-colors">Condiciones de Entrega</Link>
@@ -58,116 +65,108 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Section */}
+          {/* Col 3: CONTACTO */}
           <div>
-            <h2 className="text-xl font-bold mb-8 text-white uppercase tracking-wider text-sm">Contacto</h2>
-            <ul className="space-y-6 text-stone-200">
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-emerald-400" />
+            <h3 className="text-lg font-bold uppercase tracking-wider text-white mb-5 font-display">
+              CONTACTO
+            </h3>
+            <div className="space-y-4 text-sm">
+              
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-[#1f1f1f] border border-stone-800 flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-stone-300 uppercase tracking-widest mb-1" aria-label="Dirección administrativa de registro únicamente">Dirección Administrativa</p>
-                  <address className="not-italic text-stone-200 text-sm leading-relaxed">
-                    {/* Dirección administrativa de registro (cumplimiento Merchant Center - No atención física) */}
-                    Calle 3a #23 - 40 <br />
-                    Puerto Colombia, Atlántico, Colombia <br />
-                  </address>
+                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">DIRECCIÓN ADMINISTRATIVA</p>
+                  <p className="text-white font-medium text-xs">Calle 3a #23 - 40</p>
+                  <p className="text-stone-300 text-xs">Puerto Colombia, Atlántico, Colombia</p>
                 </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-emerald-400" />
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-lg bg-[#1f1f1f] border border-stone-800 flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-stone-300 uppercase tracking-widest mb-1">WhatsApp</p>
-                  <a 
-                    href="https://wa.me/573024102568" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-white hover:text-emerald-400 transition-colors text-lg font-medium"
-                  >
-                    +57 302 410 2568
-                  </a>
+                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">WHATSAPP</p>
+                  <p className="text-white font-bold text-sm">+57 302 410 2568</p>
                 </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-emerald-400" />
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-[#1f1f1f] border border-stone-800 flex items-center justify-center shrink-0 mt-0.5">
+                  <Mail className="w-4 h-4 text-emerald-400" />
                 </div>
-                <div className="space-y-1">
-                  <p className="text-[10px] font-bold text-stone-300 uppercase tracking-widest mb-1">Correos</p>
-                  <a href="mailto:ventas@azenza.com.co" className="text-white hover:text-emerald-400 transition-colors block font-medium">ventas@azenza.com.co</a>
-                  <a href="mailto:info@azenza.com.co" className="text-white hover:text-emerald-400 transition-colors block font-medium">info@azenza.com.co</a>
-                  <a href="mailto:soporte@azenza.com.co" className="text-white hover:text-emerald-400 transition-colors block font-medium">soporte@azenza.com.co</a>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">CORREOS</p>
+                  <a href="mailto:ventas@azenza.com.co" className="text-white font-medium block hover:text-emerald-400 transition-colors text-xs">ventas@azenza.com.co</a>
+                  <a href="mailto:info@azenza.com.co" className="text-white font-medium block hover:text-emerald-400 transition-colors text-xs">info@azenza.com.co</a>
+                  <a href="mailto:soporte@azenza.com.co" className="text-white font-medium block hover:text-emerald-400 transition-colors text-xs">soporte@azenza.com.co</a>
                 </div>
-              </li>
-            </ul>
+              </div>
+
+            </div>
           </div>
 
-          {/* Image Section */}
-          <div className="flex flex-col items-center md:items-end">
-            <div className="bg-white/5 p-4 rounded-[2rem] border border-white/10 backdrop-blur-sm max-w-full">
+          {/* Col 4: INVIMA CARD */}
+          <div className="flex flex-col items-center lg:items-end">
+            <div className="bg-[#1f1f1f] p-5 rounded-3xl border border-stone-800 shadow-lg flex items-center justify-center w-full max-w-[240px]">
               <img 
                 src="/assets/logo/logo-invima.webp" 
-                alt="Logo INVIMA" 
-                className="w-full h-auto max-w-[256px] rounded-2xl shadow-2xl"
-                referrerPolicy="no-referrer"
+                alt="Certificación INVIMA" 
+                className="w-full h-auto object-contain max-h-28"
                 loading="lazy"
-                width="256"
-                height="128"
               />
             </div>
-            <p className="mt-4 text-stone-300 text-xs italic text-center md:text-right">Información legal y certificaciones</p>
+            <p className="mt-3 text-stone-400 text-xs italic text-center lg:text-right">
+              Información legal y certificaciones
+            </p>
           </div>
+
         </div>
 
-        {/* Copyright section */}
-        <div className="pt-12 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6 text-stone-100 text-sm">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <p>© 2026 Azenza. Todos los derechos reservados.</p>
-            <div className="flex items-center gap-4 text-[10px] font-bold text-stone-300 uppercase tracking-widest mt-2">
-              <span>Métodos de Pago:</span>
-              <div className="flex items-center gap-2 bg-stone-800 px-3 py-1 rounded-full border border-stone-700">
-                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                <span className="text-stone-200">Pago Contraentrega (Exclusivo)</span>
-              </div>
+        {/* Middle Bar: Copyright, Payment Pill, Nav Links */}
+        <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-300">
+          <p className="font-medium">
+            © 2026 Azenza. Todos los derechos reservados.
+          </p>
+
+          <div className="flex items-center gap-2">
+            <span className="text-stone-400 font-bold uppercase text-[11px] tracking-wider">MÉTODOS DE PAGO:</span>
+            <div className="inline-flex items-center gap-2 bg-[#1f1f1f] px-3 py-1.5 rounded-full border border-stone-800 text-[11px] font-bold text-white uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              PAGO CONTRAENTREGA (EXCLUSIVO)
             </div>
           </div>
-          <div className="flex gap-8">
-            <Link to="/" className="hover:text-white transition-colors">Inicio</Link>
-            <Link to="/checkout" className="hover:text-white transition-colors">Carrito</Link>
+
+          <div className="flex items-center gap-6 font-bold">
+            <Link to="/" className="hover:text-emerald-400 transition-colors">Inicio</Link>
+            <Link to="/checkout" className="hover:text-emerald-400 transition-colors">Carrito</Link>
           </div>
         </div>
 
-        {/* Local SEO Cities Section */}
-        <div className="mt-8 pt-8 border-t border-stone-800/50 text-center">
-          <p className="text-[11px] font-bold text-stone-100 uppercase tracking-widest mb-3">Envíos con Pago Contra Entrega en Colombia:</p>
-          <p className="text-[11px] text-stone-300 leading-relaxed max-w-5xl mx-auto">
-            Despachos diarios desde Barranquilla a: Bogotá, Medellín, Cali, Barranquilla, Cartagena, Cúcuta, Bucaramanga, Pereira, Ibagué, Santa Marta, Valledupar, Villavicencio, Montería, Pasto, Neiva, Popayán, Sincelejo, Armenia, Riohacha, Tunja, Quibdó, Florencia y cualquier rincón de Colombia.
-          </p>
-        </div>
+        {/* Bottom Section: Envíos con pago contra entrega en Colombia */}
+        <div className="pt-6 border-t border-stone-800/80 space-y-6">
+          <div className="text-center max-w-4xl mx-auto space-y-2">
+            <h4 className="text-xs font-black tracking-widest text-white uppercase font-display">
+              ENVÍOS CON PAGO CONTRA ENTREGA EN COLOMBIA:
+            </h4>
+            <p className="text-xs text-stone-400 leading-relaxed">
+              Despachos diarios desde Barranquilla a: Bogotá, Medellín, Cali, Barranquilla, Cartagena, Cúcuta, Bucaramanga, Pereira, Ibagué, Santa Marta, Valledupar, Villavicencio, Montería, Pasto, Neiva, Popayán, Sincelejo, Armenia, Riohacha, Tunja, Quibdó, Florencia y cualquier rincón de Colombia.
+            </p>
+          </div>
 
-        {/* YMYL Medical Disclaimer */}
-        <div className="mt-8 pt-8 border-t border-stone-800/50">
-          <p className="text-[10px] text-stone-300 leading-relaxed text-center max-w-5xl mx-auto italic">
-            Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con Registro Sanitario INVIMA y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
-          </p>
-        </div>
-
-        {/* Trust Partners Bar at the absolute bottom */}
-        <div className="mt-12 pt-12 border-t border-stone-800/50">
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
-            <img src="/assets/partners/coordinadora.webp" alt="Coordinadora" className="h-8 object-contain" loading="lazy" width="120" height="32" />
-            <img src="/assets/partners/servientrega.webp" alt="Servientrega" className="h-8 object-contain" loading="lazy" width="120" height="32" />
-            <img src="/assets/partners/interrapidisimo.webp" alt="Interrapidisimo" className="h-8 object-contain" loading="lazy" width="120" height="32" />
-            <img src="/assets/partners/envia.webp" alt="Envía" className="h-8 object-contain" loading="lazy" width="120" height="32" />
-            <div className="h-8 w-px bg-stone-700 mx-2 hidden md:block"></div>
-            <img src="/assets/logo/logo-invima.webp" alt="INVIMA" className="h-10 object-contain" loading="lazy" width="80" height="40" />
+          {/* Legal / Medical Disclaimer */}
+          <div className="max-w-5xl mx-auto">
+            <p className="text-[11px] text-stone-500 leading-relaxed text-center italic">
+              Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con Registro Sanitario INVIMA y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
+            </p>
           </div>
         </div>
 
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
