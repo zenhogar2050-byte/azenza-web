@@ -25,8 +25,7 @@ export default function Gracias() {
         orderData: {
           value: location.state.orderData?.value || 0,
           currency: location.state.orderData?.currency || 'COP',
-          email: location.state.orderData?.email || "contacto@azenza.com.co",
-          items: location.state.orderData?.items || []
+          email: location.state.orderData?.email || "contacto@azenza.com.co"
         },
         whatsappUrl: location.state.whatsappUrl,
         ticketNumber: location.state.ticketNumber
@@ -40,8 +39,7 @@ export default function Gracias() {
           orderData: { 
             value: saved.total, 
             currency: 'COP', 
-            email: saved.email || "contacto@azenza.com.co",
-            items: saved.items || []
+            email: saved.email || "contacto@azenza.com.co" 
           },
           whatsappUrl: saved.whatsappUrl || 'https://wa.me/573024102568',
           ticketNumber: saved.ticketNumber || 'N/A'
@@ -52,7 +50,7 @@ export default function Gracias() {
     }
     
     return {
-      orderData: { value: 0, currency: 'COP', email: "contacto@azenza.com.co", items: [] },
+      orderData: { value: 0, currency: 'COP', email: "contacto@azenza.com.co" },
       whatsappUrl: 'https://wa.me/573024102568',
       ticketNumber: 'PENDIENTE'
     };
@@ -63,7 +61,7 @@ export default function Gracias() {
   // Integración de Google Customer Reviews Opt-In
   useEffect(() => {
     const emailToUse = orderData.email || 'contacto@azenza.com.co';
-    const orderIdToUse = ticketNumber || `PO-${Date.now()}`;
+    const orderIdToUse = ticketNumber || `AZ-${Date.now()}`;
     const countryToUse = 'CO'; // Colombia (CO)
 
     // Calcular fecha estimada de entrega: Hoy + 3 días en formato YYYY-MM-DD
@@ -134,21 +132,16 @@ export default function Gracias() {
   // Registro automático de la compra en el Píxel al cargar la página
   useEffect(() => {
     if (orderData.value > 0) {
-      if (typeof (window as any).loadThirdParty === 'function') {
-        (window as any).loadThirdParty();
-      }
-
       trackPurchaseIfFromFacebook({ 
         value: orderData.value, 
         currency: 'COP',
         content_name: 'Compra Finalizada',
         content_ids: [ticketNumber]
       });
-      // Registrar la compra estructurada en Google Analytics (GA4) y GTM
+      // Registrar la compra estructurada en Google Analytics (GA4)
       trackGooglePurchase({
         value: orderData.value,
-        content_name: 'Compra Finalizada',
-        items: orderData.items && orderData.items.length > 0 ? orderData.items : undefined
+        content_name: 'Compra Finalizada'
       }, ticketNumber);
     }
   }, [orderData.value, ticketNumber]);

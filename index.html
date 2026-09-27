@@ -43,13 +43,6 @@
     </noscript>
 
     <script type="text/javascript">
-      // Global dataLayer and gtag initialization (Always globally available for queued analytics)
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ window.dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-ZX2FWC4PV6', { send_page_view: true });
-
       // Ultra-Optimized Delayed Loading of Third-Party Tracking & Widgets (Improves Mobile FCP/LCP/TBT)
       function loadThirdParty() {
         // Excluir panel de administración de rastreadores y analíticas
@@ -71,6 +64,11 @@
         ga.async = true;
         ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZX2FWC4PV6';
         document.head.appendChild(ga);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZX2FWC4PV6');
 
         // 3. Facebook Pixel
         if (!window.fbq) {
@@ -116,21 +114,15 @@
         }
       }
 
-      window.loadThirdParty = loadThirdParty;
-
-      // Inmediato para rutas de conversión y checkout, diferido para navegación general
-      if (window.location.pathname.indexOf('/gracias') !== -1 || window.location.pathname.indexOf('/checkout') !== -1) {
-        loadThirdParty();
+      // Defer third-party scripts until user interacts or idle time
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(function() {
+          setTimeout(loadThirdParty, 4000);
+        }, { timeout: 6000 });
       } else {
-        if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(function() {
-            setTimeout(loadThirdParty, 3500);
-          }, { timeout: 5000 });
-        } else {
-          window.addEventListener('load', function() {
-            setTimeout(loadThirdParty, 3500);
-          });
-        }
+        window.addEventListener('load', function() {
+          setTimeout(loadThirdParty, 4500);
+        });
       }
 
       // Instant activation on user interaction

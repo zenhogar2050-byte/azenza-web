@@ -142,8 +142,8 @@ function generateLlmsFiles() {
 
     full += `### ${promo.name}\n`;
     full += `- **Descripción:** ${promo.description}\n`;
-    if ((promo as any).includedProducts) {
-      const included = (promo as any).includedProducts.map((ip: { name: string; quantity: number }) => ip.name + (ip.quantity > 1 ? ` (x${ip.quantity})` : '')).join(' + ');
+    if (promo.includedProducts) {
+      const included = promo.includedProducts.map((ip: { name: string; quantity: number }) => ip.name + (ip.quantity > 1 ? ` (x${ip.quantity})` : '')).join(' + ');
       full += `- **Productos Incluidos:** ${included}\n`;
     }
     full += `- **Imagen Oficial:** ${promoImg}\n`;
