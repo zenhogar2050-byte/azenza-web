@@ -89,7 +89,7 @@ async function generateStatic() {
     console.log(`Successfully pre-rendered ${renderedCount} static pages into dist/`);
 
     // Ensure public files exist in dist/
-    const publicFiles = ['llms.txt', 'llms-full.txt', 'sitemap.xml', 'robots.txt', '_redirects', '_headers', 'CNAME', '404.html'];
+    const publicFiles = ['google-feed.xml', 'llms.txt', 'llms-full.txt', 'sitemap.xml', 'robots.txt', '_redirects', '_headers', 'CNAME', '404.html'];
     for (const file of publicFiles) {
       const srcFile = path.resolve(root, 'public', file);
       const dstFile = path.resolve(root, 'dist', file);
