@@ -38,6 +38,33 @@ export default function Checkout() {
   const GATEWAY_URL = 'https://zenhogar-api.zenhogar2050.workers.dev';
   const MASTER_TUNNEL_URL = 'https://autosync-ms.zenhogar2050.workers.dev/';
 
+  // Helper safe attribution retrieval
+  const getAttributionData = () => {
+    try {
+      return {
+        gclid: localStorage.getItem('gclid') || '',
+        wbraid: localStorage.getItem('wbraid') || '',
+        gbraid: localStorage.getItem('gbraid') || '',
+        utm_source: localStorage.getItem('utm_source') || '',
+        utm_medium: localStorage.getItem('utm_medium') || '',
+        utm_campaign: localStorage.getItem('utm_campaign') || '',
+        utm_content: localStorage.getItem('utm_content') || '',
+        utm_term: localStorage.getItem('utm_term') || ''
+      };
+    } catch {
+      return {
+        gclid: '',
+        wbraid: '',
+        gbraid: '',
+        utm_source: '',
+        utm_medium: '',
+        utm_campaign: '',
+        utm_content: '',
+        utm_term: ''
+      };
+    }
+  };
+
   // Track begin_checkout in GA4 when landing on the page with items in the cart
   useEffect(() => {
     if (items.length > 0) {
@@ -55,24 +82,24 @@ export default function Checkout() {
             `- ${item.productName} (${item.promoLabel}) x${item.quantity}`
           ).join('\n');
 
-          const savedGclid = localStorage.getItem('gclid') || '';
+          const attribution = getAttributionData();
           const uniqueId = `abandoned_${formData.phone.replace(/\D/g, '')}`;
 
           await saveOrderToFirebase({
             id: uniqueId,
             customer: {
               ...formData,
-              gclid: savedGclid
+              ...attribution
             },
             order_details: orderDetails,
             total: formatPriceForAPI(total),
             type: 'abandoned',
-            gclid: savedGclid
+            ...attribution
           });
 
           const sheetsPayload = {
             type: 'abandoned',
-            gclid: savedGclid,
+            ...attribution,
             customer: {
               fullName: formData.fullName || "Pte. Nombre",
               email: formData.email || "contacto@azenza.com.co",
@@ -81,7 +108,7 @@ export default function Checkout() {
               address: formData.address || "Pte. Dirección",
               city: formData.city || "Pte. Ciudad",
               department: formData.department || "Pte. Depto",
-              gclid: savedGclid
+              ...attribution
             },
             order_details: orderDetails,
             total: formatPriceForAPI(total)
@@ -185,23 +212,23 @@ export default function Checkout() {
     }).join('\n');
 
     try {
-        const savedGclid = localStorage.getItem('gclid') || '';
-        const sheetsPayload = {
-          type: 'order',
-          gclid: savedGclid,
-          customer: {
-            fullName: formData.fullName || "Cliente",
-            email: formData.email || "contacto@azenza.com.co",
-            phone: formData.phone || "3000000000",
-            identification: formData.identification || "123456789",
-            address: formData.address || "Dirección pendiente",
-            city: formData.city || "Barranquilla",
-            department: formData.department || "Atlántico",
-            gclid: savedGclid
-          },
-          order_details: orderDetails,
-          total: formatPriceForAPI(total)
-        };
+      const attribution = getAttributionData();
+      const sheetsPayload = {
+        type: 'order',
+        ...attribution,
+        customer: {
+          fullName: formData.fullName || "Cliente",
+          email: formData.email || "contacto@azenza.com.co",
+          phone: formData.phone || "3000000000",
+          identification: formData.identification || "123456789",
+          address: formData.address || "Dirección pendiente",
+          city: formData.city || "Barranquilla",
+          department: formData.department || "Atlántico",
+          ...attribution
+        },
+        order_details: orderDetails,
+        total: formatPriceForAPI(total)
+      };
 
       // 1. REGISTRO EN GOOGLE SHEETS / PIXEL (Gateway Principal)
       let currentTicket = `PO-PENDIENTE-${Math.floor(1000 + Math.random() * 9000)}`; 
@@ -311,7 +338,7 @@ export default function Checkout() {
       await saveOrderToFirebase({
         customer: {
           ...formData,
-          gclid: savedGclid
+          ...attribution
         },
         order_details: orderDetails,
         total: formatPriceForAPI(total),
@@ -319,7 +346,7 @@ export default function Checkout() {
         type: 'order',
         ticket_number: currentTicket,
         mastershop_status: mastershopStatus,
-        gclid: savedGclid
+        ...attribution
       });
 
       if (abandonedId) {

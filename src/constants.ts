@@ -4239,35 +4239,35 @@ export const ECUADOR_PRICING: Record<string, EcuadorPricing> = {
     ]
   },
   'rtafull': {
-    basePrice: 34.99,
+    basePrice: 37.00,
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 34.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 52.49 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 69.98, badge: '⭐ Recomendado' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 37.00 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 55.50 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 74.00, badge: '⭐ Recomendado' }
     ]
   },
   'derman': {
-    basePrice: 34.99,
+    basePrice: 39.99,
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 34.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 52.49 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 69.98, badge: '⭐ Recomendado' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 39.99 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 59.99 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 79.98, badge: '⭐ Recomendado' }
     ]
   },
   'locion': {
-    basePrice: 32.99,
+    basePrice: 39.99,
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 32.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 49.49 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 65.98, badge: '⭐ Recomendado' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 39.99 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 59.99 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 79.98, badge: '⭐ Recomendado' }
     ]
   },
   'mamooth': {
-    basePrice: 33.99,
+    basePrice: 39.99,
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 33.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 50.99 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 67.98, badge: '⭐ Recomendado' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 39.99 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 59.99 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 79.98, badge: '⭐ Recomendado' }
     ]
   },
   'titan-coffee': {

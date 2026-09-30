@@ -39,6 +39,24 @@
     <!-- Google Fonts Outfit and Inter -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap">
 
+    <!-- 0. Capture and Persist Marketing & Attribution Parameters -->
+    <script type="text/javascript">
+      (function() {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var keys = ['gclid', 'wbraid', 'gbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+          keys.forEach(function(key) {
+            var val = params.get(key);
+            if (val) {
+              localStorage.setItem(key, val);
+            }
+          });
+        } catch (e) {
+          // Graceful fallback for restricted storage environments
+        }
+      })();
+    </script>
+
     <!-- 1. Google Tag Manager (GTM) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
