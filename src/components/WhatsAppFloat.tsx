@@ -16,20 +16,23 @@ export default function WhatsAppFloat() {
        .replace(/-+/g, '-')
        .replace(/^-+|-+$/g, '');
 
+  // Normalize pathname: remove trailing slashes
+  const normalizedPath = location.pathname.replace(/\/+$/, '').toLowerCase();
+
   // Detect context from URL
   let productContext = '';
   let categoryContext = '';
   
-  if (location.pathname.startsWith('/producto/')) {
-    const rawId = location.pathname.split('/').pop() || '';
+  if (normalizedPath.startsWith('/producto/')) {
+    const rawId = normalizedPath.replace(/^\/producto\//, '').split('/')[0] || '';
     const targetClean = cleanStr(rawId);
     const product = PRODUCTS.find(p => cleanStr(p.id) === targetClean || p.masterId === rawId || cleanStr(p.name) === targetClean);
     productContext = product ? product.name : rawId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-  } else if (location.pathname.startsWith('/combo/')) {
-    const rawId = location.pathname.split('/').pop() || '';
+  } else if (normalizedPath.startsWith('/combo/')) {
+    const rawId = normalizedPath.replace(/^\/combo\//, '').split('/')[0] || '';
     const targetClean = cleanStr(rawId);
     const combo = PROMOTIONS.find(p => cleanStr(p.id) === targetClean || cleanStr(p.name) === targetClean) ||
-      (cleanStr(COMBO_OF_THE_MONTH.id) === targetClean || cleanStr(COMBO_OF_THE_MONTH.name) === targetClean || targetClean.includes('futbolero') || targetClean.includes('inmunidad-dual') || targetClean.includes('combo-7') || targetClean.includes('promo-7') ? COMBO_OF_THE_MONTH : null);
+      (cleanStr(COMBO_OF_THE_MONTH.id) === targetClean || cleanStr(COMBO_OF_THE_MONTH.name) === targetClean || targetClean.includes('futbolero') || targetClean.includes('inmunidad-dual') || targetClean.includes('combo-7') || targetClean.includes('promo-7') || targetClean.includes('bienestar') ? COMBO_OF_THE_MONTH : null);
 
     if (combo) {
       const resolvedComponents = (combo.products || [])
@@ -48,8 +51,8 @@ export default function WhatsAppFloat() {
     } else {
       productContext = `Combo ${rawId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}`;
     }
-  } else if (location.pathname.startsWith('/categoria/')) {
-    const rawId = location.pathname.split('/').pop() || '';
+  } else if (normalizedPath.startsWith('/categoria/')) {
+    const rawId = normalizedPath.replace(/^\/categoria\//, '').split('/')[0] || '';
     const targetClean = cleanStr(rawId);
     const category = CATEGORIES.find(c => cleanStr(c.id) === targetClean || cleanStr(c.name) === targetClean);
     categoryContext = category ? category.name : rawId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -59,11 +62,11 @@ export default function WhatsAppFloat() {
   
   let message = 'Hola! Me gustaría recibir más información sobre los productos de Azenza.';
   if (productContext) {
-    message = `Hola *AZENZA*! 👋\n\nEstoy interesado en: *${productContext}*\n\nMe gustaría recibir más información. ¿Podrían ayudarme?`;
+    message = `Hola! Me gustaría recibir más información sobre *${productContext}* y cómo pedirlo con pago contra entrega.`;
   } else if (categoryContext) {
-    message = `Hola *AZENZA*! 👋\n\nEstoy buscando productos de la categoría: *${categoryContext}*\n\n¿Me podrían asesorar para elegir el mejor para mí?`;
-  } else if (location.pathname === '/') {
-    message = `Hola *AZENZA*! 👋\n\nEstoy visitando su tienda y me gustaría recibir información sobre sus productos y promociones. ✨`;
+    message = `Hola! Me gustaría recibir información y asesoría sobre los productos de la categoría *${categoryContext}*.`;
+  } else if (normalizedPath === '' || normalizedPath === '/') {
+    message = `Hola! Me gustaría recibir más información sobre los productos y promociones de Azenza.`;
   }
     
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
