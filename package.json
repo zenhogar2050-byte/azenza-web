@@ -8,9 +8,10 @@
     "build:client": "vite build",
     "build:server": "vite build --ssr src/main-server.tsx --outDir dist/server",
     "generate:llms": "npx --no-install tsx scripts/generate-llms.ts",
+    "generate:feed": "npx --no-install tsx scripts/generate-google-feed.ts",
     "generate:sitemap": "npx --no-install tsx scripts/generate-sitemap.ts",
     "generate:static": "npx --no-install tsx scripts/generate-static.ts",
-    "build": "npm run generate:llms && npm run generate:sitemap && npm run build:client && npm run build:server && npm run generate:static",
+    "build": "npm run generate:llms && npm run generate:feed && npm run generate:sitemap && npm run build:client && npm run build:server && npm run generate:static",
     "lint": "npx --no-install tsc --noEmit",
     "preview": "vite preview"
   },

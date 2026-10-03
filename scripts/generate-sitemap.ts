@@ -34,18 +34,6 @@ function generateSitemap() {
     xml += `    </url>\n`;
   }
 
-  // Combos Category
-  xml += `    <url>\n`;
-  xml += `        <loc>${baseUrl}/categoria/combos</loc>\n`;
-  xml += `        <lastmod>${currentDate}</lastmod>\n`;
-  xml += `        <changefreq>weekly</changefreq>\n`;
-  xml += `        <priority>0.8</priority>\n`;
-  xml += `        <image:image>\n`;
-  xml += `            <image:loc>${baseUrl}/assets/categories/Combos.webp</image:loc>\n`;
-  xml += `            <image:title>Combos</image:title>\n`;
-  xml += `        </image:image>\n`;
-  xml += `    </url>\n`;
-
   // 3. Products
   for (const p of PRODUCTS) {
     xml += `    <url>\n`;
@@ -59,6 +47,17 @@ function generateSitemap() {
       xml += `            <image:loc>${imgUrl}</image:loc>\n`;
       xml += `            <image:title>${p.name.replace(/&/g, '&amp;')}</image:title>\n`;
       xml += `        </image:image>\n`;
+    }
+    if (p.supportImages && Array.isArray(p.supportImages)) {
+      for (const sImg of p.supportImages) {
+        if (sImg) {
+          const imgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
+          xml += `        <image:image>\n`;
+          xml += `            <image:loc>${imgUrl}</image:loc>\n`;
+          xml += `            <image:title>${p.name.replace(/&/g, '&amp;')}</image:title>\n`;
+          xml += `        </image:image>\n`;
+        }
+      }
     }
     xml += `    </url>\n`;
   }
@@ -76,6 +75,18 @@ function generateSitemap() {
     xml += `            <image:title>${COMBO_OF_THE_MONTH.name.replace(/&/g, '&amp;')}</image:title>\n`;
     xml += `        </image:image>\n`;
   }
+  const comboMonthAny = COMBO_OF_THE_MONTH as any;
+  if (comboMonthAny.supportImages && Array.isArray(comboMonthAny.supportImages)) {
+    for (const sImg of comboMonthAny.supportImages) {
+      if (sImg) {
+        const imgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
+        xml += `        <image:image>\n`;
+        xml += `            <image:loc>${imgUrl}</image:loc>\n`;
+        xml += `            <image:title>${COMBO_OF_THE_MONTH.name.replace(/&/g, '&amp;')}</image:title>\n`;
+        xml += `        </image:image>\n`;
+      }
+    }
+  }
   xml += `    </url>\n`;
 
   // 5. Promotions
@@ -91,6 +102,18 @@ function generateSitemap() {
       xml += `            <image:loc>${imgUrl}</image:loc>\n`;
       xml += `            <image:title>${promo.name.replace(/&/g, '&amp;')}</image:title>\n`;
       xml += `        </image:image>\n`;
+    }
+    const promoAny = promo as any;
+    if (promoAny.supportImages && Array.isArray(promoAny.supportImages)) {
+      for (const sImg of promoAny.supportImages) {
+        if (sImg) {
+          const imgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
+          xml += `        <image:image>\n`;
+          xml += `            <image:loc>${imgUrl}</image:loc>\n`;
+          xml += `            <image:title>${promo.name.replace(/&/g, '&amp;')}</image:title>\n`;
+          xml += `        </image:image>\n`;
+        }
+      }
     }
     xml += `    </url>\n`;
   }

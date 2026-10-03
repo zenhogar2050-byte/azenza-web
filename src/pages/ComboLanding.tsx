@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { PROMOTIONS, COMBO_OF_THE_MONTH, GENERAL_FAQS, PRODUCTS } from '../constants';
 import FAQSection from '../components/FAQSection';
 import { useCart } from '../CartContext';
-import { CheckCircle2, ShoppingCart, ArrowLeft, Star, Zap, ShieldCheck, TrendingUp, Info, ChevronDown, ChevronUp, Play } from 'lucide-react';
+import { CheckCircle2, ShoppingCart, ArrowLeft, ArrowRight, Star, Zap, ShieldCheck, TrendingUp, Info, ChevronDown, ChevronUp, Play } from 'lucide-react';
 import { cn, formatCurrency, cleanPromoName } from '../utils';
 import Footer from '../components/Footer';
 import SEOManager from '../components/SEOManager';
@@ -76,6 +76,25 @@ export default function ComboLanding() {
     }
   }, [id, combo?.id, targetIdClean, isEC, navigate]);
 
+  const allCombos = [COMBO_OF_THE_MONTH, ...PROMOTIONS];
+  const currentIndex = combo ? allCombos.findIndex(c => c.id === combo.id) : -1;
+  const nextCombo = currentIndex !== -1 ? allCombos[(currentIndex + 1) % allCombos.length] : null;
+  const prevCombo = currentIndex !== -1 ? allCombos[(currentIndex - 1 + allCombos.length) % allCombos.length] : null;
+
+  const handleNextCombo = () => {
+    if (nextCombo) {
+      navigate(`/combo/${nextCombo.id}`);
+    }
+  };
+
+  const handlePrevCombo = () => {
+    if (prevCombo) {
+      navigate(`/combo/${prevCombo.id}`);
+    } else {
+      handleGoBack();
+    }
+  };
+
   const handleGoBack = () => {
     if (window.history.state && window.history.state.idx > 0) {
       navigate(-1);
@@ -87,6 +106,20 @@ export default function ComboLanding() {
   // Video Support
   const hasVideo = combo?.videoUrl || combo?.videoUrlMp4;
   const [showVideo, setShowVideo] = useState(!!hasVideo);
+
+  // Gallery Images: combo image + individual combo products' images + supportImages
+  const productImages = combo ? combo.products.map(p => PRODUCTS.find(pr => pr.id === p)?.image).filter(Boolean) as string[] : [];
+  const galleryImages = combo ? [combo.image, ...(combo.supportImages || []), ...productImages] : [];
+  const uniqueGalleryImages = Array.from(new Set(galleryImages.filter(Boolean)));
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setActiveImageIndex((prev) => (prev + 1) % uniqueGalleryImages.length);
+  };
+
+  const prevImage = () => {
+    setActiveImageIndex((prev) => (prev - 1 + uniqueGalleryImages.length) % uniqueGalleryImages.length);
+  };
 
   useEffect(() => {
     if (combo) {
@@ -153,6 +186,23 @@ export default function ComboLanding() {
         }}
       />
 
+      {/* Floating Page Navigation */}
+      <button 
+        onClick={handlePrevCombo}
+        className="fixed left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-50 bg-white/90 backdrop-blur-md text-stone-700 hover:text-emerald-600 hover:bg-white w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 opacity-50 hover:opacity-100 transition-all border border-stone-200/80 flex items-center justify-center group focus:outline-none"
+        aria-label="Volver"
+      >
+        <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 group-hover:-translate-x-0.5 transition-transform" />
+      </button>
+
+      <button 
+        onClick={handleNextCombo}
+        className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-50 bg-white/90 backdrop-blur-md text-stone-700 hover:text-emerald-600 hover:bg-white w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)] hover:scale-105 active:scale-95 opacity-50 hover:opacity-100 transition-all border border-stone-200/80 flex items-center justify-center group focus:outline-none"
+        aria-label="Siguiente"
+      >
+        <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-0.5 transition-transform" />
+      </button>
+
       <Breadcrumbs />
 
       {/* Hero Section */}
@@ -188,7 +238,7 @@ export default function ComboLanding() {
                     />
                   ) : (
                     <Image
-                      src={combo.image}
+                      src={uniqueGalleryImages[activeImageIndex] || combo.image}
                       alt={combo.name}
                       preset="hero"
                       priority={true}
@@ -197,34 +247,44 @@ export default function ComboLanding() {
                   )}
                 </div>
 
-                {/* Video/Image Toggle (if both exist) */}
-                {hasVideo && (
-                  <div className="flex justify-center gap-2 sm:gap-4 mt-6">
-                    <button
-                      onClick={() => setShowVideo(true)}
-                      className={cn(
-                        "w-24 h-24 sm:w-16 sm:h-16 rounded-2xl border-2 transition-all p-1 flex items-center justify-center bg-white shadow-sm",
-                        showVideo ? "border-emerald-600 ring-2 ring-emerald-100" : "border-stone-200"
-                      )}
-                    >
-                      <div className="relative w-full h-full bg-stone-50 rounded-xl flex items-center justify-center overflow-hidden">
-                        {combo.videoPoster ? (
-                          <Image src={combo.videoPoster} preset="thumb" className="w-full h-full object-cover opacity-60" alt={`Miniatura video ${combo.name}`} />
-                        ) : (
-                          <Play className="w-6 h-6 text-emerald-600 fill-current" />
+                {/* Thumbnails Gallery Selector (Video & Image thumbnails) */}
+                {(hasVideo || uniqueGalleryImages.length > 1) && (
+                  <div className="flex justify-center gap-2 sm:gap-4 mt-6 flex-wrap">
+                    {hasVideo && (
+                      <button
+                        onClick={() => setShowVideo(true)}
+                        className={cn(
+                          "w-20 h-20 sm:w-16 sm:h-16 rounded-2xl border-2 transition-all p-1 flex items-center justify-center bg-white shadow-sm",
+                          showVideo ? "border-emerald-600 ring-2 ring-emerald-100 scale-105" : "border-stone-200 hover:border-stone-300"
                         )}
-                        <Play className="w-4 h-4 text-white absolute fill-current" />
-                      </div>
-                    </button>
-                    <button
-                      onClick={() => setShowVideo(false)}
-                      className={cn(
-                        "w-24 h-24 sm:w-16 sm:h-16 rounded-2xl border-2 transition-all p-1 flex items-center justify-center bg-white shadow-sm",
-                        !showVideo ? "border-emerald-600 ring-2 ring-emerald-100" : "border-stone-200"
-                      )}
-                    >
-                      <Image src={combo.image} preset="thumb" className="w-full h-full object-contain" alt={`Imagen ${combo.name}`} />
-                    </button>
+                        aria-label="Ver video del combo"
+                      >
+                        <div className="relative w-full h-full bg-stone-50 rounded-xl flex items-center justify-center overflow-hidden">
+                          {combo.videoPoster ? (
+                            <Image src={combo.videoPoster} preset="thumb" className="w-full h-full object-cover opacity-60" alt={`Miniatura video ${combo.name}`} />
+                          ) : (
+                            <Play className="w-6 h-6 text-emerald-600 fill-current" />
+                          )}
+                          <Play className="w-4 h-4 text-white absolute fill-current" />
+                        </div>
+                      </button>
+                    )}
+                    {uniqueGalleryImages.map((imgUrl, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          setShowVideo(false);
+                          setActiveImageIndex(idx);
+                        }}
+                        className={cn(
+                          "w-20 h-20 sm:w-16 sm:h-16 rounded-2xl border-2 transition-all p-1 flex items-center justify-center bg-white shadow-sm",
+                          !showVideo && activeImageIndex === idx ? "border-emerald-600 ring-2 ring-emerald-100 scale-105" : "border-stone-200 hover:border-stone-300"
+                        )}
+                        aria-label={`Ver imagen ${idx + 1} del combo`}
+                      >
+                        <Image src={imgUrl} preset="thumb" className="w-full h-full object-contain" alt={`Miniatura ${idx + 1} ${combo.name}`} />
+                      </button>
+                    ))}
                   </div>
                 )}
 

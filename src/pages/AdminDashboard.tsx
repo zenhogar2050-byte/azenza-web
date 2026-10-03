@@ -696,7 +696,8 @@ export default function AdminDashboard() {
 
   const generateClientMessage = (order: Order) => {
     if (!order) return '';
-    const ticketStr = order.ticket_number ? `*#${order.ticket_number}*` : '';
+    const cleanTicket = order.ticket_number ? order.ticket_number.replace(/^#+/, '') : '';
+    const ticketStr = cleanTicket ? `*#${cleanTicket}*` : '';
     const guideStr = order.tracking_guide ? `\n📦 *Guía de Seguimiento:* ${order.tracking_guide}` : '';
     
     // Add product details safely
@@ -709,57 +710,88 @@ export default function AdminDashboard() {
         name: item.name,
         quantity: item.quantity,
         promoLabel: item.promoLabel || item.label || '',
+        promoId: item.promoId || '',
+        price: item.price || 0,
         units: item.units || 1
       }));
     }
     
     if (itemsToProcess.length > 0) {
       itemsDetails = '\n\n🛍️ *Detalle del pedido:* \n' + itemsToProcess.map((item: any) => {
-        const name = item.productName || item.name || 'Producto';
+        const rawName = item.productName || item.name || 'Producto';
+        const cleanName = rawName.replace(/\s*\([^)]*\)/g, '').trim();
         const promoLabel = item.promoLabel || item.label || '';
         const promoId = item.promoId || '';
-        const promoLabelStr = promoLabel ? ` (${promoLabel})` : '';
         const qty = item.quantity || item.qty || 1;
+        const itemPrice = item.price || 0;
         
         // Resolver unidades reales por ítem
         let units = 1;
-        if (typeof item.units === 'number' && !isNaN(item.units) && item.units > 0) {
+        if (typeof item.units === 'number' && !isNaN(item.units) && item.units > 1) {
           units = item.units;
-        } else if (promoId === '2x3' || /paga(ue)?\s*2\s*lleva(e)?\s*3/i.test(promoLabel) || /lleve\s*3/i.test(promoLabel)) {
+        } else if (promoId === '2x3' || /paga(ue)?\s*2\s*lleva(e)?\s*3/i.test(promoLabel) || /lleve\s*3/i.test(promoLabel) || /3\s*unidades/i.test(promoLabel)) {
           units = 3;
-        } else if (promoId === '3x5' || /paga(ue)?\s*3\s*lleva(e)?\s*5/i.test(promoLabel) || /lleve\s*5/i.test(promoLabel)) {
+        } else if (promoId === '3x5' || /paga(ue)?\s*3\s*lleva(e)?\s*5/i.test(promoLabel) || /lleve\s*5/i.test(promoLabel) || /5\s*unidades/i.test(promoLabel)) {
           units = 5;
         } else if (promoId === '2u' || /2\s*unidades/i.test(promoLabel)) {
           units = 2;
         } else if (promoId === 'combo' || item.productId?.startsWith('promo-') || item.productId?.startsWith('combo-')) {
-          const promo = (item.productId === COMBO_OF_THE_MONTH.id || name.toLowerCase().includes(COMBO_OF_THE_MONTH.name.toLowerCase()))
+          const promo = (item.productId === COMBO_OF_THE_MONTH.id || cleanName.toLowerCase().includes(COMBO_OF_THE_MONTH.name.toLowerCase()))
             ? COMBO_OF_THE_MONTH
-            : PROMOTIONS.find(p => p.id === item.productId || name.toLowerCase().includes(p.name.toLowerCase()));
+            : PROMOTIONS.find(p => p.id === item.productId || cleanName.toLowerCase().includes(p.name.toLowerCase()));
           if (promo && (promo as any).products) {
             units = (promo as any).products.length;
           }
-        } else if (item.productId) {
-          const product = PRODUCTS.find(p => p.id === item.productId || p.name.toLowerCase() === name.toLowerCase());
+        } else if (item.productId || cleanName) {
+          const product = PRODUCTS.find(p => p.id === item.productId || p.name.toLowerCase() === cleanName.toLowerCase());
           if (product && product.promos) {
-            const matchedPromo = product.promos.find(p => p.id === promoId || p.label === promoLabel);
+            const matchedPromo = product.promos.find(p => p.id === promoId || p.label === promoLabel || p.price === itemPrice);
             if (matchedPromo && matchedPromo.units) {
               units = matchedPromo.units;
             }
           }
         }
 
-        // Si units ya representa la cantidad final de la promoción (ej. 5 o 3 o 2)
-        const totalUnits = units >= qty ? units : (units * qty);
-        return `- ${name}${promoLabelStr} - Cantidad: ${totalUnits} unidades`;
+        const totalUnits = units > 1 ? (units * qty) : qty;
+        return `- ${cleanName} - Cantidad: ${totalUnits} ${totalUnits === 1 ? 'unidad' : 'unidades'}`;
       }).join('\n');
     } else if (order.order_details) {
-      itemsDetails = `\n\n🛍️ *Detalle del pedido:* \n- ${order.order_details}`;
+      // Parsear order_details para extraer nombre limpio y unidades reales
+      const lines = order.order_details.split('\n').filter(Boolean);
+      const parsedLines = lines.map(line => {
+        let cleanLineName = line.replace(/^[•\-\*#\s]+/, '').replace(/:\s*\$[\d\.,]+/g, '').trim();
+        
+        let units = 1;
+        // Detectar si la línea menciona unidades totales o promociones
+        const unitsMatch = cleanLineName.match(/total:\s*(\d+)\s*unidades/i) || cleanLineName.match(/x(\d+)\s*unidades/i) || cleanLineName.match(/(\d+)\s*unidades/i);
+        if (/pague\s*2\s*lleve\s*3/i.test(cleanLineName) || /2x3/i.test(cleanLineName)) {
+          units = 3;
+        } else if (/pague\s*3\s*lleve\s*5/i.test(cleanLineName) || /3x5/i.test(cleanLineName)) {
+          units = 5;
+        } else if (unitsMatch) {
+          units = parseInt(unitsMatch[1], 10);
+        } else if (/1\s*unidad/i.test(cleanLineName)) {
+          units = 1;
+        }
+
+        // Limpiar el nombre quitando corchetes, paréntesis y etiquetas
+        const finalName = cleanLineName
+          .replace(/\[[^\]]*\]/g, '')
+          .replace(/\([^)]*\)/g, '')
+          .replace(/\*/g, '')
+          .trim();
+
+        return `- ${finalName || 'Producto'} - Cantidad: ${units} ${units === 1 ? 'unidad' : 'unidades'}`;
+      });
+
+      itemsDetails = '\n\n🛍️ *Detalle del pedido:* \n' + parsedLines.join('\n');
     }
     
     const totalVal = order.total || order.cart?.total || 0;
     const totalStr = totalVal > 0 ? `\n💰 *Valor Total:* ${formatCurrency(totalVal, getOrderCountry(order))}` : '';
+    const customerName = (order.customer.nombre || order.customer.fullName || '').trim();
     
-    return `¡Hola ${order.customer.nombre || order.customer.fullName || ''}! Te saludamos de *Azenza*. 🌿
+    return `¡Hola ${customerName}! Te saludamos de *Azenza*. 🌿
 
 Confirmamos que tu pedido ${ticketStr} ha sido procesado correctamente.${itemsDetails}${totalStr}${guideStr}
 

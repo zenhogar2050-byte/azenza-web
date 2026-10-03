@@ -202,12 +202,13 @@ export default function Checkout() {
       // 2. Si es una promoción multianidad (Pague 2 Lleve 3, Pague 3 Lleve 5, 2 Unidades, etc.)
       const totalUnits = (item.units && item.units > 1) ? (item.units * item.quantity) : item.quantity;
       if (item.units && item.units > 1) {
-        const packInfo = item.quantity > 1 ? ` (x${item.quantity} Packs - Total: ${totalUnits} Unidades)` : ` (Recibe ${totalUnits} Unidades en total)`;
-        return `• *${item.productName}* [${item.promoLabel}]${packInfo}: ${formatCurrency(item.price * item.quantity)}`;
+        const promoTag = item.promoLabel && !item.promoLabel.toLowerCase().includes('1 unidad') ? ` [${item.promoLabel}]` : '';
+        const packInfo = item.quantity > 1 ? ` (x${item.quantity} Packs - Total: ${totalUnits} Unidades)` : ` (Total: ${totalUnits} Unidades)`;
+        return `• *${item.productName}*${promoTag}${packInfo}: ${formatCurrency(item.price * item.quantity)}`;
       }
 
       // 3. Unidad estándar individual
-      const unitStr = item.quantity > 1 ? ` (x${item.quantity} Unidades)` : ` (1 Unidad)`;
+      const unitStr = item.quantity > 1 ? ` (Total: ${item.quantity} Unidades)` : ` (1 Unidad)`;
       return `• *${item.productName}*${unitStr}: ${formatCurrency(item.price * item.quantity)}`;
     }).join('\n');
 
