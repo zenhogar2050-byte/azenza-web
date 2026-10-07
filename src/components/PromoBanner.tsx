@@ -85,17 +85,33 @@ export default function PromoBanner() {
     },
   ];
 
-  const items = baseItems.map(item => {
-    const p = products.find(prod => prod.id === item.id);
-    if (!p) return item;
-    const price = p.promos?.[0]?.price || p.basePrice;
-    const originalPrice = p.basePrice || price;
-    return {
-      ...item,
-      price,
-      originalPrice,
-    };
-  });
+  const rawItems = baseItems
+    .map(item => {
+      const p = products.find(prod => prod.id === item.id);
+      if (!p) return null;
+      const price = p.promos?.[0]?.price || p.basePrice;
+      const originalPrice = p.basePrice || price;
+      return {
+        ...item,
+        name: p.name,
+        image: p.image,
+        price,
+        originalPrice,
+      };
+    })
+    .filter((item): item is NonNullable<typeof item> => item !== null);
+
+  const items = rawItems.length > 0 ? rawItems : (products.length > 0 ? products.map(p => ({
+    id: p.id,
+    name: p.name,
+    image: p.image,
+    originalPrice: p.basePrice,
+    price: p.promos?.[0]?.price || p.basePrice,
+    badge: 'OFERTA DESTACADA ⭐',
+    description: p.shortDescription
+  })) : baseItems);
+
+  const safeItems = items.length > 0 ? items : baseItems;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -103,12 +119,12 @@ export default function PromoBanner() {
 
   const nextSlide = () => {
     setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % items.length);
+    setCurrentIndex((prev) => (prev + 1) % safeItems.length);
   };
 
   const prevSlide = () => {
     setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+    setCurrentIndex((prev) => (prev - 1 + safeItems.length) % safeItems.length);
   };
 
   useEffect(() => {
@@ -116,7 +132,7 @@ export default function PromoBanner() {
       const timer = setInterval(nextSlide, 7000);
       return () => clearInterval(timer);
     }
-  }, [isHovered]);
+  }, [isHovered, safeItems.length]);
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -138,11 +154,11 @@ export default function PromoBanner() {
     })
   };
 
-  const currentPromo = items[currentIndex];
-  const prevIndex = (currentIndex - 1 + items.length) % items.length;
-  const nextIndex = (currentIndex + 1) % items.length;
-  const prevPromo = items[prevIndex];
-  const nextPromo = items[nextIndex];
+  const currentPromo = safeItems[currentIndex % safeItems.length] || safeItems[0];
+  const prevIndex = (currentIndex - 1 + safeItems.length) % safeItems.length;
+  const nextIndex = (currentIndex + 1) % safeItems.length;
+  const prevPromo = safeItems[prevIndex] || currentPromo;
+  const nextPromo = safeItems[nextIndex] || currentPromo;
 
   return (
     <div 

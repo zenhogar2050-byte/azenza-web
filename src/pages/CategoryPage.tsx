@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { CATEGORIES, COMBO_OF_THE_MONTH, PROMOTIONS } from '../constants';
+import { CATEGORIES, COMBO_OF_THE_MONTH, PROMOTIONS, COUNTRY_CONFIGS } from '../constants';
 import { ArrowRight, ArrowLeft, Sparkles, Heart, Zap, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import Footer from '../components/Footer';
 import SEOManager from '../components/SEOManager';
@@ -12,7 +12,9 @@ import Image from '../components/Image';
 export default function CategoryPage() {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
-  const { getProducts, getCategories, isCO } = useCart();
+  const { getProducts, getCategories, isCO, country } = useCart();
+  const config = COUNTRY_CONFIGS[country] || COUNTRY_CONFIGS['CO'];
+  const multiplier = isCO ? 1 : (config.priceMultiplier || 1);
 
   const activeCategories = getCategories();
   const availableProducts = getProducts();
@@ -36,22 +38,30 @@ export default function CategoryPage() {
 
   const isCombosCategory = category?.id === 'combos';
 
-  const comboProducts = isCO ? [
-    {
+  const productIds = new Set(availableProducts.map(p => p.id));
+  const validPromos = PROMOTIONS.filter(promo => 
+    promo.products.every(pid => productIds.has(pid))
+  );
+  const isComboOfTheMonthValid = COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
+
+  const comboProducts = [
+    ...(isComboOfTheMonthValid ? [{
       ...COMBO_OF_THE_MONTH,
-      basePrice: COMBO_OF_THE_MONTH.price,
+      price: Math.round(COMBO_OF_THE_MONTH.price * (isCO ? 1 : multiplier)),
+      basePrice: Math.round(COMBO_OF_THE_MONTH.price * (isCO ? 1 : multiplier)),
       shortDescription: COMBO_OF_THE_MONTH.description,
       size: 'Envío Gratis',
       presentation: 'Kit Completo',
-    },
-    ...PROMOTIONS.map(p => ({
+    }] : []),
+    ...validPromos.map(p => ({
       ...p,
-      basePrice: p.price,
+      price: Math.round(p.price * (isCO ? 1 : multiplier)),
+      basePrice: Math.round(p.price * (isCO ? 1 : multiplier)),
       shortDescription: p.description,
       size: 'Envío Gratis',
       presentation: p.id === 'promo-9' ? 'Kit Completo' : 'Kit Promocional',
     }))
-  ] : [];
+  ];
 
   const categoryProducts = isCombosCategory
     ? comboProducts
@@ -280,7 +290,7 @@ export default function CategoryPage() {
 
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-stone-100">
                         <span className="text-2xl font-black text-[#009b63] font-display">
-                          {isCombosCategory ? `$ ${(product.price || product.basePrice).toLocaleString('es-CO')}` : `Desde $ ${product.basePrice.toLocaleString('es-CO')}`}
+                          {isCombosCategory ? formatCurrency(product.price || product.basePrice) : `Desde ${formatCurrency(product.basePrice)}`}
                         </span>
                         <div className="w-11 h-11 rounded-full bg-[#009b63] text-white flex items-center justify-center hover:bg-emerald-700 transition-colors shadow-sm shrink-0">
                           <ArrowRight className="w-5 h-5" />

@@ -109,8 +109,8 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
 ✔️ Depuración Total: Ayuda a la limpieza interna del hígado y los riñones de impurezas y grasas.
 ✔️ Adiós a la Inflamación: Reduce la pesadez estomacal y la sensación de hinchazón tras las comidas.
 ✔️ Alianza Herbal: El poder del apio y el perejil para una función renal óptima y defensas activas.`,
-    seoTitle: 'RtaFull Depuración Hepática Vientre Ligero y Digestión Pesada con Alcachofa y Flor de Jamaica 500ml',
-    seoDescription: 'Apoya tu salud hepática y favorece la reducción de la pesadez con Rtafull. Concentrado natural con Alcachofa y Berenjena para una digestión más ligera. ¡Registro INVIMA!',
+    seoTitle: 'Comprar Rtafull Original: Desintoxicación y Digestión',
+    seoDescription: 'Adquiere Rtafull Original con Alcachofa y Berenjena. Digestión ligera y desintoxicación con Registro INVIMA. ¡Paga seguro en casa con Envío Gratis!',
     benefits: [
       'Ayuda en la depuración natural de hígado y riñones de toxinas acumuladas',
       'Favorece la reducción de la pesadez y el malestar tras comer',
@@ -189,8 +189,8 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
 ✔️ Regularidad Garantizada: Mezcla de chía y pitaya que asegura un movimiento intestinal fluido y natural.
 ✔️ Colon Saludable: Limpieza profunda de residuos acumulados sin causar irritación ni cólicos.
 ✔️ Rendimiento Superior: Fórmula concentrada de 450g que rinde el doble que las fibras convencionales.`,
-    seoTitle: 'Coliplus Fibra Natural para Limpieza de Colon Vientre Plano y Tránsito Intestinal Lento 450g',
-    seoDescription: 'Recupera tu regularidad con Coliplus. Fibra natural con Pitaya y Espirulina para depurar el colon y reconfortar el vientre. ¡Rinde 2 meses y tiene Registro INVIMA!',
+    seoTitle: 'Comprar Coliplus Original: Limpieza de Colon y Vientre',
+    seoDescription: 'Compra Coliplus Original con Registro INVIMA. Depura tu colon y desinflama el vientre naturalmente. ¡Envío 100% Gratis y Pago Contra Entrega en Colombia!',
     benefits: [
       'Regula el tránsito intestinal combatiendo el estreñimiento de raíz',
       'Favorece el confort del colon y reduce la pesadez abdominal de forma estable',
@@ -274,8 +274,8 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
 ✔️ Movilidad y Fuerza: Nutre profundamente el sistema óseo y mejora la flexibilidad de las articulaciones.
 ✔️ Belleza desde el Interior: Hidrata la piel en sus capas más profundas, fortaleciendo también cabello y uñas.
 ✔️ Pureza Familiar: Sabor neutro y disolución rápida, apto para todas las edades y estilos de vida activos.`,
-    seoTitle: 'Colágeno Hidrolizado Regeneración de Cartílagos Flexibilidad Firmeza de Piel y Citrato de Magnesio 180g',
-    seoDescription: 'Fortalece tus articulaciones y mejora la firmeza de tu piel con Colágeno + Citrato de Magnesio. Fórmula pura para vitalidad ósea y descanso reparador. ¡Calidad INVIMA!',
+    seoTitle: 'Colágeno Hidrolizado + Magnesio: Regeneración Articular',
+    seoDescription: 'Regenera articulaciones y devuelve la firmeza a tu piel con Colágeno Hidrolizado + Magnesio. Calidad INVIMA certificada. ¡Pídelo con Envío Gratis hoy!',
     benefits: [
       'Fortalece la estructura ósea y protege las articulaciones del desgaste',
       'Mejora notablemente la elasticidad de la piel y reduce la flacidez',
@@ -350,8 +350,8 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
 ✔️ Fortalecimiento Inmune: Calostro y Shiitake que actúan como un blindaje natural contra agentes externos.
 ✔️ Recuperación y Vitalidad: Aminoácidos esenciales (L-Arginina, L-Glutamina) para una regeneración muscular óptima.
 ✔️ Nutrición Completa: Omega 3-6-9 y vitaminas esenciales para el equilibrio metabólico de toda la familia.`,
-    seoTitle: 'Resvisfactor Escudo Inmunológico Defensas Fuertes Protección Celular Calostro Bovino y Betaglucanos 700g',
-    seoDescription: 'Fortalece tu sistema inmunológico con Resvisfactor. Fórmula con Calostro Bovino y Shiitake para un escudo natural y vitalidad inmediata. ¡Calidad INVIMA garantizada!',
+    seoTitle: 'Resvisfactor Original con Calostro Bovino: Defensas',
+    seoDescription: 'Refuerza tu sistema inmune con Resvisfactor y Calostro Bovino. Escudo natural de defensas con Registro INVIMA. ¡Paga al recibir con Envío Gratis hoy!',
     benefits: [
       'Eleva significativamente las defensas naturales y la respuesta inmune',
       'Aporta una sensación de vigor y vitalidad constante durante el día',
@@ -430,8 +430,8 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
 ✔️ Salud Cognitiva: Favorece la memoria, concentración y activa tu agilidad mental ante jornadas de alta exigencia.
 ✔️ Inmunidad y Vigor: Premezcla de sales minerales y vitaminas esenciales que robustecen las defensas naturales y protegen contra el cansancio cerebral.
 ✔️ Formulación Limpia: 100% libre de azúcares añadidos y libre de impurezas para asegurar máxima asimilación y pureza cerebral.`,
-    seoTitle: 'Booster Lion Hongo Melena de León Claridad Mental Memoria Enfoque y Concentración Nootrópico Natural 350g',
-    seoDescription: 'Potencia tu concentración y claridad mental con Booster Lion. Alimento con hongo funcional Melena de León, vitaminas y sabor vainilla. ¡Registro INVIMA IRSA-0021928-2022!',
+    seoTitle: 'Comprar Booster Lion Melena de León: Enfoque y Memoria',
+    seoDescription: 'Potencia tu enfoque y memoria con Booster Lion y hongo Melena de León. Fórmula certificada con Registro INVIMA. ¡Compra hoy con Pago Contra Entrega!',
     benefits: [
       'Contiene Melena de León para optimizar la memoria, concentración y salud cognitiva',
       'Aporta vitaminas y minerales esenciales que fortalecen activamente tu sistema inmune',
@@ -513,8 +513,8 @@ Ideal para deportistas que buscan acelerar su recuperación o para quienes sufre
 ✔️ Calor Reparador: Estimula la superficie cutánea para reconfortar y aliviar la zona rápidamente.
 ✔️ Alianza Botánica: Árnica y Chuchuguaza que trabajan en sinergia para reconfortar tras golpes y torceduras.
 ✔️ Bienestar Inmediato: Textura ligera de rápida acción que relaja tensiones y mejora la flexibilidad.`,
-    seoTitle: 'Loción Termoactiva Masaje Corporal Efecto Calor Alivio de Tensión en Espalda Cuello y Músculos 120ml',
-    seoDescription: 'Alivia el dolor y la tensión con la Loción Termoactiva de AZENZA. Efecto calor profundo con Árnica y Uña de Gato para recuperación muscular total. ¡Registro INVIMA!',
+    seoTitle: 'Loción Termoactiva Original: Alivio Muscular y Articular',
+    seoDescription: 'Loción Termoactiva con Árnica y Uña de Gato por solo $69.900 COP. Alivio muscular rápido con Registro INVIMA. ¡Pídela con Envío Gratis y Pago en Casa!',
     benefits: [
       'Alivio casi instantáneo de dolores musculares, golpes y calambres',
       'Efecto calor profundo que relaja tensiones y desinflama tejidos',
@@ -598,8 +598,8 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
 ✔️ Poder Oceánico: Colágeno marino de alta biodisponibilidad para una reconstrucción articular real.
 ✔️ Huesos Macizos: Minerales esenciales que previenen la desmineralización y fortalecen la densidad ósea.
 ✔️ Movilidad sin Límites: Nutre profundamente ligamentos y tendones para un caminar fluido y sin dolor.`,
-    seoTitle: 'C-Lagen Colágeno Marino Flexibilidad y Cartílagos Rodillas con Biotina y Magnesio Polvo 500g',
-    seoDescription: 'Fortalece tus rodillas y recupera tu movilidad con C-Lagen. Colágeno Marino puro con Magnesio para una regeneración articular superior. ¡Registro INVIMA certificado!',
+    seoTitle: 'C-Lagen Colágeno Marino Original: Salud de Rodillas',
+    seoDescription: 'Cuida tus rodillas y articulaciones con C-Lagen Colágeno Marino. Máxima pureza y absorción con Registro INVIMA. ¡Paga en casa con Envío Gratis nacional!',
     benefits: [
       'Máxima biodisponibilidad gracias a su origen marino de alta pureza',
       'Protege y regenera cartílagos desgastados en rodillas y caderas',
@@ -678,8 +678,8 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
 ✔️ Triple Acción de Magnesio: Optimiza la relajación muscular y combate el estrés crónico de raíz.
 ✔️ Adiós a los Calambres: Previene espasmos y rigidez, mejorando la flexibilidad de todo el cuerpo.
 ✔️ Bienestar Digestivo: La inulina incorporada promueve una digestión ligera y un vientre desinflamado.`,
-    seoTitle: 'Citramix Citrato de Magnesio Relajación Muscular Calma Nerviosa Serenidad y Bienestar Diario 350g',
-    seoDescription: 'Dile adiós al estrés y los calambres con Citramix. Triple aporte de Magnesio para un descanso profundo y músculos relajados. ¡Delicioso sabor a durazno!',
+    seoTitle: 'Citramix Citrato de Magnesio: Relax Muscular y Calma',
+    seoDescription: 'Combate el estrés y relaja tus músculos con Citramix Citrato de Magnesio sabor durazno. Registro INVIMA garantizado. ¡Envío Gratis y Pago Contra Entrega!',
     benefits: [
       'Relaja profundamente los músculos evitando calambres y rigidez',
       'Combate el agotamiento nervioso y mejora la calidad del descanso',
@@ -753,8 +753,8 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
 ✔️ Belleza Estructural: Bio-péptidos de colágeno que restauran la firmeza de la piel y fuerza capilar.
 ✔️ Energía con Propósito: Café funcional con crema de coco que activa tu mente sin irritar el estómago.
 ✔️ Blindaje Vitamínico: Carga completa de vitaminas A, C, D, E y complejo B para defensas invencibles.`,
-    seoTitle: 'Coffee con Colágeno Energía Natural Matutina Belleza de Piel Uñas Fuertes y Firmeza Café Gourmet 400g',
-    seoDescription: 'Fortalece tu cabello y uñas mientras disfrutas tu café. Coffee + Colágeno con base de Coco y 12 vitaminas para una belleza integral. ¡Calidad INVIMA!',
+    seoTitle: 'Coffee + Colágeno con Coco: Belleza, Piel Firme y Vigor',
+    seoDescription: 'Disfruta un café funcional con Colágeno y Crema de Coco para piel radiante y energía diaria. Registro INVIMA. ¡Pídelo online con Pago Contra Entrega!',
     benefits: [
       'Fortalece la fibra capilar y las uñas desde las capas internas',
       'Promueve una piel luminosa y elástica gracias al colágeno puro',
@@ -763,7 +763,7 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
       'Sabor gourmet cremoso sin azúcar añadida ni pesadez gástrica'
     ],
     image: '/assets/products/coffe-colageno.webp',
-    basePrice: 85000,
+    basePrice: 75900,
     size: '400g',
     invima: 'RSA-0010130-2020',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
@@ -804,10 +804,10 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
       { q: '¿Ayuda a fortalecer el cabello?', a: 'El colágeno es fundamental para la salud capilar, por lo que notarás mejoras en fuerza y brillo.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 85000 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 127500 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 170000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 255000, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 75900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 113850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 151800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 227700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Juan Pablo', text: 'Es el mejor ritual para empezar el día. Sabe a café premium y cuida mi piel.', rating: 5 },
@@ -831,8 +831,8 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
 ✔️ Fuerza Real: Potencia la contracción muscular y el volumen celular para una estructura física sólida.
 ✔️ Enfoque Cerebral: Nutre las neuronas y reduce la fatiga mental, mejorando la concentración sostenida.
 ✔️ Grado Farmacéutico: Pureza total bajo estándares USP, asegurando un suplemento limpio y ultra-seguro.`,
-    seoTitle: 'Creatina Monohidratada Pura Fuerza Muscular Potencia Masa Magra y Recuperación Física Rápida 200g',
-    seoDescription: 'Potencia tus músculos y cerebro con Creatina 100% pura de AZENZA. Grado farmacéutico USP para fuerza real, recuperación rápida y claridad mental. ¡Compra calidad!',
+    seoTitle: 'Creatina 100% Pura Monohidratada: Fuerza y Músculo',
+    seoDescription: 'Aumenta tu masa muscular, fuerza y resistencia con Creatina 100% Monohidratada pura. Máximo rendimiento con Registro INVIMA y Envío Gratis a Colombia.',
     benefits: [
       'Aumenta la fuerza explosiva y el rendimiento físico de alta intensidad',
       'Mejora significativamente la memoria, el enfoque y la agudeza mental',
@@ -902,8 +902,8 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
 ✔️ Bienestar Pélvico: Ayuda a desinflamar y proteger la salud de la próstata de forma preventiva.
 ✔️ Vigor Natural: Extractos frutales que aportan antioxidantes clave para la vitalidad masculina.
 ✔️ Protección Celular: Rico en vitamina E y polifenoles que combaten el daño oxidativo sistémico.`,
-    seoTitle: 'Iprossmen Bienestar Masculino Zona Pélvica Vigor y Vitalidad con Saw Palmetto y Licopeno 500ml',
-    seoDescription: 'Cuida tu salud masculina con Iprossmen. Fórmula natural con Licopeno de Tomate y Arándanos para proteger la próstata y darte vigor diario. ¡Registro INVIMA certificado!',
+    seoTitle: 'Iprossmen Original: Salud Prostática y Bienestar del Hombre',
+    seoDescription: 'Protege tu próstata y mejora el flujo urinario con Iprossmen fórmula botánica. Bienestar masculino con Registro INVIMA. ¡Paga al recibir en casa!',
     benefits: [
       'Protege y reconforta la salud de la próstata de manera preventiva',
       'Mejora notablemente la función urinaria y reduce la inflamación pélvica',
@@ -912,7 +912,7 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
       'Fórmula líquida de alta absorción con ingredientes naturales certificados'
     ],
     image: '/assets/products/Iprossmen.webp',
-    basePrice: 75900,
+    basePrice: 79900,
     size: '500ml',
     invima: 'SD2015-0003504',
     googleCategory: 'Health & Beauty > Personal Care',
@@ -981,8 +981,8 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
 ✔️ Inmunidad Total: Fortalece las defensas naturales contra virus y bacterias del entorno escolar y laboral.
 ✔️ Crecimiento y Vigor: Aporta los ladrillos nutricionales necesarios para el desarrollo físico y mental.
 ✔️ Absorción Superior: Base de coco que facilita el transporte de micronutrientes a las células de forma eficiente.`,
-    seoTitle: 'KDS 10 Multivitamínico Familiar Nutrición Integral Crecimiento Apetito Saludable Defensas y Energía 350g',
-    seoDescription: 'Fortalece a toda tu familia con KDS 10. Complejo completo de vitaminas y minerales para defensas altas y energía sin límites. ¡Nutrición inteligente certificada!',
+    seoTitle: 'KDS 10 Multivitamínico Familiar: Máxima Energía y Defensas',
+    seoDescription: 'Nutrición completa y energía para toda la familia con KDS 10 Multivitamínico. Refuerza defensas con Registro INVIMA. ¡Envío 100% Gratis a Colombia!',
     benefits: [
       'Proporciona el 100% de las vitaminas y minerales esenciales diarios',
       'Fortalece drásticamente el sistema inmunológico de niños y adultos',
@@ -1064,8 +1064,8 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
 ✔️ Apagado Mental: Calma el flujo de pensamientos intrusivos para una relajación profunda e inmediata.
 ✔️ Sueño Continuo: Ayuda a mantener un estado de descanso estable y sin interrupciones durante la noche.
 ✔️ Amanecer Vital: Fórmula herbal que asegura despertar sin pesadez, con máxima claridad y vigor.`,
-    seoTitle: 'Liofhim Inductor de Sueño Profundo Relajación Nocturna y Descanso Reparador Líquido 500ml',
-    seoDescription: 'Duerme profundamente con Liofhim. Mezcla botánica de Manzanilla y Albahaca para apagar la mente y despertar renovado cada mañana. ¡Sin somnolencia diurna!',
+    seoTitle: 'Liofhim Descanso Profundo: Sueño Reparador y Cero Estrés',
+    seoDescription: 'Duerme plácidamente y despierta renovado con Liofhim fórmula natural para el descanso. Sin adicción, con Registro INVIMA. ¡Paga al recibir en casa!',
     benefits: [
       'Facilita el inicio del sueño profundo de forma rápida y natural',
       'Disminuye los despertares nocturnos logrando un descanso ininterrumpido',
@@ -1143,8 +1143,8 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
 ✔️ Alivio Estomacal: Calma la acidez y la pesadez abdominal con la frescura natural del limón y la menta.
 ✔️ Digestión Ágil: El jengibre y la albahaca estimulan el tránsito digestivo para evitar la hinchazón.
 ✔️ Pureza Saludable: Sin azúcar añadida y bajo en calorías, ideal para mantener tu equilibrio metabólico diaria.`,
-    seoTitle: 'Liteplex Confort Digestivo Reducción de Gases Pesadez Estomacal y Ligereza Metabólica 500ml',
-    seoDescription: 'Dile adiós a la pesadez y la acidez con Liteplex de AZENZA. Concentrado de Jengibre y Limón para una digestión ágil y un vientre desinflamado. ¡Calidad INVIMA!',
+    seoTitle: 'Liteplex Digestivo Original: Alivio de Pesadez y Gases',
+    seoDescription: 'Despídete del ardor y la pesadez estomacal con Liteplex concentrado botánico digestivo. Registro INVIMA oficial. ¡Pídelo hoy con Pago Contra Entrega!',
     benefits: [
       'Alivio casi inmediato contra la pesadez estomacal y la acidez',
       'Promueve una digestión ágil y previene la hinchazón abdominal',
@@ -1221,8 +1221,8 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
 ✔️ Cuidado Articular Superior: Colágeno y quinua que restauran la movilidad y protegen contra el desgaste.
 ✔️ Piel y Cabello Radiante: Biotina y vitaminas que fortalecen la queratina natural y reducen la flacidez.
 ✔️ Energía Multivitamínica: Carga completa de micronutrientes para una vitalidad inagotable y defensas fuertes.`,
-    seoTitle: 'Maxlite Nutrición Osteomuscular Fortalecimiento Óseo Masa Muscular Proteína y Colágeno 800g',
-    seoDescription: 'Fortalece tus huesos y rejuvenece tu piel con Maxlite. Fórmula con Quinua, Colágeno y Resveratrol para una vitalidad integral y movilidad sin límites. ¡Calidad INVIMA!',
+    seoTitle: 'Maxlite Colágeno + Quinua: Nutrición y Salud Articular',
+    seoDescription: 'Fortalece huesos, articulaciones y masa muscular con Maxlite Colágeno y Quinua. Calidad certificada INVIMA. ¡Compra online con Envío Gratis nacional!',
     benefits: [
       'Fortalece la estructura ósea y protege las articulaciones del desgaste diario',
       'Mejora visiblemente la firmeza de la piel y la salud de cabello y uñas',
@@ -1301,8 +1301,8 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
 ✔️ Energía Explosiva: Maca y Borojó que actúan como motores naturales de vitalidad física y mental.
 ✔️ Recuperación Máxima: Proteína de suero y aminoácidos que reconstruyen el vigor tras el esfuerzo.
 ✔️ Enfoque y Resistencia: Minerales clave que combaten la fatiga y mantienen el sistema nervioso equilibrado.`,
-    seoTitle: 'Megamac Vigor Físico Energía Masculina Extrema y Resistencia con Maca Negra Chontaduro y Borojó 700g',
-    seoDescription: 'Combate el cansancio y potencia tu energía con Megamac. Fórmula ancestral con Borojó y Chontaduro para una vitalidad inagotable y rendimiento superior. ¡Registro INVIMA!',
+    seoTitle: 'Megamac Borojó y Maca: Energía Extrema y Vigor Natural',
+    seoDescription: 'Recupera tu vigor, potencia física y energía vital con Megamac extracto de Maca y Borojó. Registro INVIMA. ¡Envío 100% Gratis y Pago Contra Entrega!',
     benefits: [
       'Efecto revitalizante inmediato contra el cansancio físico y mental crónico',
       'Aumenta significativamente el rendimiento en actividades de alta exigencia',
@@ -1385,8 +1385,8 @@ Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de AZE
 ✔️ Blindaje Antioxidante: Protege el ADN celular contra el daño oxidativo y el envejecimiento prematuro.
 ✔️ Regeneración de Tejidos: 10,000 mg de colágeno que restauran la turgencia de la piel y salud articular.
 ✔️ Bienestar Cardiovascular: Los polifenoles de la uva favorecen una circulación saludable y bienestar estable.`,
-    seoTitle: 'Resveratrol Puro Poder Antioxidante Antienvejecimiento Salud Celular Uva y Arándanos Polvo 350g',
-    seoDescription: 'Protege tus células y rejuvenece tu piel con el Resveratrol de AZENZA. Potente antioxidante líquido con Colágeno para una vitalidad celular superior. ¡Alta absorción!',
+    seoTitle: 'Resveratrol + 10.000mg Colágeno: Rejuvenecimiento Total',
+    seoDescription: 'Fórmula antioxidante premium con Resveratrol y 10.000mg de Colágeno para piel joven y vitalidad celular. Registro INVIMA. ¡Paga en casa con Envío Gratis!',
     benefits: [
       'Potente acción antioxidante que combate el envejecimiento celular prematuro',
       'Restituye la firmeza y elasticidad de la piel con 10,000 mg de colágeno',
@@ -1465,8 +1465,8 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
 ✔️ Tono Uniforme: Reduce progresivamente la intensidad de las manchas y equilibra el color de la piel.
 ✔️ Hidratación y Relleno: Ácido hialurónico de alto peso molecular que suaviza arrugas y mejora la turgencia.
 ✔️ Luminosidad Radiante: Recupera el brillo natural y la lozanía de un rostro descansado y saludable.`,
-    seoTitle: 'Eventone Suero Aclarador Facial Tono Uniforme Atenuación de Manchas y Luminosidad Cutánea 30ml',
-    seoDescription: 'Atenúa la apariencia de manchas y recupera la luminosidad con Eventone. Suero con Bio-Retinol y Ácido Hialurónico para un tono uniforme y firmeza real. ¡Registro INVIMA!',
+    seoTitle: 'Eventone Crema Facial Original: Tono Uniforme y Anti-Manchas',
+    seoDescription: 'Aclara manchas y unifica el tono de tu piel con Eventone crema dermatológica aclaradora. Fórmula suave con Registro INVIMA. ¡Envío Gratis a Colombia!',
     benefits: [
       'Unifica el tono de la piel y reduce manchas oscuras visibles',
       'Efecto relleno inmediato gracias al ácido hialurónico puro',
@@ -1546,8 +1546,8 @@ A diferencia de los autobronceadores convencionales, nuestra fórmula de secado 
 ✔️ Tono Canela: Logra un bronceado natural, intenso y uniforme sin necesidad de exposición al sol.
 ✔️ Hidratación Luminosa: Nutre profundamente con vitamina E, evitando la resequedad y aportando un brillo saludable.
 ✔️ Acabado Terciopelo: Textura no grasa que se absorbe velozmente, permitiéndote vestirte de inmediato con total confianza.`,
-    seoTitle: 'Golden Passion Hidratante Corporal Efecto Glow Destello Dorado Resplandor de Lujo y Nutrición 90ml',
-    seoDescription: 'Presume un bronceado perfecto todo el año con Golden Passion. Aceite autobronceador enriquecido con Vitamina E para un tono canela natural y piel radiante. ¡Sin manchas!',
+    seoTitle: 'Golden Passion Autobronceador: Brillo Dorado y Firmeza',
+    seoDescription: 'Logra un bronceado dorado perfecto y piel satinada sin sol con Golden Passion loción de lujo. Registro INVIMA. ¡Pídela online con Pago Contra Entrega!',
     benefits: [
       'Proporciona un bronceado canela natural y uniforme en pocas horas',
       'Protege y nutre la piel con una potente dosis de Vitamina E pura',
@@ -1626,8 +1626,8 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
 ✔️ Elasticidad Blindada: Prepara y fortalece los tejidos para prevenir rupturas y marcas por estiramiento.
 ✔️ Regeneración Botánica: Aceites de grado superior que aceleran la renovación celular y suavizan cicatrices.
 ✔️ Confort Sensorial: Ideal para masajes relajantes, dejando la piel nutrida sin sensación pegajosa.`,
-    seoTitle: 'Hydrastrik Aceite Corporal Máxima Elasticidad Prevención de Estrías y Firmeza de la Piel 150ml',
-    seoDescription: 'Protege tu piel y previene estrías con Hydrastrik. Mezcla de aceites puros de Almendras y Aguacate para una elasticidad máxima y suavidad extrema. ¡Calidad INVIMA!',
+    seoTitle: 'Hydrastrik Aceite Corporal: Anti-Estrías y Elasticidad',
+    seoDescription: 'Previene y atenúa estrías mejorando la elasticidad con Hydrastrik aceite regenerador intensivo. Registro INVIMA. ¡Paga seguro al recibir en casa!',
     benefits: [
       'Previene eficazmente la formación de estrías al mejorar la elasticidad',
       'Nutrición profunda con óleos naturales de Almendra, Coco y Aguacate',
@@ -1706,8 +1706,8 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
 ✔️ Tono Sublime: Reduce progresivamente la apariencia de manchas sutiles y zonas sombreadas.
 ✔️ Calma Absoluta: La caléndula y la avena alivian instantáneamente la rojez y la sensibilidad cutánea.
 ✔️ Nutrición Sedosa: Crea una barrera de suavidad que mantiene la humedad esencial durante horas.`,
-    seoTitle: 'Miskinne Crema Facial Hidratante Reparación de Barrera Cutánea Alivio de Rojeces y Suavidad Caléndula 60g',
-    seoDescription: 'Unifica tu tono y calma tu piel con Miskinne de AZENZA. Hidratación profunda con Avena y Caléndula para un rostro luminoso y libre de manchas. ¡Suavidad total!',
+    seoTitle: 'Miskinne Crema Facial: Tono Parejo y Cuidado Antioxidante',
+    seoDescription: 'Nutre e ilumina tu rostro mientras emparejas el tono con Miskinne crema nutritiva botánica. Calidad INVIMA certificada. ¡Envío 100% Gratis a Colombia!',
     benefits: [
       'Atenúa visiblemente manchas superficiales y empareja el tono de la piel',
       'Proporciona un alivio inmediato a pieles sensibles, secas o irritadas',
@@ -1786,8 +1786,8 @@ Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisi�
 ✔️ Arquitectura Capilar: Fortalece el anclaje del cabello reduciendo la caída y el quiebre de forma visible.
 ✔️ Densidad y Crecimiento: El Trichogen al 8% estimula la zona de crecimiento para un mayor volumen folicular.
 ✔️ Vitalidad Herbal: 16 extractos que nutren, purifican y devuelven el brillo natural a la fibra capilar.`,
-    seoTitle: 'Tónico Capilar Estimulante Folicular Crecimiento Acelerado Control de Caída y Raíz Fuerte Romero 120ml',
-    seoDescription: 'Detén la caída y estimula el crecimiento con el Tónico capilar de AZENZA. 16 extractos naturales y Trichogen 8% para un cabello, barba y cejas fuertes y densos.',
+    seoTitle: 'Tónico Capilar Trichogen 8%: Crecimiento y Cero Caída',
+    seoDescription: 'Detén la caída y estimula el nacimiento de nuevo cabello con Tónico Capilar Trichogen al 8%. Registro INVIMA oficial. ¡Paga al recibir con Envío Gratis!',
     benefits: [
       'Detiene la caída excesiva y fortalece el cabello desde el folículo piloso',
       'Estimula el crecimiento rápido de nuevas hebras más gruesas y resistentes',
@@ -1865,8 +1865,8 @@ Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura in
 ✔️ Acción Criogénica Inmediata: Sensación de limpieza profunda que neutraliza olores de comida, tabaco y café al instante.
 ✔️ Equilibrio Prebiótico: Contiene inulina para proteger la salud de tu boca mientras refresca tu aliento.
 ✔️ Salud Dental Garantizada: 100% Sin azúcar y con bicarbonato para equilibrar el pH bucal y proteger el esmalte.`,
-    seoTitle: 'Tufoff Caramelos Aliento Fresco Instantáneo Neutralizador de Olores Bucales y Confianza Natural 75g',
-    seoDescription: 'Neutraliza el mal aliento al instante con Tufoff. Dulces sin azúcar con prebióticos y aceites esenciales para una frescura total y equilibrio bucal. ¡Confianza certificada!',
+    seoTitle: 'Tufoff Spray Bucal: Aliento Fresco al Instante y Natural',
+    seoDescription: 'Elimina el mal aliento desde la raíz al instante con Tufoff spray bucal refrescante. Práctico y seguro con Registro INVIMA. ¡Pídelo Contra Entrega!',
     benefits: [
       'Neutraliza el aliento a tabaco, alcohol y condimentos al contacto',
       'Protege la microbiota bucal gracias a su aporte de prebióticos (Inulina)',
@@ -1947,8 +1947,8 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
 ✔️ Efecto Tensor Natural: Ayuda a mejorar la firmeza y el tono de la piel de forma progresiva.
 ✔️ Nutrición Profunda: Enriquecida con Zinc y L-Arginina para promover la renovación celular y vitalidad.
 ✔️ Absorción Superior: Textura ligera que no mancha la ropa y deja la piel suave y renovada al instante.`,
-    seoTitle: 'Akha Crema Reafirmante Corporal Tonicidad y Elasticidad Dérmica con Colágeno Hidrolizado Tarro 30ml',
-    seoDescription: 'Recupera la firmeza y elasticidad de tu piel con Akha. Crema con Acmella Oleracea y Maca para un efecto tensor natural y vitalidad cutánea. ¡Registro INVIMA!',
+    seoTitle: 'Crema Akha Reafirmante: Volumen y Firmeza Natural',
+    seoDescription: 'Reafirma y mejora el volumen y tonicidad de tu piel con Crema Akha extractos botánicos modeladores. Registro INVIMA. ¡Paga seguro al recibir en casa!',
     benefits: [
       'Piel visiblemente más saludable, firme y tonificada',
       'Protección antioxidante avanzada contra el envejecimiento',
@@ -2030,8 +2030,8 @@ Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los
 ✔️ Adiós a la Irritación: Calma la piel sensible después del afeitado o depilación con láser/cera.
 ✔️ Protección Natural: Ayuda a mantener el pH equilibrado y la salud de la piel en áreas íntimas.
 ✔️ Hidratación de Confort: Nutre profundamente, evitando la resequedad y promoviendo la elasticidad.`,
-    seoTitle: 'Derman Mascarilla Calmante Íntima Hidratación Protección Dérmica Suavidad y Confort Natural Crema 30ml',
-    seoDescription: 'Protege y calma tu zona íntima con Derman. Mascarilla en crema con Caléndula y Aloe Vera para evitar irritaciones y mantener el equilibrio natural. ¡Registro INVIMA!',
+    seoTitle: 'Derman Mascarilla Íntima: Cuidado Post-Depilación y Calma',
+    seoDescription: 'Calma la irritación y previene vellos encarnados con Derman mascarilla íntima calmante. Suavidad con Registro INVIMA. ¡Pídela con Envío Gratis nacional!',
     benefits: [
       'Calma y regenera la piel post-depilación o afeitado',
       'Mantiene el equilibrio natural en zonas íntimas externas',
@@ -2114,8 +2114,8 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
 ✔️ Impulso Natural: Borojó y Maca seleccionados para elevar el ánimo y la fuerza física al instante.
 ✔️ Mente Despierta: Vitaminas B que optimizan la concentración mental y el procesamiento de energía.
 ✔️ Sabor y Practicidad: Delicioso sabor a mora azul en un formato listo para tomar y llevar a cualquier parte.`,
-    seoTitle: 'Haydar Bebida Energizante Natural Vigor Inmediato Rendimiento Físico y Agudeza Mental Sin Bajón 240ml',
-    seoDescription: 'Potencia tu energía y enfoque con Haydar. Bebida energizante natural con Borojó, Maca y Vitaminas B para un rendimiento superior diario. ¡Registro INVIMA!',
+    seoTitle: 'Haydar Bebida Energizante: Vigor, Rendimiento y Maca',
+    seoDescription: 'Impulsa tu energía, vigor físico y vitalidad con Haydar bebida funcional con Maca y Borojó. Registro INVIMA. ¡Compra online con Pago Contra Entrega!',
     benefits: [
       'Impulso de ánimo y fuerza física con ingredientes botánicos',
       'Maximiza el enfoque mental y la concentración durante horas',
@@ -2197,8 +2197,8 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
 ✔️ Tonificación Inmediata: Efecto de contracción natural que mejora la percepción y sensibilidad íntima.
 ✔️ Cuidado y Confort: Hidratación superior con Aloe Vera para una piel suave y protegida de irritaciones.
 ✔️ Armonía Biológica: Su pH equilibrado asegura una compatibilidad total con tu cuerpo y la salud de tu flora.`,
-    seoTitle: 'Gel de Renovación y Firmeza Íntima Instant Virgin | Azenza',
-    seoDescription: 'Recupera el tono y la confianza íntima con Instant Virgin. Gel con Aloe Vera y efecto de contracción natural para una plenitud femenina real. ¡Registro INVIMA!',
+    seoTitle: 'Instant Virgin Gel Íntimo: Firmeza, Cuidado y Confort',
+    seoDescription: 'Recupera el confort, elasticidad y tono íntimo con Instant Virgin gel botánico reafirmante. Registro INVIMA certificado. ¡Pídelo con Envío 100% Gratis!',
     benefits: [
       'Brinda una sensación inmediata de mayor firmeza y tono genital',
       'Aumenta la sensibilidad y plenitud en los momentos de intimidad',
@@ -2207,7 +2207,7 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
       'Fórmula discreta de rápida absorción que no deja residuos ni manchas'
     ],
     image: '/assets/products/Instantvirgin.webp',
-    basePrice: 89900,
+    basePrice: 79000,
     size: '30ml',
     presentation: 'Gel / Crema',
     invima: '2021DM-0024065',
@@ -2247,10 +2247,10 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
       { q: '¿Se puede usar todos los días?', a: 'Su fórmula es gentil, pero está diseñado principalmente para momentos específicos de intimidad donde se desee mayor tono.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 89900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 134850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 179800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 269700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 79000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 118500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 158000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 237000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Andrea G.', text: 'Me ha ayudado a recuperar mi confianza y bienestar íntimo. Muy efectivo.', rating: 5 },
@@ -2274,8 +2274,8 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
 ✔️ Efecto Volumen y Firmeza: Mejora la textura y el tono de la piel en zonas críticas con uso constante.
 ✔️ Hidratación Extrema: Nutre las capas profundas de la piel, manteniéndola elástica y flexible.
 ✔️ Rápida Absorción: Fórmula de grado profesional que actúa desde la primera aplicación con suavidad.`,
-    seoTitle: 'Mammoth Crema Corporal Reafirmante Efecto Densificador Elasticidad y Vigor para la Piel 30ml',
-    seoDescription: 'Mejora la textura y firmeza de tu piel con Mammoth. Crema con Acmella Oleracea y Vitamina E para una hidratación profunda y efecto volumen. ¡Registro INVIMA!',
+    seoTitle: 'Mammoth Crema Reafirmante: Volumen y Cuidado Natural',
+    seoDescription: 'Crema reafirmante y voluminizante Mammoth con extractos botánicos para firmeza y tonicidad. Registro INVIMA. ¡Paga en casa con Pago Contra Entrega!',
     benefits: [
       'Textura cutánea renovada, más suave y uniforme al tacto',
       'Elasticidad y nutrición profunda que previene la flacidez',
@@ -2284,7 +2284,7 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
       'Protección contra radicales libres gracias a su alto contenido de Vitamina E'
     ],
     image: '/assets/products/Mammoth.webp',
-    basePrice: 89000,
+    basePrice: 59900,
     size: '30ml',
     presentation: 'Crema',
     invima: 'NSOC19282-23CO',
@@ -2326,10 +2326,10 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
       { q: '¿Es segura para pieles muy secas?', a: 'Absolutamente, su alto contenido de Vitamina E y aceites nutritivos reconforta la piel seca brindando elasticidad inmediata.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 89000 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 133500 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 178000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 267000, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 59900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 89850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 119800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 179700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Ricardo H.', text: 'Siento una fuerza y potencia que no tenía antes. Muy efectivo para mis entrenamientos.', rating: 5 },
@@ -2353,8 +2353,8 @@ Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esen
 ✔️ Desintoxicación Profunda: Ayuda a depurar impurezas del organismo.
 ✔️ Digestión y Tránsito: Fibra natural que optimiza el movimiento intestinal y reduce la inflamación.
 ✔️ Energía y Saciedad: Aporta proteínas y grasas saludables que mantienen tu energía constante y controlan el apetito.`,
-    seoTitle: 'Tyruss Full Nutrición Verde Clorofila Espirulina Oxigenación Celular y Desintoxicación Polvo 500g',
-    seoDescription: 'Desintoxica tu cuerpo y recupera tu energía con Tyruss Full. Mezcla con Clorofila, Espirulina y Proteína de Arveja para un equilibrio digestivo. ¡Registro INVIMA!',
+    seoTitle: 'Tyruss Full Clorofila + Espirulina: Detox y Digestión',
+    seoDescription: 'Limpia tu organismo y alcaliniza tu cuerpo con Tyruss Full Clorofila, Espirulina y Manzanilla. Registro INVIMA. ¡Pídelo con Pago Contra Entrega en casa!',
     benefits: [
       'Depura y desintoxica el organismo de forma suave y efectiva',
       'Promueve un vientre plano al mejorar el tránsito intestinal',
@@ -2436,8 +2436,8 @@ Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el 
 ✔️ Vitalidad Inmediata: Activa tu cuerpo con extractos naturales que potencian el vigor y la fuerza física.
 ✔️ Enfoque de Hierro: Nutrientes cerebrales que mantienen tu mente alerta, concentrada y despejada.
 ✔️ Sabor Refrescante: Una explosión de sabor a frutos rojos y arándanos para refrescar tus sentidos.`,
-    seoTitle: 'Zafir Bebida Energizante Natural Máxima Energía Rendimiento Físico y Enfoque con Maca y Borojó 500ml',
-    seoDescription: 'Recarga tu energía con Zafir. Bebida funcional con Borojó, Maca y Vitaminas B para un enfoque mental claro y vitalidad inmediata. ¡Registro INVIMA!',
+    seoTitle: 'Zafir Bebida Energizante: Máximo Vigor con Maca y Borojó',
+    seoDescription: 'Eleva tu energía y rendimiento físico al instante con Zafir bebida energizante natural. Registro INVIMA oficial. ¡Pídela hoy con Envío Gratis nacional!',
     benefits: [
       'Rendimiento físico optimizado para actividades de alta exigencia',
       'Mantiene la alerta mental constante sin generar nerviosismo o taquicardia',
@@ -2519,8 +2519,8 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
 ✔️ Digestión Saludable: Combinación botánica que apoya el correcto tránsito y brinda una reconfortante sensación de alivio y frescura.
 ✔️ Dinamismo Libre de Fatiga: La maca y la flor de jamaica aportan nutrientes clave para optimizar tu energía sin causar ansiedad ni nerviosismo.
 ✔️ Máxima Pureza: Alimento sin azúcares añadidos, libre de partículas extrañas, garantizando una bebida ligera y de un sabor excepcional.`,
-    seoTitle: 'Guanda Mix Digestión Ágil Eliminación de Toxinas y Vitalidad Diaria Fibra Prebiótica y Frutas Naturales 350g',
-    seoDescription: 'Estrena bienestar digestivo y vitalidad con Guanda Mix. Bebida en polvo con té verde, maca, magnesio y delicioso sabor cereza. ¡Registro INVIMA IRSA-0245-2025!',
+    seoTitle: 'Guanda Mix Infusión: Digestión Ligera y Flor de Jamaica',
+    seoDescription: 'Infusión herbal Guanda Mix con Flor de Jamaica y alcachofa para desinflamar y drenar líquidos. Registro INVIMA. ¡Envío Gratis y Pago Contra Entrega!',
     benefits: [
       'Aporta vitaminas y minerales esenciales que completan y fortalecen la nutrición diaria',
       'Contiene maca, reconocida por su gran capacidad para favorecer la energía física y mental',
@@ -2601,8 +2601,8 @@ Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita 
 ✔️ Rejuvenecimiento Celular: Protege las mitocondrias y promueve la reparación biológica natural.
 ✔️ Energía Metabólica: Transforma los nutrientes en energía vital de forma más eficiente y duradera.
 ✔️ Soporte Inmunológico: Alimento enriquecido para fortalecer las defensas y la vitalidad diaria.`,
-    seoTitle: '+NAD Rejuvenecimiento Celular Producción de Energía Mitocondrial Vitalidad y Longevidad Avanzada Polvo 350g',
-    seoDescription: 'Apoya el bienestar de tus células con +NAD. Suplemento con Resveratrol y NAD+ para una piel firme y energía vital renovada. ¡Registro INVIMA!',
+    seoTitle: '+NAD + Resveratrol Original: Longevidad y Energía Pura',
+    seoDescription: 'Activa la juventud celular y máxima vitalidad con +NAD y Resveratrol concentrado. Alta biodisponibilidad y Registro INVIMA. ¡Compra con Envío Gratis!',
     benefits: [
       'Apoyo en la protección celular avanzada contra agentes oxidantes',
       'Aumento significativo en la producción de energía y claridad mental',
@@ -2684,8 +2684,8 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
 ✔️ Ritual de Potencia: El sabor del café colombiano potenciado con Maca y Chontaduro para el vigor.
 ✔️ Vigor Mental: Mejora la concentración y reduce la fatiga intelectual en jornadas de alta presión.
 ✔️ Fórmula Nutritiva: Base de coco que aporta grasas saludables y una textura cremosa inigualable.`,
-    seoTitle: 'Titan Coffee Energía Extrema Sin Taquicardia Concentración y Resistencia Física Café con Maca y Borojó 400g',
-    seoDescription: 'Despierta tu máximo potencial con Titan Coffee. Café funcional con extractos naturales para energía física y enfoque mental superior. ¡Registro INVIMA!',
+    seoTitle: 'Titan Coffee Original: Café Energizante con Maca y Borojó',
+    seoDescription: 'Despierta tu vigor y energía física con Titan Coffee ($69.900). Café funcional con Maca, Borojó y Registro INVIMA. ¡Pídelo con Pago Contra Entrega!',
     benefits: [
       'Desayuno de alto rendimiento para días de extrema exigencia física',
       'Combate el agotamiento laboral y mejora la agudeza mental diaria',
@@ -2764,8 +2764,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Alivio Antiinflamatorio: Calma instantáneamente el dolor, el ardor y la picazón en zonas sensibles.
 ✔️ Regeneración Celular: La caléndula y el aloe vera aceleran la recuperación natural de los tejidos afectados.
 ✔️ Facilidad y Confort: Mejora la suavidad de la zona para permitir una evacuación sin traumas ni dolor excesivo.`,
-    seoTitle: 'Hemocream Alivio Inmediato Confort Calmante en Zonas Sensibles Cuidado Botánico Reparador Crema 30ml',
-    seoDescription: 'Reduce la inflamación y calma el dolor anal con nuestro cuidado botánico. Combinación de 11 extractos naturales para un alivio suave y efectivo. ¡Calidad INVIMA!',
+    seoTitle: 'Hemocream Cuidado Botánico: Alivio Rápido y Confort',
+    seoDescription: 'Alivio reconfortante inmediato para zonas sensibles y ardor con Hemocream crema botánica. Suave con la piel y Registro INVIMA. ¡Paga seguro al recibir!',
     benefits: [
       'Calma de forma inmediata el ardor y la sensación de pesadez local',
       'Favorece la microcirculación gracias al extracto de Castaño de Indias',
@@ -2774,7 +2774,7 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       'Fórmula botánica fluida, discreta y de rápida absorción sin manchas'
     ],
     image: '/assets/products/Hemocream.webp',
-    basePrice: 75900,
+    basePrice: 59900,
     size: '30ml',
     presentation: 'Crema',
     invima: 'NSOC15678-23CO',
@@ -2818,10 +2818,10 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       { q: '¿Es segura durante el embarazo?', a: 'Al ser natural con calidad certificada es generalmente segura, pero siempre recomendamos consultar a su profesional de salud.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 75900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 113850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 151800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 227700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 59900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 89850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 119850, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 179700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Jorge T.', text: 'Me ha aliviado mucho el malestar y la inflamación. Muy efectiva.', rating: 5 },
@@ -2844,8 +2844,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Control del Estrés: Regula el cortisol, reduce la ansiedad y promueve la calma.
 ✔️ Sueño Reparador: Combate el insomnio y relaja el sistema nervioso sin causar somnolencia diurna.
 ✔️ Resiliencia Natural: Optimiza el rendimiento mental y aporta un estado de ánimo positivo.`,
-    seoTitle: 'Ashwagandha Equilibrio Emocional Calma Mental Fatiga y Serenidad Diaria 60 Cápsulas Blandas',
-    seoDescription: 'Reduce el estrés y mejora tu calidad de sueño de forma natural con Ashwagandha de AZENZA. Suplemento adaptógeno premium con Registro INVIMA.',
+    seoTitle: 'Ashwagandha Pura Original: Control de Estrés y Sueño',
+    seoDescription: 'Compra Ashwagandha pura por solo $69.900 COP. Reduce el estrés, baja el cortisol y duerme mejor. Registro INVIMA garantizado y Envío Gratis a Colombia.',
     benefits: [
       'Ayuda a regular los niveles de ansiedad y aliviar el estrés',
       'Promueve un descanso profundo, reparador y combate el insomnio',
@@ -2912,8 +2912,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Energía Mitocondrial: La vitamina B3 y el NAD+ optimizan la energía celular, reduciendo eficazmente el cansancio.
 ✔️ Firmeza y Elasticidad: Combate los radicales libres para restaurar la turgencia natural de la piel y los tejidos.`,
 
-    seoTitle: 'Resveratrol con Vitamina B3 NAD+ Longevidad Celular Antiedad y Energía Vital 60 Cápsulas Blandas',
-    seoDescription: 'Potencia tu vitalidad y rejuvenece desde adentro con Resveratrol y Vitamina B3 (NAD). Fórmula de longevidad celular con Registro INVIMA y alta absorción.',
+    seoTitle: 'Resveratrol + NAD Original: Energía y Juventud Celular',
+    seoDescription: 'Fórmula antiedad con Resveratrol y Vitamina B3 (+NAD) por $69.900 COP. Energía celular y longevidad con Registro INVIMA. ¡Paga en casa con Envío Gratis!',
     benefits: [
       'Apoya la producción de energía celular y combate la fatiga',
       'Potente acción antioxidante contra el envejecimiento de las células',
@@ -2979,8 +2979,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Activación de Energía: Transforma los alimentos en combustible celular para apoyar un rendimiento físico y mental superior.
 ✔️ Metabolismo y Control: Acelera el metabolismo de forma natural y ayuda a evitar que el cuerpo acumule grasa.
 ✔️ Salud Digestiva: Disminuye la inflamación abdominal, controla los antojos de dulce y promueve una digestión ligera. `,
-    seoTitle: 'Vinagre de Manzana con la Madre Vientre Plano Digestión Ágil y Metabolismo Activo 60 Cápsulas Blandas',
-    seoDescription: 'Regula tu digestión y controla los antojos con el Vinagre de Manzana de AZENZA. Suplemento natural para un vientre plano y metabolismo activo. ¡Registro INVIMA!',
+    seoTitle: 'Vinagre de Manzana Puro: Metabolismo y Digestión Ligera',
+    seoDescription: 'Acelera tu metabolismo y mejora la digestión con Vinagre de Manzana puro ($69.900). Suplemento natural con Registro INVIMA. ¡Pídelo Contra Entrega!',
     benefits: [
       'Apoya el control de peso y disminuye la ansiedad por comer dulce',
       'Mejora la digestión y ayuda a reducir el reflujo y la pesadez',
@@ -3046,8 +3046,8 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
 ✔️ Bienestar Muscular: Alivia la tensión, previene calambres y espasmos, y acelera la recuperación física.
 ✔️ Sistema Nervioso y Sueño: Promueve una relajación profunda, ayuda a controlar el estrés y mejora la calidad del descanso.
 ✔️ Balance y Energía: Optimiza el equilibrio de líquidos en el cuerpo, regula la presión y combate el cansancio crónico.`,
-    seoTitle: 'Citrato de Potasio y Magnesio Equilibrio Mineral Músculos Activos y Salud Cardiovascular 60 Cápsulas Blandas',
-    seoDescription: 'Evita los calambres y mejora tu salud cardiovascular con Citrato de Potasio y Magnesio de AZENZA. Citratos de alta disponibilidad con Registro INVIMA.',
+    seoTitle: 'Citrato de Potasio y Magnesio: Cero Calambres y Energía',
+    seoDescription: 'Elimina calambres y fatiga con Citrato de Potasio y Magnesio ($69.900). Alta biodisponibilidad y Registro INVIMA. ¡Envío Gratis y Pago al Recibir!',
     benefits: [
       'Combate eficazmente los calambres y la rigidez muscular de forma estable',
       'Ayuda a unificar el ritmo muscular cardíaco y apoya el sistema cardiovascular',
@@ -3115,8 +3115,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 ✔️ Escudo e Inmunidad: Potente protector natural que fortalece las defensas y combate amenazas externas gracias a su acción antioxidante.
 ✔️ Bienestar Digestivo: Alivia los gases, reduce la inflamación estomacal y apoya el funcionamiento correcto y ligero de todo el sistema digestivo.
 ✔️ Limpieza Profunda: Ayuda a regular la microbiota intestinal, mitiga la candidiasis y depura el organismo de manera segura.`,
-    seoTitle: 'Orégano Puro Máxima Concentración de Carvacrol Defensas y Purificación Digestiva 60 Cápsulas Blandas',
-    seoDescription: 'Fortalece tus defensas y limpia tu sistema digestivo con el Orégano de AZENZA. Suplemento natural rico en carvacrol con Registro INVIMA.',
+    seoTitle: 'Aceite de Orégano Concentrado: Defensas y Salud Digestiva',
+    seoDescription: 'Poderoso antibacteriano natural y escudo inmune con Aceite de Orégano concentrado ($69.900). Registro INVIMA oficial. ¡Paga en casa con Envío Gratis!',
     benefits: [
       'Potente antiparasitario y antibacteriano natural',
       'Ayuda a combatir el envejecimiento prematuro',
@@ -3184,8 +3184,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
  ✔️ Alivio del Estrés y Ansiedad: Equilibra el sistema nervioso, reduce los niveles de cortisol y ayuda a mantener la calma en días exigentes.
  ✔️ Calma Mental y Enfoque: Disminuye la fatiga mental, promueve la claridad cognitiva y mejora la concentración diaria.
  ✔️ Descanso y Alivio Muscular: Promueve una relajación profunda, previene espasmos y optimiza la calidad del sueño reparador.`,
-    seoTitle: 'Bisglicinato de Magnesio Relajación Muscular Conciliar el Sueño Profundo y Serenidad 60 Cápsulas Blandas',
-    seoDescription: 'Concilia un sueño profundo y relaja tus músculos con Bisglicinato de Magnesio de AZENZA. Magnesio quelado de máxima absorción con Registro INVIMA.',
+    seoTitle: 'Bisglicinato de Magnesio Quelado: Sueño Profundo y Relax',
+    seoDescription: 'Máxima absorción para relajar músculos y conciliar un sueño profundo con Bisglicinato de Magnesio ($69.900). Registro INVIMA. ¡Paga Contra Entrega!',
     benefits: [
       'Promueve un sueño profundo, reparador y combate el insomnio crónico',
       'Alivia la tensión muscular acumulada, calambres y espasmos',
@@ -3251,8 +3251,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 ✔️ Estructura y Reparación: Los aminoácidos fortalecen la fibra capilar, reparan el cabello existente y previenen la rotura.
 ✔️ Crecimiento y Grosor: La biotina estimula la aparición de nuevas hebras, mejora la oxigenación y engrosa el cabello de raíz a puntas.
 ✔️ Circulación y Control: La niacinamida mejora el flujo sanguíneo en el cuero cabelludo, calma la irritación y controla el exceso de grasa.`,
-    seoTitle: 'Folivance Tónico Capilar Densidad Volumen Freno a la Caída de Cabello y Regeneración Dérmica 120g',
-    seoDescription: 'Frena la caída y duplica el crecimiento capilar con Folivance de AZENZA. Tónico folicular de alto impacto Biotina, Aminoácidos y Niacinamida.',
+    seoTitle: 'Tónico Capilar Folivance: Anti-Caída y Máximo Crecimiento',
+    seoDescription: 'Frena la caída y nutre el folículo con Tónico Capilar Folivance extractos botánicos activos ($69.900). Registro INVIMA. ¡Envío Gratis Contra Entrega!',
     benefits: [
       'Frena la caída del cabello de forma visible desde la segunda semana',
       'Estimula la fase de crecimiento activo (anágena) para nuevas hebras',
@@ -3318,8 +3318,8 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 ✔️ Estructura y Brillo: Los aminoácidos fortalecen la fibra capilar, reparan el cabello existente, previenen la rotura y restauran un brillo saludable desde el primer uso.
 ✔️ Crecimiento y Grosor: La biotina estimula la aparición de nuevo cabello, mejora la oxigenación folicular y lo engrosa de raíz a puntas.
 ✔️ Circulación y Control: La niacinamida mejora el flujo sanguíneo en el cuero cabelludo, calma la irritación y controla el exceso de grasa de forma duradera.`,
-    seoTitle: 'Shampoo Intensivo Limpieza Profunda Folicular Control Grasa y Estimulación de Crecimiento 450ml',
-    seoDescription: 'Limpia con suavidad y fortalece tu cabello con el Shampoo Intensivo de AZENZA. Fórmula profesional con Romero y Biotina libre de sal. ¡INVIMA!',
+    seoTitle: 'Shampoo Intensivo Sin Sal: Anti-Caída, Brillo y Fuerza',
+    seoDescription: 'Limpia suavemente, fortalece la raíz y previene la caída con Shampoo Intensivo Sin Sal ($69.900). Registro INVIMA. ¡Pídelo con Pago Contra Entrega!',
     benefits: [
       'Limpia de manera profunda y regula el exceso de grasa en la raíz',
       'Previene la caída del cabello fortaleciendo la fibra capilar',
@@ -3386,8 +3386,8 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
 ✔️ Circulación y Alivio: El castaño de indias ayuda a tonificar la piel, disminuye la pesadez y reduce notablemente la tensión en las piernas cansadas mediante el masaje.
 ✔️ Elasticidad y Firmeza: La centella asiática favorece la firmeza de la piel estimulando de forma natural los tejidos, mejora su aspecto y atenúa la apariencia de las várices y líneas superficiales.
 ✔️ Acción Protectora y Nutrición: Su base aceitosa humecta profundamente la piel, mientras que sus antioxidantes naturales protegen las células contra el desgaste y la resequedad diaria.`,
-    seoTitle: 'Aceite Relajante Masaje Corporal Descontracturante Alivio de Tensión en Espalda y Cuello 60g',
-    seoDescription: 'Relaja tus músculos y mitiga el estrés con el Aceite Relajante de AZENZA. Combinación de Castaño de Indias y Centella Asiática. ¡INVIMA!',
+    seoTitle: 'Aceite Corporal Relajante: Masajes y Cero Tensión',
+    seoDescription: 'Alivia contracturas y relaja la mente con Aceite Corporal Relajante para masajes ($69.900). Textura sedosa con Registro INVIMA. ¡Envío Gratis nacional!',
     benefits: [
       'Disuelve el estrés y libera la rigidez de tus músculos',
       'Desliza suavemente sobre la piel facilitando masajes profundos',
@@ -3454,8 +3454,8 @@ Diseñado con una textura ligera de rápida absorción y efecto no graso, este p
 ✔️ Efecto Frío: El mentol aporta una sensación de frescura calmante inmediata que disminuye la pesadez, alivia el dolor local y descansa las piernas de forma instantánea.
 ✔️ Tonificación y Circulación Ampliada: El castaño de indias activa el flujo sanguíneo de forma localizada, estimula la circulación en la zona aplicada y en toda la pierna, y previene eficazmente la hinchazón diaria.
 ✔️ Firmeza y Reparación: La centella asiática mejora la consistencia de los tejidos cutáneos de las piernas, disminuye la flacidez y ayuda a desvanecer visualmente las várices.`,
-    seoTitle: 'Gel Frío Efecto Criogénico Confort de Piernas Cansadas Frescura y Descanso Muscular Mentol 60g',
-    seoDescription: 'Alivia la fatiga muscular y la pesadez de tus piernas con el Gel Frío Relajante de AZENZA. Efecto criogénico con Castaño de Indias. ¡INVIMA!',
+    seoTitle: 'Gel Frío Criogénico: Alivio Inmediato de Piernas Cansadas',
+    seoDescription: 'Descansa tus piernas pesadas y alivia la tensión con Gel Frío Criogénico efecto hielo. Rápida absorción con Registro INVIMA. ¡Paga al recibir en casa!',
     benefits: [
       'Efecto frío criogénico inmediato que reduce la inflamación local',
       'Alivia de forma efectiva la pesadez y cansancio en piernas y pies',
@@ -3561,65 +3561,55 @@ export interface Promotion {
 }
 
 export const COMBO_OF_THE_MONTH: Promotion = {
-  id: 'combo-7',
-  name: 'Combo 7',
-  description: 'El Combo 7 es la selección definitiva de alto rendimiento diseñada para potenciar la fuerza, el vigor y la recuperación masculina. Al reunir la acción termoactiva para el alivio muscular, la energía pura de Titan Coffee, la depuración intensa de Rtafull, y el cuidado especializado de Hemocream y Mammoth, este kit robustece tu vitalidad integral frente a la rutina diaria de alta exigencia física.',
-  image: '/assets/combos/combo-futbolero.webp',
-  price: 247700,
-  originalPrice: 329500,
+  id: 'combo-inmunidad-dual',
+  name: 'Inmunidad Dual',
+  description: 'Resvisfactor y Coliplus: la combinación perfecta para desinflamar tu vientre, sentirte mas ligero y libre de molestias.',
+  image: '/assets/combos/combo-bienestar.webp',
+  price: 129900,
+  originalPrice: 165800,
   peso_adicional: 0,
   googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
   condition: 'new',
-  products: ['locion', 'rtafull', 'hemocream', 'titan-coffee', 'mamooth'],
-  seoTitle: 'Rendimiento Físico Vigor Masculino Máximo y Energía Deportiva Titan Coffee Termoactiva Rtafull Mammoth Pack',
-  seoDescription: 'Potencia tu vigor y acelera tu recuperación con el Combo 7. Energía pura, desintoxicación y alivio físico en un solo pack diario. ¡Ahorra $81.800 con envío gratis!',
+  products: ['resvis', 'coliplus'],
+  seoTitle: 'Combo Inmunidad Dual: Resvisfactor + Coliplus en Oferta',
+  seoDescription: 'Ahorra $35.900 en el Combo Inmunidad Dual (Resvisfactor + Coliplus) por solo $129.900 COP. Desinflama tu vientre y sube defensas. ¡Envío Gratis Contra Entrega!',
   whyChoose: {
-    title: 'Rendimiento y Vigor Masculino Absoluto',
-    description: 'El Combo 7 combina energía extrema, desintoxicación hepática y recuperación muscular de grado profesional. Un sistema completo diseñado para el hombre de alta exigencia que busca mantener su vitalidad y fuerza todos los días.'
+    title: 'Bienestar Digestivo y Defensas Blindadas',
+    description: 'La combinación perfecta para desinflamar tu vientre, sentirte mas ligero y libre de molestias con Resvisfactor y Coliplus.'
   },
-  badge: 'COMBO N°7',
+  badge: 'OFERTA DEL MES',
   benefits: [
-    'Energía y enfoque extremo con Titan Coffee',
-    'Recuperación y alivio con Termoactiva',
-    'Depuración interna y hepática con Rtafull',
-    'Firmeza y cuidado con Mammoth y Hemocream'
+    'Desinflama el vientre y depura el colon con Coliplus',
+    'Fortalece tu sistema inmunológico con Resvisfactor',
+    'Digestión ligera y mayor bienestar integral diario',
+    'Ahorro de $35.900 con Envío Gratis y Pago Contra Entrega'
   ],
-  keywords: 'vigor masculino, rendimiento de élite, energía, recuperación muscular, desintoxicación hepática, Titan Coffee, Rtafull, Termoactiva, Hemocream, Mammoth, Azenza, combo 7',
-  components: 'Titan Coffee, RtaFull, Loción Termoactiva, Hemocream y Crema Mammoth',
-    componentBenefits: [
+  keywords: 'inmunidad dual, resvisfactor, coliplus, desinflamar vientre, defensas, colon limpio, combo oferta, comprar combo',
+  components: 'Resvisfactor y Coliplus',
+  componentBenefits: [
     {
-        'name': 'Titan Coffee y RtaFull',
-        'benefit': 'Brindan energía mental y física sostenida mientras limpian y desintoxican el hígado de forma profunda.'
+      name: 'Resvisfactor',
+      benefit: 'Fortalece el sistema inmune y aporta calostro bovino para defensas blindadas.'
     },
     {
-        'name': 'Loción Termoactiva y Hemocream',
-        'benefit': 'Alivian la fatiga y tensión muscular localizada al tiempo que brindan cuidado de alta protección.'
-    },
-    {
-        'name': 'Crema Mammoth',
-        'benefit': 'Mejora notablemente la firmeza, elasticidad y tono de la piel en áreas de mayor exigencia física.'
+      name: 'Coliplus',
+      benefit: 'Regula el tránsito intestinal, depura el colon y desinflama el vientre naturalmente.'
     }
-],
+  ],
   longTailKeywords: [
-    'mejor combo de rendimiento y vigor para hombres Colombia',
-    'cómo recuperar los músculos después del fútbol o ejercicio',
-    'café energizante con maca y borojó para energía diaria',
-    'limpieza hepática natural y aumento de vitalidad masculina',
-    'crema corporal para masajes y firmeza muscular masculina',
-    'los mejores suplementos naturales para el vigor del hombre',
-    'loción termoactiva de árnica para deportistas y fatiga muscular',
-    'pack de bienestar integral y rendimiento físico masculino',
-    'suplementación natural premium de alto rendimiento para hombres',
-    'cómo estar más activo y con más energía todo el día'
+    'combo para desinflamar el estomago y subir defensas',
+    'resvisfactor y coliplus precio colombia oferta',
+    'limpieza de colon y fortalecimiento inmunologico',
+    'combo bienestar natural contra entrega envio gratis'
   ],
   seoFaqs: [
-    { q: '¿Cómo debo consumir y aplicar los productos del combo?', a: 'Disfruta de Titan Coffee por la mañana para iniciar con energía y toma Rtafull para tu purificación. Aplica la Loción Termoactiva antes o después de la actividad muscular, y usa las cremas Mammoth y Hemocream en tus rutinas de masaje y cuidado de la piel.' },
-    { q: '¿En cuánto tiempo se sienten los efectos de energía y alivio?', a: 'El enfoque y la energía de Titan Coffee son inmediatos, así como el alivio térmico de la Loción Termoactiva. Los beneficios de desintoxicación y firmeza se consolidan con el uso diario continuo.' },
-    { q: '¿Todos los productos del Combo 7 tienen registro oficial?', a: 'Sí, absolutamente todos los componentes cuentan con sus respectivos registros INVIMA vigentes, garantizando pureza de grado profesional.' }
+    { q: '¿Cómo debo tomar los productos del Combo Inmunidad Dual?', a: 'Toma Coliplus disuelto en agua tibia por las mañanas o noches para regular el colon, y toma Resvisfactor diariamente para fortalecer tus defensas.' },
+    { q: '¿En cuánto tiempo se sienten los beneficios?', a: 'La sensación de alivio y vientre desinflamado con Coliplus se experimenta desde los primeros días, mientras que el escudo inmunológico se consolida día a día.' },
+    { q: '¿Tienen registro oficial INVIMA?', a: 'Sí, tanto Resvisfactor como Coliplus cuentan con Registro Sanitario INVIMA oficial y vigente.' }
   ],
   testimonials: [
-    { name: 'Carlos Mario G.', text: 'El Titan Coffee me da una energía increíble para entrenar y la loción me quita todo el cansancio de las piernas. Recomendado 100%.', rating: 5 },
-    { name: 'Juan Fernando R.', text: 'Excelente combinación de productos. Me siento mucho más activo, ligero y con mejor rendimiento en mis actividades diarias.', rating: 5 }
+    { name: 'Gloria Esperanza M.', text: 'El vientre se me desinflamó por completo desde la primera semana y no he vuelto a sufrir de resfriados. Excelente combo.', rating: 5 },
+    { name: 'Mauricio S.', text: 'Coliplus y Resvisfactor juntos son lo mejor que he probado. Me siento con más energía y ligereza digestiva.', rating: 5 }
   ]
 };
 
@@ -3634,7 +3624,7 @@ export const PROMOTIONS: Promotion[] = [
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['resveratrol', 'miskinne'],
-    seoTitle: 'Combo Piel Radiante Regeneración Celular Tono Luminoso y Firmeza Crema Miskinne 60g y Resveratrol 350g',
+    seoTitle: 'Combo Piel Radiante: Hidratación, Firmeza y Colágeno',
     seoDescription: 'Luce una piel radiante con nuestro Combo Piel Radiante. Fórmula balanceada para bienestar integral, nutrición celular y calidad certificada. ¡Ahorra hoy!',
     whyChoose: {
       title: 'Tu ritual de belleza integral',
@@ -3695,7 +3685,7 @@ export const PROMOTIONS: Promotion[] = [
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['resveratrol', 'eventone'],
-    seoTitle: 'Combo Belleza Eterna Cuidado Facial Antiedad y Regeneración Celular Suero Eventone 30ml y Resveratrol 350g',
+    seoTitle: 'Combo Belleza Eterna: Anti-Manchas y Tono Uniforme',
     seoDescription: 'Unifica tu tono de piel y protege tus células con el Combo Belleza Eterna. Fórmula balanceada para bienestar integral y calidad certificada. ¡Compra ya!',
     whyChoose: {
       title: 'Belleza que trasciende el tiempo',
@@ -3751,12 +3741,12 @@ export const PROMOTIONS: Promotion[] = [
     name: 'Combo Detox Digestivo',
     description: 'El Combo Detox Digestivo es un sistema integral de limpieza diseñado para restaurar el equilibrio de tu organismo y depurar tu cuerpo de toxinas acumuladas. Esta sinergia une la potencia de la fibra Coliplus, que regula el tránsito intestinal y reconforta el colon de manera natural, con la acción depurativa del concentrado Rtafull, que estimula la función desintoxicante del hígado y los riñones. Ideal para ayudar a reducir la pesadez, favorecer el tránsito y mejorar la digestión de las grasas, permitiéndote sentirte ligero, activo y renovado desde la primera semana.',
     image: '/assets/combos/promo-3.webp',
-    price: 114500,
+    price: 116850,
     originalPrice: 155000,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['coliplus', 'rtafull'],
-    seoTitle: 'Combo Detox Digestivo Limpieza de Colon y Depuración de Hígado Coliplus 450g y RtaFull 500ml',
+    seoTitle: 'Combo Detox Digestivo: Limpieza de Colon y Vientre Plano',
     seoDescription: 'Limpia tu organismo y regula tu digestión con el Combo Detox Digestivo. Fórmula balanceada para bienestar integral y calidad certificada. ¡Siéntete ligero!',
     whyChoose: {
       title: 'Renovación total desde el interior',
@@ -3812,12 +3802,12 @@ export const PROMOTIONS: Promotion[] = [
     name: 'Combo Control & Detox',
     description: 'Control & Detox es el sistema avanzado para quienes buscan recuperar su equilibrio metabólico y combatir la inflamación digestiva de forma natural. Este combo fusiona la acción reconfortante de Liteplex, ideal para equilibrar la flora y reducir la pesadez estomacal, con la potencia depurativa de Rtafull, que actúa directamente en la limpieza hepática para optimizar el procesamiento de nutrientes. Es la solución perfecta para deshinchar el cuerpo, mejorar la absorción de alimentos y potenciar tu bienestar digestivo con una fórmula balanceada y segura.',
     image: '/assets/combos/promo-4.webp',
-    price: 114500,
+    price: 119850,
     originalPrice: 159800,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['liteplex', 'rtafull'],
-    seoTitle: 'Combo Control & Detox Vientre Ligero y Plano Metabolismo y Digestión RtaFull 500ml y Liteplex 500ml',
+    seoTitle: 'Combo Control & Detox: Metabolismo y Digestión Ligera',
     seoDescription: 'Apoya tu proceso de bienestar metabólico con el Combo Control & Detox. Fórmula balanceada para bienestar integral, energía y calidad certificada. ¡Ahorra hoy!',
     whyChoose: {
       title: 'Tu aliado en el control consciente',
@@ -3878,7 +3868,7 @@ export const PROMOTIONS: Promotion[] = [
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['tufoff', 'rtafull'],
-    seoTitle: 'Combo Protección Total Desintoxicación Orgánica Confort y Frescura Rtafull 500ml y Tufoff Caramelos 75g',
+    seoTitle: 'Combo Protección Total: Depuración y Aliento Fresco',
     seoDescription: 'Protección y limpieza profunda para tu organismo con el Combo Protección Total. Fórmula balanceada para bienestar integral y calidad certificada. ¡Compra ahora!',
     whyChoose: {
       title: 'Protección que nace del equilibrio',
@@ -3939,7 +3929,7 @@ export const PROMOTIONS: Promotion[] = [
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['locion', 'colageno'],
-    seoTitle: 'Combo Alivio Muscular Terapia Frío y Calor para Espalda Cuello y Piernas Loción Termoactiva y Colágeno con Citrato de Magnesio',
+    seoTitle: 'Combo Alivio Muscular: Calor y Frío para Cero Dolor',
     seoDescription: 'Apoya tu movilidad con el Combo Alivio Muscular. Fórmula balanceada para bienestar integral y calidad certificada. ¡Pídelo hoy!',
     whyChoose: {
       title: 'Bienestar en movimiento',
@@ -3991,12 +3981,12 @@ export const PROMOTIONS: Promotion[] = [
     name: 'Combo Vitalidad & Limpieza',
     description: 'Vitalidad & Limpieza es el sistema integral de renovación diseñado para purificar tu cuerpo mientras recuperas tu fuerza vital de forma armoniosa. Este combo une el poder de Tyruss Full, un superalimento verde que oxigena tu organismo y nutre tu sangre con clorofila y algas, con la eficacia depurativa de Rtafull, que facilita la eliminación de impurezas hepáticas y renales. Es la combinación balanceada ideal para desinflamar el abdomen, mejorar la energía diaria y permitir que tu cuerpo funcione con la ligereza y pureza que merece.',
     image: '/assets/combos/promo-8.webp',
-    price: 114500,
+    price: 127350,
     originalPrice: 169800,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['tyruss-full', 'rtafull'],
-    seoTitle: 'Combo Vitalidad y Limpieza Desintoxicación Orgánica y Energía Natural Tyruss Full 500g y RtaFull 500ml',
+    seoTitle: 'Combo Vitalidad & Limpieza: Energía y Digestión Total',
     seoDescription: 'Siéntete imparable con el Combo Vitalidad & Limpieza. Fórmula balanceada para depuración natural, bienestar integral y calidad certificada. ¡Pídelo hoy!',
     whyChoose: {
       title: 'Vitalidad renovada cada mañana',
@@ -4055,7 +4045,7 @@ export const PROMOTIONS: Promotion[] = [
     price: 129900,
     originalPrice: 165800,
     products: ['resvis', 'coliplus'],
-    seoTitle: 'Combo Inmunidad Dual Defensas Fuertes y Vientre Ligero Resvisfactor 700g y Coliplus 450g Envío Gratis',
+    seoTitle: 'Combo Inmunidad Dual: Resvisfactor + Coliplus en Oferta',
     seoDescription: 'Reconforta tu vientre y fortalece tu sistema inmune con el combo Inmunidad Dual. Fórmula balanceada para bienestar integral y calidad certificada. ¡Ahorra $35.900!',
     whyChoose: {
       title: 'El dúo dinámico de tu bienestar',
@@ -4205,88 +4195,62 @@ export interface EcuadorPricing {
   }[];
 }
 
-export const ECUADOR_PRICING: Record<string, EcuadorPricing> = {
-  'coliplus': {
-    basePrice: 37.00,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 37.00 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 55.50 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 74.00, badge: '⭐ Recomendado' }
-    ]
+function generateCountryPromos(basePrice: number) {
+  const isDecimal = !Number.isInteger(basePrice) && basePrice < 100;
+  const round = (val: number) => isDecimal ? Math.round(val * 100) / 100 : Math.round(val);
+  return [
+    { id: '1u', label: '1 Unidad', units: 1, price: basePrice },
+    { id: '2u', label: '2 Unidades', units: 2, price: round(basePrice * 1.5) },
+    { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: round(basePrice * 2.0), badge: '⭐ Recomendado' }
+  ];
+}
+
+export const COUNTRY_PRICING: Record<CountryCode, Record<string, EcuadorPricing>> = {
+  CR: {
+    'mamooth': { basePrice: 19000, promos: generateCountryPromos(19000) },
+    'derman': { basePrice: 17000, promos: generateCountryPromos(17000) },
+    'hemocream': { basePrice: 17000, promos: generateCountryPromos(17000) },
+    'instant-virgin': { basePrice: 17000, promos: generateCountryPromos(17000) },
   },
-  'hemocream': {
-    basePrice: 34.99,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 34.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 52.49 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 69.98, badge: '⭐ Recomendado' }
-    ]
+  EC: {
+    'coliplus': { basePrice: 37.00, promos: generateCountryPromos(37.00) },
+    'hemocream': { basePrice: 34.99, promos: generateCountryPromos(34.99) },
+    'tonico-capilar': { basePrice: 34.99, promos: generateCountryPromos(34.99) },
+    'colageno': { basePrice: 37.00, promos: generateCountryPromos(37.00) },
+    'rtafull': { basePrice: 35.00, promos: generateCountryPromos(35.00) },
+    'derman': { basePrice: 39.99, promos: generateCountryPromos(39.99) },
+    'locion': { basePrice: 39.99, promos: generateCountryPromos(39.99) },
+    'mamooth': { basePrice: 33.99, promos: generateCountryPromos(33.99) },
+    'titan-coffee': { basePrice: 37.00, promos: generateCountryPromos(37.00) },
+    'instant-virgin': { basePrice: 23.94, promos: generateCountryPromos(23.94) },
   },
-  'tonico-capilar': {
-    basePrice: 34.99,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 34.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 52.49 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 69.98, badge: '⭐ Recomendado' }
-    ]
+  GT: {
+    'derman': { basePrice: 189.00, promos: generateCountryPromos(189.00) },
+    'hemocream': { basePrice: 115.00, promos: generateCountryPromos(115.00) },
+    'instant-virgin': { basePrice: 135.00, promos: generateCountryPromos(135.00) },
+    'mamooth': { basePrice: 165.00, promos: generateCountryPromos(165.00) },
   },
-  'colageno': {
-    basePrice: 37.00,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 37.00 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 55.50 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 74.00, badge: '⭐ Recomendado' }
-    ]
+  HN: {
+    'derman': { basePrice: 759.00, promos: generateCountryPromos(759.00) },
+    'instant-virgin': { basePrice: 250.00, promos: generateCountryPromos(250.00) },
   },
-  'rtafull': {
-    basePrice: 37.00,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 37.00 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 55.50 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 74.00, badge: '⭐ Recomendado' }
-    ]
+  PE: {
+    'derman': { basePrice: 89.90, promos: generateCountryPromos(89.90) },
+    'locion': { basePrice: 89.90, promos: generateCountryPromos(89.90) },
   },
-  'derman': {
-    basePrice: 39.99,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 39.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 59.99 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 79.98, badge: '⭐ Recomendado' }
-    ]
+  DO: {
+    'instant-virgin': { basePrice: 1970, promos: generateCountryPromos(1970) },
+    'mamooth': { basePrice: 1990, promos: generateCountryPromos(1990) },
+    'derman': { basePrice: 1990, promos: generateCountryPromos(1990) },
+    'hemocream': { basePrice: 1970, promos: generateCountryPromos(1970) },
+    'coliplus': { basePrice: 2190, promos: generateCountryPromos(2190) },
   },
-  'locion': {
-    basePrice: 39.99,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 39.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 59.99 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 79.98, badge: '⭐ Recomendado' }
-    ]
-  },
-  'mamooth': {
-    basePrice: 39.99,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 39.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 59.99 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 79.98, badge: '⭐ Recomendado' }
-    ]
-  },
-  'titan-coffee': {
-    basePrice: 37.00,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 37.00 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 55.50 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 74.00, badge: '⭐ Recomendado' }
-    ]
-  },
-  'instant-virgin': {
-    basePrice: 34.99,
-    promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 34.99 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 52.49 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 69.98, badge: '⭐ Recomendado' }
-    ]
-  }
+  CO: {},
+  CL: {},
+  VE: {}
 };
+
+export const ECUADOR_PRICING = COUNTRY_PRICING.EC;
 
 export const ECUADOR_DATA: Record<string, string[]> = {
   'Azuay': ['Cuenca', 'Gualaceo', 'Paute', 'Santa Isabel', 'Sigsig', 'Girón', 'Chordeleg', 'Camilo Ponce Enríquez'],
@@ -4319,51 +4283,207 @@ let cachedEcuadorProducts: Product[] | null = null;
 let cachedEcuadorCategories: Category[] | null = null;
 let cachedColombiaCategories: Category[] | null = null;
 
-export function getProductsForCountry(country: 'CO' | 'EC' = 'CO'): Product[] {
-  if (country === 'EC') {
-    if (!cachedEcuadorProducts) {
-      cachedEcuadorProducts = PRODUCTS
-        .filter(p => ECUADOR_PRODUCT_IDS.includes(p.id))
-        .map(p => {
-          const ecPricing = ECUADOR_PRICING[p.id];
-          if (!ecPricing) return p;
-          return {
-            ...p,
-            basePrice: ecPricing.basePrice,
-            promos: ecPricing.promos
-          };
-        });
-    }
-    return cachedEcuadorProducts;
+export type CountryCode = 'CO' | 'CL' | 'CR' | 'EC' | 'GT' | 'HN' | 'PE' | 'DO' | 'VE';
+
+export const COUNTRY_CONFIGS: Record<CountryCode, {
+  name: string;
+  flag: string;
+  currency: string;
+  symbol: string;
+  phonePrefix: string;
+  priceMultiplier: number;
+}> = {
+  CO: { name: 'Colombia', flag: '🇨🇴', currency: 'COP', symbol: '$', phonePrefix: '+57', priceMultiplier: 1 },
+  CL: { name: 'Chile', flag: '🇨🇱', currency: 'CLP', symbol: '$', phonePrefix: '+56', priceMultiplier: 0.225 },
+  CR: { name: 'Costa Rica', flag: '🇨🇷', currency: 'CRC', symbol: '₡', phonePrefix: '+506', priceMultiplier: 0.135 },
+  EC: { name: 'Ecuador', flag: '🇪🇨', currency: 'USD', symbol: '$', phonePrefix: '+593', priceMultiplier: 0.00046 },
+  GT: { name: 'Guatemala', flag: '🇬🇹', currency: 'GTQ', symbol: 'Q', phonePrefix: '+502', priceMultiplier: 0.002 },
+  HN: { name: 'Honduras', flag: '🇭🇳', currency: 'HNL', symbol: 'L', phonePrefix: '+504', priceMultiplier: 0.006 },
+  PE: { name: 'Perú', flag: '🇵🇪', currency: 'PEN', symbol: 'S/', phonePrefix: '+51', priceMultiplier: 0.00095 },
+  DO: { name: 'República Dominicana', flag: '🇩🇴', currency: 'DOP', symbol: 'RD$', phonePrefix: '+1', priceMultiplier: 0.015 },
+  VE: { name: 'Venezuela', flag: '🇻🇪', currency: 'VES', symbol: 'Bs.', phonePrefix: '+58', priceMultiplier: 0.09 },
+};
+
+export const CHILE_DATA: Record<string, string[]> = {
+  'Región Metropolitana': ['Santiago', 'Puente Alto', 'Maipú', 'La Florida', 'Las Condes', 'Peñalolén', 'San Bernardo', 'Providencia', 'Ñuñoa'],
+  'Valparaíso': ['Valparaíso', 'Viña del Mar', 'Concón', 'Quilpué', 'Villa Alemana', 'San Antonio'],
+  'Biobío': ['Concepción', 'Talcahuano', 'Chillán', 'Los Ángeles', 'San Pedro de la Paz'],
+  'Antofagasta': ['Antofagasta', 'Calama', 'Tocopilla', 'Mejillones'],
+  'Araucanía': ['Temuco', 'Padre Las Casas', 'Villarrica', 'Pucón', 'Angol'],
+  'Maule': ['Talca', 'Curicó', 'Linares', 'Cauquenes'],
+  "O'Higgins": ['Rancagua', 'San Fernando', 'Rengo', 'Machalí'],
+  'Coquimbo': ['La Serena', 'Coquimbo', 'Ovalle', 'Illapel'],
+  'Los Lagos': ['Puerto Montt', 'Osorno', 'Castro', 'Ancud', 'Puerto Varas']
+};
+
+export const COSTA_RICA_DATA: Record<string, string[]> = {
+  'San José': ['San José', 'Escazú', 'Desamparados', 'Puriscal', 'Tarrazú', 'Aserrí', 'Santa Ana', 'Tibás', 'Curridabat', 'Pérez Zeledón'],
+  'Alajuela': ['Alajuela', 'San Ramón', 'Grecia', 'San Mateo', 'Atenas', 'Naranjo', 'Palmares', 'San Carlos'],
+  'Cartago': ['Cartago', 'Paraíso', 'La Unión', 'Jiménez', 'Turrialba', 'Oreamuno', 'El Guarco'],
+  'Heredia': ['Heredia', 'Barva', 'Santo Domingo', 'Santa Bárbara', 'San Rafael', 'Belén', 'Sarapiquí'],
+  'Guanacaste': ['Liberia', 'Nicoya', 'Santa Cruz', 'Bagaces', 'Carrillo', 'Cañas', 'Tilarán'],
+  'Puntarenas': ['Puntarenas', 'Esparza', 'Buenos Aires', 'Osa', 'Quepos', 'Golfito', 'Garabito'],
+  'Limón': ['Limón', 'Pococí', 'Siquirres', 'Talamanca', 'Matina', 'Guácimo']
+};
+
+export const GUATEMALA_DATA: Record<string, string[]> = {
+  'Guatemala': ['Guatemala', 'Mixco', 'Villa Nueva', 'San Juan Sacatepéquez', 'Petapa', 'Chinautla', 'San José Pinula', 'Amatitlán', 'Villa Canales'],
+  'Sacatepéquez': ['Antigua Guatemala', 'Jocotenango', 'Pastores', 'Sumpango', 'Santiago Sacatepéquez', 'San Lucas Sacatepéquez', 'Ciudad Vieja'],
+  'Quetzaltenango': ['Quetzaltenango', 'Salcajá', 'Olintepeque', 'Coatepeque', 'Colomba Costa Cuca', 'Cantel'],
+  'Escuintla': ['Escuintla', 'Santa Lucía Cotzumalguapa', 'La Democracia', 'Siquinalá', 'Masagua', 'Tiquisate', 'Palín'],
+  'Alta Verapaz': ['Cobán', 'San Pedro Carchá', 'San Juan Chamelco', 'Tactic', 'Chisec'],
+  'Chimaltenango': ['Chimaltenango', 'Tecpán Guatemala', 'Patzún', 'San Martín Jilotepeque'],
+  'Quiché': ['Santa Cruz del Quiché', 'Santo Tomás Chichicastenango', 'Nebaj', 'Joyabaj', 'Ixcán'],
+  'San Marcos': ['San Marcos', 'San Pedro Sacatepéquez', 'Malacatán', 'Ayutla', 'Tecún Umán']
+};
+
+export const HONDURAS_DATA: Record<string, string[]> = {
+  'Francisco Morazán': ['Tegucigalpa (Distrito Central)', 'Valle de Ángeles', 'Santa Lucía', 'Talanga', 'Guaimaca', 'Sabanagrande'],
+  'Cortés': ['San Pedro Sula', 'Choloma', 'La Lima', 'Villanueva', 'Puerto Cortés', 'Santa Cruz de Yojoa', 'Omoa'],
+  'Atlántida': ['La Ceiba', 'Tela', 'El Porvenir', 'La Masica'],
+  'Choluteca': ['Choluteca', 'Marcovia', 'San Marcos de Colón', 'El Triunfo'],
+  'Comayagua': ['Comayagua', 'Siguatepeque', 'La Libertad', 'Taulabé'],
+  'Yoro': ['Yoro', 'El Progreso', 'Olanchito', 'Santa Rita'],
+  'Olancho': ['Juticalpa', 'Catacamas', 'Campamento', 'San Francisco de la Paz']
+};
+
+export const PERU_DATA: Record<string, string[]> = {
+  'Lima': ['Lima', 'Callao', 'Miraflores', 'San Isidro', 'Surco', 'La Molina', 'San Borja', 'Barranco', 'Chorrillos', 'Los Olivos', 'San Martín de Porres', 'Ate', 'Comas', 'Villa El Salvador', 'San Juan de Lurigancho', 'Puente Piedra', 'Huacho', 'Cañete'],
+  'Arequipa': ['Arequipa', 'Cayma', 'Cerro Colorado', 'Yanahuara', 'Hunter', 'Socabaya', 'Paucarpata', 'Mollendo', 'Camaná'],
+  'La Libertad': ['Trujillo', 'Víctor Larco Herrera', 'Huanchaco', 'La Esperanza', 'El Porvenir', 'Chepén', 'Pacasmayo'],
+  'Piura': ['Piura', 'Castilla', 'Catacaos', 'Sullana', 'Talara', 'Paita', 'Sechura'],
+  'Lambayeque': ['Chiclayo', 'Lambayeque', 'Ferreñafe', 'José Leonardo Ortiz', 'Pimentel'],
+  'Cusco': ['Cusco', 'San Sebastián', 'San Jerónimo', 'Santiago', 'Wanchaq', 'Urubamba', 'Calca', 'Sicuani'],
+  'Junín': ['Huancayo', 'El Tambo', 'Chilca', 'Tarma', 'Jauja', 'Concepción', 'Satipo'],
+  'Áncash': ['Huaraz', 'Independencia', 'Chimbote', 'Nuevo Chimbote', 'Casma', 'Huarmey'],
+  'Ica': ['Ica', 'Chincha Alta', 'Pisco', 'Nazca', 'Palpa', 'Paracas']
+};
+
+export const DOMINICAN_REPUBLIC_DATA: Record<string, string[]> = {
+  'Distrito Nacional': ['Santo Domingo de Guzmán (Distrito Nacional)', 'Gascue', 'Piantini', 'Naco', 'Arroyo Hondo', 'Bella Vista'],
+  'Santo Domingo': ['Santo Domingo Este', 'Santo Domingo Oeste', 'Santo Domingo Norte', 'Boca Chica', 'Los Alcarrizos', 'Pedro Brand'],
+  'Santiago': ['Santiago de los Caballeros', 'Villa González', 'Licey al Medio', 'Tamboril', 'Puñal', 'San José de las Matas'],
+  'La Altagracia': ['Higüey (Salvaleón de Higüey)', 'San Rafael del Yuma', 'Bávaro', 'Punta Cana'],
+  'La Romana': ['La Romana', 'Guaymate', 'Villa Hermosa'],
+  'San Cristóbal': ['San Cristóbal', 'Yaguate', 'Villa Altagracia', 'Bajos de Haina'],
+  'Puerto Plata': ['San Felipe de Puerto Plata', 'Sosúa', 'Cabarete', 'Imbert', 'Luperón'],
+  'La Vega': ['Concepción de La Vega', 'Jarabacoa', 'Constanza'],
+  'San Pedro de Macorís': ['San Pedro de Macorís', 'Los Llanos', 'Consuelo']
+};
+
+export const VENEZUELA_DATA: Record<string, string[]> = {
+  'Distrito Capital': ['Caracas', 'Libertador (Catia, El Paraíso, La Candelaria, El Recreo, San Bernardino, 23 de Enero)'],
+  'Miranda': ['Baruta', 'Chacao', 'El Hatillo', 'Sucre (Petare)', 'Guaicaipuro (Los Teques)', 'Carrizal', 'Los Salias (San Antonio de los Altos)', 'Zamora (Guatire)'],
+  'Zulia': ['Maracaibo', 'San Francisco', 'Cabimas', 'Ciudad Ojeda (Lagunillas)', 'Machiques', 'La Villa del Rosario'],
+  'Carabobo': ['Valencia', 'Naguanagua', 'San Diego', 'Guacara', 'Los Guayos', 'Puerto Cabello'],
+  'Lara': ['Barquisimeto (Iribarren)', 'Cabudare (Palavecino)', 'Quíbor (Jiménez)', 'El Tocuyo', 'Carora'],
+  'Aragua': ['Maracay (Girardot)', 'Turmero', 'Cagua', 'Palo Negro', 'Villa de Cura'],
+  'Anzoátegui': ['Barcelona (Bolívar)', 'Puerto La Cruz', 'Lechería', 'Anaco', 'El Tigre']
+};
+
+export function getLocationDataForCountry(country: CountryCode) {
+  switch (country) {
+    case 'CL': return CHILE_DATA;
+    case 'CR': return COSTA_RICA_DATA;
+    case 'EC': return ECUADOR_DATA;
+    case 'GT': return GUATEMALA_DATA;
+    case 'HN': return HONDURAS_DATA;
+    case 'PE': return PERU_DATA;
+    case 'DO': return DOMINICAN_REPUBLIC_DATA;
+    case 'VE': return VENEZUELA_DATA;
+    case 'CO':
+    default:
+      return COLOMBIA_DATA;
   }
-  return PRODUCTS;
 }
 
-export function getProductForCountry(productId: string, country: 'CO' | 'EC' = 'CO'): Product | undefined {
+export function getPhonePrefixForCountry(country: CountryCode): string {
+  switch (country) {
+    case 'CL': return '+56';
+    case 'CR': return '+506';
+    case 'EC': return '+593';
+    case 'GT': return '+502';
+    case 'HN': return '+504';
+    case 'PE': return '+51';
+    case 'DO': return '+1';
+    case 'VE': return '+58';
+    case 'CO':
+    default:
+      return '+57';
+  }
+}
+
+let cachedCountryProducts: Record<string, Product[]> = {};
+let cachedCountryCategories: Record<string, Category[]> = {};
+
+const countryAllowedProducts: Partial<Record<CountryCode, string[]>> = {
+  VE: ['coliplus', 'derman', 'instant-virgin', 'rtafull'],
+  DO: ['coliplus', 'derman', 'hemocream', 'instant-virgin', 'mamooth'],
+  PE: ['locion', 'coliplus', 'derman', 'hemocream'],
+  HN: ['derman', 'instant-virgin'],
+  GT: ['derman', 'hemocream', 'instant-virgin', 'mamooth'],
+  EC: ['coliplus', 'derman', 'instant-virgin', 'locion', 'mamooth', 'rtafull'],
+  CR: ['derman', 'hemocream', 'instant-virgin', 'mamooth']
+};
+
+export function getProductsForCountry(country: CountryCode = 'CO'): Product[] {
+  const allowedIds = countryAllowedProducts[country];
+
+  if (country === 'CO') {
+    return allowedIds ? PRODUCTS.filter(p => allowedIds.includes(p.id)) : PRODUCTS;
+  }
+
+  if (!cachedCountryProducts[country]) {
+    const config = COUNTRY_CONFIGS[country];
+    const multiplier = config ? config.priceMultiplier : 1;
+    const countryPricing = COUNTRY_PRICING[country] || {};
+
+    cachedCountryProducts[country] = PRODUCTS.map(p => {
+      const pricing = countryPricing[p.id];
+      if (pricing) {
+        return {
+          ...p,
+          basePrice: pricing.basePrice,
+          promos: pricing.promos
+        };
+      }
+      return {
+        ...p,
+        basePrice: Math.round(p.basePrice * multiplier),
+        promos: p.promos.map(promo => ({
+          ...promo,
+          price: Math.round(promo.price * multiplier)
+        }))
+      };
+    });
+  }
+
+  const countryProds = cachedCountryProducts[country];
+  return allowedIds ? countryProds.filter(p => allowedIds.includes(p.id)) : countryProds;
+}
+
+export function getProductForCountry(productId: string, country: CountryCode = 'CO'): Product | undefined {
   const allProds = getProductsForCountry(country);
   return allProds.find(p => p.id === productId);
 }
 
-export function getCategoriesForCountry(country: 'CO' | 'EC' = 'CO'): Category[] {
-  if (country === 'EC') {
-    if (!cachedEcuadorCategories) {
-      const prods = getProductsForCountry('EC');
-      cachedEcuadorCategories = CATEGORIES.filter(cat => {
-        if (cat.id === 'combos') {
-          return false;
-        }
-        if (cat.id === 'belleza-integral') {
-          return false;
-        }
-        return prods.some(p => p.category === cat.id);
-      });
-    }
-    return cachedEcuadorCategories;
+export function getCategoriesForCountry(country: CountryCode = 'CO'): Category[] {
+  if (!cachedCountryCategories[country]) {
+    const products = getProductsForCountry(country);
+    const productIds = new Set(products.map(p => p.id));
+    const categoryIdsWithProducts = new Set(products.map(p => p.category));
+    
+    const hasCombos = COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid)) ||
+      PROMOTIONS.some(promo => promo.products.every(pid => productIds.has(pid)));
+
+    cachedCountryCategories[country] = CATEGORIES.filter(cat => {
+      if (cat.id === 'combos') {
+        return hasCombos;
+      }
+      return categoryIdsWithProducts.has(cat.id);
+    });
   }
-  if (!cachedColombiaCategories) {
-    cachedColombiaCategories = CATEGORIES;
-  }
-  return cachedColombiaCategories;
+  return cachedCountryCategories[country];
 }
 
 

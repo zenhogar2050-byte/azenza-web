@@ -20,8 +20,11 @@ import NotFound from './NotFound';
 export default function ComboLanding() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { addComboToCart, isEC } = useCart();
+  const { addComboToCart, isEC, getProducts, isCO } = useCart();
   const buyButtonRef = useRef<HTMLButtonElement>(null);
+
+  const availableProducts = getProducts();
+  const productIds = new Set(availableProducts.map(p => p.id));
 
   useEffect(() => {
     if (isEC) {
@@ -133,7 +136,9 @@ export default function ComboLanding() {
     }
   }, [combo?.id]);
 
-  if (!combo) {
+  const isComboValidForCountry = combo && combo.products.every(pid => productIds.has(pid));
+
+  if (!combo || !isComboValidForCountry) {
     return <NotFound />;
   }
 

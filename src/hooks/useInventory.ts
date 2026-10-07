@@ -14,7 +14,7 @@ export function useInventory() {
   const [inventory, setInventory] = useState<Product[]>([]);
 
   useEffect(() => {
-    const saved = localStorage.getItem('zh_inventory_design');
+    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('zh_inventory_design') : null;
     const masterMapped = MASTER_PRODUCTS.map((p, index) => ({
       idProduct: p.id,
       internalId: p.internalId,
@@ -32,7 +32,7 @@ export function useInventory() {
       if (missingProducts.length > 0) {
         const merged = [...parsed, ...missingProducts];
         setInventory(merged);
-        localStorage.setItem('zh_inventory_design', JSON.stringify(merged));
+        if (typeof localStorage !== 'undefined') localStorage.setItem('zh_inventory_design', JSON.stringify(merged));
       } else {
         setInventory(parsed);
       }
@@ -43,7 +43,7 @@ export function useInventory() {
 
   const saveToStorage = (newInventory: Product[]) => {
     setInventory(newInventory);
-    localStorage.setItem('zh_inventory_design', JSON.stringify(newInventory));
+    if (typeof localStorage !== 'undefined') localStorage.setItem('zh_inventory_design', JSON.stringify(newInventory));
   };
 
   const addProduct = (product: Product) => {
@@ -57,7 +57,7 @@ export function useInventory() {
   const updateProduct = (internalId: string, updates: Partial<Product>) => {
     setInventory(prev => {
       const next = prev.map(p => p.internalId === internalId ? { ...p, ...updates } : p);
-      localStorage.setItem('zh_inventory_design', JSON.stringify(next));
+      if (typeof localStorage !== 'undefined') localStorage.setItem('zh_inventory_design', JSON.stringify(next));
       return next;
     });
   };
@@ -65,7 +65,7 @@ export function useInventory() {
   const updateMultipleProducts = (updates: Record<string, Partial<Product>>) => {
     setInventory(prev => {
       const next = prev.map(p => updates[p.internalId] ? { ...p, ...updates[p.internalId] } : p);
-      localStorage.setItem('zh_inventory_design', JSON.stringify(next));
+      if (typeof localStorage !== 'undefined') localStorage.setItem('zh_inventory_design', JSON.stringify(next));
       return next;
     });
   };

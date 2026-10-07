@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState, useCallback, ReactNode 
 import { Product, getProductsForCountry, getProductForCountry, getCategoriesForCountry } from './constants';
 import { formatCurrency } from './utils';
 
-export type CountryCode = 'CO' | 'EC';
+export type CountryCode = 'CO' | 'CL' | 'CR' | 'EC' | 'GT' | 'HN' | 'PE' | 'DO' | 'VE';
 
 interface CartItem {
   productId: string;
@@ -38,20 +38,74 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
-  const [country, setCountryState] = useState<CountryCode>('CO');
+  const [country, setCountryState] = useState<CountryCode>(() => {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const saved = localStorage.getItem('azenza_country') || localStorage.getItem('zenhogar_country');
+      if (saved && ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'].includes(saved)) {
+        return saved as CountryCode;
+      }
+    }
+    return 'CO';
+  });
 
   const setCountry = (newCountry: CountryCode) => {
     setCountryState(newCountry);
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
       localStorage.setItem('azenza_country', newCountry);
     }
   };
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlCountry = (params.get('country') || params.get('pais') || '').toUpperCase();
+      if (urlCountry && ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'].includes(urlCountry)) {
+        setCountry(urlCountry as CountryCode);
+        return;
+      }
+
+      const saved = localStorage.getItem('azenza_country') || localStorage.getItem('zenhogar_country');
+      if (!saved) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 4000);
+
+        fetch('https://ipapi.co/json/', { signal: controller.signal })
+          .then(res => res.json())
+          .then(data => {
+            clearTimeout(timeoutId);
+            const code = data && data.country_code ? data.country_code.toUpperCase() : null;
+            if (code && ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'].includes(code)) {
+              setCountry(code as CountryCode);
+            }
+          })
+          .catch(() => {
+            clearTimeout(timeoutId);
+            const controller2 = new AbortController();
+            const timeoutId2 = setTimeout(() => controller2.abort(), 4000);
+            fetch('https://ipwho.is/', { signal: controller2.signal })
+              .then(res => res.json())
+              .then(data => {
+                clearTimeout(timeoutId2);
+                const code = data && data.country_code ? data.country_code.toUpperCase() : null;
+                if (code && ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'].includes(code)) {
+                  setCountry(code as CountryCode);
+                }
+              })
+              .catch(() => {
+                clearTimeout(timeoutId2);
+              });
+          });
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     try {
-      const saved = localStorage.getItem('azenza_cart') || localStorage.getItem('zenhogar_cart');
-      if (saved) {
-        setItems(JSON.parse(saved));
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        const saved = localStorage.getItem('azenza_cart') || localStorage.getItem('zenhogar_cart');
+        if (saved) {
+          setItems(JSON.parse(saved));
+        }
       }
     } catch (e) {
       console.error('Error reading cart from localStorage', e);
@@ -60,8 +114,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      if (items.length > 0 || localStorage.getItem('azenza_cart')) {
-        localStorage.setItem('azenza_cart', JSON.stringify(items));
+      if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+        if (items.length > 0 || localStorage.getItem('azenza_cart')) {
+          localStorage.setItem('azenza_cart', JSON.stringify(items));
+        }
       }
     } catch (e) {
       console.error('Error saving cart to localStorage', e);

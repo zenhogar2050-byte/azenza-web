@@ -59,9 +59,10 @@ import {
 import { formatCurrency, cn } from '../utils';
 import { getOrdersFromFirebase, updateOrderStatusInFirebase, deleteOrderFromFirebase, clearAllOrdersFromFirebase, db, getCurrentCounterValue, updateCounterValue, getNextOrderTicket, saveOrderToFirebase } from '../lib/firebase';
 import InventoryManager from '../components/InventoryManager';
+import CountrySelector from '../components/CountrySelector';
 import { useInventory } from '../hooks/useInventory';
 import { doc, updateDoc, collection, getDocs, deleteDoc, serverTimestamp } from 'firebase/firestore';
-import { PRODUCTS, GIFT_PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, COLOMBIA_DATA, ECUADOR_DATA } from '../constants';
+import { PRODUCTS, GIFT_PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, COLOMBIA_DATA, ECUADOR_DATA, PERU_DATA, COSTA_RICA_DATA, GUATEMALA_DATA, HONDURAS_DATA, DOMINICAN_REPUBLIC_DATA, VENEZUELA_DATA, CHILE_DATA, COUNTRY_CONFIGS, CountryCode } from '../constants';
 import * as XLSX from 'xlsx';
 
 interface Order {
@@ -116,39 +117,62 @@ const formatDuration = (ms: number) => {
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
-  const [selectedCountry, setSelectedCountry] = useState<'CO' | 'EC'>('CO');
+  const [selectedCountry, setSelectedCountry] = useState<CountryCode>(() => {
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      return (localStorage.getItem('admin_selected_country') as CountryCode) || 'CO';
+    }
+    return 'CO';
+  });
 
-  const handleCountryChange = (country: 'CO' | 'EC') => {
+  const handleCountryChange = (country: CountryCode) => {
     setSelectedCountry(country);
-    localStorage.setItem('admin_selected_country', country);
+    if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+      localStorage.setItem('admin_selected_country', country);
+    }
   };
 
-  const getOrderCountry = (o: any): 'CO' | 'EC' => {
-    if (!o) return selectedCountry;
+  const getOrderCountry = (o: any): CountryCode => {
+    if (!o) return 'CO';
 
     // 1. Explicit country property
-    const c = (o.country || o.customer?.country || '').toString().trim().toUpperCase();
-    if (c === 'EC' || c === 'ECUADOR') return 'EC';
-    if (c === 'CO' || c === 'COLOMBIA') return 'CO';
+    const c = (o.country || o.customer?.country || o.customer?.pais || '').toString().trim().toUpperCase();
+    if (COUNTRY_CONFIGS[c as CountryCode]) return c as CountryCode;
+    if (c === 'COLOMBIA' || c === 'COL') return 'CO';
+    if (c === 'ECUADOR' || c === 'ECU') return 'EC';
+    if (c === 'PERU' || c === 'PERÚ' || c === 'PER') return 'PE';
+    if (c === 'COSTA RICA' || c === 'CRI') return 'CR';
+    if (c === 'GUATEMALA' || c === 'GTM') return 'GT';
+    if (c === 'HONDURAS' || c === 'HND') return 'HN';
+    if (c === 'REPUBLICA DOMINICANA' || c === 'DOMINICAN REPUBLIC' || c === 'DOM') return 'DO';
+    if (c === 'VENEZUELA' || c === 'VEN') return 'VE';
+    if (c === 'CHILE' || c === 'CHL') return 'CL';
 
     // 2. Explicit currency property
     const curr = (o.currency || o.cart?.currency || '').toString().trim().toUpperCase();
     if (curr === 'USD') return 'EC';
+    if (curr === 'PEN') return 'PE';
+    if (curr === 'CRC') return 'CR';
+    if (curr === 'GTQ') return 'GT';
+    if (curr === 'HNL') return 'HN';
+    if (curr === 'DOP') return 'DO';
+    if (curr === 'VES') return 'VE';
+    if (curr === 'CLP') return 'CL';
     if (curr === 'COP') return 'CO';
 
-    // 3. Total monetary value threshold (COP orders are > $1,000 COP, USD orders in Ecuador are $20-$150)
-    const val = Number(o.total) || Number(o.cart?.total) || 0;
-    if (val > 1000) return 'CO';
-
-    // 4. Phone prefix or structure check
-    const phone = (o.customer?.phone || o.customer?.telefono || '').toString().trim();
+    // 3. Phone prefix check
+    const phone = (o.customer?.phone || o.customer?.telefono || o.customer?.celular || '').toString().trim();
     if (phone.startsWith('+593') || phone.startsWith('593')) return 'EC';
+    if (phone.startsWith('+51') || phone.startsWith('51')) return 'PE';
+    if (phone.startsWith('+506') || phone.startsWith('506')) return 'CR';
+    if (phone.startsWith('+502') || phone.startsWith('502')) return 'GT';
+    if (phone.startsWith('+504') || phone.startsWith('504')) return 'HN';
+    if (phone.startsWith('+1') || phone.startsWith('1')) return 'DO';
+    if (phone.startsWith('+58') || phone.startsWith('58')) return 'VE';
+    if (phone.startsWith('+56') || phone.startsWith('56')) return 'CL';
     if (phone.startsWith('+57') || phone.startsWith('57') || (phone.length === 10 && phone.startsWith('3'))) return 'CO';
 
-    // 5. City exact match in COLOMBIA_DATA vs ECUADOR_DATA
-    const dept = (o.customer?.department || o.customer?.departamento || '').trim().toLowerCase();
+    // 4. City exact match in location datasets
     const city = (o.customer?.city || o.customer?.ciudad || '').trim().toLowerCase();
-
     if (city) {
       for (const cities of Object.values(COLOMBIA_DATA)) {
         if (cities.some(cit => cit.toLowerCase() === city)) return 'CO';
@@ -156,20 +180,36 @@ export default function AdminDashboard() {
       for (const cities of Object.values(ECUADOR_DATA)) {
         if (cities.some(cit => cit.toLowerCase() === city)) return 'EC';
       }
+      for (const cities of Object.values(PERU_DATA)) {
+        if (cities.some(cit => cit.toLowerCase() === city)) return 'PE';
+      }
+      for (const cities of Object.values(COSTA_RICA_DATA)) {
+        if (cities.some(cit => cit.toLowerCase() === city)) return 'CR';
+      }
+      for (const cities of Object.values(GUATEMALA_DATA)) {
+        if (cities.some(cit => cit.toLowerCase() === city)) return 'GT';
+      }
+      for (const cities of Object.values(HONDURAS_DATA)) {
+        if (cities.some(cit => cit.toLowerCase() === city)) return 'HN';
+      }
+      for (const cities of Object.values(DOMINICAN_REPUBLIC_DATA)) {
+        if (cities.some(cit => cit.toLowerCase() === city)) return 'DO';
+      }
     }
 
-    // 6. Department vs Province unique match
+    // 5. Department/Province exact match
+    const dept = (o.customer?.department || o.customer?.departamento || '').trim().toLowerCase();
     if (dept) {
-      const colombiaDepts = Object.keys(COLOMBIA_DATA).map(d => d.toLowerCase());
-      const ecuadorProvinces = Object.keys(ECUADOR_DATA).map(p => p.toLowerCase());
-
-      const inCo = colombiaDepts.some(d => d === dept || dept.includes(d));
-      const inEc = ecuadorProvinces.some(p => p === dept || dept.includes(p));
-
-      if (inCo && !inEc) return 'CO';
-      if (inEc && !inCo) return 'EC';
+      if (Object.keys(COLOMBIA_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'CO';
+      if (Object.keys(ECUADOR_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'EC';
+      if (Object.keys(PERU_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'PE';
+      if (Object.keys(COSTA_RICA_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'CR';
+      if (Object.keys(GUATEMALA_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'GT';
+      if (Object.keys(HONDURAS_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'HN';
+      if (Object.keys(DOMINICAN_REPUBLIC_DATA).some(d => d.toLowerCase() === dept || dept.includes(d.toLowerCase()))) return 'DO';
     }
 
+    // Default fallback: Colombia ('CO')
     return 'CO';
   };
 
@@ -1960,22 +2000,11 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
             <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest hidden sm:block">Azenza v2.1.2</p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex items-center bg-stone-100 p-1 rounded-xl border border-stone-200">
-              <button
-                type="button"
-                onClick={() => handleCountryChange('CO')}
-                className={cn(
-                  "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
-                  selectedCountry === 'CO' 
-                    ? "bg-white text-stone-900 shadow-sm" 
-                    : "text-stone-500 hover:text-stone-800"
-                )}
-                title="Ver pedidos de Colombia"
-              >
-                <img src="/assets/logo/logo-colombia.webp" alt="Colombia" className="w-4 h-3 object-cover rounded-xs shrink-0" />
-                <span>Colombia</span>
-              </button>
-            </div>
+            <CountrySelector 
+              value={selectedCountry} 
+              onChange={handleCountryChange} 
+              label="Filtrar pedidos por país"
+            />
 
             <button 
               onClick={() => { localStorage.removeItem('admin_pass'); window.location.reload(); }}

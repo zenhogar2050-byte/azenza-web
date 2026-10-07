@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
 Disallow: /admin
+Disallow: /dashboard
+
+# Sitemaps por Región (LATAM)
 Sitemap: https://azenza.com.co/sitemap.xml
+Sitemap: https://azenza.com.co/sitemap-cl.xml
+Sitemap: https://azenza.com.co/sitemap-cr.xml
+Sitemap: https://azenza.com.co/sitemap-ec.xml
+Sitemap: https://azenza.com.co/sitemap-gt.xml
+Sitemap: https://azenza.com.co/sitemap-hn.xml
+Sitemap: https://azenza.com.co/sitemap-pe.xml
+Sitemap: https://azenza.com.co/sitemap-do.xml
+Sitemap: https://azenza.com.co/sitemap-ve.xml

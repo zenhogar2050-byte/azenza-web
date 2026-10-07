@@ -89,7 +89,21 @@ async function generateStatic() {
     console.log(`Successfully pre-rendered ${renderedCount} static pages into dist/`);
 
     // Ensure public files exist in dist/
-    const publicFiles = ['google-feed.xml', 'llms.txt', 'llms-full.txt', 'sitemap.xml', 'robots.txt', '_redirects', '_headers', 'CNAME', '404.html'];
+    const countryCodes = ['cl', 'cr', 'ec', 'gt', 'hn', 'pe', 'do', 've'];
+    const countrySeoFiles = countryCodes.flatMap(c => [`sitemap-${c}.xml`, `llms-${c}.txt`, `llms-full-${c}.txt`]);
+    const publicFiles = [
+      'google-feed.xml', 
+      'google-feed-cl.xml', 
+      'google-feed-cr.xml', 
+      'google-feed-ec.xml', 
+      'google-feed-gt.xml', 
+      'google-feed-hn.xml', 
+      'google-feed-pe.xml', 
+      'google-feed-do.xml', 
+      'google-feed-ve.xml', 
+      'llms.txt', 'llms-full.txt', 'sitemap.xml', 'robots.txt', '_redirects', '_headers', 'CNAME', '404.html',
+      ...countrySeoFiles
+    ];
     for (const file of publicFiles) {
       const srcFile = path.resolve(root, 'public', file);
       const dstFile = path.resolve(root, 'dist', file);

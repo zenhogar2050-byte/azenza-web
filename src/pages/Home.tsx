@@ -25,38 +25,16 @@ const SYMPTOMS = [
 export default function Home() {
   const navigate = useNavigate();
   const { hash } = useLocation();
-  const { addComboToCart, getProducts, getCategories, isEC, formatPrice } = useCart();
+  const { addComboToCart, getProducts, getCategories, isEC, isCO, formatPrice } = useCart();
   const [stock, setStock] = useState(42);
   const buyButtonRef = useRef<HTMLButtonElement>(null);
 
   const availableProducts = getProducts();
   const currentCategories = getCategories();
 
-  const launchProductIds = isEC ? [
-    'coliplus',
-    'hemocream',
-    'tonico-capilar',
-    'colageno',
-    'rtafull',
-    'derman',
-    'locion',
-    'mamooth',
-    'titan-coffee',
-    'instant-virgin'
-  ] : [
-    'titan-coffee',
-    'ashwagandha',
-    'resveratrol-nad',
-    'vinagre-manzana',
-    'citrato-potasio-magnesio',
-    'oregano',
-    'bisglicinato-magnesio',
-    'shampoo-intensivo'
-  ];
-
-  const launchProducts = launchProductIds
-    .map(id => availableProducts.find(p => p.id === id))
-    .filter((p): p is NonNullable<typeof p> => !!p);
+  const launchProducts = isCO 
+    ? availableProducts.filter(p => p.basePrice === 69900).slice(0, 6)
+    : availableProducts.slice(0, 6);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -331,7 +309,7 @@ export default function Home() {
                       </div>
 
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-stone-100">
-                        <span className="text-2xl font-black text-[#009b63] font-display">Desde $ {product.basePrice.toLocaleString('es-CO')}</span>
+                        <span className="text-2xl font-black text-[#009b63] font-display">Desde {formatPrice(product.basePrice)}</span>
                         <div className="w-11 h-11 rounded-full bg-[#009b63] text-white flex items-center justify-center hover:bg-emerald-700 transition-colors shadow-sm shrink-0">
                           <ArrowRight className="w-5 h-5" />
                         </div>
@@ -407,7 +385,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-stone-100">
-                      <span className="text-2xl font-black text-[#009b63] font-display">Desde $ {product.basePrice.toLocaleString('es-CO')}</span>
+                      <span className="text-2xl font-black text-[#009b63] font-display">Desde {formatPrice(product.basePrice)}</span>
                       <div className="w-11 h-11 rounded-full bg-[#009b63] text-white flex items-center justify-center hover:bg-emerald-700 transition-colors shadow-sm shrink-0">
                         <ArrowRight className="w-5 h-5" />
                       </div>

@@ -10,7 +10,10 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    watch: {
+      ignored: ['**/dist/**', '**/public/**', '**/scripts/**', '**/*.xml', '**/*.txt']
+    }
   },
   build: {
     outDir: 'dist',

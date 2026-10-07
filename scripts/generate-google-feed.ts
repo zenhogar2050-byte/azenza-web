@@ -1,11 +1,19 @@
 import fs from 'fs';
 import path from 'path';
-import { PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH } from '../src/constants';
+import { 
+  PRODUCTS, 
+  PROMOTIONS, 
+  COMBO_OF_THE_MONTH, 
+  COUNTRY_CONFIGS, 
+  CountryCode, 
+  getProductsForCountry 
+} from '../src/constants';
 import { GOOGLE_TITLES_BY_PRODUCT_ID, GOOGLE_TITLES_BY_PROMO_ID } from '../src/googleFeedTitles';
 
 function sanitizeForGoogleAds(text: string): string {
   if (!text) return '';
   let sanitized = text
+    .replace(/[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]|[✔️✔✅☑️✓]/gu, '')
     .replace(/\r\n/g, ' ')
     .replace(/\n/g, ' ')
     .replace(/\s+/g, ' ')
@@ -30,20 +38,31 @@ function sanitizeForGoogleAds(text: string): string {
   return sanitized;
 }
 
-function generateGoogleFeed() {
+function generateGoogleFeedForCountry(countryCode: CountryCode) {
   const baseUrl = 'https://azenza.com.co';
+  const config = COUNTRY_CONFIGS[countryCode];
+  const currency = config.currency;
+  const multiplier = config.priceMultiplier;
+
+  const products = getProductsForCountry(countryCode);
+  const productIds = new Set(products.map(p => p.id));
+
+  const validPromos = PROMOTIONS.filter(promo => 
+    promo.products.every(pid => productIds.has(pid))
+  );
+  const isComboOfTheMonthValid = COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">\n`;
   xml += `<channel>\n`;
-  xml += `  <title><![CDATA[Azenza - Salud y Bienestar]]></title>\n`;
+  xml += `  <title><![CDATA[Azenza - Salud y Bienestar (${config.name})]]></title>\n`;
   xml += `  <link>${baseUrl}</link>\n`;
-  xml += `  <description><![CDATA[Tu aliado en salud natural, suplementos y bienestar integral en Colombia.]]></description>\n\n`;
+  xml += `  <description><![CDATA[Tu aliado en salud natural, suplementos y bienestar integral en ${config.name}.]]></description>\n\n`;
 
-  // 1. Products
-  for (const p of PRODUCTS) {
+  // 1. Products for country
+  for (const p of products) {
     const title = GOOGLE_TITLES_BY_PRODUCT_ID[p.id] || p.seoTitle || p.name;
-    const description = p.googleDescription || sanitizeForGoogleAds(p.description);
+    const description = sanitizeForGoogleAds(p.googleDescription || p.description);
     const primaryImg = p.image.startsWith('http') ? p.image : `${baseUrl}${p.image}`;
     const category = p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
     const itemId = p.masterId || p.id;
@@ -66,27 +85,28 @@ function generateGoogleFeed() {
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
     xml += `    <g:availability><![CDATA[in stock]]></g:availability>\n`;
-    xml += `    <g:price><![CDATA[${p.basePrice} COP]]></g:price>\n`;
+    xml += `    <g:price><![CDATA[${p.basePrice} ${currency}]]></g:price>\n`;
     xml += `    <g:google_product_category><![CDATA[${category}]]></g:google_product_category>\n`;
     xml += `    <g:brand><![CDATA[Azenza]]></g:brand>\n`;
     xml += `    <g:mpn><![CDATA[${itemId}]]></g:mpn>\n`;
     xml += `    <g:identifier_exists><![CDATA[no]]></g:identifier_exists>\n`;
     xml += `    <g:shipping>\n`;
-    xml += `      <g:country><![CDATA[CO]]></g:country>\n`;
+    xml += `      <g:country><![CDATA[${countryCode}]]></g:country>\n`;
     xml += `      <g:service><![CDATA[Envío Gratis]]></g:service>\n`;
-    xml += `      <g:price><![CDATA[0 COP]]></g:price>\n`;
+    xml += `      <g:price><![CDATA[0 ${currency}]]></g:price>\n`;
     xml += `    </g:shipping>\n`;
     xml += `  </item>\n`;
   }
 
-  // 2. Combo of the month
-  {
+  // 2. Combo of the month (if valid for country)
+  if (isComboOfTheMonthValid) {
     const combo = COMBO_OF_THE_MONTH;
     const title = GOOGLE_TITLES_BY_PROMO_ID[combo.id] || combo.seoTitle || combo.name;
     const description = sanitizeForGoogleAds(combo.description);
     const primaryImg = combo.image.startsWith('http') ? combo.image : `${baseUrl}${combo.image}`;
     const category = (combo as any).googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
     const itemId = `COMBO-${combo.id.toUpperCase()}`;
+    const price = countryCode === 'CO' ? combo.price : Math.round(combo.price * multiplier);
 
     xml += `  <item>\n`;
     xml += `    <g:id><![CDATA[${itemId}]]></g:id>\n`;
@@ -107,26 +127,27 @@ function generateGoogleFeed() {
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
     xml += `    <g:availability><![CDATA[in stock]]></g:availability>\n`;
-    xml += `    <g:price><![CDATA[${combo.price} COP]]></g:price>\n`;
+    xml += `    <g:price><![CDATA[${price} ${currency}]]></g:price>\n`;
     xml += `    <g:google_product_category><![CDATA[${category}]]></g:google_product_category>\n`;
     xml += `    <g:brand><![CDATA[Azenza]]></g:brand>\n`;
     xml += `    <g:mpn><![CDATA[${itemId}]]></g:mpn>\n`;
     xml += `    <g:identifier_exists><![CDATA[no]]></g:identifier_exists>\n`;
     xml += `    <g:shipping>\n`;
-    xml += `      <g:country><![CDATA[CO]]></g:country>\n`;
+    xml += `      <g:country><![CDATA[${countryCode}]]></g:country>\n`;
     xml += `      <g:service><![CDATA[Envío Gratis]]></g:service>\n`;
-    xml += `      <g:price><![CDATA[0 COP]]></g:price>\n`;
+    xml += `      <g:price><![CDATA[0 ${currency}]]></g:price>\n`;
     xml += `    </g:shipping>\n`;
     xml += `  </item>\n`;
   }
 
-  // 3. Promotions
-  for (const promo of PROMOTIONS) {
+  // 3. Valid Promotions for country
+  for (const promo of validPromos) {
     const title = GOOGLE_TITLES_BY_PROMO_ID[promo.id] || promo.seoTitle || promo.name;
     const description = sanitizeForGoogleAds(promo.description);
     const primaryImg = promo.image.startsWith('http') ? promo.image : `${baseUrl}${promo.image}`;
     const category = (promo as any).googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
     const itemId = `COMBO-${promo.id.toUpperCase()}`;
+    const price = countryCode === 'CO' ? promo.price : Math.round(promo.price * multiplier);
 
     xml += `  <item>\n`;
     xml += `    <g:id><![CDATA[${itemId}]]></g:id>\n`;
@@ -147,15 +168,15 @@ function generateGoogleFeed() {
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
     xml += `    <g:availability><![CDATA[in stock]]></g:availability>\n`;
-    xml += `    <g:price><![CDATA[${promo.price} COP]]></g:price>\n`;
+    xml += `    <g:price><![CDATA[${price} ${currency}]]></g:price>\n`;
     xml += `    <g:google_product_category><![CDATA[${category}]]></g:google_product_category>\n`;
     xml += `    <g:brand><![CDATA[Azenza]]></g:brand>\n`;
     xml += `    <g:mpn><![CDATA[${itemId}]]></g:mpn>\n`;
     xml += `    <g:identifier_exists><![CDATA[no]]></g:identifier_exists>\n`;
     xml += `    <g:shipping>\n`;
-    xml += `      <g:country><![CDATA[CO]]></g:country>\n`;
+    xml += `      <g:country><![CDATA[${countryCode}]]></g:country>\n`;
     xml += `      <g:service><![CDATA[Envío Gratis]]></g:service>\n`;
-    xml += `      <g:price><![CDATA[0 COP]]></g:price>\n`;
+    xml += `      <g:price><![CDATA[0 ${currency}]]></g:price>\n`;
     xml += `    </g:shipping>\n`;
     xml += `  </item>\n`;
   }
@@ -163,9 +184,17 @@ function generateGoogleFeed() {
   xml += `</channel>\n`;
   xml += `</rss>\n`;
 
-  const publicFeed = path.resolve(process.cwd(), 'public/google-feed.xml');
-  fs.writeFileSync(publicFeed, xml, 'utf8');
-  console.log(`Generated google-feed.xml successfully at ${publicFeed}`);
+  const fileName = countryCode === 'CO' ? 'google-feed.xml' : `google-feed-${countryCode.toLowerCase()}.xml`;
+  const targetPath = path.resolve(process.cwd(), 'public', fileName);
+  fs.writeFileSync(targetPath, xml, 'utf8');
+  console.log(`Generated ${fileName} for ${countryCode} successfully at ${targetPath}`);
 }
 
-generateGoogleFeed();
+function generateAllGoogleFeeds() {
+  const countries: CountryCode[] = ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'];
+  for (const c of countries) {
+    generateGoogleFeedForCountry(c);
+  }
+}
+
+generateAllGoogleFeeds();

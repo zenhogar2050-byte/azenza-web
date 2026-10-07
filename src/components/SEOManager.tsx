@@ -35,15 +35,16 @@ const SEOManager: React.FC<SEOManagerProps> = ({
     // Si la ruta es vacía tras quitar slashes, es la Home. Google prefiere la versión con slash final para el dominio base.
     const fullUrl = normalizedPath === "" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
     
-    // Para productos, usamos el título tal cual (como está en el feed) para evitar discrepancias
-    const fullTitle = type === "product" ? title : (title.includes('Azenza') ? title : `${title} | Azenza`);
+    // Usamos el título tal cual para máxima relevancia y conversión sin texto sobrante
+    const fullTitle = title;
     const defaultImage = `${baseUrl}/assets/logo/og-image.png`;
     const finalImage = ogImage?.startsWith('http') ? ogImage : `${baseUrl}${ogImage || ''}`;
 
     const isPending = !productData?.invima || productData.invima.toLowerCase().includes('trámite');
     const invimaDisplay = isPending ? 'Verificación INVIMA' : productData.invima;
     
-    const rawDescription = productData && productData.invima
+    // Si la descripción ya incluye INVIMA, usamos la descripción directa optimizada
+    const rawDescription = productData && productData.invima && !description.toLowerCase().includes('invima')
         ? `${description} INVIMA: ${invimaDisplay}.` 
         : description;
 
@@ -78,6 +79,18 @@ const SEOManager: React.FC<SEOManagerProps> = ({
             {metaKeywords && <meta name="keywords" content={metaKeywords} />}
             <link rel="canonical" href={fullUrl} />
             <meta name="robots" content="index, follow, max-image-preview:large" />
+
+            {/* Alternativas de Idioma y Región (hreflang) */}
+            <link rel="alternate" hrefLang="es-CO" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-CL" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-CR" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-EC" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-GT" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-HN" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-PE" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-DO" href={fullUrl} />
+            <link rel="alternate" hrefLang="es-VE" href={fullUrl} />
+            <link rel="alternate" hrefLang="x-default" href={fullUrl} />
 
             {/* Open Graph (Facebook / WhatsApp) */}
             <meta property="og:locale" content="es_CO" />

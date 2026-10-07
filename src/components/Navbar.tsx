@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { CATEGORIES, PROMOTIONS, COMBO_OF_THE_MONTH } from '../constants';
 import { cn } from '../utils';
 import Image from './Image';
+import CountrySelector from './CountrySelector';
 
 const SYMPTOMS = [
   { id: 'digestiva', label: 'Digestión', icon: Activity, color: 'text-emerald-600', bg: 'bg-emerald-50', border: 'border-emerald-100', link: '/categoria/salud-bienestar' },
@@ -20,18 +21,26 @@ export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const searchRef = useRef<HTMLDivElement>(null);
-  const { items, getProducts, getCategories } = useCart();
+  const { items, getProducts, getCategories, isCO } = useCart();
   const location = useLocation();
 
   const cartCount = items.reduce((acc, item) => acc + item.quantity, 0);
   const currentProducts = getProducts();
   const currentCategories = getCategories();
 
-  const searchableItems = React.useMemo(() => [
-    ...currentProducts.map(p => ({ ...p, searchType: 'product' as const })),
-    ...PROMOTIONS.map(p => ({ ...p, searchType: 'combo' as const })),
-    { ...COMBO_OF_THE_MONTH, searchType: 'combo' as const }
-  ], [currentProducts]);
+  const searchableItems = React.useMemo(() => {
+    const productIds = new Set(currentProducts.map(p => p.id));
+    const validPromos = PROMOTIONS.filter(promo => 
+      promo.products.every(pid => productIds.has(pid))
+    );
+    const isComboOfTheMonthValid = COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
+
+    return [
+      ...currentProducts.map(p => ({ ...p, searchType: 'product' as const })),
+      ...validPromos.map(p => ({ ...p, searchType: 'combo' as const })),
+      ...(isComboOfTheMonthValid ? [{ ...COMBO_OF_THE_MONTH, searchType: 'combo' as const }] : [])
+    ];
+  }, [currentProducts]);
 
   const normalize = (text: string) => {
     if (!text) return '';
@@ -283,6 +292,10 @@ export default function Navbar() {
               </div>
             </div>
 
+            <div className="flex items-center gap-2">
+              <CountrySelector />
+            </div>
+
             <Link
               to="/checkout"
               className="relative p-2 text-stone-600 hover:text-emerald-600 transition-colors shrink-0"
@@ -299,6 +312,7 @@ export default function Navbar() {
 
           {/* Mobile Actions - Buttons on Right */}
           <div className="md:hidden flex items-center gap-1.5 shrink-0 -mr-1">
+            <CountrySelector />
             <button
               onClick={() => {
                 setIsSearchOpen(!isSearchOpen);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../CartContext';
-import { COLOMBIA_DATA, ECUADOR_DATA, PRODUCTS, COMBO_OF_THE_MONTH, PROMOTIONS, GIFT_PRODUCTS } from '../constants';
+import { COLOMBIA_DATA, ECUADOR_DATA, PRODUCTS, COMBO_OF_THE_MONTH, PROMOTIONS, GIFT_PRODUCTS, getLocationDataForCountry, getPhonePrefixForCountry } from '../constants';
 import { formatCurrency, formatPriceForAPI } from '../utils';
 import { Trash2, Plus, Minus, ShoppingBag, Send, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -28,10 +28,12 @@ export default function Checkout() {
   const [hasTrackedAbandoned, setHasTrackedAbandoned] = useState(false);
   const [abandonedId, setAbandonedId] = useState<string | null>(null);
 
-  const locationData = isEC ? ECUADOR_DATA : COLOMBIA_DATA;
+  const locationData = getLocationDataForCountry(country);
   const departments = Object.keys(locationData || {});
   const cities = formData.department ? (locationData as any)[formData.department] || [] : [];
-  const phonePrefix = isEC ? '+593' : '+57';
+  const phonePrefix = getPhonePrefixForCountry(country);
+  const deptLabel = country === 'CO' ? 'Departamento' : country === 'EC' ? 'Provincia' : 'Estado / Provincia';
+  const cityLabel = country === 'CO' ? 'Ciudad' : 'Ciudad / Municipio / Cantón';
   const whatsappTarget = '573024102568';
 
   // Endpoints
@@ -41,6 +43,7 @@ export default function Checkout() {
   // Helper safe attribution retrieval
   const getAttributionData = () => {
     try {
+      if (typeof localStorage === 'undefined') return {};
       return {
         gclid: localStorage.getItem('gclid') || '',
         wbraid: localStorage.getItem('wbraid') || '',
@@ -202,13 +205,12 @@ export default function Checkout() {
       // 2. Si es una promoción multianidad (Pague 2 Lleve 3, Pague 3 Lleve 5, 2 Unidades, etc.)
       const totalUnits = (item.units && item.units > 1) ? (item.units * item.quantity) : item.quantity;
       if (item.units && item.units > 1) {
-        const promoTag = item.promoLabel && !item.promoLabel.toLowerCase().includes('1 unidad') ? ` [${item.promoLabel}]` : '';
-        const packInfo = item.quantity > 1 ? ` (x${item.quantity} Packs - Total: ${totalUnits} Unidades)` : ` (Total: ${totalUnits} Unidades)`;
-        return `• *${item.productName}*${promoTag}${packInfo}: ${formatCurrency(item.price * item.quantity)}`;
+        const packInfo = item.quantity > 1 ? ` (x${item.quantity} Packs - Total: ${totalUnits} Unidades)` : ` (Recibe ${totalUnits} Unidades en total)`;
+        return `• *${item.productName}* [${item.promoLabel}]${packInfo}: ${formatCurrency(item.price * item.quantity)}`;
       }
 
       // 3. Unidad estándar individual
-      const unitStr = item.quantity > 1 ? ` (Total: ${item.quantity} Unidades)` : ` (1 Unidad)`;
+      const unitStr = item.quantity > 1 ? ` (x${item.quantity} Unidades)` : ` (1 Unidad)`;
       return `• *${item.productName}*${unitStr}: ${formatCurrency(item.price * item.quantity)}`;
     }).join('\n');
 
@@ -557,16 +559,16 @@ export default function Checkout() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="department" className="text-xs font-bold text-stone-700 ml-2">{isEC ? 'Provincia' : 'Departamento'}</label>
+                    <label htmlFor="department" className="text-xs font-bold text-stone-700 ml-2">{deptLabel}</label>
                     <select id="department" required name="department" value={formData.department} onChange={handleInputChange} className="w-full px-3 py-3 rounded-xl bg-stone-50 border border-stone-200 outline-none focus:border-emerald-500 appearance-none text-sm">
-                      <option value="">{isEC ? 'Provincia' : 'Departamento'}</option>
+                      <option value="">{deptLabel}</option>
                       {departments.map(d => <option key={d} value={d}>{d}</option>)}
                     </select>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="city" className="text-xs font-bold text-stone-700 ml-2">{isEC ? 'Cantón / Ciudad' : 'Ciudad'}</label>
+                    <label htmlFor="city" className="text-xs font-bold text-stone-700 ml-2">{cityLabel}</label>
                     <select id="city" required name="city" value={formData.city} onChange={handleInputChange} disabled={!formData.department} className="w-full px-3 py-3 rounded-xl bg-stone-50 border border-stone-200 outline-none focus:border-emerald-500 disabled:opacity-50 appearance-none text-sm">
-                      <option value="">{isEC ? 'Cantón / Ciudad' : 'Ciudad'}</option>
+                      <option value="">{cityLabel}</option>
                       {cities.map((c: string) => <option key={c} value={c}>{c}</option>)}
                     </select>
                   </div>

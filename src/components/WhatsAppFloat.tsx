@@ -2,11 +2,15 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
-import { PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES } from '../constants';
+import { PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, COUNTRY_CONFIGS } from '../constants';
+import { useCart } from '../CartContext';
 
 export default function WhatsAppFloat() {
   const [isVisible, setIsVisible] = useState(true);
   const location = useLocation();
+  const { country } = useCart();
+
+  const countryName = COUNTRY_CONFIGS[country]?.name || country;
 
   const cleanStr = (str: string) => 
     str.toLowerCase()
@@ -60,13 +64,13 @@ export default function WhatsAppFloat() {
 
   const whatsappNumber = '573024102568'; 
   
-  let message = 'Hola! Me gustaría recibir más información sobre los productos de Azenza.';
+  let message = `Hola! Me encuentro en *${countryName}* y me gustaría recibir más información sobre los productos de Azenza.`;
   if (productContext) {
-    message = `Hola! Me gustaría recibir más información sobre *${productContext}* y cómo pedirlo con pago contra entrega.`;
+    message = `Hola! Me encuentro en *${countryName}* y me gustaría recibir más información sobre *${productContext}* y cómo pedirlo con pago contra entrega.`;
   } else if (categoryContext) {
-    message = `Hola! Me gustaría recibir información y asesoría sobre los productos de la categoría *${categoryContext}*.`;
+    message = `Hola! Me encuentro en *${countryName}* y me gustaría recibir información y asesoría sobre los productos de la categoría *${categoryContext}*.`;
   } else if (normalizedPath === '' || normalizedPath === '/') {
-    message = `Hola! Me gustaría recibir más información sobre los productos y promociones de Azenza.`;
+    message = `Hola! Me encuentro en *${countryName}* y me gustaría recibir más información sobre los productos y promociones de Azenza.`;
   }
     
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;

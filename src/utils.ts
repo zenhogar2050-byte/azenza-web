@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatCurrency(value: number, country?: string) {
-  const activeCountry = country || (typeof window !== 'undefined' ? (localStorage.getItem('azenza_country') || localStorage.getItem('zenhogar_country')) : null) || 'CO';
+  const activeCountry = country || (typeof window !== 'undefined' && typeof localStorage !== 'undefined' ? (localStorage.getItem('azenza_country') || localStorage.getItem('zenhogar_country')) : null) || 'CO';
   
   if (activeCountry === 'EC' || activeCountry === 'USD') {
     return new Intl.NumberFormat('en-US', {
@@ -18,8 +18,26 @@ export function formatCurrency(value: number, country?: string) {
   }
 
   const rounded = Math.round(Number(value) || 0);
-  const formattedNumber = rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  return `$${formattedNumber}`;
+
+  switch (activeCountry) {
+    case 'CL':
+      return `$${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
+    case 'CR':
+      return `₡${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
+    case 'GT':
+      return `Q${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+    case 'HN':
+      return `L${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+    case 'PE':
+      return `S/ ${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
+    case 'DO':
+      return `RD$${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
+    case 'VE':
+      return `Bs. ${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
+    case 'CO':
+    default:
+      return `$${rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
+  }
 }
 
 export function formatPriceForAPI(value: number) {
