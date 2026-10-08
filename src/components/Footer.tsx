@@ -1,8 +1,22 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../CartContext';
+import { COUNTRY_CONFIGS, getLocationDataForCountry } from '../constants';
 
 export const Footer: React.FC = () => {
+  const { country } = useCart();
+  const config = COUNTRY_CONFIGS[country] || COUNTRY_CONFIGS['CO'];
+  const locationData = getLocationDataForCountry(country);
+
+  const allCities: string[] = [];
+  Object.values(locationData).forEach(cities => {
+    if (Array.isArray(cities)) {
+      allCities.push(...cities);
+    }
+  });
+  const citiesStr = allCities.slice(0, 22).join(', ');
+
   return (
     <footer className="bg-[#141414] text-stone-300 pt-16 pb-12 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +26,7 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: DIOS BENDICE ESTE NEGOCIO */}
           <div className="space-y-4">
-            <h3 className="text-xl font-black text-white tracking-tight uppercase font-display">
+            <h3 className="text-xl font-black text-[#141414] tracking-tight uppercase font-display">
               DIOS BENDICE ESTE NEGOCIO
             </h3>
             
@@ -34,7 +48,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-sm text-stone-300 leading-relaxed max-w-xs">
-              Dedicados a llevar el bienestar natural a cada hogar colombiano. Calidad, confianza y salud en cada producto.
+              Dedicados a llevar el bienestar natural a cada hogar en {config.name}. Calidad, confianza y salud en cada producto.
             </p>
           </div>
 
@@ -145,21 +159,21 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section: Envíos con pago contra entrega en Colombia */}
+        {/* Bottom Section: Envíos con pago contra entrega en pais */}
         <div className="pt-6 border-t border-stone-800/80 space-y-6">
           <div className="text-center max-w-4xl mx-auto space-y-2">
             <h4 className="text-xs font-black tracking-widest text-white uppercase font-display">
-              ENVÍOS CON PAGO CONTRA ENTREGA EN COLOMBIA:
+              ENVÍOS CON PAGO CONTRA ENTREGA EN {config.name.toUpperCase()}:
             </h4>
             <p className="text-xs text-stone-400 leading-relaxed">
-              Despachos diarios desde Barranquilla a: Bogotá, Medellín, Cali, Barranquilla, Cartagena, Cúcuta, Bucaramanga, Pereira, Ibagué, Santa Marta, Valledupar, Villavicencio, Montería, Pasto, Neiva, Popayán, Sincelejo, Armenia, Riohacha, Tunja, Quibdó, Florencia y cualquier rincón de Colombia.
+              Despachos seguros en {config.name} a: {citiesStr} y cualquier rincón de {config.name}.
             </p>
           </div>
 
           {/* Legal / Medical Disclaimer */}
           <div className="max-w-5xl mx-auto">
             <p className="text-[11px] text-stone-500 leading-relaxed text-center italic">
-              Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con Registro Sanitario INVIMA y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
+              Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con Registro Sanitario y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
             </p>
           </div>
         </div>
