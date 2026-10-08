@@ -19,6 +19,8 @@
 /suplementos/citramix/ /producto/citramix 301
 /suplementos/resveratrolsoftgels /producto/resveratrol 301
 /suplementos/resveratrolsoftgels/ /producto/resveratrol 301
+/suplementos/resveratrol /producto/resveratrol 301
+/suplementos/resveratrol/ /producto/resveratrol 301
 /suplementos/ashwagandha /producto/ashwagandha 301
 /suplementos/ashwagandha/ /producto/ashwagandha 301
 /suplementos/rtafull /producto/rtafull 301
@@ -35,6 +37,26 @@
 /suplementos/liteplex/ /producto/liteplex 301
 /suplementos/bisglicinato-magnesio-gomitas /producto/bisglicinato-magnesio 301
 /suplementos/bisglicinato-magnesio-gomitas/ /producto/bisglicinato-magnesio 301
+/suplementos/bisglicinato-magnesio /producto/bisglicinato-magnesio 301
+/suplementos/bisglicinato-magnesio/ /producto/bisglicinato-magnesio 301
+/suplementos/gomitas-magnesio-potasio-cald /producto/bisglicinato-magnesio 301
+/suplementos/gomitas-magnesio-potasio-cald/ /producto/bisglicinato-magnesio 301
+/suplementos/zafir /producto/zafir 301
+/suplementos/zafir/ /producto/zafir 301
+/suplementos/tyruss-full /producto/tyruss-full 301
+/suplementos/tyruss-full/ /producto/tyruss-full 301
+/suplementos/c-lagen /producto/c-lagen 301
+/suplementos/c-lagen/ /producto/c-lagen 301
+/suplementos/resvisfactor /producto/resvisfactor 301
+/suplementos/resvisfactor/ /producto/resvisfactor 301
+/suplementos/resveratrol-nad /producto/resveratrol-nad 301
+/suplementos/resveratrol-nad/ /producto/resveratrol-nad 301
+/suplementos/nad-1 /producto/resveratrol-nad 301
+/suplementos/nad-1/ /producto/resveratrol-nad 301
+/suplementos/guanda-mix /producto/guanda-mix 301
+/suplementos/guanda-mix/ /producto/guanda-mix 301
+/suplementos/titan-coffee /producto/titan-coffee 301
+/suplementos/titan-coffee/ /producto/titan-coffee 301
 /suplementos/haydar /producto/haydar 301
 /suplementos/haydar/ /producto/haydar 301
 /suplementos/termoactiva /producto/locion 301
@@ -45,12 +67,34 @@
 # ====================================================
 # 2. PRODUCTOS OBSOLETOS REDIRIGIDOS A CATEGORÍA
 # ====================================================
+/vitamina-d3-k2 /categoria/salud-bienestar 301
+/vitamina-d3-k2/ /categoria/salud-bienestar 301
+/producto/maxlite-colageno /categoria/salud-bienestar 301
+/producto/maxlite-colageno/ /categoria/salud-bienestar 301
+/suplementos/maxlite-colageno /categoria/salud-bienestar 301
+/suplementos/maxlite-colageno/ /categoria/salud-bienestar 301
+/suplementos/vinagremanzana /categoria/salud-bienestar 301
+/suplementos/vinagremanzana/ /categoria/salud-bienestar 301
+/suplementos/vinagre-manzana /categoria/salud-bienestar 301
+/suplementos/vinagre-manzana/ /categoria/salud-bienestar 301
+/suplementos/citrato-potasio-magnesio /categoria/salud-bienestar 301
+/suplementos/citrato-potasio-magnesio/ /categoria/salud-bienestar 301
+/suplementos/liofhim /categoria/salud-bienestar 301
+/suplementos/liofhim/ /categoria/salud-bienestar 301
+/suplementos/iprossmen /categoria/salud-bienestar 301
+/suplementos/iprossmen/ /categoria/salud-bienestar 301
+/suplementos/oregano /categoria/salud-bienestar 301
+/suplementos/oregano/ /categoria/salud-bienestar 301
+/suplementos/megamac /categoria/salud-bienestar 301
+/suplementos/megamac/ /categoria/salud-bienestar 301
 /lemme-burn /categoria/salud-bienestar 301
 /lemme-burn/ /categoria/salud-bienestar 301
 /silymarin /categoria/salud-bienestar 301
 /silymarin/ /categoria/salud-bienestar 301
 /producto/shilajit /categoria/salud-bienestar 301
 /producto/shilajit/ /categoria/salud-bienestar 301
+/suplementos/shilajit /categoria/salud-bienestar 301
+/suplementos/shilajit/ /categoria/salud-bienestar 301
 /suplementos/omega369 /categoria/salud-bienestar 301
 /suplementos/omega369/ /categoria/salud-bienestar 301
 /suplementos/siemprebell /categoria/salud-bienestar 301
@@ -91,5 +135,9 @@
 # ====================================================
 # 4. WILDCARDS / FALLBACKS (Al final del archivo)
 # ====================================================
+/suplementos /categoria/salud-bienestar 301
+/suplementos/ /categoria/salud-bienestar 301
 /suplementos/* /categoria/salud-bienestar 301
+/fajas / 301
+/fajas/ / 301
 /fajas/* / 301

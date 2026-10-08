@@ -1,1 +1,2 @@
-console.log('Country feed files generated directly via generate-google-feed.ts');
+import './generate-google-feed';
+import './generate-meta-feed';

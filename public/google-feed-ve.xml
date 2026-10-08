@@ -95,24 +95,5 @@
       <g:price><![CDATA[0 VES]]></g:price>
     </g:shipping>
   </item>
-  <item>
-    <g:id><![CDATA[COMBO-PROMO-3]]></g:id>
-    <g:title><![CDATA[Combo Detox Digestivo Limpieza de Colon y Depuración de Hígado Coliplus 450g y RtaFull 500ml]]></g:title>
-    <g:description><![CDATA[El Combo Detox Digestivo es un sistema integral de limpieza diseñado para restaurar el equilibrio de tu organismo y depurar tu cuerpo de toxinas acumuladas. Esta sinergia une la potencia de la fibra Coliplus, que regula el tránsito intestinal y reconforta el colon de manera natural, con la acción depurativa del concentrado Rtafull, que estimula la función desintoxicante del hígado y los riñones. Ideal para ayudar a reducir la pesadez, favorecer el tránsito y mejorar la digestión de las grasas, permitiéndote sentirte ligero, activo y renovado desde la primera semana.]]></g:description>
-    <g:link>https://azenza.com.co/combo/promo-3</g:link>
-    <g:image_link>https://azenza.com.co/assets/combos/promo-3.webp</g:image_link>
-    <g:condition><![CDATA[new]]></g:condition>
-    <g:availability><![CDATA[in stock]]></g:availability>
-    <g:price><![CDATA[10517 VES]]></g:price>
-    <g:google_product_category><![CDATA[Health & Beauty > Health Care > Fitness & Nutrition]]></g:google_product_category>
-    <g:brand><![CDATA[Azenza]]></g:brand>
-    <g:mpn><![CDATA[COMBO-PROMO-3]]></g:mpn>
-    <g:identifier_exists><![CDATA[no]]></g:identifier_exists>
-    <g:shipping>
-      <g:country><![CDATA[VE]]></g:country>
-      <g:service><![CDATA[Envío Gratis]]></g:service>
-      <g:price><![CDATA[0 VES]]></g:price>
-    </g:shipping>
-  </item>
 </channel>
 </rss>

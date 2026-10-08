@@ -47,10 +47,11 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
   const products = getProductsForCountry(countryCode);
   const productIds = new Set(products.map(p => p.id));
 
-  const validPromos = PROMOTIONS.filter(promo => 
-    promo.products.every(pid => productIds.has(pid))
-  );
-  const isComboOfTheMonthValid = COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
+  const isColombia = countryCode === 'CO';
+  const validPromos = isColombia 
+    ? PROMOTIONS.filter(promo => promo.products.every(pid => productIds.has(pid)))
+    : [];
+  const isComboOfTheMonthValid = isColombia && COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">\n`;

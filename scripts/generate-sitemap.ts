@@ -165,11 +165,42 @@ function generateSitemapForCountry(countryCode: CountryCode) {
   console.log(`Generated ${fileName} successfully with images for ${countryCode} at ${targetPath}`);
 }
 
+function generateSitemapIndex() {
+  const baseUrl = 'https://azenza.com.co';
+  const currentDate = new Date().toISOString().split('T')[0];
+  const countries: CountryCode[] = ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'];
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  xml += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+  // Colombia (main)
+  xml += `    <sitemap>\n`;
+  xml += `        <loc>${baseUrl}/sitemap.xml</loc>\n`;
+  xml += `        <lastmod>${currentDate}</lastmod>\n`;
+  xml += `    </sitemap>\n`;
+
+  // Regional
+  for (const c of countries) {
+    if (c === 'CO') continue;
+    xml += `    <sitemap>\n`;
+    xml += `        <loc>${baseUrl}/sitemap-${c.toLowerCase()}.xml</loc>\n`;
+    xml += `        <lastmod>${currentDate}</lastmod>\n`;
+    xml += `    </sitemap>\n`;
+  }
+
+  xml += `</sitemapindex>\n`;
+
+  const targetPath = path.resolve(process.cwd(), 'public', 'sitemap_index.xml');
+  fs.writeFileSync(targetPath, xml, 'utf8');
+  console.log(`Generated sitemap_index.xml successfully at ${targetPath}`);
+}
+
 function generateAllSitemaps() {
   const countries: CountryCode[] = ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'];
   for (const c of countries) {
     generateSitemapForCountry(c);
   }
+  generateSitemapIndex();
 }
 
 generateAllSitemaps();

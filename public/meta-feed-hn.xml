@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+  <title><![CDATA[Azenza - Catálogo Oficial Meta (Honduras)]]></title>
+  <link>https://azenza.com.co</link>
+  <description><![CDATA[Catálogo oficial de productos para Instagram Shop y Facebook Dynamic Ads en Honduras.]]></description>
+
+  <item>
+    <g:id><![CDATA[derman]]></g:id>
+    <g:title><![CDATA[Derman Mascarilla Íntima: Cuidado Post-Depilación y Calma]]></g:title>
+    <g:description><![CDATA[Protección, Frescura y Equilibrio para tu Zona Íntima.]]></g:description>
+    <g:link>https://azenza.com.co/producto/derman?country=HN</g:link>
+    <g:image_link>https://azenza.com.co/assets/products/Derman.webp</g:image_link>
+    <g:additional_image_link>https://azenza.com.co/assets/products/derman-apoyo-1.webp</g:additional_image_link>
+    <g:additional_image_link>https://azenza.com.co/assets/products/derman-apoyo-2.webp</g:additional_image_link>
+    <g:additional_image_link>https://azenza.com.co/assets/products/derman-apoyo-3.webp</g:additional_image_link>
+    <g:additional_image_link>https://azenza.com.co/assets/products/derman-apoyo-4.webp</g:additional_image_link>
+    <g:condition><![CDATA[new]]></g:condition>
+    <g:availability><![CDATA[in stock]]></g:availability>
+    <g:price><![CDATA[5 HNL]]></g:price>
+    <g:brand><![CDATA[Azenza]]></g:brand>
+    <g:google_product_category><![CDATA[Health & Beauty > Personal Care > Cosmetics]]></g:google_product_category>
+    <g:custom_label_0><![CDATA[salud-sexual]]></g:custom_label_0>
+    <g:custom_label_1><![CDATA[Envio Gratis]]></g:custom_label_1>
+    <g:custom_label_2><![CDATA[Pago Contra Entrega]]></g:custom_label_2>
+    <g:custom_label_3><![CDATA[NSOC36162-24CO]]></g:custom_label_3>
+  </item>
+  <item>
+    <g:id><![CDATA[instant-virgin]]></g:id>
+    <g:title><![CDATA[Instant Virgin Gel Íntimo: Firmeza, Cuidado y Confort]]></g:title>
+    <g:description><![CDATA[Renovación, Firmeza y Plenitud Femenina.]]></g:description>
+    <g:link>https://azenza.com.co/producto/instant-virgin?country=HN</g:link>
+    <g:image_link>https://azenza.com.co/assets/products/Instantvirgin.webp</g:image_link>
+    <g:additional_image_link>https://azenza.com.co/assets/products/instant-virgin-apoyo-1.webp</g:additional_image_link>
+    <g:additional_image_link>https://azenza.com.co/assets/products/instant-virgin-apoyo-2.webp</g:additional_image_link>
+    <g:condition><![CDATA[new]]></g:condition>
+    <g:availability><![CDATA[in stock]]></g:availability>
+    <g:price><![CDATA[2 HNL]]></g:price>
+    <g:brand><![CDATA[Azenza]]></g:brand>
+    <g:google_product_category><![CDATA[Health & Beauty > Personal Care > Intimate Care]]></g:google_product_category>
+    <g:custom_label_0><![CDATA[salud-sexual]]></g:custom_label_0>
+    <g:custom_label_1><![CDATA[Envio Gratis]]></g:custom_label_1>
+    <g:custom_label_2><![CDATA[Pago Contra Entrega]]></g:custom_label_2>
+    <g:custom_label_3><![CDATA[2021DM-0024065]]></g:custom_label_3>
+  </item>
+</channel>
+</rss>

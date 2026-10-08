@@ -4,6 +4,7 @@ Disallow: /admin
 Disallow: /dashboard
 
 # Sitemaps por Región (LATAM)
+Sitemap: https://azenza.com.co/sitemap_index.xml
 Sitemap: https://azenza.com.co/sitemap.xml
 Sitemap: https://azenza.com.co/sitemap-cl.xml
 Sitemap: https://azenza.com.co/sitemap-cr.xml

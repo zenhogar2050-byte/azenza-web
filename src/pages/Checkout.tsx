@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../CartContext';
-import { COLOMBIA_DATA, ECUADOR_DATA, PRODUCTS, COMBO_OF_THE_MONTH, PROMOTIONS, GIFT_PRODUCTS, getLocationDataForCountry, getPhonePrefixForCountry } from '../constants';
+import { COLOMBIA_DATA, ECUADOR_DATA, PRODUCTS, COMBO_OF_THE_MONTH, PROMOTIONS, GIFT_PRODUCTS, getLocationDataForCountry, getPhonePrefixForCountry, COUNTRY_CONFIGS } from '../constants';
 import { formatCurrency, formatPriceForAPI } from '../utils';
 import { Trash2, Plus, Minus, ShoppingBag, Send, CheckCircle2, ArrowLeft } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -100,17 +100,28 @@ export default function Checkout() {
             ...attribution
           });
 
+          const cleanPhone = (formData.phone || '').trim();
+          const fullPhone = cleanPhone
+            ? (cleanPhone.startsWith('+') ? cleanPhone : `${phonePrefix} ${cleanPhone}`.trim())
+            : (country === 'CO' ? '3000000000' : '000000000');
+          const countryName = COUNTRY_CONFIGS[country]?.name || country;
+          const departmentVal = country === 'CO'
+            ? (formData.department || "Pte. Depto")
+            : `${formData.department || "Pte. Depto"} (${countryName})`;
+
           const sheetsPayload = {
             type: 'abandoned',
+            country: country || 'CO',
             ...attribution,
             customer: {
               fullName: formData.fullName || "Pte. Nombre",
               email: formData.email || "contacto@azenza.com.co",
-              phone: formData.phone || "3000000000",
+              phone: fullPhone,
               identification: formData.identification || "123456789",
               address: formData.address || "Pte. Dirección",
               city: formData.city || "Pte. Ciudad",
-              department: formData.department || "Pte. Depto",
+              department: departmentVal,
+              country: country || 'CO',
               ...attribution
             },
             order_details: orderDetails,
@@ -180,6 +191,8 @@ export default function Checkout() {
     submittingRef.current = true;
     setIsSubmitting(true);
 
+    const formatItemTotal = (amt: number) => country === 'CO' ? formatCurrency(amt) : formatPrice(amt);
+
     const orderDetails = items.map(item => {
       // 1. Si el ítem es un combo, detallar los productos que incluye
       const isCombo = item.promoId === 'combo' || item.productId.startsWith('promo-') || item.productId.startsWith('combo-');
@@ -199,34 +212,45 @@ export default function Checkout() {
           }
         }
         const comboQty = item.quantity > 1 ? ` (x${item.quantity} Combos)` : '';
-        return `• *${item.productName}*${comboQty}: ${formatCurrency(item.price * item.quantity)}${comboProductsText}`;
+        return `• *${item.productName}*${comboQty}: ${formatItemTotal(item.price * item.quantity)}${comboProductsText}`;
       }
 
       // 2. Si es una promoción multianidad (Pague 2 Lleve 3, Pague 3 Lleve 5, 2 Unidades, etc.)
       const totalUnits = (item.units && item.units > 1) ? (item.units * item.quantity) : item.quantity;
       if (item.units && item.units > 1) {
         const packInfo = item.quantity > 1 ? ` (x${item.quantity} Packs - Total: ${totalUnits} Unidades)` : ` (Recibe ${totalUnits} Unidades en total)`;
-        return `• *${item.productName}* [${item.promoLabel}]${packInfo}: ${formatCurrency(item.price * item.quantity)}`;
+        return `• *${item.productName}* [${item.promoLabel}]${packInfo}: ${formatItemTotal(item.price * item.quantity)}`;
       }
 
       // 3. Unidad estándar individual
       const unitStr = item.quantity > 1 ? ` (x${item.quantity} Unidades)` : ` (1 Unidad)`;
-      return `• *${item.productName}*${unitStr}: ${formatCurrency(item.price * item.quantity)}`;
+      return `• *${item.productName}*${unitStr}: ${formatItemTotal(item.price * item.quantity)}`;
     }).join('\n');
 
     try {
       const attribution = getAttributionData();
+      const cleanPhone = (formData.phone || '').trim();
+      const fullPhone = cleanPhone
+        ? (cleanPhone.startsWith('+') ? cleanPhone : `${phonePrefix} ${cleanPhone}`.trim())
+        : (country === 'CO' ? '3000000000' : '000000000');
+      const countryName = COUNTRY_CONFIGS[country]?.name || country;
+      const departmentVal = country === 'CO'
+        ? (formData.department || "Atlántico")
+        : `${formData.department || "Pte. Depto"} (${countryName})`;
+
       const sheetsPayload = {
         type: 'order',
+        country: country || 'CO',
         ...attribution,
         customer: {
           fullName: formData.fullName || "Cliente",
           email: formData.email || "contacto@azenza.com.co",
-          phone: formData.phone || "3000000000",
+          phone: fullPhone,
           identification: formData.identification || "123456789",
           address: formData.address || "Dirección pendiente",
-          city: formData.city || "Barranquilla",
-          department: formData.department || "Atlántico",
+          city: formData.city || (country === 'CO' ? "Barranquilla" : "Ciudad"),
+          department: departmentVal,
+          country: country || 'CO',
           ...attribution
         },
         order_details: orderDetails,
@@ -357,18 +381,21 @@ export default function Checkout() {
         await deleteOrderFromFirebase(abandonedId);
       }
 
+      const currentCurrency = COUNTRY_CONFIGS[country]?.currency || 'COP';
+      const formattedTotal = country === 'CO' ? formatCurrency(total) : formatPrice(total);
+
       const message = `*🛍️ PEDIDO #${currentTicket} - AZENZA*\n\n` +
         `*PRODUCTOS:*\n${orderDetails}\n\n` +
-        `*TOTAL A PAGAR:* ${formatCurrency(total)}\n\n` +
+        `*TOTAL A PAGAR:* ${formattedTotal}\n\n` +
         `*DATOS DEL CLIENTE:*\n` +
         `👤 *Nombre:* ${formData.fullName}\n` +
-        `🪪 *Cédula:* ${formData.identification}\n` +
+        `🪪 *Cédula/Documento:* ${formData.identification}\n` +
         `📧 *Email:* ${formData.email}\n` +
-        `📱 *Teléfono:* ${formData.phone}\n\n` +
+        `📱 *Teléfono:* ${fullPhone}\n\n` +
         `*DIRECCIÓN DE ENVÍO:*\n` +
         `🏠 *Dirección:* ${formData.address}\n` +
         `📍 *Ciudad:* ${formData.city}\n` +
-        `🗺️ *Departamento:* ${formData.department}\n\n` +
+        `🗺️ *${deptLabel}:* ${formData.department} (${countryName})\n\n` +
         `_Por favor, confirma mi pedido. ¡Gracias!_`;
 
       const encodedMessage = encodeURIComponent(message);
@@ -385,16 +412,19 @@ export default function Checkout() {
       // Inmediata ejecución de purchase event con beacon transport
       trackGooglePurchase({
         value: total,
-        currency: 'COP',
+        currency: currentCurrency,
         items: serializedItems
-      }, currentTicket, formData);
+      }, currentTicket, {
+        ...formData,
+        phone: fullPhone
+      });
 
       localStorage.setItem('lastOrder', JSON.stringify({ 
         total: total, 
         ticketNumber: currentTicket,
         whatsappUrl: finalWhatsappUrl,
         email: formData.email || "contacto@azenza.com.co",
-        customer: formData,
+        customer: { ...formData, phone: fullPhone },
         items: serializedItems 
       }));
 
@@ -403,9 +433,9 @@ export default function Checkout() {
         state: { 
           orderData: { 
             value: total, 
-            currency: 'COP', 
+            currency: currentCurrency, 
             email: formData.email || "contacto@azenza.com.co",
-            customer: formData,
+            customer: { ...formData, phone: fullPhone },
             items: serializedItems
           },
           whatsappUrl: finalWhatsappUrl,

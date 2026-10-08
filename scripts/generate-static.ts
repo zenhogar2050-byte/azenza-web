@@ -101,7 +101,7 @@ async function generateStatic() {
       'google-feed-pe.xml', 
       'google-feed-do.xml', 
       'google-feed-ve.xml', 
-      'llms.txt', 'llms-full.txt', 'sitemap.xml', 'robots.txt', '_redirects', '_headers', 'CNAME', '404.html',
+      'llms.txt', 'llms-full.txt', 'sitemap.xml', 'sitemap_index.xml', 'robots.txt', '_redirects', '_headers', 'CNAME', '404.html',
       ...countrySeoFiles
     ];
     for (const file of publicFiles) {
