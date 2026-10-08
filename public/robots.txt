@@ -1,7 +1,37 @@
+# Robots.txt for Zenhogar / Azenza E-commerce
+# Explicitly allowing all search and AI crawlers to access sitemaps and LLM metadata files
+
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap_index.xml
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /google-feed.xml
 Disallow: /admin
 Disallow: /dashboard
+
+# Specific AI & Search Crawlers Rules
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 # Sitemaps por Región (LATAM)
 Sitemap: https://azenza.com.co/sitemap_index.xml

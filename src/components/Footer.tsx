@@ -1,13 +1,13 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../CartContext';
-import { COUNTRY_CONFIGS, getLocationDataForCountry } from '../constants';
+import { useCountry } from '../CountryContext';
+import { getLocationDataForCountry, CountryCode } from '../constants';
 
 export const Footer: React.FC = () => {
-  const { country } = useCart();
-  const config = COUNTRY_CONFIGS[country] || COUNTRY_CONFIGS['CO'];
-  const locationData = getLocationDataForCountry(country);
+  const { country } = useCountry();
+  const countryCode = (country.id || 'CO') as CountryCode;
+  const locationData = getLocationDataForCountry(countryCode);
 
   const allCities: string[] = [];
   Object.values(locationData).forEach(cities => {
@@ -43,12 +43,12 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-xl font-black text-white tracking-tight uppercase">AZENZA</span>
-                <span className="text-[9px] font-bold text-emerald-400 tracking-[0.2em] uppercase mt-0.5">SALUD VITAL</span>
+                <span className="text-[9px] font-bold text-emerald-400 tracking-[0.2em] uppercase mt-0.5">SALUD VITAL ({country.flag} {country.name})</span>
               </div>
             </Link>
 
             <p className="text-sm text-stone-300 leading-relaxed max-w-xs">
-              Dedicados a llevar el bienestar natural a cada hogar en {config.name}. Calidad, confianza y salud en cada producto.
+              Dedicados a llevar el bienestar natural a cada hogar en {country.name}. Calidad, confianza y salud en cada producto ({country.currency} {country.symbol}).
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
           {/* Col 3: CONTACTO */}
           <div>
             <h3 className="text-lg font-bold uppercase tracking-wider text-white mb-5 font-display">
-              CONTACTO
+              CONTACTO ({country.name})
             </h3>
             <div className="space-y-4 text-sm">
               
@@ -91,9 +91,9 @@ export const Footer: React.FC = () => {
                   <MapPin className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">DIRECCIÓN ADMINISTRATIVA</p>
-                  <p className="text-white font-medium text-xs">Calle 3a #23 - 40</p>
-                  <p className="text-stone-300 text-xs">Puerto Colombia, Atlántico, Colombia</p>
+                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">ATENCIÓN EN {country.name.toUpperCase()}</p>
+                  <p className="text-white font-medium text-xs">Despachos Nacionales</p>
+                  <p className="text-stone-300 text-xs">Sede Principal & Red Logística {country.flag}</p>
                 </div>
               </div>
 
@@ -102,8 +102,8 @@ export const Footer: React.FC = () => {
                   <Phone className="w-4 h-4 text-emerald-400" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">WHATSAPP</p>
-                  <p className="text-white font-bold text-sm">+57 302 410 2568</p>
+                  <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">WHATSAPP OFICIAL</p>
+                  <p className="text-white font-bold text-sm">{country.phoneCode} 302 410 2568</p>
                 </div>
               </div>
 
@@ -115,25 +115,24 @@ export const Footer: React.FC = () => {
                   <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold mb-0.5">CORREOS</p>
                   <a href="mailto:ventas@azenza.com.co" className="text-white font-medium block hover:text-emerald-400 transition-colors text-xs">ventas@azenza.com.co</a>
                   <a href="mailto:info@azenza.com.co" className="text-white font-medium block hover:text-emerald-400 transition-colors text-xs">info@azenza.com.co</a>
-                  <a href="mailto:soporte@azenza.com.co" className="text-white font-medium block hover:text-emerald-400 transition-colors text-xs">soporte@azenza.com.co</a>
                 </div>
               </div>
 
             </div>
           </div>
 
-          {/* Col 4: INVIMA CARD */}
+          {/* Col 4: INVIMA / REGULATORY CARD */}
           <div className="flex flex-col items-center lg:items-end">
             <div className="bg-[#1f1f1f] p-5 rounded-3xl border border-stone-800 shadow-lg flex items-center justify-center w-full max-w-[240px]">
               <img 
-                src="/assets/logo/logo-invima.webp" 
-                alt="Certificación INVIMA" 
+                src={country.id === 'CO' ? "/assets/logo/logo-invima.webp" : "/assets/logo/logo-icon.webp"}
+                alt={`Certificación Oficial ${country.name}`}
                 className="w-full h-auto object-contain max-h-28"
                 loading="lazy"
               />
             </div>
             <p className="mt-3 text-stone-400 text-xs italic text-center lg:text-right">
-              Información legal y certificaciones
+              {country.id === 'CO' ? 'Registro Sanitario INVIMA Oficial' : `Certificación y Calidad Autorizada en ${country.name}`}
             </p>
           </div>
 
@@ -142,14 +141,14 @@ export const Footer: React.FC = () => {
         {/* Middle Bar: Copyright, Payment Pill, Nav Links */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-stone-300">
           <p className="font-medium">
-            © 2026 Azenza. Todos los derechos reservados.
+            © 2026 Azenza ({country.name}). Todos los derechos reservados. Moneda: {country.currency} ({country.symbol}).
           </p>
 
           <div className="flex items-center gap-2">
-            <span className="text-stone-400 font-bold uppercase text-[11px] tracking-wider">MÉTODOS DE PAGO:</span>
+            <span className="text-stone-400 font-bold uppercase text-[11px] tracking-wider">MÉTODOS DE PAGO ({country.currency}):</span>
             <div className="inline-flex items-center gap-2 bg-[#1f1f1f] px-3 py-1.5 rounded-full border border-stone-800 text-[11px] font-bold text-white uppercase tracking-wider">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              PAGO CONTRAENTREGA (EXCLUSIVO)
+              PAGO CONTRAENTREGA EN EFECTIVO ({country.symbol})
             </div>
           </div>
 
@@ -163,17 +162,17 @@ export const Footer: React.FC = () => {
         <div className="pt-6 border-t border-stone-800/80 space-y-6">
           <div className="text-center max-w-4xl mx-auto space-y-2">
             <h4 className="text-xs font-black tracking-widest text-white uppercase font-display">
-              ENVÍOS CON PAGO CONTRA ENTREGA EN {config.name.toUpperCase()}:
+              ENVÍOS CON PAGO CONTRA ENTREGA EN {country.name.toUpperCase()} ({country.currency}):
             </h4>
             <p className="text-xs text-stone-400 leading-relaxed">
-              Despachos seguros en {config.name} a: {citiesStr} y cualquier rincón de {config.name}.
+              Despachos seguros en {country.name} a: {citiesStr} y cualquier región de {country.name}.
             </p>
           </div>
 
           {/* Legal / Medical Disclaimer */}
           <div className="max-w-5xl mx-auto">
             <p className="text-[11px] text-stone-500 leading-relaxed text-center italic">
-              Aviso de Responsabilidad (Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con Registro Sanitario y están destinados a complementar la dieta. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños. Si está embarazada, lactando o bajo tratamiento especial, consulte a su especialista antes de consumir.
+              Aviso de Responsabilidad ({country.name} - Suplementos Dietarios): Los productos distribuidos por AZENZA cuentan con certificaciones de calidad y están destinados a complementar la dieta en {country.name}. No son medicamentos y no deben utilizarse como sustitutos de una alimentación equilibrada o tratamientos médicos prescritos. La información en este sitio no constituye consejo médico. Resultados varían por individuo. Manténgase fuera del alcance de los niños.
             </p>
           </div>
         </div>
