@@ -90,6 +90,7 @@ interface Order {
   };
   order_details?: string;
   tracking_guide?: string;
+  carrier?: string;
   ticket_number?: string;
   mastershop_status?: 'sync_success' | 'pending_manual';
   total?: number;
@@ -734,11 +735,32 @@ export default function AdminDashboard() {
     setTimeout(() => setCopying(false), 2000);
   };
 
+  const getTrackingUrl = (carrier?: string, guide?: string) => {
+    if (!guide) return '';
+    const c = (carrier || '').toLowerCase();
+    if (c.includes('inter') || c.includes('interrapidisimo')) {
+      return `https://www.interrapidisimo.com/sigue-tu-envio/?guia=${guide}`;
+    }
+    if (c.includes('envia') || c.includes('colvanes')) {
+      return `https://envia.co/rastreo?guia=${guide}`;
+    }
+    if (c.includes('tcc')) {
+      return `https://www.tcc.com.co/logistica/rastreo/?guia=${guide}`;
+    }
+    if (c.includes('coordinadora')) {
+      return `https://portal.coordinadora.com/rastreo/guia/${guide}`;
+    }
+    if (c.includes('swayp')) {
+      return `https://swayp.co/rastreo?guia=${guide}`;
+    }
+    return `https://www.google.com/search?q=rastrear+guia+${guide}+${carrier || ''}`;
+  };
+
   const generateClientMessage = (order: Order) => {
     if (!order) return '';
     const cleanTicket = order.ticket_number ? order.ticket_number.replace(/^#+/, '') : '';
     const ticketStr = cleanTicket ? `*#${cleanTicket}*` : '';
-    const guideStr = order.tracking_guide ? `\n📦 *Guía de Seguimiento:* ${order.tracking_guide}` : '';
+    const guideStr = order.tracking_guide ? `\n\n📦 *Envío Despachado:*${order.carrier ? `\nTransportadora: *${order.carrier}*` : ''}\nNúmero de guía: *${order.tracking_guide}*\nPuedes consultar el estado de tu entrega en tiempo real aquí:\n🔗 ${getTrackingUrl(order.carrier, order.tracking_guide)}` : '';
     
     // Add product details safely
     let itemsDetails = '';
@@ -1155,7 +1177,10 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
       const orderRef = doc(db, 'orders', orderId);
       const newStatus = customStatus || (trackingInput ? 'shipped_with_guide' : undefined);
       
-      const updateData: any = { tracking_guide: trackingInput };
+      const updateData: any = { 
+        tracking_guide: trackingInput,
+        carrier: selectedOrder?.carrier || ''
+      };
       if (newStatus) {
         updateData.status = newStatus;
       }
@@ -1193,6 +1218,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
       setSelectedOrder(prev => prev ? { 
         ...prev, 
         tracking_guide: trackingInput,
+        carrier: prev.carrier,
         status: (newStatus || prev.status) as Order['status']
       } : null);
       fetchOrders();
@@ -3720,7 +3746,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
           <motion.div 
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            className="bg-white w-full max-w-4xl max-h-[90vh] rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col"
+            className="bg-white w-full max-w-4xl max-h-[95vh] rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col"
           >
             {/* Modal Header */}
             <div className="p-6 border-b border-stone-100 flex justify-between items-center bg-stone-50">
@@ -3755,10 +3781,10 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
             </div>
 
             {/* Modal Body */}
-            <div className="flex-grow overflow-y-auto p-8">
+            <div className="flex-grow overflow-y-auto p-6 pb-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {/* Info Column */}
-                <div className="space-y-8">
+                <div className="space-y-3">
                   <section>
                     <div className="flex justify-between items-center mb-4">
                       <h4 className="text-[10px] font-black text-stone-400 uppercase tracking-widest flex items-center gap-2">
@@ -4234,7 +4260,28 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                     <h4 className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                        <Truck className="w-3 h-3" /> Seguimiento y Guía
                     </h4>
-    <div className="space-y-3">
+                    <div className="space-y-3">
+                      <div>
+                        <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest mb-1 block">Transportadora</label>
+                        <select 
+                          value={selectedOrder.carrier || ''}
+                          onChange={(e) => {
+                            const newCarrier = e.target.value;
+                            setSelectedOrder({ ...selectedOrder, carrier: newCarrier });
+                            handleSaveCell(selectedOrder.id, 'carrier', newCarrier);
+                          }}
+                          className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl outline-none focus:ring-2 focus:ring-purple-500 transition-all text-xs font-bold uppercase tracking-wider text-stone-700 cursor-pointer"
+                        >
+                          <option value="">Seleccionar Transportadora...</option>
+                          <option value="Swayp">Swayp</option>
+                          <option value="InterRapidísimo">InterRapidísimo</option>
+                          <option value="Envía">Envía</option>
+                          <option value="TCC">TCC</option>
+                          <option value="Coordinadora">Coordinadora</option>
+                          <option value="Servientrega">Servientrega</option>
+                        </select>
+                      </div>
+
                       <div className="relative">
                         <input 
                           type="text" 
@@ -4298,10 +4345,9 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                         </a>
                       </div>
                     </div>
-                    <div className="bg-white/80 p-4 rounded-xl text-[11px] leading-relaxed text-emerald-900 border border-emerald-100 whitespace-pre-wrap font-medium h-40 overflow-y-auto">
+                    <div className="bg-white/80 p-4 rounded-xl text-[11px] leading-relaxed text-emerald-900 border border-emerald-100 whitespace-pre-wrap font-medium h-72 overflow-y-auto">
                       {generateClientMessage(selectedOrder)}
                     </div>
-                    <p className="mt-3 text-[9px] text-emerald-700/60 font-medium italic text-center">Puedes adjuntar el PDF de la guía manualmente en WhatsApp junto a este mensaje.</p>
                   </section>
                 </div>
               </div>

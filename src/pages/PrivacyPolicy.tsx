@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Gestión de Pedidos:</strong> Procesar, validar y despachar sus solicitudes de compra.</li>
-              <li><strong>Logística de Entrega:</strong> Compartir la información mínima necesaria con nuestras transportadoras aliadas (Coordinadora, Servientrega, Envia, Interrapadisimo) para la entrega efectiva de sus productos.</li>
+              <li><strong>Logística de Entrega:</strong> Compartir la información mínima necesaria con nuestras transportadoras aliadas (Coordinadora, Servientrega, TCC, Envia, Interrapadisimo) para la entrega efectiva de sus productos.</li>
               <li><strong>Comunicación:</strong> Contactarle vía WhatsApp o llamada telefónica para confirmar datos de envío o resolver dudas sobre su pedido.</li>
               <li><strong>Atención al Cliente:</strong> Brindar soporte post-venta y gestionar garantías o devoluciones.</li>
               <li><strong>Marketing:</strong> Enviar promociones y novedades si usted ha otorgado su consentimiento explícito.</li>
