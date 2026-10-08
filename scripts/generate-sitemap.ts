@@ -33,6 +33,14 @@ function generateSitemapForCountry(countryCode: CountryCode) {
   xml += `        <lastmod>${currentDate}</lastmod>\n`;
   xml += `        <changefreq>daily</changefreq>\n`;
   xml += `        <priority>1.0</priority>\n`;
+  xml += `        <image:image>\n`;
+  xml += `            <image:loc>${baseUrl}/assets/logo/logo-icon.webp</image:loc>\n`;
+  xml += `            <image:title>Azenza - Salud Natural y Bienestar</image:title>\n`;
+  xml += `        </image:image>\n`;
+  xml += `        <image:image>\n`;
+  xml += `            <image:loc>${baseUrl}/assets/logo/og-image.png</image:loc>\n`;
+  xml += `            <image:title>Azenza Tienda Oficial</image:title>\n`;
+  xml += `        </image:image>\n`;
   xml += `    </url>\n`;
 
   // 2. Categories for country
@@ -52,6 +60,31 @@ function generateSitemapForCountry(countryCode: CountryCode) {
     xml += `    </url>\n`;
   }
 
+  // Pre-scan disk assets once for fast & complete support images matching
+  const diskProductsDir = path.resolve(process.cwd(), 'public/assets/products');
+  const diskProductFiles = fs.existsSync(diskProductsDir) ? fs.readdirSync(diskProductsDir) : [];
+  const diskCombosDir = path.resolve(process.cwd(), 'public/assets/combos');
+  const diskComboFiles = fs.existsSync(diskCombosDir) ? fs.readdirSync(diskCombosDir) : [];
+
+  // Helper to collect all images (main + all support) for a product
+  const getProductImages = (p: typeof products[0]) => {
+    const images = new Set<string>();
+    if (p.image) images.add(p.image);
+    if (p.supportImages && Array.isArray(p.supportImages)) {
+      p.supportImages.forEach(img => { if (img) images.add(img); });
+    }
+    const productBase = p.image.split('/').pop()?.replace('.webp', '').toLowerCase() || p.id.toLowerCase();
+    const cleanId = p.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+    diskProductFiles.filter(f => {
+      const fLower = f.toLowerCase();
+      if (!fLower.includes('apoyo')) return false;
+      return fLower.startsWith(p.id.toLowerCase()) || 
+             fLower.startsWith(productBase) || 
+             fLower.replace(/[^a-z0-9]/g, '').startsWith(cleanId + 'apoyo');
+    }).forEach(f => images.add(`/assets/products/${f}`));
+    return Array.from(images);
+  };
+
   // 3. Products for country
   for (const p of products) {
     xml += `    <url>\n`;
@@ -59,83 +92,79 @@ function generateSitemapForCountry(countryCode: CountryCode) {
     xml += `        <lastmod>${currentDate}</lastmod>\n`;
     xml += `        <changefreq>weekly</changefreq>\n`;
     xml += `        <priority>0.9</priority>\n`;
-    if (p.image) {
-      const imgUrl = p.image.startsWith('http') ? p.image : `${baseUrl}${p.image}`;
+    const allProdImages = getProductImages(p);
+    for (const imgPath of allProdImages) {
+      const imgUrl = imgPath.startsWith('http') ? imgPath : `${baseUrl}${imgPath}`;
       xml += `        <image:image>\n`;
       xml += `            <image:loc>${imgUrl}</image:loc>\n`;
       xml += `            <image:title>${p.name.replace(/&/g, '&amp;')}</image:title>\n`;
       xml += `        </image:image>\n`;
     }
-    if (p.supportImages && Array.isArray(p.supportImages)) {
-      for (const sImg of p.supportImages) {
-        if (sImg) {
-          const imgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
-          xml += `        <image:image>\n`;
-          xml += `            <image:loc>${imgUrl}</image:loc>\n`;
-          xml += `            <image:title>${p.name.replace(/&/g, '&amp;')}</image:title>\n`;
-          xml += `        </image:image>\n`;
-        }
-      }
-    }
     xml += `    </url>\n`;
   }
 
-  // 4. Combo of the Month (if valid for country)
-  if (isComboOfTheMonthValid) {
+  // 4. Combo of the Month (Colombia only)
+  if (countryCode === 'CO' && isComboOfTheMonthValid) {
     xml += `    <url>\n`;
     xml += `        <loc>${baseUrl}/combo/${COMBO_OF_THE_MONTH.id}</loc>\n`;
     xml += `        <lastmod>${currentDate}</lastmod>\n`;
     xml += `        <changefreq>weekly</changefreq>\n`;
     xml += `        <priority>0.9</priority>\n`;
-    if (COMBO_OF_THE_MONTH.image) {
-      const imgUrl = COMBO_OF_THE_MONTH.image.startsWith('http') ? COMBO_OF_THE_MONTH.image : `${baseUrl}${COMBO_OF_THE_MONTH.image}`;
+    const comboImages = new Set<string>();
+    if (COMBO_OF_THE_MONTH.image) comboImages.add(COMBO_OF_THE_MONTH.image);
+    
+    // Add component product images and all their support images
+    for (const pId of COMBO_OF_THE_MONTH.products) {
+      const prod = PRODUCTS.find(p => p.id === pId);
+      if (prod) {
+        getProductImages(prod).forEach(img => comboImages.add(img));
+      }
+    }
+
+    for (const imgPath of comboImages) {
+      const imgUrl = imgPath.startsWith('http') ? imgPath : `${baseUrl}${imgPath}`;
       xml += `        <image:image>\n`;
       xml += `            <image:loc>${imgUrl}</image:loc>\n`;
       xml += `            <image:title>${COMBO_OF_THE_MONTH.name.replace(/&/g, '&amp;')}</image:title>\n`;
       xml += `        </image:image>\n`;
     }
-    const comboMonthAny = COMBO_OF_THE_MONTH as any;
-    if (comboMonthAny.supportImages && Array.isArray(comboMonthAny.supportImages)) {
-      for (const sImg of comboMonthAny.supportImages) {
-        if (sImg) {
-          const imgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
-          xml += `        <image:image>\n`;
-          xml += `            <image:loc>${imgUrl}</image:loc>\n`;
-          xml += `            <image:title>${COMBO_OF_THE_MONTH.name.replace(/&/g, '&amp;')}</image:title>\n`;
-          xml += `        </image:image>\n`;
-        }
-      }
-    }
     xml += `    </url>\n`;
   }
 
-  // 5. Valid Promotions for country
-  for (const promo of validPromos) {
-    xml += `    <url>\n`;
-    xml += `        <loc>${baseUrl}/combo/${promo.id}</loc>\n`;
-    xml += `        <lastmod>${currentDate}</lastmod>\n`;
-    xml += `        <changefreq>weekly</changefreq>\n`;
-    xml += `        <priority>0.9</priority>\n`;
-    if (promo.image) {
-      const imgUrl = promo.image.startsWith('http') ? promo.image : `${baseUrl}${promo.image}`;
-      xml += `        <image:image>\n`;
-      xml += `            <image:loc>${imgUrl}</image:loc>\n`;
-      xml += `            <image:title>${promo.name.replace(/&/g, '&amp;')}</image:title>\n`;
-      xml += `        </image:image>\n`;
-    }
-    const promoAny = promo as any;
-    if (promoAny.supportImages && Array.isArray(promoAny.supportImages)) {
-      for (const sImg of promoAny.supportImages) {
-        if (sImg) {
-          const imgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
-          xml += `        <image:image>\n`;
-          xml += `            <image:loc>${imgUrl}</image:loc>\n`;
-          xml += `            <image:title>${promo.name.replace(/&/g, '&amp;')}</image:title>\n`;
-          xml += `        </image:image>\n`;
+  // 5. Valid Promotions (Colombia only)
+  if (countryCode === 'CO') {
+    for (const promo of validPromos) {
+      xml += `    <url>\n`;
+      xml += `        <loc>${baseUrl}/combo/${promo.id}</loc>\n`;
+      xml += `        <lastmod>${currentDate}</lastmod>\n`;
+      xml += `        <changefreq>weekly</changefreq>\n`;
+      xml += `        <priority>0.9</priority>\n`;
+      const promoImages = new Set<string>();
+      if (promo.image) promoImages.add(promo.image);
+      
+      // Find promo support images on disk (e.g. promo-1-1.webp)
+      const promoNum = promo.id.replace('promo-', '');
+      diskComboFiles.filter(f => f.startsWith(`promo-${promoNum}`)).forEach(f => {
+        promoImages.add(`/assets/combos/${f}`);
+      });
+
+      // Add component product images and all their support images
+      for (const pId of promo.products) {
+        const prod = PRODUCTS.find(p => p.id === pId);
+        if (prod) {
+          getProductImages(prod).forEach(img => promoImages.add(img));
         }
       }
+
+      for (const imgPath of promoImages) {
+        const imgUrl = imgPath.startsWith('http') ? imgPath : `${baseUrl}${imgPath}`;
+        xml += `        <image:image>\n`;
+        xml += `            <image:loc>${imgUrl}</image:loc>\n`;
+        xml += `            <image:title>${promo.name.replace(/&/g, '&amp;')}</image:title>\n`;
+        xml += `        </image:image>\n`;
+      }
+      xml += `    </url>\n`;
     }
-    xml += `    </url>\n`;
   }
 
   // 6. Institutional & Legal Pages
@@ -162,6 +191,10 @@ function generateSitemapForCountry(countryCode: CountryCode) {
   const fileName = countryCode === 'CO' ? 'sitemap.xml' : `sitemap-${countryCode.toLowerCase()}.xml`;
   const targetPath = path.resolve(process.cwd(), 'public', fileName);
   fs.writeFileSync(targetPath, xml, 'utf8');
+  const distPath = path.resolve(process.cwd(), 'dist', fileName);
+  if (fs.existsSync(path.resolve(process.cwd(), 'dist'))) {
+    fs.writeFileSync(distPath, xml, 'utf8');
+  }
   console.log(`Generated ${fileName} successfully with images for ${countryCode} at ${targetPath}`);
 }
 
@@ -192,6 +225,10 @@ function generateSitemapIndex() {
 
   const targetPath = path.resolve(process.cwd(), 'public', 'sitemap_index.xml');
   fs.writeFileSync(targetPath, xml, 'utf8');
+  const distPath = path.resolve(process.cwd(), 'dist', 'sitemap_index.xml');
+  if (fs.existsSync(path.resolve(process.cwd(), 'dist'))) {
+    fs.writeFileSync(distPath, xml, 'utf8');
+  }
   console.log(`Generated sitemap_index.xml successfully at ${targetPath}`);
 }
 

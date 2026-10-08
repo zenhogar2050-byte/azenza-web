@@ -46,12 +46,56 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
 
   const products = getProductsForCountry(countryCode);
   const productIds = new Set(products.map(p => p.id));
-
   const isColombia = countryCode === 'CO';
   const validPromos = isColombia 
     ? PROMOTIONS.filter(promo => promo.products.every(pid => productIds.has(pid)))
     : [];
   const isComboOfTheMonthValid = isColombia && COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
+
+  // Disk assets scanning for exhaustive support images matching
+  const diskProductsDir = path.resolve(process.cwd(), 'public/assets/products');
+  const diskProductFiles = fs.existsSync(diskProductsDir) ? fs.readdirSync(diskProductsDir) : [];
+  const diskCombosDir = path.resolve(process.cwd(), 'public/assets/combos');
+  const diskComboFiles = fs.existsSync(diskCombosDir) ? fs.readdirSync(diskCombosDir) : [];
+
+  const getProductAdditionalImages = (p: typeof products[0]) => {
+    const images = new Set<string>();
+    if (p.supportImages && Array.isArray(p.supportImages)) {
+      p.supportImages.forEach(img => { if (img && img !== p.image) images.add(img); });
+    }
+    const productBase = p.image.split('/').pop()?.replace('.webp', '').toLowerCase() || p.id.toLowerCase();
+    const cleanId = p.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+    diskProductFiles.filter(f => {
+      const fLower = f.toLowerCase();
+      if (!fLower.includes('apoyo')) return false;
+      return fLower.startsWith(p.id.toLowerCase()) || 
+             fLower.startsWith(productBase) || 
+             fLower.replace(/[^a-z0-9]/g, '').startsWith(cleanId + 'apoyo');
+    }).forEach(f => {
+      const pth = `/assets/products/${f}`;
+      if (pth !== p.image) images.add(pth);
+    });
+    return Array.from(images);
+  };
+
+  const getComboAdditionalImages = (combo: typeof COMBO_OF_THE_MONTH | typeof PROMOTIONS[0]) => {
+    const images = new Set<string>();
+    const promoNum = combo.id.replace('promo-', '');
+    diskComboFiles.filter(f => f.startsWith(`promo-${promoNum}`) || f.startsWith(combo.id)).forEach(f => {
+      const pth = `/assets/combos/${f}`;
+      if (pth !== combo.image) images.add(pth);
+    });
+    for (const pId of combo.products) {
+      const prod = PRODUCTS.find(p => p.id === pId);
+      if (prod) {
+        if (prod.image && prod.image !== combo.image) images.add(prod.image);
+        getProductAdditionalImages(prod).forEach(img => {
+          if (img !== combo.image) images.add(img);
+        });
+      }
+    }
+    return Array.from(images);
+  };
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">\n`;
@@ -75,13 +119,10 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:link>${baseUrl}/producto/${p.id}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
-    if (p.supportImages && Array.isArray(p.supportImages)) {
-      for (const sImg of p.supportImages) {
-        if (sImg) {
-          const sImgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
-          xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
-        }
-      }
+    const additionalImages = getProductAdditionalImages(p);
+    for (const sImg of additionalImages) {
+      const sImgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
+      xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
     }
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
@@ -116,14 +157,10 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:link>${baseUrl}/combo/${combo.id}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
-    const comboAny = combo as any;
-    if (comboAny.supportImages && Array.isArray(comboAny.supportImages)) {
-      for (const sImg of comboAny.supportImages) {
-        if (sImg) {
-          const sImgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
-          xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
-        }
-      }
+    const additionalImages = getComboAdditionalImages(combo);
+    for (const sImg of additionalImages) {
+      const sImgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
+      xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
     }
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
@@ -157,14 +194,10 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:link>${baseUrl}/combo/${promo.id}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
-    const promoAny = promo as any;
-    if (promoAny.supportImages && Array.isArray(promoAny.supportImages)) {
-      for (const sImg of promoAny.supportImages) {
-        if (sImg) {
-          const sImgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
-          xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
-        }
-      }
+    const additionalImages = getComboAdditionalImages(promo);
+    for (const sImg of additionalImages) {
+      const sImgUrl = sImg.startsWith('http') ? sImg : `${baseUrl}${sImg}`;
+      xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
     }
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
@@ -188,6 +221,9 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
   const fileName = countryCode === 'CO' ? 'google-feed.xml' : `google-feed-${countryCode.toLowerCase()}.xml`;
   const targetPath = path.resolve(process.cwd(), 'public', fileName);
   fs.writeFileSync(targetPath, xml, 'utf8');
+  if (fs.existsSync(path.resolve(process.cwd(), 'dist'))) {
+    fs.writeFileSync(path.resolve(process.cwd(), 'dist', fileName), xml, 'utf8');
+  }
   console.log(`Generated ${fileName} for ${countryCode} successfully at ${targetPath}`);
 }
 

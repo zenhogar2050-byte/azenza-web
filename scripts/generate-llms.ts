@@ -52,6 +52,51 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
     : [];
   const isComboOfTheMonthValid = isColombia && COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
 
+  // Disk assets scanning for exhaustive support images matching
+  const diskProductsDir = path.resolve(process.cwd(), 'public/assets/products');
+  const diskProductFiles = fs.existsSync(diskProductsDir) ? fs.readdirSync(diskProductsDir) : [];
+  const diskCombosDir = path.resolve(process.cwd(), 'public/assets/combos');
+  const diskComboFiles = fs.existsSync(diskCombosDir) ? fs.readdirSync(diskCombosDir) : [];
+
+  const getProductAdditionalImages = (p: typeof products[0]) => {
+    const images = new Set<string>();
+    if (p.supportImages && Array.isArray(p.supportImages)) {
+      p.supportImages.forEach(img => { if (img && img !== p.image) images.add(img); });
+    }
+    const productBase = p.image.split('/').pop()?.replace('.webp', '').toLowerCase() || p.id.toLowerCase();
+    const cleanId = p.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+    diskProductFiles.filter(f => {
+      const fLower = f.toLowerCase();
+      if (!fLower.includes('apoyo')) return false;
+      return fLower.startsWith(p.id.toLowerCase()) || 
+             fLower.startsWith(productBase) || 
+             fLower.replace(/[^a-z0-9]/g, '').startsWith(cleanId + 'apoyo');
+    }).forEach(f => {
+      const pth = `/assets/products/${f}`;
+      if (pth !== p.image) images.add(pth);
+    });
+    return Array.from(images);
+  };
+
+  const getComboAdditionalImages = (combo: typeof COMBO_OF_THE_MONTH | typeof PROMOTIONS[0]) => {
+    const images = new Set<string>();
+    const promoNum = combo.id.replace('promo-', '');
+    diskComboFiles.filter(f => f.startsWith(`promo-${promoNum}`) || f.startsWith(combo.id)).forEach(f => {
+      const pth = `/assets/combos/${f}`;
+      if (pth !== combo.image) images.add(pth);
+    });
+    for (const pId of combo.products) {
+      const prod = PRODUCTS.find(p => p.id === pId);
+      if (prod) {
+        if (prod.image && prod.image !== combo.image) images.add(prod.image);
+        getProductAdditionalImages(prod).forEach(img => {
+          if (img !== combo.image) images.add(img);
+        });
+      }
+    }
+    return Array.from(images);
+  };
+
   const catMap: Record<string, string> = {
     'salud-bienestar': 'Salud y Bienestar',
     'belleza-integral': 'Belleza Integral',
@@ -206,6 +251,10 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
       if (p.presentation) full += `- **Presentación:** ${p.presentation}\n`;
       if (p.size) full += `- **Contenido / Tamaño:** ${p.size}\n`;
       full += `- **Imagen Oficial:** ${fullImg}\n`;
+      const additionalImages = getProductAdditionalImages(p);
+      if (additionalImages.length > 0) {
+        full += `- **Fotos e Imágenes de Apoyo:** ${additionalImages.map(img => `[Foto](https://azenza.com.co${img})`).join(' | ')}\n`;
+      }
       full += `- **Precios con Envío Gratis:** ${priceStr}\n`;
       full += `- **Enlace de Compra Web:** ${productUrl}\n`;
       full += `- **Pedido Directo WhatsApp:** ${waLink}\n`;
@@ -235,6 +284,10 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
       if (COMBO_OF_THE_MONTH.seoDescription) full += `- **Meta Descripción Oficial:** ${COMBO_OF_THE_MONTH.seoDescription}\n`;
       if (COMBO_OF_THE_MONTH.components) full += `- **Productos que incluye:** ${COMBO_OF_THE_MONTH.components}\n`;
       full += `- **Imagen Oficial:** https://azenza.com.co${COMBO_OF_THE_MONTH.image}\n`;
+      const monthAdditionalImages = getComboAdditionalImages(COMBO_OF_THE_MONTH);
+      if (monthAdditionalImages.length > 0) {
+        full += `- **Fotos e Imágenes de Apoyo:** ${monthAdditionalImages.map(img => `[Foto](https://azenza.com.co${img})`).join(' | ')}\n`;
+      }
       full += `- **Precio de Oferta Especial:** ${formatPrice(price)} (Ahorro de ${formatPrice(saving)})\n`;
       full += `- **Enlace de Compra Web:** ${comboMonthUrl}\n`;
 
@@ -261,6 +314,10 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
       if (promo.seoDescription) full += `- **Meta Descripción Oficial:** ${promo.seoDescription}\n`;
       if (promo.components) full += `- **Productos que incluye:** ${promo.components}\n`;
       full += `- **Imagen Oficial:** ${promoImg}\n`;
+      const promoAdditionalImages = getComboAdditionalImages(promo);
+      if (promoAdditionalImages.length > 0) {
+        full += `- **Fotos e Imágenes de Apoyo:** ${promoAdditionalImages.map(img => `[Foto](https://azenza.com.co${img})`).join(' | ')}\n`;
+      }
       full += `- **Precio de Oferta:** ${formatPrice(price)}${saving > 0 ? ` (Ahorro: ${formatPrice(saving)})` : ''} - Envío Gratis\n`;
       full += `- **Enlace de Compra Web:** ${promoUrl}\n`;
       full += `- **Pedido Directo WhatsApp:** ${waPromo}\n`;
@@ -296,6 +353,11 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
 
   fs.writeFileSync(path.resolve(process.cwd(), 'public', summaryFileName), summary, 'utf8');
   fs.writeFileSync(path.resolve(process.cwd(), 'public', fullFileName), full, 'utf8');
+
+  if (fs.existsSync(path.resolve(process.cwd(), 'dist'))) {
+    fs.writeFileSync(path.resolve(process.cwd(), 'dist', summaryFileName), summary, 'utf8');
+    fs.writeFileSync(path.resolve(process.cwd(), 'dist', fullFileName), full, 'utf8');
+  }
 
   console.log(`Generated ${summaryFileName} and ${fullFileName} for ${countryName} (${countryCode}) successfully.`);
 }

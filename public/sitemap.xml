@@ -5,6 +5,14 @@
         <lastmod>2026-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/logo/logo-icon.webp</image:loc>
+            <image:title>Azenza - Salud Natural y Bienestar</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/logo/og-image.png</image:loc>
+            <image:title>Azenza Tienda Oficial</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/categoria/salud-bienestar</loc>
@@ -405,6 +413,10 @@
             <image:loc>https://azenza.com.co/assets/products/liteplex-apoyo-4.webp</image:loc>
             <image:title>Liteplex</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/liteplex-apoyo-1.webp</image:loc>
+            <image:title>Liteplex</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/producto/maxlite-colageno</loc>
@@ -483,6 +495,22 @@
             <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-4.webp</image:loc>
             <image:title>Resveratrol</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-1.webp</image:loc>
+            <image:title>Resveratrol</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-2.webp</image:loc>
+            <image:title>Resveratrol</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-3.webp</image:loc>
+            <image:title>Resveratrol</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-4.webp</image:loc>
+            <image:title>Resveratrol</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/producto/tyruss-full</loc>
@@ -503,6 +531,10 @@
         </image:image>
         <image:image>
             <image:loc>https://azenza.com.co/assets/products/tyrussfull-apoyo-4.webp</image:loc>
+            <image:title>Tyruss Full</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tyrussfull-apoyo-1.webp</image:loc>
             <image:title>Tyruss Full</image:title>
         </image:image>
     </url>
@@ -547,6 +579,10 @@
         </image:image>
         <image:image>
             <image:loc>https://azenza.com.co/assets/products/nad-1-apoyo-4.webp</image:loc>
+            <image:title>+NAD</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/nad-1-apoyo-1.webp</image:loc>
             <image:title>+NAD</image:title>
         </image:image>
     </url>
@@ -597,6 +633,14 @@
             <image:loc>https://azenza.com.co/assets/products/ashwagandha-apoyo-3.webp</image:loc>
             <image:title>Ashwagandha</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/ashwagandha-apoyo-4.webp</image:loc>
+            <image:title>Ashwagandha</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/ashwagandha-apoyo-5.webp</image:loc>
+            <image:title>Ashwagandha</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/producto/resveratrol-nad</loc>
@@ -617,6 +661,10 @@
         </image:image>
         <image:image>
             <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-3.webp</image:loc>
+            <image:title>Resveratrol y Vitamina B3 (NAD)</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-4.webp</image:loc>
             <image:title>Resveratrol y Vitamina B3 (NAD)</image:title>
         </image:image>
     </url>
@@ -955,6 +1003,14 @@
             <image:loc>https://azenza.com.co/assets/products/gel-frio-apoyo-2.webp</image:loc>
             <image:title>Gel Frío Relajante</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/gel-frio-apoyo-3.webp</image:loc>
+            <image:title>Gel Frío Relajante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/gel-frio-apoyo-4.webp</image:loc>
+            <image:title>Gel Frío Relajante</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/producto/akha</loc>
@@ -975,6 +1031,10 @@
         </image:image>
         <image:image>
             <image:loc>https://azenza.com.co/assets/products/akha-apoyo-4.webp</image:loc>
+            <image:title>Akha (Crema Voluminizante)</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/akha-apoyo-1.webp</image:loc>
             <image:title>Akha (Crema Voluminizante)</image:title>
         </image:image>
     </url>
@@ -1025,6 +1085,10 @@
             <image:loc>https://azenza.com.co/assets/products/haydar-apoyo-4.webp</image:loc>
             <image:title>Haydar (Bebida Energizante)</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/haydar-apoyo-1.webp</image:loc>
+            <image:title>Haydar (Bebida Energizante)</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/producto/instant-virgin</loc>
@@ -1065,6 +1129,10 @@
             <image:loc>https://azenza.com.co/assets/products/mammoth-apoyo-4.webp</image:loc>
             <image:title>Mammoth (Crema Voluminizante)</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/mammoth-apoyo-1.webp</image:loc>
+            <image:title>Mammoth (Crema Voluminizante)</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/producto/zafir</loc>
@@ -1085,6 +1153,10 @@
         </image:image>
         <image:image>
             <image:loc>https://azenza.com.co/assets/products/zafir-apoyo-4.webp</image:loc>
+            <image:title>Zafir Bebida Energizante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/zafir-apoyo-1.webp</image:loc>
             <image:title>Zafir Bebida Energizante</image:title>
         </image:image>
     </url>
@@ -1123,6 +1195,46 @@
             <image:loc>https://azenza.com.co/assets/combos/combo-bienestar.webp</image:loc>
             <image:title>Inmunidad Dual</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Resvisfactor.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-1.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-2.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-3.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-4.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-1.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-2.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-3.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-4.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/combo/promo-1</loc>
@@ -1131,6 +1243,66 @@
         <priority>0.9</priority>
         <image:image>
             <image:loc>https://azenza.com.co/assets/combos/promo-1.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/combos/promo-1-1.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Resveratrol.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-1.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-2.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-3.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-4.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-1.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-2.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-3.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-4.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Miskinne.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/miskinne-apoyo-1.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/miskinne-apoyo-2.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/miskinne-apoyo-3.webp</image:loc>
+            <image:title>Combo Piel Radiante</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/miskinne-apoyo-4.webp</image:loc>
             <image:title>Combo Piel Radiante</image:title>
         </image:image>
     </url>
@@ -1143,6 +1315,66 @@
             <image:loc>https://azenza.com.co/assets/combos/promo-2.webp</image:loc>
             <image:title>Combo Belleza Eterna</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/combos/promo-2-1.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Resveratrol.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-1.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-2.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-3.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-apoyo-4.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-1.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-2.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-3.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resveratrol-nad-apoyo-4.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Eventone.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/eventone-apoyo-1.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/eventone-apoyo-2.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/eventone-apoyo-3.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/eventone-apoyo-4.webp</image:loc>
+            <image:title>Combo Belleza Eterna</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/combo/promo-3</loc>
@@ -1151,6 +1383,50 @@
         <priority>0.9</priority>
         <image:image>
             <image:loc>https://azenza.com.co/assets/combos/promo-3.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/combos/promo-3-1.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-1.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-2.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-3.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-4.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-1.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-2.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-3.webp</image:loc>
+            <image:title>Combo Detox Digestivo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-4.webp</image:loc>
             <image:title>Combo Detox Digestivo</image:title>
         </image:image>
     </url>
@@ -1163,6 +1439,50 @@
             <image:loc>https://azenza.com.co/assets/combos/promo-4.webp</image:loc>
             <image:title>Combo Control &amp; Detox</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/combos/promo-4-1.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Liteplex.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/liteplex-apoyo-2.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/liteplex-apoyo-3.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/liteplex-apoyo-4.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/liteplex-apoyo-1.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-1.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-2.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-3.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-4.webp</image:loc>
+            <image:title>Combo Control &amp; Detox</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/combo/promo-5</loc>
@@ -1171,6 +1491,46 @@
         <priority>0.9</priority>
         <image:image>
             <image:loc>https://azenza.com.co/assets/combos/promo-5.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Tuffof.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tufoff-apoyo-1.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tufoff-apoyo-2.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tufoff-apoyo-3.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tufoff-apoyo-4.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-1.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-2.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-3.webp</image:loc>
+            <image:title>Combo Protección Total</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-4.webp</image:loc>
             <image:title>Combo Protección Total</image:title>
         </image:image>
     </url>
@@ -1183,6 +1543,46 @@
             <image:loc>https://azenza.com.co/assets/combos/promo-6.webp</image:loc>
             <image:title>Combo Alivio Muscular</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Termoactiva.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/locion-apoyo-1.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/locion-apoyo-2.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/locion-apoyo-3.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/locion-apoyo-4.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Colagenocitratodemagnesio.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/colageno-apoyo-1.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/colageno-apoyo-2.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/colageno-apoyo-3.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/colageno-apoyo-4.webp</image:loc>
+            <image:title>Combo Alivio Muscular</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/combo/promo-8</loc>
@@ -1193,6 +1593,46 @@
             <image:loc>https://azenza.com.co/assets/combos/promo-8.webp</image:loc>
             <image:title>Combo Vitalidad &amp; Limpieza</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Tyrussfull.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tyrussfull-apoyo-2.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tyrussfull-apoyo-3.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tyrussfull-apoyo-4.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/tyrussfull-apoyo-1.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-1.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-2.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-3.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/rtafull-apoyo-4.webp</image:loc>
+            <image:title>Combo Vitalidad &amp; Limpieza</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/combo/promo-9</loc>
@@ -1201,6 +1641,46 @@
         <priority>0.9</priority>
         <image:image>
             <image:loc>https://azenza.com.co/assets/combos/combo-bienestar.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/Resvisfactor.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-1.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-2.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-3.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/resvis-apoyo-4.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-1.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-2.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-3.webp</image:loc>
+            <image:title>Inmunidad Dual</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/coliplus-apoyo-4.webp</image:loc>
             <image:title>Inmunidad Dual</image:title>
         </image:image>
     </url>

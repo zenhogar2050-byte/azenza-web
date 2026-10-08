@@ -5,6 +5,14 @@
         <lastmod>2026-10-08</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/logo/logo-icon.webp</image:loc>
+            <image:title>Azenza - Salud Natural y Bienestar</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/logo/og-image.png</image:loc>
+            <image:title>Azenza Tienda Oficial</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://azenza.com.co/categoria/salud-bienestar</loc>
@@ -115,6 +123,10 @@
         </image:image>
         <image:image>
             <image:loc>https://azenza.com.co/assets/products/mammoth-apoyo-4.webp</image:loc>
+            <image:title>Mammoth (Crema Voluminizante)</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://azenza.com.co/assets/products/mammoth-apoyo-1.webp</image:loc>
             <image:title>Mammoth (Crema Voluminizante)</image:title>
         </image:image>
     </url>

@@ -42,6 +42,51 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     : [];
   const isComboOfTheMonthValid = isColombia && COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
 
+  // Disk assets scanning for exhaustive support images matching
+  const diskProductsDir = path.resolve(process.cwd(), 'public/assets/products');
+  const diskProductFiles = fs.existsSync(diskProductsDir) ? fs.readdirSync(diskProductsDir) : [];
+  const diskCombosDir = path.resolve(process.cwd(), 'public/assets/combos');
+  const diskComboFiles = fs.existsSync(diskCombosDir) ? fs.readdirSync(diskCombosDir) : [];
+
+  const getProductAdditionalImages = (p: typeof products[0]) => {
+    const images = new Set<string>();
+    if (p.supportImages && Array.isArray(p.supportImages)) {
+      p.supportImages.forEach(img => { if (img && img !== p.image) images.add(img); });
+    }
+    const productBase = p.image.split('/').pop()?.replace('.webp', '').toLowerCase() || p.id.toLowerCase();
+    const cleanId = p.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+    diskProductFiles.filter(f => {
+      const fLower = f.toLowerCase();
+      if (!fLower.includes('apoyo')) return false;
+      return fLower.startsWith(p.id.toLowerCase()) || 
+             fLower.startsWith(productBase) || 
+             fLower.replace(/[^a-z0-9]/g, '').startsWith(cleanId + 'apoyo');
+    }).forEach(f => {
+      const pth = `/assets/products/${f}`;
+      if (pth !== p.image) images.add(pth);
+    });
+    return Array.from(images);
+  };
+
+  const getComboAdditionalImages = (combo: typeof COMBO_OF_THE_MONTH | typeof PROMOTIONS[0]) => {
+    const images = new Set<string>();
+    const promoNum = combo.id.replace('promo-', '');
+    diskComboFiles.filter(f => f.startsWith(`promo-${promoNum}`) || f.startsWith(combo.id)).forEach(f => {
+      const pth = `/assets/combos/${f}`;
+      if (pth !== combo.image) images.add(pth);
+    });
+    for (const pId of combo.products) {
+      const prod = PRODUCTS.find(p => p.id === pId);
+      if (prod) {
+        if (prod.image && prod.image !== combo.image) images.add(prod.image);
+        getProductAdditionalImages(prod).forEach(img => {
+          if (img !== combo.image) images.add(img);
+        });
+      }
+    }
+    return Array.from(images);
+  };
+
   // =========================================================================
   // 1. XML RSS 2.0 META CATALOG FORMAT (Fully compatible with Meta Pixel)
   // =========================================================================
@@ -70,13 +115,10 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:link>${productLink}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
-    if (p.supportImages && Array.isArray(p.supportImages)) {
-      for (const sImg of p.supportImages) {
-        if (sImg) {
-          const sImgUrl = sImg.startsWith('http') ? sImg : `${BASE_URL}${sImg}`;
-          xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
-        }
-      }
+    const additionalImages = getProductAdditionalImages(p);
+    for (const sImg of additionalImages) {
+      const sImgUrl = sImg.startsWith('http') ? sImg : `${BASE_URL}${sImg}`;
+      xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
     }
 
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
@@ -106,6 +148,13 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:description><![CDATA[${cm.seoDescription || cm.description}]]></g:description>\n`;
     xml += `    <g:link>${cmLink}</g:link>\n`;
     xml += `    <g:image_link>${cmImg}</g:image_link>\n`;
+
+    const additionalImages = getComboAdditionalImages(cm);
+    for (const sImg of additionalImages) {
+      const sImgUrl = sImg.startsWith('http') ? sImg : `${BASE_URL}${sImg}`;
+      xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
+    }
+
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
     xml += `    <g:availability><![CDATA[in stock]]></g:availability>\n`;
     xml += `    <g:price><![CDATA[${price} ${currency}]]></g:price>\n`;
@@ -131,6 +180,13 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:description><![CDATA[${promo.seoDescription || promo.description}]]></g:description>\n`;
     xml += `    <g:link>${promoLink}</g:link>\n`;
     xml += `    <g:image_link>${promoImg}</g:image_link>\n`;
+
+    const additionalImages = getComboAdditionalImages(promo);
+    for (const sImg of additionalImages) {
+      const sImgUrl = sImg.startsWith('http') ? sImg : `${BASE_URL}${sImg}`;
+      xml += `    <g:additional_image_link>${sImgUrl}</g:additional_image_link>\n`;
+    }
+
     xml += `    <g:condition><![CDATA[new]]></g:condition>\n`;
     xml += `    <g:availability><![CDATA[in stock]]></g:availability>\n`;
     xml += `    <g:price><![CDATA[${price} ${currency}]]></g:price>\n`;
@@ -148,12 +204,15 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
 
   const xmlFileName = countryCode === 'CO' ? 'meta-feed.xml' : `meta-feed-${countryCode.toLowerCase()}.xml`;
   fs.writeFileSync(path.resolve(process.cwd(), 'public', xmlFileName), xml, 'utf8');
+  if (fs.existsSync(path.resolve(process.cwd(), 'dist'))) {
+    fs.writeFileSync(path.resolve(process.cwd(), 'dist', xmlFileName), xml, 'utf8');
+  }
 
   // =========================================================================
   // 2. CSV FORMAT (Alternative for Direct Manual/Batch Upload to Meta)
   // =========================================================================
   if (countryCode === 'CO') {
-    let csv = `id,title,description,availability,condition,price,link,image_link,brand,google_product_category,fb_product_category,custom_label_0,custom_label_1,custom_label_2\n`;
+    let csv = `id,title,description,availability,condition,price,link,image_link,additional_image_link,brand,google_product_category,fb_product_category,custom_label_0,custom_label_1,custom_label_2\n`;
 
     // Products
     for (const p of products) {
@@ -161,6 +220,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
       const description = p.seoDescription || p.shortDescription || p.description;
       const primaryImg = p.image.startsWith('http') ? p.image : `${BASE_URL}${p.image}`;
       const category = p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
+      const additionalImages = getProductAdditionalImages(p).map(img => img.startsWith('http') ? img : `${BASE_URL}${img}`).join(',');
 
       csv += [
         escapeCsv(p.id),
@@ -171,6 +231,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
         escapeCsv(`${p.basePrice} COP`),
         escapeCsv(`${BASE_URL}/producto/${p.id}`),
         escapeCsv(primaryImg),
+        escapeCsv(additionalImages),
         escapeCsv('Azenza'),
         escapeCsv(category),
         escapeCsv(category),
@@ -184,6 +245,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     if (isComboOfTheMonthValid) {
       const cm = COMBO_OF_THE_MONTH;
       const cmImg = cm.image.startsWith('http') ? cm.image : `${BASE_URL}${cm.image}`;
+      const additionalImages = getComboAdditionalImages(cm).map(img => img.startsWith('http') ? img : `${BASE_URL}${img}`).join(',');
       csv += [
         escapeCsv(cm.id),
         escapeCsv(cm.seoTitle || cm.name),
@@ -193,6 +255,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
         escapeCsv(`${cm.price} COP`),
         escapeCsv(`${BASE_URL}/combo/${cm.id}`),
         escapeCsv(cmImg),
+        escapeCsv(additionalImages),
         escapeCsv('Azenza'),
         escapeCsv('Health & Beauty > Health Care > Fitness & Nutrition'),
         escapeCsv('Health & Beauty > Health Care > Fitness & Nutrition'),
@@ -205,6 +268,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     // Promos and Combos
     for (const promo of validPromos) {
       const promoImg = promo.image.startsWith('http') ? promo.image : `${BASE_URL}${promo.image}`;
+      const additionalImages = getComboAdditionalImages(promo).map(img => img.startsWith('http') ? img : `${BASE_URL}${img}`).join(',');
       csv += [
         escapeCsv(promo.id),
         escapeCsv(promo.seoTitle || promo.name),
@@ -214,6 +278,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
         escapeCsv(`${promo.price} COP`),
         escapeCsv(`${BASE_URL}/combo/${promo.id}`),
         escapeCsv(promoImg),
+        escapeCsv(additionalImages),
         escapeCsv('Azenza'),
         escapeCsv('Health & Beauty > Health Care > Fitness & Nutrition'),
         escapeCsv('Health & Beauty > Health Care > Fitness & Nutrition'),
@@ -224,6 +289,9 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     }
 
     fs.writeFileSync(path.resolve(process.cwd(), 'public', 'meta-catalog.csv'), csv, 'utf8');
+    if (fs.existsSync(path.resolve(process.cwd(), 'dist'))) {
+      fs.writeFileSync(path.resolve(process.cwd(), 'dist', 'meta-catalog.csv'), csv, 'utf8');
+    }
   }
 
   console.log(`Generated ${xmlFileName} for ${config.name} (${countryCode}) successfully.`);
