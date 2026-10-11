@@ -8,7 +8,7 @@
 export const GOOGLE_TITLES_BY_PRODUCT_ID: Record<string, string> = {
   // --- Salud Digestiva, Detox y Bienestar ---
   'rtafull': 'RtaFull Depuración Hepática Vientre Ligero y Digestión Pesada con Alcachofa y Flor de Jamaica 500ml',
-  'coliplus': 'Coliplus Fibra Natural para Limpieza de Colon Vientre Plano y Tránsito Intestinal Lento 450g',
+  'coliplus': 'Coliplus Fibra Natural con Linaza y Pitaya para Transito Intestinal y Vientre Plano Bienestar Digestivo 450g',
   'liteplex': 'Liteplex Confort Digestivo Reducción de Gases Pesadez Estomacal y Ligereza Metabólica 500ml',
   'guanda-mix': 'Guanda Mix Digestión Ágil Eliminación de Toxinas y Vitalidad Diaria Fibra Prebiótica y Frutas Naturales 350g',
   'vinagre-manzana': 'Vinagre de Manzana con la Madre Vientre Plano Digestión Ágil y Metabolismo Activo 60 Cápsulas Blandas',
@@ -20,11 +20,11 @@ export const GOOGLE_TITLES_BY_PRODUCT_ID: Record<string, string> = {
   'maxlite-colageno': 'Maxlite Nutrición Osteomuscular Fortalecimiento Óseo Masa Muscular Proteína y Colágeno 800g',
 
   // --- Magnesios, Sistema Nervioso y Relajación ---
-  'citramix': 'Citramix Citrato de Magnesio Relajación Muscular Calma Nerviosa Serenidad y Bienestar Diario 350g',
-  'bisglicinato-magnesio': 'Bisglicinato de Magnesio Relajación Muscular Conciliar el Sueño Profundo y Serenidad 60 Cápsulas Blandas',
+  'citramix': 'Citramix Citrato y Bisglicinato de Magnesio Relax Muscular Calma y Bienestar Diario Sabor Durazno 350g',
+  'bisglicinato-magnesio': 'Bisglicinato de Magnesio Quelado Apoyo para Bienestar Muscular y Descanso Diario 60 Cápsulas Blandas',
   'citrato-potasio-magnesio': 'Citrato de Potasio y Magnesio Equilibrio Mineral Músculos Activos y Salud Cardiovascular 60 Cápsulas Blandas',
-  'ashwagandha': 'Ashwagandha Equilibrio Emocional Calma Mental Fatiga y Serenidad Diaria 60 Cápsulas Blandas',
-  'liofhim': 'Liofhim Inductor de Sueño Profundo Relajación Nocturna y Descanso Reparador Líquido 500ml',
+  'ashwagandha': 'Ashwagandha Adaptógeno Puro Control de Tensiones Calma Mental y Vitalidad Diaria 60 Cápsulas Blandas',
+  'liofhim': 'Liofhim Fórmula Botánica con Manzanilla y Albahaca para Descanso Nocturno y Serenidad 500ml',
 
   // --- Enfoque, Energía y Rendimiento ---
   'booster-lion': 'Booster Lion Hongo Melena de León Claridad Mental Memoria Enfoque y Concentración Nootrópico Natural 350g',
@@ -45,7 +45,7 @@ export const GOOGLE_TITLES_BY_PRODUCT_ID: Record<string, string> = {
 
   // --- Alivio Muscular y Corporal Tópico ---
   'locion': 'Loción Termoactiva Masaje Corporal Efecto Calor Alivio de Tensión en Espalda Cuello y Músculos 120ml',
-  'gel-frio-relajante': 'Gel Frío Efecto Criogénico Confort de Piernas Cansadas Frescura y Descanso Muscular Mentol 60g',
+  'gel-frio-relajante': 'Gel Frío Efecto Criogénico Confort para Piernas y Frescura Muscular con Mentol y Castaño de Indias 60g',
   'aceite-relajante': 'Aceite Relajante Masaje Corporal Descontracturante Alivio de Tensión en Espalda y Cuello 60g',
   'hemocream': 'Hemocream Alivio Inmediato Confort Calmante en Zonas Sensibles Cuidado Botánico Reparador Crema 30ml',
 
