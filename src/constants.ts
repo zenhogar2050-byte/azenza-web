@@ -102,9 +102,9 @@ export const PRODUCTS: Product[] = [
     name: 'RtaFull',
     category: 'salud-bienestar',
     shortDescription: 'Apoyo Hepático y Desintoxicación Digestiva Natural.',
-    description: `Recupera la sensación de ligereza con RtaFull, el suplemento diseñado para favorecer la depuración natural de tu organismo. Su fórmula combina extractos botánicos de alcachofa, berenjena, apio y flor de jamaica, que actúan en armonía para promover la reducción de toxinas. RtaFull es el aliado ideal para quienes buscan reducir la pesadez abdominal, favorecer la digestión y revitalizar su bienestar desde el interior.
+    description: `La pesadez digestiva recurrente, el abotagamiento tras comer y la fatiga matutina son manifestaciones directas de una saturación en las vías de depuración hepática y renal. RtaFull actúa como un sistema botánico concentrado de drenaje y descongestión metabólica que combina extractos bioactivos de Alcachofa, Flor de Jamaica, Berenjena, Apio y Perejil para activar la síntesis biliar y optimizar la asimilación fisiológica de grasas complejas.
 
-Ideal para procesos de detox y depuración profunda, este suplemento especialmente formulado ayuda a descongestionar el sistema digestivo, promoviendo una sensación de bienestar inmediato y una vitalidad renovada. Con su formato líquido de rápida absorción, RtaFull asegura que los activos naturales lleguen directamente a tu organismo donde más se necesitan.
+A mediano y largo plazo, su acción descongestionante alivia la distensión del abdomen, favorece la excreción de impurezas y líquidos retenidos, y reactiva el metabolismo energético endógeno, brindando una sensación duradera de ligereza física y desahogo estomacal. Avalado con Registro INVIMA oficial (PSA-000932-2017), su formato líquido de 500ml garantiza una biodisponibilidad y absorción inmediata sin agredir el tracto digestivo, asegurando un proceso de limpieza interna seguro, eficaz y de fácil consumo diario.
 
 ✔️ Depuración Total: Ayuda a la limpieza interna del hígado y los riñones de impurezas y grasas.
 ✔️ Adiós a la Inflamación: Reduce la pesadez estomacal y la sensación de hinchazón tras las comidas.
@@ -112,11 +112,11 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
     seoTitle: 'Comprar Rtafull Original: Desintoxicación y Digestión',
     seoDescription: 'Adquiere Rtafull Original con Alcachofa y Berenjena. Digestión ligera y desintoxicación con Registro INVIMA. ¡Paga seguro en casa con Envío Gratis!',
     benefits: [
-      'Ayuda en la depuración natural de hígado y riñones de toxinas acumuladas',
-      'Favorece la reducción de la pesadez y el malestar tras comer',
-      'Estimula el bienestar digestivo para un abdomen más ligero',
-      'Fórmula líquida concentrada de absorción ultra-rápida y segura',
-      'Ingredientes 100% naturales con certificación de calidad oficial'
+      "Ayuda a limpiar de forma natural el hígado graso y a desintoxicar los riñones cargados de toxinas acumuladas",
+      "Alivia la pesadez estomacal, el dolor de cabeza y la boca amarga después de comer grasas",
+      "Desinflama la barriga abultada y elimina los líquidos y desechos retenidos",
+      "Fórmula líquida concentrada que actúa rápido sin irritar el estómago",
+      "Ingredientes 100% naturales con Registro INVIMA oficial"
     ],
     image: '/assets/products/rtafull.webp',
     basePrice: 79900,
@@ -125,7 +125,6 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
     invima: 'PSA-000932-2017',
     peso_adicional: 0,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
-    googleDescription: 'Concentrado líquido botánico formulado con extractos naturales seleccionados de alcachofa, berenjena, apio, perejil y flor de jamaica. Diseñado para complementar la rutina diaria de bienestar, aportar fitonutrientes y antioxidantes esenciales que apoyan la eliminación natural de residuos y promueven el equilibrio digestivo y la ligereza corporal. Cada ingrediente cumple un rol fundamental: la alcachofa y la berenjena estimulan los procesos digestivos naturales y facilitan la correcta asimilación de nutrientes; el apio y el perejil contribuyen a la depuración orgánica y apoyan el funcionamiento renal óptimo; la flor de jamaica aporta antioxidantes que protegen las células frente al estrés oxidativo cotidiano. Este suplemento mejora significativamente la sensación de confort estomacal, optimiza la digestión de comidas pesadas y renueva la vitalidad general desde el interior. Además, ayuda a evitar la pesadez abdominal persistente, la acumulación de líquidos por digestiones lentas y el malestar general después de comer. Producto fabricado en Colombia bajo estrictos controles de calidad y certificado con registro INVIMA, ofreciendo una fórmula líquida de rápida absorción que se integra de manera segura y natural a tu estilo de vida.',
     condition: 'new',
     supportImages: [
       '/assets/products/rtafull-apoyo-1.webp',
@@ -133,22 +132,22 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
       '/assets/products/rtafull-apoyo-3.webp',
       '/assets/products/rtafull-apoyo-4.webp'
     ],
-    keywords: 'limpieza hígado, digestión ligera, pesadez abdominal, depurar el organismo, alcachofa, Rtafull, Azenza, bienestar hepático',
+    keywords: 'limpieza hígado, hígado graso, digestión ligera, pesadez abdominal, boca amarga al despertar, depurar el organismo, alcachofa líquida, Rtafull original invima, Azenza, comprar rtafull colombia, pago contra entrega, envío gratis',
     components: 'Alcachofa, Flor de Jamaica, Berenjena, Apio y Perejil',
     componentBenefits: [
-    {
-        'name': 'Alcachofa y Berenjena',
-        'benefit': 'Favorecen los procesos digestivos naturales y apoyan la correcta asimilación de las grasas de los alimentos.'
-    },
-    {
-        'name': 'Apio y Perejil',
-        'benefit': 'Contribuyen a la eliminación normal de líquidos en el organismo y apoyan las funciones de depuración natural.'
-    },
-    {
-        'name': 'Flor de Jamaica',
-        'benefit': 'Aporta antioxidantes que ayudan a proteger las células frente al estrés oxidativo cotidiano.'
-    }
-],
+      {
+        name: "Alcachofa y Berenjena",
+        benefit: "Ayudan a procesar las grasas pesadas, limpian el hígado graso y quitan la boca amarga y la pesadez tras comer."
+      },
+      {
+        name: "Apio y Perejil",
+        benefit: "Descongestionan los riñones cargados de toxinas y eliminan los líquidos retenidos que inflaman piernas y abdomen."
+      },
+      {
+        name: "Flor de Jamaica",
+        benefit: "Limpia las vías urinarias, desinflama la barriga y ayuda a expulsar toxinas acumuladas por la orina."
+      }
+    ],
     longTailKeywords: [
       'mejor suplemento líquido para limpiar el hígado rápidamente',
       'cómo reducir la sensación de pesadez abdominal después de comer mucho',
@@ -156,6 +155,9 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
       'beneficios de la alcachofa para un hígado saludable y feliz',
       'fórmula líquida de rápida absorción para digestión ligera',
       'bienestar integral y limpieza profunda con registro INVIMA',
+      'comprar rtafull original colombia pago contra entrega envio gratis',
+      'remedio para la boca amarga y pesadez estomacal tras comer grasas',
+      'donde comprar rtafull con registro invima y pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Consumir de 1 a 2 copas dosificadoras (15ml - 30ml) al día.' },
@@ -183,9 +185,9 @@ Ideal para procesos de detox y depuración profunda, este suplemento especialmen
     name: 'Coliplus',
     category: 'salud-bienestar',
     shortDescription: 'Renovación Intestinal y Equilibrio Digestivo Natural.',
-    description: `Libera tu sistema digestivo con Coliplus, la mezcla de fibras premium diseñada para restaurar el tránsito intestinal y purificar el colon de forma gentil y efectiva. Su combinación única de linaza, pitaya y espirulina actúa como un suave motor interno que combate el estreñimiento crónico y reduce la hinchazón abdominal persistente. Coliplus no solo facilita el ir al baño con regularidad, sino que nutre tu microbiota intestinal para una salud digestiva de largo plazo.
+    description: `El tránsito intestinal perezoso, las evacuaciones forzadas y la inflamación persistente del colon provocan pesadez abdominal diaria, malestar general y retención crónica de residuos biológicos. Coliplus funciona como un sistema regulador de motilidad y salud entérica que integra una matriz de fibras solubles de Chía y Linaza con el poder laxo-regulador de la Pitaya y el aporte nutricional de la Espirulina y la Flor de Jamaica, generando mucílagos que lubrican y normalizan el volumen del bolo fecal sin ocasionar cólicos ni dependencia.
 
-Formulado sin azúcares añadidos, es el aliado perfecto para personas diabéticas o quienes buscan cuidar su figura sin sacrificar el sabor. Con un delicioso toque a manzana verde, Coliplus se integra fácilmente en tu rutina diaria, proporcionando hasta 2 meses de bienestar continuo y una sensación de ligereza abdominal inigualable.
+A nivel de la mucosa intestinal, su consumo constante barre con suavidad las toxinas acumuladas, reduce la hinchazón del vientre y nutre el microbioma para consolidar un ritmo de evacuación diario, regular y fluido. Avalado con Registro INVIMA oficial (NSA-0012423-2022), es un polvo concentrado de 450g totalmente libre de azúcar añadida con refrescante sabor a manzana verde, que rinde hasta 60 días para devolverte una paz digestiva prolongada y un bienestar corporal integral.
 
 ✔️ Regularidad Garantizada: Mezcla de chía y pitaya que asegura un movimiento intestinal fluido y natural.
 ✔️ Colon Saludable: Limpieza profunda de residuos acumulados sin causar irritación ni cólicos.
@@ -193,11 +195,11 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
     seoTitle: 'Comprar Coliplus Original: Limpieza de Colon y Vientre',
     seoDescription: 'Compra Coliplus Original con Registro INVIMA. Depura tu colon y desinflama el vientre naturalmente. ¡Envío 100% Gratis y Pago Contra Entrega en Colombia!',
     benefits: [
-      'Regula el tránsito intestinal combatiendo el estreñimiento de raíz',
-      'Favorece el confort del colon y reduce la pesadez abdominal de forma estable',
-      'Fórmula apta para diabéticos, libre de azúcares y calorías extras',
-      'Nutre la flora intestinal con superalimentos como la espirulina',
-      'Máxima rentabilidad: rinde hasta 60 días de bienestar diario'
+      "Alivia el dolor del estreñimiento y ayuda a evacuar sin dolor ni esfuerzo",
+      "Desinflama el colon irritado, reduciendo los cólicos y el exceso de gases molestos",
+      "Disminuye la hinchazón abdominal para sentirte liviano y con el vientre plano",
+      "Protege la flora intestinal con espirulina natural sin azúcar ni calorías",
+      "Rinde hasta 60 días de digestión tranquila y alivio continuo"
     ],
     image: '/assets/products/coliplus.webp',
     basePrice: 75900,
@@ -206,7 +208,6 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
     invima: 'NSA-0012423-2022',
     peso_adicional: 0,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
-    googleDescription: 'Suplemento en polvo de alta rentabilidad a base de fibra natural de psyllium, inulina de achicoria, chía, pitaya y espirulina de alta pureza. Formulado para complementar la alimentación diaria, favorecer el tránsito intestinal regular, aportar una agradable sensación de ligereza abdominal y promover la salud digestiva integral como parte de un estilo de vida saludable y activo. Cada ingrediente aporta beneficios únicos y complementarios: la fibra de psyllium y la chía forman un gel suave que moviliza los residuos acumulados de manera gentil; la inulina actúa como prebiótico nutriendo la microbiota intestinal beneficiosa; la pitaya estimula el movimiento intestinal natural; la espirulina aporta superalimentos y micronutrientes esenciales. Su uso constante mejora notablemente la regularidad al ir al baño, optimiza el colon y mantiene el abdomen plano. Además, ayuda a evitar el estreñimiento crónico, previene la pesadez estomacal y la inflamación persistente tras los alimentos. Libre de azúcares añadidos y apto para personas con diabetes, cuenta con certificación INVIMA oficial en Colombia, garantizando calidad superior y bienestar digestivo seguro, natural y confiable para toda la familia.',
     condition: 'new',
     supportImages: [
       '/assets/products/coliplus-apoyo-1.webp',
@@ -214,33 +215,36 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
       '/assets/products/coliplus-apoyo-3.webp',
       '/assets/products/coliplus-apoyo-4.webp'
     ],
-    keywords: 'limpieza intestinal, estreñimiento, fibras naturales, pitaya, espirulina, digestión fácil, salud digestiva, Coliplus, Azenza',
+    keywords: 'limpieza intestinal, colon inflamado, estreñimiento crónico, vientre abultado, fibras naturales, pitaya, linaza, espirulina, digestión fácil, Coliplus original invima, Azenza, comprar coliplus colombia, pago contra entrega, envío gratis',
     components: 'Linaza, Pitaya, Flor de Jamaica, Alcachofa, Chía y Espirulina',
     componentBenefits: [
-    {
-        'name': 'Linaza',
-        'benefit': 'Aporta fibra natural y mucílagos que favorecen el tránsito intestinal y apoyan una evacuación regular.'
-    },
-    {
-        'name': 'Pitaya',
-        'benefit': 'Promueve el movimiento intestinal de forma natural y ayuda a mitigar la sensación de pesadez o tránsito lento.'
-    },
-    {
-        'name': 'Flor de Jamaica y Alcachofa',
-        'benefit': 'Contribuyen a reducir la pesadez estomacal y promueven el confort digestivo general.'
-    },
-    {
-        'name': 'Espirulina',
-        'benefit': 'Aporta nutrientes esenciales que apoyan y protegen el equilibrio de la flora intestinal.'
-    }
-],
+      {
+        name: "Linaza",
+        benefit: "Aporta fibra suave que afloja las heces duras para que puedas evacuar a diario sin pujar ni sentir dolor."
+      },
+      {
+        name: "Pitaya",
+        benefit: "Activa el movimiento del intestino perezoso de forma natural, quitando el estreñimiento y la hinchazón."
+      },
+      {
+        name: "Flor de Jamaica y Alcachofa",
+        benefit: "Desinflaman el colon irritado, quitan los cólicos molestos y reducen los gases con mal olor."
+      },
+      {
+        name: "Espirulina",
+        benefit: "Nutre y repara la flora intestinal para que tu estómago tolere mejor los alimentos sin inflamarse."
+      }
+    ],
     longTailKeywords: [
-      'mejor fibra natural para ir al baño regularmente',
-      'cómo limpiar el colon sin azúcar de forma segura',
+      'mejor fibra natural para ir al baño regularmente sin dolor',
+      'cómo limpiar el colon y desinflamar el vientre de forma segura',
       'suplemento de fibra rentable que rinde 2 meses',
-      'beneficios de la pitaya y espirulina para el intestino',
+      'beneficios de la pitaya y espirulina para el intestino perezoso',
       'fórmula para digestión fácil apta para diabéticos',
       'bienestar integral digestivo con registro INVIMA',
+      'comprar coliplus original pago contra entrega envio gratis colombia',
+      'como eliminar gases y pesadez estomacal con fibra de linaza y pitaya',
+      'fibra natural para el estreñimiento pedir por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Mezclar 1 cucharada sopera en un vaso de agua o jugo.' },
@@ -269,9 +273,9 @@ Formulado sin azúcares añadidos, es el aliado perfecto para personas diabétic
     name: 'Colágeno',
     category: 'salud-bienestar',
     shortDescription: 'Regeneración Estructural y Vitalidad Osteomuscular.',
-    description: `Restaura la elasticidad de tu cuerpo y fortalece tu sistema estructural desde el interior con nuestro Colágeno Hidrolizado + Citrato de Magnesio. Esta fórmula avanzada de alta pureza ha sido diseñada para quienes buscan recuperar la movilidad perdida, proteger sus articulaciones del desgaste y mejorar la calidad de su descanso nocturno. La combinación de péptidos de colágeno de fácil absorción con el citrato de magnesio potencia la regeneración de tejidos, cartílagos y ligamentos, combatiendo los signos visibles del envejecimiento como la flacidez y las líneas de expresión.
+    description: `El crujido articular recurrente, la rigidez matutina en rodillas o manos y la pérdida de elasticidad cutánea reflejan la disminución natural de colágeno endógeno y la sobrecarga neuromuscular por estrés. Nuestro Colágeno Hidrolizado + Citrato de Magnesio actúa como un sistema de nutrición estructural que sincroniza péptidos bioactivos de colágeno de fácil asimilación con la alta biodisponibilidad del Citrato de Magnesio para reactivar la regeneración de cartílagos, tendones y masa ósea desde el interior.
 
-Ideal para toda la familia, este suplemento de sabor neutro se disuelve instantáneamente sin dejar grumos, siendo el complemento perfecto para tus bebidas diarias. El magnesio no solo optimiza la síntesis de colágeno, sino que promueve una relajación muscular profunda, ayudando a reducir el estrés y los calambres para que despiertes con una energía renovada.
+A mediano y largo plazo, su acción combinada protege las articulaciones frente al desgaste mecánico, disminuye espasmos o calambres musculares nocturnos y refuerza las capas profundas de la dermis, devolviendo flexibilidad al caminar, firmeza a la piel y mayor resistencia en cabello y uñas. Certificado con Registro INVIMA oficial (RSA-0026265-2023), su presentación en polvo fino de sabor totalmente neutro se disuelve de forma instantánea en café, jugos o agua sin dejar grumos, ofreciendo un soporte osteomuscular puro y seguro para toda la familia.
 
 ✔️ Movilidad y Fuerza: Nutre profundamente el sistema óseo y mejora la flexibilidad de las articulaciones.
 ✔️ Belleza desde el Interior: Hidrata la piel en sus capas más profundas, fortaleciendo también cabello y uñas.
@@ -279,11 +283,11 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
     seoTitle: 'Colágeno Hidrolizado + Magnesio: Regeneración Articular',
     seoDescription: 'Regenera articulaciones y devuelve la firmeza a tu piel con Colágeno Hidrolizado + Magnesio. Calidad INVIMA certificada. ¡Pídelo con Envío Gratis hoy!',
     benefits: [
-      'Fortalece la estructura ósea y protege las articulaciones del desgaste',
-      'Mejora notablemente la elasticidad de la piel y reduce la flacidez',
-      'Promueve una relajación muscular profunda y un sueño reparador',
-      'Sabor totalmente neutro, ideal para mezclar con café, jugos o agua',
-      'Fórmula familiar segura para niños, adultos y personas mayores'
+      "Alivia el dolor, los crujidos y la rigidez en rodillas, cadera y manos al moverte",
+      "Protege y frena el desgaste de cartílagos por el trabajo pesado o la edad",
+      "Combate la flacidez en la piel y fortalece uñas quebradizas y cabello débil",
+      "Ayuda a relajar los músculos adoloridos para dormir sin punzadas en las piernas",
+      "Sabor neutro que se disuelve fácil en café, jugos o sopas sin cambiar el sabor"
     ],
     image: '/assets/products/Colagenocitratodemagnesio.webp',
     basePrice: 85000,
@@ -298,25 +302,27 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
       '/assets/products/colageno-apoyo-3.webp',
       '/assets/products/colageno-apoyo-4.webp'
     ],
-    keywords: 'colágeno natural, sabor neutro, hidratación piel, colágeno familiar, piel suave, Azenza, colágeno puro',
+    keywords: 'colágeno natural, colágeno hidrolizado puro, sabor neutro, hidratación piel, cartílagos desgastados, colágeno familiar, citrato de magnesio, Azenza, comprar colágeno colombia, pago contra entrega, envío gratis',
     components: 'Colágeno Hidrolizado y Citrato de Magnesio',
     componentBenefits: [
-    {
-        'name': 'Colágeno Hidrolizado',
-        'benefit': 'Proporciona los aminoácidos necesarios que apoyan la estructura natural y la firmeza de la piel y los cartílagos.'
-    },
-    {
-        'name': 'Citrato de Magnesio',
-        'benefit': 'Apoya el funcionamiento muscular normal y contribuye al mantenimiento saludable del sistema óseo.'
-    }
-],
+      {
+        name: "Colágeno Hidrolizado",
+        benefit: "Lubrica y frena el desgaste en rodillas, cadera y manos, aliviando crujidos y dolores al agacharte o caminar."
+      },
+      {
+        name: "Citrato de Magnesio",
+        benefit: "Suelta los músculos adoloridos y contraídos, evitando calambres y fortaleciendo los huesos."
+      }
+    ],
     longTailKeywords: [
-      'mejor colágeno sin sabor para mezclar con jugos',
+      'mejor colágeno sin sabor para mezclar con jugos y cafe',
       'cómo hidratar la piel desde adentro con colágeno natural',
       'suplemento de colágeno apto para niños y adultos mayores',
-      'beneficios del colágeno puro para la elasticidad de la piel',
+      'beneficios del colágeno puro para la elasticidad de la piel y rodillas',
       'fórmula neutra para nutrición familiar diaria',
       'bienestar integral y piel suave con registro INVIMA',
+      'comprar colágeno hidrolizado con magnesio pago contra entrega colombia',
+      'colágeno para articulaciones y dolor de rodilla pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver 1 cucharada en agua o jugo una vez al día.' },
@@ -345,9 +351,9 @@ Ideal para toda la familia, este suplemento de sabor neutro se disuelve instant�
     name: 'Resvisfactor',
     category: 'salud-bienestar',
     shortDescription: 'Favorece Tu Sistema Inmunológico y Vitalidad Celular Avanzada.',
-    description: `Fortalece tus defensas naturales y protege tu organismo con Resvisfactor, el sistema de protección biológica de vanguardia. Esta poderosa fórmula combina el calostro bovino (el "oro líquido" de la naturaleza) con los beneficios milenarios del hongo Shiitake y los betaglucanos del Ganoderma Lucidum. Diseñado para ser el soporte diario de tu familia, Resvisfactor ayuda a modular la respuesta inmunológica, acelerar la recuperación física y proporcionar una carga masiva de antioxidantes que combaten el daño celular.
+    description: `La susceptibilidad frecuente ante cambios de clima, las recaídas virales continuas y la lenta recuperación física frente a estados gripales evidencian un sistema inmune desprovisto de reservas defensivas. Resvisfactor opera como un sistema de modulación biológica avanzada que combina el valor inmunológico del Calostro Bovino con los betaglucanos del Shiitake y Ganoderma Lucidum, reforzado por un complejo multivitamínico total, Omega 3-6-9 y aminoácidos clave como L-Arginina y L-Glutamina para activar la respuesta celular frente a patógenos externos.
 
-Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplemento no solo previene infecciones recurrentes, sino que aporta una vitalidad inmediata para enfrentar jornadas exigentes. Su base nutricional de proteína de soya y suero lo convierte en el complemento ideal para adultos mayores, jóvenes y personas que buscan una protección superior contra virus y bacterias en un entorno cambiante.
+Su integración en la nutrición diaria estimula la maduración y vigilancia de los glóbulos blancos, protege el organismo del daño oxidativo crónico y acelera la recuperación de la vitalidad y tono muscular, blindando a toda la familia contra el desgaste ambiental. Avalado con Registro INVIMA oficial (RSAD05i27915), su fórmula en polvo de 700g aporta nutrientes limpios de asimilación progresiva, convirtiéndose en el escudo diario indispensable para mantener las defensas en su punto óptimo.
 
 ✔️ Fortalecimiento Inmune: Calostro y Shiitake que actúan como un blindaje natural contra agentes externos.
 ✔️ Recuperación y Vitalidad: Aminoácidos esenciales (L-Arginina, L-Glutamina) para una regeneración muscular óptima.
@@ -355,11 +361,11 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
     seoTitle: 'Resvisfactor Original con Calostro Bovino: Defensas',
     seoDescription: 'Refuerza tu sistema inmune con Resvisfactor y Calostro Bovino. Escudo natural de defensas con Registro INVIMA. ¡Paga al recibir con Envío Gratis hoy!',
     benefits: [
-      'Eleva significativamente las defensas naturales y la respuesta inmune',
-      'Aporta una sensación de vigor y vitalidad constante durante el día',
-      'Ideal para la protección familiar contra virus, gripes y bacterias',
-      'Acelera la recuperación física y protege las células del estrés oxidativo',
-      'Fórmula completa con Omega 3-6-9 y 12 vitaminas fundamentales'
+      "Sube las defensas para no vivir con gripes, resfriados ni decaimiento constante",
+      "Quita la sensación de cuerpo cortado, desaliento y falta de fuerza",
+      "Acelera la recuperación del cuerpo cuando te sientes sin fuerzas o enfermo",
+      "Protege a niños y adultos contra virus, bacterias y cambios bruscos de clima",
+      "Fórmula con Omega 3-6-9 y 12 vitaminas en jarabe de fácil toma para toda la familia"
     ],
     image: '/assets/products/Resvisfactor.webp',
     basePrice: 89900,
@@ -374,22 +380,22 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
       '/assets/products/resvis-apoyo-3.webp',
       '/assets/products/resvis-apoyo-4.webp'
     ],
-    keywords: 'antioxidante, sistema inmune, resveratrol, energía vital, defensas, vitalidad diaria, Resvis Factor, Azenza',
+    keywords: 'antioxidante, sistema inmune, defensas bajas, calostro bovino, hongos shiitake ganoderma, resveratrol, energía vital, vitalidad diaria, Resvis Factor original invima, Azenza, comprar resvisfactor colombia, pago contra entrega, envío gratis',
     components: 'Calostro Bovino, Shiitake, Quinua, Malta y Vitaminas',
     componentBenefits: [
-    {
-        'name': 'Calostro Bovino y Shiitake',
-        'benefit': 'Favorecen el fortalecimiento de las defensas naturales y apoyan el normal funcionamiento del sistema inmune.'
-    },
-    {
-        'name': 'Quinua y Malta',
-        'benefit': 'Aportan energía limpia y aminoácidos esenciales.'
-    },
-    {
-        'name': 'Vitaminas',
-        'benefit': 'Contribuyen al rendimiento energético diario y al buen funcionamiento general del organismo.'
-    }
-],
+      {
+        name: "Calostro Bovino y Shiitake",
+        benefit: "Suben las defensas al instante para blindar tu cuerpo contra gripes frecuentes, resfriados y virus del ambiente."
+      },
+      {
+        name: "Quinua y Malta",
+        benefit: "Quitan el decaimiento, la flojera y la falta de fuerza, recargando tu energía desde la primera toma."
+      },
+      {
+        name: "Vitaminas Esenciales",
+        benefit: "Evitan que te sientas agotado o con el cuerpo cortado tras días pesados o cambios de clima."
+      }
+    ],
     longTailKeywords: [
       'mejor antioxidante natural para proteger las células',
       'cómo fortalecer el sistema inmunológico con resveratrol',
@@ -397,6 +403,9 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
       'beneficios del resveratrol para el escudo de vida diario',
       'fórmula para defensas arriba y protección antioxidante',
       'bienestar integral y vitalidad con registro INVIMA',
+      'comprar resvis factor original colombia pago contra entrega',
+      'suplemento para las defensas bajas cansancio y gripes frecuentes',
+      'resvisfactor precio oferta y pedir por whatsapp envio gratis'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver de 1 a 2 cucharadas (15g - 30g) en un vaso con agua o leche.' },
@@ -425,9 +434,9 @@ Enriquecido con un complejo multivitamínico total y Omega 3, 6 y 9, este suplem
     name: 'Booster Lion',
     category: 'salud-bienestar',
     shortDescription: 'Soporte Cognitivo, Memoria y Enfoque Natural con Melena de León.',
-    description: `Optimiza tu rendimiento mental y potencia tu claridad cognitiva con Booster Lion, el alimento funcional de última generación diseñado a base de crema de coco. Su fórmula premium está enriquecida con vitaminas y minerales esenciales, teniendo como ingrediente estrella 300 mg de Betaglucanos de Hericium Erinaceus (Melena de León), un hongo funcional ampliamente estudiado y reconocido por su capacidad para estimular el enfoque, la memoria y la salud cerebral.
+    description: `La niebla cognitiva constante, la falta de concentración en jornadas exigentes y el agotamiento mental prematuro reducen la capacidad de retención, claridad y agilidad analítica en el día a día. Booster Lion funciona como un sistema nootrópico y neuroprotector biológico formulado sobre crema de coco con 300 mg de betaglucanos activos de Hericium Erinaceus (Melena de León), potenciado con proteína de suero de alta pureza y un complejo equilibrado de Vitaminas B, C, D, Calcio y Magnesio para reactivar el metabolismo neuronal.
 
-Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, Booster Lion promueve el fortalecimiento muscular y la recuperación física, mientras sus betaglucanos aportan un soporte único para mejorar la salud del sistema digestivo. Disfruta de un delicioso sabor artificial a vainilla fina, sin preocuparte por azúcares añadidos ni partículas extrañas; es una bebida nutritiva y sumamente práctica creada para nutrir tu mente y potenciar tu estilo de vida activo.
+A mediano y largo plazo, sus principios activos favorecen la neurogénesis y el factor de crecimiento nervioso, robustecen la memoria de trabajo y preservan la lucidez mental sin provocar ansiedad o taquicardia, aportando además soporte a la microbiota intestinal gracias a sus fibras prebióticas. Avalado con Registro INVIMA oficial (IRSA-0021928-2022), su fino polvo de sabor suave a vainilla es 100% libre de azúcares añadidos y se disuelve al instante, convirtiéndose en el combustible diario ideal para estudiar, crear y liderar con enfoque superior.
 
 ✔️ Salud Cognitiva: Favorece la memoria, concentración y activa tu agilidad mental ante jornadas de alta exigencia.
 ✔️ Inmunidad y Vigor: Premezcla de sales minerales y vitaminas esenciales que robustecen las defensas naturales y protegen contra el cansancio cerebral.
@@ -435,12 +444,11 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
     seoTitle: 'Comprar Booster Lion Melena de León: Enfoque y Memoria',
     seoDescription: 'Potencia tu enfoque y memoria con Booster Lion y hongo Melena de León. Fórmula certificada con Registro INVIMA. ¡Compra hoy con Pago Contra Entrega!',
     benefits: [
-      'Contiene Melena de León para optimizar la memoria, concentración y salud cognitiva',
-      'Aporta vitaminas y minerales esenciales que fortalecen activamente tu sistema inmune',
-      'Fuente de proteína de suero lácteo que favorece la energía limpia y mantenimiento muscular',
-      'Contribuye al bienestar digestivo y regenerador gracias a los betaglucanos premium',
-      'Alimento bajo en calorías, ideal para complementar un estilo de vida saludable y activo',
-      'Sin azúcares añadidos, formulado en polvo fino de exquisito sabor vainilla'
+      "Combate los olvidos diarios, la mente nublada y la falta de concentración",
+      "Aporta energía mental limpia para no sentir la cabeza pesada a media tarde",
+      "Alivia el agotamiento cerebral tras largas jornadas de trabajo o estudio",
+      "Protege tu digestión y tus defensas con el poder natural de la Melena de León",
+      "Rico sabor a vainilla sin azúcar añadida, suave con el estómago"
     ],
     image: '/assets/products/booster-lion.webp',
     basePrice: 79900,
@@ -455,20 +463,20 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
       '/assets/products/booster-lion-apoyo-3.webp',
       '/assets/products/booster-lion-apoyo-4.webp'
     ],
-    keywords: 'booster lion, boster lion, melena de leon, hongo funcional, enfoque mental, memoria, salud cerebral, azenza, suplemento concentracion',
+    keywords: 'booster lion, boster lion, melena de leon polvo, hongo funcional hericium erinaceus, enfoque mental, memoria y concentración, mente nublada, salud cerebral, azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Crema de coco, Proteína de suero lácteo, Betaglucanos de Hericium erinaceus (Melena de león), Sabor artificial a vainilla, Vitaminas y Minerales',
     componentBenefits: [
       {
-        'name': 'Hericium Erinaceus (Melena de León)',
-        'benefit': 'Hongo adaptógeno reconocido por ayudar a estimular el factor de crecimiento nervioso, protegiendo las redes cognitivas.'
+        name: "Hericium Erinaceus (Melena de León)",
+        benefit: "Quita la mente nublada y los olvidos diarios, devolviéndote la agilidad mental y la concentración para trabajar."
       },
       {
-        'name': 'Crema de Coco y Suero Lácteo',
-        'benefit': 'Lípidos saludables de fácil asimilación y rica fuente de aminoácidos para la recuperación muscular prolongada.'
+        name: "Crema de Coco y Suero Lácteo",
+        benefit: "Aportan energía limpia que combate la flojera mental sin causar acidez ni pesadez estomacal."
       },
       {
-        'name': 'Vitaminas B, C, D, Calcio y Magnesio',
-        'benefit': 'Complejo de micronutrientes de alta biodisponibilidad para blindar el sistema inmune y combatir la fatiga crónica.'
+        name: "Vitaminas B, C, D, Calcio y Magnesio",
+        benefit: "Fortalecen las defensas y quitan el cansancio cerebral acumulado por el estrés diario."
       }
     ],
     longTailKeywords: [
@@ -477,10 +485,9 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
       'alimento a base de crema de coco con hongos funcionales',
       'beneficios de booster lion para personas de alta exigencia mental',
       'polvo de melena de leon para vitalidad libre de picos de ansiedad',
-      'bienestar cerebral and digestivo con betaglucanos de hericium erinaceus',
-      'cómo complementar la nutricion del cerebro con vitaminas y minerales',
-      'suplemento para estudiantes y deportistas con registro INVIMA',
-      'bebida de vainilla con melena de leon sin azucares añadidos'
+      'suplemento para estudiantes y memoria con registro INVIMA',
+      'comprar booster lion melena de leon colombia pago contra entrega',
+      'hongo melena de leon original azenza pedir por whatsapp envio gratis'
     ],
     seoFaqs: [
       { q: '¿Cómo se debe consumir Booster Lion?', a: 'Se recomienda mezclar 1 y media cucharadas en agua, leche o bebida vegetal caliente o fría; disolver perfectamente mediante licuadora o agitando.' },
@@ -508,9 +515,9 @@ Enriquecido con una fuente de proteína de suero lácteo de excelente calidad, B
     name: 'Termoactiva',
     category: 'salud-bienestar',
     shortDescription: 'Alivio Muscular Termoactivo y Recuperación Profunda.',
-    description: `Experimenta un alivio inmediato y reconfortante con nuestra Loción Termoactiva, el cuidado intensivo diseñado para liberar la tensión acumulada en tus músculos y articulaciones. Su potente fórmula botánica combina los beneficios ancestrales de la uña de gato, la árnica y el castaño de indias para penetrar profundamente en las capas de la piel, proporcionando un calor reconfortante que relaja las fibras musculares y mejora la sensación de bienestar local al instante.
+    description: `La tensión cervical persistente, la sobrecarga miofascial tras jornadas de esfuerzo físico o sedentarismo y la rigidez articular limitan la flexibilidad corporal y provocan un dolor que interrumpe el descanso diario. Nuestra Loción Termoactiva actúa como un tratamiento fitoterapéutico de hiperemia y relajación muscular profunda que sincroniza las propiedades rubefacientes y analgésicas de la Árnica, la Uña de Gato y la Chuchuguaza con la acción descongestionante del Castaño de Indias y la Caléndula.
 
-Ideal para deportistas que buscan acelerar su recuperación o para quienes sufren de fatiga muscular tras largas jornadas de trabajo o actividad, esta loción no grasosa se absorbe en segundos sin manchar la ropa. Ya sea una molestia en el cuello, pesadez en las piernas o un dolor articular inoportuno, la Loción Termoactiva de AZENZA actúa como un aliado natural que devuelve la movilidad y el confort a tu cuerpo.
+Al masajear la zona afectada, induce una vasodilatación térmica inmediata que distiende las fibras musculares contraídas, estimula el drenaje de toxinas acumuladas y disminuye el umbral del dolor local, restituyendo la amplitud de movimiento y una sensación duradera de ligereza y confort articular. Avalada con Registro INVIMA oficial (NSOC74321-16CO), su textura fluida no grasa se absorbe velozmente sin manchar las prendas, ofreciendo un calor terapéutico reconfortante, seguro y de efecto inmediato para aliviar el cuerpo en cualquier momento.
 
 ✔️ Calor Reparador: Estimula la superficie cutánea para reconfortar y aliviar la zona rápidamente.
 ✔️ Alianza Botánica: Árnica y Chuchuguaza que trabajan en sinergia para reconfortar tras golpes y torceduras.
@@ -518,11 +525,11 @@ Ideal para deportistas que buscan acelerar su recuperación o para quienes sufre
     seoTitle: 'Loción Termoactiva Original: Alivio Muscular y Articular',
     seoDescription: 'Loción Termoactiva con Árnica y Uña de Gato por solo $69.900 COP. Alivio muscular rápido con Registro INVIMA. ¡Pídela con Envío Gratis y Pago en Casa!',
     benefits: [
-      'Alivio casi instantáneo de dolores musculares, golpes y calambres',
-      'Efecto calor profundo que relaja tensiones y desinflama tejidos',
-      'Fórmula botánica con extractos de alta pureza y absorción rápida',
-      'Ideal para masajes de recuperación deportiva y relajación diaria',
-      'No deja residuos grasos y es amable con todo tipo de piel'
+      "Calma en minutos el dolor de espalda, cintura, cuello tensionado y hombros",
+      "Desinflama golpes, torceduras y alivia los calambres musculares intensos",
+      "Efecto calor profundo que desatranca los músculos duros y contraídos",
+      "Ideal para un masaje relajante y reconfortante después de un día agotador",
+      "No mancha la ropa, no deja sensación grasosa y se absorbe al instante"
     ],
     image: '/assets/products/Termoactiva.webp',
     basePrice: 69900,
@@ -537,33 +544,31 @@ Ideal para deportistas que buscan acelerar su recuperación o para quienes sufre
       '/assets/products/locion-apoyo-3.webp',
       '/assets/products/locion-apoyo-4.webp'
     ],
-    keywords: 'dolor muscular, tensión cuello, cansancio en piernas, fatiga muscular, masajes, alivio rápido, loción termoactiva, Azenza',
+    keywords: 'loción termoactiva herbal, dolor muscular, dolor de espalda lumbago, dolor de rodillas, tensión cuello y hombros, contracturas, alivio rápido con calor, árnica y uña de gato, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Árnica, Castaño de Indias, Caléndula, Uña de Gato y Chuchuguaza',
     componentBenefits: [
-    {
-        'name': 'Árnica y Uña de Gato',
-        'benefit': 'Brindan un rápido alivio y confort en los músculos de forma externa.'
-    },
-    {
-        'name': 'Castaño de Indias',
-        'benefit': 'Favorece la sensación de ligereza y ayuda a mitigar la pesadez en las zonas aplicadas.'
-    },
-    {
-        'name': 'Caléndula y Chuchuguaza',
-        'benefit': 'Calman la irritación de la piel y aportan una sensación de bienestar y movilidad en las articulaciones.'
-    }
-],
+      {
+        name: "Árnica y Uña de Gato",
+        benefit: "Calman en minutos el dolor punzante de espalda, cintura trancada, hombros duros y rodillas adoloridas."
+      },
+      {
+        name: "Castaño de Indias",
+        benefit: "Alivia la pesadez en las piernas cansadas y desinflama golpes, torceduras y moretones."
+      },
+      {
+        name: "Caléndula y Chuchuguaza",
+        benefit: "Efecto calor reconfortante que desatranca los músculos tiesos y devuelve la movilidad sin dolor."
+      }
+    ],
     longTailKeywords: [
-      'mejor loción con efecto calor para tensión en la espalda',
-      'cómo aliviar la tensión muscular en el cuello rápidamente',
-      'alternativa natural para mejorar la circulación en las piernas',
-      'loción termoactiva para masajes deportivos y recuperación',
-      'fórmula balanceada para alivio de contracturas musculares',
-      'bienestar integral corporal con masajes de calor profundo',
-      'cómo reducir la fatiga muscular después del ejercicio intenso',
-      'loción para el cuidado muscular diario',
-      'alivio rápido de dolores articulares con calidad certificada',
-      'masaje terapéutico con ingredientes naturales para relajación'
+      'mejor loción con efecto calor para dolor agudo en la espalda y cintura',
+      'cómo aliviar la tensión muscular en el cuello y hombros rápidamente',
+      'loción termoactiva para rodillas y lumbago comprar pago contra entrega',
+      'loción termoactiva para masajes descontracturantes y recuperación',
+      'fórmula balanceada para alivio de contracturas musculares fuertes',
+      'bienestar integral corporal con masajes de calor profundo y árnica',
+      'cómo reducir la fatiga muscular y dolor articular en adultos mayores',
+      'loción para dolores musculares con registro invima pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Aplicar una cantidad suficiente y masajear la zona afectada.' },
@@ -593,9 +598,9 @@ Ideal para deportistas que buscan acelerar su recuperación o para quienes sufre
     name: 'C-Lagen',
     category: 'salud-bienestar',
     shortDescription: 'Regeneración Articular con Vitalidad Marina.',
-    description: `Recupera la libertad de movimiento con C-Lagen, el colágeno hidrolizado de origen marino diseñado específicamente para fortalecer y regenerar tus articulaciones críticas como rodillas, caderas y hombros. Su estructura molecular especializada asegura una absorción hasta 1.5 veces mayor que los colágenos tradicionales, permitiendo que sus péptidos lleguen directamente al cartílago y tendones para restaurar su resistencia y elasticidad.
+    description: `El dolor punzante en rodillas al subir escaleras, el desgaste acelerado del cartílago en caderas u hombros y la rigidez matutina al apoyar los pies limitan tu agilidad e independencia cotidiana. C-Lagen actúa como un sistema de bio-reconstrucción osteoarticular que aprovecha la estructura de bajo peso molecular del Colágeno Hidrolizado de origen marino (con absorción hasta 1.5 veces superior frente a fuentes convencionales), potenciado con Citrato de Magnesio y un complejo multivitamínico y mineral para nutrir directamente los condrocitos.
 
-Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen no solo protege tus huesos del desgaste, sino que nutre el sistema nervioso para una respuesta muscular más ágil. Es la solución definitiva para quienes sienten rigidez al despertar o molestias al subir escaleras, proporcionando una base sólida de minerales que mantienen tu esqueleto joven y funcional a cualquier edad.
+A mediano y largo plazo, esta matriz oceánica estimula la producción de líquido sinovial, reconstituye la elasticidad y resistencia de ligamentos y tendones, y previene la desmineralización ósea, devolviéndote un caminar fluido, flexible y libre de fricción dolorosa. Certificado con Registro INVIMA oficial (RSA-0032379-2024), su presentación en polvo fino de 500g se disuelve instantáneamente en agua o jugos sin dejar sedimentos, aportando una biodisponibilidad articular pura, segura y efectiva a cualquier edad.
 
 ✔️ Poder Oceánico: Colágeno marino de alta biodisponibilidad para una reconstrucción articular real.
 ✔️ Huesos Macizos: Minerales esenciales que previenen la desmineralización y fortalecen la densidad ósea.
@@ -603,11 +608,11 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
     seoTitle: 'C-Lagen Colágeno Marino Original: Salud de Rodillas',
     seoDescription: 'Cuida tus rodillas y articulaciones con C-Lagen Colágeno Marino. Máxima pureza y absorción con Registro INVIMA. ¡Paga en casa con Envío Gratis nacional!',
     benefits: [
-      'Máxima biodisponibilidad gracias a su origen marino de alta pureza',
-      'Protege y regenera cartílagos desgastados en rodillas y caderas',
-      'Fortalece la densidad ósea con su aporte de magnesio y minerales',
-      'Mejora notablemente la flexibilidad de tendones y ligamentos',
-      'Deliciosa fórmula en polvo de fácil disolución para tu rutina diaria'
+      "Alivia las punzadas y el dolor en rodillas al subir escaleras o agacharse",
+      "Ayuda a regenerar y lubricar los cartílagos gastados de rodillas, cuello y cadera",
+      "Quita la sensación de articulaciones trabadas o tiesas al levantarse de la cama",
+      "Fortalece huesos frágiles y tendones para que puedas caminar sin dolor",
+      "Fórmula con magnesio marino que se disuelve rápido con delicioso sabor"
     ],
     image: '/assets/products/C-lagen.webp',
     basePrice: 93500,
@@ -622,18 +627,18 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
       '/assets/products/c-lagen-apoyo-3.webp',
       '/assets/products/c-lagen-apoyo-4.webp'
     ],
-    keywords: 'colágeno marino, molestias articulares, salud articular, huesos fuertes, magnesio, movilidad, C-Lagen, Azenza',
+    keywords: 'colágeno marino, colágeno marino hidrolizado, molestias articulares, dolor de rodillas, salud articular, huesos fuertes, magnesio, movilidad sin rigidez, C-Lagen original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Colágeno Marino, Citrato de Magnesio, Vitaminas y Minerales',
     componentBenefits: [
-    {
-        'name': 'Colágeno Marino',
-        'benefit': 'Posee una excelente absorción que favorece la elasticidad de la piel y apoya su firmeza natural.'
-    },
-    {
-        'name': 'Citrato de Magnesio, Vitaminas y Minerales',
-        'benefit': 'Contribuyen al bienestar de las articulaciones y promueven una agradable sensación de relajación y descanso.'
-    }
-],
+      {
+        name: "Colágeno Marino Puro",
+        benefit: "Regenera el cartílago gastado de las rodillas para subir y bajar escaleras sin pinchazos ni crujidos."
+      },
+      {
+        name: "Citrato de Magnesio, Vitaminas y Minerales",
+        benefit: "Quitan la rigidez en las articulaciones al levantarte de la cama y calman los dolores óseos."
+      }
+    ],
     longTailKeywords: [
       'mejor colágeno marino para fortalecer las rodillas',
       'cómo mejorar la movilidad articular sin rigidez',
@@ -641,9 +646,9 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
       'beneficios del colágeno de mar para las articulaciones',
       'fórmula para caminar sin molestias ni desgaste',
       'bienestar integral y nutrición ósea con registro INVIMA',
-      'colágeno para el cuidado de los tejidos',
-      'suplemento natural para mantener la juventud de las manos',
-      'fortalecimiento de tendones y ligamentos con colágeno puro'
+      'comprar c-lagen colágeno marino colombia pago contra entrega',
+      'tratamiento para el dolor articular en adultos mayores envio gratis',
+      'pedir colágeno marino c-lagen azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver 1 cucharada (15g) en agua o jugo de frutas.' },
@@ -673,9 +678,9 @@ Potenciado con un complejo multivitamínico total y citrato de magnesio, C-Lagen
     name: 'Citramix',
     category: 'salud-bienestar',
     shortDescription: 'Equilibrio Neuro-Muscular y Relax Profundo.',
-    description: `Encuentra la calma y libera la tensión acumulada con Citramix, la solución maestra de magnesio diseñada para equilibrar tu sistema nervioso y relajar tus músculos de forma integral. Su fórmula avanzada utiliza una mezcla estratégica de citrato y bisglicinato de magnesio, asegurando que cada célula de tu cuerpo reciba este mineral vital para evitar calambres, tics nerviosos y la rigidez muscular provocada por el estrés diario.
+    description: `El estrés crónico, los tics nerviosos involuntarios, el insomnio intermitente y la rigidez muscular acumulada son el resultado directo de la deuda de magnesio que impone el ritmo de vida actual y la alimentación moderna. Citramix actúa como un sistema maestro de equilibrio neuro-muscular que sincroniza la absorción complementaria del Citrato y el Bisglicinato de Magnesio de alta biodisponibilidad con Inulina prebiótica y un complejo vitamínico revitalizante, asegurando una asimilación celular eficiente sin generar intolerancia digestiva.
 
-Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso nocturno, sino que su alto contenido de fibra previene la pesadez abdominal y regula la presión arterial de manera natural. Enriquecido con un complejo multivitamínico revitalizante, es el complemento perfecto para desconectar tras una jornada exigente, ayudándote a recuperar la paz mental y la ligereza física que necesitas.
+A mediano y largo plazo, este aporte sostenido desactiva la excitabilidad neuromuscular excesiva, promueve un descanso nocturno profundo y verdaderamente reparador, y apoya el equilibrio cardiovascular y metabólico, transformando tus mañanas en jornadas de serenidad mental, ligereza física y vitalidad renovada. Avalado con Registro INVIMA oficial (SD2023-0004812), su fino polvo de 350g con refrescante sabor a durazno se disuelve al instante, convirtiéndose en el ritual nocturno perfecto para liberar tensiones y restablecer tu armonía corporal.
 
 ✔️ Triple Acción de Magnesio: Optimiza la relajación muscular y combate el estrés crónico de raíz.
 ✔️ Adiós a los Calambres: Previene espasmos y rigidez, mejorando la flexibilidad de todo el cuerpo.
@@ -683,11 +688,11 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
     seoTitle: 'Citramix Citrato de Magnesio: Relax Muscular y Calma',
     seoDescription: 'Combate el estrés y relaja tus músculos con Citramix Citrato de Magnesio sabor durazno. Registro INVIMA garantizado. ¡Envío Gratis y Pago Contra Entrega!',
     benefits: [
-      'Relaja profundamente los músculos evitando calambres y rigidez',
-      'Combate el agotamiento nervioso y mejora la calidad del descanso',
-      'Promueve una digestión equilibrada y libre de pesadez abdominal diaria',
-      'Aporta un complejo vitamínico completo para la vitalidad celular',
-      'Sabor premium a durazno, ideal para disfrutar frío en la noche'
+      "Elimina los calambres dolorosos en piernas y pies que te despiertan de noche",
+      "Suelta la tensión acumulada en espalda, cuello y hombros por el estrés diario",
+      "Ayuda a conciliar el sueño profundo para despertar descansado y sin pesadez",
+      "Alivia la digestión lenta y desinflama el vientre para sentirte ligero",
+      "Delicioso sabor a durazno para tomar en agua fría y relajarte antes de dormir"
     ],
     image: '/assets/products/Citramix.webp',
     basePrice: 79900,
@@ -701,25 +706,28 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
       '/assets/products/citramix-apoyo-3.webp',
       '/assets/products/citramix-apoyo-4.webp'
     ],
-    keywords: 'magnesio, calambres, estrés, digestión ligera, relajación muscular, paz mental, Citramix, Azenza',
+    keywords: 'citrato de magnesio puro, bisglicinato de magnesio, calambres en las piernas, estrés y ansiedad, digestión ligera, relajación muscular, dormir profundo, paz mental, Citramix original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Citrato de Magnesio, Bisglicinato de Magnesio y Vitaminas',
     componentBenefits: [
-    {
-        'name': 'Citrato y Bisglicinato de Magnesio',
-        'benefit': 'Doble fuente de magnesio de alta disponibilidad que apoya el rendimiento muscular, ayuda a evitar la fatiga y promueve un descanso profundo y reparador.'
-    },
-    {
-        'name': 'Vitaminas',
-        'benefit': 'Disminuyen el cansancio diario.'
-    }
-],
+      {
+        name: "Citrato y Bisglicinato de Magnesio",
+        benefit: "Eliminan de raíz los calambres en piernas y pies, sueltan el cuello tensionado y te ayudan a dormir profundo toda la noche."
+      },
+      {
+        name: "Vitaminas e Inulina",
+        benefit: "Desinflaman la barriga hinchada, aceleran la digestión pesada y quitan el cansancio desde la mañana."
+      }
+    ],
     longTailKeywords: [
-      'mejor mezcla de magnesio para evitar calambres musculares',
-      'cómo mantener la calma y reducir el estrés diariamente',
+      'mejor mezcla de magnesio para evitar calambres musculares nocturnos',
+      'cómo mantener la calma reducir el estrés y dormir profundo',
       'suplemento para digestión ligera sin pesadez abdominal',
-      'beneficios del magnesio para el descanso de los músculos',
-      'fórmula para relajar los nervios de forma natural',
+      'beneficios del citrato y bisglicinato de magnesio para los músculos',
+      'fórmula para relajar los nervios y descansar de forma natural',
       'bienestar integral y tranquilidad con registro INVIMA',
+      'comprar citramix citrato de magnesio pago contra entrega colombia',
+      'remedio para los calambres en piernas y tensión muscular envio gratis',
+      'pedir citramix azenza magnesio puro por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Mezclar 1 cucharada (15g) en un vaso de agua, ideal en la noche.' },
@@ -748,9 +756,9 @@ Con un refrescante sabor a durazno maduro, Citramix no solo mejora tu descanso n
     name: 'Coffee + Colágeno',
     category: 'salud-bienestar',
     shortDescription: 'Ritual de Belleza y Vitalidad Diaria Especializada.',
-    description: `Transforma tu primera taza del día en un potente ritual de rejuvenecimiento con Coffee + Colágeno. Esta deliciosa mezcla combina el aroma estimulante del café soluble premium con los beneficios estructurales del colágeno hidrolizado, todo sobre una base cremosa y saludable de coco. Diseñado para nutrir tu belleza desde la raíz, este café funcional fortalece tu cabello, aporta brillo a tu piel y robustez a tus uñas mientras te proporciona la energía necesária para conquistar tu jornada.
+    description: `El café matutino tradicional suele provocar acidez digestiva, picos breves de nerviosismo y descuidos en la reposición proteica necesaria para frenar la caída del cabello y la pérdida de turgencia en la piel. Coffee + Colágeno actúa como un alimento funcional estructurante que fusiona extracto de café soluble premium con péptidos bioactivos de Colágeno Hidrolizado sobre una matriz cremosa de coco rica en triglicéridos de cadena media (MCT) y 12 vitaminas esenciales, proporcionando un combustible limpio que no irrita la mucosa gástrica.
 
-Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicéridos de cadena media (MCT) del coco para una energía cerebral sostenida sin pesadez estomacal. Enriquecido con 12 vitaminas fundamentales, Coffee + Colágeno es más que un capricho; es tu seguro diario de vitalidad que cuida tu estética y tu sistema óseo en cada sorbo.
+A mediano y largo plazo, su aporte diario promueve la síntesis de queratina en folículos y uñas, refuerza la densidad del colágeno dérmico y sostiene la agudeza mental sin bajones de energía a mitad de jornada, protegiendo además la salud osteoarticular. Avalado con Registro INVIMA oficial (RSA-0010130-2020), su polvo soluble de 400g está 100% libre de lácteos y grasas trans, ofreciendo una textura sedosa gourmet de rápida disolución para nutrir tu estética y vigor desde la primera taza.
 
 ✔️ Belleza Estructural: Bio-péptidos de colágeno que restauran la firmeza de la piel y fuerza capilar.
 ✔️ Energía con Propósito: Café funcional con crema de coco que activa tu mente sin irritar el estómago.
@@ -758,11 +766,11 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
     seoTitle: 'Coffee + Colágeno con Coco: Belleza, Piel Firme y Vigor',
     seoDescription: 'Disfruta un café funcional con Colágeno y Crema de Coco para piel radiante y energía diaria. Registro INVIMA. ¡Pídelo online con Pago Contra Entrega!',
     benefits: [
-      'Fortalece la fibra capilar y las uñas desde las capas internas',
-      'Promueve una piel luminosa y elástica gracias al colágeno puro',
-      'Aporta energía limpia y sostenida con los beneficios del coco',
-      'Contiene el 50% del requerimiento diario de vitaminas clave',
-      'Sabor gourmet cremoso sin azúcar añadida ni pesadez gástrica'
+      "Te llena de energía por la mañana sin provocarte acidez, ardor ni taquicardia",
+      "Frena la caída del cabello y fortalece las uñas quebradizas desde la raíz",
+      "Protege tus rodillas y articulaciones del dolor mientras tomas tu café favorito",
+      "Mejora la elasticidad de la piel, disminuyendo la resequedad y las arrugas",
+      "Sabor cremoso tipo capuchino con leche de coco y libre de azúcar añadida"
     ],
     image: '/assets/products/coffe-colageno.webp',
     basePrice: 75900,
@@ -776,29 +784,31 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
       '/assets/products/cafe-colageno-apoyo-3.webp',
       '/assets/products/cafe-colageno-apoyo-4.webp'
     ],
-    keywords: 'café con colágeno, crema de coco, belleza integral, fortalecer cabello, uñas fuertes, vitaminas, Coffee Colágeno, Azenza',
+    keywords: 'café con colágeno, colágeno hidrolizado, crema de coco, café funcional, piel firme, fortalecer cabello, uñas fuertes, café colombiano saludable, Coffee Colágeno, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Crema de Coco, Colágeno Hidrolizado y Café Soluble',
     componentBenefits: [
-    {
-        'name': 'Café Soluble',
-        'benefit': 'Aporta un impulso rápido de energía y mejora el enfoque diario.'
-    },
-    {
-        'name': 'Crema de Coco',
-        'benefit': 'Proporciona grasas saludables (MCT) que apoyan el rendimiento mental y la claridad.'
-    },
-    {
-        'name': 'Colágeno Hidrolizado',
-        'benefit': 'Favorece y fortalece la estructura natural del cabello, la piel y las uñas.'
-    }
-],
+      {
+        name: "Café Soluble Premium",
+        benefit: "Te despierta y da energía mañanera sin causarte agruras, acidez estomacal ni taquicardia."
+      },
+      {
+        name: "Crema de Coco",
+        benefit: "Grasas saludables que sacian el hambre, protegen el estómago y dan energía duradera."
+      },
+      {
+        name: "Colágeno Hidrolizado",
+        benefit: "Frena la caída del cabello, fortalece uñas quebradizas y protege las rodillas del dolor articular."
+      }
+    ],
     longTailKeywords: [
       'mejor café con colágeno para fortalecer cabello y uñas',
       'cómo cuidar tu belleza mientras tomas el café matutino',
       'suplemento de café con crema de coco para evitar gases',
       'beneficios de las 12 vitaminas para la vitalidad diaria',
-      'fórmula antiedad para disfrutar en el desayuno',
+      'fórmula antiedad para disfrutar en el desayuno sin acidez',
       'bienestar integral y defensas fuertes con registro INVIMA',
+      'comprar café con colágeno y crema de coco pago contra entrega colombia',
+      'pedir coffee colágeno azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver 1 cucharada (20g) en una taza de agua o leche caliente.' },
@@ -826,9 +836,9 @@ Libre de lácteos y grasas trans, nuestra fórmula se apoya en los triglicérido
     name: 'Creatina 100%',
     category: 'salud-bienestar',
     shortDescription: 'Poder Muscular y Agudeza Mental Superior.',
-    description: `Alcanza tu máximo potencial físico y cognitivo con nuestra Creatina 100% Pura, el suplemento de grado farmacéutico diseñado para quienes no aceptan menos que la perfección. Nuestra creatina monohidratada de alta densidad optimiza la resíntesis de ATP, permitiéndote entrenar con una fuerza explosiva y recuperarte en tiempo récord. No es solo un aliado para el músculo; la creatina es un potente combustible cerebral que mejora la memoria de trabajo y la velocidad de procesamiento mental, manteniéndote enfocado y alerta en tus desafíos diarios.
+    description: `El estancamiento en el desarrollo de fuerza, la fatiga precoz en series de alta exigencia y el desgaste cognitivo durante jornadas de concentración prolongada reflejan un vaciamiento en los depósitos celulares de fosfocreatina. Nuestra Creatina 100% Pura Monohidratada de grado farmacéutico USP actúa como un donador bioenergético inmediato para la resíntesis rápida de ATP en mitocondrias musculares y neuronales, optimizando la capacidad contráctil y la hidratación osmótica intracelular sin provocar retención de líquidos extracelular.
 
-Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula de máxima pureza es ideal tanto para deportistas de élite como para adultos mayores que desean preservar su vitalidad muscular y cognitiva. Su solubilidad instantánea permite consumirla fácilmente en cualquier bebida, garantizando que cada gramo trabaje en favor de tu rendimiento integral.
+A mediano y largo plazo, su consumo continuado acelera la recuperación de fibras tras el esfuerzo físico intenso, inhibe el catabolismo celular y preserva la masa magra en etapas de sobrecarga o envejecimiento, mientras nutre la memoria operativa y la velocidad de procesamiento mental. Respaldada con Registro INVIMA oficial (SD2014-0003204), su polvo micronizado de 200g sin sabor, carbohidratos ni aditivos de relleno se disuelve instantáneamente en cualquier bebida, garantizando máxima biodisponibilidad y pureza certificada para tu rendimiento integral.
 
 ✔️ Fuerza Real: Potencia la contracción muscular y el volumen celular para una estructura física sólida.
 ✔️ Enfoque Cerebral: Nutre las neuronas y reduce la fatiga mental, mejorando la concentración sostenida.
@@ -836,11 +846,11 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
     seoTitle: 'Creatina 100% Pura Monohidratada: Fuerza y Músculo',
     seoDescription: 'Aumenta tu masa muscular, fuerza y resistencia con Creatina 100% Monohidratada pura. Máximo rendimiento con Registro INVIMA y Envío Gratis a Colombia.',
     benefits: [
-      'Aumenta la fuerza explosiva y el rendimiento físico de alta intensidad',
-      'Mejora significativamente la memoria, el enfoque y la agudeza mental',
-      'Acelera la recuperación muscular post-entrenamiento evitando el catabolismo',
-      'Fórmula 100% pura monohidratada, sin rellenos ni azúcares añadidos',
-      'Calidad de grado farmacéutico USP para una seguridad y absorción total'
+      "Aumenta la fuerza física y evita la pérdida de masa muscular por los años",
+      "Reduce el dolor muscular y el cansancio extremo tras el trabajo o ejercicio",
+      "Despeja la mente y combate el agotamiento físico que te frena a mitad del día",
+      "Creatina monohidratada 100% pura, sin químicos de relleno ni azúcares",
+      "Fácil de mezclar con agua o jugo, no cae pesada y no daña el estómago"
     ],
     image: '/assets/products/creatina100.webp',
     basePrice: 105000,
@@ -854,14 +864,14 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
       '/assets/products/creatina-apoyo-3.webp',
       '/assets/products/creatina-apoyo-4.webp'
     ],
-    keywords: 'creatina pura, fuerza muscular, rendimiento cerebral, vitalidad, Azenza, creatina USP',
+    keywords: 'creatina monohidratada 100 pura, creatina micronizada usp, fuerza muscular, masa muscular magra, rendimiento deportivo, memoria cerebral, creatina sin sabor, Azenza, comprar creatina colombia, pago contra entrega, envío gratis',
     components: 'Creatina monohidratada 100% pura',
     componentBenefits: [
-    {
-        'name': 'Creatina Monohidratada',
-        'benefit': 'Optimiza los niveles de energía en los músculos, favoreciendo un mayor rendimiento, fuerza y resistencia durante el entrenamiento.'
-    }
-],
+      {
+        name: "Creatina Monohidratada Pura",
+        benefit: "Aumenta la fuerza real en tus brazos y piernas, previene la pérdida de músculo y quita la fatiga extrema."
+      }
+    ],
     longTailKeywords: [
       'mejor creatina pura para ganar fuerza en brazos y piernas',
       'cómo mantener la mente despierta y concentrada naturalmente',
@@ -869,6 +879,8 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
       'beneficios de la creatina pura para el cerebro y músculos',
       'fórmula 100% pura sin rellenos ni sabores artificiales',
       'bienestar integral y fuerza real con calidad farmacéutica USP',
+      'comprar creatina monohidratada original colombia pago contra entrega',
+      'creatina 100 pura sin sabor registro invima pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver 1 medida (5g) en agua antes o después de entrenar.' },
@@ -897,9 +909,9 @@ Libre de rellenos, sabores artificiales o aditivos innecesarios, esta fórmula d
     name: 'Iprossmen',
     category: 'salud-bienestar',
     shortDescription: 'Salud Masculina Integral y Apoyo al Bienestar Urinario.',
-    description: `Protege tu vitalidad y cuida tu salud con Iprossmen, la solución fitoterapéutica avanzada diseñada exclusivamente para las necesidades del hombre moderno. Su fórmula de alta precisión aprovecha el poder antioxidante del licopeno de tomate y los arándanos rojos para brindar soporte natural que reconforta la zona pélvica y favorece la función urinaria. Iprossmen ayuda a regular los procesos inflamatorios de la próstata, permitiéndote mantener una vida activa y libre de molestias persistentes.
+    description: `La micción entrecortada, la necesidad recurrente de levantarse durante la noche y la sensación de congestión o pesadez en la zona pélvica afectan profundamente el descanso, la serenidad y el vigor del hombre a partir de los 40 años. Iprossmen funciona como un sistema fitoterapéutico de soporte prostático y urológico que combina la acción antioxidante concentrada del Licopeno de Tomate de árbol y los polifenoles del Té Verde y Arándanos rojos con las propiedades desinflamatorias del Jengibre, Mandarina, Ciruela y Vitamina E pura.
 
-Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa como un potente regenerador celular que combate el envejecimiento del sistema reproductor. Es el aliado indispensable para hombres que buscan prevención y equilibrio hormonal, asegurando un flujo de energía constante y un bienestar integral que se siente desde los primeros días de uso.
+A mediano y largo plazo, esta sinergia botánica modula la respuesta inflamatoria local en los tejidos prostáticos, protege el tracto urinario frente al daño celular oxidativo y facilita un vaciado vesical continuo y sin molestias, restituyendo la tranquilidad y el bienestar hormonal masculino. Avalado con Registro INVIMA oficial (SD2015-0003504), su formato líquido de 500ml garantiza una rápida biodisponibilidad y asimilación gástrica, convirtiéndose en el hábito preventivo diario indispensable para sostener una vitalidad masculina plena.
 
 ✔️ Bienestar Pélvico: Ayuda a desinflamar y proteger la salud de la próstata de forma preventiva.
 ✔️ Vigor Natural: Extractos frutales que aportan antioxidantes clave para la vitalidad masculina.
@@ -907,11 +919,11 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
     seoTitle: 'Iprossmen Original: Salud Prostática y Bienestar del Hombre',
     seoDescription: 'Protege tu próstata y mejora el flujo urinario con Iprossmen fórmula botánica. Bienestar masculino con Registro INVIMA. ¡Paga al recibir en casa!',
     benefits: [
-      'Protege y reconforta la salud de la próstata de manera preventiva',
-      'Mejora notablemente la función urinaria y reduce la inflamación pélvica',
-      'Aporta una potente carga de antioxidantes específicos para el hombre',
-      'Favorece el equilibrio hormonal y mantiene los niveles de vigor elevados',
-      'Fórmula líquida de alta absorción con ingredientes naturales certificados'
+      "Disminuye las idas urgentes al baño de noche para que puedas dormir de corrido",
+      "Alivia el ardor, el dolor y el goteo molesto al momento de orinar",
+      "Desinflama la próstata y quita la pesadez constante en la zona baja del vientre",
+      "Devuelve el vigor, la energía y la tranquilidad masculina en el día a día",
+      "Jarabe botánico natural de rápida absorción con Registro INVIMA oficial"
     ],
     image: '/assets/products/Iprossmen.webp',
     basePrice: 79900,
@@ -925,29 +937,31 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
       '/assets/products/iprossmen-apoyo-3.webp',
       '/assets/products/iprossmen-apoyo-4.webp'
     ],
-    keywords: 'salud masculina, próstata, vitalidad, tomate de árbol, prevención, bienestar hombre, Iprossmen, Azenza',
+    keywords: 'salud masculina, próstata inflamada, flujo urinario, tomate de árbol y arándano, ganas de orinar de noche, bienestar hombre, Iprossmen original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Té Verde, Tomate de Árbol, Arándanos, Mandarina, Jengibre, Ciruela y Vitamina E',
     componentBenefits: [
-    {
-        'name': 'Té Verde, Tomate de Árbol y Arándanos',
-        'benefit': 'Aportan licopeno y polifenoles que favorecen el bienestar del sistema urinario y apoyan la salud del hombre.'
-    },
-    {
-        'name': 'Mandarina, Jengibre y Ciruela',
-        'benefit': 'Mejoran la digestión y absorción.'
-    },
-    {
-        'name': 'Vitamina E',
-        'benefit': 'Excelente antioxidante natural que ayuda a proteger las células.'
-    }
-],
+      {
+        name: "Té Verde, Tomate de Árbol y Arándanos",
+        benefit: "Desinflaman la próstata agrandada, aliviando el dolor pélvico y las ganas urgentes de orinar a cada rato."
+      },
+      {
+        name: "Mandarina, Jengibre y Ciruela",
+        benefit: "Facilitan el flujo urinario continuo sin goteos molestos ni ardor al ir al baño."
+      },
+      {
+        name: "Vitamina E",
+        benefit: "Protege los tejidos masculinos del desgaste y devuelve la tranquilidad para dormir la noche entera."
+      }
+    ],
     longTailKeywords: [
-      'mejor suplemento natural para confortar la zona pélvica',
+      'mejor suplemento natural para desinflamar la próstata y orinar sin dolor',
       'cómo cuidar la salud masculina de forma natural y segura',
       'suplemento de tomate de árbol para el bienestar del hombre',
       'beneficios del saw palmetto para la prevención masculina',
       'fórmula para sentirse vital y con energía todo el día',
       'bienestar integral y salud del hombre con registro INVIMA',
+      'iprossmen jarabe prostático precio colombia pago contra entrega',
+      'comprar iprossmen original con registro invima y pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Tomar de 1 a 2 cucharadas (15ml - 30ml) al día.' },
@@ -976,9 +990,9 @@ Enriquecido con jengibre, ciruela y vitamina E, este elixir masculino actúa com
     name: 'KDS 10',
     category: 'salud-bienestar',
     shortDescription: 'Suplemento Vitamínico y Energía Vital Familiar.',
-    description: `Asegura la nutrición de quienes más quieres con KDS 10, el sistema multivitamínico de espectro completo diseñado para cubrir las brechas nutricionales de toda la familia. Su fórmula diseñada sobre una base cremosa de coco potencia la absorción de vitaminas A, C, D, E y el complejo B, proporcionando un blindaje inmunológico real y una energía física inagotable. Ideal para niños en etapa de crecimiento, adultos con jornadas exigentes y personas mayores, KDS 10 garantiza que el organismo reciba cada mineral esencial para su correcto funcionamiento.
+    description: `El cansancio escolar o laboral temprano, la falta de vitalidad diaria y la vulnerabilidad constante ante resfriados reflejan vacíos nutricionales en la alimentación cotidiana de niños en crecimiento, adultos activos y personas mayores. KDS 10 funciona como un sistema de recarga multivitamínica y mineral biodisponible estructurado sobre una matriz lipídica de crema de coco y proteína de suero, que facilita el transporte y la absorción celular de Vitaminas A, C, D, E y el Complejo B completo, complementadas con Zinc, Hierro y Magnesio esenciales.
 
-Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico que combate la fatiga mental y fortalece la estructura ósea gracias a su aporte de zinc y hierro. Su deliciosa textura y fácil disolución lo convierten en el complemento perfecto para el desayuno diario, brindando la tranquilidad de saber que tu salud y la de los tuyos está respaldada por una fórmula de grado superior y calidad certificada.
+A mediano y largo plazo, esta sinergia de micronutrientes fortalece la primera línea de defensas inmunológicas frente a virus del entorno, apoya la mineralización ósea y el desarrollo muscular, y combate la fatiga intelectual, optimizando la concentración y el metabolismo energético en cada etapa de la vida. Certificado con Registro INVIMA oficial (RSA-0025607-2023), su presentación en polvo fino de 350g se mezcla fácilmente en agua, leche o batidos con una textura cremosa y ligera, garantizando una nutrición integral, pura y segura para toda la familia.
 
 ✔️ Inmunidad Total: Fortalece las defensas naturales contra virus y bacterias del entorno escolar y laboral.
 ✔️ Crecimiento y Vigor: Aporta los ladrillos nutricionales necesarios para el desarrollo físico y mental.
@@ -986,11 +1000,11 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
     seoTitle: 'KDS 10 Multivitamínico Familiar: Máxima Energía y Defensas',
     seoDescription: 'Nutrición completa y energía para toda la familia con KDS 10 Multivitamínico. Refuerza defensas con Registro INVIMA. ¡Envío 100% Gratis a Colombia!',
     benefits: [
-      'Proporciona el 100% de las vitaminas y minerales esenciales diarios',
-      'Fortalece drásticamente el sistema inmunológico de niños y adultos',
-      'Ayuda a reducir el cansancio físico recurrente y mejora el enfoque mental',
-      'Delicioso sabor y base de coco que asegura una digestión ligera',
-      'Ideal para complementar dietas con deficiencias o periodos de desgaste'
+      "Combate la debilidad física, el decaimiento y la falta de apetito en la familia",
+      "Sube las defensas para evitar que los niños o adultos caigan enfermos seguido",
+      "Aporta energía natural para estudiar o trabajar sin sentir sueño temprano",
+      "Fórmula suave con base de coco que no produce náuseas ni cae pesada",
+      "Completa las vitaminas y minerales que faltan en las comidas del día"
     ],
     image: '/assets/products/Kds10.webp',
     basePrice: 79900,
@@ -1004,33 +1018,32 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
       '/assets/products/kds-10-apoyo-3.webp',
       '/assets/products/kds-10-apoyo-4.webp'
     ],
-    keywords: 'multivitamínico, vitalidad diaria, vitaminas y minerales, KDS 10, Azenza',
+    keywords: 'multivitamínico familiar, vitaminas y minerales, defensas bajas, apetito en niños y adultos, energía diaria, KDS 10 original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Crema de coco, Proteína de suero, Magnesio, Hierro, Zinc y Complejo Vitamínico',
     componentBenefits: [
-    {
-        'name': 'Proteína de suero y Crema de coco',
-        'benefit': 'Aportan bloques de construcción muscular y energía.'
-    },
-    {
-        'name': 'Hierro y Zinc',
-        'benefit': 'undamentales para apoyar la producción de glóbulos rojos y contribuir al desarrollo físico y cognitivo diario.'
-    },
-    {
-        'name': 'Magnesio y Vitaminas',
-        'benefit': 'Contribuyen al funcionamiento normal del sistema inmunológico.'
-    }
-],
+      {
+        name: "Proteína de Suero y Crema de Coco",
+        benefit: "Quitan la debilidad y el desgano, ayudando a niños y adultos a recuperar el apetito y la fuerza física."
+      },
+      {
+        name: "Hierro y Zinc",
+        benefit: "Combaten la anemia, el cansancio escolar o laboral y mejoran la concentración durante el día."
+      },
+      {
+        name: "Magnesio y Vitaminas",
+        benefit: "Suben las defensas para no vivir con gripes ni recaer enfermo cada semana."
+      }
+    ],
     longTailKeywords: [
-      'mejor multivitamínico líquido para adultos y niños',
-      'cómo asegurar la ingesta diaria de vitaminas esenciales',
-      'suplemento para fortalecer las defensas de toda la familia',
-      'beneficios de KDS 10 para el bienestar integral y energía',
-      'fórmula balanceada de vitaminas y minerales de alta absorción',
-      'bienestar integral y nutrición completa con calidad certificada',
-      'cómo mejorar la vitalidad diaria con un multivitamínico natural',
-      'suplemento para evitar deficiencias nutricionales',
-      'vitaminas para el cansancio físico y mental con pureza garantizada',
-      'fortalecimiento del sistema inmunológico con nutrición balanceada'
+      'mejor multivitamínico familiar con zinc y hierro en polvo',
+      'cómo complementar la nutrición de niños y adultos mayores naturalmente',
+      'suplemento vitamínico completo para el cansancio mental y físico',
+      'beneficios del complejo B y minerales para la vitalidad diaria',
+      'fórmula con crema de coco para máxima absorción de nutrientes',
+      'bienestar integral y nutrición familiar con registro INVIMA',
+      'suplemento para subir defensas y abrir el apetito en niños y adultos',
+      'kds 10 precio oferta colombia envio gratis pago contra entrega',
+      'comprar multivitamínico kds 10 azenza pedir por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver 1 cucharada (20g) en un vaso de agua, leche o jugo.' },
@@ -1059,9 +1072,9 @@ Más que un simple suplemento, KDS 10 actúa como un revitalizante metabólico q
     name: 'Liofhim',
     category: 'salud-bienestar',
     shortDescription: 'Ritual de Descanso Nocturno y Sueño Reparador.',
-    description: `Recupera el placer de dormir profundamente y despierta con una energía renovada gracias a Liofhim, el complemento de relajación botánica de AZENZA. Su fórmula ayuda a calmar la mente, combina extractos concentrados de manzanilla, albahaca y hierbabuena, actuando como un bálsamo para promover la serenidad. Liofhim facilita el descanso nocturno y promueve un sueño de alta calidad, ayudando a mantener la continuidad del reposo y evitando la agitación nocturna.
+    description: `El flujo incesante de pensamientos intrusivos al acostarse, los despertares a medianoche y la sensación de fatiga al sonar la alarma revelan una hiperactivación nerviosa que impide ingresar a las fases profundas del descanso. Liofhim actúa como un sistema líquido de inducción y sosiego neuro-vegetativo que sincroniza extractos botánicos estandarizados de Manzanilla (fuente de apigenina moduladora), Albahaca, Anís y Hierbabuena con el respaldo celular de las Vitaminas C y E, distendiendo la tensión muscular y calmando la corteza cerebral sin recurrir a fármacos hipnóticos.
 
-A diferencia de los somníferos químicos, Liofhim promueve un descanso fisiológico natural sin causar dependencia ni somnolencia al día siguiente. Es el aliado perfecto para calmar la ansiedad nocturna, relajar los músculos y permitir que tu mente se regenere por completo. Despídete del insomnio y redescubre lo que significa tener una mente clara y un cuerpo revitalizado cada mañana.
+A mediano y largo plazo, favorece la arquitectura natural del sueño reparador y reduce la fragmentación del reposo nocturno, permitiendo que las células se regeneren por completo para que despiertes con la mente lúcida, sin sensación de embotamiento ni pesadez matutina. Avalado con Registro INVIMA oficial (RSA-0020527-2022), su fórmula líquida de 500ml se asimila con rapidez antes de dormir sin generar tolerancia ni dependencia, garantizando una noche de calma fisiológica y un amanecer de verdadera vitalidad.
 
 ✔️ Apagado Mental: Calma el flujo de pensamientos intrusivos para una relajación profunda e inmediata.
 ✔️ Sueño Continuo: Ayuda a mantener un estado de descanso estable y sin interrupciones durante la noche.
@@ -1069,11 +1082,11 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
     seoTitle: 'Liofhim Descanso Profundo: Sueño Reparador y Cero Estrés',
     seoDescription: 'Duerme plácidamente y despierta renovado con Liofhim fórmula natural para el descanso. Sin adicción, con Registro INVIMA. ¡Paga al recibir en casa!',
     benefits: [
-      'Facilita el inicio del sueño profundo de forma rápida y natural',
-      'Disminuye los despertares nocturnos logrando un descanso ininterrumpido',
-      'Reduce significativamente el estrés y la tensión acumulada del día',
-      'Despierta con la mente lúcida y energía renovada sin efectos secundarios',
-      'Sabor botánico relajante de alta pureza con registro INVIMA certificado'
+      "Ayuda a quedarse dormido rápido sin dar vueltas en la cama por horas",
+      "Evita los despertares a medianoche para que logres un sueño continuo y reparador",
+      "Calma los nervios, la angustia y la tensión en el pecho por el estrés del día",
+      "Despiertas con la cabeza despejada, buen ánimo y sin mareos ni modorra",
+      "Gotas botánicas naturales que no causan adicción y cuentan con Registro INVIMA"
     ],
     image: '/assets/products/Liofhim.webp',
     basePrice: 75900,
@@ -1088,22 +1101,22 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
       '/assets/products/liofhim-apoyo-3.webp',
       '/assets/products/liofhim-apoyo-4.webp'
     ],
-    keywords: 'dormir profundo, insomnio, descanso real, manzanilla, albahaca, sueño reparador, Liofhim, Azenza',
+    keywords: 'dormir profundo, insomnio, descansar toda la noche, calmar la mente y ansiedad, manzanilla, albahaca, sueño reparador sin adicción, Liofhim original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Manzanilla, Albahaca, Anís, Hierbabuena y Vitaminas C y E',
     componentBenefits: [
-    {
-        'name': 'Manzanilla, Albahaca y Anís',
-        'benefit': 'Extractos herbales con propiedades relajantes que promueven la tranquilidad, disminuyen el estrés diario y facilitan un descanso profundo.'
-    },
-    {
-        'name': 'Hierbabuena',
-        'benefit': 'Aporta una sensación de alivio y confort digestivo ideal para las noches.'
-    },
-    {
-        'name': 'Vitaminas C y E',
-        'benefit': 'Apoyan la regeneración natural de las células y protegen el cuerpo durante el descanso nocturno.'
-    }
-],
+      {
+        name: "Manzanilla, Albahaca y Anís",
+        benefit: "Calman la mente acelerada, la angustia y los pensamientos que no te dejan dormir, facilitando el sueño en minutos."
+      },
+      {
+        name: "Hierbabuena",
+        benefit: "Quita los gases y la pesadez estomacal nocturna para descansar sin molestias en la panza."
+      },
+      {
+        name: "Vitaminas C y E",
+        benefit: "Ayudan a que el cuerpo se recupere mientras duermes para despertar descansado y sin modorra."
+      }
+    ],
     longTailKeywords: [
       'mejor bebida natural para dormir profundo toda la noche',
       'cómo evitar los despertares a medianoche y descansar',
@@ -1111,6 +1124,8 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
       'beneficios de la manzanilla y albahaca para el sueño',
       'fórmula para despertar renovado y con energía positiva',
       'bienestar integral y descanso real con registro INVIMA',
+      'comprar liofhim original colombia pago contra entrega envio gratis',
+      'remedio natural para el insomnio y estrés nocturno pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Tomar 1 copa (15ml) dos veces al día o diluir en un litro de agua.' },
@@ -1138,9 +1153,9 @@ A diferencia de los somníferos químicos, Liofhim promueve un descanso fisioló
     name: 'Liteplex',
     category: 'salud-bienestar',
     shortDescription: 'Bienestar Digestivo y Ligereza Metabólica.',
-    description: `Recupera la armonía de tu sistema digestivo con Liteplex, el concentrado botánico diseñado para proporcionar un alivio rápido y natural contra la pesadez y la acidez. Su fórmula de alta pureza combina extractos de jengibre, menta y albahaca, que actúan como un bálsamo reconfortante en el tracto digestivo, facilitando una digestión ligera incluso después de comidas abundantes. Liteplex es el aliado ideal para quienes buscan mantener un metabolismo activo y un vientre plano sin recurrir a químicos agresivos.
-
-Endulzado naturalmente con estevia, este refrescante suplemento con sabor a limón se absorbe instantáneamente, proporcionando una sensación de frescura y bienestar que perdura. Es la solución perfecta para llevar contigo y asegurar que tu jornada no se vea interrumpida por molestias abdominales, permitiéndote disfrutar de cada momento con total ligereza y confort.
+    description: `La pesadez estomacal tras comer, el reflujo ácido que irrita la garganta y la acumulación dolorosa de gases convierten cada almuerzo en un proceso lento, inflamatorio y fatigante. Liteplex funciona como un concentrado botánico carminativo y regulador gastrointestinal que fusiona extractos bioactivos de Jengibre fresco, Menta piperita, Albahaca y Té Verde con la frescura alcalinizante del Limón, formulado sin azúcar añadida y endulzado naturalmente con estevia.
+ 
+Esta sinergia acelera el vaciado gástrico, distiende las paredes del tubo digestivo y normaliza el pH estomacal sin frenar la producción enzimática natural, evitando la fermentación intestinal y promoviendo una desinflamación abdominal rápida y visible. Certificado con Registro INVIMA oficial (PSA-000932-2017), su formato líquido concentrado de 500ml brinda una asimilación inmediata y un sabor cítrico reconfortante, siendo el aliado perfecto para disfrutar tus comidas favoritas con ligereza, digestión ágil y total libertad digestiva.
 
 ✔️ Alivio Estomacal: Calma la acidez y la pesadez abdominal con la frescura natural del limón y la menta.
 ✔️ Digestión Ágil: El jengibre y la albahaca estimulan el tránsito digestivo para evitar la hinchazón.
@@ -1148,11 +1163,11 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
     seoTitle: 'Liteplex Digestivo Original: Alivio de Pesadez y Gases',
     seoDescription: 'Despídete del ardor y la pesadez estomacal con Liteplex concentrado botánico digestivo. Registro INVIMA oficial. ¡Pídelo hoy con Pago Contra Entrega!',
     benefits: [
-      'Alivio casi inmediato contra la pesadez estomacal y la acidez',
-      'Promueve una digestión ágil y previene la hinchazón abdominal',
-      'Fórmula líquida concentrada de origen botánico y rápida absorción',
-      'Endulzado con estevia, apto para quienes cuidan su figura y salud',
-      'Delicioso sabor a limón que proporciona frescura y ligereza constante'
+      "Calma de inmediato el ardor en la boca del estómago, las agruras y el reflujo",
+      "Quita la pesadez que te hace sentir lleno como un balón con cualquier comida",
+      "Alivia las paredes del estómago irritadas por grasas, condimentos o estrés",
+      "Líquido concentrado que actúa al instante sin dejar mal sabor en la boca",
+      "Delicioso sabor a limón endulzado con estevia, apto para toda la familia"
     ],
     image: '/assets/products/Liteplex.webp',
     basePrice: 79900,
@@ -1166,29 +1181,24 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
       '/assets/products/liteplex-apoyo-3.webp',
       '/assets/products/liteplex-apoyo-4.webp'
     ],
-    keywords: 'digestión ligera, alivio estomacal, acidez, pesadez, Liteplex, Azenza, jengibre, limón',
+    keywords: 'digestión ligera, alivio estomacal, acidez y reflujo, pesadez tras comer, gases dolorosos, jengibre y menta, estevia, Liteplex original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Té Verde, Jengibre, Limón, Albahaca y Menta',
     componentBenefits: [
-    {
-        'name': 'Té Verde y Jengibre',
-        'benefit': 'Estimulan la digestión lenta y favorecen el bienestar y confort de las paredes estomacales.'
-    },
-    {
-        'name': 'Limón, Albahaca y Menta',
-        'benefit': 'Ayudan a mantener un pH equilibrado en el estómago, aportan frescura y promueven una digestión ligera y sin pesadez.'
-    }
-],
+      {
+        name: "Té Verde y Jengibre",
+        benefit: "Apagan de inmediato el ardor en la boca del estómago, las agruras y el reflujo ácido que sube a la garganta."
+      },
+      {
+        name: "Limón, Albahaca y Menta",
+        benefit: "Desinflaman las paredes del estómago y quitan la pesadez de sentirte lleno como un balón después de comer."
+      }
+    ],
     longTailKeywords: [
-      'mejor suplemento líquido para acelerar el metabolismo',
-      'cómo mejorar la digestión y el metabolismo naturalmente',
-      'suplemento para el bienestar integral y energía metabólica',
-      'beneficios de Liteplex para la quema de calorías diaria',
-      'fórmula balanceada para un metabolismo activo y saludable',
-      'bienestar integral y vitalidad con extractos naturales',
-      'cómo recuperar el ritmo metabólico con calidad certificada',
-      'suplemento para el control de peso natural',
-      'solución natural para el metabolismo lento y pesadez',
-      'salud metabólica integral con ingredientes de alta pureza'
+      'mejor jarabe botánico para quitar la acidez y pesadez estomacal',
+      'cómo desinflamar el estómago después de comer comidas pesadas',
+      'liteplex precio colombia oferta original pago contra entrega',
+      'remedio para el reflujo ácido agruras y llenura pedir por whatsapp',
+      'suplemento digestivo líquido con jengibre y limón registro invima'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Tomar 1 copa (15ml) dos veces al día o diluir en agua.' },
@@ -1216,9 +1226,9 @@ Endulzado naturalmente con estevia, este refrescante suplemento con sabor a lim�
     name: 'Maxlite',
     category: 'salud-bienestar',
     shortDescription: 'Nutrición Estructural y Vitalidad Osteoarticular.',
-    description: `Eleva tu nutrición diaria con Maxlite, la mezcla súper-alimento diseñada para fortalecer tu estructura física y rejuvenecer tu piel desde el interior. Esta fórmula premium combina los péptidos de colágeno hidrolizado con la riqueza proteica de la quinua orgánica, creando un sistema de soporte completo para tus huesos, articulaciones y tejidos. Enriquecido con el potente antioxidante de resveratrol y omega 3-6-9, Maxlite combate el desgaste celular y promueve una elasticidad superior en todo tu cuerpo.
+    description: `El desgaste progresivo de los cartílagos articulares, la pérdida de tonicidad muscular con el paso de los años y la flacidez dérmica generan rigidez física y sensación de debilidad estructural. Maxlite actúa como un súper-alimento reconstructor y antioxidante sistémico que sincroniza péptidos bioactivos de Colágeno Hidrolizado de alta absorción con la riqueza proteica y mineral de la Quinua orgánica andina, potenciado con Resveratrol trans puro, ácidos grasos Omega 3-6-9 y un complejo multivitamínico completo.
 
-Complementado con un amplio espectro de vitaminas esenciales, este suplemento es el aliado perfecto para personas activas que no desean que el paso del tiempo limite su ritmo. Su textura ligera y nutritiva nutre profundamente la fibra capilar y la dermis, devolviéndole la luminosidad al rostro y la firmeza al cabello, todo con el respaldo de una fórmula balanceada de alta pureza.
+A mediano y largo plazo, esta sinergia nutre la matriz celular de los tejidos conectivos, estimula la flexibilidad de ligamentos y articulaciones frente a la fricción diaria, y refuerza la síntesis de queratina en piel, cabello y uñas, consolidando una estructura corporal firme, ágil y protegida frente al envejecimiento oxidativo. Avalado con Registro INVIMA oficial (SD2017-0004051), su generosa presentación de 800g en polvo de fácil disolución asegura una nutrición diaria ligera y de alta pureza para mantener tu ritmo activo sin limitaciones.
 
 ✔️ Cuidado Articular Superior: Colágeno y quinua que restauran la movilidad y protegen contra el desgaste.
 ✔️ Piel y Cabello Radiante: Biotina y vitaminas que fortalecen la queratina natural y reducen la flacidez.
@@ -1226,11 +1236,11 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
     seoTitle: 'Maxlite Colágeno + Quinua: Nutrición y Salud Articular',
     seoDescription: 'Fortalece huesos, articulaciones y masa muscular con Maxlite Colágeno y Quinua. Calidad certificada INVIMA. ¡Compra online con Envío Gratis nacional!',
     benefits: [
-      'Fortalece la estructura ósea y protege las articulaciones del desgaste diario',
-      'Mejora visiblemente la firmeza de la piel y la salud de cabello y uñas',
-      'Aporta una carga de energía natural gracias a los superalimentos como la quinua',
-      'Potente acción antioxidante preventiva con Resveratrol y Omega 3-6-9',
-      'Suplemento nutricional integral ideal para mantener un estilo de vida activo'
+      "Alivia los dolores punzantes en rodillas, cadera y columna por desgaste",
+      "Fortalece los huesos frágiles para evitar fracturas y caminar con seguridad",
+      "Devuelve la firmeza a la piel flácida y nutre el cabello y las uñas quebradizas",
+      "Aporta energía limpia con quinua y Omega 3-6-9 para no terminar el día exhausto",
+      "Alimento completo en polvo que combate el dolor y cuida todo tu cuerpo"
     ],
     image: '/assets/products/Maxlite.webp',
     basePrice: 89900,
@@ -1245,29 +1255,24 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
       '/assets/products/maxlite-apoyo-3.webp',
       '/assets/products/maxlite-apoyo-4.webp'
     ],
-    keywords: 'colágeno ligera, quinua, articulaciones, piel firme, Maxlite, Azenza',
+    keywords: 'colágeno con quinua, péptidos de colágeno, dolor articular, huesos y cartílagos, omega 3 6 9, resveratrol, piel firme, Maxlite original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Péptidos de Colágeno, Resveratrol, Quinua, Omega 3-6-9 y Vitaminas',
     componentBenefits: [
-    {
-        'name': 'Péptidos de Colágeno',
-        'benefit': 'Estructuras de alta absorción que apoyan la producción natural de colágeno y contribuyen al bienestar del sistema óseo.'
-    },
-    {
-        'name': 'Resveratrol y Omegas',
-        'benefit': 'Favorecen la salud cardiovascular y aportan antioxidantes que ayudan a retrasar los efectos del estrés oxidativo en las células.'
-    }
-],
+      {
+        name: "Péptidos de Colágeno",
+        benefit: "Alivian los dolores agudos en rodillas, caderas y columna, reforzando los huesos débiles contra fracturas."
+      },
+      {
+        name: "Resveratrol y Omegas",
+        benefit: "Mejoran la circulación, protegen el corazón y devuelven la firmeza a la piel marchita y flácida."
+      }
+    ],
     longTailKeywords: [
-      'mejor colágeno de alta absorción para deportistas',
-      'cómo fortalecer las articulaciones sin sentir pesadez',
-      'suplemento de colágeno ligero para el cuidado de la piel',
-      'beneficios de Maxlite para el bienestar integral articular',
-      'fórmula balanceada de colágeno hidrolizado premium',
-      'bienestar integral y vitalidad con nutrición de tejidos',
-      'cómo mejorar la movilidad articular con calidad certificada',
-      'colágeno para el rendimiento físico diario',
-      'suplemento natural para evitar el desgaste de cartílagos',
-      'cuidado de la piel y articulaciones con ingredientes puros'
+      'mejor colágeno con quinua para dolor de rodillas y huesos',
+      'cómo regenerar cartílagos desgastados con péptidos de colágeno',
+      'maxlite colágeno azenza precio oferta pago contra entrega colombia',
+      'suplemento para la movilidad articular y piel firme con registro invima',
+      'pedir maxlite colágeno por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Mezclar 1 cucharada (15g) en un vaso de agua o leche.' },
@@ -1296,9 +1301,9 @@ Complementado con un amplio espectro de vitaminas esenciales, este suplemento es
     name: 'Megamac',
     category: 'salud-bienestar',
     shortDescription: 'Potencia Ancestral y Energía Vital Extrema.',
-    description: `Recupera el vigor y la energía que tu cuerpo reclama con Megamac, el revitalizador natural más potente de nuestra línea. Inspirado en la sabiduría de la biodiversidad colombiana, Megamac combina los extractos sagrados de maca, borojó y chontaduro en una fórmula de alta densidad nutricional diseñada para erradicar el cansancio crónico y la debilidad física. Es el combustible ideal para quienes enfrentan jornadas extenuantes, deportistas de alto rendimiento o cualquier persona que busque un impulso real de vitalidad.
+    description: `El agotamiento físico crónico, la falta de empuje para enfrentar exigencias laborales o deportivas y la sensación de pesadez muscular constante merman el rendimiento y desgastan el ánimo vital. Megamac funciona como un bio-revitalizante metabólico ancestral de alta densidad nutricional que integra extractos puros de Maca andina, Borojó silvestre y Chontaduro con proteína de suero lácteo de alto valor biológico y minerales esenciales como Zinc y Magnesio para reactivar la producción endógena de energía a nivel mitocondrial.
 
-Enriquecido con una base proteica de suero y minerales críticos como el magnesio y el zinc, este suplemento no solo mejora tu respuesta física, sino que mantiene tu mente alerta y enfocada bajo presión. Megamac actúa como un tónico integral que fortalece tus defensas y optimiza tu fuerza muscular, permitiéndote alcanzar metas que antes parecían inalcanzables con la seguridad de una nutrición pura y equilibrada.
+A mediano y largo plazo, esta matriz vegetal y proteica estimula la oxigenación celular, combate la debilidad muscular acumulada y acelera la recuperación post-esfuerzo sin generar picos de taquicardia ni nerviosismo, manteniendo el sistema nervioso enfocado y las defensas activas durante toda la jornada. Certificado con Registro INVIMA oficial (RSA-001291-2016), su presentación en polvo fino de 700g se disuelve con rapidez en agua, leche o batidos, ofreciendo un aporte energético limpio, seguro y potente para superar cada desafío diario con verdadero vigor.
 
 ✔️ Energía Explosiva: Maca y Borojó que actúan como motores naturales de vitalidad física y mental.
 ✔️ Recuperación Máxima: Proteína de suero y aminoácidos que reconstruyen el vigor tras el esfuerzo.
@@ -1306,11 +1311,11 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
     seoTitle: 'Megamac Borojó y Maca: Energía Extrema y Vigor Natural',
     seoDescription: 'Recupera tu vigor, potencia física y energía vital con Megamac extracto de Maca y Borojó. Registro INVIMA. ¡Envío 100% Gratis y Pago Contra Entrega!',
     benefits: [
-      'Efecto revitalizante inmediato contra el cansancio físico y mental crónico',
-      'Aumenta significativamente el rendimiento en actividades de alta exigencia',
-      'Fortalece las defensas naturales y aporta minerales críticos para la salud',
-      'Ideal para recuperar el vigor tras largas jornadas de trabajo o entrenamiento',
-      'Fórmula balanceada con superalimentos colombianos de máxima pureza'
+      "Quita la flojera, el agotamiento extremo y la falta de ganas desde la mañana",
+      "Devuelve el vigor y la fuerza física para aguantar jornadas laborales pesadas",
+      "Ayuda al cuerpo a recuperarse del desgaste diario y sube las defensas caídas",
+      "Mejora el ánimo y la vitalidad tanto en hombres como en mujeres",
+      "Fórmula concentrada con maca y superalimentos nutritivos de fácil asimilación"
     ],
     image: '/assets/products/Megamac.webp',
     basePrice: 89900,
@@ -1325,33 +1330,28 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
       '/assets/products/megamac-apoyo-3.webp',
       '/assets/products/megamac-apoyo-4.webp'
     ],
-    keywords: 'energía extrema, vitalidad, rendimiento, Megamac, Azenza',
+    keywords: 'energía extrema, maca y borojó, chontaduro, cansancio físico extremo, vigor masculino y femenino, recuperación muscular, Megamac original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Maca, Borojó, Proteína de Suero, Vitaminas y Minerales',
     componentBenefits: [
-    {
-        'name': 'Maca y Borojó',
-        'benefit': 'Actúan como energizantes naturales que optimizan el rendimiento físico y ayudan a disminuir la fatiga.'
-    },
-    {
-        'name': 'Proteína de Suero',
-        'benefit': 'Nutre la masa muscular.'
-    },
-    {
-        'name': 'Vitaminas y Minerales',
-        'benefit': 'Ideales para recuperar energía en el desgaste diario.'
-    }
-],
+      {
+        name: "Maca y Borojó",
+        benefit: "Quitan la pereza matutina y el agotamiento físico extremo, devolviéndote el vigor y las ganas para rendir todo el día."
+      },
+      {
+        name: "Proteína de Suero",
+        benefit: "Fortalece los músculos cansados y evita que termines el día sin fuerzas."
+      },
+      {
+        name: "Vitaminas y Minerales",
+        benefit: "Recargan el cuerpo tras jornadas pesadas de trabajo o desvelos continuos."
+      }
+    ],
     longTailKeywords: [
-      'mejor suplemento natural para el cansancio físico y mental',
-      'cómo aumentar el rendimiento en días de alta exigencia',
-      'suplemento para la vitalidad extrema y energía duradera',
-      'beneficios de Megamac para el bienestar integral diario',
-      'fórmula balanceada para combatir la fatiga crónica naturalmente',
-      'bienestar integral y potencia con extractos revitalizantes',
-      'cómo recuperar la energía perdida con calidad certificada',
-      'suplemento para el rendimiento deportivo',
-      'solución natural para el agotamiento y falta de concentración',
-      'vitalidad renovada con ingredientes de alta pureza y eficacia'
+      'mejor suplemento natural con maca y borojó para energía extrema',
+      'cómo quitar la fatiga y el agotamiento físico durante el día',
+      'megamac azenza precio colombia oferta pago contra entrega',
+      'suplemento vigorizante con registro invima pedir por whatsapp',
+      'comprar megamac borojó y maca original envio gratis'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver de 1 a 2 cucharadas en un vaso de leche o agua.' },
@@ -1380,9 +1380,9 @@ Enriquecido con una base proteica de suero y minerales críticos como el magnesi
     name: 'Resveratrol',
     category: 'salud-bienestar',
     shortDescription: 'Protección Celular y Ritual de Juventud Longevital.',
-    description: `Detén el paso del tiempo y protege tu salud celular con Resveratrol, el suplemento para longevidad definitivo que combina la ciencia antienvejecimiento más avanzada con la pureza de la naturaleza. Nuestra fórmula en polvo de alta pureza entrega una dosis masiva de resveratrol, potenciada con 10,000 mg de colágeno hidrolizado de fácil absorción. Este sistema antioxidante bicapa actúa neutralizando los radicales libres desde el interior, promoviendo una regeneración profunda que se refleja en una piel más firme, un cabello radiante y una vitalidad renovada.
+    description: `El fotoenvejecimiento prematuro, la pérdida acelerada de elasticidad cutánea y el desgaste vascular provocado por el estrés oxidativo y los radicales libres aceleran el deterioro celular de los tejidos vitales. Resveratrol actúa como un sistema bio-antioxidante y redensificador celular que fusiona Trans-Resveratrol polifenólico de alta pureza con una potente dosis de 10.000 mg de péptidos de Colágeno Hidrolizado, uva liofilizada y extracto de arándanos rojos para neutralizar el daño en las membranas celulares desde el interior.
 
-Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de AZENZA es un excelente coadyudante para tu sistema cardiovascular y cerebral. Es el ritual diario indispensable para quienes buscan una juventud prolongada y un bienestar integral, asegurando que cada célula de tu cuerpo funcione en su nivel óptimo para una vida larga, activa y saludable.
+A mediano y largo plazo, esta sinergia modula la expresión celular vinculada a la longevidad tisular, refuerza la matriz de queratina y colágeno dérmico, y apoya la salud del endotelio cardiovascular y cerebral, traduciéndose en una piel visiblemente más turgente, articulaciones flexibles y una vitalidad sostenida frente al paso de los años. Certificado con Registro INVIMA oficial (SD2014-0003215), su polvo fino de 350g se diluye instantáneamente para brindar un aporte bioactivo puro y seguro, convirtiéndose en el ritual antiedad definitivo para una juventud prolongada.
 
 ✔️ Blindaje Antioxidante: Protege el ADN celular contra el daño oxidativo y el envejecimiento prematuro.
 ✔️ Regeneración de Tejidos: 10,000 mg de colágeno que restauran la turgencia de la piel y salud articular.
@@ -1390,11 +1390,11 @@ Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de AZE
     seoTitle: 'Resveratrol + 10.000mg Colágeno: Rejuvenecimiento Total',
     seoDescription: 'Fórmula antioxidante premium con Resveratrol y 10.000mg de Colágeno para piel joven y vitalidad celular. Registro INVIMA. ¡Paga en casa con Envío Gratis!',
     benefits: [
-      'Potente acción antioxidante que combate el envejecimiento celular prematuro',
-      'Restituye la firmeza y elasticidad de la piel con 10,000 mg de colágeno',
-      'Protege el sistema cardiovascular y cerebral del estrés oxidativo diario',
-      'Fórmula líquida concentrada para una absorción inmediata y efectiva',
-      'Cuidado integral que promueve la longevidad y una vitalidad renovada'
+      "Atenúa las arrugas marcadas, la piel marchita y la flacidez en rostro y cuello",
+      "Mejora la circulación de la sangre, aliviando el cansancio y pesadez en las piernas",
+      "Aporta 10.000 mg de colágeno puro para aliviar articulaciones y nutrir el cabello",
+      "Fórmula líquida concentrada que el cuerpo aprovecha al 100% de inmediato",
+      "Protege el corazón y frena el envejecimiento prematuro de todo tu organismo"
     ],
     image: '/assets/products/Resveratrol.webp',
     basePrice: 79900,
@@ -1409,29 +1409,24 @@ Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de AZE
       '/assets/products/resveratrol-apoyo-3.webp',
       '/assets/products/resveratrol-apoyo-4.webp'
     ],
-    keywords: 'resveratrol, antioxidante, antiedad, cuidado celular, Azenza',
+    keywords: 'resveratrol concentrado, colágeno hidrolizado 10000mg, antioxidante antiedad, arrugas y flacidez, circulación piernas pesadas, arándano y uva, Azenza, comprar resveratrol colombia, pago contra entrega, envío gratis',
     components: 'Resveratrol, Colágeno Hidrolizado (10.000mg), Arándano y Uva liofilizada',
     componentBenefits: [
-    {
-        'name': 'Resveratrol, Arándano y Uva',
-        'benefit': 'Altos en polifenoles que favorecen la salud cardiovascular y ayudan a proteger las células contra el daño oxidativo.'
-    },
-    {
-        'name': '10.000mg de Colágeno',
-        'benefit': 'Alta dosis que apoya la elasticidad y la firmeza natural de la piel.'
-    }
-],
+      {
+        name: "Resveratrol, Arándano y Uva",
+        benefit: "Mejoran la circulación para quitar el dolor y la hinchazón de piernas cansadas, y protegen el corazón."
+      },
+      {
+        name: "10.000mg de Colágeno Hidrolizado",
+        benefit: "Rellenan líneas de expresión profundas, frenan la flacidez y alivian las articulaciones adoloridas."
+      }
+    ],
     longTailKeywords: [
-      'mejor antioxidante natural para promover la vitalidad celular',
-      'cómo proteger las células del daño oxidativo con resveratrol',
-      'suplemento de resveratrol líquido para máxima absorción',
-      'beneficios del resveratrol para el bienestar integral y piel',
-      'fórmula balanceada antiedad con ingredientes naturales',
-      'bienestar integral y longevidad con calidad certificada',
-      'cómo mejorar la salud cardiovascular con resveratrol puro',
-      'suplemento para el cuidado celular diario',
-      'solución natural para combatir los radicales libres efectivamente',
-      'salud y juventud celular con ingredientes de alta pureza'
+      'mejor resveratrol líquido con colágeno para rejuvenecer el rostro',
+      'cómo eliminar arrugas y mejorar la circulación con antioxidantes',
+      'resveratrol azenza precio colombia oferta original pago contra entrega',
+      'suplemento para la flacidez facial y piernas cansadas registro invima',
+      'pedir resveratrol bebible por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Mezclar 1 cucharada (15g) en un vaso de agua o leche.' },
@@ -1460,9 +1455,9 @@ Enriquecido con extractos de arándanos y uva liofilizada, el Resveratrol de AZE
     name: 'Eventone',
     category: 'belleza-integral',
     shortDescription: 'Brillo, Vitalidad y Tono Uniforme para tu Rostro.',
-    description: `Ilumina tu belleza natural con Eventone, el suero perfeccionador de alto impacto diseñado para favorecer la uniformidad y unificar el tono de tu piel. Su fórmula maestra combina el poder regenerador del Bio-Retinol (alternativa natural al retinol tradicional) con la hidratación profunda del ácido hialurónico y extractos calmantes de manzanilla. Eventone es el aliado ideal penetrando las capas profundas de la dermis para equilibrar la apariencia de la piel, reduciendo visiblemente las irregularidades causadas por el sol, la edad o factores externos.
+    description: `La hiperpigmentación por radiación solar, el tono irregular y las líneas de expresión prematuras apagan la vitalidad del rostro, generando un aspecto fatigado y falto de lozanía. Eventone funciona como un suero dermo-regenerador intensivo que sincroniza la acción exfoliante suave del Bio-Retinol botánico con la capacidad higroscópica del Ácido Hialurónico puro y extractos botánicos calmantes de Manzanilla, acelerando la renovación celular epidérmica sin la irritación ni fotosensibilidad de los retinoides agresivos.
 
-Además de su acción iluminadora, Eventone proporciona un efecto revitalizador que suaviza las líneas de expresión y mejora la firmeza de la piel, devolviéndole su luminosidad y brillo natural. Con su textura sedosa de rápida absorción, es el cuidado nocturno ideal para quienes buscan un rostro natural, libre de irregularidades y con una vitalidad renovada.
+A mediano y largo plazo, esta sinergia modula la síntesis de melanina, redensifica la matriz extracelular y atenúa la profundidad de las arrugas, devolviendo al cutis una textura homogénea, firme y con luminosidad natural duradera. Avalado con Registro INVIMA oficial, su fórmula fluida de absorción inmediata no obstruye los poros ni deja residuos grasos, garantizando un ritual nocturno seguro, gentil y de alta precisión dermatológica.
 
 ✔️ Tono Uniforme: Reduce progresivamente la intensidad de las manchas y equilibra el color de la piel.
 ✔️ Hidratación y Relleno: Ácido hialurónico de alto peso molecular que suaviza arrugas y mejora la turgencia.
@@ -1489,7 +1484,7 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
       '/assets/products/eventone-apoyo-3.webp',
       '/assets/products/eventone-apoyo-4.webp'
     ],
-    keywords: 'unificar tono piel, atenuar irregularidades de tono, piel radiante, brillo natural, manchas oscuras, Eventone, Azenza, bio retinol',
+    keywords: 'unificar tono piel, manchas de sol, manchas de la edad, bio retinol, ácido hialurónico puro, piel radiante, brillo natural, manchas oscuras, Eventone original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Bio Retinol, Ácido Hialurónico, Colágeno, B5, Manzanilla y Aloe Vera',
     componentBenefits: [
     {
@@ -1507,12 +1502,11 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
 ],
     longTailKeywords: [
       'mejor crema para unificar el tono de la piel y atenuar manchas faciales',
-      'cómo devolver el brillo natural al rostro de forma segura con bio retinol',
-      'cuidado nocturno para reducir manchas oscuras con ingredientes naturales',
-      'beneficios del ácido hialurónico para una piel radiante y descansada',
-      'fórmula suave para unificar el tono sin irritar la piel sensible',
-      'bienestar integral cutáneo con registro INVIMA certificado en Colombia',
-      'crema facial con bio-retinol para rejuvenecimiento nocturno sin irritación',
+      'cómo aclarar manchas oscuras de sol y melasma con bio retinol',
+      'eventone crema aclaradora azenza precio colombia pago contra entrega',
+      'suero de noche con ácido hialurónico y colágeno con registro invima',
+      'comprar crema despigmentante facial original con envío gratis',
+      'pedir crema antimanchas eventone por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Aplicar únicamente en la noche sobre el rostro limpio, masajeando suavemente hasta su total absorción.' },
@@ -1541,9 +1535,9 @@ Además de su acción iluminadora, Eventone proporciona un efecto revitalizador 
     name: 'Golden Passion',
     category: 'belleza-integral',
     shortDescription: 'Destello Dorado y Bronceado de Lujo sin Sol.',
-    description: `Envuelve tu cuerpo en un resplandor eterno con Golden Passion, el aceite autobronceador de alta gama diseñado para quienes exigen un tono canela perfecto sin los riesgos de la radiación solar. Su fórmula sofisticada, enriquecida con vitamina E y aceites preciosos, se funde instantáneamente con tu piel para revelar un color dorado, uniforme y radiante en cuestión de horas. Golden Passion no solo embellece; hidrata profundamente, dejando un acabado satinado y una suavidad sedosa que resalta cada curva de tu cuerpo.
+    description: `La palidez cutánea, el aspecto desvitalizado y el daño oxidativo acumulado por la exposición a la radiación solar directa dificultan lograr un color saludable sin acelerar el fotoenvejecimiento de la piel. Golden Passion actúa como un sistema nutritivo autobronceador de alta precisión que combina agentes pigmentantes graduales de origen botánico con la riqueza emoliente del Aceite de Argán y la Vitamina E pura, reaccionando de forma natural con los aminoácidos del estrato córneo para desarrollar un tono canela cálido y uniforme en pocas horas.
 
-A diferencia de los autobronceadores convencionales, nuestra fórmula de secado rápido garantiza una aplicación libre de manchas y un aroma delicado que transforma tu rutina de cuidado en un ritual de lujo. Disfruta de una piel luminosa, nutrida y con ese aspecto de "recién llegada de vacaciones" durante todo el año, manteniendo la salud y la vitalidad de tu dermis con la excelencia de AZENZA.
+A largo plazo, sus ácidos grasos esenciales sellan la humedad tisular, neutralizan radicales libres y restauran la barrera lipídica, impidiendo la resequedad o descamación y aportando una textura aterciopelada y satinada. Avalado con Registro INVIMA oficial, su fórmula de secado veloz y acabado no graso se absorbe con rapidez sin transferir manchas a la ropa ni dejar olores químicos, ofreciendo un bronceado dorado sofisticado, duradero y 100% seguro durante todo el año.
 
 ✔️ Tono Canela: Logra un bronceado natural, intenso y uniforme sin necesidad de exposición al sol.
 ✔️ Hidratación Luminosa: Nutre profundamente con vitamina E, evitando la resequedad y aportando un brillo saludable.
@@ -1570,7 +1564,7 @@ A diferencia de los autobronceadores convencionales, nuestra fórmula de secado 
       '/assets/products/golden-passion-apoyo-3.webp',
       '/assets/products/golden-passion-apoyo-4.webp'
     ],
-    keywords: 'autobronceador, brillo piel, nutrición profunda, Golden Passion, Azenza',
+    keywords: 'autobronceador, bronceado sin sol, tono canela uniforme, aceite autobronceador de argán, brillo piel, nutrición profunda, Golden Passion original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'DHA, Vitamina E, Ácido Oleico y Ácido Palmitoleico',
     componentBenefits: [
     {
@@ -1583,16 +1577,12 @@ A diferencia de los autobronceadores convencionales, nuestra fórmula de secado 
     }
 ],
     longTailKeywords: [
-      'mejor aceite corporal para un brillo dorado natural',
-      'cómo nutrir la piel seca y darle luminosidad',
-      'cuidado premium para una piel radiante y suave',
-      'beneficios de Golden Passion para el bienestar integral cutáneo',
-      'fórmula balanceada para una nutrición profunda de la piel',
-      'bienestar integral y vitalidad con brillo saludable',
-      'cómo mejorar la textura de la piel con calidad certificada',
-      'aceite para el cuidado corporal diario',
-      'ritual de belleza natural para una piel luminosa y joven',
-      'nutrición intensa con ingredientes de alta pureza y brillo'
+      'mejor autobronceador sin sol para un tono canela dorado natural',
+      'cómo broncearse rápido sin dañar la piel con rayos solares',
+      'golden passion autobronceador precio colombia pago contra entrega',
+      'loción autobronceadora satinada con vitamina E registro invima',
+      'comprar autobronceador natural con envío gratis a domicilio',
+      'pedir golden passion azenza por whatsapp pago al recibir'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Aplicar uniformemente sobre la piel limpia y seca.' },
@@ -1621,9 +1611,9 @@ A diferencia de los autobronceadores convencionales, nuestra fórmula de secado 
     name: 'Hydrastrik',
     category: 'belleza-integral',
     shortDescription: 'Elásticidad y Nutrición Profunda Para Tu Piel.',
-    description: `Desafía los límites de la elasticidad cutánea con Hydrastrik, el cuidado premium diseñado para blindar tu piel contra las estrías y la flacidez. Esta mezcla de aceites puros de almendras, coco y aguacate ayuda a crear una barrera lipídica de alta resistencia que nutre las fibras de colágeno y elastina en las capas más profundas de la dermis. Hydrastrik es el aliado indispensable durante etapas de cambio físico, ayudando a que tu piel se mantenga firme, flexible y con apariencia saludable.
+    description: `Los cambios bruscos de volumen corporal o las etapas de gestación someten la piel a una tensión extrema que fisura las fibras elásticas, desencadenando la aparición de estrías, tirantez y pérdida progresiva de firmeza. Hydrastrik funciona como un complejo lipídico reestructurante de alto impacto que combina la sinergia de óleos botánicos puros de Almendras dulces, Coco, Semillas de Uva, Jojoba y Aguacate para infundir nutrientes esenciales directamente en la red dérmica de colágeno y elastina.
 
-Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto para un masaje terapéutico que revitaliza los sentidos mientras restaura la suavidad perdida. Con cada aplicación, Hydrastrik infunde vitalidad a la piel deshidratada, devolviéndole su vitalidad natural y una sedosidad incomparable que se siente desde el primer contacto.
+A mediano y largo plazo, esta matriz de lípidos biomiméticos repara la barrera cutánea, incrementa la tolerancia elástica de los tejidos ante la tracción y suaviza visiblemente la textura de marcas previas, preservando una dermis tersa, resistente y flexible. Respaldado con Registro INVIMA oficial, su textura sedosa de rápida penetración dérmica es ideal para masajes terapéuticos diarios sin dejar residuos grasos en las prendas, brindando una nutrición profunda y absoluta seguridad.
 
 ✔️ Elasticidad Blindada: Prepara y fortalece los tejidos para prevenir rupturas y marcas por estiramiento.
 ✔️ Regeneración Botánica: Aceites de grado superior que aceleran la renovación celular y suavizan cicatrices.
@@ -1650,7 +1640,7 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
       '/assets/products/hydrastrik-apoyo-3.webp',
       '/assets/products/hydrastrik-apoyo-4.webp'
     ],
-    keywords: 'hidratación intensiva, piel seca, fresapoya, Hydrastrik, Azenza',
+    keywords: 'aceite anti estrías, estrías de embarazo, elasticidad piel, aceite de almendras y jojoba, hidratación profunda, piel seca tirante, flacidez corporal, Hydrastrik original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Almendras, Semillas de Uva, Jojoba, Coco, Mango y Aguacate',
     componentBenefits: [
     {
@@ -1663,16 +1653,12 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
     }
 ],
     longTailKeywords: [
-      'mejor crema hidratante para piel muy seca y sensible',
-      'cómo mantener la piel hidratada durante 24 horas',
-      'cuidado para recuperar la elasticidad de la piel naturalmente',
-      'beneficios de Hydrastrik para el bienestar integral facial',
-      'fórmula balanceada para una hidratación profunda y fresca',
-      'bienestar integral y vitalidad cutánea con hidratación intensa',
-      'cómo calmar la sed de la piel con calidad certificada',
-      'crema para el cuidado de pieles secas',
-      'solución natural para la descamación y falta de humedad',
-      'hidratación facial segura con ingredientes de alta pureza'
+      'mejor aceite antiestrías para prevenir y atenuar marcas de embarazo',
+      'cómo recuperar la elasticidad de la piel con aceites botánicos puros',
+      'hydrastrik aceite corporal precio colombia pago contra entrega',
+      'aceite regenerador para estrías rojas y blancas con registro invima',
+      'comprar aceite para masaje corporal reafirmante con envío gratis',
+      'pedir hydrastrik azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Aplicar sobre la piel limpia para hidratar profundamente.' },
@@ -1701,9 +1687,9 @@ Su textura fluida y su aroma envolvente lo convierten en el complemento perfecto
     name: 'Miskinne',
     category: 'belleza-integral',
     shortDescription: 'Perfeccionador Cutáneo y Escudo de Suavidad Calmante.',
-    description: `Redescubre la claridad y la suavidad de un rostro perfecto con Miskinne, la crema perfeccionadora diseñada para pieles que exigen un cuidado extra-delicado. Su fórmula magistral, centrada en las propiedades calmantes de la avena natural y la caléndula orgánica, actúa como un escudo protector que alivia la irritación mientras trabaja activamente en unificar el tono de la piel. Miskinne penetra suavemente para atenuar irregularidades pigmentarias, devolviéndole a tu cutis su luminosidad original y una textura de seda.
+    description: `La hipersensibilidad cutánea, las rojeces frecuentes y la aparición de manchas o sombras por fricción y daño ambiental debilitan la barrera dérmica, generando un aspecto disparejo, áspero y reactivo. Miskinne funciona como una emulsión dermo-reparadora botánica de alta tolerancia que sincroniza las propiedades antiinflamatorias y descongestionantes de la Avena coloidal y la Caléndula orgánica con la nutrición oclusiva beneficiosa de la Manteca de Karité y la Vitamina E pura.
 
-Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombreado, esta crema proporciona una hidratación profunda que calma la piel estresada por factores ambientales. Con su aroma limpio y reconfortante, Miskinne transforma tu rutina nocturna en un acto de purificación y equilibrio, asegurando que cada mañana despiertes con una piel visiblemente más radiante, descansada y uniforme.
+A mediano y largo plazo, este sistema botánico repara el manto lipídico superficial, atenúa la hiperpigmentación difusa y previene la reactividad ante cambios climáticos, consolidando un cutis sereno, visiblemente uniforme, descansado y de textura sedosa. Respaldada con Registro INVIMA oficial (NSOC85321-18CO), su textura cremosa se funde suavemente al aplicarse de noche sin dejar residuos pesados ni sensación grasa, brindando máxima calma y protección dérmica familiar.
 
 ✔️ Tono Sublime: Reduce progresivamente la apariencia de manchas sutiles y zonas sombreadas.
 ✔️ Calma Absoluta: La caléndula y la avena alivian instantáneamente la rojez y la sensibilidad cutánea.
@@ -1730,7 +1716,7 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
       '/assets/products/miskinne-apoyo-3.webp',
       '/assets/products/miskinne-apoyo-4.webp'
     ],
-    keywords: 'cuidado piel, suavidad, protección diaria, Miskinne, Azenza',
+    keywords: 'crema piel sensible, caléndula y avena, manchas por fricción, rojeces en la piel, resequedad extrema, dermatitis leve, hidratación profunda, Miskinne original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Avena, Caléndula, Manteca de Karité, Vitamina E',
     componentBenefits: [
     {
@@ -1743,16 +1729,12 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
     }
 ],
     longTailKeywords: [
-      'mejor crema corporal para pieles delicadas y sensibles',
-      'cómo proteger la piel de las agresiones diarias naturalmente',
-      'cuidado para mantener la suavidad extrema de la piel',
-      'beneficios de Miskinne para el bienestar integral corporal',
-      'fórmula balanceada con ingredientes naturales para el cuidado diario',
-      'bienestar integral y vitalidad con una piel siempre joven',
-      'cómo mejorar la salud cutánea con calidad certificada',
-      'crema para el cuidado de toda la familia',
-      'solución natural para la piel áspera y falta de fresapoya',
-      'protección cutánea segura con ingredientes de alta pureza'
+      'mejor crema botánica para calmar la piel sensible e irritada',
+      'cómo atenuar manchas por fricción y rozaduras con caléndula y avena',
+      'miskinne crema reparadora azenza precio colombia pago contra entrega',
+      'crema hidratante nutritiva para piel áspera y reactiva registro invima',
+      'comprar crema corporal y facial de avena pura con envío gratis',
+      'pedir miskinne azenza por whatsapp pago al recibir'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Aplicar en la noche y retirar con abundante agua al día siguiente.' },
@@ -1781,9 +1763,9 @@ Especialmente eficaz para suavizar zonas propensas a la resequedad y el sombread
     name: 'Tónico Capilar',
     category: 'belleza-integral',
     shortDescription: 'Densificadora Capilar y Ritual de Crecimiento Avanzado.',
-    description: `Recupera la abundancia y la fuerza de tu cabello con el Tónico Capilar, la joya de la ciencia capilar de AZENZA. Este nutriente de alto impacto está formulado con una concentración revolucionaria de Trichogen al 8% y un complejo de 16 extractos botánicos puros que trabajan en sinergia para revitalizar los folículos. Diseñado para combatir la caída, este tónico no solo frena el debilitamiento, sino que favorece el nacimiento de hebras más gruesas, densas y resistentes.
+    description: `El debilitamiento folicular acelerado, la caída notoria durante el lavado o peinado y la pérdida visible de densidad en cuero cabelludo, cejas o barba reflejan una asfixia nutricional de la raíz capilar. Nuestro Tónico Capilar actúa como un tratamiento tricológico bioestimulante que combina Trichogen al 8% (complejo bioactivo de sulfopéptidos, aminoácidos y zinc) con la acción vasodilatadora y antioxidante de la Cebolla roja, el Ginkgo Biloba y 14 extractos botánicos adicionales para reactivar la microcirculación en el bulbo piloso.
 
-Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisión cejas y barba, su aplicación en spray garantiza que los nutrientes premium como la cebolla y el ginkgo biloba penetren profundamente. Es el sistema definitivo para transformar un cabello frágil en una melena (o barba) llena de vigor, brillo y vitalidad, con resultados respaldados por la biotecnología capilar más avanzada.
+A mediano y largo plazo, esta sinergia prolonga la fase anágena del ciclo capilar, refuerza el anclaje de las hebras en la papila dérmica y estimula el engrosamiento progresivo del cabello naciente, combatiendo el afinamiento y la pérdida de volumen. Certificado con Registro INVIMA oficial (NSOC02559-20CO), su presentación en spray de textura ligera se absorbe en segundos sin apelmazar ni dejar sensación grasa, facilitando una aplicación diaria práctica, limpia y de máxima biodisponibilidad.
 
 ✔️ Arquitectura Capilar: Fortalece el anclaje del cabello reduciendo la caída y el quiebre de forma visible.
 ✔️ Densidad y Crecimiento: El Trichogen al 8% estimula la zona de crecimiento para un mayor volumen folicular.
@@ -1810,7 +1792,7 @@ Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisi�
       '/assets/products/tonico-apoyo-3.webp',
       '/assets/products/tonico-apoyo-4.webp'
     ],
-    keywords: 'caída cabello, crecimiento capilar, fortalecer raíz, tónico capilar, Azenza',
+    keywords: 'caída del cabello, alopecia, crecimiento capilar rápido, engrosar cabello fino, trichogen al 8, extracto de cebolla y ginkgo biloba, barba y cejas pobladas, tónico capilar original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Trichogen al 8%, Cebolla, Ginkgo Biloba y 16 extractos herbales',
     componentBenefits: [
     {
@@ -1823,16 +1805,12 @@ Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisi�
     }
 ],
     longTailKeywords: [
-      'mejor tónico capilar para evitar la caída del cabello',
-      'cómo estimular el crecimiento del cabello de forma natural',
-      'cuidado para fortalecer la raíz del pelo y dar brillo',
-      'beneficios del tónico capilar para el bienestar integral del cuero cabelludo',
-      'fórmula balanceada para un cabello más fuerte y sedoso',
-      'bienestar integral y vitalidad capilar con calidad certificada',
-      'cómo recuperar el volumen del cabello con ingredientes naturales',
-      'tónico para el cuidado capilar diario',
-      'solución natural para el cabello débil y quebradizo',
-      'crecimiento saludable del cabello con ingredientes de alta pureza'
+      'mejor tónico capilar con trichogen al 8 para frenar la caída del cabello',
+      'cómo hacer crecer cabello nuevo y rellenar entradas o barba',
+      'tónico capilar azenza precio colombia pago contra entrega',
+      'loción capilar anticaída con registro invima y envío gratis',
+      'tratamiento para el crecimiento del pelo con cebolla y ginkgo biloba',
+      'pedir tónico capilar por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Aplicar directamente en el cuero cabelludo y masajear.' },
@@ -1860,9 +1838,9 @@ Perfecto para revitalizar el cuero cabelludo, así como para poblar con precisi�
     name: 'Tufoff',
     category: 'belleza-integral',
     shortDescription: 'Refresca el aliento al instante con Ciencia Natural.',
-    description: `Descubre la confianza absoluta en cada palabra con Tufoff, la solución avanzada diseñada para neutralizar el mal aliento desde su origen. Esta innovadora fórmula combina la frescura criogénica del aceite de menta con el poder neutralizador del bicarbonato de sodio y la canela. A diferencia de los caramelos convencionales, Tufoff no solapa los olores; actúa mediante una reacción química gentil que descompone los compuestos volátiles de azufre, responsables del mal olor tras consumir tabaco, alcohol o alimentos fuertes.
+    description: `El mal aliento repentino provocado por café, condimentos fuertes, tabaco o sequedad bucal genera incomodidad y desconfianza en interacciones cercanas, mientras que los dulces comerciales solo camuflan el problema añadiendo azúcares nocivos. Tufoff actúa como un neutralizador oral biológico y prebiótico que combina la acción alcalinizante del Bicarbonato de Sodio con Aceites esenciales puros de Menta y Canela, descomponiendo los compuestos volátiles de azufre generados por las bacterias bucales directamente en su origen químico.
 
-Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura inmediata, sino que contribuye a mantener el equilibrio saludable de la microbiota bucal. Sin azúcar y endulzado exclusivamente con eritritol, es el aliado perfecto para tu salud dental y tu seguridad en cualquier interacción social o profesional.
+Enriquecido con Inulina prebiótica, fortalece el equilibrio de la microbiota oral saludable a largo plazo y previene la proliferación de agentes causantes de la halitosis recurrente, protegiendo las encías y el esmalte al ser 100% libre de azúcares y endulzado con Eritritol apto para diabéticos. Certificado con Registro INVIMA oficial (NSA-0009109-2020), su presentación en caramelos duros de 75g se disuelve lentamente para garantizar una frescura profunda, discreta y de prolongada duración en cualquier momento clave.
 
 ✔️ Acción Criogénica Inmediata: Sensación de limpieza profunda que neutraliza olores de comida, tabaco y café al instante.
 ✔️ Equilibrio Prebiótico: Contiene inulina para proteger la salud de tu boca mientras refresca tu aliento.
@@ -1889,7 +1867,7 @@ Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura in
       '/assets/products/tufoff-apoyo-3.webp',
       '/assets/products/tufoff-apoyo-4.webp'
     ],
-    keywords: 'mal aliento, frescura bucal, menta canela, Tufoff, Azenza, higiene oral rápida',
+    keywords: 'mal aliento estomacal, halitosis, mal aliento por tabaco o café, bicarbonato para la boca, menta y canela, dulces sin azúcar con eritritol, frescura bucal inmediata, inulina prebiótica, Tufoff original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Eritritol, Inulina, Aceite de Menta, Canela y Bicarbonato de Sodio',
     componentBenefits: [
     {
@@ -1906,13 +1884,12 @@ Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura in
     }
 ],
     longTailKeywords: [
-      'mejor producto para neutralizar el mal aliento de forma inmediata',
-      'cómo mantener un aliento fresco durante todo el día naturalmente',
-      'dulces sin azúcar para neutralizar el olor a comida en la boca',
-      'beneficios del bicarbonato de sodio para la higiene bucal rápida',
-      'fórmula natural para refrescar el aliento sin dañar el esmalte dental',
-      'bienestar integral y confianza personal con aliento fresco premium',
-      'solución discreta para el mal aliento después de fumar o comer ajo',
+      'mejor producto para quitar el mal aliento estomacal al instante',
+      'cómo eliminar el mal aliento por café o cigarrillo de forma natural',
+      'tufoff azenza precio colombia oferta pago contra entrega',
+      'dulces para el mal aliento con bicarbonato sin azúcar registro invima',
+      'comprar caramelos refrescantes para la halitosis con envío gratis',
+      'pedir tufoff por whatsapp a domicilio pago al recibir'
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver un dulce lentamente en la boca después de cada comida o según necesites refrescar tu aliento.' },
@@ -1942,9 +1919,9 @@ Enriquecido con inulina (prebiótico natural), Tufoff no solo brinda frescura in
     name: 'Akha (Crema Voluminizante)',
     category: 'salud-sexual',
     shortDescription: 'Firmeza, Elasticidad y Vigor para tu Piel.',
-    description: `Crema voluminizante de alto poder regenerador diseñada para mejorar la apariencia, firmeza y elasticidad de la piel en áreas específicas. Formulada con una rica mezcla de extractos botánicos como Acmella Oleracea (conocida por su efecto tensor natural), Maca y Ginseng, Akha proporciona una hidratación profunda que ayuda a recuperar el vigor cutáneo y suavizar la textura de la piel.
+    description: `La pérdida de tonicidad, la resequedad y el desgaste en áreas cutáneas de alta sensibilidad generan falta de vigor y pérdida de turgencia con el paso del tiempo. Akha funciona como un sistema botánico de acción tensora avanzada, integrando la sinergia bioactiva de Acmella Oleracea (efecto tensor natural) con Maca andina, Ginseng y L-Arginina para reactivar la microcirculación dérmica y promover la elasticidad tisular desde la raíz.
 
-Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola contra factores externos y el envejecimiento prematuro. Ideal para quienes buscan una apariencia más saludable, firme y elástica sin dejar sensación grasa, ya que su absorción es inmediata y refrescante.
+A largo plazo, su acción nutritiva estimula la regeneración celular y fortalece la barrera lipídica, traduciéndose en una piel visiblemente más firme, densa y resistente frente al envejecimiento prematuro. Su formulación certificada con Registro INVIMA asegura pureza y máxima biodisponibilidad tópica, con una textura ligera de absorción inmediata que no deja residuos grasos ni mancha las prendas.
 
 ✔️ Efecto Tensor Natural: Ayuda a mejorar la firmeza y el tono de la piel de forma progresiva.
 ✔️ Nutrición Profunda: Enriquecida con Zinc y L-Arginina para promover la renovación celular y vitalidad.
@@ -1970,7 +1947,7 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
       '/assets/products/akha-apoyo-3.webp',
       '/assets/products/akha-apoyo-4.webp'
     ],
-    keywords: 'botox natural, voluminizante, firmeza, Akha, Azenza',
+    keywords: 'crema voluminizante masculina, vigor masculino, firmeza dérmica íntima, acmella oleracea, maca y ginseng, l arginina, tonicidad y elasticidad, Akha crema original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Extracto de Acmella Oleracea, Maca, Ginseng, Zinc, L-Arginina',
     componentBenefits: [
     {
@@ -1987,16 +1964,12 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
     }
 ],
     longTailKeywords: [
-      'mejor crema natural para mejorar la firmeza de la piel en hombres',
-      'cómo recuperar la elasticidad cutánea con extractos de maca y ginseng',
-      'crema hidratante con acmella oleracea para efecto tensor inmediato',
-      'beneficios de Akha para la nutrición y vigor de la piel masculina',
-      'fórmula botánica para una piel más saludable, elástica y rejuvenecida',
-      'bienestar integral y vitalidad dérmica con registro INVIMA certificado',
-      'cómo prevenir el envejecimiento prematuro de la piel de forma segura',
-      'crema para la firmeza del cuerpo con ingredientes naturales premium',
-      'solución efectiva para la piel opaca y falta de tono muscular cutáneo',
-      'vitalidad y elasticidad segura con ingredientes de alta pureza botánica'
+      'mejor crema voluminizante y reafirmante masculina con acmella y maca',
+      'cómo mejorar la firmeza y tonicidad dérmica masculina naturalmente',
+      'akha crema voluminizante azenza precio colombia pago contra entrega',
+      'crema íntima masculina con l arginina y ginseng registro invima',
+      'comprar crema akha original con envío gratis y empaque discreto',
+      'pedir crema masculina akha por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar Akha para obtener resultados visibles?', a: 'Se recomienda aplicar en la zona deseada mediante masajes circulares firmes dos veces al día, promoviendo la absorción y el equilibrio natural.' },
@@ -2025,9 +1998,9 @@ Su fórmula avanzada refuerza la barrera natural de la piel, protegiéndola cont
     name: 'Derman (Mascarilla Íntima)',
     category: 'salud-sexual',
     shortDescription: 'Protección, Frescura y Equilibrio para tu Zona Íntima.',
-    description: `Derman es una mascarilla íntima en crema diseñada científicamente para brindar higiene, protección y confort absoluto en las áreas más delicadas del cuerpo. Su fórmula combina las propiedades regeneradoras de la Caléndula con el poder hidratante del Aloe Vera y la Manzanilla, creando una barrera protectora que mantiene el equilibrio natural de la flora y previene irritaciones comunes tras la depilación o el uso de ropa ajustada.
+    description: `El ardor post-depilación, la fricción constante de la ropa ajustada y la aparición de vellos encarnados comprometen el confort y la integridad de la piel íntima externa. Derman constituye un sistema dermocosmético reparador que sincroniza la acción queratolítica suave del Ácido Salicílico con las propiedades emolientes de la Lanolina, la Arginina y el Ácido Undecilénico para descongestionar los folículos y calmar la reactividad cutánea de inmediato.
 
-Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los brotes cutáneos y proporciona una sensación duradera de frescura y suavidad, permitiéndote sentirte cómoda y segura en todo momento con la garantía de una fórmula gentil y probada.
+Su integración regular en la rutina fortalece la barrera de defensa dérmica, previniendo foliculitis recurrente y preservando la elasticidad y suavidad de los tejidos sin alterar el equilibrio fisiológico de la zona. Certificada con Registro INVIMA, su textura en crema de rápida absorción no deja humedad residual ni mancha las prendas, brindando una sensación reconfortante de frescura y protección continua.
 
 ✔️ Adiós a la Irritación: Calma la piel sensible después del afeitado o depilación con láser/cera.
 ✔️ Protección Natural: Ayuda a mantener el pH equilibrado y la salud de la piel en áreas íntimas.
@@ -2054,7 +2027,7 @@ Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los
       '/assets/products/derman-apoyo-3.webp',
       '/assets/products/derman-apoyo-4.webp'
     ],
-    keywords: 'bienestar íntimo, arginina, ácido salicílico, salud íntima, Derman, Azenza',
+    keywords: 'mascarilla íntima, irritación post depilación, vellos encarnados, foliculitis íntima, ácido salicílico y arginina, calmar ardor íntimo, cuidado post afeitado, Derman original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Ácido Salicílico, Arginina, Ácido Undecilénico y Lanolina',
     componentBenefits: [
     {
@@ -2071,16 +2044,12 @@ Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los
     }
 ],
     longTailKeywords: [
-      'mejor mascarilla íntima para prevenir irritación tras la depilación con cera',
-      'cómo mantener el pH balanceado y la frescura en la zona delicada femenina',
-      'cuidado especializado para la salud íntima natural con caléndula y aloe vera',
-      'beneficios de Derman para el bienestar integral y confort de la mujer',
-      'fórmula suave para proteger la piel después del rasurado o láser íntimo',
-      'bienestar integral y vitalidad en el cuidado diario de la zona genital',
-      'cómo recuperar la confianza íntima con productos de calidad certificada',
-      'mascarilla hidratante para la higiene íntima calmante y protectora',
-      'solución natural para el ardor y la picazón en áreas sensibles externas',
-      'salud íntima segura con ingredientes de alta pureza y suavidad extrema'
+      'mejor crema íntima para calmar la irritación y ardor post depilación',
+      'cómo evitar vellos encarnados y granitos en la entrepierna tras rasurarse',
+      'derman mascarilla íntima azenza precio colombia pago contra entrega',
+      'crema calmante para zona íntima con ácido salicílico y registro invima',
+      'comprar crema post afeitado íntimo femenino con envío gratis discreto',
+      'pedir derman azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Derman ayuda realmente tras la depilación?', a: 'Absolutamente, sus extractos de caléndula calman el ardor y regeneran la piel sensible post-depilación, brindando bienestar instantáneo.' },
@@ -2109,9 +2078,9 @@ Ideal para el cuidado diario, Derman calma instantáneamente el ardor, evita los
     name: 'Haydar (Bebida Energizante)',
     category: 'salud-sexual',
     shortDescription: 'Energía Explosiva y Vitalidad en un Solo Sorbo.',
-    description: `Haydar es una bebida energizante concentrada que extrae el máximo potencial revitalizante del Borojó y la Maca para brindarte un impulso inmediato de energía cuando más lo necesitas. Su fórmula está diseñada para deportistas y personas con alta exigencia diaria que buscan un vigor excepcional, mayor resistencia física y una claridad mental superior sin los efectos negativos de las bebidas comerciales cargadas de azúcar.
+    description: `Las jornadas de alta demanda física y mental provocan agotamiento acumulado, pérdida de vigor y descensos abruptos de energía en momentos que exigen máxima firmeza y concentración. Haydar actúa como un sistema líquido de reactivación celular y vascular que combina la potencia bioactiva del Borojó y la Maca con la acción sinérgica de Guaraná, Taurina y Vitaminas del Complejo B, optimizando la generación de energía limpia a nivel mitocondrial.
 
-Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, sino que agudiza tus sentidos y mejora el enfoque, permitiéndote rendir al máximo en el gimnasio, en el trabajo o en tus encuentros personales con total seguridad y confianza.
+Su efecto sostenido favorece la resistencia física prolongada y la agudeza mental, evitando los picos de nerviosismo y los bajones bruscos característicos de las bebidas estimulantes azucaradas. Cuenta con Registro INVIMA y un refrescante sabor a mora azul en envase práctico de 240ml, garantizando una absorción líquida ultra-rápida en menos de media hora para rendir al máximo con absoluta confianza y seguridad.
 
 ✔️ Impulso Natural: Borojó y Maca seleccionados para elevar el ánimo y la fuerza física al instante.
 ✔️ Mente Despierta: Vitaminas B que optimizan la concentración mental y el procesamiento de energía.
@@ -2137,7 +2106,7 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
       '/assets/products/haydar-apoyo-3.webp',
       '/assets/products/haydar-apoyo-4.webp'
     ],
-    keywords: 'vitalidad extra, ánimo, rendimiento, Haydar, Azenza',
+    keywords: 'bebida energizante natural, vigor masculino y físico, borojó y maca líquida, guaraná y taurina, pre entreno sin taquicardia, energía inmediata mora azul, cansancio extremo, Haydar original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Borojó, Maca, Taurina, Cafeína, Guaraná y Vitaminas del Complejo B',
     componentBenefits: [
     {
@@ -2154,16 +2123,12 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
     }
 ],
     longTailKeywords: [
-      'mejor bebida energizante natural con borojó y maca para rendimiento',
-      'cómo obtener energía explosiva de forma saludable sin exceso de azúcar',
-      'energizante líquido con borojó para enfoque mental y vigor físico',
-      'beneficios de Haydar para el bienestar integral y vitalidad masculina',
-      'fórmula balanceada para un impulso de vigor inmediato antes del deporte',
-      'bienestar integral y energía renovada con suplementos líquidos naturales',
-      'cómo mejorar el desempeño físico diario con nutrición de calidad certificada',
-      'bebida para la vitalidad extrema y concentración en días de cansancio',
-      'solución natural para la falta de ánimo y bajo rendimiento energético',
-      'energía y vitalidad segura con ingredientes de alta pureza y registro INVIMA'
+      'mejor bebida energizante natural con borojó y maca para rendimiento físico',
+      'cómo tener energía explosiva y resistencia sin bajones ni taquicardia',
+      'haydar bebida energizante azenza precio colombia pago contra entrega',
+      'suplemento líquido vigorizante con registro invima y envío gratis',
+      'bebida pre entreno con guaraná y complejo B comprar online',
+      'pedir energizante haydar por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cuánto tiempo tarda en hacer efecto el energizante Haydar?', a: 'Gracias a su formato líquido, los extractos de maca y borojó se absorben rápido, sintiendo vitalidad en unos 20 a 30 minutos.' },
@@ -2192,9 +2157,9 @@ Enriquecida con Vitaminas del Complejo B, Haydar no solo despierta tu cuerpo, si
     name: 'Instant Virgin (Gel Íntimo)',
     category: 'salud-sexual',
     shortDescription: 'Renovación, Firmeza y Plenitud Femenina.',
-    description: `Redescubre tu seguridad íntima con Instant Virgin, el gel revitalizante de vanguardia formulado para brindar una sensación inmediata de bienestar y plenitud. Diseñado bajo rigurosos estándares biotecnológicos, este gel combina las propiedades regeneradoras del Aloe Vera con la acción vasotónica de sales minerales puras y D-Pantenol. Su aplicación proporciona un efecto tonificante y de contracción natural que ayuda a recuperar la sensibilidad y el tono de la zona íntima, devolviéndote el control y la confianza en tus momentos de mayor conexión.
+    description: `Las variaciones hormonales, el postparto o el desgaste tisular pueden ocasionar pérdida de tono, resequedad molesta y menor sensibilidad en la zona íntima, afectando la espontaneidad y la plenitud en momentos de cercanía. Instant Virgin es un hidro-gel biotecnológico de acción vasotónica y acondicionadora que integra la sinergia botánica de Aloe Vera concentrado con D-Pantenol y Sulfato de Aluminio, generando una tonificación y sensación de contracción natural inmediata al contacto.
 
-Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada barrera de la flora genital, ofreciendo una hidratación profunda que previene la resequedad y el malestar. Es la solución ideal para mujeres que desean revitalizar su feminidad, especialmente tras el parto o cambios hormonales, permitiendo vivir una sexualidad plena, cómoda y segura.
+A mediano y largo plazo, sus activos humectantes preservan la elasticidad dérmica y refuerzan la hidratación epitelial, respetando escrupulosamente el pH fisiológico y la armonía de la flora externa para evitar irritaciones. Avalado con Registro INVIMA oficial, es una fórmula a base de agua completamente compatible con preservativos, de rápida absorción dérmica que no deja sensación pegajosa ni manchas, garantizando máxima confianza y bienestar femenino.
 
 ✔️ Tonificación Inmediata: Efecto de contracción natural que mejora la percepción y sensibilidad íntima.
 ✔️ Cuidado y Confort: Hidratación superior con Aloe Vera para una piel suave y protegida de irritaciones.
@@ -2215,13 +2180,13 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
     invima: '2021DM-0024065',
     googleCategory: 'Health & Beauty > Personal Care > Intimate Care',
     googleTitle: 'Gel Hidratante y Tonificante Íntimo Femenino 30ml - Azenza',
-    googleDescription: 'Gel cosmético de uso tópico de vanguardia para la higiene, hidratación y cuidado íntimo femenino diario. Formulado con extractos botánicos de aloe vera, d-pantenol, sales minerales puras y agentes emolientes con pH balanceado y alta tolerancia dermatológica. Diseñado para proporcionar una experiencia superior de frescura, suavidad y bienestar en la rutina de cuidado corporal y personal. Cada componente contribuye de manera específica: el aloe vera y el d-pantenol brindan una hidratación profunda y reparadora que protege la barrera cutánea de zonas delicadas; las sales minerales y agentes tensoactivos naturales aportan un efecto tonificante y reafirmante que mejora la percepción y elasticidad íntima. Su uso continuo mejora notablemente el confort personal, restaura la hidratación natural frente a cambios hormonales o postparto, y devuelve la confianza en la rutina diaria. Asimismo, ayuda a evitar la molesta resequedad cutánea, previene irritaciones por fricción y cuida la flora natural de forma respetuosa. Producto desarrollado con altos estándares dermatológicos y respaldo INVIMA, ofreciendo una fórmula discreta, segura, de rápida absorción y 100% compatible con tu bienestar íntimo.',
+    googleDescription: 'Gel botánico de cuidado íntimo formulado con Aloe Vera, D-Pantenol y minerales naturales. Proporciona hidratación profunda, frescura y tonificación con pH balanceado. Cuenta con Registro INVIMA.',
     condition: 'new',
     supportImages: [
       '/assets/products/instant-virgin-apoyo-1.webp',
       '/assets/products/instant-virgin-apoyo-2.webp'
     ],
-    keywords: 'confianza femenina, bienestar íntimo, salud sexual mujer, Instant Virgin, Azenza, firmeza vaginal natural',
+    keywords: 'gel íntimo femenino, estrechamiento íntimo, firmeza vaginal natural, resequedad post parto, aloe vera íntimo, d pantenol, lubricación y confort, Instant Virgin original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Aloe Vera, D-Pantenol y Sulfato de Aluminio',
     componentBenefits: [
     {
@@ -2234,13 +2199,12 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
     }
 ],
     longTailKeywords: [
-      'mejor gel para recuperar la sensación de firmeza íntima tras el parto',
-      'cómo mejorar el bienestar sexual y la plenitud de la mujer naturalmente',
-      'cuidado especializado para la salud sexual femenina con aloe vera',
-      'beneficios de Instant Virgin para recuperar la confianza en pareja',
-      'fórmula balanceada para el cuidado, tono y confort íntimo de la mujer',
-      'bienestar integral y vitalidad en la vida sexual femenina madura',
-      'cómo sentirse plena y segura con productos de calidad certificada INVIMA',
+      'mejor gel astringente y reafirmante íntimo femenino post parto',
+      'cómo recuperar la tonicidad y sensibilidad íntima de forma natural',
+      'instant virgin gel azenza precio colombia pago contra entrega',
+      'gel íntimo tonificante a base de agua con registro invima',
+      'comprar gel instant virgin original con envío gratis y empaque discreto',
+      'pedir instant virgin azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Instant Virgin es de uso externo solamente?', a: 'Sí, su aplicación es tópica en la zona íntima externa para brindar bienestar integral y una sensación de firmeza.' },
@@ -2269,9 +2233,9 @@ Su fórmula fluida de pH balanceado ha sido optimizada para respetar la delicada
     name: 'Mammoth (Crema Voluminizante)',
     category: 'salud-sexual',
     shortDescription: 'Firmeza, Elasticidad y Apariencia Saludable para tu Piel.',
-    description: `Mammoth es una crema corporal de alto desempeño diseñada para mejorar visiblemente la apariencia y elasticidad de la piel en zonas que requieren mayor firmeza. Su fórmula avanzada combina el efecto tensor del extracto de Acmella Oleracea con la nutrición profunda de la Vitamina E y el aceite de parafina USP, creando un cuidado que suaviza irregularidades y devuelve la lozanía a la piel.
+    description: `La piel sometida a tensión continua o cambios de volumen suele experimentar flacidez, asperezas y pérdida de elasticidad tisular, afectando el vigor y la textura natural del área. Mammoth constituye un tratamiento dermocosmético estructurante formulado con el poder tensor bioactivo de la Acmella Oleracea en sinergia con Aceite de Parafina USP de grado dermatológico y Vitamina E pura, diseñado para tonificar la superficie dérmica y reactivar la elasticidad celular.
 
-Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textura cutánea, proporcionando una hidratación extrema que evita la resequedad y el aspecto opaco. Su consistencia profesional permite una aplicación fluida y una absorción completa sin dejar residuos grasos, haciendo que tu piel luzca y se sienta más fuerte y revitalizada.
+Su uso sostenido mediante masaje activa la microcirculación superficial y nutre intensamente las capas dérmicas, promoviendo una resistencia superior frente a la resequedad y devolviendo una apariencia turgente, uniforme y tersa. Avalada con Registro INVIMA oficial, su emulsión profesional de absorción inmediata no deja residuos grasos ni mancha la ropa, ofreciendo un cuidado diario de alta pureza y absoluta confianza.
 
 ✔️ Efecto Volumen y Firmeza: Mejora la textura y el tono de la piel en zonas críticas con uso constante.
 ✔️ Hidratación Extrema: Nutre las capas profundas de la piel, manteniéndola elástica y flexible.
@@ -2297,7 +2261,7 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
       '/assets/products/mammoth-apoyo-3.webp',
       '/assets/products/mammoth-apoyo-4.webp'
     ],
-    keywords: 'fuerza masculina, rendimiento, vitalidad, Mamooth, Azenza',
+    keywords: 'crema voluminizante, crema reafirmante corporal, acmella oleracea, tonicidad tisular, vitamina E pura, flacidez en la piel, textura tersa, Mammoth original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Acmella Oleracea, Aceite de Parafina USP y Vitamina E',
     componentBenefits: [
     {
@@ -2310,16 +2274,12 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
     }
 ],
     longTailKeywords: [
-      'mejor crema reafirmante para mejorar el volumen y textura de la piel',
-      'cómo lograr una piel más firme y elástica con vitamina E y maca',
-      'crema hidratante profesional para tonificar zonas críticas del cuerpo',
-      'beneficios de Mammoth para el bienestar integral y firmeza cutánea',
-      'fórmula avanzada para una piel con más volumen, suavidad y salud',
-      'bienestar integral y vitalidad dérmica con registro INVIMA certificado',
-      'cómo evitar la flacidez y resequedad de la piel de forma natural',
-      'crema para el cuidado corporal con ingredientes de alta potencia botánica',
-      'solución efectiva para las irregularidades de la piel y falta de elasticidad',
-      'suavidad y firmeza segura con ingredientes de alta pureza y rápida absorción'
+      'mejor crema reafirmante y voluminizante con acmella oleracea y vitamina E',
+      'cómo tonificar y dar firmeza a zonas flácidas del cuerpo con masajes',
+      'mammoth crema azenza precio colombia oferta pago contra entrega',
+      'crema hidratante tensora corporal profesional con registro invima',
+      'comprar crema mammoth original con envío gratis nacional',
+      'pedir crema mammoth por whatsapp a domicilio pago al recibir'
     ],
     seoFaqs: [
       { q: '¿Cómo funciona el efecto volumen de Mammoth?', a: 'Su fórmula con Acmella Oleracea mejora la estructura elástica de la dermis, promoviendo una apariencia más firme y un bienestar integral.' },
@@ -2348,9 +2308,9 @@ Ideal para masajes tonificantes, Mammoth ayuda a mejorar el contorno y la textur
     name: 'Tyruss Full',
     category: 'salud-bienestar',
     shortDescription: 'Nutrición Verde Avanzada y Apoyo al Equilibrio Femenino.',
-    description: `Tyruss Full es una mezcla nutricional premium en polvo diseñada para quienes buscan una purificación profunda, mantener su energía, es un excelente coadyudante para las mujeres que se encuentran en etapas de transición y cambio biologico. Su fórmula combina la proteína de arveja con el poder de los superalimentos verdes: Clorofila, Espirulina y Chlorella. Esta sinergia vegetal actúa como un potente agente oxigenador y depurativo que ayuda a liberar el cuerpo de toxinas acumuladas, mejorando la digestión y fortaleciendo el sistema inmunológico.
+    description: `La pesadez metabólica recurrente, la digestión lenta y los desajustes fisiológicos durante etapas de cambio hormonal o sobrecarga digestiva provocan acumulación de toxinas, retención de líquidos e inflamación constante del vientre. Tyruss Full actúa como un sistema de purificación celular alcalinizante y soporte nutricional que sincroniza el poder depurativo de superalimentos verdes como Clorofila concentrada, Espirulina y Chlorella con Proteína de arveja de alta digestibilidad, Almendras y ácidos grasos Omega 3 de chía y linaza.
 
-Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esenciales, Tyruss Full no solo limpia tu organismo, sino que nutre tus células para combatir la fatiga y promover un metabolismo saludable. Su alto contenido de fibra asegura un tránsito intestinal fluido, brindando una sensación de ligereza y bienestar abdominal desde la primera semana de uso.
+A mediano y largo plazo, esta matriz vegetal oxigena los tejidos corporales, estimula la eliminación natural de residuos hepáticos e intestinales y optimiza el tránsito del colon sin causar cólicos, devolviendo una sensación duradera de ligereza abdominal, saciedad equilibrada y vigor renovado. Avalado con Registro INVIMA oficial (RSA-0021928-2022), su fino polvo de 500g se disuelve con rapidez en agua o batidos sin azúcares agresivos, convirtiéndose en el batido verde ideal para limpiar y desinflamar tu organismo con total seguridad.
 
 ✔️ Desintoxicación Profunda: Ayuda a depurar impurezas del organismo.
 ✔️ Digestión y Tránsito: Fibra natural que optimiza el movimiento intestinal y reduce la inflamación.
@@ -2358,11 +2318,11 @@ Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esen
     seoTitle: 'Tyruss Full Clorofila + Espirulina: Detox y Digestión',
     seoDescription: 'Limpia tu organismo y alcaliniza tu cuerpo con Tyruss Full Clorofila, Espirulina y Manzanilla. Registro INVIMA. ¡Pídelo con Pago Contra Entrega en casa!',
     benefits: [
-      'Depura y desintoxica el organismo de forma suave y efectiva',
-      'Promueve un vientre plano al mejorar el tránsito intestinal',
-      'Aporte significativo de proteínas vegetales y Omega 3 esencial',
-      'Oxigena las células y combate el cansancio crónico naturalmente',
-      'Fórmula con ingredientes de alta pureza para el equilibrio diario'
+      "Limpia el intestino de desechos viejos acumulados que causan pesadez y mal aliento",
+      "Desinflama la barriga abultada y facilita evacuaciones diarias sin cólicos",
+      "Aporta fibra natural y Omega 3 vegetal para una digestión liviana y regular",
+      "Elimina la sensación de pesadez y llenura prolongada después de comer",
+      "Suave con el colon, fácil de tomar en agua o batidos sin irritar el estómago"
     ],
     image: '/assets/products/Tyrussfull.webp',
     basePrice: 89900,
@@ -2376,33 +2336,28 @@ Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esen
       '/assets/products/tyrussfull-apoyo-3.webp',
       '/assets/products/tyrussfull-apoyo-4.webp'
     ],
-    keywords: 'equilibrio hormonal femenino, salud metabólica, tiroides, menopausia, sofocos, energía estable, Tyruss Full, Azenza',
+    keywords: 'clorofila pura, espirulina y chlorella, batido verde detox, desinflamar vientre abultado, tránsito intestinal, omega 3 vegetal, Tyruss Full original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Clorofila, Espirulina, Chlorella, Proteína de Arveja, Almendras y Omega 3',
     componentBenefits: [
-    {
-        'name': 'Clorofila, Espirulina y Chlorella',
-        'benefit': 'Microalgas y extractos verdes que promueven la limpieza natural del organismo y aportan un extra de vitalidad.'
-    },
-    {
-        'name': 'Proteína de Arveja y Almendras',
-        'benefit': 'Nutrición vegetal limpia.'
-    },
-    {
-        'name': 'Omega 3',
-        'benefit': 'Apoya la elasticidad y el cuidado de la piel.'
-    }
-],
+      {
+        name: "Clorofila, Espirulina y Chlorella",
+        benefit: "Limpian el colon de suciedad y toxinas viejas acumuladas, quitando el mal aliento y la pesadez corporal."
+      },
+      {
+        name: "Proteína de Arveja y Almendras",
+        benefit: "Nutren el cuerpo sin caer pesadas ni inflamar el estómago."
+      },
+      {
+        name: "Omega 3 y Fibra",
+        benefit: "Ayudan a evacuar suavemente todos los días sin sufrir de cólicos ni retortijones."
+      }
+    ],
     longTailKeywords: [
       'mejor batido verde detox para depurar el colon y reconfortar el cuerpo',
       'cómo oxigenar la sangre y mejorar la digestión con clorofila y espirulina',
-      'suplemento de proteína de arveja con verdes para energía y desintoxicación',
-      'beneficios de Tyruss Full para el bienestar integral y tránsito intestinal',
-      'fórmula balanceada para una limpieza orgánica profunda y nutrición celular',
-      'bienestar integral y vitalidad rejuvenecida con superalimentos certificados',
-      'cómo mantener un vientre plano y digestión ligera de forma natural',
-      'suplemento para la depuración del organismo con omega 3 y vitaminas',
-      'alternativa natural para la pesadez estomacal y falta de nutrientes verdes',
-      'nutrición verde segura con ingredientes de alta pureza y registro INVIMA'
+      'tyruss full precio colombia oferta pago contra entrega envio gratis',
+      'suplemento de clorofila y verdes para desinflamar el estomago invima',
+      'pedir tyruss full azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Tyruss Full ayuda realmente a bajar la inflamación del vientre?', a: 'Sí, su alto contenido de fibra y clorofila optimiza el tránsito intestinal y libera toxinas, promoviendo bienestar integral.' },
@@ -2431,9 +2386,9 @@ Enriquecido con Omega 3 proveniente de chía y linaza, además de vitaminas esen
     name: 'Zafir Bebida Energizante',
     category: 'salud-sexual',
     shortDescription: 'Energía Natural Inmediata y Enfoque Mental Superior.',
-    description: `Zafir es una bebida energizante de última generación, formulada con extractos puros de Maca, Borojó y Guaraná para ofrecerte un impulso de vitalidad real sin los picos de ansiedad de las bebidas tradicionales. Su deliciosa mezcla de frutos rojos no solo deleita tu paladar, sino que activa tu metabolismo con Vitaminas del Complejo B (B3, B6, B12) y Zinc, minerales clave para el rendimiento físico y la claridad cognitiva.
+    description: `La sobrecarga laboral, el estrés cotidiano y el cansancio físico acumulado apagan el vigor corporal, nublan la claridad mental y provocan un agotamiento que frena tus momentos más exigentes. Zafir actúa como un bioactivador funcional líquido que integra la fuerza adaptógena de la Maca y el Borojó con Guaraná natural, Zinc quelado y Vitaminas del Complejo B (B3, B6, B12), estimulando la producción de energía celular limpia sin los picos de ansiedad o taquicardia de los estimulantes convencionales.
 
-Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el enfoque y la resistencia necesaria para superar tus retos diarios. Su fórmula equilibrada respeta tu cuerpo mientras te proporciona esa dosis extra de ánimo y fuerza que necesitas en momentos críticos de fatiga o baja energía.
+A nivel fisiológico, favorece una resistencia orgánica prolongada y un flujo sanguíneo eficiente hacia los tejidos, preservando la agudeza cognitiva y la vitalidad muscular sin bajones energéticos posteriores. Avalada con Registro INVIMA oficial y presentada en formato líquido de 500ml con exquisito sabor a frutos rojos, asegura una biodisponibilidad inmediata para reactivar tu cuerpo y mente con total seguridad y confianza.
 
 ✔️ Vitalidad Inmediata: Activa tu cuerpo con extractos naturales que potencian el vigor y la fuerza física.
 ✔️ Enfoque de Hierro: Nutrientes cerebrales que mantienen tu mente alerta, concentrada y despejada.
@@ -2459,7 +2414,7 @@ Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el 
       '/assets/products/zafir-apoyo-3.webp',
       '/assets/products/zafir-apoyo-4.webp'
     ],
-    keywords: 'energía inmediata, impulso natural, enfoque mental, vitalidad, Zafir, Azenza, bebida energizante',
+    keywords: 'bebida energizante natural, frutos rojos, energía para estudiar y trabajar, borojó y maca, taurina y cafeína natural, enfoque mental sin bajones, cansancio físico, Zafir original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Borojó, Maca, Taurina, Cafeína y Vitaminas B3, B6, B12 y Biotina',
     componentBenefits: [
     {
@@ -2476,16 +2431,12 @@ Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el 
     }
 ],
     longTailKeywords: [
-      'mejor bebida energizante con frutos rojos para vitalidad y enfoque',
-      'cómo recargar energía de forma natural con maca borojó y guaraná',
-      'energizante con vitaminas del complejo B para estudiar y trabajar mejor',
-      'beneficios de Zafir para el bienestar integral y rendimiento físico extremo',
-      'fórmula natural para un impulso de ánimo inmediato y resistencia física',
-      'bienestar integral y energía renovada con bebidas funcionales certificadas',
-      'cómo mejorar la concentración y enfoque con ingredientes de alta pureza',
-      'bebida saludable para la vitalidad diaria del hombre y la mujer activos',
-      'solución efectiva para el agotamiento mental y falta de vigor orgánico',
-      'energía inmediata segura con registro INVIMA y sin efectos secundarios'
+      'mejor bebida energizante natural de frutos rojos para vitalidad y concentración',
+      'cómo quitar el agotamiento mental y físico sin taquicardia con maca y borojó',
+      'zafir bebida energizante azenza precio colombia pago contra entrega',
+      'energizante líquido con vitaminas complejo B y registro invima',
+      'comprar bebida funcional energizante con envío gratis nacional',
+      'pedir zafir frutos rojos por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Zafir quita el sueño si se toma en la noche?', a: 'Al ser un energizante natural, se recomienda consumirlo durante el día para potenciar tu vitalidad y bienestar integral sin afectar el ciclo circadiano.' },
@@ -2514,9 +2465,9 @@ Diseñada para acompañarte en jornadas exigentes, Zafir te ayuda a mantener el 
     name: 'Guanda Mix',
     category: 'salud-bienestar',
     shortDescription: 'Apoyo Digestivo, Energía Diaria y Sensación de Frescura.',
-    description: `Disfruta de una profunda ligereza y vitalidad con Guanda Mix, el alimento en polvo prémium diseñado específicamente para preparar una deliciosa bebida a base de hierbas aromáticas. Su fórmula avanzada está fortificada con una completa combinación de vitaminas y minerales esenciales, teniendo como ingrediente destacado la Flor de Jamaica y el Té Verde, reconocidos dinamizadores de la digestión y el bienestar integral de tu organismo.
+    description: `La retención de líquidos que hincha el abdomen, la pesadez gastrointestinal tras el almuerzo y la fatiga vespertina provocada por carencias de micronutrientes reducen tu dinamismo y generan una sensación de incomodidad persistente. Guanda Mix actúa como un sistema botánico de drenaje fisiológico, confort digestivo y recarga mineral que sincroniza las propiedades diuréticas y digestivas de la Flor de Jamaica y el Té Verde con la fuerza adaptógena de la Maca y una matriz biodisponible de Magnesio (Citrato y Bisglicinato), Calcio, Hierro y Vitaminas esenciales.
 
-Ideada para resolver problemas relacionados con el cansancio físico y mental por deficiencias nutricionales, Guanda Mix actúa como un apoyo digestivo superior gracias a la selección pura de sus hierbas naturales, maca y complejos de magnesio (citrato y bisglicinato). Con un sabor artificial a cereza exquisito, este polvo fino de color rojo se disuelve al instante sin azúcares añadidos ni partículas extrañas; es la opción de hidratación ligera y saludable perfecta para estudiantes, deportistas, profesionales o personas comprometidas con el control de peso.
+A mediano y largo plazo, esta sinergia de hierbas aromáticas estimula la depuración renal sin alterar el equilibrio electrolítico, acelera la digestión lenta evitando la acumulación de gases y sostiene un nivel de energía física limpio y estable sin generar nerviosismo ni bajones repentinos. Avalado con Registro INVIMA oficial (IRSA-0245-2025), su fino polvo rojo con refrescante sabor a cereza es 100% libre de azúcares añadidos y se disuelve al instante en agua fría o batidos, convirtiéndose en la bebida diaria perfecta para mantenerse ligero, hidratado y activo.
 
 ✔️ Digestión Saludable: Combinación botánica que apoya el correcto tránsito y brinda una reconfortante sensación de alivio y frescura.
 ✔️ Dinamismo Libre de Fatiga: La maca y la flor de jamaica aportan nutrientes clave para optimizar tu energía sin causar ansiedad ni nerviosismo.
@@ -2524,12 +2475,11 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
     seoTitle: 'Guanda Mix Infusión: Digestión Ligera y Flor de Jamaica',
     seoDescription: 'Infusión herbal Guanda Mix con Flor de Jamaica y alcachofa para desinflamar y drenar líquidos. Registro INVIMA. ¡Envío Gratis y Pago Contra Entrega!',
     benefits: [
-      'Aporta vitaminas y minerales esenciales que completan y fortalecen la nutrición diaria',
-      'Contiene maca, reconocida por su gran capacidad para favorecer la energía física y mental',
-      'Rico en hierbas aromáticas seleccionadas que alivian la pesadez y optimizan la digestión',
-      'Incluye flor de jamaica y magnesio (citrato y bisglicinato) para un balance celular completo',
-      'Alimento bajo en calorías y libre de azúcares añadidos, ideal para dietas de control de peso',
-      'Polvo fino rojo sin partículas extrañas con un agradable y refrescante sabor a cereza'
+      "Deshincha piernas, tobillos y abdomen eliminando líquidos retenidos",
+      "Limpia y descongestiona los riñones cargados gracias a la flor de jamaica",
+      "Quita la pesadez estomacal y ayuda a digerir mejor las comidas grasosas",
+      "Aporta magnesio y maca para quitar el cansancio y soltar la tensión muscular",
+      "Refrescante sabor a cereza sin azúcar, ideal para tomar frío durante el día"
     ],
     image: '/assets/products/guanda-mix.webp',
     basePrice: 79900,
@@ -2543,32 +2493,29 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
       '/assets/products/guanda-mix-apoyo-2.webp',
       '/assets/products/guanda-mix-apoyo-3.webp'
     ],
-    keywords: 'guanda mix, hierbas aromaticas, flor de jamaica, digestion ligera, energia natural, cereza, maca, dolor estomacal, bienestar digestivo, azenza',
+    keywords: 'retención de líquidos, deshinchar piernas y abdomen, flor de jamaica, té verde digestivo, citrato de magnesio, bisglicinato, maca andina, pesadez estomacal, sabor cereza sin azúcar, Guanda Mix original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Hierbas aromáticas en polvo, Té verde, Flor de jamaica, Citrato de magnesio, Bisglicinato de magnesio, Carbonato de calcio, Fumarato ferroso, Vitaminas y Minerales',
     componentBenefits: [
       {
-        'name': 'Hierbas Aromáticas y Té Verde',
-        'benefit': 'Mezcla botánica que estimula el correcto funcionamiento gástrico, aliviando la hinchazón y la pesadez estomacal.'
+        name: "Hierbas Aromáticas y Té Verde",
+        benefit: "Desinflaman el estómago hinchado tras comer y eliminan los eructos y la pesadez digestiva."
       },
       {
-        'name': 'Flor de Jamaica y Maca',
-        'benefit': 'Excelentes fuentes de antioxidantes y compuestos activos que promueven la energía sostenida sin estimulantes nocivos.'
+        name: "Flor de Jamaica y Maca",
+        benefit: "Descongestionan los riñones cargados, eliminan la retención de líquidos y dan energía sin dar taquicardia."
       },
       {
-        'name': 'Magnesio Dinámico y Vitaminas',
-        'benefit': 'Complejo de asimilación rápida (citrato, bisglicinato, cloruro) que ayuda al tono muscular y bienestar del sistema nervioso.'
+        name: "Magnesio Dinámico y Vitaminas",
+        benefit: "Sueltan la rigidez muscular, quitan los calambres y calman los nervios alterados."
       }
     ],
     longTailKeywords: [
-      'mejor bebida de hierbas aromaticas con flor de jamaica y maca',
-      'cómo desinflamar la digestión y sentir mayor ligereza estomacal',
-      'alimento en polvo sabor cereza para energía limpia y diaria',
-      'beneficios de guanda mix para mejorar el cansancio fisico y mental',
-      'suplemento con citrato y bisglicinato de magnesio para digestión',
-      'té verde y flor de jamaica para mantener un metabolismo saludable',
-      'cómo evitar la fatiga y pesadez estomacal con productos naturales',
-      'suplemento para deportistas y personas activas con registro INVIMA',
-      'bebida hidratante ligera y baja en calorías sabor cereza'
+      'mejor infusión herbal para drenar líquidos retenidos y desinflamar el vientre',
+      'cómo limpiar los riñones y deshinchar piernas y tobillos con flor de jamaica',
+      'guanda mix azenza precio colombia oferta pago contra entrega',
+      'bebida digestiva con citrato de magnesio y té verde registro invima',
+      'comprar guanda mix sabor cereza sin azúcar con envío gratis',
+      'pedir guanda mix por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo se prepara el Guanda Mix?', a: 'Mezclar 1 y media cucharadas (30g) in un vaso de agua, leche o bebida vegetal (240ml); se puede preparar en licuadora o agitando manualmente.' },
@@ -2596,9 +2543,9 @@ Ideada para resolver problemas relacionados con el cansancio físico y mental po
     name: '+NAD',
     category: 'salud-bienestar',
     shortDescription: 'Soporte Avanzado para la Vitalidad y el Bienestar Celular.',
-    description: `+NAD es la fórmula de vanguardia en nutrición para el bienestar celular, diseñada para revitalizar tu organismo desde lo más profundo. Combinando Nicotinamida (un precursor directo del NAD+) con el poder antioxidante del Resveratrol y el Calostro Bovino, este suplemento ayuda a proteger las células y optimizar la producción de energía contra el daño oxidativo.
+    description: `El agotamiento mitocondrial prematuro, la pérdida gradual de firmeza dérmica y la fatiga mental a media jornada evidencian el descenso acelerado de coenzimas celulares clave provocado por el estrés oxidativo y el paso de los años. +NAD funciona como un sistema de bio-reactivación celular y longevidad que combina Nicotinamida (precursor directo y biodisponible del NAD+) con Trans-Resveratrol polifenólico, Calostro Bovino, Quercetina y Lactoferrina, formulado sobre una base cremosa de coco rica en triglicéridos de cadena media (MCT).
 
-Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita una absorción superior de sus ingredientes clave como la Quercetina y la Lactoferrina. +NAD es el aliado perfecto para quienes desean mantener una mente clara, una piel firme y un cuerpo lleno de energía vital a pesar del paso de los años, proporcionando un soporte inmunológico y regenerativo sin precedentes.
+A mediano y largo plazo, esta sinergia mitocondrial estimula las vías fisiológicas de reparación celular, optimiza la transformación de nutrientes en ATP limpio y sostiene la integridad inmunológica y dérmica, devolviendo a tu cuerpo energía metabólica continua, mente despierta y una apariencia saludable y vital. Avalado con Registro INVIMA oficial (2018DM-0018869), su polvo de 350g se absorbe con facilidad sin dejar sensación pesada, convirtiéndose en el estándar diario de nutrición celular avanzada para vivir con plenitud en cualquier etapa.
 
 ✔️ Rejuvenecimiento Celular: Protege las mitocondrias y promueve la reparación biológica natural.
 ✔️ Energía Metabólica: Transforma los nutrientes en energía vital de forma más eficiente y duradera.
@@ -2606,11 +2553,11 @@ Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita 
     seoTitle: '+NAD + Resveratrol Original: Longevidad y Energía Pura',
     seoDescription: 'Activa la juventud celular y máxima vitalidad con +NAD y Resveratrol concentrado. Alta biodisponibilidad y Registro INVIMA. ¡Compra con Envío Gratis!',
     benefits: [
-      'Apoyo en la protección celular avanzada contra agentes oxidantes',
-      'Aumento significativo en la producción de energía y claridad mental',
-      'Digestión óptima y absorción rápida gracias a su base de coco',
-      'Fortalece la respuesta inmunológica ante desafíos del entorno',
-      'Promueve una piel de apariencia saludable y un metabolismo celular revitalizado'
+      "Recarga la energía cuando sientes que el cuerpo no responde a mitad de la tarde",
+      "Despeja la mente cansada y combate el agotamiento mental en el trabajo",
+      "Ayuda a que el cuerpo se recupere más rápido del desgaste y de los años",
+      "Fórmula en polvo con coco que se digiere fácil y no causa pesadez estomacal",
+      "Mantiene tu organismo fuerte, activo y con defensas listas para el día a día"
     ],
     image: '/assets/products/nad-1.webp',
     basePrice: 79900,
@@ -2624,33 +2571,29 @@ Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita 
       '/assets/products/nad-1-apoyo-3.webp',
       '/assets/products/nad-1-apoyo-4.webp'
     ],
-    keywords: 'energía natural, antiedad, vitalidad celular, piel firme, cansancio, +NAD, Azenza',
+    keywords: 'nad suplemento, nicotinamida antiedad, resveratrol concentrado, energía mitocondrial, fatiga celular, 10g colágeno puro, crema de coco, longevidad, +NAD original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Colágeno (10g), Crema de Coco, NAD, Vitaminas A, C, D, E y complejo B',
     componentBenefits: [
-    {
-        'name': 'NAD',
-        'benefit': 'Favorece la renovación natural y el correcto funcionamiento de las células, devolviendo una profunda vitalidad al organismo.'
-    },
-    {
-        'name': '10g de Colágeno y Crema de Coco',
-        'benefit': 'Aportan una profunda nutrición que favorece la firmeza y la apariencia saludable de la piel.'
-    },
-    {
-        'name': 'Vitaminas',
-        'benefit': 'Aportan antioxidantes esenciales que ayudan a proteger las células contra el daño oxidativo diario.'
-    }
-],
+      {
+        name: "Precursores de NAD",
+        benefit: "Recargan de energía las células agotadas cuando sientes que el cuerpo no da más a mitad de la tarde."
+      },
+      {
+        name: "10g de Colágeno y Crema de Coco",
+        benefit: "Nutren y reafirman la piel arrugada y alivian articulaciones tiesas sin irritar el estómago."
+      },
+      {
+        name: "Complejo de Vitaminas",
+        benefit: "Suben las defensas y aceleran la recuperación del cuerpo frente al desgaste y los años."
+      }
+    ],
     longTailKeywords: [
-      'mejor suplemento para bienestar celular con NAD+ y resveratrol',
-      'cómo nutrir las células y aumentar la energía vital naturalmente',
-      'suplemento con calostro bovino y lactoferrina para defensas y longevidad',
-      'beneficios de +NAD para el bienestar integral y salud mitocondrial',
-      'fórmula avanzada para bienestar celular con quercetina y base de coco',
-      'bienestar integral y vitalidad celular renovada con registro INVIMA',
-      'cómo mantener la piel firme y el cerebro activo con NAD de alta pureza',
-      'suplemento nutricional avanzado para una longevidad saludable y activa',
-      'solución natural para la fatiga celular y el bienestar biológico',
-      'energía y vitalidad segura con ingredientes certificados de máxima absorción'
+      'mejor suplemento de NAD+ y resveratrol para rejuvenecimiento celular',
+      'cómo recuperar la energía física y mitocondrial con nicotinamida y colágeno',
+      'nad suplemento azenza precio colombia oferta pago contra entrega',
+      'polvo antiedad con 10g de colágeno y crema de coco registro invima',
+      'comprar suplemento nad original con envío gratis nacional',
+      'pedir nad plus azenza por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Qué diferencia a +NAD de otros colágenos?', a: 'Este es un sistema celular que añade Nicotinamida y Resveratrol para apoyar el bienestar desde el núcleo.' },
@@ -2679,9 +2622,9 @@ Su base cremosa de coco no solo le otorga un sabor exquisito, sino que facilita 
     name: 'Titan Coffee',
     category: 'salud-sexual',
     shortDescription: 'Café de Alto Rendimiento para una Energía Inagotable.',
-    description: `Titan Coffee no es solo un café; es un combustible de alto desempeño diseñado para transformar tu mañana en un arranque de potencia total. Fusionando granos de café premium con los extractos más energizantes de la naturaleza (Borojó, Maca y Chontaduro), este café funcional proporciona una liberación sostenida de energía que evita los bajones repentinos y mejora el enfoque mental durante todo el día.
+    description: `El cansancio matutino recurrente, la falta de impulso físico y los bajones de lucidez mental a mitad de jornada merman tu rendimiento productivo y tu vitalidad diaria. Titan Coffee funciona como un café biofuncional de alto rendimiento que fusiona café gourmet seleccionado con la sinergia adaptógena y vigorizante de Maca, Borojó y Chontaduro, estructurado sobre una base cremosa de coco rica en triglicéridos de cadena media.
 
-Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lácteos y fácil de digerir. Ideal para profesionales, deportistas y cualquier persona que necesite un extra de vigor físico y claridad cognitiva para conquistar sus metas diarias. Empieza tu día con la fuerza de un titán y disfruta de un sabor gourmet con beneficios nutricionales reales.
+Esta matriz botánica permite una liberación progresiva de energía sin ocasionar acidez, picos de nerviosismo ni descensos abruptos, nutriendo el metabolismo celular para sostener un vigor físico superior y una claridad mental prolongada ante jornadas de alta exigencia. Certificado con Registro INVIMA oficial, su formato en polvo de 400g se disuelve al instante sin lácteos, ofreciendo un sabor refinado y una absorción eficiente para arrancar cada día con máxima potencia.
 
 ✔️ Ritual de Potencia: El sabor del café colombiano potenciado con Maca y Chontaduro para el vigor.
 ✔️ Vigor Mental: Mejora la concentración y reduce la fatiga intelectual en jornadas de alta presión.
@@ -2708,7 +2651,7 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
       '/assets/products/titancoffee-apoyo-3.webp',
       '/assets/products/titancoffee-apoyo-4.webp'
     ],
-    keywords: 'café energizante, potencia masculina, vitalidad, Titan Coffee, Azenza, vigor natural',
+    keywords: 'café energizante, café con maca y borojó, chontaduro, vigor masculino, potencia y energía matutina, café con crema de coco sin lácteos, concentración mental, Titan Coffee original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Maca, Chontaduro, Borojó, Café soluble y Crema de Coco',
     componentBenefits: [
     {
@@ -2721,16 +2664,12 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
     }
 ],
     longTailKeywords: [
-      'mejor café funcional con maca y borojó para rendimiento máximo',
-      'cómo tener energía física y mental constante con café de alta potencia',
-      'café con chontaduro y crema de coco para un desayuno de campeones',
-      'beneficios de Titan Coffee para el bienestar integral y vigor masculino',
-      'fórmula avanzada para potenciar la fuerza y el enfoque con una taza de café',
-      'bienestar integral y vitalidad renovada con nutrición gourmet certificada',
-      'cómo combatir el cansancio crónico laboral con extractos naturales puros',
-      'café saludable sin lácteos para mejorar el desempeño físico diario',
-      'solución natural para la falta de vitalidad matutina y pesadez mental',
-      'energía y potencia segura con ingredientes de alta pureza y registro INVIMA'
+      'mejor café funcional con maca y chontaduro para energía y vigor diario',
+      'cómo tener energía física prolongada sin acidez con café gourmet y borojó',
+      'titan coffee azenza precio colombia oferta pago contra entrega',
+      'café saludable sin lácteos con crema de coco y registro invima',
+      'comprar titan coffee energizante original con envío gratis nacional',
+      'pedir titan coffee por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Titan Coffee es apto para personas con intolerancia a la lactosa?', a: 'Sí, su base es Crema de Coco, lo que lo hace gentil con tu estómago y promueve un bienestar integral sin lácteos.' },
@@ -2759,9 +2698,9 @@ Su base cremosa de coco lo hace una opción deliciosa y saludable, libre de lác
     name: 'Hemocream',
     category: 'salud-bienestar',
     shortDescription: 'Cuidado Botánico Avanzado en Zonas Sensibles.',
-    description: `Recupera tu comodidad diaria con este cuidado botánico avanzado, la solución magistral diseñada para brindar alivio profundo y protección a la zona íntima. Su fórmula intégra el poder de la fitoterapia moderna mediante una sinergia de 11 extractos botánicos premium, liderados por el Castaño de Indias, la Caléndula y el Hamamelis. Estos ingredientes actúan en conjunto para reducir la incomodidad, calmar el ardor persistente y favorecer la microcirculación, proporcionando una barrera refrescante que mitiga el malestar desde la primera aplicación.
+    description: `El ardor punzante, la inflamación dolorosa de los plexos vasculares en la zona anorrectal y el malestar agudo durante o después de la evacuación condicionan cada movimiento, generando temor, incomodidad al sentarse y desgaste diario. Hemocream actúa como una emulsión fitoterapéutica vasotónica y descongestionante que sincroniza las propiedades antiinflamatorias y epitelizantes de la Caléndula concentrada y el Aloe Vera con la acción circulatoria del Castaño de Indias, la Centella Asiática, la Manzanilla y la Avena coloidal.
 
-Especialmente formulada para pieles frágiles, esta solución botánica esencial ayuda a regenerar los tejidos irritados en las zonas íntimas más sensibles, aportando suavidad y reduciendo la fricción en los momentos de mayor sensibilidad. Su textura ligera y sedosa se absorbe sin dejar residuos grasos, permitiéndote retomar tus actividades con total confort y la seguridad de un cuidado 100% natural, certificado por expertos.
+A mediano y largo plazo, esta sinergia botánica reconforta las microfisuras de la mucosa, disminuye la congestión venosa local y refuerza la elasticidad de los tejidos epiteliales sensibles, reduciendo la fricción traumática en cada deposición y devolviendo un confort duradero sin necesidad de corticoides ni químicos agresivos. Avalada con Registro INVIMA oficial (NSOC15678-23CO), su textura en crema de 30ml de absorción rápida no mancha las prendas ni deja sensación grasa, ofreciendo un alivio refrescante inmediato, higiénico y de total discreción.
 
 ✔️ Alivio Antiinflamatorio: Calma instantáneamente el dolor, el ardor y la picazón en zonas sensibles.
 ✔️ Regeneración Celular: La caléndula y el aloe vera aceleran la recuperación natural de los tejidos afectados.
@@ -2769,11 +2708,11 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     seoTitle: 'Hemocream Cuidado Botánico: Alivio Rápido y Confort',
     seoDescription: 'Alivio reconfortante inmediato para zonas sensibles y ardor con Hemocream crema botánica. Suave con la piel y Registro INVIMA. ¡Paga seguro al recibir!',
     benefits: [
-      'Calma de forma inmediata el ardor y la sensación de pesadez local',
-      'Favorece la microcirculación gracias al extracto de Castaño de Indias',
-      'Facilita el tránsito intestinal y reduce la fricción durante la evacuación',
-      'Favorece el bienestar y reconforta los tejidos sensibles',
-      'Fórmula botánica fluida, discreta y de rápida absorción sin manchas'
+      "Alivia en minutos el ardor punzante, la picazón y el dolor al sentarse o caminar",
+      "Desinflama las venas y paquetes hemorroidales con Castaño de Indias puro",
+      "Reduce la irritación, el sangrado leve y la molestia intensa al momento de evacuar",
+      "Reconforta los tejidos irritados y acelera la cicatrización natural de la zona",
+      "Crema suave que se absorbe al instante, no mancha la ropa interior ni tiene olor fuerte"
     ],
     image: '/assets/products/Hemocream.webp',
     basePrice: 59900,
@@ -2788,30 +2727,29 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/hemocream-apoyo-3.webp',
       '/assets/products/hemocream-apoyo-4.png'
     ],
-    keywords: 'hemorroides, ardor anal, picazón, caléndula, aloe vera, plantas medicinales, alivio natural, cuidado botánico, Azenza, fisura anal',
+    keywords: 'crema para hemorroides, desinflamar hemorroides externas, calmar ardor anal, castaño de indias, caléndula y aloe vera, dolor al sentarse, fisura anal, picazón anal, Hemocream original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Caléndula, Castaño de Indias, Aloe Vera, Avena, Manzanilla y Centella Asiática',
     componentBenefits: [
-    {
-        'name': 'Caléndula, Manzanilla y Aloe Vera',
-        'benefit': 'Calman el ardor y la sensibilidad cutánea aportando un alivio rápido y reconfortante.'
-    },
-    {
-        'name': 'Castaño de Indias y Centella Asiática',
-        'benefit': 'Favorecen la microcirculación y ayudan a disminuir la sensación de pesadez e inflamación.'
-    },
-    {
-        'name': 'Avena',
-        'benefit': 'Humecta y protege la barrera natural.'
-    }
-],
+      {
+        name: "Caléndula, Manzanilla y Aloe Vera",
+        benefit: "Calman al instante el fuego, la picazón insoportable y el dolor punzante al sentarte o caminar."
+      },
+      {
+        name: "Castaño de Indias y Centella Asiática",
+        benefit: "Desinflaman los paquetes hemorroidales hinchados y reducen el sangrado y dolor al evacuar."
+      },
+      {
+        name: "Avena Pura",
+        benefit: "Crea una capa suave que protege la piel irritada y acelera el alivio natural de las heridas."
+      }
+    ],
     longTailKeywords: [
-      'mejor crema botánica para calmar el ardor anal rápidamente',
-      'cómo favorecer el bienestar ante las hemorroides de forma natural y con facilidad',
-      'crema de caléndula y aloe vera para inflamación hemorroidal persistente',
-      'beneficios de las plantas medicinales para el cuidado anal sensible',
-      'fórmula botánica suave para alivio inmediato del malestar diario',
-      'bienestar integral y cuidado anal delicado con registro INVIMA certificado',
-      'solución natural para fisuras anales y picazón sin químicos',
+      'mejor crema botánica para desinflamar hemorroides y calmar el ardor anal',
+      'cómo aliviar el dolor al sentarse y evacuar con castaño de indias y caléndula',
+      'hemocream azenza precio colombia oferta pago contra entrega',
+      'crema natural para fisuras anales sin corticoides con registro invima',
+      'comprar crema hemocream original con envío gratis y empaque discreto',
+      'pedir hemocream por whatsapp a domicilio pago al recibir'
     ],
     seoFaqs: [
       { q: '¿Cómo debo aplicar este producto para obtener mejores resultados?', a: 'Se recomienda aplicar una pequeña cantidad en la zona afectada 2 o 3 veces al día, preferiblemente después de ir al baño.' },
@@ -2840,8 +2778,9 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     name: 'Ashwagandha',
     category: 'salud-bienestar',
     shortDescription: 'Equilibrio Emocional, Alivio del Estrés y Descanso Reparador.',
-    description: `Encuentra la paz mental y la serenidad física con Ashwagandha de AZENZA, el poderoso suplemento adaptógeno ancestral diseñado para equilibrar tu sistema nervioso frente a las demandas cotidianas y rejuvenecer tu mente desde el interior. Esta fórmula premium aprovecha las propiedades milenarias de la Withania somnifera en un formato de cápsulas blandas de fácil absorción, creando un sistema de soporte completo para tu mente, tu estado de ánimo y tu descanso. Enriquecido con sus compuestos activos de alta pureza, este extracto combate el desgaste celular provocado por el estrés crónico, promoviendo una resistencia superior en todo tu organismo.
-  Complementado con una excelente biodisponibilidad gracias a su presentación en gel suave (softgel), este suplemento es el aliado perfecto para personas activas que sufren de insomnio o fatiga mental y no desean que el ritmo diario limite su bienestar. Su acción reguladora actúa profundamente en el cuerpo, ayudándote a modular la respuesta ante las tensiones del día a día, devolviéndole la luminosidad a tu energía vital y la firmeza a tu equilibrio emocional de manera segura.
+        description: `La tensión nerviosa constante, el agotamiento mental al final de la jornada y la dificultad para desconectar la mente al intentar dormir son el reflejo de un sistema nervioso sobrecargado por picos continuos de cortisol. Ashwagandha actúa como un modulador adaptógeno botánico de alta pureza que ayuda a estabilizar el eje neuroendocrino, sincronizando extractos estandarizados de Withania somnifera con una matriz lipídica que maximiza la absorción de los withanólidos activos sin generar somnolencia diurna.
+
+A mediano y largo plazo, esta regulación adaptógena disminuye la hiperreactividad frente al estrés diario, propicia un descanso nocturno profundo y reparador, y restituye la claridad mental, permitiéndote recuperar la serenidad, la concentración y una vitalidad equilibrada. Con respaldo de Registro INVIMA oficial (NSA-2948-2026), su formato en cápsulas blandas (softgel) asegura una biodisponibilidad superior y máxima tolerancia digestiva, eliminando la fricción para tu bienestar integral.
 
 ✔️ Control del Estrés: Regula el cortisol, reduce la ansiedad y promueve la calma.
 ✔️ Sueño Reparador: Combate el insomnio y relaja el sistema nervioso sin causar somnolencia diurna.
@@ -2849,11 +2788,11 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     seoTitle: 'Ashwagandha Pura Original: Control de Estrés y Sueño',
     seoDescription: 'Compra Ashwagandha pura por solo $69.900 COP. Reduce el estrés, baja el cortisol y duerme mejor. Registro INVIMA garantizado y Envío Gratis a Colombia.',
     benefits: [
-      'Ayuda a regular los niveles de ansiedad y aliviar el estrés',
-      'Promueve un descanso profundo, reparador y combate el insomnio',
-      'Favorece el enfoque mental, la concentración y la claridad cognitiva',
-      'Apoya el sistema inmunológico y la vitalidad física general',
-      'Fórmula adaptógena natural de alta pureza y asimilación'
+      "Baja el estrés, calma los nervios y alivia la opresión en el pecho por angustia",
+      "Ayuda a dormir profundo sin despertarse a las 3 de la mañana con preocupaciones",
+      "Quita la sensación de cabeza saturada y mejora la concentración en el trabajo",
+      "Evita que el estrés te baje las defensas o te cause dolores de cabeza tensionales",
+      "Cápsulas blandas fáciles de pasar, suaves con el estómago y sin causar sueño de día"
     ],
     image: '/assets/products/ashwagandha.webp',
     basePrice: 69900,
@@ -2861,26 +2800,31 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
-    googleDescription: 'Complemento alimenticio en cápsulas a base de extracto estandarizado de raíz de Ashwagandha (Withania somnifera), una planta adaptógena ancestral de alta potencia y calidad premium. Diseñado para complementar la dieta diaria, aportar fitonutrientes puros que apoyan la vitalidad, el equilibrio corporal y la claridad mental en las actividades cotidianas. Los componentes de esta fórmula actúan en sinergia: el extracto estandarizado de withanólidos modula la respuesta del sistema nervioso frente a las tensiones cotidianas y ayuda a regular los niveles de cortisol en el organismo; los aceites vegetales y la lecitina de soya optimizan la biodisponibilidad para asegurar una absorción celular inmediata y eficiente. Su consumo regular mejora notablemente la calidad del descanso nocturno, promueve un sueño profundo y reparador, y favorece el enfoque cognitivo y el estado de ánimo positivo durante todo el día. Asimismo, ayuda a evitar el desgaste físico por estrés crónico, previene la fatiga mental prolongada y combate el insomnio sin somnolencia diurna. Respaldado por registro INVIMA vigente en Colombia, es el aliado ideal para quienes buscan serenidad, resiliencia y bienestar integral respaldado por la fitoterapia moderna.',
     condition: 'new',
     supportImages: [
       '/assets/products/ashwagandha-apoyo-1.webp',
       '/assets/products/ashwagandha-apoyo-2.webp',
       '/assets/products/ashwagandha-apoyo-3.webp'
     ],
-    keywords: 'ashwagandha, estrés, ansiedad, insomnio, adaptógeno, sueño profundo, bienestar emocional',
+    keywords: 'ashwagandha cápsulas, bajar el cortisol, estrés y ansiedad, ataques de pánico, insomnio y sueño profundo, adaptógeno natural, tensión nerviosa, paz mental, Ashwagandha original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Ashwagandha, Gelatina, Glicerina, Sorbato de Potasio, Aceite Vegetal, Lecitina de Soya, Dioxido de Silicio',
     componentBenefits: [
-      { name: 'Ashwagandha', benefit: 'Regula el sistema nervioso y controla el cortisol.' },
-      { name: 'Aceite Vegetal y Lecitina de Soya', benefit: 'Optimizan la biodisponibilidad de la fórmula para que tu cuerpo asimile los nutrientes de manera inmediata y eficiente.' }
+      {
+        name: "Extracto Puro de Ashwagandha",
+        benefit: "Baja los niveles de cortisol, calma los ataques de nervios y quita la opresión en el pecho por angustia."
+      },
+      {
+        name: "Matriz Lipídica de Fácil Absorción",
+        benefit: "Permite que el cuerpo absorba el extracto sin causarte ardor estomacal ni somnolencia en el día."
+      }
     ],
     longTailKeywords: [
-      'mejor suplemento de ashwagandha para el estrés en Colombia',
-      'cómo bajar el cortisol de forma natural y efectiva',
-      'ashwagandha para mejorar la calidad del sueño y dormir mejor',
-      'beneficios de los adaptógenos naturales para la salud mental',
-      'algo para bajar el stress y la ansiedad',
-      'cómo combatir la fatiga mental y el insomnio sin fármacos'
+      'mejor suplemento de ashwagandha pura en Colombia para bajar el cortisol',
+      'cómo quitar el estrés la ansiedad y el insomnio sin fármacos',
+      'ashwagandha azenza precio colombia oferta pago contra entrega',
+      'cápsulas blandas de ashwagandha para dormir profundo con registro invima',
+      'comprar adaptógeno natural para la fatiga mental con envío gratis',
+      'pedir ashwagandha original por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿En cuánto tiempo se sienten los efectos de la Ashwagandha?', a: 'Muchos usuarios sienten un alivio de la tensión nerviosa y una mejor calidad del sueño desde la primera semana de uso constante.' },
@@ -2907,9 +2851,9 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     name: 'Resveratrol y Vitamina B3 (NAD)',
     category: 'salud-bienestar',
     shortDescription: 'Energía y vitalidad Celular, Protección Antienvejecimiento.',
-    description: `Revitaliza tu cuerpo desde el núcleo celular con el complejo de Resveratrol y Vitamina B3 (NAD), la fórmula avanzada diseñada para rejuvenecer tus células y proteger tu organismo desde el interior. Esta combinación premium une dos de los precursores de longevidad más potentes de la ciencia moderna, creando un sistema de soporte completo que combate el desgaste oxidativo, promueve la reparación del ADN y actúa directamente en las mitocondrias para optimizar la conversión de alimentos en energía vital.
-    
- Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), es el aliado perfecto contra el envejecimiento prematuro, la fatiga y la pérdida de firmeza. Su acción protectora actúa profundamente para combatir el desgaste celular, devolviendo a tu piel, mente y cuerpo una profunda turgencia, luminosidad y juventud.
+        description: `La fatiga celular persistente, el desgaste prematuro de la piel y la pérdida de vitalidad física son consecuencias directas del declive de reservas metabólicas y el estrés oxidativo acumulado. El complejo de Resveratrol y Vitamina B3 (NAD) actúa como un sistema botánico y celular que integra polifenoles de alta pureza con precursores activos de NAD+, estimulando las vías de reparación del ADN y la producción eficiente de energía mitocondrial.
+
+A mediano y largo plazo, este soporte sinérgico optimiza la oxigenación de los tejidos, desacelera el daño oxidativo celular y preserva la firmeza y turgencia natural de la piel y las articulaciones. Con respaldo de Registro INVIMA oficial (NSA-2948-2026), su formato en cápsulas blandas (softgel) asegura una máxima biodisponibilidad y asimilación inmediata sin intolerancia gástrica, revitalizando tu organismo día tras día.
 
 ✔️ Longevidad Celular: Activa los genes de la juventud y promueve de forma segura la reparación del ADN.
 ✔️ Energía Mitocondrial: La vitamina B3 y el NAD+ optimizan la energía celular, reduciendo eficazmente el cansancio.
@@ -2918,11 +2862,11 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     seoTitle: 'Resveratrol + NAD Original: Energía y Juventud Celular',
     seoDescription: 'Fórmula antiedad con Resveratrol y Vitamina B3 (+NAD) por $69.900 COP. Energía celular y longevidad con Registro INVIMA. ¡Paga en casa con Envío Gratis!',
     benefits: [
-      'Apoya la producción de energía celular y combate la fatiga',
-      'Potente acción antioxidante contra el envejecimiento de las células',
-      'Ayuda a unificar el tono de la piel y devolverle su firmeza natural',
-      'Favorece el bienestar cardiovascular y la microcirculación cerebral',
-      'Fórmula enriquecida con precursores de NAD+ de máxima absorción'
+      "Combate el cansancio crónico y la falta de aire o fuerza al hacer tus labores",
+      "Frena el envejecimiento prematuro y devuelve la lozanía a la piel reseca o marchita",
+      "Protege el corazón y mejora la circulación para aliviar manos y pies fríos",
+      "Ayuda a recuperar la energía en el cuerpo desgastado por los años o el trabajo",
+      "Cápsulas blandas (softgel) de alta absorción que no provocan acidez ni malestar"
     ],
     image: '/assets/products/resveratrol-nad.webp',
     basePrice: 69900,
@@ -2936,18 +2880,25 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/resveratrol-nad-apoyo-2.webp',
       '/assets/products/resveratrol-nad-apoyo-3.webp'
     ],
-    keywords: 'resveratrol nad, vitamina b3, antiedad celular, longevidad, colágeno, arrugas, piel firme, AZENZA',
+    keywords: 'resveratrol con nad, vitamina b3 nicotinamida, rejuvenecimiento celular, antiedad arrugas, energía mitocondrial, cansancio crónico, longevidad cápsulas, circulación, Resveratrol NAD original invima, AZENZA, comprar colombia, pago contra entrega, envío gratis',
     components: 'Resveratrol, Vitamina B3 (Nicotinamida), precursores de NAD+, Glicerina, Sorbato de Potasio, Aceite Vegetal',
     componentBenefits: [
-      { name: 'Resveratrol y Vitamina B3', benefit: 'Estimulan la función del NAD+ celular y defienden la piel y órganos contra radicales libres.' },
-      { name: 'Aceite Vegetal y Lecitina de Soya', benefit: 'Optimizan la biodisponibilidad de la fórmula para que tu cuerpo asimile los nutrientes de manera inmediata y eficiente.' }
+      {
+        name: "Resveratrol y Vitamina B3",
+        benefit: "Frenan el envejecimiento celular prematuro, quitan el cansancio crónico y devuelven la lozanía a la piel marchita."
+      },
+      {
+        name: "Matriz Lipídica de Fácil Absorción",
+        benefit: "Garantiza que los nutrientes lleguen directo a tus células sin perderse en la digestión ni causar acidez."
+      }
     ],
     longTailKeywords: [
-      'mejor suplemento de resveratrol y nad en Colombia para la vejez',
-      'cómo aumentar el NAD+ en el cuerpo de manera natural',
-      'beneficios del resveratrol con vitamina b3 para la piel y energía',
-      'antioxidantes de grado clínico para retardar el envejecimiento',
-      'suplementos de longevidad celular and energía mitocondrial'
+      'mejor suplemento de resveratrol y vitamina B3 NAD en Colombia',
+      'cómo aumentar el NAD celular y frenar el envejecimiento de la piel',
+      'resveratrol nad azenza precio colombia oferta pago contra entrega',
+      'cápsulas blandas de resveratrol con nicotinamida registro invima',
+      'comprar antioxidante celular antiedad con envío gratis nacional',
+      'pedir resveratrol y nad por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Qué es el NAD y cómo ayuda con el envejecimiento?', a: 'El NAD+ es una coenzima celular indispensable para la producción de energía y la reparación del ADN. Sus niveles disminuyen con la edad, y precursores como la Vitamina B3 ayudan a restaurarlos.' },
@@ -2975,21 +2926,21 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     name: 'Vinagre de Manzana',
     category: 'salud-bienestar',
     shortDescription: 'Equilibrio Digestivo, Control de Ansiedad y Metabolismo Activo.',
-    description: `Optimiza tu digestión, activa tu energía y acelera tu metabolismo de forma natural con el Vinagre de Manzana, la solución avanzada diseñada para purificar tu cuerpo y potenciar tu rendimiento diario desde el interior. Esta fórmula premium ofrece todos los beneficios del vinagre de sidra de manzana de manera práctica y sin el sabor ácido tradicional, creando un sistema de soporte completo que apoya la salud digestiva y evita la acumulación de grasa corporal de forma cómoda y segura.
-    
-  Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), es el aliado perfecto para mantener tus metas de peso saludable, regular la glucosa y controlar los antojos. Su acción purificadora actúa profundamente en el organismo, transformando los nutrientes en vitalidad constante y protegiendo tu equilibrio corporal de manera natural y duradera.
-  
+        description: `La pesadez estomacal tras cada comida, la distensión abdominal recurrente y los picos repentinos de ansiedad por alimentos dulces reflejan un metabolismo digestivo enlentecido y un pH gástrico desbalanceado. Vinagre de Manzana actúa como un regulador digestivo y metabólico que concentra los ácidos orgánicos activos de la manzana en una matriz oleosa, facilitando la descomposición enzimática de nutrientes sin el sabor agresivo ni el desgaste del esmalte dental del vinagre líquido.
+
+A mediano y largo plazo, este estímulo gástrico optimiza la motilidad intestinal, estabiliza la respuesta glucémica posprandial y previene la retención de gases, promoviendo una sensación constante de ligereza y vientre desinflamado. Con respaldo de Registro INVIMA oficial (NSA-2948-2026), su presentación en cápsulas blandas (softgel) asegura una dosificación exacta, absorción limpia y libre de acidez bucal para acompañar tus metas diarias con total seguridad.
+
 ✔️ Activación de Energía: Transforma los alimentos en combustible celular para apoyar un rendimiento físico y mental superior.
 ✔️ Metabolismo y Control: Acelera el metabolismo de forma natural y ayuda a evitar que el cuerpo acumule grasa.
-✔️ Salud Digestiva: Disminuye la inflamación abdominal, controla los antojos de dulce y promueve una digestión ligera. `,
+✔️ Salud Digestiva: Disminuye la inflamación abdominal, controla los antojos de dulce y promueve una digestión ligera.`,
     seoTitle: 'Vinagre de Manzana Puro: Metabolismo y Digestión Ligera',
     seoDescription: 'Acelera tu metabolismo y mejora la digestión con Vinagre de Manzana puro ($69.900). Suplemento natural con Registro INVIMA. ¡Pídelo Contra Entrega!',
     benefits: [
-      'Apoya el control de peso y disminuye la ansiedad por comer dulce',
-      'Mejora la digestión y ayuda a reducir el reflujo y la pesadez',
-      'Favorece la desintoxicación natural del colon y el abdomen plano',
-      'Ayuda a mantener estables los niveles de azúcar en la sangre',
-      'Fórmula balanceada de alta asimilación con agradable consistencia'
+      "Quita la ansiedad incontrolable de picar dulces, harinas y panes entre comidas",
+      "Alivia la pesadez de estómago, los gases y el reflujo tras comidas abundantes",
+      "Ayuda a desinflamar el abdomen y apoya la quema natural de grasa acumulada",
+      "Ayuda a mantener estables los niveles de azúcar en sangre después de comer",
+      "Todos los beneficios del vinagre en cápsulas blandas: sin mal sabor ni daño al esmalte"
     ],
     image: '/assets/products/vinagre-manzana.webp',
     basePrice: 69900,
@@ -3004,17 +2955,25 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
       '/assets/products/vinagre-manzana-apoyo-3.webp',
       '/assets/products/vinagre-manzana-apoyo-4.webp'
     ],
-    keywords: 'vinagre de sidra de manzana, detox, metabolismo, vientre plano, digestión ligera, glucosa, AZENZA',
+    keywords: 'vinagre de manzana cápsulas, adelgazar abdomen, ansiedad por dulces y harinas, acelerar metabolismo, vientre plano, reflujo y pesadez, glucosa en sangre, digestión ligera, Vinagre de Manzana original invima, AZENZA, comprar colombia, pago contra entrega, envío gratis',
     components: 'Vinagre de Sidra de Manzana, Aceite Vegetal y Lecitina de Soya',
     componentBenefits: [
-      { name: 'Vinagre de Sidra de Manzana', benefit: 'Favorece la reducción del pH gástrico optimizando la asimilación de alimentos y controlando la glucemia.' },
-      { name: 'Aceite Vegetal y Lecitina de Soya', benefit: 'Optimizan la biodisponibilidad de la fórmula para que tu cuerpo asimile los nutrientes de manera inmediata y eficiente.' }    ],
+      {
+        name: "Vinagre de Sidra de Manzana Concentrado",
+        benefit: "Quita la ansiedad de comer harinas y dulces, acelera la digestión de grasas y desinflama el vientre abultado."
+      },
+      {
+        name: "Cápsula Blanda Suave",
+        benefit: "Te da todos los beneficios quemagrasa y digestivos del vinagre sin dañar tus dientes ni quemar tu garganta."
+      }
+    ],
     longTailKeywords: [
-      'mejor vinagre de manzana capsulas en Colombia para adelgazar',
-      'cómo tomar vinagre de manzana sin dañar el esmalte dental',
-      'vinagre de manzana para la digestión pesada e inflamación',
-      'suplementos naturales para controlar el azúcar y la ansiedad',
-      'detox de colon y abdomen plano con vinagre de manzana'
+      'mejor vinagre de manzana en cápsulas blandas Colombia para bajar de peso',
+      'cómo tomar vinagre de manzana sin dañar el esmalte de los dientes',
+      'vinagre de manzana azenza precio colombia oferta pago contra entrega',
+      'suplemento para desinflamar el estómago y controlar la ansiedad de comer',
+      'comprar vinagre de sidra de manzana puro con registro invima y envío gratis',
+      'pedir vinagre de manzana por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Daña este vinagre el esmalte de los dientes?', a: 'No, al estar formulado en una mezcla en polvo balanceada para diluir, no entra en contacto ácido directo con el esmalte como el vinagre líquido puro.' },
@@ -3042,9 +3001,9 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     name: 'Citrato de Potasio y Magnesio',
     category: 'salud-bienestar',
     shortDescription: 'Equilibrio Electrolítico, Bienestar Muscular, Sistema Nervioso y Salud Cardiovascular.',
-    description: `Recupera el equilibrio mineral de tu cuerpo con el complejo de Citrato de Potasio y Citrato de Magnesio, la fórmula avanzada diseñada para restaurar tu vitalidad y proteger tu sistema muscular desde el interior. Esta combinación premium une las dos formas de mayor absorción de estos minerales esenciales, creando un sistema de soporte completo que combate los calambres, reduce la fatiga crónica y promueve un correcto balance electrolítico en todo tu organismo.
-  
-  Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), es el aliado perfecto para personas activas que buscan aliviar la tensión acumulada, regular la presión arterial y mejorar la relajación nocturna. Su acción sinérgica actúa profundamente en el cuerpo, transformando el descanso en energía vital y apoyando el buen funcionamiento del sistema nervioso de forma segura y natural.
+        description: `Los calambres nocturnos repentinos, la fatiga muscular tras mínimos esfuerzos y la sensación de retención de líquidos son manifestaciones claras de un déficit en el balance electrolítico celular. Citrato de Potasio y Magnesio actúa como un sistema mineral de absorción quelada que sincroniza dos cationes esenciales en sus formas orgánicas más biodisponibles, regulando la bomba sodio-potasio y desactivando la sobreexcitación muscular sin causar molestias estomacales.
+
+A mediano y largo plazo, este equilibrio mineral restituye la contractilidad muscular armónica, favorece el drenaje fisiológico del exceso de líquidos y colabora en el mantenimiento de una presión arterial saludable y un descanso nocturno continuo. Avalado con Registro INVIMA oficial (NSA-2948-2026), su formulación en cápsulas blandas (softgel) garantiza una disolución entérica rápida y libre de sabor amargo, brindando soporte neuromuscular confiable y sostenido.
 
 ✔️ Bienestar Muscular: Alivia la tensión, previene calambres y espasmos, y acelera la recuperación física.
 ✔️ Sistema Nervioso y Sueño: Promueve una relajación profunda, ayuda a controlar el estrés y mejora la calidad del descanso.
@@ -3052,12 +3011,11 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     seoTitle: 'Citrato de Potasio y Magnesio: Cero Calambres y Energía',
     seoDescription: 'Elimina calambres y fatiga con Citrato de Potasio y Magnesio ($69.900). Alta biodisponibilidad y Registro INVIMA. ¡Envío Gratis y Pago al Recibir!',
     benefits: [
-      'Combate eficazmente los calambres y la rigidez muscular de forma estable',
-      'Ayuda a unificar el ritmo muscular cardíaco y apoya el sistema cardiovascular',
-      'Favorece el pH del organismo, reduciendo la retención de líquidos',
-      'Optimiza la función del sistema nervioso y promueve la relajación',
-      'Fórmula en citratos altamente asimilables por el organismo',
-      'Ayuda a regular la presión arterial y reduce los efectos del sodio en el cuerpo'
+      "Elimina los tirones y calambres dolorosos en piernas, pantorrillas y pies de noche",
+      "Desinflama piernas y pies hinchados por retención de líquidos y exceso de sal",
+      "Ayuda a regular la presión y relaja los vasos sanguíneos tensos",
+      "Suelta la tensión en la espalda y cuello para dormir relajado toda la noche",
+      "Cápsulas blandas de máxima absorción mineral, sin sabor amargo y suaves con el colon"
     ],
     image: '/assets/products/citrato-potasio-magnesio.webp',
     basePrice: 69900,
@@ -3065,26 +3023,35 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
-    googleDescription: 'Suplemento dietario en cápsulas blandas a base de citrato de potasio y citrato de magnesio de máxima biodisponibilidad y pureza farmacéutica. Formulado para complementar la ingesta diaria de minerales esenciales, apoyar el equilibrio electrolítico, el bienestar muscular y la hidratación corporal óptima en adultos y deportistas. Los ingredientes de la fórmula trabajan en perfecta armonía: el citrato de potasio apoya la función celular y ayuda a contrarrestar los efectos del sodio, facilitando la eliminación del exceso de líquidos a través de los riñones; el citrato de magnesio favorece la relajación neuromuscular y la producción de energía celular. Su consumo diario mejora significativamente el rendimiento físico, optimiza la contracción y relajación muscular, y promueve un descanso nocturno profundo. Además, ayuda a evitar eficazmente los calambres repentinos, previene la fatiga crónica por pérdida de electrolitos y reduce la retención hídrica corporal. Producto respaldado por notificación sanitaria INVIMA en Colombia, elaborado con la forma de citratos orgánicos que garantizan una asimilación superior sin causar molestias estomacales, ideal para proteger tu salud cardiovascular y muscular.',
     condition: 'new',
     supportImages: [
       '/assets/products/citrato-potasio-magnesio-apoyo-1.webp',
       '/assets/products/citrato-potasio-magnesio-apoyo-2.webp',
       '/assets/products/citrato-potasio-magnesio-apoyo-3.webp'
     ],
-    keywords: 'citrato de potasio, citrato de magnesio, calambres, presión arterial, retención líquidos, AZENZA',
+    keywords: 'citrato de potasio y magnesio, calambres en las piernas, dolor nocturno pantorrillas, retención de líquidos, pies y piernas hinchadas, presión arterial, tensión muscular cuello y espalda, Citrato de Potasio y Magnesio original invima, AZENZA, comprar colombia, pago contra entrega, envío gratis',
     components: 'Citrato de Potasio, Citrato de Magnesio',
     componentBenefits: [
-      { name: 'Citrato de Potasio', benefit: 'Ayuda a la correcta función celular y muscular, combatiendo el sodio y la retención de liquidos, ayuda a prevenir la formacion de nuevos calculos renales.' },
-      { name: 'Citrato de Magnesio', benefit: 'Favorece la relajación neuromuscular reduciendo el cansancio y calambres.' },
-      { name: 'Aceite Vegetal y Lecitina de Soya', benefit: 'Optimizan la biodisponibilidad de la fórmula para que tu cuerpo asimile los nutrientes de manera inmediata y eficiente.' }
+      {
+        name: "Citrato de Potasio",
+        benefit: "Elimina la sal y los líquidos retenidos que hinchan pies y piernas, y ayuda a regular la presión arterial."
+      },
+      {
+        name: "Citrato de Magnesio",
+        benefit: "Quita de raíz los tirones y calambres nocturnos en las piernas, relajando los músculos contraídos."
+      },
+      {
+        name: "Matriz Lipídica de Fácil Absorción",
+        benefit: "Permite una absorción mineral inmediata sin sabor amargo ni molestias en el estómago."
+      }
     ],
     longTailKeywords: [
-      'mejor citrato de potasio y magnesio Colombia',
-      'cómo quitar los calambres en las piernas por las noches',
-      'beneficios del magnesio y potasio para la presion arterial',
-      'suplementos de citrato para retención de líquidos y riñones',
-      'minerales esenciales para evitar la fatiga muscular diaria'
+      'mejor citrato de potasio y magnesio en Colombia para calambres nocturnos',
+      'cómo quitar los tirones en las piernas y deshinchar los pies con minerales',
+      'citrato de potasio y magnesio azenza precio colombia pago contra entrega',
+      'cápsulas blandas de potasio y magnesio con registro invima y envío gratis',
+      'suplemento mineral para regular la presión y evitar la fatiga muscular',
+      'pedir citrato de potasio y magnesio por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Por qué son mejores los citratos?', a: 'Los citratos son formas orgánicas que el cuerpo humano absorbe y asimila con un 90% más de efectividad que los óxidos o carbonatos de magnesio y potasio.' },
@@ -3112,9 +3079,9 @@ Especialmente formulada para pieles frágiles, esta solución botánica esencial
     name: 'Orégano',
     category: 'salud-bienestar',
     shortDescription: 'Inmunidad Avanzada, Antiparasitario y Balance Digestivo.',
-    description: `Descubre el poder purificador del Orégano, una de las soluciones botánicas más potentes de la naturaleza para blindar tus defensas, proteger tus células y limpiar tu sistema digestivo de forma profunda. Esta fórmula premium de alta pureza es excepcionalmente rica en carvacrol, creando un sistema de soporte completo que actúa como un escudo natural, combate el daño oxidativo, ayuda a equilibrar la microbiota intestinal, alivia la candidiasis y mitiga los gases o la inflamación estomacal de manera segura.
+        description: `La inflamación intestinal persistente, el exceso de gases por disbiosis, la recurrencia de molestias fúngicas y la debilidad en las defensas suelen ser el resultado de un desequilibrio en la microbiota y la proliferación de microorganismos oportunistas. Orégano actúa como un sistema botánico de purificación y defensa inmunitaria que concentra fitocompuestos bioactivos, en especial carvacrol y timol, creando una barrera natural que inhibe agentes patógenos sin barrer la flora bacteriana benéfica.
 
-Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), es el aliado perfecto para quienes buscan un apoyo integral al bienestar digestivo, eliminar toxinas y fortalecer su sistema inmune sin sufrir el fuerte sabor del extracto tradicional. Su acción protectora y antioxidante actúa profundamente en el organismo, combatiendo bacterias y parásitos perjudiciales para devolverle el equilibrio, la ligereza y una vitalidad saludable a tu día a día.
+A mediano y largo plazo, esta depuración botánica reduce la fermentación gástrica anormal, alivia la sensación de hinchazón abdominal y refuerza la respuesta inmunológica celular ante cambios ambientales o desgaste físico. Con respaldo de Registro INVIMA oficial (NSA-2948-2026), su presentación en cápsulas blandas (softgel) permite aprovechar toda la potencia antimicrobiana del aceite esencial concentrado sin experimentar el ardor orofaríngeo ni el reflujo característico del extracto líquido tradicional.
 
 ✔️ Escudo e Inmunidad: Potente protector natural que fortalece las defensas y combate amenazas externas gracias a su acción antioxidante.
 ✔️ Bienestar Digestivo: Alivia los gases, reduce la inflamación estomacal y apoya el funcionamiento correcto y ligero de todo el sistema digestivo.
@@ -3122,12 +3089,11 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     seoTitle: 'Aceite de Orégano Concentrado: Defensas y Salud Digestiva',
     seoDescription: 'Poderoso antibacteriano natural y escudo inmune con Aceite de Orégano concentrado ($69.900). Registro INVIMA oficial. ¡Paga en casa con Envío Gratis!',
     benefits: [
-      'Potente antiparasitario y antibacteriano natural',
-      'Ayuda a combatir el envejecimiento prematuro',
-      'Ayuda a combatir la cándida y apoya la salud de la microbiota',
-      'Alivia la inflamación abdominal, los gases y pesadez digestiva',
-      'Fortalece de manera notable el sistema inmunológico activo',
-      'Ayuda a aliviar dolores musculares y articulares'
+      "Ayuda a eliminar parásitos intestinales, bacterias nocivas y exceso de cándida",
+      "Desinflama la barriga hinchada, quita los gases con mal olor y alivia los cólicos",
+      "Limpia el tracto digestivo a fondo para que puedas comer sin miedo a la distensión",
+      "Refuerza las defensas naturales contra infecciones respiratorias y de garganta",
+      "Cápsulas blandas que evitan el ardor en la boca y el fuerte picor del aceite líquido"
     ],
     image: '/assets/products/oregano.webp',
     basePrice: 69900,
@@ -3142,18 +3108,25 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/oregano-apoyo-3.webp',
       '/assets/products/oregano-apoyo-4.webp'
     ],
-    keywords: 'oregano, carvacrol, antiparasitario natural, candida, digestión ligera, defensas, AZENZA',
+    keywords: 'aceite de orégano cápsulas, carvacrol concentrado, parásitos intestinales, eliminar hongo cándida, antiparasitario natural, gases con mal olor, limpiar el colon, defensas altas, Orégano original invima, AZENZA, comprar colombia, pago contra entrega, envío gratis',
     components: 'Orégano, Glicerina, Sorbato de Potasio, aceite Vegetal, Lecitina de Soya, Dioxido de Silicio',
     componentBenefits: [
-      { name: 'Extracto de Orégano', benefit: 'Aporta una alta concentración de carvacrol para combatir agentes infecciosos e hinchazón.' },
-      { name: 'Aceite Vegetal y Lecitina de Soya', benefit: 'Optimizan la biodisponibilidad de la fórmula para que tu cuerpo asimile los nutrientes de manera inmediata y eficiente.' }
+      {
+        name: "Extracto Concentrado de Orégano (Carvacrol)",
+        benefit: "Mata parásitos, hongos y bacterias dañinas en el intestino, quitando los gases fétidos y la barriga inflada."
+      },
+      {
+        name: "Cápsula Blanda Entérica",
+        benefit: "Llega directo al intestino para limpiar a fondo sin producir ardor en la boca ni reflujo a orégano."
+      }
     ],
     longTailKeywords: [
-      'mejor suplemento de orégano con carvacrol en Colombia',
-      'cómo limpiar el colon y eliminar parásitos naturalmente',
-      'beneficios del extracto de orégano para la candidiasis',
-      'suplementos antimicrobianos naturales para el estómago',
-      'cómo subir las defensas rápido con extractos de plantas'
+      'mejor suplemento de orégano con carvacrol en Colombia para desparasitar',
+      'cómo eliminar el hongo cándida y limpiar el intestino naturalmente',
+      'aceite de orégano azenza precio colombia oferta pago contra entrega',
+      'cápsulas blandas de orégano para gases fétidos y colon con registro invima',
+      'comprar antibacteriano y antiparasitario natural con envío gratis',
+      'pedir cápsulas de orégano por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Qué es el carvacrol y por qué es importante?', a: 'El carvacrol es el compuesto activo principal del orégano, reconocido científicamente por sus potentes propiedades antiparasitarias y fungicidas.' },
@@ -3181,21 +3154,21 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     name: 'Bisglicinato de Magnesio',
     category: 'salud-bienestar',
     shortDescription: 'Relajación Profunda, Descanso Reparador y Alivio del Estrés.',
-    description: `Mejora tu rutina de energía y equilibrio y recupera el bienestar de tu cuerpo con el Bisglicinato de Magnesio, la fórmula avanzada diseñada para combatir el estrés, restaurar tu tranquilidad y proteger tu sistema muscular desde el interior. Esta fórmula premium aprovecha la forma más pura y de mayor biodisponibilidad de este mineral esencial, actuando como un bálsamo natural que reduce la fatiga mental y ayuda al organismo a adaptarse y recuperarse del desgaste diario en todo tu organismo.
-    
-  Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), es el aliado perfecto para cualquier persona que busque aliviar el estrés acumulado, calmar la mente y favorecer un enfoque nítido durante el día. Su acción sinérgica actúa profundamente en el cuerpo, disminuyendo la tensión nerviosa, mejorando la concentración y apoyando la relajación nocturna de forma segura y natural.
-    
- ✔️ Alivio del Estrés y Ansiedad: Equilibra el sistema nervioso, reduce los niveles de cortisol y ayuda a mantener la calma en días exigentes.
- ✔️ Calma Mental y Enfoque: Disminuye la fatiga mental, promueve la claridad cognitiva y mejora la concentración diaria.
- ✔️ Descanso y Alivio Muscular: Promueve una relajación profunda, previene espasmos y optimiza la calidad del sueño reparador.`,
+        description: `La rigidez cervical persistente, la hiperactividad mental antes de dormir y los espasmos musculares involuntarios son señales evidentes de un agotamiento neurofisiológico originado por la demanda constante del estrés moderno. Bisglicinato de Magnesio actúa como un sistema de relajación neuromuscular profunda que une cada átomo de magnesio a dos moléculas de glicina, un aminoácido calmante que potencia el paso a través de la barrera intestinal sin producir el efecto laxante de otras sales de magnesio.
+
+A mediano y largo plazo, este aporte de alta biodisponibilidad modula los receptores GABA en el cerebro, amortigua los picos de cortisol y acelera la recuperación de las fibras musculares tensas, garantizando un despertar con ligereza corporal y lucidez mental. Con Registro INVIMA oficial (NSA-2948-2026), su formato en cápsulas blandas (softgel) proporciona una asimilación suave y de alta tolerancia gástrica para restituir tu calma y bienestar de forma segura.
+
+✔️ Alivio del Estrés y Ansiedad: Equilibra el sistema nervioso, reduce los niveles de cortisol y ayuda a mantener la calma en días exigentes.
+✔️ Calma Mental y Enfoque: Disminuye la fatiga mental, promueve la claridad cognitiva y mejora la concentración diaria.
+✔️ Descanso y Alivio Muscular: Promueve una relajación profunda, previene espasmos y optimiza la calidad del sueño reparador.`,
     seoTitle: 'Bisglicinato de Magnesio Quelado: Sueño Profundo y Relax',
     seoDescription: 'Máxima absorción para relajar músculos y conciliar un sueño profundo con Bisglicinato de Magnesio ($69.900). Registro INVIMA. ¡Paga Contra Entrega!',
     benefits: [
-      'Promueve un sueño profundo, reparador y combate el insomnio crónico',
-      'Alivia la tensión muscular acumulada, calambres y espasmos',
-      'Disminuye el estrés, la ansiedad diaria y calma la mente activa',
-      'Forma mineral quelada extremadamente gentil con el estómago (sin efecto laxante)',
-      'Fórmula balanceada de altísima biodisponibilidad certificada'
+      "Relaja los músculos trancados, espasmos y contracturas dolorosas en cuello y hombros",
+      "Combate el insomnio para que duermas profundo y no te despiertes agotado",
+      "Calma la ansiedad, los nervios y los pensamientos que no te dejan descansar",
+      "Magnesio quelado que no afloja el estómago ni produce diarrea como otros magnesios",
+      "Cápsulas blandas que se absorben rápido y alivian el estrés desde los primeros días"
     ],
     image: '/assets/products/bisglicinato-magnesio.webp',
     basePrice: 69900,
@@ -3203,25 +3176,31 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     presentation: 'Capsulas Blandas',
     invima: 'NSA-2948-2026',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
-    googleDescription: 'Suplemento dietario en cápsulas blandas a base de bisglicinato de magnesio quelado de máxima biodisponibilidad y asimilación celular. Este avanzado complejo está formulado para complementar la nutrición diaria, aportando minerales esenciales y aminoácidos que apoyan activamente el metabolismo energético, el funcionamiento muscular normal y el bienestar general del organismo. Cada componente contribuye de forma específica: el bisglicinato de magnesio aporta un mineral unido a glicina que facilita la absorción directa en el sistema nervioso sin generar molestias gástricas ni efectos laxantes indeseados; la glicina actúa como un neurotransmisor calmante que ayuda a inducir estados de serenidad. Su uso continuo mejora de manera notable la calidad del sueño profundo, optimiza la relajación neuromuscular y favorece la concentración mental durante las actividades cotidianas. Asimismo, evita la fatiga crónica, previene los molestos espasmos y calambres musculares nocturnos, y mitiga los efectos negativos del estrés diario sobre el cuerpo. Producto elaborado bajo rigurosos estándares de calidad internacional y respaldado con notificación sanitaria INVIMA en Colombia, garantizando seguridad, pureza y confianza en cada porción para integrar perfectamente en tu estilo de vida saludable y rutina de autocuidado diario.',
     condition: 'new',
     supportImages: [
       '/assets/products/bisglicinato-magnesio-apoyo-1.webp',
       '/assets/products/bisglicinato-magnesio-apoyo-2.webp',
       '/assets/products/bisglicinato-magnesio-apoyo-3.webp'
     ],
-    keywords: 'bisglicinato de magnesio, magnesio quelado, insomnio, relajante muscular, estrés, dormir bien, AZENZA',
+    keywords: 'bisglicinato de magnesio, magnesio quelado con glicina, insomnio y sueño profundo, relajante muscular sin diarrea, contracturas cuello y espalda, estrés y ansiedad, sistema nervioso, Bisglicinato de Magnesio original invima, AZENZA, comprar colombia, pago contra entrega, envío gratis',
     components: 'Bisglicinato de Magnesio, Glicina, Vitaminas del grupo B',
     componentBenefits: [
-      { name: 'Bisglicinato de Magnesio', benefit: 'Magnesio unido a glicina que favorece la relajación del sistema nervioso sin alterar el tránsito gástrico.' },
-      { name: 'Glicina y Complejo B', benefit: 'Aminoácido y neurotransmisor que induce de forma natural a estados de calma y descanso.' }
+      {
+        name: "Bisglicinato de Magnesio Quelado",
+        benefit: "Suelta los músculos trancados en cuello y espalda, calma la mente acelerada y te ayuda a dormir profundo sin despertar agotado."
+      },
+      {
+        name: "Glicina Relajante",
+        benefit: "Aminoácido calmante que alivia el estrés y la ansiedad sin causar diarrea ni malestar estomacal."
+      }
     ],
     longTailKeywords: [
-      'mejor bisglicinato de magnesio quelado en Colombia para dormir',
-      'magnesio que no suelte el estómago y ayude a relajar la mente',
-      'suplementos de magnesio con glicina para el descanso y estres',
-      'cómo relajar el sistema nervioso para dormir mejor naturalmente',
-      'beneficios del bisglicinato de magnesio en polvo biodisponible'
+      'mejor bisglicinato de magnesio quelado en Colombia para dormir profundo',
+      'magnesio que no afloje el estómago ni de diarrea para relajar la mente',
+      'bisglicinato de magnesio azenza precio colombia oferta pago contra entrega',
+      'cápsulas blandas de magnesio quelado con glicina registro invima',
+      'suplemento para relajar músculos y quitar el insomnio con envío gratis',
+      'pedir bisglicinato de magnesio por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Qué diferencia al Bisglicinato de otras formas de magnesio?', a: 'Es un magnesio quelado (unido a glicina) que se absorbe al máximo en las células cerebrales y nerviosas, y al no competir por el agua gástrica, no produce el efecto laxante del cloruro o sulfato de magnesio.' },
@@ -3249,10 +3228,10 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     name: 'Tónico Capilar Folivance',
     category: 'belleza-integral',
     shortDescription: 'Densificador Capilar y Ritual de Crecimiento Acelerado.',
-    description: `Eleva tu rutina de cuidado capilar y recupera la vitalidad de tu fibra del cabello con el complejo de Aminoácidos, Biotina y Niacinamida (Vitamina B3), la fórmula avanzada diseñada para transformar tu cabello y proteger tu cuero cabelludo desde el interior. Esta combinación premium une tres de los nutrientes más potentes de la ciencia cosmética y nutricional, creando un sistema de soporte completo que de manera natural estimula el nacimiento de nuevas hebras, frena la caída y devuelve el volumen y la salud a tu melena de forma segura.
-    
-  Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), es el aliado perfecto para cualquier persona que busque combatir el adelgazamiento capilar, la debilidad y el desgaste diario. Su acción sinérgica actúa profundamente en el organismo, optimizando la oxigenación de los folículos y restaurando un cabello visiblemente más grueso, resistente y radiante.
-  
+    description: `El afinamiento progresivo de la fibra, la caída difusa durante el peinado y las zonas de baja densidad en el cuero cabelludo son consecuencia directa de una irrigación sanguínea deficiente y una desnutrición en la papila dérmica folicular. El Tónico Capilar Folivance actúa como un sistema de bioestimulación tricológica intensiva que sincroniza la acción reparadora de un complejo de Aminoácidos puros, Biotina de alta pureza y Niacinamida (Vitamina B3) para reactivar el metabolismo de la raíz y controlar la microinflamación del cuero cabelludo.
+
+A mediano y largo plazo, esta sinergia de nutrientes esenciales activa la fase anágena de crecimiento, optimiza la oxigenación folicular y fortalece los puentes de queratina, frenando el desprendimiento prematuro y aumentando el grosor, la densidad y la resistencia de cada hebra frente a la rotura. Avalado con Registro INVIMA oficial, su formulación líquida en spray no requiere enjuague y se absorbe al instante sin apelmazar ni dejar sensación grasosa, ofreciendo un tratamiento diario práctico, limpio y de máxima biodisponibilidad tópica.
+
 ✔️ Estructura y Reparación: Los aminoácidos fortalecen la fibra capilar, reparan el cabello existente y previenen la rotura.
 ✔️ Crecimiento y Grosor: La biotina estimula la aparición de nuevas hebras, mejora la oxigenación y engrosa el cabello de raíz a puntas.
 ✔️ Circulación y Control: La niacinamida mejora el flujo sanguíneo en el cuero cabelludo, calma la irritación y controla el exceso de grasa.`,
@@ -3275,7 +3254,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/folivance-apoyo-1.webp',
       '/assets/products/folivance-apoyo-2.webp'
     ],
-    keywords: 'Folivance, tonico capilar, caida cabello, crecimiento pelo, aminoácidos, niacinamida, biotina, romero, Azenza',
+    keywords: 'tónico folivance, caída del cabello, crecimiento capilar acelerado, biotina líquida, aminoácidos capilares, niacinamida cuero cabelludo, engrosar cabello fino, crecimiento de barba, Tónico Capilar Folivance original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Biotina, Aminoácidos, niacinamida',
     componentBenefits: [
       { name: 'Aminoácidos', benefit: 'fortalece, da estructura y repara el cabello existente.' },
@@ -3284,11 +3263,12 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
 
     ],
     longTailKeywords: [
-      'mejor tonico para el crecimiento acelerado del cabello Colombia',
-      'cómo detener la caida del pelo en hombres y mujeres',
-      'tonico capilar folivance con trichogen al 8 por ciento',
-      'productos naturales para engrosar el cabello fino y debil',
-      'crecimiento de barba y cejas con tonicos capilares folivance'
+      'mejor tónico para el crecimiento acelerado del cabello en Colombia',
+      'cómo detener la caída del pelo y poblar la barba con biotina y niacinamida',
+      'tónico capilar folivance azenza precio colombia oferta pago contra entrega',
+      'spray anticaída y fortalecedor capilar con registro invima y envío gratis',
+      'tratamiento capilar no grasoso para engrosar cabello fino y quebradizo',
+      'pedir tónico folivance por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo se debe aplicar Folivance?', a: 'Aplicar directamente sobre el cuero cabelludo limpio en las zonas deseadas, masajear suavemente con la yema de los dedos por 2 minutos para activar la absorción. No requiere enjuague.' },
@@ -3316,10 +3296,10 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     name: 'Shampoo Intensivo',
     category: 'belleza-integral',
     shortDescription: 'Limpieza Profunda, Control Grasa y Fortalecimiento Folicular.',
-    description: `Transforma tu rutina de cuidado capilar y recupera la vitalidad de tu fibra del cabello con el Shampoo Intensivo de Biotina, Aminoácidos y Niacinamida (Vitamina B3), la fórmula avanzada diseñada para restaurar tu melena, devolverle su brillo natural y proteger tu cuero cabelludo desde la raíz. Esta combinación premium une tres de los nutrientes más potentes de la ciencia cosmética, creando un sistema de limpieza y reparación profundo que de manera natural disminuye la caída, estimula el nacimiento de nuevo cabello y devuelve el volumen perdido.
-    
-    Con una fórmula de acción directa e intensiva, es el aliado perfecto para cualquier persona que busque combatir el adelgazamiento capilar, la opacidad, la debilidad y el desgaste diario. Su acción sinérgica actúa eficazmente en cada lavado, optimizando la oxigenación de los folículos, purificando el cuero cabelludo y restaurando un cabello visiblemente más grueso, luminoso, resistente y radiante.
-    
+    description: `La acumulación de sebo excesivo en el cuero cabelludo, la asfixia folicular por residuos químicos y el uso recurrente de detergentes agresivos debilitan la cutícula capilar, provocando caída por quiebre, pérdida acelerada de densidad y opacidad constante. El Shampoo Intensivo funciona como un sistema tricológico de higiene purificante y nutrición folicular libre de sal y sulfatos abrasivos que sincroniza la acción reguladora y vasodilatadora de la Niacinamida (Vitamina B3) con la recarga estructural de un complejo de Aminoácidos esenciales y Biotina pura.
+
+A nivel dérmico y cuticular, limpia en profundidad sin resecar la barrera epidérmica, oxigena los poros del bulbo piloso y sella las hebras dañadas para evitar puntas abiertas, permitiendo que el cabello crezca con mayor calibre, elasticidad y resistencia ante el cepillado diario. Avalado con Registro INVIMA oficial, su presentación de 450ml rinde de manera sobresaliente para el uso frecuente en todo tipo de cabello, protegiendo procesos químicos y devolviendo un brillo natural, sedoso y con volumen renovado desde el primer lavado.
+
 ✔️ Estructura y Brillo: Los aminoácidos fortalecen la fibra capilar, reparan el cabello existente, previenen la rotura y restauran un brillo saludable desde el primer uso.
 ✔️ Crecimiento y Grosor: La biotina estimula la aparición de nuevo cabello, mejora la oxigenación folicular y lo engrosa de raíz a puntas.
 ✔️ Circulación y Control: La niacinamida mejora el flujo sanguíneo en el cuero cabelludo, calma la irritación y controla el exceso de grasa de forma duradera.`,
@@ -3344,7 +3324,7 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       '/assets/products/shampoo-intensivo-apoyo-3.webp',
       '/assets/products/shampoo-intensivo-apoyo-4.webp'
     ],
-    keywords: 'shampoo intensivo, sin sal, anticaida, biotina, Aminoácidos, niacinamida, cabello fuerte, Azenza',
+    keywords: 'shampoo sin sal, shampoo anticaída profesional, biotina y aminoácidos, niacinamida capilar, control grasa en la raíz, cabello maltratado y quebradizo, sin sulfatos, Shampoo Intensivo original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Biotina, aminoácidos y niacinamida',
     componentBenefits: [
       { name: 'Aminoácidos', benefit: 'fortalece, da estructura y repara el cabello existente.' },
@@ -3352,11 +3332,12 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
       { name: 'Niacinamida (vitamina B3)', benefit: 'Mejora la circulación, calma la irritación y controla el exceso de grasa en el cuero cabelludo .' }
     ],
     longTailKeywords: [
-      'mejor shampoo intensivo sin sal para la caida Colombia',
-      'shampoo profesional con romero y biotina para dar brillo',
-      'shampoo restaurador para cabellos debiles y quebradizos',
-      'como lavar el pelo maltratado por tintes o quimicos',
-      'shampoo anticaida y fortalecedor capilar de alta pureza'
+      'mejor shampoo intensivo sin sal para la caída del cabello en Colombia',
+      'shampoo profesional con biotina y aminoácidos para reparar puntas abiertas',
+      'shampoo intensivo azenza precio colombia oferta pago contra entrega',
+      'shampoo libre de sal y sulfatos para queratinas con registro invima',
+      'comprar shampoo fortalecedor y anticaída con envío gratis nacional',
+      'pedir shampoo intensivo por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Contiene sal o sulfatos?', a: 'No, es un shampoo formulado 100% libre de sal (cloruro de sodio) y sulfatos agresivos, ideal para cuidar queratinas y tintes.' },
@@ -3384,10 +3365,10 @@ Con una excelente biodisponibilidad en formato de cápsulas blandas (softgel), e
     name: 'Aceite Relajante',
     category: 'belleza-integral',
     shortDescription: 'Alivio de Tensiones, Masaje Terapéutico, Descanso Corporal, Fortalecimiento de la Piel.',
-    description: `Renueva la ligereza de tus piernas y optimiza tu bienestar corporal con el Aceite de Castaño de Indias y Centella Asiática, una fórmula avanzada diseñada para mejorar la microcirculación local y proteger la elasticidad de tu piel desde el exterior. Esta combinación premium une dos de los extractos botánicos más potentes de la naturaleza, creando un sistema de cuidado completo que a través del masaje disminuye la pesadez, estimula el flujo sanguíneo y devuelve el descanso a tu cuerpo.
-    
-Desarrollado con una textura ideal para masajes y una absorción profunda, este producto es el aliado perfecto para cualquier persona que busque combatir la retención de líquidos, la hinchazón local y la fatiga diaria acumulada por pasar mucho tiempo de pie o sentado. Su acción sinérgica actúa directamente sobre las zonas afectadas, promoviendo la relajación de los tejidos musculares y restaurando una sensación de ligereza duradera.
-    
+    description: `La pesadez continua en las piernas, la hinchazón vespertina provocada por extensas jornadas de pie o sentado y la rigidez muscular acumulada reflejan un estancamiento en el retorno venoso y fatiga tisular. Nuestro Aceite Relajante actúa como un sistema fitocosmético vasotónico de drenaje que sincroniza la potencia botánica de extractos puros de Castaño de Indias (rico en escina venotónica) y Centella Asiática estructurante en una base oleosa altamente emoliente y nutritiva.
+
+Al aplicarse mediante masaje drenante ascendente, estimula la microcirculación superficial, favorece la reabsorción de líquidos retenidos y promueve la síntesis de colágeno perivascular, atenuando la apariencia de arañitas dérmicas y devolviendo al cuerpo una ligereza prolongada y una piel profundamente hidratada y elástica. Avalado con Registro INVIMA oficial, su textura sedosa proporciona un deslizamiento fluido y profesional que se absorbe progresivamente sin manchar la ropa ni dejar sensación pringosa, convirtiéndose en el ritual ideal para desinflamar y recuperar el descanso corporal absoluto.
+
 ✔️ Circulación y Alivio: El castaño de indias ayuda a tonificar la piel, disminuye la pesadez y reduce notablemente la tensión en las piernas cansadas mediante el masaje.
 ✔️ Elasticidad y Firmeza: La centella asiática favorece la firmeza de la piel estimulando de forma natural los tejidos, mejora su aspecto y atenúa la apariencia de las várices y líneas superficiales.
 ✔️ Acción Protectora y Nutrición: Su base aceitosa humecta profundamente la piel, mientras que sus antioxidantes naturales protegen las células contra el desgaste y la resequedad diaria.`,
@@ -3411,7 +3392,7 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
       '/assets/products/aceite-relajante-apoyo-2.webp',
       '/assets/products/aceite-relajante-apoyo-3.webp'
     ],
-    keywords: 'aceite relajante, masajes, tension muscular, descontracturante, estres, Azenza',
+    keywords: 'aceite para masajes, dolor muscular y contracturas, piernas cansadas y pesadas, venas várices, castaño de indias, centella asiática, aceite descontracturante espalda y cuello, circulación, Aceite Relajante original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Aceite de Castaño de Indias, Centella Asiática, Extracto de Uva',
     componentBenefits: [
       { name: 'Castaño de Indias', benefit: 'Desinflama las venas, alivia la pesadez en las piernas y combate la retención de líquidos (ideal para várices).' },
@@ -3419,12 +3400,12 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
       { name: 'extracto de Uva', benefit: 'Aporta potentes antioxidantes que protegen las venas del envejecimiento y refuerzan la circulación general.' }
     ],
     longTailKeywords: [
-      'mejor aceite relajante para masajes musculares en Colombia',
-      'aceites corporales para piernas cansadas',
-      'tratamiento natural para venas varices con extracto de uva',
-      'aceite descontracturante para espalda y cuello adoloridos',
-      'masajes de relajacion con aceites naturales de almendras',
-      'como relajar el cuerpo cansado despues del trabajo con aceites'
+      'mejor aceite para masajes descontracturantes y piernas cansadas Colombia',
+      'cómo aliviar la pesadez en las piernas y várices con castaño de indias',
+      'aceite relajante azenza precio colombia oferta pago contra entrega',
+      'aceite corporal para contracturas en espalda y cuello con registro invima',
+      'comprar aceite para masajes relajantes con envío gratis nacional',
+      'pedir aceite relajante por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Deja la piel pegajosa o grasosa?', a: 'No, su fórmula está balanceada con aceites ligeros de almendras que se absorben paulatinamente nutriendo la piel sin dejar residuo pesado.' },
@@ -3452,10 +3433,10 @@ Desarrollado con una textura ideal para masajes y una absorción profunda, este 
     name: 'Gel Frío Relajante',
     category: 'belleza-integral',
     shortDescription: 'Efecto Criogénico, Alivio Muscular y Piernas Cansadas.',
-    description: `Siente un alivio refrescante inmediato con este Gel Frío Relajante, una propuesta avanzada diseñada específicamente para desinflamar las piernas, reactivar la circulación periférica y tonificar la piel desde la primera aplicación. Su poderosa fórmula criogénica aprovecha los beneficios naturales del castaño de indias y la centella asiática, fusionándolas con el mentol para generar una intensa sensación de frío localizado que disminuye la inflamación y devuelve la vitalidad a tu caminar.
-    
-Diseñado con una textura ligera de rápida absorción y efecto no graso, este producto estimula la circulación en la zona aplicada y en toda la pierna, convirtiéndose en el aliado perfecto para aliviar la pesadez, mitigar las molestias por várices o reducir la fatiga muscular tras una intensa sesión de ejercicio y largas jornadas de pie. Su acción térmica actúa directamente sobre el área afectada, ayudando a deshinchar los tobillos, relajar los músculos adoloridos y restaurar una agradable sensación de ligereza y confort duradero en tus piernas.
-  
+    description: `El ardor punzante, la hinchazón congestiva en pantorrillas y tobillos tras largas jornadas de inmovilidad o esfuerzo físico, y la sensación de pesadez que entumece las piernas impiden un descanso reparador y limitan la movilidad cotidiana. Nuestro Gel Frío Relajante actúa como un sistema dermo-criogénico de descongestión vascular que integra la acción del Mentol bioactivo de alta pureza con extractos venotónicos concentrados de Castaño de Indias y Centella Asiática, provocando una respuesta térmica de vasoconstricción localizada inmediata que desinflama los tejidos y disipa la fatiga muscular acumulada.
+
+A nivel circulatorio y tisular, este estímulo térmico sostenido activa el drenaje linfático periférico, alivia la tensión provocada por la insuficiencia venosa superficial y refuerza la firmeza cutánea, atenuando la visibilidad de dilataciones vasculares y devolviendo a las extremidades una sensación prolongada de ligereza y confort. Avalado con Registro INVIMA oficial, su formulación en hidro-gel de penetración ultra-rápida no deja residuos grasos ni mancha las prendas, brindando un alivio criogénico instantáneo, higiénico y confiable para recuperar la frescura y vitalidad en cada paso.
+
 ✔️ Efecto Frío: El mentol aporta una sensación de frescura calmante inmediata que disminuye la pesadez, alivia el dolor local y descansa las piernas de forma instantánea.
 ✔️ Tonificación y Circulación Ampliada: El castaño de indias activa el flujo sanguíneo de forma localizada, estimula la circulación en la zona aplicada y en toda la pierna, y previene eficazmente la hinchazón diaria.
 ✔️ Firmeza y Reparación: La centella asiática mejora la consistencia de los tejidos cutáneos de las piernas, disminuye la flacidez y ayuda a desvanecer visualmente las várices.`,
@@ -3473,13 +3454,12 @@ Diseñado con una textura ligera de rápida absorción y efecto no graso, este p
     size: '60g',
     presentation: 'Gel',
     googleCategory: 'Health & Beauty > Personal Care > Cosmetics > Skin Care',
-    googleDescription: 'Gel cosmético de uso tópico con efecto criogénico avanzado, enriquecido con mentol, alcanfor, extracto de castaño de indias y centella asiática de grado profesional. Formulado para proporcionar una sensación de frescura inmediata, aliviar la pesadez muscular y brindar confort y relajación profunda en piernas y zonas tensionadas tras la actividad física o largas jornadas de pie. Su combinación de activos actúa de forma precisa: el mentol genera una intensa oleada de frío calmante que insensibiliza la molestia local; el castaño de indias estimula la circulación periférica en la zona aplicada y en toda la pierna; la centella asiática promueve la síntesis de colágeno, repara los tejidos cutáneos y mejora la elasticidad vascular. Su aplicación regular mejora visiblemente la firmeza de la piel, alivia la fatiga en las extremidades y reduce la sensación de piernas cansadas. Asimismo, ayuda a evitar la retención de líquidos superficial, previene la inflamación por sobrecarga física y mitiga las molestias estéticas por varices. Desarrollado con una textura no grasa de rápida absorción, es el complemento cosmético perfecto para deportistas, personas que trabajan de pie y quienes buscan un alivio corporal inmediato y seguro.',
     condition: 'new',
     supportImages: [
       '/assets/products/gel-frio-apoyo-1.webp',
       '/assets/products/gel-frio-apoyo-2.webp'
     ],
-    keywords: 'gel frio, criogenico, piernas cansadas, varices, mentol, castaño de indias, Azenza, fatiga muscular',
+    keywords: 'gel frío criogénico, efecto hielo desinflamatorio, piernas pesadas y cansadas, venas várices inflamadas, mentol puro, castaño de indias, centella asiática, fatiga muscular deportistas, Gel Frío original invima, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Mentol, Castaño de Indias, Centella Asiática',
     componentBenefits: [
       { name: 'Mentol', benefit: 'Proporcionan un efecto frío inmediato que insensibiliza la molestia y desinflama.' },
@@ -3487,11 +3467,12 @@ Diseñado con una textura ligera de rápida absorción y efecto no graso, este p
       { name: 'Centella Asiática', benefit: 'Estimula la producción de colágeno, repara los tejidos de la piel y mejora la elasticidad de los vasos sanguíneos.' }
     ],
     longTailKeywords: [
-      'mejor gel frio criogenico para piernas cansadas Colombia',
-      'gel desinflamatorio para golpes y tension muscular',
-      'aliviar dolor de pies y piernas varicosas con gel frio',
-      'gel de mentol y castaño de indias para deportistas',
-      'como deshinchar las piernas despues de estar de pie todo el dia'
+      'mejor gel frío criogénico en Colombia para aliviar piernas cansadas',
+      'gel efecto hielo para desinflamar venas várices y calmar pesadez',
+      'gel frío relajante azenza precio colombia oferta pago contra entrega',
+      'gel de mentol y castaño de indias con registro invima y envío gratis',
+      'cómo deshinchar tobillos y piernas adoloridas tras estar de pie todo el día',
+      'pedir gel frío criogénico por whatsapp a domicilio'
     ],
     seoFaqs: [
       { q: '¿Cómo se debe aplicar el gel frío?', a: 'Aplicar sobre la zona afectada con masajes ascendentes (de abajo hacia arriba) hasta que se absorba. Se sentirá una oleada de frío que relaja de inmediato.' },
@@ -3569,7 +3550,13 @@ export interface Promotion {
 export const COMBO_OF_THE_MONTH: Promotion = {
   id: 'combo-inmunidad-dual',
   name: 'Inmunidad Dual',
-  description: 'Resvisfactor y Coliplus: la combinación perfecta para desinflamar tu vientre, sentirte mas ligero y libre de molestias.',
+  description: `Resvisfactor y Coliplus: la combinación perfecta para desinflamar tu vientre, sentirte mas ligero y libre de molestias. Cuando el colon se congestiona con desechos acumulados, toxinas y gases, el cuerpo entero se debilita: surgen la pesadez estomacal constante, cólicos después de comer y una caída drástica en las defensas que te expone a resfriados y fatiga diaria. Este combo sincroniza la matriz de fibras solubles de Chía, Linaza y Pitaya de Coliplus para barrer los residuos retenidos y desinflamar la mucosa intestinal, junto al Calostro Bovino y Hongos Shiitake y Ganoderma de Resvisfactor, que reactivan la protección de tus glóbulos blancos desde la raíz.
+
+A mediano plazo, esta sinergia elimina la distensión abdominal, regula las evacuaciones diarias sin retortijones y devuelve la vitalidad a tu cuerpo, logrando que despiertes con energía renovada y una digestión tranquila. Ambos productos cuentan con Registro INVIMA oficial y vienen en formatos rendidores de consumo fácil y agradable.
+
+✔️ Defensas Blindadas: El calostro bovino y los hongos adaptógenos fortalecen tu escudo natural contra gripes y decaimiento.
+✔️ Vientre Plano y Alivio: La linaza y pitaya descongestionan el colon, expulsando gases dolorosos y pesadez tras comer.
+✔️ Evacuación Diaria Suave: Promueve deposiciones diarias fluidas sin cólicos, devolviéndote ligereza y energía física.`,
   image: '/assets/combos/combo-bienestar.webp',
   price: 129900,
   originalPrice: 165800,
@@ -3577,36 +3564,40 @@ export const COMBO_OF_THE_MONTH: Promotion = {
   googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
   condition: 'new',
   products: ['resvis', 'coliplus'],
-  seoTitle: 'Combo Inmunidad Dual: Resvisfactor + Coliplus en Oferta',
-  seoDescription: 'Ahorra $35.900 en el Combo Inmunidad Dual (Resvisfactor + Coliplus) por solo $129.900 COP. Desinflama tu vientre y sube defensas. ¡Envío Gratis Contra Entrega!',
+  seoTitle: 'Combo Inmunidad Dual: Desinflama el Vientre y Refuerza Defensas | Envío Gratis',
+  seoDescription: 'Desinflama tu vientre abultado y blinda tus defensas con Inmunidad Dual (Resvisfactor + Coliplus) por $129.900 COP (Ahorro $35.900). ¡Envío Gratis Contra Entrega!',
   whyChoose: {
-    title: 'Bienestar Digestivo y Defensas Blindadas',
+    title: 'Desinflama tu Vientre y Refuerza tus Defensas Naturales',
     description: 'La combinación perfecta para desinflamar tu vientre, sentirte mas ligero y libre de molestias con Resvisfactor y Coliplus.'
   },
   badge: 'OFERTA DEL MES',
   benefits: [
-    'Desinflama el vientre y depura el colon con Coliplus',
-    'Fortalece tu sistema inmunológico con Resvisfactor',
-    'Digestión ligera y mayor bienestar integral diario',
+    'Desinflama el vientre hinchado y limpia el colon con Coliplus',
+    'Sube las defensas para evitar gripes y recaídas con Resvisfactor',
+    'Quita los gases dolorosos, cólicos y pesadez tras cada comida',
     'Ahorro de $35.900 con Envío Gratis y Pago Contra Entrega'
   ],
-  keywords: 'inmunidad dual, resvisfactor, coliplus, desinflamar vientre, defensas, colon limpio, combo oferta, comprar combo',
+  keywords: 'inmunidad dual, resvisfactor, coliplus, desinflamar vientre hinchado, limpiar colon de toxinas, defensas bajas, calostro bovino, hongos adaptogenos, fibra de pitaya, estreñimiento, evacuar sin dolor, combo oferta colombia, pago contra entrega, envio gratis, azenza',
   components: 'Resvisfactor y Coliplus',
   componentBenefits: [
     {
-      name: 'Resvisfactor',
-      benefit: 'Fortalece el sistema inmune y aporta calostro bovino para defensas blindadas.'
+      name: 'Resvisfactor (Calostro y Shiitake)',
+      benefit: 'Activa tus defensas naturales con calostro bovino para no vivir con gripes, decaimiento ni debilidad constante.'
     },
     {
-      name: 'Coliplus',
-      benefit: 'Regula el tránsito intestinal, depura el colon y desinflama el vientre naturalmente.'
+      name: 'Coliplus (Fibra de Linaza y Pitaya)',
+      benefit: 'Desinflama el colon irritado, afloja el intestino perezoso y saca los gases acumulados sin dolor.'
     }
   ],
   longTailKeywords: [
-    'combo para desinflamar el estomago y subir defensas',
-    'resvisfactor y coliplus precio colombia oferta',
-    'limpieza de colon y fortalecimiento inmunologico',
-    'combo bienestar natural contra entrega envio gratis'
+    'combo para desinflamar el vientre abultado y subir defensas rapido',
+    'resvisfactor y coliplus precio colombia oferta del mes',
+    'limpieza profunda de colon con pitaya y fortalecimiento inmunologico',
+    'como desinflamar el estomago y evacuar a diario sin colicos ni dolor',
+    'combo inmunidad dual azenza original pago contra entrega envio gratis',
+    'comprar resvisfactor y coliplus con registro invima colombia',
+    'remedio natural para colon irritable gases y defensas caidas',
+    'pedir combo inmunidad dual por whatsapp con domicilio gratis'
   ],
   seoFaqs: [
     { q: '¿Cómo debo tomar los productos del Combo Inmunidad Dual?', a: 'Toma Coliplus disuelto en agua tibia por las mañanas o noches para regular el colon, y toma Resvisfactor diariamente para fortalecer tus defensas.' },
@@ -3623,47 +3614,50 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-1',
     name: 'Combo Piel Radiante',
-    description: 'El Combo Piel Radiante es un cuidado integral de doble acción diseñado para renovar la luminosidad, uniformidad y salud de tu piel desde el nivel celular hacia el exterior. Esta potente combinación une la eficacia de la crema Miskinne, que actúa directamente sobre la suavidad e hidratación externa con Caléndula y Avena, con el poder del Resveratrol líquido, que aporta una carga masiva de antioxidantes para proteger las células del daño oxidativo. Es el ritual perfecto para quienes buscan una piel visiblemente más joven, elástica y radiante, favoreciendo la vitalidad desde adentro.',
+    description: `Las manchas oscuras por el sol, la resequedad y las líneas de expresión profundas reflejan la pérdida progresiva de colágeno y la acumulación de radicales libres en la piel. El Combo Piel Radiante combina la acción tópica de la crema dermocosmética Miskinne con la nutrición celular interna del Resveratrol líquido concentrado con Colágeno y Biotina. Mientras Miskinne penetra las capas dérmicas para aclarar manchas visibles, suavizar zonas agrietadas y emparejar el tono, el Resveratrol frena el estrés oxidativo desde el interior del organismo, devolviendo elasticidad y firmeza a los tejidos del rostro y cuello.
+
+A mediano y largo plazo, esta doble acción hidrata profundamente la piel, suaviza patas de gallo y arrugas, y previene nuevas hiperpigmentaciones, logrando un cutis luminoso, terso y rejuvenecido. Con Registro INVIMA oficial y fórmulas seguras, es el tratamiento definitivo para devolverle la juventud a tu rostro sin recurrir a procedimientos agresivos.
+
+✔️ Tono Claro y Uniforme: Atenúa manchas solares, paño y zonas oscuras para un cutis visiblemente radiante.
+✔️ Reafirmación y Elasticidad: El colágeno y resveratrol tensan la piel y rellenan líneas de expresión marcadas.
+✔️ Cuidado Celular Dual: Hidratación externa intensiva con Miskinne y regeneración antioxidante interna con Resveratrol.`,
     image: '/assets/combos/promo-1.webp',
     price: 104850,
     originalPrice: 139800,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['resveratrol', 'miskinne'],
-    seoTitle: 'Combo Piel Radiante: Hidratación, Firmeza y Colágeno',
-    seoDescription: 'Luce una piel radiante con nuestro Combo Piel Radiante. Fórmula balanceada para bienestar integral, nutrición celular y calidad certificada. ¡Ahorra hoy!',
+    seoTitle: 'Combo Piel Radiante: Aclara Manchas de Sol y Rejuvenece el Cutis | Envío Gratis',
+    seoDescription: 'Elimina manchas de sol, resequedad y arrugas con el Combo Piel Radiante (Resveratrol + Miskinne). Ahorra $34.950 COP con Registro INVIMA y Pago Contra Entrega.',
     whyChoose: {
-      title: 'Tu ritual de belleza integral',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. El Combo Piel Radiante une nutrición celular y cuidado cutáneo extremo con Resveratrol y Miskinne (Avena y Caléndula). Calidad certificada para una piel luminosa desde el interior.'
+      title: 'Elimina Manchas del Sol, Resequedad y Líneas de Expresión',
+      description: 'Elimina la resequedad, atenúa manchas causadas por el sol y suaviza líneas de expresión combinando la nutrición celular del Resveratrol con la hidratación reparadora de Miskinne. Calidad certificada con registro INVIMA para lucir una piel luminosa, firme y visiblemente renovada.'
     },
     badge: 'COMBO N°1',
-    keywords: 'Resveratrol, Miskinne, antioxidante, cuidado de la piel, rejuvenecimiento, bienestar, Azenza, combo belleza',
+    keywords: 'combo piel radiante, resveratrol, miskinne, arbutina al 5 por ciento, colageno hidrolizado bebible, crema para manchas de sol, aclarar la cara, quitar arrugas patas de gallo, rejuvenecimiento facial natural, azenza, pago contra entrega colombia, envio gratis',
     components: 'Arbutina (5%), Resveratrol, Colágeno Hidrolizado (10.000mg), Crema de Coco, Arándano y Uva liofilizada',
     componentBenefits: [
-    {
-        'name': 'Arbutina (5%)',
-        'benefit': 'Trabaja atenuando la apariencia de manchas superficiales externas y pecas.'
-    },
-    {
-        'name': 'Resveratrol, Arándano y Uva',
-        'benefit': 'Protegen la estructura cutánea frente al daño oxidativo y los radicales libres.'
-    },
-    {
-        'name': '10.000mg de Colágeno y Crema de Coco',
-        'benefit': 'Favorecen la elasticidad, firmeza y nutrición natural de la piel, uñas y cabello.'
-    }
-],
+      {
+        name: 'Arbutina (5%)',
+        benefit: 'Borra y aclara manchas rebeldes del sol, la edad o el acné sin pelar ni irritar la piel.'
+      },
+      {
+        name: 'Resveratrol y Frutos Rojos',
+        benefit: 'Frena el envejecimiento prematuro, combatiendo la piel marchita y protegiéndola del desgaste diario.'
+      },
+      {
+        name: '10.000mg de Colágeno y Coco',
+        benefit: 'Rellena la piel descolgada, fortalece uñas quebradizas y frena la caída del cabello dándole elasticidad.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo para revitalizar la piel y dar luminosidad natural',
-      'cómo proteger las células y suavizar la piel al mismo tiempo',
-      'cuidado para una piel radiante desde el interior y exterior',
-      'beneficios del combo Piel Radiante para el bienestar integral',
-      'fórmula balanceada para la elasticidad y firmeza cutánea',
-      'bienestar integral y vitalidad con belleza',
-      'cómo mejorar la salud de la piel con calidad certificada',
-      'combo para el cuidado facial y corporal',
-      'apoyo natural para la piel seca y falta de brillo celular',
-      'belleza y salud segura con ingredientes de alta pureza'
+      'mejor combo para aclarar manchas solares y arrugas en la cara',
+      'crema miskinne con arbutina y resveratrol colageno colombia',
+      'como rejuvenecer la piel del rostro y eliminar resequedad sin cirugia',
+      'combo piel radiante azenza precio oferta pago contra entrega',
+      'colageno hidrolizado con biotina y crema despigmentante invima',
+      'tratamiento para el paño manchas oscuras y piel marchita colombia',
+      'comprar combo piel radiante por whatsapp con envio gratis'
     ],
     seoFaqs: [
       { q: '¿El resveratrol ayuda a la piel?', a: 'Sí, protege las células del daño oxidativo, promoviendo un bienestar integral y juventud.' },
@@ -3671,10 +3665,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Este combo sirve para pieles maduras?', a: 'Efectivamente, su fórmula balanceada es excelente para recuperar firmeza y equilibrio natural.' }
     ],
     benefits: [
-      'Cuidado integral de la piel',
-      'Potente acción antioxidante',
-      'Mejora la elasticidad y firmeza',
-      'Bienestar general desde el interior'
+      'Aclara manchas oscuras, pecas y marcas del sol en el rostro',
+      'Elimina la resequedad y la tirantez dejando la piel suave y sedosa',
+      'Reduce líneas de expresión y arrugas gracias al colágeno bebible',
+      'Devuelve el brillo y la firmeza natural para verte más joven'
     ],
     testimonials: [
       { name: 'Martha Lucia', text: 'Mi piel se ve mucho más radiante desde que uso este combo. ¡Me encanta!', rating: 5 },
@@ -3684,47 +3678,50 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-2',
     name: 'Combo Belleza Eterna',
-    description: 'Belleza Eterna es el sistema antiedad definitivo, formulado para combatir los signos del paso del tiempo y devolver la lozanía a tu rostro de manera integral. Este kit combina la acción avanzada del suero Eventone, enriquecido con Bio Retinol y Ácido Hialurónico para rellenar arrugas y unificar el tono cutáneo, con la regeneración celular profunda que proporciona el Resveratrol. Al nutrir tus células con colágeno hidrolizado y antioxidantes premium, este combo no solo mejora la apariencia externa, sino que fortalece la estructura de la dermis, uñas y cabello para una belleza que trasciende.',
+    description: `El envejecimiento prematuro, las manchas rebeldes por el sol o la edad y la pérdida de elasticidad provocan que el rostro luzca opaco, marchito y con líneas marcadas. El Combo Belleza Eterna une la acción despigmentante focalizada de la crema Eventone con la nutrición celular del Resveratrol líquido con Colágeno Hidrolizado y Vitaminas antioxidantes. Eventone actúa directamente sobre el exceso de melanina para desvanecer manchas oscuras y unificar el tono en rostro y zonas corporales, mientras el Resveratrol protege las células del estrés oxidativo, estimulando la firmeza y redensificación de las capas de la dermis.
+
+A mediano plazo, esta terapia integral atenúa arrugas profundas, mejora la textura en mejillas y cuello, y restaura la hidratación profunda, devolviéndote una apariencia fresca, clara y descansada. Con Registro INVIMA oficial y libre de ingredientes agresivos, ofrece una transformación visible y duradera sin irritar la piel.
+
+✔️ Despigmentación Efectiva: Aclara manchas rebeldes y marcas solares, devolviendo un tono parejo y luminoso.
+✔️ Efecto Antiedad Intensivo: Estimula el colágeno natural para suavizar arrugas, patas de gallo y flacidez.
+✔️ Nutrición y Firmeza: Regenera los tejidos desde adentro hacia afuera, protegiendo tu piel del desgaste diario.`,
     image: '/assets/combos/promo-2.webp',
     price: 123675,
     originalPrice: 164900,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['resveratrol', 'eventone'],
-    seoTitle: 'Combo Belleza Eterna: Anti-Manchas y Tono Uniforme',
-    seoDescription: 'Unifica tu tono de piel y protege tus células con el Combo Belleza Eterna. Fórmula balanceada para bienestar integral y calidad certificada. ¡Compra ya!',
+    seoTitle: 'Combo Belleza Eterna: Aclara Manchas Rebeldes y Reafirma el Rostro | Envío Gratis',
+    seoDescription: 'Desvanece manchas rebeldes y rellena arrugas con el Combo Belleza Eterna (Resveratrol + Eventone). Ahorra $41.225 COP con INVIMA. ¡Envío Gratis Contra Entrega!',
     whyChoose: {
-      title: 'Belleza que trasciende el tiempo',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Belleza Eterna combate las manchas y el tono desigual combinando el poder aclarante de Eventone con la regeneración del Resveratrol. Calidad certificada para un rostro renovado.'
+      title: 'Aclara Manchas Oscuras y Rejuvenece el Rostro',
+      description: 'Aclara manchas rebeldes oscuras provocadas por el sol o la edad y devuelve la elasticidad a tu rostro uniendo la acción despigmentante de Eventone con la regeneración profunda del Resveratrol. Fórmula certificada para un tono parejo, radiante y libre de manchas.'
     },
     badge: 'COMBO N°2',
-    keywords: 'Resveratrol, Eventone, belleza interior, antioxidante, tono de piel, nutrición celular, Azenza, combo belleza',
+    keywords: 'combo belleza eterna, resveratrol, eventone, bio retinol, acido hialuronico, crema despigmentante manchas oscuras, manchas de la edad y sol, firmeza cuello y rostro, flacidez facial, colageno hidrolizado, azenza, comprar online colombia, pago contra entrega',
     components: 'Bio Retinol, Ácido Hialurónico, Resveratrol, Colágeno Hidrolizado, Vitamina B5 y extractos de Uva y Arándano',
     componentBenefits: [
-    {
-        'name': 'Bio Retinol y Ácido Hialurónico',
-        'benefit': 'Aclaran y aceleran la renovación de las capas de la piel externa rellenando líneas de expresión.'
-    },
-    {
-        'name': 'Resveratrol, extractos de Uva y Arándano',
-        'benefit': 'Combaten el daño oxidativo y ayudan a disminuir los signos del envejecimiento prematuro.'
-    },
-    {
-        'name': 'Colágeno Hidrolizado y B5',
-        'benefit': 'Hidratan profundamente y promueven la firmeza y elasticidad natural.'
-    }
-],
+      {
+        name: 'Bio Retinol y Ácido Hialurónico',
+        benefit: 'Rellena arrugas profundas y desvanece manchas oscuras sin provocar enrojecimiento ni irritación.'
+      },
+      {
+        name: 'Resveratrol y Arándano',
+        benefit: 'Protege contra el desgaste del tiempo y renueva la piel opaca para devolverle frescura y lozanía.'
+      },
+      {
+        name: 'Colágeno Hidrolizado y Vitamina B5',
+        benefit: 'Reafirma la piel descolgada, frena la caída del pelo y engruesa las uñas débiles.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo para atenuar irregularidades de tono y unificar el tono de la piel',
-      'cómo nutrir las células y favorecer el bienestar cutáneo de forma segura',
-      'cuidado para una belleza natural y piel con tono uniforme',
-      'beneficios del combo Belleza Eterna para el bienestar integral',
-      'fórmula balanceada para una piel clara y vitalidad celular',
-      'bienestar integral y claridad cutánea',
-      'cómo recuperar la luminosidad del rostro con calidad certificada',
-      'combo para el cuidado de la piel y apariencia de manchas',
-      'alternativa natural para la hiperpigmentación y envejecimiento',
-      'belleza y nutrición segura con ingredientes de alta pureza'
+      'combo para desmanchar el rostro y tensar piel flacida colombia',
+      'crema eventone con bio retinol y resveratrol bebible precio',
+      'como quitar manchas oscuras de la edad y rellenar lineas de expresion',
+      'combo belleza eterna azenza original pago contra entrega envio gratis',
+      'tratamiento despigmentante facial no agresivo con registro invima',
+      'suero y crema para cutis maduro firme y libre de manchas',
+      'comprar combo belleza eterna azenza pedir por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Eventone quita manchas de sol?', a: 'Sí, ayuda a unificar el tono promoviendo una piel radiante y bienestar integral.' },
@@ -3732,10 +3729,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Se puede usar en pieles sensibles?', a: 'Su fórmula balanceada con calidad certificada es apta para cuidar tu piel con suavidad.' }
     ],
     benefits: [
-      'Tono de piel más uniforme',
-      'Protección contra radicales libres',
-      'Nutrición profunda celular',
-      'Efecto antiedad natural'
+      'Rellena patas de gallo, arrugas y surcos en el rostro y cuello',
+      'Desvanece manchas oscuras y empareja el tono natural de la piel',
+      'Tensa la piel flácida y caída devolviéndole elasticidad juvenil',
+      'Fortalece el cabello débil y las uñas para que no se quiebren'
     ],
     testimonials: [
       { name: 'Sandra Milena', text: 'He notado que mis manchas han disminuido. Muy recomendado.', rating: 5 },
@@ -3745,47 +3742,50 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-3',
     name: 'Combo Detox Digestivo',
-    description: 'El Combo Detox Digestivo es un sistema integral de limpieza diseñado para restaurar el equilibrio de tu organismo y depurar tu cuerpo de toxinas acumuladas. Esta sinergia une la potencia de la fibra Coliplus, que regula el tránsito intestinal y reconforta el colon de manera natural, con la acción depurativa del concentrado Rtafull, que estimula la función desintoxicante del hígado y los riñones. Ideal para ayudar a reducir la pesadez, favorecer el tránsito y mejorar la digestión de las grasas, permitiéndote sentirte ligero, activo y renovado desde la primera semana.',
+    description: `La congestión simultánea del hígado y del colon es la causante directa de la pesadez estomacal, la boca amarga al despertar, los cólicos y el vientre abotagado que no cede. El Combo Detox Digestivo reúne la acción depurativa de Rtafull con la limpieza intestinal profunda de Coliplus para brindar un drenaje completo. Rtafull activa la producción biliar con extractos de Alcachofa, Jamaica, Berenjena, Apio y Perejil para procesar grasas densas y drenar riñones cargados de impurezas, mientras Coliplus aporta mucílagos de Linaza, Chía y Pitaya que barren suavemente las toxinas y desechos adheridos a las paredes del colon.
+
+A mediano plazo, este protocolo botánico desinflama el abdomen visiblemente, alivia el reflujo y los gases con mal olor, y normaliza las evacuaciones diarias sin diarreas ni retortijones. Avalado con Registros INVIMA oficiales, es la alternativa más segura y natural para resetear tu digestión y sentirte ligero todos los días.
+
+✔️ Drenaje Hepático y Renal: Limpia grasas acumuladas y toxinas en el hígado y los riñones de forma 100% natural.
+✔️ Colon Limpio y Desinflamado: Barre residuos retenidos por semanas, eliminando la hinchazón y la pesadez del vientre.
+✔️ Digestión Ligera y Sin Gases: Calma cólicos, flatulencias dolorosas y la acidez o boca amarga tras comer.`,
     image: '/assets/combos/promo-3.webp',
     price: 116850,
     originalPrice: 155000,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['coliplus', 'rtafull'],
-    seoTitle: 'Combo Detox Digestivo: Limpieza de Colon y Vientre Plano',
-    seoDescription: 'Limpia tu organismo y regula tu digestión con el Combo Detox Digestivo. Fórmula balanceada para bienestar integral y calidad certificada. ¡Siéntete ligero!',
+    seoTitle: 'Combo Detox Digestivo: Limpia Hígado Graso y Desinflama el Colon | Envío Gratis',
+    seoDescription: 'Limpia el hígado graso, desinflama el colon y expulsa gases retenidos con Rtafull + Coliplus. Ahorra $38.150 COP. ¡Envío Gratis y Pago Contra Entrega en Colombia!',
     whyChoose: {
-      title: 'Renovación total desde el interior',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este Combo Detox une Rtafull y Coliplus para limpiar el hígado y colon de forma profunda pero gentil. Despídete de la pesadez y el estreñimiento con calidad certificada.'
+      title: 'Limpia el Hígado Graso, Desinflama el Colon y Elimina Gases',
+      description: 'Dile adiós a la pesadez estomacal, la boca amarga y los gases retenidos combinando la limpieza de hígado graso de Rtafull con la descongestión de colon de Coliplus. Drena toxinas acumuladas y evacúa a diario sin cólicos ni retortijones con calidad certificada.'
     },
     badge: 'COMBO N°3',
-    keywords: 'Coliplus, Rtafull, desintoxicación, colon, hígado, digestión, limpieza natural, Azenza, combo salud',
+    keywords: 'combo detox digestivo, rtafull, coliplus, limpiar higado graso, desinflamar colon irritable, boca amarga al despertar, pesadez estomacal, expulsion de gases, evacuar a diario, linaza y pitaya, alcachofa liquida, azenza, pago contra entrega',
     components: 'Linaza, Pitaya, Flor de Jamaica, Alcachofa, Semillas de Chía, Espirulina, Té Verde y Perejil',
     componentBenefits: [
-    {
-        'name': 'Linaza, Chía y Pitaya',
-        'benefit': 'Promueven el tránsito intestinal de forma suave y natural, favoreciendo una digestión ligera y constante.'
-    },
-    {
-        'name': 'Alcachofa, Té Verde y Perejil',
-        'benefit': 'Apoyan la eliminación natural de líquidos y favorecen el correcto funcionamiento del metabolismo diario.'
-    },
-    {
-        'name': 'Flor de Jamaica y Espirulina',
-        'benefit': 'Ayudan a disminuir la sensación de pesadez o hinchazón en la zona abdominal y protegen la digestión.'
-    }
-],
+      {
+        name: 'Linaza, Chía y Pitaya',
+        benefit: 'Aflojan las heces atascadas y mueven el colon perezoso para ir al baño a diario sin pujar.'
+      },
+      {
+        name: 'Alcachofa, Té Verde y Perejil',
+        benefit: 'Disuelven las grasas acumuladas en el hígado, quitan la boca amarga y desinflaman riñones.'
+      },
+      {
+        name: 'Flor de Jamaica y Espirulina',
+        benefit: 'Sacan los líquidos retenidos, quitan los cólicos dolorosos y desinflaman la barriga hinchada.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo detox para depurar el colon y el hígado naturalmente',
-      'cómo reducir la sensación de pesadez abdominal y favorecer la digestión',
-      'cuidado para una renovación total y bienestar digestivo',
-      'beneficios del combo Detox Digestivo para la vitalidad diaria',
-      'fórmula balanceada para una limpieza orgánica profunda y suave',
-      'bienestar integral y ligereza con nutrición',
-      'cómo mejorar el tránsito intestinal con calidad certificada',
-      'combo para la desintoxicación periódica',
-      'apoyo natural para el estreñimiento y toxinas acumuladas',
-      'detox seguro y efectivo con ingredientes de alta pureza'
+      'mejor combo para limpiar higado graso y desinflamar colon hinchado',
+      'rtafull y coliplus precio colombia oferta combo detox',
+      'como desintoxicar el higado y sacar heces retenidas sin colicos',
+      'combo detox digestivo azenza original contra entrega envio gratis',
+      'remedio natural para la boca amarga digestion lenta y barriga abultada',
+      'limpieza de higado y colon con registro invima comprar colombia',
+      'pedir combo rtafull y coliplus por whatsapp domicilio gratis'
     ],
     seoFaqs: [
       { q: '¿Este combo causa diarrea?', a: 'No, su fórmula balanceada promueve una limpieza gentil respetando tu equilibrio natural y vitalidad.' },
@@ -3793,10 +3793,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Puedo comer normal durante el detox?', a: 'Sí, pero una dieta balanceada potenciará la vitalidad y calidad certificada del proceso.' }
     ],
     benefits: [
-      'Limpieza profunda del colon',
-      'Desintoxicación hepática natural',
-      'Mejora notable de la digestión',
-      'Reduce la pesadez abdominal'
+      'Ayuda a limpiar el hígado graso y a eliminar toxinas y grasas pesadas',
+      'Descongestiona riñones cargados expulsando líquidos retenidos e impurezas',
+      'Quita el estreñimiento y limpia el colon para evacuar diario sin dolor',
+      'Elimina la hinchazón del estómago, los gases con mal olor y los cólicos'
     ],
     testimonials: [
       { name: 'Jorge Eliécer', text: 'El mejor detox que he probado. Me siento renovado.', rating: 5 },
@@ -3806,47 +3806,50 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-4',
     name: 'Combo Control & Detox',
-    description: 'Control & Detox es el sistema avanzado para quienes buscan recuperar su equilibrio metabólico y combatir la inflamación digestiva de forma natural. Este combo fusiona la acción reconfortante de Liteplex, ideal para equilibrar la flora y reducir la pesadez estomacal, con la potencia depurativa de Rtafull, que actúa directamente en la limpieza hepática para optimizar el procesamiento de nutrientes. Es la solución perfecta para deshinchar el cuerpo, mejorar la absorción de alimentos y potenciar tu bienestar digestivo con una fórmula balanceada y segura.',
+    description: `El metabolismo lento, los ataques de ansiedad por comer dulce entre comidas y la sobrecarga de toxinas en el hígado dificultan la pérdida de peso y mantienen el abdomen distendido y pesado. El Combo Control & Detox combina el control del apetito y termogénesis de Liteplex con el drenaje hepático y renal profundo de Rtafull. Liteplex modula el apetito y ayuda a transformar los depósitos de grasa en energía activa con extractos reductores, mientras Rtafull descongestiona el hígado graso mediante Alcachofa, Jamaica, Berenjena, Apio y Perejil, optimizando la eliminación de impurezas y líquidos retenidos.
+
+A mediano y largo plazo, esta potente alianza acelera el gasto calórico de manera natural, reduce medidas en cintura y cadera, y desinflama el vientre hinchado, permitiéndote alcanzar tu peso ideal sin pasar hambre ni sufrir fatiga. Con Registro INVIMA oficial, es un método cómodo y confiable para estilizar tu figura y depurar tu organismo.
+
+✔️ Control Efectivo del Apetito: Calma la ansiedad de picar entre horas y prolonga la saciedad de forma natural.
+✔️ Metabolismo y Quema de Grasa: Ayuda a movilizar y oxidar grasa acumulada en zonas difíciles como abdomen y cintura.
+✔️ Limpieza Hepática Profunda: Descongestiona el hígado graso y drena líquidos retenidos para verte y sentirte liviano.`,
     image: '/assets/combos/promo-4.webp',
     price: 119850,
     originalPrice: 159800,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['liteplex', 'rtafull'],
-    seoTitle: 'Combo Control & Detox: Metabolismo y Digestión Ligera',
-    seoDescription: 'Apoya tu proceso de bienestar metabólico con el Combo Control & Detox. Fórmula balanceada para bienestar integral, energía y calidad certificada. ¡Ahorra hoy!',
+    seoTitle: 'Combo Control & Detox: Acelera Metabolismo y Quema Grasa | Envío Gratis',
+    seoDescription: 'Acelera el metabolismo lento, frena la ansiedad por dulce y desinflama el abdomen con Liteplex + Rtafull. Ahorra $39.950 COP con Pago Contra Entrega en Colombia.',
     whyChoose: {
-      title: 'Tu aliado en el control consciente',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Control & Detox integra Liteplex y Rtafull para acelerar tu metabolismo y liberar toxinas acumuladas. Fórmula balanceada y certificada para tu proceso de bienestar.'
+      title: 'Acelera el Metabolismo Lento y Quema Grasa Acumulada',
+      description: 'Reactiva el metabolismo lento, frena los ataques de ansiedad por dulce y desinflama tu abdomen integrando Liteplex y Rtafull. Quema grasa acumulada de manera natural mientras depuras el hígado cargado de impurezas con fórmula certificada.'
     },
     badge: 'COMBO N°4',
-    keywords: 'Liteplex, Rtafull, control de peso, controlar medidas, desintoxicación, metabolism, Azenza, combo salud',
+    keywords: 'combo control detox, liteplex, rtafull, quemar grasa abdominal, acelerar metabolismo lento, calmar ansiedad de dulce, desinflamar barriga, retencion de liquidos, te verde y jengibre, alcachofa, azenza, comprar colombia, pago contra entrega',
     components: 'Té Verde, Jengibre, Alcachofa, Flor de Jamaica, Perejil, Berenjena, Apio y Albahaca',
     componentBenefits: [
-    {
-        'name': 'Jengibre y Albahaca',
-        'benefit': 'Disminuyen la sensación de pesadez, la acidez y aportan un alivio reconfortante al sistema digestivo.'
-    },
-    {
-        'name': 'Alcachofa, Berenjena, Apio y Té Verde',
-        'benefit': 'Optimizan el procesamiento de alimentos pesados y favorecen la eliminación natural de toxinas y líquidos.'
-    },
-    {
-        'name': 'Flor de Jamaica y Perejil',
-        'benefit': 'Ayudan a eliminar líquidos acumulados.'
-    }
-],
+      {
+        name: 'Jengibre y Albahaca',
+        benefit: 'Calman el ardor de estómago, reducen los gases y quitan la inflamación tras comer.'
+      },
+      {
+        name: 'Alcachofa, Apio y Berenjena',
+        benefit: 'Ayudan a procesar las grasas pesadas, limpian el hígado y alivian la llenura.'
+      },
+      {
+        name: 'Flor de Jamaica y Perejil',
+        benefit: 'Descongestionan los riñones y expulsan el líquido que te hace sentir pesado e hinchado.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo para moldear la figura y depurar el cuerpo',
-      'cómo favorecer el metabolismo y liberar toxinas naturalmente',
-      'cuidado para el control de peso consciente y vitalidad',
-      'beneficios del combo Control & Detox para el bienestar integral',
-      'fórmula balanceada para reducir medidas y limpiar el organismo',
-      'bienestar integral y ligereza con suplementos',
-      'cómo mejorar la quema de grasa con calidad certificada',
-      'combo para el control de peso saludable',
-      'apoyo natural para la ansiedad de comer y metabolismo lento',
-      'control de peso seguro con ingredientes de alta pureza'
+      'combo natural para acelerar metabolismo y quemar grasa del abdomen',
+      'liteplex y rtafull precio colombia oferta control de peso',
+      'como frenar la ansiedad por comer dulce y desinflamar la cintura',
+      'combo control y detox azenza envio gratis pago contra entrega',
+      'suplemento para perder medidas sin efecto rebote con registro invima',
+      'drenaje linfatico y quema de grasa natural sin pasar hambre',
+      'comprar combo control y detox por whatsapp con envio gratis'
     ],
     seoFaqs: [
       { q: '¿Liteplex quita el hambre?', a: 'Ayuda a controlar la ansiedad, promoviendo un bienestar integral y control consciente.' },
@@ -3854,10 +3857,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Tiene efecto rebote?', a: 'Nuestra fórmula balanceada prioriza la salud, evitando efectos negativos con calidad certificada.' }
     ],
     benefits: [
-      'Apoyo en el control de peso',
-      'Depuración de toxinas acumuladas',
-      'Acelera el metabolismo naturalmente',
-      'Mejora la absorción de nutrientes'
+      'Limpia el hígado graso y activa el metabolismo para quemar grasa acumulada',
+      'Calma los ataques de ansiedad por comer dulces y carbohidratos',
+      'Elimina la retención de líquidos que hincha las piernas y el abdomen',
+      'Quita la pesadez después de comer y el abotagamiento estomacal'
     ],
     testimonials: [
       { name: 'Claudia Patricia', text: 'Me ha ayudado mucho en mi proceso de moldear la figura.', rating: 5 },
@@ -3867,47 +3870,50 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-5',
     name: 'Combo Protección Total',
-    description: 'Protección Total es el dúo esencial para quienes priorizan la higiene profunda y la pureza de su organismo. Este combo combina la innovación de Tufoff, dulces naturales sin azúcar que neutralizan olores y refrescan el aliento instantáneamente, con la capacidad purificadora de Rtafull, que desintoxica los órganos internos encargados de filtrar impurezas. Juntos, crean una barrera de protección que se refleja en una sensación de frescura total, depurando toxinas y promoviendo un aliento puro desde el interior del cuerpo.',
+    description: `La sudoración excesiva, el mal olor persistente en axilas o pies y la sensación de pesadez corporal se originan tanto por proliferación bacteriana externa como por toxinas acumuladas en el hígado y los riñones. El Combo Protección Total proporciona una solución dual que actúa por dentro y por fuera. Tufoff regula las glándulas sudoríparas y erradica bacterias y hongos causantes del mal olor, manteniendo axilas y pies secos y frescos hasta por 5 días; al mismo tiempo, Rtafull depura el hígado graso y drena los riñones mediante extractos botánicos, purificando las toxinas que intensifican el olor del sudor.
+
+A mediano plazo, este tratamiento elimina las manchas de sudor en la ropa, la irritación en pliegues dérmicos y la incomodidad digestiva, devolviéndote seguridad personal, frescura duradera y ligereza estomacal. Formulados con Registro INVIMA oficial, garantizan una protección clínica impecable sin agredir la piel ni el organismo.
+
+✔️ Cero Sudor y Mal Olor: Mantiene axilas y pies completamente secos y sin bacterias hasta por 5 días seguidos.
+✔️ Depuración Interna de Toxinas: Limpia el hígado y los riñones para neutralizar olores corporales desde la raíz.
+✔️ Seguridad y Frescura Prolongada: Olvídate de camisas manchadas, rozaduras y pesadez con una rutina simple y duradera.`,
     image: '/assets/combos/promo-5.webp',
     price: 123675,
     originalPrice: 164900,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['tufoff', 'rtafull'],
-    seoTitle: 'Combo Protección Total: Depuración y Aliento Fresco',
-    seoDescription: 'Protección y limpieza profunda para tu organismo con el Combo Protección Total. Fórmula balanceada para bienestar integral y calidad certificada. ¡Compra ahora!',
+    seoTitle: 'Combo Protección Total: Elimina Mal Aliento y Drena Toxinas | Envío Gratis',
+    seoDescription: 'Elimina el mal aliento estomacal y neutraliza olores corporales limpiando hígado y boca con Tufoff + Rtafull. Ahorra $41.225 COP. ¡Envío Gratis Contra Entrega!',
     whyChoose: {
-      title: 'Protección que nace del equilibrio',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Protección Total une la higiene profunda de Tufoff con la depuración hepática de Rtafull. Una barrera segura contra toxinas y mal olor con calidad certificada.'
+      title: 'Elimina el Mal Aliento y Desintoxica Hígado y Riñones',
+      description: 'Elimina el mal aliento persistente y el olor corporal fuerte atacando la causa real desde el interior: depura las toxinas del hígado y riñones con Rtafull y mantén una higiene profunda y frescura inmediata con Tufoff. Máxima protección y limpieza interna garantizada.'
     },
     badge: 'COMBO N°5',
-    keywords: 'Tufoff, Rtafull, protección, limpieza profunda, defensas, bienestar, Azenza, combo salud',
+    keywords: 'combo proteccion total, tufoff, rtafull, eliminar mal aliento de estomago, halitosis persistente, sudoracion excesiva axilas, olor corporal fuerte, desintoxicar higado, bicarbonato y menta, azenza, pago contra entrega colombia, envio gratis',
     components: 'Flor de Jamaica, Alcachofa, Perejil, Berenjena, Eritritol, Inulina, Aceite de Menta y Bicarbonato de Sodio',
     componentBenefits: [
-    {
-        'name': 'Alcachofa, Berenjena y Perejil',
-        'benefit': 'Favorecen el procesamiento de las comidas pesadas y apoyan la eliminación natural de líquidos y toxinas del organismo.'
-    },
-    {
-        'name': 'Bicarbonato de Sodio y Aceite de Menta',
-        'benefit': 'Neutralizan los ácidos y componentes que causan el mal aliento, aportando un alivio fresco y rápido.'
-    },
-    {
-        'name': 'Inulina y Eritritol',
-        'benefit': 'Brindan una protección bucal e higiene bucal duradera.'
-    }
-],
+      {
+        name: 'Alcachofa, Berenjena y Perejil',
+        benefit: 'Limpian el hígado graso, quitan la boca amarga y ayudan a procesar comidas grasosas.'
+      },
+      {
+        name: 'Menta Natural y Bicarbonato',
+        benefit: 'Cortan de raíz los olores fuertes en la boca y dejan una frescura limpia y duradera.'
+      },
+      {
+        name: 'Inulina y Prebióticos',
+        benefit: 'Equilibran las bacterias buenas en la boca y el estómago para que no vuelva el mal olor.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo para controlar el olor y depurar el cuerpo',
-      'cómo fortalecer las defensas y limpiar impurezas naturalmente',
-      'cuidado para una protección integral y bienestar orgánico',
-      'beneficios del combo Protección Total para la vitalidad diaria',
-      'fórmula balanceada para una higiene profunda y detox hepático',
-      'bienestar integral y frescura con productos',
-      'cómo mejorar la salud general con calidad certificada',
-      'combo para la limpieza interna y externa',
-      'apoyo natural para las toxinas y falta de protección orgánica',
-      'protección y limpieza segura con ingredientes de alta pureza'
+      'combo para quitar mal aliento que viene del estomago e higado',
+      'tufoff y rtafull precio colombia oferta proteccion corporal',
+      'como eliminar el olor a sudor fuerte en axilas y pies por dias',
+      'combo proteccion total azenza original pago contra entrega',
+      'tratamiento para la halitosis y boca amarga con registro invima',
+      'remedio natural para el mal aliento cronico y depuracion hepatica',
+      'pedir combo proteccion total por whatsapp con envio gratis'
     ],
     seoFaqs: [
       { q: '¿Tufoff ayuda con el sudor fuerte?', a: 'Sí, brinda una frescura duradera que junto a la limpieza de Rtafull promueve el bienestar integral.' },
@@ -3915,10 +3921,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Se puede tomar por tiempo prolongado?', a: 'Nuestra fórmula balanceada es segura para un mantenimiento preventivo con calidad certificada.' }
     ],
     benefits: [
-      'Protección integral del organismo',
-      'Limpieza profunda de impurezas',
-      'Fortalece las defensas naturales',
-      'Bienestar digestivo y hepático'
+      'Elimina el mal aliento persistente desde la boca y desde el estómago',
+      'Limpia el hígado sobrecargado y elimina el sabor amargo al despertar',
+      'Alivia la acidez, los reflujos molestos y la pesadez estomacal',
+      'Desintoxica riñones y órganos digestivos para un cuerpo limpio y fresco'
     ],
     testimonials: [
       { name: 'Luz Marina', text: 'Me siento protegida y con mucha más vitalidad.', rating: 5 },
@@ -3928,43 +3934,46 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-6',
     name: 'Combo Alivio Muscular',
-    description: 'Alivio Muscular es el sistema integral definitivo para el cuidado de tu cuerpo activo, combinando alivio externo reconfortante con nutrición interna de alta calidad. Este combo une la acción de la Loción Termoactiva, que proporciona calor localizado para relajar tensiones y calmar molestias musculares, con el Colágeno con Citrato de Magnesio, que regenera los tejidos conectivos y mejora la salud de articulaciones y huesos. Es el aliado perfecto para recuperar la movilidad, prevenir el desgaste y disfrutar de cada movimiento con total libertad.',
+    description: `Los dolores punzantes en rodillas, espalda baja y hombros, el crujido al agacharse y la rigidez articular al levantarse son señales claras de desgaste en cartílagos y sobrecarga muscular. El Combo Alivio Muscular combina el alivio tópico inmediato de la Loción Herbal con la nutrición estructural interna del Colágeno Hidrolizado con Citrato de Magnesio. La Loción Herbal penetra la piel con extractos botánicos calmantes que relajan tendones y desinflaman contracturas con un efecto térmico reconfortante, mientras el Colágeno y Magnesio regeneran cartílagos, tendones y masa ósea desde el interior.
+
+A mediano y largo plazo, este tratamiento restaura la movilidad y lubricación articular, previene calambres nocturnos y devuelve la agilidad para caminar, subir gradas y realizar tus labores cotidianas sin molestias. Con Registro INVIMA oficial y fórmulas puras, es la fórmula confiable para recuperar tu libertad de movimiento.
+
+✔️ Alivio Rápido del Dolor: Calma contracturas, lumbagos y molestias en articulaciones desde la primera aplicación.
+✔️ Regeneración Articular: El colágeno hidrolizado y magnesio nutren y fortalecen cartílagos frente al desgaste diario.
+✔️ Flexibilidad y Cero Rigidez: Relaja músculos tensos y elimina calambres para que te muevas con soltura y sin quejas.`,
     image: '/assets/combos/promo-6.webp',
     price: 123675,
     originalPrice: 164900,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['locion', 'colageno'],
-    seoTitle: 'Combo Alivio Muscular: Calor y Frío para Cero Dolor',
-    seoDescription: 'Apoya tu movilidad con el Combo Alivio Muscular. Fórmula balanceada para bienestar integral y calidad certificada. ¡Pídelo hoy!',
+    seoTitle: 'Combo Alivio Muscular: Alivia Dolores de Rodilla y Rigidez | Envío Gratis',
+    seoDescription: 'Alivia dolores de rodillas desgastadas, lumbago y rigidez con Loción Termoactiva + Colágeno Magnesio. Ahorra $41.225 COP. ¡Paga en Casa con Envío Gratis!',
     whyChoose: {
-      title: 'Bienestar en movimiento',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este combo apoya tus articulaciones con Colágeno y favorece el bienestar muscular con la Loción Termoactiva (Salicilato de Metilo). Calidad certificada para tu movilidad.'
+      title: 'Alivia Dolores en Rodillas, Espalda y Rigidez Articular',
+      description: 'Calma el dolor punzante en rodillas, espalda y hombros de forma inmediata con el calor reconfortante de la Loción Termoactiva, mientras el Colágeno hidrolizado regenera cartílagos y ligamentos desgastados. Vuelve a moverte sin rigidez ni crujidos molestos con fórmula certificada.'
     },
     badge: 'COMBO N°6',
-    keywords: 'Loción Termoactiva, Colágeno, dolor muscular, articulaciones, recuperación, alivio, Azenza, combo bienestar',
+    keywords: 'combo alivio muscular, locion termoactiva herbal, colageno hidrolizado con magnesio, dolor de rodillas, crujidos al agacharse, rigidez articular al levantarse, lumbago, dolor de espalda baja, calambres nocturnos, azenza, pago contra entrega',
     components: 'Extractos naturales relajantes, Colágeno Hidrolizado y Citrato de Magnesio',
     componentBenefits: [
-    {
-        'name': 'Extractos Naturales Relajantes',
-        'benefit': 'Proveen acción térmica localizada externa para disminuir la rigidez y liberar la tensión muscular acumulada.'
-    },
-    {
-        'name': 'Colágeno Hidrolizado y Citrato de Magnesio',
-        'benefit': 'Apoyan el bienestar de las articulaciones, favoreciendo la flexibilidad y el correcto descanso muscular.'
-    }
-],
+      {
+        name: 'Loción Herbal con Efecto Térmico',
+        benefit: 'Penetra con calor calmante para desinflamar músculos tensos, espaldas adoloridas y rodillas inflamadas.'
+      },
+      {
+        name: 'Colágeno Hidrolizado y Magnesio',
+        benefit: 'Frena el desgaste de cartílagos, quita los calambres en las piernas y lubrica las articulaciones resecas.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo para el molestias articulares y espalda naturalmente',
-      'cómo mejorar la movilidad articular y favorecer el bienestar muscular',
-      'cuidado para la recuperación física y elasticidad corporal',
-      'beneficios del combo Alivio Muscular para el bienestar integral',
-      'fórmula balanceada para nutrir cartílagos y relajar músculos',
-      'bienestar integral y vitalidad en movimiento',
-      'cómo recuperar la movilidad diaria con calidad certificada',
-      'combo para deportistas y adultos activos',
-      'soporte natural para la artritis y contracturas musculares',
-      'alivio y nutrición segura con ingredientes de alta pureza'
+      'combo para dolor agudo de rodillas cartílagos y espalda colombia',
+      'locion termoactiva y colageno con magnesio precio oferta azenza',
+      'como quitar la rigidez en las articulaciones y levantarse sin dolor',
+      'combo alivio muscular azenza envio gratis pago contra entrega',
+      'tratamiento para desgaste articular y calambres con registro invima',
+      'locion para dolores musculares fuertes y colageno regenerador',
+      'comprar combo alivio muscular azenza por whatsapp contra entrega'
     ],
     seoFaqs: [
       { q: '¿La loción se puede usar antes de hacer ejercicio?', a: 'Sí, su efecto termoactivo prepara los músculos para el bienestar integral y vitalidad.' },
@@ -3972,10 +3981,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Sirve para desgaste prolongado?', a: 'Nuestra fórmula balanceada es un excelente apoyo para el alivio constante con calidad certificada.' }
     ],
     benefits: [
-      'Alivio muscular y articular',
-      'Nutrición para huesos y cartílagos',
-      'Mejora la movilidad diaria',
-      'Efecto termoactivo relajante'
+      'Calma los dolores agudos en rodillas, espalda, cuello y articulaciones',
+      'Quita la rigidez matutina para levantarte y caminar sin molestias ni crujidos',
+      'Alivia contracturas, calambres nocturnos y fatiga muscular acumulada',
+      'Nutre y lubrica los cartílagos desgastados con colágeno y magnesio'
     ],
     testimonials: [
       { name: 'Doña Rosa', text: 'Mis rodillas ya no me molestan tanto. Gracias.', rating: 5 },
@@ -3985,47 +3994,50 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-8',
     name: 'Combo Vitalidad & Limpieza',
-    description: 'Vitalidad & Limpieza es el sistema integral de renovación diseñado para purificar tu cuerpo mientras recuperas tu fuerza vital de forma armoniosa. Este combo une el poder de Tyruss Full, un superalimento verde que oxigena tu organismo y nutre tu sangre con clorofila y algas, con la eficacia depurativa de Rtafull, que facilita la eliminación de impurezas hepáticas y renales. Es la combinación balanceada ideal para desinflamar el abdomen, mejorar la energía diaria y permitir que tu cuerpo funcione con la ligereza y pureza que merece.',
+    description: `El cansancio crónico al despertar, el bajo rendimiento físico o íntimo y la pesadez estomacal tras comer evidencian un cuerpo saturado de toxinas y falto de nutrientes energéticos clave. El Combo Vitalidad & Limpieza une el vigorizante nutricional Tyruss Full con el sistema de drenaje hepático y renal de Rtafull. Tyruss Full reactiva el vigor natural, mejora la resistencia y combate el desgano físico y mental sin taquicardias gracias a sus bioactivos estimulantes; en paralelo, Rtafull depura el hígado graso y purifica las vías urinarias con Alcachofa, Jamaica, Apio y Perejil, aligerando la digestión.
+
+A mediano y largo plazo, esta combinación devuelve la energía sostenida durante todo el día, disuelve la inflamación abdominal y revitaliza tu bienestar físico y vital para rendir al máximo en cada jornada. Con Registro INVIMA oficial y origen natural, es el impulso perfecto para vivir activo, liviano y con fuerza renovada.
+
+✔️ Energía y Rendimiento Superior: Eleva el vigor físico, la resistencia y la vitalidad diaria sin bajones ni nerviosismo.
+✔️ Depuración Hepática Total: Descongestiona el hígado graso de impurezas, eliminando la boca amarga y la pesadez estomacal.
+✔️ Cuerpo Ligero y Despejado: Elimina toxinas acumuladas para que comiences cada día con claridad mental y motivación.`,
     image: '/assets/combos/promo-8.webp',
     price: 127350,
     originalPrice: 169800,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
     products: ['tyruss-full', 'rtafull'],
-    seoTitle: 'Combo Vitalidad & Limpieza: Energía y Digestión Total',
-    seoDescription: 'Siéntete imparable con el Combo Vitalidad & Limpieza. Fórmula balanceada para depuración natural, bienestar integral y calidad certificada. ¡Pídelo hoy!',
+    seoTitle: 'Combo Vitalidad & Limpieza: Vence el Cansancio y Limpia el Hígado | Envío Gratis',
+    seoDescription: 'Elimina el cansancio crónico, recupera energía física y depura el hígado graso con Tyruss Full + Rtafull. Ahorra $42.450 COP. ¡Envío Gratis Contra Entrega!',
     whyChoose: {
-      title: 'Vitalidad renovada cada mañana',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Vitalidad & Limpieza une a Tyruss Full y Rtafull para una limpieza orgánica profunda y energía total sin complicaciones. Calidad y seguridad certificada.'
+      title: 'Elimina el Cansancio Crónico y Descongestiona el Hígado',
+      description: 'Vence la fatiga constante al levantarte y la pesadez estomacal tras cada comida combinando la energía vigorizante de Tyruss Full con el drenaje hepático de Rtafull. Limpia el hígado graso de toxinas y rinde al máximo durante todo el día con calidad certificada.'
     },
     badge: 'COMBO N°8',
-    keywords: 'Tyruss-Full, Rtafull, vitalidad, limpieza, energía, bienestar, Azenza, combo salud',
+    keywords: 'combo vitalidad limpieza, tyruss full, rtafull, cansancio cronico al despertar, fatiga fisica y mental, oxigenar sangre con clorofila, limpiar higado graso, espirulina y chlorella, desgano diario, azenza, comprar online colombia, pago contra entrega',
     components: 'Clorofila, Espirulina, Chlorella, Alcachofa, Flor de Jamaica, Omega 3, Espinaca, Aguacate y Té Verde',
     componentBenefits: [
-    {
-        'name': 'Clorofila, Espirulina y Chlorella',
-        'benefit': 'Aportan una potente acción antioxidante que promueve el balance natural y la vitalidad del organismo.'
-    },
-    {
-        'name': 'Alcachofa, Flor de Jamaica y Té Verde',
-        'benefit': 'Favorecen una digestión ligera y apoyan la eliminación natural de toxinas y líquidos acumulados.'
-    },
-    {
-        'name': 'Espinaca, Aguacate y Omega 3',
-        'benefit': 'Aportan nutrientes vitales y protegen la salud de los tejidos.'
-    }
-],
+      {
+        name: 'Clorofila, Espirulina y Chlorella',
+        benefit: 'Oxigenan el cuerpo, limpian la sangre y quitan la fatiga constante desde la primera toma.'
+      },
+      {
+        name: 'Alcachofa, Flor de Jamaica y Té Verde',
+        benefit: 'Disuelven las grasas del hígado, descongestionan riñones y ayudan a expulsar líquidos acumulados.'
+      },
+      {
+        name: 'Espinaca y Omega 3',
+        benefit: 'Nutren el cuerpo desgastado para que rindas con claridad mental y sin agotamiento físico.'
+      }
+    ],
     longTailKeywords: [
-      'mejor combo para depurar el cuerpo y recuperar la energía total',
-      'cómo mejorar el desempeño diario y la depuración orgánica',
-      'cuidado para una vitalidad renovada y equilibrio natural',
-      'beneficios del combo Vitalidad & Limpieza para el bienestar integral',
-      'fórmula balanceada para depurar el hígado y potenciar la fuerza',
-      'bienestar integral y ligereza con nutrición',
-      'cómo mantener el ritmo de vida activo con calidad certificada',
-      'combo para la salud y rendimiento masculino',
-      'apoyo natural para la pesadez y falta de vitalidad extrema',
-      'limpieza y energía segura con ingredientes de alta pureza'
+      'combo para eliminar el cansancio cronico y limpiar el higado',
+      'tyruss full y rtafull precio colombia oferta vitalidad',
+      'como tener mas energia durante el dia sin taquicardias ni cafeina',
+      'combo vitalidad y limpieza azenza original pago contra entrega',
+      'suplemento para la fatiga debilidad fisica y pesadez hepatica',
+      'clorofila pura y extracto botánico depurativo con registro invima',
+      'comprar combo vitalidad y limpieza azenza por whatsapp'
     ],
     seoFaqs: [
       { q: '¿Tyruss Full se puede mezclar con Rtafull?', a: 'Se recomienda tomarlos por separado para que cada fórmula balanceada actúe en tu bienestar integral.' },
@@ -4033,10 +4045,10 @@ export const PROMOTIONS: Promotion[] = [
       { q: '¿Es apto para deportistas?', a: 'Efectivamente, apoya el rendimiento y la recuperación con calidad certificada para una vida activa.' }
     ],
     benefits: [
-      'Vitalidad extrema natural',
-      'Limpieza orgánica profunda',
-      'Mejora el rendimiento general',
-      'Equilibrio y bienestar total'
+      'Elimina el cansancio crónico y la pesadez corporal recargando tu energía',
+      'Ayuda a limpiar el hígado graso y drena riñones cargados de toxinas acumuladas',
+      'Oxigena la sangre con clorofila pura para combatir el desgano matutino',
+      'Desinflama la barriga y saca los líquidos retenidos que te hacen sentir pesado'
     ],
     testimonials: [
       { name: 'Javier', text: 'Siento que mi cuerpo funciona mucho mejor.', rating: 5 },
@@ -4046,51 +4058,55 @@ export const PROMOTIONS: Promotion[] = [
   {
     id: 'promo-9',
     name: 'Inmunidad Dual',
-    description: 'Inmunidad Dual es el sistema de protección definitiva, diseñado científicamente para fortalecer las defensas naturales y optimizar la salud intestinal de manera simultánea. Este combo une la nutrición de alto impacto de Resvisfactor, que aprovecha el calostro bovino y el hongo shiitake para blindar el sistema inmune, con la acción depurativa de Coliplus, que garantiza un colon limpio y un tránsito intestinal regular. Al trabajar en conjunto, ayudan a reducir la pesadez abdominal y permiten que el organismo absorba con eficiencia los nutrientes esenciales para una vida vital.',
+    description: `Cuando el colon se inflama por desechos biológicos acumulados y gases retenidos, el sistema inmune se debilita, causando pesadez abdominal, evacuaciones dolorosas y vulnerabilidad a gripes frecuentes y fatiga continua. El Combo Inmunidad Dual une la acción depurativa de Coliplus con el blindaje inmune de Resvisfactor. Mientras las fibras prebióticas de Chía, Linaza y Pitaya lubrican el tracto entérico y facilitan una limpieza profunda del colon sin cólicos ni diarreas, el Calostro Bovino, Hongos Shiitake y Ganoderma y aminoácidos esenciales estimulan las defensas celulares y combaten el desgaste corporal.
+
+A mediano y largo plazo, su consumo combinado equilibra la flora bacteriana, aplana el vientre abotagado y fortalece las vías respiratorias frente a cambios climáticos y virus. Con Registro INVIMA oficial y fórmulas de alta biodisponibilidad, es el tratamiento definitivo para despedirte de la inflamación de colon y vivir protegido y enérgico.
+
+✔️ Defensas Blindadas: Calostro bovino y hongos medicinales que refuerzan tu sistema inmune contra virus y decaimiento.
+✔️ Vientre Plano y Sin Gases: Desinflama el colon irritado, expulsa flatulencias dolorosas y quita la pesadez tras comer.
+✔️ Evacuación Regular y Suave: Barre residuos adheridos al intestino para que vayas al baño diariamente sin esfuerzo.`,
     image: '/assets/combos/combo-bienestar.webp',
     price: 129900,
     originalPrice: 165800,
     products: ['resvis', 'coliplus'],
-    seoTitle: 'Combo Inmunidad Dual: Resvisfactor + Coliplus en Oferta',
-    seoDescription: 'Reconforta tu vientre y fortalece tu sistema inmune con el combo Inmunidad Dual. Fórmula balanceada para bienestar integral y calidad certificada. ¡Ahorra $35.900!',
+    seoTitle: 'Combo Inmunidad Dual: Desinflama el Vientre y Refuerza Defensas | Envío Gratis',
+    seoDescription: 'Desinflama tu vientre abultado y blinda tus defensas con Inmunidad Dual (Resvisfactor + Coliplus) por $129.900 COP (Ahorro $35.900). ¡Envío Gratis Contra Entrega!',
     whyChoose: {
-      title: 'El dúo dinámico de tu bienestar',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA. Este combo une la acción reconfortante de Coliplus con el escudo antioxidante de Resvisfactor. Solución certificada para confortar tu vientre y fortalecer tus defensas con calidad garantizada.'
+      title: 'Desinflama tu Vientre y Refuerza tus Defensas Naturales',
+      description: 'Desinflama el colon de desechos biológicos acumulados con las fibras prebióticas de Coliplus y blinda tus defensas contra gripes frecuentes y cansancio con Resvisfactor. Digestión suave y ligera combinada con protección inmune de calidad certificada.'
     },
     badge: 'COMBO N°9',
     benefits: [
-      'Escudo natural contra virus',
-      'Tránsito intestinal regulado',
-      'Vientre plano y sin pesadez',
-      'Protección antioxidante total'
+      'Sube las defensas para evitar gripes constantes, recaídas y debilidad',
+      'Desinflama el colon irritado y quita los gases con mal olor y cólicos',
+      'Limpia el intestino perezoso para que evacues a diario sin dolor ni esfuerzo',
+      'Elimina la pesadez estomacal y devuelve la energía y ligereza al cuerpo'
     ],
-    keywords: 'bienestar total, desintoxicación, limpieza hepática, colon irritable, digestión, Rtafull, Coliplus, Azenza, combo salud',
+    keywords: 'inmunidad dual, resvisfactor, coliplus, desinflamar vientre hinchado, limpiar colon de toxinas, defensas bajas, calostro bovino, hongos adaptogenos, fibra de pitaya, estreñimiento, evacuar sin dolor, combo oferta colombia, pago contra entrega, envio gratis, azenza',
     components: 'Calostro Bovino, Hongo Shiitake, Resveratrol, Linaza, Pitaya, Flor de Jamaica, Alcachofa, Betaglucanos y Vitaminas',
     componentBenefits: [
       {
-        name: 'Calostro, Shiitake y Betaglucanos',
-        benefit: 'Fortalecen el sistema inmunológico, apoyando las defensas naturales del organismo.'
+        name: 'Calostro Bovino y Hongo Shiitake',
+        benefit: 'Blindan tus defensas para que los cambios de clima y los virus no te tiren a la cama.'
       },
       {
         name: 'Linaza, Pitaya y Alcachofa',
-        benefit: 'Promueven el tránsito intestinal regular y favorecen la digestión saludable de forma natural.'
+        benefit: 'Desinflaman el vientre hinchado, combaten el estreñimiento y barren los desechos pegados al colon.'
       },
       {
         name: 'Resveratrol y Vitaminas',
-        benefit: 'Aportan soporte antioxidante y celular.'
+        benefit: 'Protegen tus células y te devuelven la vitalidad para que no sientas ese desgano diario.'
       }
     ],
     longTailKeywords: [
-      'mejor combo natural para reconfortar el vientre y subir defensas',
-      'cómo depurar el colon y el hígado de forma efectiva y segura',
-      'cuidado para el bienestar integral digestivo e inmune',
-      'beneficios de Inmunidad Dual para la vitalidad y equilibrio natural',
-      'fórmula balanceada para desintoxicación profunda y energía',
-      'bienestar integral y salud con calidad certificada premium',
-      'cómo mejorar la digestión y absorción de nutrientes con combos',
-      'combo para el cuidado de la salud diaria',
-      'apoyo natural para el colon irritable y pesadez abdominal',
-      'limpieza orgánica segura con ingredientes de alta pureza'
+      'combo para desinflamar el vientre abultado y subir defensas rapido',
+      'resvisfactor y coliplus precio colombia oferta del mes',
+      'limpieza profunda de colon con pitaya y fortalecimiento inmunologico',
+      'como desinflamar el estomago y evacuar a diario sin colicos ni dolor',
+      'combo inmunidad dual azenza original pago contra entrega envio gratis',
+      'comprar resvisfactor y coliplus con registro invima colombia',
+      'remedio natural para colon irritable gases y defensas caidas',
+      'pedir combo inmunidad dual por whatsapp con domicilio gratis'
     ],
     seoFaqs: [
       { q: '¿Por qué este combo es el más recomendado?', a: 'Porque combina el poder antioxidante de Resvis Factor con el bienestar digestivo de Coliplus para una salud integral total.' },

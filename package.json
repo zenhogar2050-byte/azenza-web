@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npx tsx server.ts",
+    "dev": "tsx server.ts",
     "start": "node server.ts",
     "build:client": "vite build",
     "build:server": "vite build --ssr src/main-server.tsx --outDir dist/server",

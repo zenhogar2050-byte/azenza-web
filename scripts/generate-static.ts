@@ -66,7 +66,57 @@ async function generateStatic() {
     for (const route of routesToRender) {
       try {
         const { html: appHtml } = serverModule.render(route);
-        const finalHtml = template.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+        let customizedTemplate = template;
+
+        if (route.startsWith('/producto/')) {
+          const productId = route.replace('/producto/', '');
+          const prod = PRODUCTS.find(p => p.id === productId);
+          if (prod) {
+            const title = prod.seoTitle || `${prod.name} | AZENZA`;
+            const desc = prod.seoDescription || prod.shortDescription || prod.description.slice(0, 150);
+            const rawKw = [
+              ...(typeof prod.keywords === 'string' ? prod.keywords.split(',').map(s => s.trim()) : (prod.keywords || [])),
+              ...(prod.longTailKeywords || [])
+            ].filter(Boolean);
+            const kw = Array.from(new Set(rawKw)).join(', ');
+            const img = prod.image.startsWith('http') ? prod.image : `https://azenza.com.co${prod.image}`;
+
+            customizedTemplate = customizedTemplate
+              .replace(/<title[^>]*>.*?<\/title>/, `<title data-rh="true">${title}</title>`)
+              .replace(/<meta data-rh="true" name="description" content=".*?" \/>/, `<meta data-rh="true" name="description" content="${desc.replace(/"/g, '&quot;')}" />`)
+              .replace(/<meta name="keywords" content=".*?" \/>/, `<meta name="keywords" content="${kw.replace(/"/g, '&quot;')}" />`)
+              .replace(/<meta data-rh="true" property="og:title" content=".*?" \/>/, `<meta data-rh="true" property="og:title" content="${title.replace(/"/g, '&quot;')}" />`)
+              .replace(/<meta data-rh="true" property="og:description" content=".*?" \/>/, `<meta data-rh="true" property="og:description" content="${desc.replace(/"/g, '&quot;')}" />`)
+              .replace(/<link data-rh="true" rel="canonical" href=".*?" \/>/, `<link data-rh="true" rel="canonical" href="https://azenza.com.co${route}" />`)
+              .replace(/<meta data-rh="true" property="og:url" content=".*?" \/>/, `<meta data-rh="true" property="og:url" content="https://azenza.com.co${route}" />`)
+              .replace(/<meta data-rh="true" property="og:image" content=".*?" \/>/, `<meta data-rh="true" property="og:image" content="${img}" />`);
+          }
+        } else if (route.startsWith('/combo/')) {
+          const comboId = route.replace('/combo/', '');
+          const combo = comboId === COMBO_OF_THE_MONTH.id ? COMBO_OF_THE_MONTH : PROMOTIONS.find(p => p.id === comboId);
+          if (combo) {
+            const title = combo.seoTitle || `${combo.name} | AZENZA`;
+            const desc = combo.seoDescription || combo.whyChoose?.description || combo.description.split('\n')[0];
+            const rawKw = [
+              ...(typeof combo.keywords === 'string' ? combo.keywords.split(',').map(s => s.trim()) : (combo.keywords || [])),
+              ...(combo.longTailKeywords || [])
+            ].filter(Boolean);
+            const kw = Array.from(new Set(rawKw)).join(', ');
+            const img = combo.image.startsWith('http') ? combo.image : `https://azenza.com.co${combo.image}`;
+
+            customizedTemplate = customizedTemplate
+              .replace(/<title[^>]*>.*?<\/title>/, `<title data-rh="true">${title}</title>`)
+              .replace(/<meta data-rh="true" name="description" content=".*?" \/>/, `<meta data-rh="true" name="description" content="${desc.replace(/"/g, '&quot;')}" />`)
+              .replace(/<meta name="keywords" content=".*?" \/>/, `<meta name="keywords" content="${kw.replace(/"/g, '&quot;')}" />`)
+              .replace(/<meta data-rh="true" property="og:title" content=".*?" \/>/, `<meta data-rh="true" property="og:title" content="${title.replace(/"/g, '&quot;')}" />`)
+              .replace(/<meta data-rh="true" property="og:description" content=".*?" \/>/, `<meta data-rh="true" property="og:description" content="${desc.replace(/"/g, '&quot;')}" />`)
+              .replace(/<link data-rh="true" rel="canonical" href=".*?" \/>/, `<link data-rh="true" rel="canonical" href="https://azenza.com.co${route}" />`)
+              .replace(/<meta data-rh="true" property="og:url" content=".*?" \/>/, `<meta data-rh="true" property="og:url" content="https://azenza.com.co${route}" />`)
+              .replace(/<meta data-rh="true" property="og:image" content=".*?" \/>/, `<meta data-rh="true" property="og:image" content="${img}" />`);
+          }
+        }
+
+        const finalHtml = customizedTemplate.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
 
         let targetFile: string;
         if (route === '/') {

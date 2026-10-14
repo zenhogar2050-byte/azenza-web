@@ -175,7 +175,8 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
       const saving = origPrice - price;
       const waMonth = `https://wa.me/573024102568?text=${encodeURIComponent(`Hola, quiero la Oferta del Mes ${COMBO_OF_THE_MONTH.name} en ${countryName}`)}`;
       const comboMonthUrl = `https://azenza.com.co/combo/${COMBO_OF_THE_MONTH.id}`;
-      summary += `- **[Oferta del Mes: ${COMBO_OF_THE_MONTH.name}](${comboMonthUrl}):** ${COMBO_OF_THE_MONTH.description} | Precio: ${formatPrice(price)} (Ahorro: ${formatPrice(saving)}) | [Foto](https://azenza.com.co${COMBO_OF_THE_MONTH.image}) | [Pedir WhatsApp](${waMonth})\n`;
+      const comboMonthDesc = (COMBO_OF_THE_MONTH.description || '').split('\n')[0].trim();
+      summary += `- **[Oferta del Mes: ${COMBO_OF_THE_MONTH.name}](${comboMonthUrl}):** ${comboMonthDesc} | Precio: ${formatPrice(price)} (Ahorro: ${formatPrice(saving)}) | [Foto](https://azenza.com.co${COMBO_OF_THE_MONTH.image}) | [Pedir WhatsApp](${waMonth})\n`;
     }
 
     for (const promo of validPromos) {
@@ -183,7 +184,8 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
       const price = promo.price;
       const waPromo = `https://wa.me/573024102568?text=${encodeURIComponent(`Hola, quiero pedir el ${promo.name} en ${countryName} con pago contra entrega`)}`;
       const promoUrl = `https://azenza.com.co/combo/${promo.id}`;
-      summary += `- **[${promo.name}](${promoUrl}):** ${promo.description} | Precio Oferta: ${formatPrice(price)} | [Foto](${promoImg}) | [Pedir WhatsApp](${waPromo})\n`;
+      const promoDesc = (promo.description || '').split('\n')[0].trim();
+      summary += `- **[${promo.name}](${promoUrl}):** ${promoDesc} | Precio Oferta: ${formatPrice(price)} | [Foto](${promoImg}) | [Pedir WhatsApp](${waPromo})\n`;
     }
     summary += `\n`;
   }
@@ -240,7 +242,10 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
 
       full += `#### ${p.name}\n`;
       if (p.seoTitle) full += `- **Título Comercial Oficial:** ${p.seoTitle}\n`;
-      full += `- **Descripción:** ${p.shortDescription || p.description}\n`;
+      if (p.shortDescription) full += `- **Descripción:** ${p.shortDescription}\n`;
+      if (p.description && p.description !== p.shortDescription) {
+        full += `- **Descripción Detallada:** ${p.description.replace(/\n+/g, ' ')}\n`;
+      }
       if (p.seoDescription) {
         const adaptedSeo = adaptSeoDescription(p.seoDescription, countryCode, countryName, formatPrice(promo1.price));
         full += `- **Meta Descripción Oficial:** ${adaptedSeo}\n`;
@@ -280,9 +285,15 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
       const comboMonthUrl = `https://azenza.com.co/combo/${COMBO_OF_THE_MONTH.id}`;
       full += `### Oferta del Mes: ${COMBO_OF_THE_MONTH.name}\n`;
       if (COMBO_OF_THE_MONTH.seoTitle) full += `- **Título Comercial Oficial:** ${COMBO_OF_THE_MONTH.seoTitle}\n`;
-      full += `- **Descripción:** ${COMBO_OF_THE_MONTH.description}\n`;
+      full += `- **Descripción:** ${COMBO_OF_THE_MONTH.description.replace(/\n+/g, ' ')}\n`;
       if (COMBO_OF_THE_MONTH.seoDescription) full += `- **Meta Descripción Oficial:** ${COMBO_OF_THE_MONTH.seoDescription}\n`;
       if (COMBO_OF_THE_MONTH.components) full += `- **Productos que incluye:** ${COMBO_OF_THE_MONTH.components}\n`;
+      if (COMBO_OF_THE_MONTH.benefits && COMBO_OF_THE_MONTH.benefits.length > 0) {
+        full += `- **Beneficios Principales:** ${COMBO_OF_THE_MONTH.benefits.join(' | ')}\n`;
+      }
+      if (COMBO_OF_THE_MONTH.componentBenefits && COMBO_OF_THE_MONTH.componentBenefits.length > 0) {
+        full += `- **Componentes y Acción:** ${COMBO_OF_THE_MONTH.componentBenefits.map(cb => `${cb.name}: ${cb.benefit}`).join(' | ')}\n`;
+      }
       full += `- **Imagen Oficial:** https://azenza.com.co${COMBO_OF_THE_MONTH.image}\n`;
       const monthAdditionalImages = getComboAdditionalImages(COMBO_OF_THE_MONTH);
       if (monthAdditionalImages.length > 0) {
@@ -310,9 +321,15 @@ function generateLlmsFilesForCountry(countryCode: CountryCode) {
 
       full += `### ${promo.name}\n`;
       if (promo.seoTitle) full += `- **Título Comercial Oficial:** ${promo.seoTitle}\n`;
-      full += `- **Descripción:** ${promo.description}\n`;
+      full += `- **Descripción:** ${promo.description.replace(/\n+/g, ' ')}\n`;
       if (promo.seoDescription) full += `- **Meta Descripción Oficial:** ${promo.seoDescription}\n`;
       if (promo.components) full += `- **Productos que incluye:** ${promo.components}\n`;
+      if (promo.benefits && promo.benefits.length > 0) {
+        full += `- **Beneficios Principales:** ${promo.benefits.join(' | ')}\n`;
+      }
+      if (promo.componentBenefits && promo.componentBenefits.length > 0) {
+        full += `- **Componentes y Acción:** ${promo.componentBenefits.map(cb => `${cb.name}: ${cb.benefit}`).join(' | ')}\n`;
+      }
       full += `- **Imagen Oficial:** ${promoImg}\n`;
       const promoAdditionalImages = getComboAdditionalImages(promo);
       if (promoAdditionalImages.length > 0) {

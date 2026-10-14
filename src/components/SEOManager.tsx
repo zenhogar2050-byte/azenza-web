@@ -53,12 +53,17 @@ const SEOManager: React.FC<SEOManagerProps> = ({
         ? rawDescription.slice(0, 152).trim() + '...' 
         : rawDescription;
         
-    // Consolidación de keywords
-    const metaKeywords = [
-        ...(keywords || []),
-        ...(productData?.keywords || []),
-        ...(productData?.longTailKeywords || [])
-    ].filter(Boolean).join(', ');
+    // Consolidación y deduplicación de keywords para máxima relevancia SEO
+    const parsedKeywords = [
+        ...(Array.isArray(keywords) 
+            ? keywords 
+            : (typeof keywords === 'string' ? (keywords as string).split(',').map(s => s.trim()) : [])),
+        ...(Array.isArray(productData?.keywords) 
+            ? productData.keywords 
+            : (typeof productData?.keywords === 'string' ? productData.keywords.split(',').map((s: string) => s.trim()) : [])),
+        ...(Array.isArray(productData?.longTailKeywords) ? productData.longTailKeywords : [])
+    ].filter(Boolean);
+    const metaKeywords = Array.from(new Set(parsedKeywords)).join(', ');
  
     // 2. Generación del Grafo de Esquema Único
     const schemaData = generateSchemaGraph({
