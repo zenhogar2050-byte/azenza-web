@@ -1,4 +1,5 @@
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { useDynamicMeta } from "../hooks/useDynamicMeta";
 import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS, GENERAL_FAQS } from '../constants';
 import { useCart } from '../CartContext';

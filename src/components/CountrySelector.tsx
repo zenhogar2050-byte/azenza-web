@@ -1,8 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useCart } from '../CartContext';
-import { COUNTRY_CONFIGS, CountryCode } from '../constants';
-import { ChevronDown, Check } from 'lucide-react';
-import { cn } from '../utils';
+import React, { useState, useRef, useEffect } from "react";
+import { useCart } from "../CartContext";
+import { useCountry } from "../CountryContext";
+import { COUNTRY_CONFIGS, CountryCode } from "../constants";
+import { ChevronDown, Check } from "lucide-react";
+import { cn } from "../utils";
 
 interface CountrySelectorProps {
   value?: CountryCode;
@@ -13,17 +14,23 @@ interface CountrySelectorProps {
 
 export default function CountrySelector({ value, onChange, label, className }: CountrySelectorProps = {}) {
   const cartContext = useCart();
-  const country = value || cartContext?.country || 'CO';
+  const countryContext = useCountry();
+  const country = value || (countryContext?.country?.id as CountryCode) || cartContext?.country || "CO";
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentConfig = COUNTRY_CONFIGS[country] || COUNTRY_CONFIGS['CO'];
+  const currentConfig = COUNTRY_CONFIGS[country] || COUNTRY_CONFIGS["CO"];
 
   const setCountry = (c: CountryCode) => {
     if (onChange) {
       onChange(c);
-    } else if (cartContext?.setCountry) {
-      cartContext.setCountry(c);
+    } else {
+      if (countryContext?.setCountryId) {
+        countryContext.setCountryId(c);
+      }
+      if (cartContext?.setCountry) {
+        cartContext.setCountry(c);
+      }
     }
   };
 
@@ -33,20 +40,20 @@ export default function CountrySelector({ value, onChange, label, className }: C
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const countries: { code: CountryCode; name: string }[] = [
-    { code: 'CO', name: 'Colombia' },
-    { code: 'CL', name: 'Chile' },
-    { code: 'CR', name: 'Costa Rica' },
-    { code: 'EC', name: 'Ecuador' },
-    { code: 'GT', name: 'Guatemala' },
-    { code: 'HN', name: 'Honduras' },
-    { code: 'PE', name: 'Perú' },
-    { code: 'DO', name: 'República Dominicana' },
-    { code: 'VE', name: 'Venezuela' },
+    { code: "CO", name: "Colombia" },
+    { code: "CL", name: "Chile" },
+    { code: "CR", name: "Costa Rica" },
+    { code: "EC", name: "Ecuador" },
+    { code: "GT", name: "Guatemala" },
+    { code: "HN", name: "Honduras" },
+    { code: "PE", name: "Perú" },
+    { code: "DO", name: "República Dominicana" },
+    { code: "VE", name: "Venezuela" },
   ];
 
   return (
@@ -69,7 +76,7 @@ export default function CountrySelector({ value, onChange, label, className }: C
         </div>
         <span className="sm:hidden font-bold">{country}</span>
         <span className="hidden sm:inline font-bold">{currentConfig.name}</span>
-        <ChevronDown className={`w-3.5 h-3.5 text-stone-500 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3.5 h-3.5 text-stone-500 transition-transform ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
@@ -87,7 +94,7 @@ export default function CountrySelector({ value, onChange, label, className }: C
                   setIsOpen(false);
                 }}
                 className={`w-full flex items-center justify-between px-3 py-2 text-left text-xs sm:text-sm font-semibold transition-colors hover:bg-stone-50 ${
-                  isSelected ? 'bg-emerald-50 text-emerald-900 font-bold' : 'text-stone-700'
+                  isSelected ? "bg-emerald-50 text-emerald-900 font-bold" : "text-stone-700"
                 }`}
               >
                 <div className="flex items-center gap-2.5">

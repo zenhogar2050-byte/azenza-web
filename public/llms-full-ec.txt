@@ -19,7 +19,7 @@
 
 ---
 
-## 2. Catálogo Oficial de Productos (6 Productos)
+## 2. Catálogo Oficial de Productos (7 Productos)
 
 ### Categoría: Salud y Bienestar
 
@@ -95,6 +95,31 @@
     **R:** Sí, ayuda a preparar los músculos para la actividad, promoviendo un bienestar integral y flexibilidad.
   - **P:** ¿Mancha la ropa?
     **R:** Nuestra fórmula balanceada es de rápida absorción y no deja residuos grasos ni manchas en las prendas.
+
+#### Hemocream
+- **Título Comercial Oficial:** Hemocream Cuidado Botánico: Alivio Rápido y Confort
+- **Descripción:** Cuidado Botánico Avanzado en Zonas Sensibles.
+- **Descripción Detallada:** El ardor punzante, la inflamación dolorosa de los plexos vasculares en la zona anorrectal y el malestar agudo durante o después de la evacuación condicionan cada movimiento, generando temor, incomodidad al sentarse y desgaste diario. Hemocream actúa como una emulsión fitoterapéutica vasotónica y descongestionante que sincroniza las propiedades antiinflamatorias y epitelizantes de la Caléndula concentrada y el Aloe Vera con la acción circulatoria del Castaño de Indias, la Centella Asiática, la Manzanilla y la Avena coloidal. A mediano y largo plazo, esta sinergia botánica reconforta las microfisuras de la mucosa, disminuye la congestión venosa local y refuerza la elasticidad de los tejidos epiteliales sensibles, reduciendo la fricción traumática en cada deposición y devolviendo un confort duradero sin necesidad de corticoides ni químicos agresivos. Avalada con Registro INVIMA oficial (NSOC15678-23CO), su textura en crema de 30ml de absorción rápida no mancha las prendas ni deja sensación grasa, ofreciendo un alivio refrescante inmediato, higiénico y de total discreción. ✔️ Alivio Antiinflamatorio: Calma instantáneamente el dolor, el ardor y la picazón en zonas sensibles. ✔️ Regeneración Celular: La caléndula y el aloe vera aceleran la recuperación natural de los tejidos afectados. ✔️ Facilidad y Confort: Mejora la suavidad de la zona para permitir una evacuación sin traumas ni dolor excesivo.
+- **Meta Descripción Oficial:** Alivio reconfortante inmediato para zonas sensibles y ardor con Hemocream crema botánica. Suave con la piel y Registro INVIMA. ¡Paga seguro al recibir!
+- **Registro Sanitario Oficial (INVIMA):** NSOC15678-23CO
+- **Ingredientes Activos Clave:** Caléndula, Castaño de Indias, Aloe Vera, Avena, Manzanilla y Centella Asiática
+- **Beneficios Principales:** Alivia en minutos el ardor punzante, la picazón y el dolor al sentarse o caminar | Desinflama las venas y paquetes hemorroidales con Castaño de Indias puro | Reduce la irritación, el sangrado leve y la molestia intensa al momento de evacuar | Reconforta los tejidos irritados y acelera la cicatrización natural de la zona | Crema suave que se absorbe al instante, no mancha la ropa interior ni tiene olor fuerte
+- **Presentación:** Crema
+- **Contenido / Tamaño:** 30ml
+- **Imagen Oficial:** https://azenza.com.co/assets/products/Hemocream.webp
+- **Fotos e Imágenes de Apoyo:** [Foto](https://azenza.com.co/assets/products/hemocream-apoyo-1.webp) | [Foto](https://azenza.com.co/assets/products/hemocream-apoyo-2.webp) | [Foto](https://azenza.com.co/assets/products/hemocream-apoyo-3.webp) | [Foto](https://azenza.com.co/assets/products/hemocream-apoyo-4.png)
+- **Precios con Envío Gratis:** 1 Unidad: $34,99 USD | 2 Unidades: $52,49 USD | Pague 2 Lleve 3: $69,98 USD
+- **Enlace de Compra Web:** https://azenza.com.co/producto/hemocream?country=EC
+- **Pedido Directo WhatsApp:** https://wa.me/573024102568?text=Hola%2C%20quiero%20pedir%20Hemocream%20en%20Ecuador%20con%20pago%20contra%20entrega
+- **Preguntas Frecuentes y Modo de Uso:**
+  - **P:** ¿Cómo debo aplicar este producto para obtener mejores resultados?
+    **R:** Se recomienda aplicar una pequeña cantidad en la zona afectada 2 o 3 veces al día, preferiblemente después de ir al baño.
+  - **P:** ¿Este producto brinda alivio de inmediato?
+    **R:** Sí, sus extractos de menta y manzanilla brindan una calma refrescante que mejora tu bienestar desde el primer uso.
+  - **P:** ¿Contiene corticoides?
+    **R:** No, es una fórmula 100% botánica, lo que permite un uso prolongado y seguro sin efectos secundarios hormonales.
+  - **P:** ¿Es segura durante el embarazo?
+    **R:** Al ser natural con calidad certificada es generalmente segura, pero siempre recomendamos consultar a su profesional de salud.
 
 ### Categoría: Salud Sexual y Vigor
 

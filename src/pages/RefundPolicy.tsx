@@ -1,18 +1,20 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { ShieldCheck, ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import LegalFooter from '../components/LegalFooter';
-import SEOManager from '../components/SEOManager';
+import React from "react";
+import { motion } from "motion/react";
+import { ShieldCheck, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import LegalFooter from "../components/LegalFooter";
+import SEOManager from "../components/SEOManager";
+import { useCountry } from "../CountryContext";
 
 const RefundPolicy = () => {
   const navigate = useNavigate();
+  const { country } = useCountry();
 
   return (
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
-        title="Política de Reembolso"
-        description="Conoce nuestra política de reembolsos y derecho de retracto de AZENZA en Colombia."
+        title={`Política de Reembolso | ${country.name}`}
+        description={`Conoce nuestra política de reembolsos y derecho de retracto de AZENZA en ${country.name}.`}
         canonicalUrl="/politica-reembolso"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,28 +42,28 @@ const RefundPolicy = () => {
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Productos Dañados o Defectuosos</h2>
               <p>
-                Si recibes un producto en mal estado, con abolladuras, goteos o cualquier anomalía física, debes reportarlo dentro de las primeras <strong>24 horas</strong> tras la entrega. AZENZA realizará el reemplazo del producto sin costo adicional para ti.
+                Si recibes un producto en mal estado, con abolladuras, goteos o cualquier anomalía física al momento de la entrega en {country.name}, debes reportarlo dentro de las primeras <strong>24 horas</strong> tras la recepción. AZENZA gestionará el reemplazo del producto sin costo adicional para ti.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">2. Derecho de Retracto</h2>
               <p>
-                De acuerdo con la naturaleza de nuestro modelo de pago contraentrega y entrega presencial, el derecho de retracto solo se puede ejercer <strong>antes de que el pedido sea entregado o reclamado</strong>. Al momento de la entrega, el comprador revisa, inspecciona y valida el producto; al dar su aprobación y recibirlo a satisfacción, se realiza el pago respectivo. Por lo tanto, no aplican retractos posteriores a la recepción y validación en la entrega.
+                De acuerdo con la naturaleza de nuestro modelo de pago contraentrega y entrega presencial en {country.name}, el derecho de retracto se ejerce <strong>antes o en el momento mismo de la entrega</strong>. Al recibir al transportador o mensajero, usted revisa, valida el producto y, tras su conformidad, efectúa el pago en efectivo ({country.currency}). Por motivos de higiene y seguridad de productos naturales de consumo, no aplican retractos posteriores a la aceptación y apertura del paquete.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">3. Reembolsos</h2>
               <p>
-                Una vez el producto retornado sea recibido y verifiquemos que cumple con las condiciones mencionadas, procesaremos tu reembolso. Dado nuestro modelo de <strong>pago contraentrega</strong>, la devolución del dinero se realizará mediante transferencia bancaria en un plazo máximo de <strong>10 días hábiles</strong>.
+                En caso fortuito de requerir un reembolso justificado y verificado por nuestro equipo de atención, la devolución del importe se realizará mediante transferencia bancaria o abono directo acordado con el cliente en su moneda local ({country.currency}) en un plazo máximo de <strong>10 días hábiles</strong>.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">4. Excepciones por Salud e Higiene</h2>
               <p>
-                Por motivos de bioseguridad, salud e higiene, los productos naturales o cosméticos que hayan sido <strong>abiertos o utilizados</strong> no son aptos para devolución ni reembolso, a menos que se trate de una falla de calidad reportada en el tiempo estipulado.
+                Por motivos de bioseguridad, salud e higiene internacional, los productos naturales o cosméticos que hayan sido <strong>abiertos o utilizados</strong> no son aptos para devolución ni reembolso, a menos que se trate de una falla de calidad verificada y reportada en el tiempo estipulado.
               </p>
             </section>
           </div>

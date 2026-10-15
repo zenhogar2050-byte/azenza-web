@@ -7,7 +7,7 @@ export default function LegalFooter() {
     <div className="mt-32 pt-20 border-t border-stone-200">
       <div className="grid md:grid-cols-4 gap-12 items-start">
         <div className="space-y-4">
-          <p className="text-xl font-black text-stone-900 tracking-tighter uppercase">
+          <p className="text-xl font-black text-white select-none tracking-tighter uppercase">
             Dios Bendice este Negocio
           </p>
           <Link to="/" className="flex items-center gap-3">
@@ -28,7 +28,7 @@ export default function LegalFooter() {
             </div>
           </Link>
           <p className="text-stone-500 leading-relaxed">
-            Dedicados a llevar el bienestar natural a cada hogar colombiano. Calidad, confianza y salud en cada producto.
+            Dedicados a llevar el bienestar natural a cada hogar. Calidad, confianza y salud en cada producto.
           </p>
         </div>
 

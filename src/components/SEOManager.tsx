@@ -1,147 +1,108 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { formatCurrency } from '../utils';
-import { generateSchemaGraph } from '../lib/seo-logic';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { formatCurrency } from "../utils";
+import { generateSchemaGraph } from "../lib/seo-logic";
 
 export interface SEOManagerProps {
-    title: string;
-    description: string;
-    canonicalUrl: string;
-    ogImage?: string;
-    type?: string;
-    productData?: any;
-    categoryProducts?: any[];
-    faqs?: Array<{ q: string; a: string }>;
-    keywords?: string[];
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  ogImage?: string;
+  type?: string;
+  productData?: any;
+  categoryProducts?: any[];
+  faqs?: Array<{ q: string; a: string }>;
+  keywords?: string[];
 }
 
-const SEOManager: React.FC<SEOManagerProps> = ({ 
-    title, 
-    description, 
-    canonicalUrl, 
-    ogImage = '', 
-    type = "website", 
-    productData = null,
-    faqs = [],
-    keywords = []
+const COUNTRY_DOMAINS: Record<string, string> = {
+  CO: "azenza.com.co",
+  CL: "azenza.cl",
+  CR: "azenza.co.cr",
+  EC: "azenza.com.ec",
+  GT: "azenza.gt",
+  HN: "azenza.hn",
+  PE: "azenza.pe",
+  DO: "azenza.do",
+  VE: "azenza.com.ve",
+};
+
+const SEOManager: React.FC<SEOManagerProps> = ({
+  title,
+  description,
+  canonicalUrl,
+  ogImage = "",
+  type = "website",
+  productData = null,
+  faqs = [],
+  keywords = [],
 }) => {
-    const baseUrl = "https://azenza.com.co";
-    
-    // 1. Normalización de URL para evitar errores de redirección
-    // Mantenemos consistencia con el servidor (sin slash final excepto en Home)
-    const cleanPath = canonicalUrl.startsWith('/') ? canonicalUrl : `/${canonicalUrl}`;
-    let normalizedPath = cleanPath.replace(/\/+$/, '');
-    
-    // Si la ruta es vacía tras quitar slashes, es la Home. Google prefiere la versión con slash final para el dominio base.
-    const fullUrl = normalizedPath === "" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
-    
-    // Usamos el título tal cual para máxima relevancia y conversión sin texto sobrante
-    const fullTitle = title;
-    const defaultImage = `${baseUrl}/assets/logo/og-image.png`;
-    const finalImage = ogImage?.startsWith('http') ? ogImage : `${baseUrl}${ogImage || ''}`;
+  const cleanPath = canonicalUrl.startsWith("/") ? canonicalUrl : `/${canonicalUrl}`;
+  const normalizedPath = cleanPath.replace(/\/+$/, "");
+  
+  const getFullUrl = (domain: string) => `https://${domain}${normalizedPath === "" ? "/" : normalizedPath}`;
+  const fullUrl = getFullUrl(COUNTRY_DOMAINS["CO"]);
+  const defaultImage = `https://${COUNTRY_DOMAINS["CO"]}/assets/logo/og-image.png`;
+  const finalImage = ogImage?.startsWith("http") ? ogImage : `https://${COUNTRY_DOMAINS["CO"]}${ogImage || ""}`;
 
-    const isPending = !productData?.invima || productData.invima.toLowerCase().includes('trámite');
-    const invimaDisplay = isPending ? 'Verificación INVIMA' : productData.invima;
-    
-    // Si la descripción ya incluye INVIMA, usamos la descripción directa optimizada
-    const rawDescription = productData && productData.invima && !description.toLowerCase().includes('invima')
-        ? `${description} INVIMA: ${invimaDisplay}.` 
-        : description;
+  const isPending = !productData?.invima || productData.invima.toLowerCase().includes("trámite");
+  const invimaDisplay = isPending ? "Verificación INVIMA" : productData?.invima;
 
-    // Asegurar que la meta descripción se mantenga en el rango óptimo (<155 caracteres / ~950px)
-    const finalDescription = rawDescription.length > 155 
-        ? rawDescription.slice(0, 152).trim() + '...' 
-        : rawDescription;
-        
-    // Consolidación y deduplicación de keywords para máxima relevancia SEO
-    const parsedKeywords = [
-        ...(Array.isArray(keywords) 
-            ? keywords 
-            : (typeof keywords === 'string' ? (keywords as string).split(',').map(s => s.trim()) : [])),
-        ...(Array.isArray(productData?.keywords) 
-            ? productData.keywords 
-            : (typeof productData?.keywords === 'string' ? productData.keywords.split(',').map((s: string) => s.trim()) : [])),
-        ...(Array.isArray(productData?.longTailKeywords) ? productData.longTailKeywords : [])
-    ].filter(Boolean);
-    const metaKeywords = Array.from(new Set(parsedKeywords)).join(', ');
- 
-    // 2. Generación del Grafo de Esquema Único
-    const schemaData = generateSchemaGraph({
-        type,
-        title,
-        description: finalDescription,
-        canonicalUrl: fullUrl,
-        ogImage: finalImage,
-        productData,
-        faqs
-    });
+  const rawDescription = productData && productData.invima && !description.toLowerCase().includes("invima")
+    ? `${description} INVIMA: ${invimaDisplay}.`
+    : description;
+  const finalDescription = rawDescription.length > 155
+    ? rawDescription.slice(0, 152).trim() + "..."
+    : rawDescription;
 
-    return (
-        <Helmet>
-            {/* Metadatos Básicos */}
-            <title>{fullTitle}</title>
-            <meta name="description" content={finalDescription} />
-            {metaKeywords && <meta name="keywords" content={metaKeywords} />}
-            <link rel="canonical" href={fullUrl} />
-            <meta name="robots" content="index, follow, max-image-preview:large" />
+  const parsedKeywords = [
+    ...(Array.isArray(keywords) ? keywords : (typeof keywords === "string" ? keywords.split(",").map(s => s.trim()) : [])),
+    ...(productData ? (Array.isArray(productData.keywords) ? productData.keywords : (typeof productData.keywords === "string" ? productData.keywords.split(",").map((s: string) => s.trim()) : [])) : [])
+  ].filter(Boolean);
+  
+  const metaKeywords = Array.from(new Set(parsedKeywords)).join(", ");
 
-            {/* Alternativas de Idioma y Región (hreflang) */}
-            <link rel="alternate" hrefLang="es-CO" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-CL" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-CR" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-EC" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-GT" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-HN" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-PE" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-DO" href={fullUrl} />
-            <link rel="alternate" hrefLang="es-VE" href={fullUrl} />
-            <link rel="alternate" hrefLang="x-default" href={fullUrl} />
+  const schemaData = generateSchemaGraph({
+    type,
+    title,
+    description: finalDescription,
+    canonicalUrl: fullUrl,
+    ogImage: finalImage,
+    productData,
+    faqs
+  });
 
-            {/* Open Graph (Facebook / WhatsApp) */}
-            <meta property="og:locale" content="es_CO" />
-            <meta property="og:type" content={type === "product" ? "og:product" : "website"} />
-            <meta property="og:title" content={fullTitle} />
-            <meta property="og:description" content={finalDescription} />
-            <meta property="og:url" content={fullUrl} />
-            <meta property="og:site_name" content="Azenza" />
-            <meta property="og:image" content={finalImage || defaultImage} />
-            <meta property="og:image:secure_url" content={finalImage || defaultImage} />
-            <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
-            <meta property="og:image:alt" content={title} />
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={finalDescription} />
+      {metaKeywords && <meta name="keywords" content={metaKeywords} />}
+      <link rel="canonical" href={fullUrl} />
+      <meta name="robots" content="index, follow, max-image-preview:large" />
 
-            {/* Twitter Card */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={fullTitle} />
-            <meta name="twitter:description" content={finalDescription} />
-            <meta name="twitter:image" content={finalImage || defaultImage} />
-            
-            {/* LCP Image Preload */}
-            {finalImage && <link rel="preload" as="image" href={finalImage} fetchPriority="high" />}
+      {/* Dynamic hreflang tags */}
+      {Object.entries(COUNTRY_DOMAINS).map(([code, domain]) => (
+        <link key={code} rel="alternate" hrefLang={`es-${code}`} href={getFullUrl(domain)} />
+      ))}
+      <link rel="alternate" hrefLang="x-default" href={fullUrl} />
 
-            {/* Datos de Producto para Redes Sociales y Motores (Merchant Center, FB) */}
-            {productData && (
-                <>
-                    <meta name="twitter:label1" content="Precio" />
-                    <meta name="twitter:data1" content={formatCurrency(productData.lowPrice || productData.basePrice)} />
-                    
-                    <meta property="product:price:amount" content={String(Number(productData.lowPrice || productData.basePrice))} />
-                    <meta property="product:price:currency" content="COP" />
-                    <meta property="og:price:amount" content={String(Number(productData.lowPrice || productData.basePrice))} />
-                    <meta property="og:price:currency" content="COP" />
-                </>
-            )}
+      <meta property="og:type" content={type === "product" ? "og:product" : "website"} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={finalDescription} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:site_name" content="Azenza" />
+      <meta property="og:image" content={finalImage || defaultImage} />
 
-            {/* CAMBIO CRÍTICO PARA GOOGLE SEARCH CONSOLE:
-               Usamos un ID único y el atributo data-rh="true". 
-               Esto le dice a react-helmet-async que REEMPLACE cualquier script previo
-               en lugar de añadir uno nuevo, eliminando los "6 elementos no válidos".
-            */}
-            <script type="application/ld+json" data-rh="true" id="schema-main">
-                {JSON.stringify(schemaData)}
-            </script>
-        </Helmet>
-    );
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={finalDescription} />
+      <meta name="twitter:image" content={finalImage || defaultImage} />
+
+      <script type="application/ld+json" data-rh="true" id="schema-main">
+        {JSON.stringify(schemaData)}
+      </script>
+    </Helmet>
+  );
 };
 
 export default SEOManager;

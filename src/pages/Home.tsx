@@ -1,3 +1,4 @@
+import { useDynamicMeta } from "../hooks/useDynamicMeta";
 import { motion } from 'motion/react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, PRODUCTS, GENERAL_FAQS } from '../constants';

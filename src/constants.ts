@@ -784,7 +784,7 @@ A mediano y largo plazo, su aporte diario promueve la síntesis de queratina en 
       '/assets/products/cafe-colageno-apoyo-3.webp',
       '/assets/products/cafe-colageno-apoyo-4.webp'
     ],
-    keywords: 'café con colágeno, colágeno hidrolizado, crema de coco, café funcional, piel firme, fortalecer cabello, uñas fuertes, café colombiano saludable, Coffee Colágeno, Azenza, comprar colombia, pago contra entrega, envío gratis',
+    keywords: 'café con colágeno, colágeno hidrolizado, crema de coco, café funcional, piel firme, fortalecer cabello, uñas fuertes, café gourmet saludable, Coffee Colágeno, Azenza, comprar colombia, pago contra entrega, envío gratis',
     components: 'Crema de Coco, Colágeno Hidrolizado y Café Soluble',
     componentBenefits: [
       {
@@ -812,7 +812,7 @@ A mediano y largo plazo, su aporte diario promueve la síntesis de queratina en 
     ],
     seoFaqs: [
       { q: '¿Cómo debo consumir este producto para obtener mejores resultados?', a: 'Disolver 1 cucharada (20g) en una taza de agua o leche caliente.' },
-      { q: '¿Sabe a café normal?', a: 'Sí, mantiene el delicioso sabor del café premium colombiano, pero con el beneficio añadido del colágeno para tu bienestar integral.' },
+      { q: '¿Sabe a café normal?', a: 'Sí, mantiene el delicioso sabor del café premium, pero con el beneficio añadido del colágeno para tu bienestar integral.' },
       { q: '¿Ayuda a fortalecer el cabello?', a: 'El colágeno es fundamental para la salud capilar, por lo que notarás mejoras en fuerza y brillo.' }
     ],
     promos: [
@@ -827,7 +827,7 @@ A mediano y largo plazo, su aporte diario promueve la síntesis de queratina en 
     ],
     whyChoose: {
       title: 'Belleza natural en cada taza',
-      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de grado premium. Coffee + Colágeno fusiona el mejor café colombiano con colágeno hidrolizado para tu vitalidad diaria con calidad certificada.'
+      description: 'En AZENZA estamos comprometidos con tu salud, ofrecemos productos con registro INVIMA de grado premium. Coffee + Colágeno fusiona el café de alta calidad con colágeno hidrolizado para tu vitalidad diaria con calidad certificada.'
     }
   },
   {
@@ -2626,7 +2626,7 @@ A mediano y largo plazo, esta sinergia mitocondrial estimula las vías fisiológ
 
 Esta matriz botánica permite una liberación progresiva de energía sin ocasionar acidez, picos de nerviosismo ni descensos abruptos, nutriendo el metabolismo celular para sostener un vigor físico superior y una claridad mental prolongada ante jornadas de alta exigencia. Certificado con Registro INVIMA oficial, su formato en polvo de 400g se disuelve al instante sin lácteos, ofreciendo un sabor refinado y una absorción eficiente para arrancar cada día con máxima potencia.
 
-✔️ Ritual de Potencia: El sabor del café colombiano potenciado con Maca y Chontaduro para el vigor.
+✔️ ✔️ Ritual de Potencia: El sabor del café gourmet potenciado con Maca y Chontaduro para el vigor.
 ✔️ Vigor Mental: Mejora la concentración y reduce la fatiga intelectual en jornadas de alta presión.
 ✔️ Fórmula Nutritiva: Base de coco que aporta grasas saludables y una textura cremosa inigualable.`,
     seoTitle: 'Titan Coffee Original: Café Energizante con Maca y Borojó',
@@ -4444,7 +4444,7 @@ const countryAllowedProducts: Partial<Record<CountryCode, string[]>> = {
   PE: ['locion', 'coliplus', 'derman', 'hemocream'],
   HN: ['derman', 'instant-virgin'],
   GT: ['derman', 'hemocream', 'instant-virgin', 'mamooth'],
-  EC: ['coliplus', 'derman', 'instant-virgin', 'locion', 'mamooth', 'rtafull'],
+    EC: ['coliplus', 'derman', 'hemocream', 'instant-virgin', 'locion', 'mamooth', 'rtafull'],
   CR: ['derman', 'hemocream', 'instant-virgin', 'mamooth']
 };
 

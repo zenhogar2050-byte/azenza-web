@@ -1,18 +1,20 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { FileText, ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import LegalFooter from '../components/LegalFooter';
-import SEOManager from '../components/SEOManager';
+import React from "react";
+import { motion } from "motion/react";
+import { FileText, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import LegalFooter from "../components/LegalFooter";
+import SEOManager from "../components/SEOManager";
+import { useCountry } from "../CountryContext";
 
 const TermsOfService = () => {
   const navigate = useNavigate();
+  const { country } = useCountry();
 
   return (
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
         title="Términos del Servicio"
-        description="Conoce los Términos y Condiciones de Uso de la plataforma AZENZA en Colombia."
+        description={`Conoce los Términos y Condiciones de Uso de la plataforma AZENZA en ${country.name}.`}
         canonicalUrl="/terminos-servicio"
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +42,7 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">1. Aceptación de los Términos</h2>
               <p>
-                Al acceder y utilizar el sitio web de AZENZA, usted declara que es mayor de edad y que acepta estar sujeto a estos Términos y Condiciones, así como a todas las leyes aplicables en el territorio colombiano. Si no está de acuerdo con alguna parte de estos términos, le recomendamos abstenerse de utilizar nuestro servicio.
+                Al acceder y utilizar el sitio web de AZENZA, usted declara que es mayor de edad y que acepta estar sujeto a estos Términos y Condiciones, así como a todas las leyes y normativas de comercio electrónico aplicables en {country.name} y la jurisdicción de nuestra casa matriz. Si no está de acuerdo con alguna parte de estos términos, le recomendamos abstenerse de utilizar nuestro servicio.
               </p>
             </section>
 
@@ -54,14 +56,14 @@ const TermsOfService = () => {
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">3. Precios y Exactitud del Inventario</h2>
               <p>
-                Todos los precios están expresados en <strong>Pesos Colombianos (COP)</strong>. Nos reservamos el derecho de modificar los precios sin previo aviso. La disponibilidad de los productos puede cambiar; en caso de que un producto pedido no esté disponible, se le notificará vía WhatsApp para ofrecerle una alternativa o proceder con la cancelación del pedido.
+                Todos los precios para compras en {country.name} están expresados en <strong>{country.currency} ({country.symbol})</strong>. Nos reservamos el derecho de modificar los precios sin previo aviso. La disponibilidad de los productos puede cambiar; en caso de que un producto pedido no esté disponible, se le notificará vía WhatsApp para ofrecerle una alternativa o proceder con la cancelación del pedido.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold text-stone-900 mb-4">4. Pago Contraentrega</h2>
               <p>
-                Para garantizar la seguridad y transparencia en la transacción, AZENZA utiliza exclusivamente el modelo de <strong>Pago Contraentrega</strong>. Esto implica que el cliente debe entregar el valor exacto del pedido en efectivo al personal de la transportadora al momento de recibir el paquete. El no pago al momento de la entrega resultará en la devolución del producto a nuestras instalaciones.
+                Para garantizar la seguridad y transparencia en la transacción, AZENZA utiliza el modelo de <strong>Pago Contraentrega</strong> en {country.name}. Esto implica que el cliente debe entregar el valor exacto del pedido en efectivo ({country.currency}) al personal de la transportadora o mensajería autorizada al momento de recibir el paquete en su domicilio. El no pago al momento de la entrega resultará en la devolución del producto a nuestras instalaciones.
               </p>
             </section>
 

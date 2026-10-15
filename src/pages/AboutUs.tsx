@@ -1,18 +1,19 @@
-import React from 'react';
-import { ShieldCheck, Heart, Truck, Award, ArrowLeft } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useNavigate } from 'react-router-dom';
-import LegalFooter from '../components/LegalFooter';
-import SEOManager from '../components/SEOManager';
+import React from "react";
+import { ShieldCheck, Heart, Truck, Award, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import LegalFooter from "../components/LegalFooter";
+import SEOManager from "../components/SEOManager";
+import { useCountry } from "../CountryContext";
 
 export default function AboutUs() {
   const navigate = useNavigate();
+  const { country } = useCountry();
 
   return (
     <div className="bg-white min-h-screen py-20">
       <SEOManager 
-        title="Quiénes Somos"
-        description="Conoce la historia de AZENZA, nuestra misión y compromiso con la salud natural en Colombia."
+        title={`Quiénes Somos | AZENZA en ${country.name}`}
+        description={`Conoce la historia de AZENZA, nuestra misión y compromiso con la salud natural en ${country.name} y Latinoamérica.`}
         canonicalUrl="/quienes-somos"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,13 +33,13 @@ export default function AboutUs() {
             <h2 className="text-3xl font-display font-bold text-stone-900 mb-6">Nuestra Historia</h2>
             <div className="space-y-4 text-stone-600 leading-relaxed text-lg mb-12">
               <p>
-                AZENZA nació de la convicción de que la naturaleza ofrece las mejores soluciones para nuestra salud. Lo que comenzó como un pequeño proyecto familiar se ha convertido en una marca de confianza para miles de colombianos que buscan una alternativa natural y efectiva.
+                AZENZA nació de la convicción de que la naturaleza ofrece las mejores soluciones para nuestra salud y bienestar. Lo que comenzó como un proyecto familiar enfocado en productos botánicos se ha convertido en una marca de confianza para miles de clientes que buscan una alternativa natural, segura y efectiva.
               </p>
               <p>
-                Nos especializamos en la selección y distribución de suplementos naturales de la más alta calidad, asegurándonos de que cada producto que llega a tu hogar cumpla con los estándares más exigentes y cuente con los registros sanitarios INVIMA necesarios.
+                Nos especializamos en la selección y distribución de suplementos naturales de la más alta calidad, asegurándonos de que cada fórmula que llega a tu hogar cumpla con los estándares regulatorios más exigentes, registros sanitarios oficiales y trazabilidad garantizada.
               </p>
               <p className="font-bold text-stone-900">
-                Gestionamos los despachos desde Barranquilla a cualquier parte de Colombia bajo la modalidad exclusiva de Pago Contraentrega.
+                Gestionamos nuestros despachos y logística a nivel nacional en {country.name} bajo la modalidad exclusiva y confiable de Pago Contraentrega.
               </p>
             </div>
 
@@ -47,7 +48,7 @@ export default function AboutUs() {
               <h3 className="text-xl font-bold text-stone-900">Información Corporativa y de Contacto</h3>
               <div className="grid sm:grid-cols-2 gap-4 text-stone-700 text-sm">
                 <div>
-                  <p className="font-bold text-stone-900 mb-1">Dirección Administrativa:</p>
+                  <p className="font-bold text-stone-900 mb-1">Dirección Administrativa (Casa Matriz):</p>
                   <p>Calle 3a #23 - 40<br />Puerto Colombia, Atlántico, Colombia</p>
                 </div>
                 <div>
@@ -56,11 +57,11 @@ export default function AboutUs() {
                 </div>
                 <div>
                   <p className="font-bold text-stone-900 mb-1">Método de Pago:</p>
-                  <p>Pago Contraentrega (Pago al recibir y verificar)</p>
+                  <p>Pago Contraentrega en efectivo ({country.currency})</p>
                 </div>
                 <div>
                   <p className="font-bold text-stone-900 mb-1">Cobertura:</p>
-                  <p>Envíos a todo el territorio nacional colombiano</p>
+                  <p>Envíos a todo el territorio nacional en {country.name}</p>
                 </div>
               </div>
             </div>
@@ -78,17 +79,17 @@ export default function AboutUs() {
             {
               icon: ShieldCheck,
               title: "Calidad Garantizada",
-              desc: "Todos nuestros productos cuentan con registro INVIMA y certificaciones de calidad."
+              desc: "Todos nuestros productos cuentan con registros sanitarios oficiales y certificaciones de pureza."
             },
             {
               icon: Truck,
               title: "Compromiso de Entrega",
-              desc: "Llegamos a todo el país con rapidez y seguridad en cada pedido."
+              desc: `Llegamos a cada rincón de ${country.name} con rapidez, discreción y seguridad.`
             },
             {
               icon: Award,
               title: "Confianza",
-              desc: "Miles de clientes satisfechos respaldan nuestra trayectoria y servicio."
+              desc: "Miles de clientes satisfechos en la región respaldan nuestra trayectoria y servicio."
             }
           ].map((value, idx) => (
             <div key={idx} className="bg-stone-50 p-8 rounded-[2rem] border border-stone-100 hover:shadow-xl transition-shadow">
@@ -106,13 +107,13 @@ export default function AboutUs() {
           <div className="bg-stone-50 p-12 rounded-[3rem] shadow-sm border border-stone-100">
             <h3 className="text-2xl font-display font-bold text-stone-900 mb-6">Nuestra Misión</h3>
             <p className="text-stone-600 text-lg leading-relaxed">
-              Proveer soluciones naturales de salud que mejoren la calidad de vida de las familias colombianas, fomentando hábitos saludables y ofreciendo productos de alta eficacia y seguridad.
+              Proveer soluciones naturales de salud que eleven la calidad de vida y bienestar de cada familia, fomentando hábitos de vida saludables y ofreciendo formulaciones botánicas de máxima eficacia y seguridad.
             </p>
           </div>
           <div className="bg-stone-50 p-12 rounded-[3rem] shadow-sm border border-stone-100">
             <h3 className="text-2xl font-display font-bold text-stone-900 mb-6">Nuestra Visión</h3>
             <p className="text-stone-600 text-lg leading-relaxed">
-              Ser la marca líder en bienestar natural en Colombia, reconocida por nuestra integridad, la calidad superior de nuestros productos y nuestro compromiso inquebrantable con la salud de nuestros clientes.
+              Consolidarnos como la marca referente en bienestar natural en {country.name} y Latinoamérica, reconocida por la excelencia, la integridad en cada despacho y un compromiso constante con la salud de nuestros clientes.
             </p>
           </div>
         </div>
