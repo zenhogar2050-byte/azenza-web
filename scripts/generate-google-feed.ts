@@ -106,6 +106,14 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     return Array.from(images);
   };
 
+  
+  const getComboOriginalPrice = (combo: any) => {
+    return combo.products.reduce((sum: number, pId: string) => {
+      const prod = PRODUCTS.find(p => p.id === pId);
+      return sum + (prod ? prod.basePrice : 0);
+    }, 0);
+  };
+
   const getComboAdditionalImages = (combo: typeof COMBO_OF_THE_MONTH | typeof PROMOTIONS[0]) => {
     const images = new Set<string>();
     const promoNum = combo.id.replace('promo-', '');
@@ -135,7 +143,11 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
   // 1. Products for country
   for (const p of products) {
     const title = GOOGLE_TITLES_BY_PRODUCT_ID[p.id] || p.seoTitle || p.name;
-    const description = sanitizeForGoogleAds(p.googleDescription || p.description);
+    let description = sanitizeForGoogleAds(p.googleDescription || p.description);
+    if (p.components) {
+      description += " Ingredientes: " + p.components;
+    }
+    description = description.substring(0, 4990);
     const primaryImg = p.image.startsWith('http') ? p.image : `${baseUrl}${p.image}`;
     const category = p.googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
     const itemId = p.masterId || p.id;
@@ -175,7 +187,7 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     const description = sanitizeForGoogleAds(combo.description);
     const primaryImg = combo.image.startsWith('http') ? combo.image : `${baseUrl}${combo.image}`;
     const category = (combo as any).googleCategory || 'Health & Beauty > Health Care > Fitness & Nutrition';
-    const itemId = `COMBO-${combo.id.toUpperCase()}`;
+    const itemId = countryCode === 'CO' ? `COMBO-${combo.id.toUpperCase()}` : `COMBO-${countryCode}-${combo.id.toUpperCase()}`;
     const price = countryCode === 'CO' ? combo.price : Math.round(combo.price * multiplier);
 
     xml += `  <item>\n`;

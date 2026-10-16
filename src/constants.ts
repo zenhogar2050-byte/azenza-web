@@ -451,7 +451,7 @@ A mediano y largo plazo, sus principios activos favorecen la neurogénesis y el 
       "Rico sabor a vainilla sin azúcar añadida, suave con el estómago"
     ],
     image: '/assets/products/booster-lion.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '350g',
     presentation: 'Polvo',
     invima: 'IRSA-0021928-2022',
@@ -495,10 +495,10 @@ A mediano y largo plazo, sus principios activos favorecen la neurogénesis y el 
       { q: '¿En cuánto tiempo se sienten los efectos cognitivos?', a: 'La asimilación de sus vitaminas y el aporte energético se perciben de manera inmediata, mientras que la óptima claridad mental progresa con el uso diario continuo.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Diana Marcela', text: 'Excelente para estudiar, me concentro por horas sin sentir cansancio ni dolor de cabeza.', rating: 5 },
@@ -615,7 +615,7 @@ A mediano y largo plazo, esta matriz oceánica estimula la producción de líqui
       "Fórmula con magnesio marino que se disuelve rápido con delicioso sabor"
     ],
     image: '/assets/products/C-lagen.webp',
-    basePrice: 93500,
+    basePrice: 89900,
     size: '500g',
     presentation: 'Polvo',
     invima: 'RSA-0032379-2024',
@@ -657,10 +657,10 @@ A mediano y largo plazo, esta matriz oceánica estimula la producción de líqui
       { q: '¿Cuánto tiempo debo tomarlo?', a: 'Para resultados óptimos en vitalidad y belleza, se recomienda un consumo constante de al menos 3 meses.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 93500 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 140250 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 187000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 280500, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 89900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 134850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 179800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 269700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Lucía Méndez', text: 'Mi piel se siente mucho más firme y las líneas de expresión han disminuido. ¡Me encanta!', rating: 5 },
@@ -695,7 +695,7 @@ A mediano y largo plazo, este aporte sostenido desactiva la excitabilidad neurom
       "Delicioso sabor a durazno para tomar en agua fría y relajarte antes de dormir"
     ],
     image: '/assets/products/Citramix.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '350g',
     invima: 'SD2023-0004812',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
@@ -736,10 +736,10 @@ A mediano y largo plazo, este aporte sostenido desactiva la excitabilidad neurom
       { q: '¿Es apto para niños?', a: 'Es una excelente fuente de vitaminas para toda la familia, siempre bajo supervisión y calidad certificada.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Camila V.', text: 'Me encanta el sabor cítrico y me da mucha energía para empezar el día.', rating: 5 },
@@ -773,7 +773,7 @@ A mediano y largo plazo, su aporte diario promueve la síntesis de queratina en 
       "Sabor cremoso tipo capuchino con leche de coco y libre de azúcar añadida"
     ],
     image: '/assets/products/coffe-colageno.webp',
-    basePrice: 75900,
+    basePrice: 75000,
     size: '400g',
     invima: 'RSA-0010130-2020',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
@@ -816,10 +816,10 @@ A mediano y largo plazo, su aporte diario promueve la síntesis de queratina en 
       { q: '¿Ayuda a fortalecer el cabello?', a: 'El colágeno es fundamental para la salud capilar, por lo que notarás mejoras en fuerza y brillo.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 75900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 113850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 151800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 227700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 75000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 112500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 150000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 225000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Juan Pablo', text: 'Es el mejor ritual para empezar el día. Sabe a café premium y cuida mi piel.', rating: 5 },
@@ -853,7 +853,7 @@ A mediano y largo plazo, su consumo continuado acelera la recuperación de fibra
       "Fácil de mezclar con agua o jugo, no cae pesada y no daña el estómago"
     ],
     image: '/assets/products/creatina100.webp',
-    basePrice: 105000,
+    basePrice: 99000,
     size: '200g',
     invima: 'SD2014-0003204',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
@@ -889,10 +889,10 @@ A mediano y largo plazo, su consumo continuado acelera la recuperación de fibra
       { q: '¿Es segura para los riñones?', a: 'En personas que buscan bienestar y bajo las dosis recomendadas, es un suplemento con calidad certificada y muy seguro.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 105000 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 157500 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 210000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 315000, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 99000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 148500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 198000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 297000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Mateo Holguín', text: 'He aumentado mi fuerza en el gimnasio notablemente. Muy buena pureza.', rating: 5 },
@@ -926,7 +926,7 @@ A mediano y largo plazo, esta sinergia botánica modula la respuesta inflamatori
       "Jarabe botánico natural de rápida absorción con Registro INVIMA oficial"
     ],
     image: '/assets/products/Iprossmen.webp',
-    basePrice: 79900,
+    basePrice: 75900,
     size: '500ml',
     invima: 'SD2015-0003504',
     googleCategory: 'Health & Beauty > Personal Care',
@@ -1007,7 +1007,7 @@ A mediano y largo plazo, esta sinergia de micronutrientes fortalece la primera l
       "Completa las vitaminas y minerales que faltan en las comidas del día"
     ],
     image: '/assets/products/Kds10.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '350g',
     invima: 'RSA-0025607-2023',
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
@@ -1052,10 +1052,10 @@ A mediano y largo plazo, esta sinergia de micronutrientes fortalece la primera l
       { q: '¿Ayuda con el apetito?', a: 'Al corregir deficiencias vitamínicas, puede ayudar a normalizar el apetito y mejorar la vitalidad.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Familia Restrepo', text: 'Lo tomamos todos en casa y nos sentimos con mucha más energía y salud.', rating: 5 },
@@ -1318,7 +1318,7 @@ A mediano y largo plazo, esta matriz vegetal y proteica estimula la oxigenación
       "Fórmula concentrada con maca y superalimentos nutritivos de fácil asimilación"
     ],
     image: '/assets/products/Megamac.webp',
-    basePrice: 89900,
+    basePrice: 69900,
     size: '700g',
     presentation: 'Polvo',
     invima: 'RSA-001291-2016',
@@ -1360,10 +1360,10 @@ A mediano y largo plazo, esta matriz vegetal y proteica estimula la oxigenación
       { q: '¿Contiene azúcar?', a: 'Nuestra fórmula prioriza el bienestar integral, evitando excesos de azúcares para una energía más limpia.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 89900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 134850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 179800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 269700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Ricardo M.', text: 'Me da la energía que necesito para mis jornadas largas de trabajo. Muy efectivo.', rating: 5 },
@@ -1397,7 +1397,7 @@ A mediano y largo plazo, esta sinergia modula la expresión celular vinculada a 
       "Protege el corazón y frena el envejecimiento prematuro de todo tu organismo"
     ],
     image: '/assets/products/Resveratrol.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '350g',
     presentation: 'Polvo',
     invima: 'SD2014-0003215',
@@ -1435,10 +1435,10 @@ A mediano y largo plazo, esta sinergia modula la expresión celular vinculada a 
       { q: '¿Lo pueden tomar jóvenes?', a: 'Es excelente como preventivo para mantener el equilibrio natural y la vitalidad desde temprana edad.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Elena P.', text: 'Siento mi piel mucho más joven y con más vida. Es un antioxidante increíble.', rating: 5 },
@@ -1936,7 +1936,7 @@ A largo plazo, su acción nutritiva estimula la regeneración celular y fortalec
       'Fórmula botánica segura para el cuidado diario de la piel'
     ],
     image: '/assets/products/akha.webp',
-    basePrice: 89900,
+    basePrice: 67000,
     size: '30ml',
     presentation: 'Crema',
     invima: 'NSOC19282-23CO',
@@ -1978,10 +1978,10 @@ A largo plazo, su acción nutritiva estimula la regeneración celular y fortalec
       { q: '¿En cuánto tiempo se nota el efecto reafirmante?', a: 'Muchos usuarios perciben una mejora en la hidratación y suavidad inmediata, con resultados de firmeza notables tras 4 semanas de uso constante.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 89900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 134850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 179800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 269700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 67000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 100500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 134000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 201000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Gabriel M.', text: 'He sentido un aumento significativo en mi energía diaria. Muy buen producto natural.', rating: 5 },
@@ -2095,7 +2095,7 @@ Su efecto sostenido favorece la resistencia física prolongada y la agudeza ment
       'Cuidado integral del metabolismo energético con Complejo B'
     ],
     image: '/assets/products/haydar.webp',
-    basePrice: 73500,
+    basePrice: 59000,
     size: 'bebida 240ml',
     presentation: 'Bebida',
     invima: 'RSA-3599-2025',
@@ -2137,10 +2137,10 @@ Su efecto sostenido favorece la resistencia física prolongada y la agudeza ment
       { q: '¿Contiene taurina o cafeína natural?', a: 'Sí, utiliza guaraná y taurina en niveles seguros para garantizar una vitalidad y energía superior con total confianza.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 73500 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 110250 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 147000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 220500, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 59000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 88500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 118000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 177000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Mauricio L.', text: 'He notado una gran diferencia en mi rendimiento diario. Muy efectivo y natural.', rating: 5 },
@@ -2174,7 +2174,7 @@ A mediano y largo plazo, sus activos humectantes preservan la elasticidad dérmi
       'Fórmula discreta de rápida absorción que no deja residuos ni manchas'
     ],
     image: '/assets/products/Instantvirgin.webp',
-    basePrice: 79000,
+    basePrice: 89900,
     size: '30ml',
     presentation: 'Gel / Crema',
     invima: '2021DM-0024065',
@@ -2213,10 +2213,10 @@ A mediano y largo plazo, sus activos humectantes preservan la elasticidad dérmi
       { q: '¿Se puede usar todos los días?', a: 'Su fórmula es gentil, pero está diseñado principalmente para momentos específicos de intimidad donde se desee mayor tono.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79000 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 118500 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 158000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 237000, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 89900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 134850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 179800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 269700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Andrea G.', text: 'Me ha ayudado a recuperar mi confianza y bienestar íntimo. Muy efectivo.', rating: 5 },
@@ -2250,7 +2250,7 @@ Su uso sostenido mediante masaje activa la microcirculación superficial y nutre
       'Protección contra radicales libres gracias a su alto contenido de Vitamina E'
     ],
     image: '/assets/products/Mammoth.webp',
-    basePrice: 59900,
+    basePrice: 69900,
     size: '30ml',
     presentation: 'Crema',
     invima: 'NSOC19282-23CO',
@@ -2288,10 +2288,10 @@ Su uso sostenido mediante masaje activa la microcirculación superficial y nutre
       { q: '¿Es segura para pieles muy secas?', a: 'Absolutamente, su alto contenido de Vitamina E y aceites nutritivos reconforta la piel seca brindando elasticidad inmediata.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 59900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 89850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 119800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 179700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Ricardo H.', text: 'Siento una fuerza y potencia que no tenía antes. Muy efectivo para mis entrenamientos.', rating: 5 },
@@ -2403,7 +2403,7 @@ A nivel fisiológico, favorece una resistencia orgánica prolongada y un flujo s
       'Energía sostenida ideal para el estudio, el trabajo o el deporte'
     ],
     image: '/assets/products/Zafir.webp',
-    basePrice: 73500,
+    basePrice: 59000,
     size: '500ml',
     presentation: 'Líquido',
     invima: 'RSA-3599-2025',
@@ -2445,10 +2445,10 @@ A nivel fisiológico, favorece una resistencia orgánica prolongada y un flujo s
       { q: '¿En cuánto tiempo se siente el efecto de Zafir?', a: 'Su absorción líquida permite que sientas el impulso de los extractos de maca y borojó rápidamente, optimizando tu rendimiento.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 73500 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 110250 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 147000, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 220500, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 59000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 88500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 118000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 177000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Felipe T.', text: 'Me encanta el sabor y la energía que me da. Muy natural y efectivo.', rating: 5 },
@@ -2482,7 +2482,7 @@ A mediano y largo plazo, esta sinergia de hierbas aromáticas estimula la depura
       "Refrescante sabor a cereza sin azúcar, ideal para tomar frío durante el día"
     ],
     image: '/assets/products/guanda-mix.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '350g',
     presentation: 'Polvo',
     invima: 'IRSA-0245-2025',
@@ -2523,10 +2523,10 @@ A mediano y largo plazo, esta sinergia de hierbas aromáticas estimula la depura
       { q: '¿Cuál es la vida útil de Guanda Mix?', a: 'Bajo condiciones adecuadas de almacenamiento y manipulación controlada, conserva todas sus propiedades durante 24 meses.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Saray Lorena', text: 'Me ha ayudado muchísimo con la digestión pesada, me siento súper ligera y el sabor a cereza es riquísimo.', rating: 5 },
@@ -2560,7 +2560,7 @@ A mediano y largo plazo, esta sinergia mitocondrial estimula las vías fisiológ
       "Mantiene tu organismo fuerte, activo y con defensas listas para el día a día"
     ],
     image: '/assets/products/nad-1.webp',
-    basePrice: 79900,
+    basePrice: 69900,
     size: '350g',
     presentation: 'Polvo',
     invima:'2018DM-0018869',
@@ -2602,10 +2602,10 @@ A mediano y largo plazo, esta sinergia mitocondrial estimula las vías fisiológ
       { q: '¿Ayuda con la memoria y la claridad mental?', a: 'Sí, al optimizar la energía celular, favorece el rendimiento cognitivo y el enfoque diario con total seguridad.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 79900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 119850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 159800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 239700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Roberto K.', text: 'Siento que mis células se han renovado. Tengo mucha más claridad mental.', rating: 5 },
@@ -3750,7 +3750,7 @@ A mediano plazo, este protocolo botánico desinflama el abdomen visiblemente, al
 ✔️ Colon Limpio y Desinflamado: Barre residuos retenidos por semanas, eliminando la hinchazón y la pesadez del vientre.
 ✔️ Digestión Ligera y Sin Gases: Calma cólicos, flatulencias dolorosas y la acidez o boca amarga tras comer.`,
     image: '/assets/combos/promo-3.webp',
-    price: 116850,
+    price: 114500,
     originalPrice: 155000,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
@@ -3814,7 +3814,7 @@ A mediano y largo plazo, esta potente alianza acelera el gasto calórico de mane
 ✔️ Metabolismo y Quema de Grasa: Ayuda a movilizar y oxidar grasa acumulada en zonas difíciles como abdomen y cintura.
 ✔️ Limpieza Hepática Profunda: Descongestiona el hígado graso y drena líquidos retenidos para verte y sentirte liviano.`,
     image: '/assets/combos/promo-4.webp',
-    price: 119850,
+    price: 114500,
     originalPrice: 159800,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
@@ -3942,7 +3942,7 @@ A mediano y largo plazo, este tratamiento restaura la movilidad y lubricación a
 ✔️ Regeneración Articular: El colágeno hidrolizado y magnesio nutren y fortalecen cartílagos frente al desgaste diario.
 ✔️ Flexibilidad y Cero Rigidez: Relaja músculos tensos y elimina calambres para que te muevas con soltura y sin quejas.`,
     image: '/assets/combos/promo-6.webp',
-    price: 123675,
+    price: 114500,
     originalPrice: 164900,
     googleCategory: 'Health & Beauty > Health Care > Fitness & Nutrition',
     condition: 'new',
@@ -4438,6 +4438,17 @@ export function getPhonePrefixForCountry(country: CountryCode): string {
 let cachedCountryProducts: Record<string, Product[]> = {};
 let cachedCountryCategories: Record<string, Category[]> = {};
 
+
+const ECUADOR_MASTER_IDS: Record<string, string> = {
+  "locion": "260365",
+  "rtafull": "260364",
+  "mamooth": "260363",
+  "coliplus": "260362",
+  "instant-virgin": "260361",
+  "derman": "260360",
+  "hemocream": "260359"
+};
+
 const countryAllowedProducts: Partial<Record<CountryCode, string[]>> = {
   VE: ['coliplus', 'derman', 'instant-virgin', 'rtafull'],
   DO: ['coliplus', 'derman', 'hemocream', 'instant-virgin', 'mamooth'],
@@ -4462,14 +4473,11 @@ export function getProductsForCountry(country: CountryCode = 'CO'): Product[] {
 
     cachedCountryProducts[country] = PRODUCTS.map(p => {
       const pricing = countryPricing[p.id];
-      if (pricing) {
-        return {
-          ...p,
-          basePrice: pricing.basePrice,
-          promos: pricing.promos
-        };
-      }
-      return {
+      let product = pricing ? {
+        ...p,
+        basePrice: pricing.basePrice,
+        promos: pricing.promos
+      } : {
         ...p,
         basePrice: Math.round(p.basePrice * multiplier),
         promos: p.promos.map(promo => ({
@@ -4477,6 +4485,12 @@ export function getProductsForCountry(country: CountryCode = 'CO'): Product[] {
           price: Math.round(promo.price * multiplier)
         }))
       };
+      
+      if (country === "EC" && ECUADOR_MASTER_IDS[p.id]) {
+        product.masterId = ECUADOR_MASTER_IDS[p.id];
+      }
+      
+      return product;
     });
   }
 
