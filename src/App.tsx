@@ -7,6 +7,7 @@ import TopBanner from './components/TopBanner';
 import Navbar from './components/Navbar';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import CountryModal from './components/CountryModal';
+import GeoCountryNotice from './components/GeoCountryNotice';
 import ErrorBoundary from './components/ErrorBoundary';
 
 import Home from './pages/Home';
@@ -111,6 +112,7 @@ export function App({ initialPath = '/' }: { initialPath?: string } = {}) {
             </MemoryRouter>
           )}
           <CountryModal />
+          <GeoCountryNotice />
         </CountryProvider>
       </CartProvider>
     </HelmetProvider>
