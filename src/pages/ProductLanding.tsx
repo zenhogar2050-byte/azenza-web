@@ -1,3 +1,4 @@
+import { useCountry } from "../CountryContext";
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { useDynamicMeta } from "../hooks/useDynamicMeta";
 import { motion, AnimatePresence } from 'motion/react';
@@ -23,7 +24,8 @@ import NotFound from './NotFound';
 
 export default function ProductLanding() {
   const { id } = useParams();
-  const navigate = useNavigate();
+    const { country } = useCountry();
+const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { addToCart, addComboToCart, getProducts } = useCart();
   const [selectedPromo, setSelectedPromo] = useState<string | null>(null);
@@ -194,7 +196,9 @@ export default function ProductLanding() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEOManager 
+      <SEOManager
+        currency={country.currency}
+        countryCode={country.id} 
         title={finalSeoTitle}
         description={finalSeoDescription}
         canonicalUrl={`/producto/${product.id}`}

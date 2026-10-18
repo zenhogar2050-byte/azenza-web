@@ -52,6 +52,13 @@ export function CountryProvider({ children }: { children: React.ReactNode }) {
 
   const [countryId, setCountryIdState] = useState<string>(() => {
     if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryCountry = urlParams.get("country");
+      if (queryCountry && COUNTRIES.some(c => c.id === queryCountry.toUpperCase())) {
+        const found = queryCountry.toUpperCase();
+        localStorage.setItem("azenza_country", found);
+        return found;
+      }
       return localStorage.getItem("azenza_country") || currentCountryCode;
     }
     return currentCountryCode;

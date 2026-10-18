@@ -1,3 +1,4 @@
+import { useCountry } from "../CountryContext";
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { PROMOTIONS, COMBO_OF_THE_MONTH, GENERAL_FAQS, PRODUCTS } from '../constants';
@@ -19,7 +20,8 @@ import NotFound from './NotFound';
 
 export default function ComboLanding() {
   const { id } = useParams();
-  const navigate = useNavigate();
+    const { country } = useCountry();
+const navigate = useNavigate();
   const { addComboToCart, isEC, getProducts, isCO } = useCart();
   const buyButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -159,7 +161,9 @@ export default function ComboLanding() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEOManager 
+      <SEOManager
+        currency={country.currency}
+        countryCode={country.id} 
         title={combo.seoTitle || cleanPromoName(combo.name)}
         description={combo.seoDescription || `${combo.description} Aprovecha este combo exclusivo de productos naturales originales.`}
         canonicalUrl={`/combo/${combo.id}`}

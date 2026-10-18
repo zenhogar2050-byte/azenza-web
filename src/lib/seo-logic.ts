@@ -7,9 +7,11 @@ export const generateSchemaGraph = (params: {
     canonicalUrl: string, 
     ogImage?: string, 
     productData?: any,
-    faqs?: { q: string, a: string }[]
+    faqs?: { q: string, a: string }[],
+    currency?: string,
+    countryCode?: string
 }) => {
-    const { type, title, description, canonicalUrl, ogImage, productData, faqs } = params;
+    const { type, title, description, canonicalUrl, ogImage, productData, faqs, currency = 'COP', countryCode = 'CO' } = params;
     
     const path = canonicalUrl.replace(BASE_URL, "").replace(/\/$/, "");
     const fullUrl = `${BASE_URL}${path.startsWith('/') ? path : `/${path}`}`;
@@ -195,7 +197,7 @@ export const generateSchemaGraph = (params: {
             },
             "offers": {
                 "@type": "Offer",
-                "priceCurrency": "COP",
+                "priceCurrency": currency,
                 "itemCondition": getSchemaCondition(productData.condition),
                 "availability": "https://schema.org/InStock",
                 "validFrom": `${currentYear}-01-01`,
@@ -204,7 +206,7 @@ export const generateSchemaGraph = (params: {
                 "price": lowPriceClean,
                 "hasMerchantReturnPolicy": {
                     "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "CO",
+                    "applicableCountry": countryCode,
                     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
                     "merchantReturnDays": "3",
                     "returnMethod": "https://schema.org/ReturnByMail",
@@ -213,8 +215,8 @@ export const generateSchemaGraph = (params: {
                 },
                 "shippingDetails": {
                     "@type": "OfferShippingDetails",
-                    "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "COP" },
-                    "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "CO" },
+                    "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": currency },
+                    "shippingDestination": { "@type": "DefinedRegion", "addressCountry": countryCode },
                     "deliveryTime": {
                         "@type": "ShippingDeliveryTime",
                         "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },

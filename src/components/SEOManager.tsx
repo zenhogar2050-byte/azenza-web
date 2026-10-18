@@ -13,6 +13,8 @@ export interface SEOManagerProps {
   categoryProducts?: any[];
   faqs?: Array<{ q: string; a: string }>;
   keywords?: string[];
+  currency?: string;
+  countryCode?: string;
 }
 
 const COUNTRY_DOMAINS: Record<string, string> = {
@@ -36,6 +38,8 @@ const SEOManager: React.FC<SEOManagerProps> = ({
   productData = null,
   faqs = [],
   keywords = [],
+  currency = 'COP',
+  countryCode = 'CO',
 }) => {
   const cleanPath = canonicalUrl.startsWith("/") ? canonicalUrl : `/${canonicalUrl}`;
   const normalizedPath = cleanPath.replace(/\/+$/, "");
@@ -69,7 +73,9 @@ const SEOManager: React.FC<SEOManagerProps> = ({
     canonicalUrl: fullUrl,
     ogImage: finalImage,
     productData,
-    faqs
+    faqs,
+    currency,
+    countryCode
   });
 
   return (

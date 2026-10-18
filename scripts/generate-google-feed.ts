@@ -156,7 +156,8 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:id><![CDATA[${itemId}]]></g:id>\n`;
     xml += `    <g:title><![CDATA[${title}]]></g:title>\n`;
     xml += `    <g:description><![CDATA[${description}]]></g:description>\n`;
-    xml += `    <g:link>${baseUrl}/producto/${p.id}</g:link>\n`;
+    const pLink = countryCode === 'CO' ? `${baseUrl}/producto/${p.id}` : `${baseUrl}/producto/${p.id}?country=${countryCode}`;
+    xml += `    <g:link>${pLink}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
     const additionalImages = getProductAdditionalImages(p);
@@ -194,7 +195,8 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:id><![CDATA[${itemId}]]></g:id>\n`;
     xml += `    <g:title><![CDATA[${title}]]></g:title>\n`;
     xml += `    <g:description><![CDATA[${description}]]></g:description>\n`;
-    xml += `    <g:link>${baseUrl}/combo/${combo.id}</g:link>\n`;
+    const cLink = countryCode === 'CO' ? `${baseUrl}/combo/${combo.id}` : `${baseUrl}/combo/${combo.id}?country=${countryCode}`;
+    xml += `    <g:link>${cLink}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
     const additionalImages = getComboAdditionalImages(combo);
@@ -231,7 +233,8 @@ function generateGoogleFeedForCountry(countryCode: CountryCode) {
     xml += `    <g:id><![CDATA[${itemId}]]></g:id>\n`;
     xml += `    <g:title><![CDATA[${title}]]></g:title>\n`;
     xml += `    <g:description><![CDATA[${description}]]></g:description>\n`;
-    xml += `    <g:link>${baseUrl}/combo/${promo.id}</g:link>\n`;
+    const prLink = countryCode === 'CO' ? `${baseUrl}/combo/${promo.id}` : `${baseUrl}/combo/${promo.id}?country=${countryCode}`;
+    xml += `    <g:link>${prLink}</g:link>\n`;
     xml += `    <g:image_link>${primaryImg}</g:image_link>\n`;
 
     const additionalImages = getComboAdditionalImages(promo);
