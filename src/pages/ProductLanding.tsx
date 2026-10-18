@@ -194,8 +194,9 @@ const navigate = useNavigate();
   const finalSeoTitle = product.seoTitle || product.name;
   const finalSeoDescription = product.seoDescription || product.description.split('.')[0] + '.';
 
-  return (
-    <div className="min-h-screen bg-white">
+  const price = Number(product.promos ? product.promos[0].price : product.basePrice);
+  return (<div className="min-h-screen bg-white">
+      const price = Number(product.promos ? product.promos[0].price : product.basePrice);
       <SEOManager
         currency={country.currency}
         countryCode={country.id} 
@@ -214,6 +215,7 @@ const navigate = useNavigate();
           googleCategory: product.googleCategory,
           condition: product.condition,
           lowPrice: product.promos[0].price,
+          basePrice: price,
           highPrice: product.promos[product.promos.length - 1].price,
           offerCount: product.promos.length,
           faqs: product.seoFaqs,
@@ -685,8 +687,8 @@ const navigate = useNavigate();
                // Fake recent date based on index
                const fakeDaysAgo = (i * 3) + 2; 
 
-               return (
-                <div key={i} className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-100 relative">
+               const price = Number(product.promos ? product.promos[0].price : product.basePrice);
+  return (<div key={i} className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-100 relative">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-stone-100 border-2 border-emerald-100 flex-shrink-0">

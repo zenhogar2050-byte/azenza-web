@@ -116,6 +116,7 @@ const SEOManager: React.FC<SEOManagerProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={finalImage || defaultImage} />
+      <meta name="product:price:currency" content={finalCurrency} />
 
       <script type="application/ld+json" data-rh="true" id="schema-main">
         {JSON.stringify(schemaData)}

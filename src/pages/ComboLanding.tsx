@@ -159,8 +159,9 @@ const navigate = useNavigate();
     navigate('/checkout');
   };
 
-  return (
-    <div className="min-h-screen bg-white">
+  const price = Number(combo.price);
+  return (<div className="min-h-screen bg-white">
+      const price = Number(product.promos ? product.promos[0].price : product.basePrice);
       <SEOManager
         currency={country.currency}
         countryCode={country.id} 
@@ -302,8 +303,8 @@ const navigate = useNavigate();
                   {combo.products.map((pid, idx) => {
                     const prod = PRODUCTS.find(p => p.id === pid);
                     if (!prod) return null;
-                    return (
-                      <div key={pid} className={cn(
+                    const price = Number(combo.price);
+  return (<div key={pid} className={cn(
                         "flex flex-col gap-1.5",
                         idx % 2 === 0 ? "items-start text-left" : "items-start sm:items-end text-left sm:text-right"
                       )}>
@@ -612,8 +613,8 @@ const navigate = useNavigate();
                // Fake recent date based on index
                const fakeDaysAgo = (i * 3) + 2; 
 
-               return (
-                <div key={i} className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-100 relative">
+               const price = Number(combo.price);
+  return (<div key={i} className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-stone-100 relative">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full overflow-hidden bg-stone-100 border-2 border-emerald-100 flex-shrink-0">
