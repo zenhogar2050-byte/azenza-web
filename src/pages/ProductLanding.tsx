@@ -201,7 +201,7 @@ const navigate = useNavigate();
         countryCode={country.id} 
         title={finalSeoTitle}
         description={finalSeoDescription}
-        canonicalUrl={`/producto/${product.id}`}
+        canonicalUrl={country.id === 'CO' ? `/producto/${product.id}` : `/producto/${product.id}?country=${country.id}`}
         ogImage={product.image}
         type="product"
         faqs={[...(product.seoFaqs || []), ...GENERAL_FAQS]}

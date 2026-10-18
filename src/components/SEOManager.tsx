@@ -45,7 +45,7 @@ const SEOManager: React.FC<SEOManagerProps> = ({
   const normalizedPath = cleanPath.replace(/\/+$/, "");
   
   const getFullUrl = (domain: string) => `https://${domain}${normalizedPath === "" ? "/" : normalizedPath}`;
-  const fullUrl = getFullUrl(COUNTRY_DOMAINS["CO"]);
+  const fullUrl = getFullUrl(COUNTRY_DOMAINS[countryCode] || COUNTRY_DOMAINS["CO"]);
   const defaultImage = `https://${COUNTRY_DOMAINS["CO"]}/assets/logo/og-image.png`;
   const finalImage = ogImage?.startsWith("http") ? ogImage : `https://${COUNTRY_DOMAINS["CO"]}${ogImage || ""}`;
 
@@ -66,6 +66,19 @@ const SEOManager: React.FC<SEOManagerProps> = ({
   
   const metaKeywords = Array.from(new Set(parsedKeywords)).join(", ");
 
+  let finalCurrency = currency;
+  let finalCountry = countryCode;
+  if (typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const qCountry = urlParams.get('country');
+    if (qCountry) {
+        const found = COUNTRIES.find(c => c.id === qCountry.toUpperCase());
+        if (found) {
+            finalCurrency = found.currency;
+            finalCountry = found.id;
+        }
+    }
+  }
   const schemaData = generateSchemaGraph({
     type,
     title,
@@ -74,8 +87,8 @@ const SEOManager: React.FC<SEOManagerProps> = ({
     ogImage: finalImage,
     productData,
     faqs,
-    currency,
-    countryCode
+    currency: finalCurrency,
+    countryCode: finalCountry
   });
 
   return (

@@ -166,7 +166,7 @@ const navigate = useNavigate();
         countryCode={country.id} 
         title={combo.seoTitle || cleanPromoName(combo.name)}
         description={combo.seoDescription || `${combo.description} Aprovecha este combo exclusivo de productos naturales originales.`}
-        canonicalUrl={`/combo/${combo.id}`}
+        canonicalUrl={country.id === 'CO' ? `/combo/${combo.id}` : `/combo/${combo.id}?country=${country.id}`}
         ogImage={combo.image}
         type="product"
         faqs={[...(combo.seoFaqs || []), ...GENERAL_FAQS]}

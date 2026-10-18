@@ -50,16 +50,16 @@ export function CountryProvider({ children }: { children: React.ReactNode }) {
   const cartContext = useCart();
   const currentCountryCode = cartContext?.country || "CO";
 
-  const [countryId, setCountryIdState] = useState<string>(() => {
-    if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+    const [countryId, setCountryIdState] = useState<string>(() => {
+    if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
       const queryCountry = urlParams.get("country");
       if (queryCountry && COUNTRIES.some(c => c.id === queryCountry.toUpperCase())) {
-        const found = queryCountry.toUpperCase();
-        localStorage.setItem("azenza_country", found);
-        return found;
+        return queryCountry.toUpperCase();
       }
-      return localStorage.getItem("azenza_country") || currentCountryCode;
+      if (typeof localStorage !== "undefined") {
+        return localStorage.getItem("azenza_country") || currentCountryCode;
+      }
     }
     return currentCountryCode;
   });
