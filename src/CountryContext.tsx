@@ -46,11 +46,21 @@ interface CountryContextType {
 
 const CountryContext = createContext<CountryContextType | undefined>(undefined);
 
-export function CountryProvider({ children }: { children: React.ReactNode }) {
+export function CountryProvider({ children, initialPath }: { children: React.ReactNode; initialPath?: string }) {
   const cartContext = useCart();
   const currentCountryCode = cartContext?.country || "CO";
 
-    const [countryId, setCountryIdState] = useState<string>(() => {
+  const [countryId, setCountryIdState] = useState<string>(() => {
+    // 1. Check URL path prefix first (e.g. /ec/ or /co/producto/mamooth)
+    const pathToInspect = initialPath || (typeof window !== "undefined" ? window.location.pathname : "");
+    if (pathToInspect) {
+      const segments = pathToInspect.replace(/^\/+/, "").split("/");
+      const firstSegment = segments[0]?.toUpperCase();
+      if (COUNTRIES.some(c => c.id === firstSegment)) {
+        return firstSegment;
+      }
+    }
+
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search);
       const queryCountry = urlParams.get("country");

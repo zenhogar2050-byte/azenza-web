@@ -106,7 +106,7 @@ function generateMetaFeedForCountry(countryCode: CountryCode) {
     const price = countryCode === 'CO' ? p.basePrice : Math.round(p.basePrice * multiplier);
     const productLink = countryCode === 'CO' 
       ? `${BASE_URL}/producto/${p.id}` 
-      : `${BASE_URL}/producto/${p.id}?country=${countryCode}`;
+      : `${BASE_URL}/${countryCode.toLowerCase()}/producto/${p.id}`;
 
     xml += `  <item>\n`;
     xml += `    <g:id><![CDATA[${p.id}]]></g:id>\n`; // Crucial: matches Meta Pixel content_ids

@@ -160,14 +160,14 @@ const navigate = useNavigate();
   };
 
   const price = Number(combo.price);
-  return (<div className="min-h-screen bg-white">
-      const price = Number(product.promos ? product.promos[0].price : product.basePrice);
+  return (
+    <div className="min-h-screen bg-white">
       <SEOManager
         currency={country.currency}
         countryCode={country.id} 
         title={combo.seoTitle || cleanPromoName(combo.name)}
         description={combo.seoDescription || `${combo.description} Aprovecha este combo exclusivo de productos naturales originales.`}
-        canonicalUrl={country.id === 'CO' ? `/combo/${combo.id}` : `/combo/${combo.id}?country=${country.id}`}
+        canonicalUrl={country.id === 'CO' ? `/combo/${combo.id}` : `/${country.id.toLowerCase()}/combo/${combo.id}`}
         ogImage={combo.image}
         type="product"
         faqs={[...(combo.seoFaqs || []), ...GENERAL_FAQS]}

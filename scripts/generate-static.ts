@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
-import { PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES } from '../src/constants';
+import { PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, getProductsForCountry, CountryCode } from '../src/constants';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -49,15 +49,36 @@ async function generateStatic() {
     }
     routesToRender.push('/categoria/combos');
 
-    // Add products
+    // Add base products and combos
     for (const product of PRODUCTS) {
       routesToRender.push(`/producto/${product.id}`);
     }
-
-    // Add combos
     routesToRender.push(`/combo/${COMBO_OF_THE_MONTH.id}`);
     for (const promo of PROMOTIONS) {
       routesToRender.push(`/combo/${promo.id}`);
+    }
+
+    // Add country-prefixed routes strictly for allowed products and offerings in each country
+    const targetCountries: CountryCode[] = ['CO', 'CL', 'CR', 'EC', 'GT', 'HN', 'PE', 'DO', 'VE'];
+    for (const countryCode of targetCountries) {
+      const c = countryCode.toLowerCase();
+      routesToRender.push(`/${c}`);
+      routesToRender.push(`/${c}/checkout`);
+      routesToRender.push(`/${c}/gracias`);
+
+      // Add only products allowed in this specific country
+      const countryProducts = getProductsForCountry(countryCode);
+      for (const product of countryProducts) {
+        routesToRender.push(`/${c}/producto/${product.id}`);
+      }
+
+      // Combos are exclusively configured and sold in Colombia (CO)
+      if (countryCode === 'CO') {
+        routesToRender.push(`/${c}/combo/${COMBO_OF_THE_MONTH.id}`);
+        for (const promo of PROMOTIONS) {
+          routesToRender.push(`/${c}/combo/${promo.id}`);
+        }
+      }
     }
 
     console.log(`Pre-rendering ${routesToRender.length} static routes for Cloudflare...`);
@@ -68,8 +89,11 @@ async function generateStatic() {
         const { html: appHtml } = serverModule.render(route);
         let customizedTemplate = template;
 
-        if (route.startsWith('/producto/')) {
-          const productId = route.replace('/producto/', '');
+        const isProductRoute = /^\/([a-z]{2}\/)?producto\//.test(route);
+        const isComboRoute = /^\/([a-z]{2}\/)?combo\//.test(route);
+
+        if (isProductRoute) {
+          const productId = route.replace(/^\/[a-z]{2}\/producto\//, '').replace(/^\/producto\//, '');
           const prod = PRODUCTS.find(p => p.id === productId);
           if (prod) {
             const title = prod.seoTitle || `${prod.name} | AZENZA`;
@@ -91,8 +115,8 @@ async function generateStatic() {
               .replace(/<meta data-rh="true" property="og:url" content=".*?" \/>/, `<meta data-rh="true" property="og:url" content="https://azenza.com.co${route}" />`)
               .replace(/<meta data-rh="true" property="og:image" content=".*?" \/>/, `<meta data-rh="true" property="og:image" content="${img}" />`);
           }
-        } else if (route.startsWith('/combo/')) {
-          const comboId = route.replace('/combo/', '');
+        } else if (isComboRoute) {
+          const comboId = route.replace(/^\/[a-z]{2}\/combo\//, '').replace(/^\/combo\//, '');
           const combo = comboId === COMBO_OF_THE_MONTH.id ? COMBO_OF_THE_MONTH : PROMOTIONS.find(p => p.id === comboId);
           if (combo) {
             const title = combo.seoTitle || `${combo.name} | AZENZA`;

@@ -195,14 +195,14 @@ const navigate = useNavigate();
   const finalSeoDescription = product.seoDescription || product.description.split('.')[0] + '.';
 
   const price = Number(product.promos ? product.promos[0].price : product.basePrice);
-  return (<div className="min-h-screen bg-white">
-      const price = Number(product.promos ? product.promos[0].price : product.basePrice);
+  return (
+    <div className="min-h-screen bg-white">
       <SEOManager
         currency={country.currency}
         countryCode={country.id} 
         title={finalSeoTitle}
         description={finalSeoDescription}
-        canonicalUrl={country.id === 'CO' ? `/producto/${product.id}` : `/producto/${product.id}?country=${country.id}`}
+        canonicalUrl={country.id === 'CO' ? `/producto/${product.id}` : `/${country.id.toLowerCase()}/producto/${product.id}`}
         ogImage={product.image}
         type="product"
         faqs={[...(product.seoFaqs || []), ...GENERAL_FAQS]}

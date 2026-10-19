@@ -23,13 +23,14 @@ function generateSitemapForCountry(countryCode: CountryCode) {
     promo.products.every(pid => productIds.has(pid))
   );
   const isComboOfTheMonthValid = COMBO_OF_THE_MONTH.products.every(pid => productIds.has(pid));
+  const countryPrefix = countryCode === 'CO' ? '' : `/${countryCode.toLowerCase()}`;
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n`;
 
   // 1. Home
   xml += `    <url>\n`;
-  xml += `        <loc>${baseUrl}/</loc>\n`;
+  xml += `        <loc>${baseUrl}${countryPrefix || '/'}</loc>\n`;
   xml += `        <lastmod>${currentDate}</lastmod>\n`;
   xml += `        <changefreq>daily</changefreq>\n`;
   xml += `        <priority>1.0</priority>\n`;
@@ -46,7 +47,7 @@ function generateSitemapForCountry(countryCode: CountryCode) {
   // 2. Categories for country
   for (const cat of categories) {
     xml += `    <url>\n`;
-    xml += `        <loc>${baseUrl}/categoria/${cat.id}</loc>\n`;
+    xml += `        <loc>${baseUrl}${countryPrefix}/categoria/${cat.id}</loc>\n`;
     xml += `        <lastmod>${currentDate}</lastmod>\n`;
     xml += `        <changefreq>weekly</changefreq>\n`;
     xml += `        <priority>0.8</priority>\n`;
@@ -88,7 +89,7 @@ function generateSitemapForCountry(countryCode: CountryCode) {
   // 3. Products for country
   for (const p of products) {
     xml += `    <url>\n`;
-    xml += `        <loc>${baseUrl}/producto/${p.id}</loc>\n`;
+    xml += `        <loc>${baseUrl}${countryPrefix}/producto/${p.id}</loc>\n`;
     xml += `        <lastmod>${currentDate}</lastmod>\n`;
     xml += `        <changefreq>weekly</changefreq>\n`;
     xml += `        <priority>0.9</priority>\n`;
@@ -179,7 +180,7 @@ function generateSitemapForCountry(countryCode: CountryCode) {
 
   for (const page of institutionalPages) {
     xml += `    <url>\n`;
-    xml += `        <loc>${baseUrl}/${page}</loc>\n`;
+    xml += `        <loc>${baseUrl}${countryPrefix}/${page}</loc>\n`;
     xml += `        <lastmod>${currentDate}</lastmod>\n`;
     xml += `        <changefreq>monthly</changefreq>\n`;
     xml += `        <priority>0.3</priority>\n`;
