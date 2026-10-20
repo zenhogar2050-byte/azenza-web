@@ -13,6 +13,7 @@ import { useEffect, useState, useRef } from 'react';
 import StickyCTA from '../components/StickyCTA';
 import ProductVideo from '../components/ProductVideo';
 import Image from '../components/Image';
+import { getProductImage } from '../utils/imageUtils';
 import PromoBanner from '../components/PromoBanner';
 
 const SYMPTOMS = [
@@ -26,7 +27,7 @@ const SYMPTOMS = [
 export default function Home() {
   const navigate = useNavigate();
   const { hash } = useLocation();
-  const { addComboToCart, getProducts, getCategories, isEC, isCO, formatPrice } = useCart();
+  const { addComboToCart, getProducts, getCategories, isEC, isCO, formatPrice, country } = useCart();
   const [stock, setStock] = useState(42);
   const buyButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -265,7 +266,7 @@ export default function Home() {
                   <Link to={`/producto/${product.id}`} className="flex flex-col h-full" aria-label={`Ver detalles de ${product.name}`}>
                     <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100/70 mb-5 flex items-center justify-center p-3 shrink-0">
                       <Image
-                        src={product.image}
+                        src={getProductImage(product, country)}
                         alt={product.name}
                         preset="card"
                         className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
@@ -286,8 +287,14 @@ export default function Home() {
                         )}
                         {product.invima && (
                           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-stone-700 text-xs font-semibold border border-stone-200 shadow-sm">
-                            <ShieldCheck className="w-3.5 h-3.5 text-[#009b63]" />
-                            <span>INVIMA: {product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}</span>
+                            {country === 'PE' && product.id === 'coliplus' 
+                              ? <Image src="/assets/logo/sello-garantia-sanitaria.webp" alt="Garantía Sanitaria" preset="badge" className="w-4 h-4 object-contain" width={16} height={16} />
+                              : <ShieldCheck className="w-3.5 h-3.5 text-[#009b63]" />}
+                            <span>
+                              {country === 'PE' && product.id === 'coliplus' 
+                                ? "Garantía Sanitaria: N° 0129909" 
+                                : `INVIMA: ${product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}`}
+                            </span>
                           </div>
                         )}
                       </div>
@@ -341,7 +348,7 @@ export default function Home() {
                 <Link to={`/producto/${product.id}`} className="flex flex-col h-full" aria-label={`Ver detalles de ${product.name}`}>
                   <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100/70 mb-5 flex items-center justify-center p-3 relative shrink-0">
                     <Image
-                      src={product.image}
+                      src={getProductImage(product, country)}
                       alt={product.name}
                       preset="card"
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"

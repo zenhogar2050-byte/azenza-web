@@ -4,6 +4,7 @@ import { useDynamicMeta } from "../hooks/useDynamicMeta";
 import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS, GENERAL_FAQS } from '../constants';
 import { useCart } from '../CartContext';
+import { getProductImage, getProductSupportImages } from "../utils/imageUtils";
 import { CheckCircle2, ShoppingCart, ArrowLeft, ArrowRight, Star, TrendingUp, Zap, ShieldCheck, ChevronDown, ChevronUp, Info, Play } from 'lucide-react';
 import { cn, formatCurrency } from '../utils';
 import { useEffect, useState, useRef } from 'react';
@@ -49,6 +50,9 @@ const navigate = useNavigate();
     const cleanName = cleanStr(p.name);
     return cleanId === targetIdClean || cleanName === targetIdClean;
   });
+
+  const productImage = product ? getProductImage(product, country.id) : '';
+  const productSupportImages = product ? getProductSupportImages(product, country.id) : [];
 
   // Si el usuario entra por un alias (ej: /producto/tonico o /producto/tonico-anticanas), reemplazar URL en cliente a la oficial
   useEffect(() => {
@@ -116,8 +120,8 @@ const navigate = useNavigate();
   // Gallery Logic with Video Support
   const galleryItems = product ? [
     ...(product.videoUrl || product.videoUrlMp4 ? [{ type: 'video', webm: product.videoUrl, mp4: product.videoUrlMp4, poster: product.videoPoster }] : []),
-    { type: 'image', url: product.image },
-    ...(product.supportImages || []).map(img => ({ type: 'image', url: img }))
+    { type: 'image', url: productImage },
+    ...productSupportImages.map(img => ({ type: 'image', url: img }))
   ] : [];
 
   const [activeItem, setActiveItem] = useState(galleryItems[0] || null);
@@ -130,104 +134,11 @@ const navigate = useNavigate();
 
   const promoParam = searchParams.get('promo');
 
-  useEffect(() => {
-    if (promoParam && product) {
-      const found = product.promos.find(p => p.label === promoParam || p.id === promoParam);
-      if (found) setSelectedPromo(found.id);
-    } else if (product && product.promos.length > 0) {
-      setSelectedPromo(product.promos[0].id);
-    }
-  }, [id, product?.id, promoParam]);
 
-  useEffect(() => {
-    if (product) {
-      track('ViewContent', { 
-         content_ids: [String(product.id)], 
-         content_name: product.name, 
-         value: Number(product.basePrice), 
-         currency: 'COP', 
-         content_type: 'product' 
-      });
-    }
-  }, [product?.id]);
 
-  if (!product) {
-    return <NotFound />;
-  }
 
-  const handleBuyNow = (promoId: string) => {
-    const promo = product.promos.find(p => p.id === promoId);
-    const price = Number(promo?.price || product.basePrice);
-    track('InitiateCheckout', { 
-      content_ids: [String(product.id)], 
-      content_name: product.name, 
-      value: price, 
-      currency: 'COP', 
-      num_items: 1, 
-      content_type: 'product' 
-    });
-    trackGoogleBeginCheckout(price);
-    addToCart(product, promoId);
-    navigate('/checkout');
-  };
-
-  const currentBump = product ? BUMP_OPPORTUNITIES[product.id] : null;
-
-  const handleBumpAccept = () => {
-    if (!currentBump) return;
-    const price = Number(currentBump.targetCombo.price);
-    track('InitiateCheckout', { 
-      content_ids: [String(currentBump.targetCombo.id)], 
-      content_name: currentBump.targetCombo.name, 
-      value: price, 
-      currency: 'COP', 
-      num_items: 1, 
-      content_type: 'product_combo' 
-    });
-    trackGoogleBeginCheckout(price);
-
-    addComboToCart(currentBump.targetCombo); 
-    navigate('/checkout');
-  };
-
-  // Bot-friendly clean metadata
-  const finalSeoTitle = product.seoTitle || product.name;
-  const finalSeoDescription = product.seoDescription || product.description.split('.')[0] + '.';
-
-  const price = Number(product.promos ? product.promos[0].price : product.basePrice);
   return (
     <div className="min-h-screen bg-white">
-      <SEOManager
-        currency={country.currency}
-        countryCode={country.id} 
-        title={finalSeoTitle}
-        description={finalSeoDescription}
-        canonicalUrl={country.id === 'CO' ? `/producto/${product.id}` : `/${country.id.toLowerCase()}/producto/${product.id}`}
-        ogImage={product.image}
-        type="product"
-        faqs={[...(product.seoFaqs || []), ...GENERAL_FAQS]}
-        productData={{
-          id: product.id,
-          masterId: product.masterId,
-          name: product.name,
-          description: product.description,
-          category: product.category,
-          googleCategory: product.googleCategory,
-          condition: product.condition,
-          lowPrice: product.promos[0].price,
-          basePrice: price,
-          highPrice: product.promos[product.promos.length - 1].price,
-          offerCount: product.promos.length,
-          faqs: product.seoFaqs,
-          reviews: product.testimonials,
-          invima: product.invima,
-          image: product.image,
-          supportImages: product.supportImages,
-          keywords: product.keywords,
-          longTailKeywords: product.longTailKeywords
-        }}
-      />
-
       {/* Floating Page Navigation */}
       <button 
         onClick={handleGoBack}
@@ -272,7 +183,7 @@ const navigate = useNavigate();
                     />
                   ) : (
                     <Image
-                      src={activeItem?.url || product.image}
+                      src={activeItem?.url || productImage}
                       alt={product.name}
                       preset="hero"
                       priority={true}
@@ -323,11 +234,13 @@ const navigate = useNavigate();
                 <div className="flex flex-row items-center justify-center gap-4 sm:gap-6 mt-10">
                   {product.invima && (
                     <div className="flex items-center gap-3 px-4 sm:px-6 py-3 bg-stone-50 rounded-2xl border border-stone-200">
-                      <Image src="/assets/logo/invima1.webp" alt="Sello INVIMA" preset="badge" className="h-16 sm:h-20 object-contain drop-shadow-sm opacity-90" width={80} height={80} />
+                      <Image src={country.id === 'PE' && product.id === 'coliplus' ? "/assets/logo/sello-garantia-sanitaria.webp" : "/assets/logo/invima1.webp"} alt={country.id === 'PE' && product.id === 'coliplus' ? "Garantía Sanitaria" : "Sello INVIMA"} preset="badge" className="h-16 sm:h-20 object-contain drop-shadow-sm opacity-90" width={80} height={80} />
                       <div className="flex flex-col">
-                        <span className="text-[11px] font-black text-stone-600 uppercase tracking-widest leading-none">Registro INVIMA</span>
+                        <span className="text-[11px] font-black text-stone-600 uppercase tracking-widest leading-none">
+                          {country.id === 'PE' && product.id === 'coliplus' ? "Establecimiento Farmacéutico" : "Registro INVIMA"}
+                        </span>
                         <span className="text-[14px] sm:text-base font-bold text-stone-700">
-                          {product.invima}
+                          {country.id === 'PE' && product.id === 'coliplus' ? "N° 0129909 | RUC: 20615888720" : product.invima}
                         </span>
                       </div>
                     </div>
@@ -730,7 +643,7 @@ const navigate = useNavigate();
 
       <StickyCTA 
         name={product.name}
-        image={product.image}
+        image={productImage}
         price={product.promos.find(p => p.id === selectedPromo)?.price || product.basePrice}
         onBuy={() => selectedPromo && handleBuyNow(selectedPromo)}
         desktopTriggerRef={buyButtonRef}
@@ -738,6 +651,7 @@ const navigate = useNavigate();
         selectedPromoId={selectedPromo || undefined}
         onPromoChange={(id) => setSelectedPromo(id)}
       />
+
 
       <Footer />
     </div>

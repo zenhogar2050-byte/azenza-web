@@ -5,9 +5,10 @@ import { cleanPromoName, cn } from '../utils';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../CartContext';
 import Image from './Image';
+import { getProductImage } from '../utils/imageUtils';
 
 export default function PromoBanner() {
-  const { getProducts, formatPrice, isEC } = useCart();
+  const { getProducts, formatPrice, isEC, country } = useCart();
   const products = getProducts();
 
   const baseItems = [
@@ -94,7 +95,8 @@ export default function PromoBanner() {
       return {
         ...item,
         name: p.name,
-        image: p.image,
+        // Usar la utilidad de imagen para resolver el producto
+        image: getProductImage(p, country),
         price,
         originalPrice,
       };
@@ -104,7 +106,8 @@ export default function PromoBanner() {
   const items = rawItems.length > 0 ? rawItems : (products.length > 0 ? products.map(p => ({
     id: p.id,
     name: p.name,
-    image: p.image,
+    // Usar la utilidad de imagen para resolver el producto
+    image: getProductImage(p, country),
     originalPrice: p.basePrice,
     price: p.promos?.[0]?.price || p.basePrice,
     badge: 'OFERTA DESTACADA ⭐',

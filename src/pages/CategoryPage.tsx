@@ -8,6 +8,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import { formatCurrency, cn } from '../utils';
 import { useCart } from '../CartContext';
 import Image from '../components/Image';
+import { getProductImage } from '../utils/imageUtils';
 
 export default function CategoryPage() {
   const navigate = useNavigate();
@@ -229,7 +230,7 @@ export default function CategoryPage() {
                   <Link to={isCombosCategory ? `/combo/${product.id}` : `/producto/${product.id}`} className="flex flex-col h-full">
                     <div className="aspect-square rounded-2xl overflow-hidden bg-stone-100/70 mb-5 flex items-center justify-center p-3 shrink-0">
                       <Image
-                        src={product.image}
+                        src={getProductImage(product, country)}
                         alt={product.name}
                         preset="card"
                         className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
@@ -260,8 +261,14 @@ export default function CategoryPage() {
                         ) : (
                           product.invima && (
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-stone-700 text-xs font-semibold border border-stone-200 shadow-sm">
-                              <ShieldCheck className="w-3.5 h-3.5 text-[#009b63]" />
-                              <span>INVIMA: {product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}</span>
+                              {country.id === 'PE' && product.id === 'coliplus' 
+                                ? <Image src="/assets/logo/sello-garantia-sanitaria.webp" alt="Garantía Sanitaria" preset="badge" className="w-4 h-4 object-contain" width={16} height={16} />
+                                : <ShieldCheck className="w-3.5 h-3.5 text-[#009b63]" />}
+                              <span>
+                                {country.id === 'PE' && product.id === 'coliplus' 
+                                  ? "Establecimiento Farmacéutico N° 0129909 | RUC: 20615888720" 
+                                  : `INVIMA: ${product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}`}
+                              </span>
                             </div>
                           )
                         )}

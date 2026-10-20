@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://azenza.com.co/hn</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -16,7 +16,7 @@
     </url>
     <url>
         <loc>https://azenza.com.co/hn/categoria/salud-sexual</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -26,7 +26,7 @@
     </url>
     <url>
         <loc>https://azenza.com.co/hn/producto/derman</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -52,7 +52,7 @@
     </url>
     <url>
         <loc>https://azenza.com.co/hn/producto/instant-virgin</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -70,37 +70,37 @@
     </url>
     <url>
         <loc>https://azenza.com.co/hn/quienes-somos</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://azenza.com.co/hn/politica-privacidad</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://azenza.com.co/hn/politica-reembolso</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://azenza.com.co/hn/terminos-servicio</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://azenza.com.co/hn/condiciones-entrega</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://azenza.com.co/hn/devoluciones-garantia</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>

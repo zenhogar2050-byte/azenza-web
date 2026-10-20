@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { formatCurrency } from "../utils";
 import { generateSchemaGraph } from "../lib/seo-logic";
+import { COUNTRIES } from "../CountryContext";
 
 export interface SEOManagerProps {
   title: string;
@@ -12,7 +13,7 @@ export interface SEOManagerProps {
   productData?: any;
   categoryProducts?: any[];
   faqs?: Array<{ q: string; a: string }>;
-  keywords?: string[];
+  keywords?: string | string[];
   currency?: string;
   countryCode?: string;
 }
@@ -59,8 +60,9 @@ const SEOManager: React.FC<SEOManagerProps> = ({
     ? rawDescription.slice(0, 152).trim() + "..."
     : rawDescription;
 
+  const kws = Array.isArray(keywords) ? keywords : (typeof keywords === 'string' ? keywords.split(',') : []);
   const parsedKeywords = [
-    ...(Array.isArray(keywords) ? keywords : (typeof keywords === "string" ? keywords.split(",").map(s => s.trim()) : [])),
+    ...kws.map(s => s.trim()),
     ...(productData ? (Array.isArray(productData.keywords) ? productData.keywords : (typeof productData.keywords === "string" ? productData.keywords.split(",").map((s: string) => s.trim()) : [])) : [])
   ].filter(Boolean);
   
