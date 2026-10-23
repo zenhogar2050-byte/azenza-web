@@ -244,44 +244,52 @@ export default function AdminDashboard() {
   const prod1 = PRODUCTS.find(p => p.id === calcProduct1Id);
   const prod2 = PRODUCTS.find(p => p.id === calcProduct2Id);
 
+  const getProductPriceForUnits = (prod: Product, units: number): number => {
+    // Look for exact units match or specific promo IDs
+    const targetPromo = prod.promos.find(p => p.units === units) ||
+                        (units === 3 && prod.promos.find(p => p.id === '2x3')) ||
+                        (units === 5 && prod.promos.find(p => p.id === '3x5'));
+    return targetPromo ? targetPromo.price : (prod.basePrice * units);
+  };
+
   const calculatedBreakdown = useMemo(() => {
     const prods = [prod1, prod2].filter(Boolean) as Product[];
     if (prods.length === 0) return [];
 
-    const sorted = [...prods].sort((a, b) => b.basePrice - a.basePrice);
-    
-    // Determine the effective multiplier based on the promotion policy
-    let effectiveMultiplier = 1;
-    if (calcQuantity === 1) effectiveMultiplier = 1;
-    else if (calcQuantity === 2) effectiveMultiplier = 2;
-    else if (calcQuantity === 3) effectiveMultiplier = 2; // Buy 2 Get 3
-    else if (calcQuantity === 5) effectiveMultiplier = 3; // Buy 3 Get 5
-    else effectiveMultiplier = calcQuantity;
-
-    const baseComboPrice = sorted[0].basePrice + (sorted[1]?.basePrice || 0) * 0.5;
-
-    return sorted.map((p, index) => {
-      const isPrincipal = index === 0;
-      const ratio = isPrincipal ? 1.0 : 0.5;
-      const unitBasePrice = p.basePrice;
-      
-      // Proportional subtotal based on the total price for the effective multiplier
-      const totalEffectivePrice = baseComboPrice * effectiveMultiplier;
-      const subtotal = isPrincipal 
-        ? (totalEffectivePrice * (sorted[0].basePrice / baseComboPrice))
-        : (totalEffectivePrice * ((sorted[1]?.basePrice * 0.5 || 0) / baseComboPrice));
-
-      return {
-        name: p.name,
-        image: p.image,
-        size: p.size,
-        presentation: p.presentation,
-        role: isPrincipal ? 'Principal (100%)' : 'Secundario (50%)',
-        unitBasePrice,
-        totalQuantity: calcQuantity,
-        subtotal
-      };
-    });
+    if (calcQuantity === 1) {
+      const sorted = [...prods].sort((a, b) => b.basePrice - a.basePrice);
+      return sorted.map((p, index) => {
+        const isPrincipal = index === 0;
+        const ratio = isPrincipal ? 1.0 : 0.5;
+        const unitBasePrice = p.basePrice;
+        const subtotal = unitBasePrice * ratio;
+        return {
+          name: p.name,
+          image: p.image,
+          size: p.size,
+          presentation: p.presentation,
+          role: isPrincipal ? 'Principal (100%)' : 'Secundario (50%)',
+          unitBasePrice,
+          totalQuantity: 1,
+          subtotal
+        };
+      });
+    } else {
+      // Logic for 2, 3, or 5 units
+      return prods.map((p) => {
+        const subtotal = getProductPriceForUnits(p, calcQuantity);
+        return {
+          name: p.name,
+          image: p.image,
+          size: p.size,
+          presentation: p.presentation,
+          role: `Promo ${calcQuantity} unidades`,
+          unitBasePrice: p.basePrice,
+          totalQuantity: calcQuantity,
+          subtotal
+        };
+      });
+    }
   }, [prod1, prod2, calcQuantity]);
 
   const calculatedTotalPrice = useMemo(() => {
@@ -3347,7 +3355,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                     <div>
                       <label className="block text-xs font-black uppercase text-stone-700 mb-2">Cantidad de Combos</label>
                       <div className="flex items-center gap-1.5">
-                        {[1, 2, 3, 4, 5].map(qty => (
+                        {[1, 2, 3, 5].map(qty => (
                           <button
                             key={qty}
                             type="button"
@@ -3429,13 +3437,22 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                         <button
                           type="button"
                           onClick={() => {
-                            const text = `Calculadora Combo Personalizado - ${prod1?.name} + ${prod2?.name} (${calcQuantity} un.): Total ${formatCurrency(calculatedTotalPrice, selectedCountry)}`;
-                            navigator.clipboard.writeText(text);
-                            alert('¡Resumen copiado al portapapeles!');
+                            const whatsappMsg = `🚀 ¡Hola! Aprovecha nuestra oferta especial en AZENZA.
+
+Si llevas el combo de ${prod1?.name} + ${prod2?.name} (${calcQuantity} unidades):
+💰 ¡Tu ahorro total es de ${formatCurrency(calculatedTotalSavings, selectedCountry)}!
+💵 Precio Total a Pagar: ${formatCurrency(calculatedTotalPrice, selectedCountry)}
+📦 Incluye ENVÍO GRATIS.
+🤝 Pago CONTRA ENTREGA.
+
+¡No dejes pasar esta oportunidad de transformar tu bienestar! ✨`;
+                            
+                            navigator.clipboard.writeText(whatsappMsg);
+                            alert('¡Mensaje para WhatsApp copiado al portapapeles!');
                           }}
                           className="w-full sm:w-auto px-5 py-2.5 bg-emerald-600 text-white rounded-xl font-bold text-xs hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
                         >
-                          <Copy className="w-4 h-4" /> Copiar Resumen
+                          <Copy className="w-4 h-4" /> Copiar para WhatsApp
                         </button>
                       </div>
                     </div>
