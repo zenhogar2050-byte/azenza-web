@@ -1,14 +1,15 @@
-import { Product } from '../constants';
-import { CountryCode } from './CartContext';
+import { Product, CountryCode } from '../constants';
 
-export const getProductImage = (p: Product, countryId: CountryCode): string => {
+export const getProductImage = (p: Product, country: CountryCode | { id: CountryCode } | string): string => {
+  const countryId = typeof country === 'string' ? country : ('id' in country ? country.id : String(country));
   if (p.id === 'coliplus' && countryId === 'PE') {
     return '/assets/products/coliplus-pe.webp';
   }
   return p.image;
 };
 
-export const getProductSupportImages = (p: Product, countryId: CountryCode): string[] => {
+export const getProductSupportImages = (p: Product, country: CountryCode | { id: CountryCode } | string): string[] => {
+  const countryId = typeof country === 'string' ? country : ('id' in country ? country.id : String(country));
   if (p.id === 'coliplus' && countryId === 'PE') {
     return [
       '/assets/products/coliplus-pe-apoyo-1.webp',

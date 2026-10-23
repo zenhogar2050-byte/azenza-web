@@ -261,11 +261,11 @@ export default function CategoryPage() {
                         ) : (
                           product.invima && (
                             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-stone-700 text-xs font-semibold border border-stone-200 shadow-sm">
-                              {country.id === 'PE' && product.id === 'coliplus' 
+                              {country === 'PE' && product.id === 'coliplus' 
                                 ? <Image src="/assets/logo/sello-garantia-sanitaria.webp" alt="Garantía Sanitaria" preset="badge" className="w-4 h-4 object-contain" width={16} height={16} />
                                 : <ShieldCheck className="w-3.5 h-3.5 text-[#009b63]" />}
                               <span>
-                                {country.id === 'PE' && product.id === 'coliplus' 
+                                {country === 'PE' && product.id === 'coliplus' 
                                   ? "Establecimiento Farmacéutico N° 0129909 | RUC: 20615888720" 
                                   : `INVIMA: ${product.invima.includes('proceso') || product.invima.includes('verificación') ? 'En trámite' : product.invima}`}
                               </span>

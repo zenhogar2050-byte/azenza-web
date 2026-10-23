@@ -117,6 +117,46 @@ const navigate = useNavigate();
     }
   };
 
+  const handleBuyNow = (promoId: string) => {
+    if (!product) return;
+    const promo = product.promos.find(p => p.id === promoId);
+    const price = Number(promo?.price || product.basePrice);
+    track('InitiateCheckout', { 
+      content_ids: [String(product.id)], 
+      content_name: product.name, 
+      value: price, 
+      currency: 'COP', 
+      num_items: 1, 
+      content_type: 'product' 
+    });
+    trackGoogleBeginCheckout(price);
+    addToCart(product, promoId);
+    navigate('/checkout');
+  };
+
+  const currentBump = product ? BUMP_OPPORTUNITIES[product.id] : null;
+
+  const handleBumpAccept = () => {
+    if (!currentBump) return;
+    const price = Number(currentBump.targetCombo.price);
+    track('InitiateCheckout', { 
+      content_ids: [String(currentBump.targetCombo.id)], 
+      content_name: currentBump.targetCombo.name, 
+      value: price, 
+      currency: 'COP', 
+      num_items: 1, 
+      content_type: 'product_combo' 
+    });
+    trackGoogleBeginCheckout(price);
+
+    addComboToCart(currentBump.targetCombo); 
+    navigate('/checkout');
+  };
+
+  if (!product) {
+    return <NotFound />;
+  }
+
   // Gallery Logic with Video Support
   const galleryItems = product ? [
     ...(product.videoUrl || product.videoUrlMp4 ? [{ type: 'video', webm: product.videoUrl, mp4: product.videoUrlMp4, poster: product.videoPoster }] : []),

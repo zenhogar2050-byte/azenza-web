@@ -121,6 +121,8 @@ const navigate = useNavigate();
     ? '/assets/products/coliplus-pe.webp' 
     : (product?.image || '');
 
+  const currentBump = product ? BUMP_OPPORTUNITIES[product.id] : null;
+
   // Gallery Logic with Video Support
   const galleryItems = product ? [
     ...(product.videoUrl || product.videoUrlMp4 ? [{ type: 'video', webm: product.videoUrl, mp4: product.videoUrlMp4, poster: product.videoPoster }] : []),
