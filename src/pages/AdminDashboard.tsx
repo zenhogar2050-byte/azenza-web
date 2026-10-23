@@ -54,15 +54,17 @@ import {
   Activity,
   Settings,
   Hash,
-  Home
+  Home,
+  Calculator
 } from 'lucide-react';
 import { formatCurrency, cn } from '../utils';
+import Image from '../components/Image';
 import { getOrdersFromFirebase, updateOrderStatusInFirebase, deleteOrderFromFirebase, clearAllOrdersFromFirebase, db, getCurrentCounterValue, updateCounterValue, getNextOrderTicket, saveOrderToFirebase } from '../lib/firebase';
 import InventoryManager from '../components/InventoryManager';
 import CountrySelector from '../components/CountrySelector';
 import { useInventory } from '../hooks/useInventory';
 import { doc, updateDoc, collection, getDocs, deleteDoc, serverTimestamp } from 'firebase/firestore';
-import { PRODUCTS, GIFT_PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, COLOMBIA_DATA, ECUADOR_DATA, PERU_DATA, COSTA_RICA_DATA, GUATEMALA_DATA, HONDURAS_DATA, DOMINICAN_REPUBLIC_DATA, VENEZUELA_DATA, CHILE_DATA, COUNTRY_CONFIGS, CountryCode } from '../constants';
+import { PRODUCTS, GIFT_PRODUCTS, PROMOTIONS, COMBO_OF_THE_MONTH, CATEGORIES, COLOMBIA_DATA, ECUADOR_DATA, PERU_DATA, COSTA_RICA_DATA, GUATEMALA_DATA, HONDURAS_DATA, DOMINICAN_REPUBLIC_DATA, VENEZUELA_DATA, CHILE_DATA, COUNTRY_CONFIGS, CountryCode, Product } from '../constants';
 import * as XLSX from 'xlsx';
 
 interface Order {
@@ -231,9 +233,70 @@ export default function AdminDashboard() {
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [trackingInput, setTrackingInput] = useState('');
   const [copying, setCopying] = useState(false);
-  const [activeTab, setActiveTab] = useState<'orders' | 'analytics' | 'inventory' | 'settings' | 'routes'>('orders');
+  const [activeTab, setActiveTab] = useState<'orders' | 'analytics' | 'inventory' | 'settings' | 'routes' | 'calculator'>('orders');
   const [copiedRouteId, setCopiedRouteId] = useState<string | null>(null);
   const [systemCounter, setSystemCounter] = useState<number>(1000);
+
+  const [calcProduct1Id, setCalcProduct1Id] = useState<string>(PRODUCTS[0]?.id || '');
+  const [calcProduct2Id, setCalcProduct2Id] = useState<string>(PRODUCTS[1]?.id || PRODUCTS[0]?.id || '');
+  const [calcQuantity, setCalcQuantity] = useState<number>(1);
+
+  const prod1 = PRODUCTS.find(p => p.id === calcProduct1Id);
+  const prod2 = PRODUCTS.find(p => p.id === calcProduct2Id);
+
+  const calculatedBreakdown = useMemo(() => {
+    const prods = [prod1, prod2].filter(Boolean) as Product[];
+    if (prods.length === 0) return [];
+
+    const sorted = [...prods].sort((a, b) => b.basePrice - a.basePrice);
+    
+    // Determine the effective multiplier based on the promotion policy
+    let effectiveMultiplier = 1;
+    if (calcQuantity === 1) effectiveMultiplier = 1;
+    else if (calcQuantity === 2) effectiveMultiplier = 2;
+    else if (calcQuantity === 3) effectiveMultiplier = 2; // Buy 2 Get 3
+    else if (calcQuantity === 5) effectiveMultiplier = 3; // Buy 3 Get 5
+    else effectiveMultiplier = calcQuantity;
+
+    const baseComboPrice = sorted[0].basePrice + (sorted[1]?.basePrice || 0) * 0.5;
+
+    return sorted.map((p, index) => {
+      const isPrincipal = index === 0;
+      const ratio = isPrincipal ? 1.0 : 0.5;
+      const unitBasePrice = p.basePrice;
+      
+      // Proportional subtotal based on the total price for the effective multiplier
+      const totalEffectivePrice = baseComboPrice * effectiveMultiplier;
+      const subtotal = isPrincipal 
+        ? (totalEffectivePrice * (sorted[0].basePrice / baseComboPrice))
+        : (totalEffectivePrice * ((sorted[1]?.basePrice * 0.5 || 0) / baseComboPrice));
+
+      return {
+        name: p.name,
+        image: p.image,
+        size: p.size,
+        presentation: p.presentation,
+        role: isPrincipal ? 'Principal (100%)' : 'Secundario (50%)',
+        unitBasePrice,
+        totalQuantity: calcQuantity,
+        subtotal
+      };
+    });
+  }, [prod1, prod2, calcQuantity]);
+
+  const calculatedTotalPrice = useMemo(() => {
+    return calculatedBreakdown.reduce((sum, item) => sum + item.subtotal, 0);
+  }, [calculatedBreakdown]);
+
+  const calculatedRegularTotalPrice = useMemo(() => {
+    const prods = [prod1, prod2].filter(Boolean) as Product[];
+    const regularSum1Combo = prods.reduce((sum, p) => sum + p.basePrice, 0);
+    return regularSum1Combo * calcQuantity;
+  }, [prod1, prod2, calcQuantity]);
+
+  const calculatedTotalSavings = useMemo(() => {
+    return Math.max(0, calculatedRegularTotalPrice - calculatedTotalPrice);
+  }, [calculatedRegularTotalPrice, calculatedTotalPrice]);
 
   const handleCopyRouteLink = (path: string, routeId: string) => {
     const fullUrl = `https://azenza.com.co${path}`;
@@ -1949,6 +2012,17 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
           </button>
 
           <button 
+            onClick={() => setActiveTab('calculator')}
+            className={cn(
+              "p-3 rounded-2xl transition-all duration-300 w-full flex justify-center",
+              activeTab === 'calculator' ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/20" : "text-stone-400 hover:bg-white/10"
+            )}
+            title="Calculadora de Combos"
+          >
+            <Calculator className="w-6 h-6" />
+          </button>
+
+          <button 
             onClick={() => setActiveTab('settings')}
             className={cn(
               "p-3 rounded-2xl transition-all duration-300 w-full flex justify-center",
@@ -2004,6 +2078,16 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
           <span className="text-[8px] font-black uppercase">Rutas</span>
         </button>
         <button 
+          onClick={() => setActiveTab('calculator')}
+          className={cn(
+            "p-3 rounded-xl transition-all flex flex-col items-center gap-1",
+            activeTab === 'calculator' ? "text-emerald-400 bg-white/10" : "text-stone-500"
+          )}
+        >
+          <Calculator className="w-5 h-5" />
+          <span className="text-[8px] font-black uppercase">Calc</span>
+        </button>
+        <button 
           onClick={() => setActiveTab('settings')}
           className={cn(
             "p-3 rounded-xl transition-all flex flex-col items-center gap-1",
@@ -2020,7 +2104,7 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
         <header className="bg-white border-b border-stone-200 p-4 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 sticky top-0 z-40">
           <div className="flex items-center gap-4">
             <h1 className="text-xl font-bold text-stone-900 tracking-tight">
-              {activeTab === 'orders' ? 'Pedidos' : activeTab === 'analytics' ? 'Analítica' : activeTab === 'inventory' ? 'Inventario Mastershop' : activeTab === 'routes' ? 'Rutas de Campaña' : 'Configuración'}
+              {activeTab === 'orders' ? 'Pedidos' : activeTab === 'analytics' ? 'Analítica' : activeTab === 'inventory' ? 'Inventario Mastershop' : activeTab === 'routes' ? 'Rutas de Campaña' : activeTab === 'calculator' ? 'Calculadora de Combos' : 'Configuración'}
             </h1>
             <div className="h-4 w-px bg-stone-200 hidden sm:block" />
             <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest hidden sm:block">Azenza v2.1.2</p>
@@ -3208,6 +3292,151 @@ Pronto recibirás tus productos para que empieces a disfrutar de sus beneficios.
                             );
                           })}
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ) : activeTab === 'calculator' ? (
+              <motion.div
+                key="calculator"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                className="space-y-6 max-w-5xl mx-auto"
+              >
+                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm text-left">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-stone-100">
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+                      <Calculator className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h2 className="text-xl font-black text-stone-900 tracking-tight">Calculadora de Combos y Precios</h2>
+                      <p className="text-sm text-stone-500">Política: Producto principal al 100% + Productos secundarios al 50%. Cálculo proporcional para múltiples combos.</p>
+                    </div>
+                  </div>
+
+                  {/* Selector & Quantity */}
+                  <div className="grid sm:grid-cols-3 gap-6 mb-8">
+                    <div>
+                      <label className="block text-xs font-black uppercase text-stone-700 mb-2">Producto 1 (Base / Principal)</label>
+                      <select
+                        value={calcProduct1Id}
+                        onChange={(e) => setCalcProduct1Id(e.target.value)}
+                        className="w-full px-4 py-3 rounded-2xl border border-stone-200 font-bold text-stone-800 bg-stone-50 focus:outline-none focus:border-emerald-600 cursor-pointer text-sm"
+                      >
+                        {PRODUCTS.map(p => (
+                          <option key={p.id} value={p.id}>{p.name} - {formatCurrency(p.basePrice, selectedCountry)}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-black uppercase text-stone-700 mb-2">Producto 2 (Acompañante)</label>
+                      <select
+                        value={calcProduct2Id}
+                        onChange={(e) => setCalcProduct2Id(e.target.value)}
+                        className="w-full px-4 py-3 rounded-2xl border border-stone-200 font-bold text-stone-800 bg-stone-50 focus:outline-none focus:border-emerald-600 cursor-pointer text-sm"
+                      >
+                        {PRODUCTS.map(p => (
+                          <option key={p.id} value={p.id}>{p.name} - {formatCurrency(p.basePrice, selectedCountry)}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-black uppercase text-stone-700 mb-2">Cantidad de Combos</label>
+                      <div className="flex items-center gap-1.5">
+                        {[1, 2, 3, 4, 5].map(qty => (
+                          <button
+                            key={qty}
+                            type="button"
+                            onClick={() => setCalcQuantity(qty)}
+                            className={cn(
+                              "flex-1 py-3 rounded-xl font-black text-xs border transition-all cursor-pointer",
+                              calcQuantity === qty ? "bg-emerald-600 text-white border-emerald-600 shadow-md" : "bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100"
+                            )}
+                          >
+                            {qty} {qty === 1 ? 'Combo' : 'Combos'}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Results & Breakdown */}
+                  <div className="space-y-6">
+                    <div className="bg-emerald-50/60 rounded-3xl p-6 border-2 border-emerald-200">
+                      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                        <div>
+                          <span className="text-xs font-black text-emerald-800 uppercase tracking-widest bg-emerald-100/80 px-3 py-1 rounded-full">Resumen Combo Personalizado</span>
+                          <h3 className="text-2xl font-black text-stone-900 mt-2">{prod1?.name || 'Producto 1'} + {prod2?.name || 'Producto 2'}</h3>
+                          <p className="text-sm font-medium text-stone-600 mt-1">Cantidad solicitada: <strong className="text-emerald-900">{calcQuantity} {calcQuantity === 1 ? 'combo' : 'combos'}</strong></p>
+                        </div>
+                        <div className="text-right bg-white p-4 rounded-2xl shadow-sm border border-emerald-100 w-full sm:w-auto">
+                          <span className="text-xs font-bold text-stone-400 block uppercase">Precio Total Final</span>
+                          <span className="text-3xl font-black text-emerald-700">{formatCurrency(calculatedTotalPrice, selectedCountry)}</span>
+                        </div>
+                      </div>
+
+                      {/* Product Breakdown Table */}
+                      <div className="bg-white rounded-2xl overflow-hidden border border-emerald-100 shadow-sm">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr className="bg-stone-50 border-b border-stone-200 text-[11px] font-black uppercase text-stone-500 tracking-wider">
+                              <th className="p-4">Producto</th>
+                              <th className="p-4">Rol / Política</th>
+                              <th className="p-4">Precio Base Unitario</th>
+                              <th className="p-4">Cantidad (Total)</th>
+                              <th className="p-4 text-right">Subtotal</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-stone-100 text-sm">
+                            {calculatedBreakdown.map((item, idx) => (
+                              <tr key={idx} className="hover:bg-stone-50/50">
+                                <td className="p-4 font-bold text-stone-900 flex items-center gap-3">
+                                  <div className="w-10 h-10 rounded-xl bg-stone-100 p-1 flex-shrink-0 flex items-center justify-center">
+                                    <Image src={item.image} alt={item.name} preset="thumb" className="w-full h-full object-contain" />
+                                  </div>
+                                  <div>
+                                    <span>{item.name}</span>
+                                    <span className="block text-[10px] text-stone-400 font-normal">{item.presentation || item.size || ''}</span>
+                                  </div>
+                                </td>
+                                <td className="p-4">
+                                  <span className={cn(
+                                    "px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wide",
+                                    item.role.includes('Principal') ? "bg-emerald-100 text-emerald-800" : "bg-blue-100 text-blue-800"
+                                  )}>
+                                    {item.role}
+                                  </span>
+                                </td>
+                                <td className="p-4 font-semibold text-stone-700">{formatCurrency(item.unitBasePrice, selectedCountry)}</td>
+                                <td className="p-4 font-extrabold text-stone-900">{item.totalQuantity} un.</td>
+                                <td className="p-4 font-black text-stone-900 text-right">{formatCurrency(item.subtotal, selectedCountry)}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Savings note */}
+                      <div className="mt-6 flex flex-col sm:flex-row items-center justify-between bg-white p-4 rounded-2xl border border-emerald-200 gap-4">
+                        <div className="flex items-center gap-2 text-xs font-bold text-stone-700">
+                          <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                          <span>Ahorro total aplicado por política de combo frente a compra individual: <strong className="text-emerald-700">{formatCurrency(calculatedTotalSavings, selectedCountry)}</strong></span>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const text = `Calculadora Combo Personalizado - ${prod1?.name} + ${prod2?.name} (${calcQuantity} un.): Total ${formatCurrency(calculatedTotalPrice, selectedCountry)}`;
+                            navigator.clipboard.writeText(text);
+                            alert('¡Resumen copiado al portapapeles!');
+                          }}
+                          className="w-full sm:w-auto px-5 py-2.5 bg-emerald-600 text-white rounded-xl font-bold text-xs hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                        >
+                          <Copy className="w-4 h-4" /> Copiar Resumen
+                        </button>
                       </div>
                     </div>
                   </div>

@@ -51,6 +51,14 @@ const navigate = useNavigate();
     return cleanId === targetIdClean || cleanName === targetIdClean;
   });
 
+  useEffect(() => {
+    if (product && product.promos && product.promos.length > 0) {
+      if (!selectedPromo || !product.promos.some(p => p.id === selectedPromo)) {
+        setSelectedPromo(product.promos[0].id);
+      }
+    }
+  }, [product]);
+
   const productImage = product ? getProductImage(product, country.id) : '';
   const productSupportImages = product ? getProductSupportImages(product, country.id) : [];
 
@@ -361,7 +369,6 @@ const navigate = useNavigate();
                         key={promo.id}
                         onClick={() => {
                           setSelectedPromo(promo.id);
-                          handleBuyNow(promo.id);
                         }}
                         className={cn(
                           "relative flex items-center justify-between p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border-2 transition-all text-left h-auto min-h-[70px] py-3 sm:py-4 cursor-pointer hover:scale-[1.01] hover:shadow-md",
@@ -417,7 +424,12 @@ const navigate = useNavigate();
                 )}
 
                 <button
-                  onClick={() => selectedPromo && handleBuyNow(selectedPromo)}
+                  onClick={() => {
+                    const promoToBuy = selectedPromo || product.promos[0]?.id;
+                    if (promoToBuy) {
+                      handleBuyNow(promoToBuy);
+                    }
+                  }}
                   className="w-full mt-6 py-6 bg-amber-500 text-white rounded-2xl font-black text-xl hover:bg-amber-600 transition-all shadow-xl shadow-amber-500/30 flex items-center justify-center gap-3 group animate-pulse-slow hover:animate-none scale-100 hover:scale-[1.02]"
                   aria-label={`Comprar ${product.name} ahora`}
                 >
@@ -513,7 +525,6 @@ const navigate = useNavigate();
                         key={promo.id}
                         onClick={() => {
                           setSelectedPromo(promo.id);
-                          handleBuyNow(promo.id);
                         }}
                         className={cn(
                           "relative flex items-center justify-between p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border-2 transition-all text-left h-auto min-h-[70px] py-3 sm:py-4 cursor-pointer hover:scale-[1.01] hover:shadow-md",
@@ -570,7 +581,12 @@ const navigate = useNavigate();
 
                 <button
                   ref={buyButtonRef}
-                  onClick={() => selectedPromo && handleBuyNow(selectedPromo)}
+                  onClick={() => {
+                    const promoToBuy = selectedPromo || product.promos[0]?.id;
+                    if (promoToBuy) {
+                      handleBuyNow(promoToBuy);
+                    }
+                  }}
                   className="w-full mt-6 py-6 bg-amber-500 text-white rounded-2xl font-black text-xl hover:bg-amber-600 transition-all shadow-xl shadow-amber-500/30 flex items-center justify-center gap-3 group animate-pulse-slow hover:animate-none scale-100 hover:scale-[1.02]"
                   aria-label={`Comprar ${product.name} ahora`}
                 >

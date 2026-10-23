@@ -15,6 +15,7 @@ import ProductVideo from '../components/ProductVideo';
 import Image from '../components/Image';
 import { getProductImage } from '../utils/imageUtils';
 import PromoBanner from '../components/PromoBanner';
+import ComboCalculator from '../components/ComboCalculator';
 
 const SYMPTOMS = [
   { id: 'digestiva', label: 'Digestión', icon: Activity, color: 'text-emerald-800', bg: 'bg-emerald-50', border: 'border-emerald-100', link: '/categoria/salud-bienestar' },
@@ -187,6 +188,7 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
                   {/* Mobile-Only Oferta del Mes (Combo del Mes) */}
           {false && (
             <div className="mt-10 md:hidden">
@@ -251,7 +253,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          )}        </div>
+          )}
 
           {/* New Mobile-Only Best Sellers Section */}
           <div className="mt-10 md:hidden">
@@ -330,6 +332,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Combo Builder Calculator Section */}
+      <ComboCalculator />
 
       {/* Products Grid */}
       <section id="productos" className="py-24 bg-stone-50 hidden md:block">
