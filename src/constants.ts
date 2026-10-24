@@ -926,7 +926,7 @@ A mediano y largo plazo, esta sinergia botánica modula la respuesta inflamatori
       "Jarabe botánico natural de rápida absorción con Registro INVIMA oficial"
     ],
     image: '/assets/products/Iprossmen.webp',
-    basePrice: 75900,
+    basePrice: 59900,
     size: '500ml',
     invima: 'SD2015-0003504',
     googleCategory: 'Health & Beauty > Personal Care',
@@ -970,10 +970,10 @@ A mediano y largo plazo, esta sinergia botánica modula la respuesta inflamatori
       { q: '¿Tiene contraindicaciones?', a: 'Es un producto natural con calidad certificada; se recomienda consultar al médico si hay condiciones preexistentes.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 75900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 113850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 151800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 227700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 59900 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 89850 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 119800, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 179700, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Humberto G.', text: 'Me siento con más vitalidad y equilibrio. Un gran apoyo para la salud masculina.', rating: 5 },
@@ -1704,7 +1704,7 @@ A mediano y largo plazo, este sistema botánico repara el manto lipídico superf
       'Fórmula hipoalergénica de alta pureza con registro INVIMA certificado'
     ],
     image: '/assets/products/Miskinne.webp',
-    basePrice: 59900,
+    basePrice: 55000,
     size: '60g',
     presentation: 'Crema',
     invima: 'NSOC85321-18CO',
@@ -1743,10 +1743,10 @@ A mediano y largo plazo, este sistema botánico repara el manto lipídico superf
       { q: '¿Tiene un olor fuerte?', a: 'Posee un aroma suave y natural que respeta tu equilibrio natural y vitalidad.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 59900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 89850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 119800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 179700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 55000 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 82500 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 110000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 165000, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Laura B.', text: 'Es la única crema que no irrita mi piel sensible. La deja súper suave.', rating: 5 },
@@ -2639,7 +2639,7 @@ Esta matriz botánica permite una liberación progresiva de energía sin ocasion
       'Sabor delicioso y textura cremosa de calidad gourmet certificada'
     ],
     image: '/assets/products/Titancoffee.webp',
-    basePrice: 69900,
+    basePrice: 73500,
     size: '400g',
     presentation: 'Polvo',
     invima: 'PSA-000982-2018',
@@ -2678,10 +2678,10 @@ Esta matriz botánica permite una liberación progresiva de energía sin ocasion
       { q: '¿Contiene azúcar añadida?', a: 'Titan Coffee está diseñado para ser una fuente de energía saludable, permitiéndote disfrutar de tu vitalidad diaria con total confianza.' }
     ],
     promos: [
-      { id: '1u', label: '1 Unidad', units: 1, price: 69900 },
-      { id: '2u', label: '2 Unidades', units: 2, price: 104850 },
-      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 139800, badge: '⭐ Recomendado' },
-      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 209700, badge: '🔥 Mejor Oferta' }
+      { id: '1u', label: '1 Unidad', units: 1, price: 73500 },
+      { id: '2u', label: '2 Unidades', units: 2, price: 110250 },
+      { id: '2x3', label: 'Pague 2 Lleve 3', units: 3, price: 147000, badge: '⭐ Recomendado' },
+      { id: '3x5', label: 'Pague 3 Lleve 5', units: 5, price: 220500, badge: '🔥 Mejor Oferta' }
     ],
     testimonials: [
       { name: 'Marcos P.', text: 'El café más potente que he probado. Me mantiene activo todo el día.', rating: 5 },
